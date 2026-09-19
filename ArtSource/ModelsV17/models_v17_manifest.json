@@ -1,0 +1,232 @@
+{
+  "assets": [
+    {
+      "name": "CamperShellV17",
+      "fbx": "SM_CamperShellV17.fbx",
+      "asset": "/Game/Art/Meshes/SM_CamperShellV17",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -10.0825,
+          -1.535,
+          0.253001
+        ],
+        "max": [
+          2.06,
+          1.535,
+          3.496
+        ],
+        "size": [
+          12.142499,
+          3.07,
+          3.242999
+        ]
+      },
+      "triangles": 6904,
+      "vertices": 3916,
+      "material_slots": [
+        "M_Bone",
+        "M_CamperPearlV14",
+        "M_CamperWalnutV14",
+        "M_Glass",
+        "M_Red",
+        "M_Rubber",
+        "M_Steel"
+      ],
+      "boundary_edges": 60,
+      "collision": "none",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "CamperDoorV17",
+      "fbx": "SM_CamperDoorV17.fbx",
+      "asset": "/Game/Art/Meshes/SM_CamperDoorV17",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.99,
+          -0.03,
+          0.01
+        ],
+        "max": [
+          -0.01,
+          0.0725,
+          2.11
+        ],
+        "size": [
+          0.98,
+          0.1025,
+          2.1
+        ]
+      },
+      "triangles": 116,
+      "vertices": 64,
+      "material_slots": [
+        "M_CamperPearlV14",
+        "M_Glass",
+        "M_Steel"
+      ],
+      "boundary_edges": 0,
+      "collision": "none",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "LeftHandV17",
+      "fbx": "SM_LeftHandV17.fbx",
+      "asset": "/Game/Art/Meshes/SM_LeftHandV17",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.673013,
+          -0.07,
+          -0.286109
+        ],
+        "max": [
+          0.116416,
+          0.07,
+          0.031941
+        ],
+        "size": [
+          0.789429,
+          0.14,
+          0.31805
+        ]
+      },
+      "triangles": 1292,
+      "vertices": 728,
+      "material_slots": [
+        "M_Bone",
+        "M_Cloth",
+        "M_Rubber",
+        "M_Rust",
+        "M_Steel"
+      ],
+      "boundary_edges": 0,
+      "collision": "none",
+      "animation": "Wrist centre pivot. Neutral grip: fingers +X, knuckles +Z, palm -Z; thumb lies +Y. Sleeve extends -X. Rigid gloved hand with modelled fingers; animate whole component. Weapon socket wrist locations are starting anchors; adjust rotation/position for the final camera and grip.",
+      "sockets_m": {}
+    },
+    {
+      "name": "RightHandV17",
+      "fbx": "SM_RightHandV17.fbx",
+      "asset": "/Game/Art/Meshes/SM_RightHandV17",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.673013,
+          -0.07,
+          -0.286109
+        ],
+        "max": [
+          0.116416,
+          0.07,
+          0.031941
+        ],
+        "size": [
+          0.789429,
+          0.14,
+          0.31805
+        ]
+      },
+      "triangles": 1292,
+      "vertices": 728,
+      "material_slots": [
+        "M_Bone",
+        "M_Cloth",
+        "M_Rubber",
+        "M_Rust",
+        "M_Steel"
+      ],
+      "boundary_edges": 0,
+      "collision": "none",
+      "animation": "Wrist centre pivot. Neutral grip: fingers +X, knuckles +Z, palm -Z; thumb lies -Y. Sleeve extends -X. Rigid gloved hand with modelled fingers; animate whole component. Weapon socket wrist locations are starting anchors; adjust rotation/position for the final camera and grip.",
+      "sockets_m": {}
+    }
+  ]
+}

@@ -1,0 +1,334 @@
+{
+  "assets": [
+    {
+      "name": "SlingPack25",
+      "fbx": "SM_SlingPack25.fbx",
+      "asset": "/Game/Art/Meshes/SM_SlingPack25",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.13,
+          -0.139,
+          0.0
+        ],
+        "max": [
+          0.13,
+          0.091,
+          0.366
+        ],
+        "size": [
+          0.26,
+          0.23,
+          0.366
+        ]
+      },
+      "triangles": 440,
+      "vertices": 240,
+      "material_slots": [
+        "M_Cloth",
+        "M_Rubber",
+        "M_Steel"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "Backpack25",
+      "fbx": "SM_Backpack25.fbx",
+      "asset": "/Game/Art/Meshes/SM_Backpack25",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.1482,
+          -0.1515,
+          0.0
+        ],
+        "max": [
+          0.1482,
+          0.106,
+          0.441
+        ],
+        "size": [
+          0.2964,
+          0.2575,
+          0.441
+        ]
+      },
+      "triangles": 440,
+      "vertices": 240,
+      "material_slots": [
+        "M_Cloth",
+        "M_Rubber",
+        "M_Steel"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "HikingPack25",
+      "fbx": "SM_HikingPack25.fbx",
+      "asset": "/Game/Art/Meshes/SM_HikingPack25",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.238,
+          -0.164,
+          0.0
+        ],
+        "max": [
+          0.238,
+          0.121,
+          0.516
+        ],
+        "size": [
+          0.476,
+          0.285,
+          0.516
+        ]
+      },
+      "triangles": 528,
+      "vertices": 288,
+      "material_slots": [
+        "M_Cloth",
+        "M_Rubber",
+        "M_Steel"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "MilitaryPack25",
+      "fbx": "SM_MilitaryPack25.fbx",
+      "asset": "/Game/Art/Meshes/SM_MilitaryPack25",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.2555,
+          -0.1765,
+          0.0
+        ],
+        "max": [
+          0.2555,
+          0.136,
+          0.591
+        ],
+        "size": [
+          0.511,
+          0.3125,
+          0.591
+        ]
+      },
+      "triangles": 660,
+      "vertices": 360,
+      "material_slots": [
+        "M_Cloth",
+        "M_Rubber",
+        "M_Steel"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "ExpeditionPack25",
+      "fbx": "SM_ExpeditionPack25.fbx",
+      "asset": "/Game/Art/Meshes/SM_ExpeditionPack25",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.273,
+          -0.189,
+          -0.035
+        ],
+        "max": [
+          0.273,
+          0.151,
+          0.666
+        ],
+        "size": [
+          0.546,
+          0.34,
+          0.701
+        ]
+      },
+      "triangles": 808,
+      "vertices": 440,
+      "material_slots": [
+        "M_Cloth",
+        "M_Rubber",
+        "M_Steel"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "NightVision25",
+      "fbx": "SM_NightVision25.fbx",
+      "asset": "/Game/Art/Meshes/SM_NightVision25",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.085,
+          -0.077,
+          -0.001
+        ],
+        "max": [
+          0.147,
+          0.077,
+          0.1475
+        ],
+        "size": [
+          0.232,
+          0.154,
+          0.1485
+        ]
+      },
+      "triangles": 852,
+      "vertices": 456,
+      "material_slots": [
+        "M_Glass",
+        "M_Rubber",
+        "M_Steel"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    }
+  ]
+}

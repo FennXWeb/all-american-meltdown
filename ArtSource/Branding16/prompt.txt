@@ -1,0 +1,5 @@
+Built-in image generation, background-extraction edit of ArtSource/Branding15/T_AllAmericanMeltdown.png.
+
+Use case: background-extraction. Edit target: the supplied All American Meltdown game logo. Produce a production PNG with genuinely transparent alpha background. Preserve the exact ALL AMERICAN MELTDOWN lettering, distressed ivory upper lettering, orange molten lower lettering, metal badge silhouette and radiation star emblem. Remove all rectangular black/brown background and diffuse backdrop glow; clean cutout edges around badge and emblem, transparent holes outside the solid badge. Keep smoke compact inside emblem silhouette. No checkerboard baked into pixels, no extra words. Center complete logo with 5 percent transparent padding, landscape 1536x1024. This will be composited over a moving game menu.
+
+Original generated PNG retained. Alpha is preserved unchanged during project import. Runtime main-menu animation adds moving embers, slow vertical movement and a UV-strip heat shimmer; pause menu draws the static alpha image.

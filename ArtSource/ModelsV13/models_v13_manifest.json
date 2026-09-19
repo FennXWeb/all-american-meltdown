@@ -1,0 +1,1038 @@
+{
+  "assets": [
+    {
+      "name": "SofaV13",
+      "fbx": "SM_SofaV13.fbx",
+      "asset": "/Game/Art/Meshes/SM_SofaV13",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -1.13,
+          -0.46,
+          0.0
+        ],
+        "max": [
+          1.13,
+          0.46,
+          1.04
+        ],
+        "size": [
+          2.26,
+          0.92,
+          1.04
+        ]
+      },
+      "triangles": 704,
+      "vertices": 384,
+      "material_slots": [
+        "M_Cloth",
+        "M_Red",
+        "M_Wood"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "CoffeeTableV13",
+      "fbx": "SM_CoffeeTableV13.fbx",
+      "asset": "/Game/Art/Meshes/SM_CoffeeTableV13",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.625,
+          -0.325,
+          0.0
+        ],
+        "max": [
+          0.625,
+          0.325,
+          0.43
+        ],
+        "size": [
+          1.25,
+          0.65,
+          0.43
+        ]
+      },
+      "triangles": 244,
+      "vertices": 136,
+      "material_slots": [
+        "M_Wood"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "DiningTableV13",
+      "fbx": "SM_DiningTableV13.fbx",
+      "asset": "/Game/Art/Meshes/SM_DiningTableV13",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.9,
+          -0.475,
+          0.0
+        ],
+        "max": [
+          0.9,
+          0.475,
+          0.78
+        ],
+        "size": [
+          1.8,
+          0.95,
+          0.78
+        ]
+      },
+      "triangles": 244,
+      "vertices": 136,
+      "material_slots": [
+        "M_Wood"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "SideboardV13",
+      "fbx": "SM_SideboardV13.fbx",
+      "asset": "/Game/Art/Meshes/SM_SideboardV13",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.845,
+          -0.307462,
+          0.0
+        ],
+        "max": [
+          0.845,
+          0.28,
+          0.87
+        ],
+        "size": [
+          1.69,
+          0.587462,
+          0.87
+        ]
+      },
+      "triangles": 984,
+      "vertices": 540,
+      "material_slots": [
+        "M_Steel",
+        "M_Wood"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "NightstandV13",
+      "fbx": "SM_NightstandV13.fbx",
+      "asset": "/Game/Art/Meshes/SM_NightstandV13",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.28,
+          -0.309511,
+          0.0
+        ],
+        "max": [
+          0.28,
+          0.28,
+          0.61
+        ],
+        "size": [
+          0.56,
+          0.589511,
+          0.61
+        ]
+      },
+      "triangles": 424,
+      "vertices": 232,
+      "material_slots": [
+        "M_Steel",
+        "M_Wood"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "BookcaseV13",
+      "fbx": "SM_BookcaseV13.fbx",
+      "asset": "/Game/Art/Meshes/SM_BookcaseV13",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.63,
+          -0.19,
+          0.0
+        ],
+        "max": [
+          0.63,
+          0.19,
+          1.92
+        ],
+        "size": [
+          1.26,
+          0.38,
+          1.92
+        ]
+      },
+      "triangles": 1840,
+      "vertices": 1056,
+      "material_slots": [
+        "M_Bone",
+        "M_Cloth",
+        "M_Red",
+        "M_Wood"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "HomeBedV13",
+      "fbx": "SM_HomeBedV13.fbx",
+      "asset": "/Game/Art/Meshes/SM_HomeBedV13",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -1.035,
+          -0.8,
+          0.0
+        ],
+        "max": [
+          1.025,
+          0.8,
+          1.145
+        ],
+        "size": [
+          2.06,
+          1.6,
+          1.145
+        ]
+      },
+      "triangles": 532,
+      "vertices": 296,
+      "material_slots": [
+        "M_Bone",
+        "M_Cloth",
+        "M_Red",
+        "M_Wood"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "TableSettingV13",
+      "fbx": "SM_TableSettingV13.fbx",
+      "asset": "/Game/Art/Meshes/SM_TableSettingV13",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.166,
+          -0.12,
+          0.0
+        ],
+        "max": [
+          0.224,
+          0.12,
+          0.105
+        ],
+        "size": [
+          0.39,
+          0.24,
+          0.105
+        ]
+      },
+      "triangles": 400,
+      "vertices": 208,
+      "material_slots": [
+        "M_Bone",
+        "M_Steel"
+      ],
+      "boundary_edges": 0,
+      "collision": "none",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "DeskSetV13",
+      "fbx": "SM_DeskSetV13.fbx",
+      "asset": "/Game/Art/Meshes/SM_DeskSetV13",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.263287,
+          -0.105,
+          -0.0
+        ],
+        "max": [
+          0.27,
+          0.168252,
+          0.201149
+        ],
+        "size": [
+          0.533287,
+          0.273252,
+          0.201149
+        ]
+      },
+      "triangles": 176,
+      "vertices": 104,
+      "material_slots": [
+        "M_Bone",
+        "M_Red",
+        "M_Steel",
+        "M_Wood"
+      ],
+      "boundary_edges": 0,
+      "collision": "none",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "TableLampV13",
+      "fbx": "SM_TableLampV13.fbx",
+      "asset": "/Game/Art/Meshes/SM_TableLampV13",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.17,
+          -0.17,
+          0.0
+        ],
+        "max": [
+          0.17,
+          0.17,
+          0.54
+        ],
+        "size": [
+          0.34,
+          0.34,
+          0.54
+        ]
+      },
+      "triangles": 176,
+      "vertices": 96,
+      "material_slots": [
+        "M_Bone",
+        "M_Steel"
+      ],
+      "boundary_edges": 0,
+      "collision": "none",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "RadiatorV13",
+      "fbx": "SM_RadiatorV13.fbx",
+      "asset": "/Game/Art/Meshes/SM_RadiatorV13",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.55,
+          -0.08,
+          0.0
+        ],
+        "max": [
+          0.55,
+          0.08,
+          0.725
+        ],
+        "size": [
+          1.1,
+          0.16,
+          0.725
+        ]
+      },
+      "triangles": 624,
+      "vertices": 344,
+      "material_slots": [
+        "M_Bone",
+        "M_Steel"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "PantryV13",
+      "fbx": "SM_PantryV13.fbx",
+      "asset": "/Game/Art/Meshes/SM_PantryV13",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.398,
+          -0.07,
+          0.0
+        ],
+        "max": [
+          0.4025,
+          0.07,
+          0.19
+        ],
+        "size": [
+          0.8005,
+          0.14,
+          0.19
+        ]
+      },
+      "triangles": 396,
+      "vertices": 216,
+      "material_slots": [
+        "M_Bone",
+        "M_Red",
+        "M_Steel"
+      ],
+      "boundary_edges": 0,
+      "collision": "none",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "WasteBinV13",
+      "fbx": "SM_WasteBinV13.fbx",
+      "asset": "/Game/Art/Meshes/SM_WasteBinV13",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.18,
+          -0.18,
+          0.0
+        ],
+        "max": [
+          0.18,
+          0.18,
+          0.45
+        ],
+        "size": [
+          0.36,
+          0.36,
+          0.45
+        ]
+      },
+      "triangles": 140,
+      "vertices": 72,
+      "material_slots": [
+        "M_Steel"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "CeilingLightV13",
+      "fbx": "SM_CeilingLightV13.fbx",
+      "asset": "/Game/Art/Meshes/SM_CeilingLightV13",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.525,
+          -0.12,
+          -0.075
+        ],
+        "max": [
+          0.525,
+          0.12,
+          0.035
+        ],
+        "size": [
+          1.05,
+          0.24,
+          0.11
+        ]
+      },
+      "triangles": 100,
+      "vertices": 56,
+      "material_slots": [
+        "M_Bone",
+        "M_Steel"
+      ],
+      "boundary_edges": 0,
+      "collision": "none",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "FuseBoxV13",
+      "fbx": "SM_FuseBoxV13.fbx",
+      "asset": "/Game/Art/Meshes/SM_FuseBoxV13",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.24,
+          -0.0905,
+          -0.315
+        ],
+        "max": [
+          0.24,
+          0.05,
+          0.315
+        ],
+        "size": [
+          0.48,
+          0.1405,
+          0.63
+        ]
+      },
+      "triangles": 160,
+      "vertices": 96,
+      "material_slots": [
+        "M_Cloth",
+        "M_Red",
+        "M_Rubber",
+        "M_Steel"
+      ],
+      "boundary_edges": 0,
+      "collision": "none",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "GableV13",
+      "fbx": "SM_GableV13.fbx",
+      "asset": "/Game/Art/Meshes/SM_GableV13",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.12,
+          -1.0,
+          0.0
+        ],
+        "max": [
+          0.12,
+          1.0,
+          1.0
+        ],
+        "size": [
+          0.24,
+          2.0,
+          1.0
+        ]
+      },
+      "triangles": 8,
+      "vertices": 6,
+      "material_slots": [
+        "M_Wood"
+      ],
+      "boundary_edges": 0,
+      "collision": "none",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "CurtainsV13",
+      "fbx": "SM_CurtainsV13.fbx",
+      "asset": "/Game/Art/Meshes/SM_CurtainsV13",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.91,
+          -0.0625,
+          -0.8
+        ],
+        "max": [
+          0.91,
+          0.0225,
+          0.836
+        ],
+        "size": [
+          1.82,
+          0.085,
+          1.636
+        ]
+      },
+      "triangles": 476,
+      "vertices": 260,
+      "material_slots": [
+        "M_Cloth",
+        "M_Steel"
+      ],
+      "boundary_edges": 0,
+      "collision": "none",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "LandscapeV13",
+      "fbx": "SM_LandscapeV13.fbx",
+      "asset": "/Game/Art/Meshes/SM_LandscapeV13",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.65,
+          -0.0675,
+          -0.4275
+        ],
+        "max": [
+          0.65,
+          0.0175,
+          0.4275
+        ],
+        "size": [
+          1.3,
+          0.085,
+          0.855
+        ]
+      },
+      "triangles": 281,
+      "vertices": 159,
+      "material_slots": [
+        "M_Bone",
+        "M_Cloth",
+        "M_Red",
+        "M_Wood"
+      ],
+      "boundary_edges": 7,
+      "collision": "none",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "BathtubV13",
+      "fbx": "SM_BathtubV13.fbx",
+      "asset": "/Game/Art/Meshes/SM_BathtubV13",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.88,
+          -0.42,
+          0.0
+        ],
+        "max": [
+          0.88,
+          0.42,
+          0.782
+        ],
+        "size": [
+          1.76,
+          0.84,
+          0.782
+        ]
+      },
+      "triangles": 656,
+      "vertices": 360,
+      "material_slots": [
+        "M_Bone",
+        "M_Steel"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    }
+  ]
+}

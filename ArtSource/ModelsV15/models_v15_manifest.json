@@ -1,0 +1,269 @@
+{
+  "assets": [
+    {
+      "name": "SurvivorHeadV15",
+      "fbx": "SM_SurvivorHeadV15.fbx",
+      "asset": "/Game/Art/Meshes/SM_SurvivorHeadV15",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.47,
+          -0.5,
+          -0.5
+        ],
+        "max": [
+          0.53,
+          0.5,
+          0.5
+        ],
+        "size": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "triangles": 116,
+      "vertices": 60,
+      "material_slots": [
+        "M_Skin"
+      ],
+      "boundary_edges": 0,
+      "collision": "none",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "SurvivorTorsoV15",
+      "fbx": "SM_SurvivorTorsoV15.fbx",
+      "asset": "/Game/Art/Meshes/SM_SurvivorTorsoV15",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.49,
+          -0.5,
+          -0.5
+        ],
+        "max": [
+          0.49,
+          0.5,
+          0.5
+        ],
+        "size": [
+          0.98,
+          1.0,
+          1.0
+        ]
+      },
+      "triangles": 76,
+      "vertices": 40,
+      "material_slots": [
+        "M_Cloth"
+      ],
+      "boundary_edges": 0,
+      "collision": "none",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "SurvivorLimbV15",
+      "fbx": "SM_SurvivorLimbV15.fbx",
+      "asset": "/Game/Art/Meshes/SM_SurvivorLimbV15",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.5,
+          -0.5,
+          -0.5
+        ],
+        "max": [
+          0.5,
+          0.5,
+          0.5
+        ],
+        "size": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "triangles": 44,
+      "vertices": 24,
+      "material_slots": [
+        "M_Cloth"
+      ],
+      "boundary_edges": 0,
+      "collision": "none",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "IntroCloudV15",
+      "fbx": "SM_IntroCloudV15.fbx",
+      "asset": "/Game/Art/Meshes/SM_IntroCloudV15",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.552216,
+          -0.521886,
+          -0.532986
+        ],
+        "max": [
+          0.533105,
+          0.525056,
+          0.530908
+        ],
+        "size": [
+          1.085321,
+          1.046941,
+          1.063894
+        ]
+      },
+      "triangles": 320,
+      "vertices": 162,
+      "material_slots": [
+        "M_Concrete"
+      ],
+      "boundary_edges": 0,
+      "collision": "none",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "IntroFlameV15",
+      "fbx": "SM_IntroFlameV15.fbx",
+      "asset": "/Game/Art/Meshes/SM_IntroFlameV15",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.378407,
+          -0.389219,
+          -0.5
+        ],
+        "max": [
+          0.58,
+          0.449219,
+          0.5
+        ],
+        "size": [
+          0.958407,
+          0.838438,
+          1.0
+        ]
+      },
+      "triangles": 66,
+      "vertices": 35,
+      "material_slots": [
+        "M_Glow"
+      ],
+      "boundary_edges": 0,
+      "collision": "none",
+      "animation": "",
+      "sockets_m": {}
+    }
+  ]
+}

@@ -1,0 +1,497 @@
+{
+  "assets": [
+    {
+      "name": "TenBarrel50",
+      "fbx": "SM_TenBarrel50.fbx",
+      "asset": "/Game/Art/Meshes/SM_TenBarrel50",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.42,
+          -0.109,
+          -0.185
+        ],
+        "max": [
+          0.13,
+          0.109,
+          0.125
+        ],
+        "size": [
+          0.55,
+          0.218,
+          0.31
+        ]
+      },
+      "triangles": 544,
+      "vertices": 296,
+      "material_slots": [
+        "M_Rubber",
+        "M_Rust",
+        "M_Steel",
+        "M_Wood"
+      ],
+      "boundary_edges": 0,
+      "collision": "none",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "TenBarrels50",
+      "fbx": "SM_TenBarrels50.fbx",
+      "asset": "/Game/Art/Meshes/SM_TenBarrels50",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.0,
+          -0.1025,
+          -0.0575
+        ],
+        "max": [
+          0.713,
+          0.1025,
+          0.081
+        ],
+        "size": [
+          0.713,
+          0.205,
+          0.1385
+        ]
+      },
+      "triangles": 1332,
+      "vertices": 712,
+      "material_slots": [
+        "M_Rubber",
+        "M_Rust",
+        "M_Steel",
+        "M_Wood"
+      ],
+      "boundary_edges": 0,
+      "collision": "none",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "GiantGlock50",
+      "fbx": "SM_GiantGlock50.fbx",
+      "asset": "/Game/Art/Meshes/SM_GiantGlock50",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.185,
+          -0.06,
+          -0.333
+        ],
+        "max": [
+          0.663,
+          0.059,
+          0.109
+        ],
+        "size": [
+          0.848,
+          0.119,
+          0.442
+        ]
+      },
+      "triangles": 912,
+      "vertices": 496,
+      "material_slots": [
+        "M_Rubber",
+        "M_Steel"
+      ],
+      "boundary_edges": 0,
+      "collision": "none",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "GiantMag50",
+      "fbx": "SM_GiantMag50.fbx",
+      "asset": "/Game/Art/Meshes/SM_GiantMag50",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.045,
+          -0.0415,
+          -0.21
+        ],
+        "max": [
+          0.045,
+          0.0415,
+          0.01
+        ],
+        "size": [
+          0.09,
+          0.083,
+          0.22
+        ]
+      },
+      "triangles": 88,
+      "vertices": 48,
+      "material_slots": [
+        "M_Rubber",
+        "M_Steel"
+      ],
+      "boundary_edges": 0,
+      "collision": "none",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "QuestionableAK50",
+      "fbx": "SM_QuestionableAK50.fbx",
+      "asset": "/Game/Art/Meshes/SM_QuestionableAK50",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.4775,
+          -0.052,
+          -0.185
+        ],
+        "max": [
+          0.68,
+          0.045,
+          0.111
+        ],
+        "size": [
+          1.1575,
+          0.097,
+          0.296
+        ]
+      },
+      "triangles": 1204,
+      "vertices": 648,
+      "material_slots": [
+        "M_Rubber",
+        "M_Steel",
+        "M_Wood"
+      ],
+      "boundary_edges": 0,
+      "collision": "none",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "AKMag50",
+      "fbx": "SM_AKMag50.fbx",
+      "asset": "/Game/Art/Meshes/SM_AKMag50",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.0125,
+          -0.029,
+          -0.2935
+        ],
+        "max": [
+          0.138997,
+          0.029,
+          0.0185
+        ],
+        "size": [
+          0.151497,
+          0.058,
+          0.312
+        ]
+      },
+      "triangles": 1584,
+      "vertices": 864,
+      "material_slots": [
+        "M_Rust",
+        "M_Steel"
+      ],
+      "boundary_edges": 0,
+      "collision": "none",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "FingerGuns50",
+      "fbx": "SM_FingerGuns50.fbx",
+      "asset": "/Game/Art/Meshes/SM_FingerGuns50",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.10713,
+          -0.037,
+          -0.091195
+        ],
+        "max": [
+          0.335133,
+          0.077522,
+          0.084355
+        ],
+        "size": [
+          0.442264,
+          0.114522,
+          0.17555
+        ]
+      },
+      "triangles": 704,
+      "vertices": 376,
+      "material_slots": [
+        "M_ComedySkin50"
+      ],
+      "boundary_edges": 0,
+      "collision": "none",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "BudgetCut50",
+      "fbx": "SM_BudgetCut50.fbx",
+      "asset": "/Game/Art/Meshes/SM_BudgetCut50",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.45,
+          -0.0355,
+          -0.265
+        ],
+        "max": [
+          0.23,
+          0.0355,
+          0.079
+        ],
+        "size": [
+          0.68,
+          0.071,
+          0.344
+        ]
+      },
+      "triangles": 896,
+      "vertices": 488,
+      "material_slots": [
+        "M_ComedyPlastic50",
+        "M_Red",
+        "M_Rubber",
+        "M_Steel"
+      ],
+      "boundary_edges": 0,
+      "collision": "none",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "BudgetBarrel50",
+      "fbx": "SM_BudgetBarrel50.fbx",
+      "asset": "/Game/Art/Meshes/SM_BudgetBarrel50",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.0,
+          -0.0375,
+          -0.0275
+        ],
+        "max": [
+          0.415,
+          0.0375,
+          0.037
+        ],
+        "size": [
+          0.415,
+          0.075,
+          0.0645
+        ]
+      },
+      "triangles": 428,
+      "vertices": 232,
+      "material_slots": [
+        "M_ComedyPlastic50",
+        "M_Red",
+        "M_Rubber"
+      ],
+      "boundary_edges": 0,
+      "collision": "none",
+      "animation": "",
+      "sockets_m": {}
+    }
+  ]
+}

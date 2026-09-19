@@ -1,0 +1,5294 @@
+{
+  "assets": [
+    {
+      "name": "MaleTop035",
+      "fbx": "SM_MaleTop035.fbx",
+      "asset": "/Game/Art/Meshes/SM_MaleTop035",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.143632,
+          -0.218634,
+          -0.49
+        ],
+        "max": [
+          0.164,
+          0.217366,
+          0.005
+        ],
+        "size": [
+          0.307632,
+          0.436,
+          0.495
+        ]
+      },
+      "triangles": 596,
+      "vertices": 322,
+      "material_slots": [
+        "M_Cotton35"
+      ],
+      "boundary_edges": 30,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "MaleTop135",
+      "fbx": "SM_MaleTop135.fbx",
+      "asset": "/Game/Art/Meshes/SM_MaleTop135",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.136181,
+          -0.212226,
+          -0.49
+        ],
+        "max": [
+          0.137819,
+          0.211774,
+          0.005
+        ],
+        "size": [
+          0.274,
+          0.424,
+          0.495
+        ]
+      },
+      "triangles": 572,
+      "vertices": 288,
+      "material_slots": [
+        "M_Cotton35"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "MaleTop235",
+      "fbx": "SM_MaleTop235.fbx",
+      "asset": "/Game/Art/Meshes/SM_MaleTop235",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.146632,
+          -0.221634,
+          -0.49
+        ],
+        "max": [
+          0.145994,
+          0.220366,
+          0.005
+        ],
+        "size": [
+          0.292626,
+          0.442,
+          0.495
+        ]
+      },
+      "triangles": 572,
+      "vertices": 288,
+      "material_slots": [
+        "M_Cotton35"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "MaleTop335",
+      "fbx": "SM_MaleTop335.fbx",
+      "asset": "/Game/Art/Meshes/SM_MaleTop335",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.155632,
+          -0.230634,
+          -0.49
+        ],
+        "max": [
+          0.176,
+          0.229366,
+          0.005
+        ],
+        "size": [
+          0.331632,
+          0.46,
+          0.495
+        ]
+      },
+      "triangles": 604,
+      "vertices": 332,
+      "material_slots": [
+        "M_Leather35",
+        "M_Metal35"
+      ],
+      "boundary_edges": 38,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "MaleTop435",
+      "fbx": "SM_MaleTop435.fbx",
+      "asset": "/Game/Art/Meshes/SM_MaleTop435",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.161632,
+          -0.236634,
+          -0.49
+        ],
+        "max": [
+          0.160706,
+          0.235366,
+          0.054
+        ],
+        "size": [
+          0.322338,
+          0.472,
+          0.544
+        ]
+      },
+      "triangles": 716,
+      "vertices": 368,
+      "material_slots": [
+        "M_Cotton35",
+        "M_Knit35"
+      ],
+      "boundary_edges": 8,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "MaleTop535",
+      "fbx": "SM_MaleTop535.fbx",
+      "asset": "/Game/Art/Meshes/SM_MaleTop535",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.155288,
+          -0.228133,
+          -0.69
+        ],
+        "max": [
+          0.177,
+          0.233867,
+          0.005
+        ],
+        "size": [
+          0.332288,
+          0.462,
+          0.695
+        ]
+      },
+      "triangles": 732,
+      "vertices": 396,
+      "material_slots": [
+        "M_Canvas35",
+        "M_Cotton35"
+      ],
+      "boundary_edges": 38,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "MaleTop635",
+      "fbx": "SM_MaleTop635.fbx",
+      "asset": "/Game/Art/Meshes/SM_MaleTop635",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.149632,
+          -0.224634,
+          -0.49
+        ],
+        "max": [
+          0.17,
+          0.223366,
+          0.005
+        ],
+        "size": [
+          0.319632,
+          0.448,
+          0.495
+        ]
+      },
+      "triangles": 612,
+      "vertices": 342,
+      "material_slots": [
+        "M_Canvas35",
+        "M_Cotton35"
+      ],
+      "boundary_edges": 46,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "MaleTop735",
+      "fbx": "SM_MaleTop735.fbx",
+      "asset": "/Game/Art/Meshes/SM_MaleTop735",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.148632,
+          -0.223634,
+          -0.49
+        ],
+        "max": [
+          0.169,
+          0.222366,
+          0.005
+        ],
+        "size": [
+          0.317632,
+          0.446,
+          0.495
+        ]
+      },
+      "triangles": 596,
+      "vertices": 322,
+      "material_slots": [
+        "M_Cotton35"
+      ],
+      "boundary_edges": 30,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "MaleTop835",
+      "fbx": "SM_MaleTop835.fbx",
+      "asset": "/Game/Art/Meshes/SM_MaleTop835",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.136181,
+          -0.212226,
+          -0.49
+        ],
+        "max": [
+          0.137819,
+          0.211774,
+          0.005
+        ],
+        "size": [
+          0.274,
+          0.424,
+          0.495
+        ]
+      },
+      "triangles": 572,
+      "vertices": 288,
+      "material_slots": [
+        "M_Skin35"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "MaleWaist035",
+      "fbx": "SM_MaleWaist035.fbx",
+      "asset": "/Game/Art/Meshes/SM_MaleWaist035",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.137,
+          -0.159902,
+          -0.14
+        ],
+        "max": [
+          0.13,
+          0.160098,
+          0.0155
+        ],
+        "size": [
+          0.267,
+          0.32,
+          0.1555
+        ]
+      },
+      "triangles": 340,
+      "vertices": 183,
+      "material_slots": [
+        "M_Denim35",
+        "M_Leather35",
+        "M_Metal35"
+      ],
+      "boundary_edges": 12,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "MaleWaist135",
+      "fbx": "SM_MaleWaist135.fbx",
+      "asset": "/Game/Art/Meshes/SM_MaleWaist135",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.137,
+          -0.159902,
+          -0.14
+        ],
+        "max": [
+          0.13,
+          0.160098,
+          0.0155
+        ],
+        "size": [
+          0.267,
+          0.32,
+          0.1555
+        ]
+      },
+      "triangles": 340,
+      "vertices": 183,
+      "material_slots": [
+        "M_Canvas35",
+        "M_Leather35",
+        "M_Metal35"
+      ],
+      "boundary_edges": 12,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "MaleWaist235",
+      "fbx": "SM_MaleWaist235.fbx",
+      "asset": "/Game/Art/Meshes/SM_MaleWaist235",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.137,
+          -0.159902,
+          -0.14
+        ],
+        "max": [
+          0.13,
+          0.160098,
+          0.0155
+        ],
+        "size": [
+          0.267,
+          0.32,
+          0.1555
+        ]
+      },
+      "triangles": 340,
+      "vertices": 183,
+      "material_slots": [
+        "M_Cotton35",
+        "M_Leather35",
+        "M_Metal35"
+      ],
+      "boundary_edges": 12,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "MaleWaist335",
+      "fbx": "SM_MaleWaist335.fbx",
+      "asset": "/Game/Art/Meshes/SM_MaleWaist335",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.137,
+          -0.159902,
+          -0.14
+        ],
+        "max": [
+          0.13,
+          0.160098,
+          0.0155
+        ],
+        "size": [
+          0.267,
+          0.32,
+          0.1555
+        ]
+      },
+      "triangles": 340,
+      "vertices": 183,
+      "material_slots": [
+        "M_Denim35",
+        "M_Leather35",
+        "M_Metal35"
+      ],
+      "boundary_edges": 12,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "MaleWaist435",
+      "fbx": "SM_MaleWaist435.fbx",
+      "asset": "/Game/Art/Meshes/SM_MaleWaist435",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.137,
+          -0.159902,
+          -0.14
+        ],
+        "max": [
+          0.13,
+          0.160098,
+          0.0155
+        ],
+        "size": [
+          0.267,
+          0.32,
+          0.1555
+        ]
+      },
+      "triangles": 340,
+      "vertices": 183,
+      "material_slots": [
+        "M_Knit35",
+        "M_Leather35",
+        "M_Metal35"
+      ],
+      "boundary_edges": 12,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "MaleWaist535",
+      "fbx": "SM_MaleWaist535.fbx",
+      "asset": "/Game/Art/Meshes/SM_MaleWaist535",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.137,
+          -0.159902,
+          -0.14
+        ],
+        "max": [
+          0.13,
+          0.160098,
+          0.0155
+        ],
+        "size": [
+          0.267,
+          0.32,
+          0.1555
+        ]
+      },
+      "triangles": 340,
+      "vertices": 183,
+      "material_slots": [
+        "M_Knit35",
+        "M_Leather35",
+        "M_Metal35"
+      ],
+      "boundary_edges": 12,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "FemaleTop035",
+      "fbx": "SM_FemaleTop035.fbx",
+      "asset": "/Game/Art/Meshes/SM_FemaleTop035",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.143632,
+          -0.205914,
+          -0.49
+        ],
+        "max": [
+          0.164,
+          0.204646,
+          0.005
+        ],
+        "size": [
+          0.307632,
+          0.41056,
+          0.495
+        ]
+      },
+      "triangles": 596,
+      "vertices": 322,
+      "material_slots": [
+        "M_Cotton35"
+      ],
+      "boundary_edges": 30,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "FemaleTop135",
+      "fbx": "SM_FemaleTop135.fbx",
+      "asset": "/Game/Art/Meshes/SM_FemaleTop135",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.136181,
+          -0.199506,
+          -0.49
+        ],
+        "max": [
+          0.144998,
+          0.199054,
+          0.005
+        ],
+        "size": [
+          0.281179,
+          0.39856,
+          0.495
+        ]
+      },
+      "triangles": 572,
+      "vertices": 288,
+      "material_slots": [
+        "M_Cotton35"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "FemaleTop235",
+      "fbx": "SM_FemaleTop235.fbx",
+      "asset": "/Game/Art/Meshes/SM_FemaleTop235",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.146632,
+          -0.208914,
+          -0.49
+        ],
+        "max": [
+          0.156395,
+          0.207646,
+          0.005
+        ],
+        "size": [
+          0.303028,
+          0.41656,
+          0.495
+        ]
+      },
+      "triangles": 572,
+      "vertices": 288,
+      "material_slots": [
+        "M_Cotton35"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "FemaleTop335",
+      "fbx": "SM_FemaleTop335.fbx",
+      "asset": "/Game/Art/Meshes/SM_FemaleTop335",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.155632,
+          -0.217914,
+          -0.49
+        ],
+        "max": [
+          0.176,
+          0.216646,
+          0.005
+        ],
+        "size": [
+          0.331632,
+          0.43456,
+          0.495
+        ]
+      },
+      "triangles": 604,
+      "vertices": 332,
+      "material_slots": [
+        "M_Leather35",
+        "M_Metal35"
+      ],
+      "boundary_edges": 38,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "FemaleTop435",
+      "fbx": "SM_FemaleTop435.fbx",
+      "asset": "/Game/Art/Meshes/SM_FemaleTop435",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.161632,
+          -0.223914,
+          -0.49
+        ],
+        "max": [
+          0.171984,
+          0.222646,
+          0.054
+        ],
+        "size": [
+          0.333616,
+          0.44656,
+          0.544
+        ]
+      },
+      "triangles": 716,
+      "vertices": 368,
+      "material_slots": [
+        "M_Cotton35",
+        "M_Knit35"
+      ],
+      "boundary_edges": 8,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "FemaleTop535",
+      "fbx": "SM_FemaleTop535.fbx",
+      "asset": "/Game/Art/Meshes/SM_FemaleTop535",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.155288,
+          -0.215413,
+          -0.69
+        ],
+        "max": [
+          0.177,
+          0.221147,
+          0.005
+        ],
+        "size": [
+          0.332288,
+          0.43656,
+          0.695
+        ]
+      },
+      "triangles": 732,
+      "vertices": 396,
+      "material_slots": [
+        "M_Canvas35",
+        "M_Cotton35"
+      ],
+      "boundary_edges": 38,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "FemaleTop635",
+      "fbx": "SM_FemaleTop635.fbx",
+      "asset": "/Game/Art/Meshes/SM_FemaleTop635",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.149632,
+          -0.211914,
+          -0.49
+        ],
+        "max": [
+          0.17,
+          0.210646,
+          0.005
+        ],
+        "size": [
+          0.319632,
+          0.42256,
+          0.495
+        ]
+      },
+      "triangles": 612,
+      "vertices": 342,
+      "material_slots": [
+        "M_Canvas35",
+        "M_Cotton35"
+      ],
+      "boundary_edges": 46,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "FemaleTop735",
+      "fbx": "SM_FemaleTop735.fbx",
+      "asset": "/Game/Art/Meshes/SM_FemaleTop735",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.148632,
+          -0.210914,
+          -0.49
+        ],
+        "max": [
+          0.169,
+          0.209646,
+          0.005
+        ],
+        "size": [
+          0.317632,
+          0.42056,
+          0.495
+        ]
+      },
+      "triangles": 596,
+      "vertices": 322,
+      "material_slots": [
+        "M_Cotton35"
+      ],
+      "boundary_edges": 30,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "FemaleTop835",
+      "fbx": "SM_FemaleTop835.fbx",
+      "asset": "/Game/Art/Meshes/SM_FemaleTop835",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.157,
+          -0.206,
+          -0.49
+        ],
+        "max": [
+          0.169,
+          0.206,
+          0.005
+        ],
+        "size": [
+          0.326,
+          0.412,
+          0.495
+        ]
+      },
+      "triangles": 760,
+      "vertices": 384,
+      "material_slots": [
+        "M_Cotton35",
+        "M_Skin35"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "FemaleWaist035",
+      "fbx": "SM_FemaleWaist035.fbx",
+      "asset": "/Game/Art/Meshes/SM_FemaleWaist035",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.137,
+          -0.167902,
+          -0.14
+        ],
+        "max": [
+          0.13,
+          0.168098,
+          0.0155
+        ],
+        "size": [
+          0.267,
+          0.336,
+          0.1555
+        ]
+      },
+      "triangles": 340,
+      "vertices": 183,
+      "material_slots": [
+        "M_Denim35",
+        "M_Leather35",
+        "M_Metal35"
+      ],
+      "boundary_edges": 12,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "FemaleWaist135",
+      "fbx": "SM_FemaleWaist135.fbx",
+      "asset": "/Game/Art/Meshes/SM_FemaleWaist135",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.137,
+          -0.167902,
+          -0.14
+        ],
+        "max": [
+          0.13,
+          0.168098,
+          0.0155
+        ],
+        "size": [
+          0.267,
+          0.336,
+          0.1555
+        ]
+      },
+      "triangles": 340,
+      "vertices": 183,
+      "material_slots": [
+        "M_Canvas35",
+        "M_Leather35",
+        "M_Metal35"
+      ],
+      "boundary_edges": 12,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "FemaleWaist235",
+      "fbx": "SM_FemaleWaist235.fbx",
+      "asset": "/Game/Art/Meshes/SM_FemaleWaist235",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.137,
+          -0.167902,
+          -0.14
+        ],
+        "max": [
+          0.13,
+          0.168098,
+          0.0155
+        ],
+        "size": [
+          0.267,
+          0.336,
+          0.1555
+        ]
+      },
+      "triangles": 340,
+      "vertices": 183,
+      "material_slots": [
+        "M_Cotton35",
+        "M_Leather35",
+        "M_Metal35"
+      ],
+      "boundary_edges": 12,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "FemaleWaist335",
+      "fbx": "SM_FemaleWaist335.fbx",
+      "asset": "/Game/Art/Meshes/SM_FemaleWaist335",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.137,
+          -0.167902,
+          -0.14
+        ],
+        "max": [
+          0.13,
+          0.168098,
+          0.0155
+        ],
+        "size": [
+          0.267,
+          0.336,
+          0.1555
+        ]
+      },
+      "triangles": 340,
+      "vertices": 183,
+      "material_slots": [
+        "M_Denim35",
+        "M_Leather35",
+        "M_Metal35"
+      ],
+      "boundary_edges": 12,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "FemaleWaist435",
+      "fbx": "SM_FemaleWaist435.fbx",
+      "asset": "/Game/Art/Meshes/SM_FemaleWaist435",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.137,
+          -0.167902,
+          -0.14
+        ],
+        "max": [
+          0.13,
+          0.168098,
+          0.0155
+        ],
+        "size": [
+          0.267,
+          0.336,
+          0.1555
+        ]
+      },
+      "triangles": 340,
+      "vertices": 183,
+      "material_slots": [
+        "M_Knit35",
+        "M_Leather35",
+        "M_Metal35"
+      ],
+      "boundary_edges": 12,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "FemaleWaist535",
+      "fbx": "SM_FemaleWaist535.fbx",
+      "asset": "/Game/Art/Meshes/SM_FemaleWaist535",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.137,
+          -0.167902,
+          -0.14
+        ],
+        "max": [
+          0.13,
+          0.168098,
+          0.0155
+        ],
+        "size": [
+          0.267,
+          0.336,
+          0.1555
+        ]
+      },
+      "triangles": 340,
+      "vertices": 183,
+      "material_slots": [
+        "M_Knit35",
+        "M_Leather35",
+        "M_Metal35"
+      ],
+      "boundary_edges": 12,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "Sleeve035",
+      "fbx": "SM_Sleeve035.fbx",
+      "asset": "/Game/Art/Meshes/SM_Sleeve035",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.070811,
+          -0.068042,
+          -0.64
+        ],
+        "max": [
+          0.078683,
+          0.071464,
+          0.017
+        ],
+        "size": [
+          0.149494,
+          0.139506,
+          0.657
+        ]
+      },
+      "triangles": 940,
+      "vertices": 486,
+      "material_slots": [
+        "M_Cotton35",
+        "M_Skin35"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "Sleeve135",
+      "fbx": "SM_Sleeve135.fbx",
+      "asset": "/Game/Art/Meshes/SM_Sleeve135",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.070811,
+          -0.068756,
+          -0.64
+        ],
+        "max": [
+          0.077683,
+          0.071464,
+          0.017
+        ],
+        "size": [
+          0.148494,
+          0.14022,
+          0.657
+        ]
+      },
+      "triangles": 940,
+      "vertices": 486,
+      "material_slots": [
+        "M_Cotton35",
+        "M_Skin35"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "Sleeve235",
+      "fbx": "SM_Sleeve235.fbx",
+      "asset": "/Game/Art/Meshes/SM_Sleeve235",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.070811,
+          -0.068042,
+          -0.64
+        ],
+        "max": [
+          0.078683,
+          0.071464,
+          0.017
+        ],
+        "size": [
+          0.149494,
+          0.139506,
+          0.657
+        ]
+      },
+      "triangles": 940,
+      "vertices": 486,
+      "material_slots": [
+        "M_Cotton35",
+        "M_Skin35"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "Sleeve335",
+      "fbx": "SM_Sleeve335.fbx",
+      "asset": "/Game/Art/Meshes/SM_Sleeve335",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.070811,
+          -0.068042,
+          -0.64
+        ],
+        "max": [
+          0.078683,
+          0.071464,
+          0.017
+        ],
+        "size": [
+          0.149494,
+          0.139506,
+          0.657
+        ]
+      },
+      "triangles": 940,
+      "vertices": 486,
+      "material_slots": [
+        "M_Leather35",
+        "M_Skin35"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "Sleeve435",
+      "fbx": "SM_Sleeve435.fbx",
+      "asset": "/Game/Art/Meshes/SM_Sleeve435",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.070811,
+          -0.068042,
+          -0.64
+        ],
+        "max": [
+          0.078683,
+          0.071464,
+          0.017
+        ],
+        "size": [
+          0.149494,
+          0.139506,
+          0.657
+        ]
+      },
+      "triangles": 940,
+      "vertices": 486,
+      "material_slots": [
+        "M_Knit35",
+        "M_Skin35"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "Sleeve535",
+      "fbx": "SM_Sleeve535.fbx",
+      "asset": "/Game/Art/Meshes/SM_Sleeve535",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.070811,
+          -0.068042,
+          -0.64
+        ],
+        "max": [
+          0.078683,
+          0.071464,
+          0.017
+        ],
+        "size": [
+          0.149494,
+          0.139506,
+          0.657
+        ]
+      },
+      "triangles": 940,
+      "vertices": 486,
+      "material_slots": [
+        "M_Canvas35",
+        "M_Skin35"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "Sleeve635",
+      "fbx": "SM_Sleeve635.fbx",
+      "asset": "/Game/Art/Meshes/SM_Sleeve635",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.070811,
+          -0.068756,
+          -0.64
+        ],
+        "max": [
+          0.077683,
+          0.071464,
+          0.017
+        ],
+        "size": [
+          0.148494,
+          0.14022,
+          0.657
+        ]
+      },
+      "triangles": 940,
+      "vertices": 486,
+      "material_slots": [
+        "M_Canvas35",
+        "M_Skin35"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "Sleeve735",
+      "fbx": "SM_Sleeve735.fbx",
+      "asset": "/Game/Art/Meshes/SM_Sleeve735",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.070811,
+          -0.068042,
+          -0.64
+        ],
+        "max": [
+          0.078683,
+          0.071464,
+          0.017
+        ],
+        "size": [
+          0.149494,
+          0.139506,
+          0.657
+        ]
+      },
+      "triangles": 940,
+      "vertices": 486,
+      "material_slots": [
+        "M_Cotton35",
+        "M_Skin35"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "Sleeve835",
+      "fbx": "SM_Sleeve835.fbx",
+      "asset": "/Game/Art/Meshes/SM_Sleeve835",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.066,
+          -0.063,
+          -0.64
+        ],
+        "max": [
+          0.074995,
+          0.063,
+          0.0195
+        ],
+        "size": [
+          0.140995,
+          0.126,
+          0.6595
+        ]
+      },
+      "triangles": 896,
+      "vertices": 462,
+      "material_slots": [
+        "M_Skin35"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "Trousers035",
+      "fbx": "SM_Trousers035.fbx",
+      "asset": "/Game/Art/Meshes/SM_Trousers035",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.085653,
+          -0.077423,
+          -0.7622
+        ],
+        "max": [
+          0.085039,
+          0.080971,
+          0.02575
+        ],
+        "size": [
+          0.170693,
+          0.158394,
+          0.78795
+        ]
+      },
+      "triangles": 476,
+      "vertices": 240,
+      "material_slots": [
+        "M_Denim35"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "Trousers135",
+      "fbx": "SM_Trousers135.fbx",
+      "asset": "/Game/Art/Meshes/SM_Trousers135",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.093953,
+          -0.1135,
+          -0.7622
+        ],
+        "max": [
+          0.093439,
+          0.1135,
+          0.02575
+        ],
+        "size": [
+          0.187393,
+          0.227,
+          0.78795
+        ]
+      },
+      "triangles": 484,
+      "vertices": 250,
+      "material_slots": [
+        "M_Canvas35"
+      ],
+      "boundary_edges": 8,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "Trousers235",
+      "fbx": "SM_Trousers235.fbx",
+      "asset": "/Game/Art/Meshes/SM_Trousers235",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.081503,
+          -0.073608,
+          -0.7622
+        ],
+        "max": [
+          0.080839,
+          0.077021,
+          0.02575
+        ],
+        "size": [
+          0.162343,
+          0.150629,
+          0.78795
+        ]
+      },
+      "triangles": 476,
+      "vertices": 240,
+      "material_slots": [
+        "M_Cotton35"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "Trousers335",
+      "fbx": "SM_Trousers335.fbx",
+      "asset": "/Game/Art/Meshes/SM_Trousers335",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.09813,
+          -0.090489,
+          -0.7622
+        ],
+        "max": [
+          0.098759,
+          0.094907,
+          0.02575
+        ],
+        "size": [
+          0.196889,
+          0.185396,
+          0.78795
+        ]
+      },
+      "triangles": 712,
+      "vertices": 360,
+      "material_slots": [
+        "M_Denim35",
+        "M_Skin35"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "Trousers435",
+      "fbx": "SM_Trousers435.fbx",
+      "asset": "/Game/Art/Meshes/SM_Trousers435",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.092293,
+          -0.083528,
+          -0.7622
+        ],
+        "max": [
+          0.091759,
+          0.087291,
+          0.02575
+        ],
+        "size": [
+          0.184053,
+          0.170819,
+          0.78795
+        ]
+      },
+      "triangles": 476,
+      "vertices": 240,
+      "material_slots": [
+        "M_Knit35"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "Trousers535",
+      "fbx": "SM_Trousers535.fbx",
+      "asset": "/Game/Art/Meshes/SM_Trousers535",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.076703,
+          -0.069027,
+          -0.7622
+        ],
+        "max": [
+          0.07418,
+          0.070013,
+          0.02575
+        ],
+        "size": [
+          0.150883,
+          0.13904,
+          0.78795
+        ]
+      },
+      "triangles": 476,
+      "vertices": 240,
+      "material_slots": [
+        "M_Knit35"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "Footwear035",
+      "fbx": "SM_Footwear035.fbx",
+      "asset": "/Game/Art/Meshes/SM_Footwear035",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.066,
+          -0.053,
+          -0.87241
+        ],
+        "max": [
+          0.156,
+          0.053,
+          -0.6592
+        ],
+        "size": [
+          0.222,
+          0.106,
+          0.21321
+        ]
+      },
+      "triangles": 334,
+      "vertices": 180,
+      "material_slots": [
+        "M_Cotton35",
+        "M_Leather35",
+        "M_Rubber35"
+      ],
+      "boundary_edges": 12,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "Footwear135",
+      "fbx": "SM_Footwear135.fbx",
+      "asset": "/Game/Art/Meshes/SM_Footwear135",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.066,
+          -0.053,
+          -0.87241
+        ],
+        "max": [
+          0.156,
+          0.053,
+          -0.7416
+        ],
+        "size": [
+          0.222,
+          0.106,
+          0.13081
+        ]
+      },
+      "triangles": 334,
+      "vertices": 180,
+      "material_slots": [
+        "M_Canvas35",
+        "M_Cotton35",
+        "M_Rubber35"
+      ],
+      "boundary_edges": 12,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "Footwear235",
+      "fbx": "SM_Footwear235.fbx",
+      "asset": "/Game/Art/Meshes/SM_Footwear235",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.066,
+          -0.053,
+          -0.87241
+        ],
+        "max": [
+          0.156,
+          0.053,
+          -0.5768
+        ],
+        "size": [
+          0.222,
+          0.106,
+          0.29561
+        ]
+      },
+      "triangles": 334,
+      "vertices": 180,
+      "material_slots": [
+        "M_Cotton35",
+        "M_Leather35",
+        "M_Rubber35"
+      ],
+      "boundary_edges": 12,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "Footwear335",
+      "fbx": "SM_Footwear335.fbx",
+      "asset": "/Game/Art/Meshes/SM_Footwear335",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.066,
+          -0.053,
+          -0.87241
+        ],
+        "max": [
+          0.156,
+          0.053,
+          -0.7107
+        ],
+        "size": [
+          0.222,
+          0.106,
+          0.16171
+        ]
+      },
+      "triangles": 334,
+      "vertices": 180,
+      "material_slots": [
+        "M_Cotton35",
+        "M_Leather35",
+        "M_Rubber35"
+      ],
+      "boundary_edges": 12,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "Beard0135",
+      "fbx": "SM_Beard0135.fbx",
+      "asset": "/Game/Art/Meshes/SM_Beard0135",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          0.073723,
+          -0.029,
+          -0.105
+        ],
+        "max": [
+          0.091618,
+          0.029,
+          -0.096
+        ],
+        "size": [
+          0.017895,
+          0.058,
+          0.009
+        ]
+      },
+      "triangles": 24,
+      "vertices": 26,
+      "material_slots": [
+        "M_Hair35"
+      ],
+      "boundary_edges": 26,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "Beard0235",
+      "fbx": "SM_Beard0235.fbx",
+      "asset": "/Game/Art/Meshes/SM_Beard0235",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          0.063969,
+          -0.029,
+          -0.159083
+        ],
+        "max": [
+          0.091618,
+          0.029,
+          -0.096
+        ],
+        "size": [
+          0.027649,
+          0.058,
+          0.063083
+        ]
+      },
+      "triangles": 300,
+      "vertices": 198,
+      "material_slots": [
+        "M_Hair35"
+      ],
+      "boundary_edges": 92,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "Beard0335",
+      "fbx": "SM_Beard0335.fbx",
+      "asset": "/Game/Art/Meshes/SM_Beard0335",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          0.073723,
+          -0.029,
+          -0.105
+        ],
+        "max": [
+          0.091618,
+          0.029,
+          -0.096
+        ],
+        "size": [
+          0.017895,
+          0.058,
+          0.009
+        ]
+      },
+      "triangles": 24,
+      "vertices": 26,
+      "material_slots": [
+        "M_Hair35"
+      ],
+      "boundary_edges": 26,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "Beard0435",
+      "fbx": "SM_Beard0435.fbx",
+      "asset": "/Game/Art/Meshes/SM_Beard0435",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          0.029161,
+          -0.054347,
+          -0.159083
+        ],
+        "max": [
+          0.087394,
+          0.054347,
+          -0.117583
+        ],
+        "size": [
+          0.058233,
+          0.108695,
+          0.0415
+        ]
+      },
+      "triangles": 204,
+      "vertices": 136,
+      "material_slots": [
+        "M_Hair35"
+      ],
+      "boundary_edges": 66,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "Beard0535",
+      "fbx": "SM_Beard0535.fbx",
+      "asset": "/Game/Art/Meshes/SM_Beard0535",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          0.057609,
+          -0.039284,
+          -0.159083
+        ],
+        "max": [
+          0.091618,
+          0.039284,
+          -0.083
+        ],
+        "size": [
+          0.034008,
+          0.078567,
+          0.076083
+        ]
+      },
+      "triangles": 352,
+      "vertices": 244,
+      "material_slots": [
+        "M_Hair35"
+      ],
+      "boundary_edges": 132,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "Beard0635",
+      "fbx": "SM_Beard0635.fbx",
+      "asset": "/Game/Art/Meshes/SM_Beard0635",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          0.021587,
+          -0.06367,
+          -0.159083
+        ],
+        "max": [
+          0.091618,
+          0.06367,
+          -0.083
+        ],
+        "size": [
+          0.07003,
+          0.127341,
+          0.076083
+        ]
+      },
+      "triangles": 368,
+      "vertices": 246,
+      "material_slots": [
+        "M_Hair35"
+      ],
+      "boundary_edges": 120,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "Beard0735",
+      "fbx": "SM_Beard0735.fbx",
+      "asset": "/Game/Art/Meshes/SM_Beard0735",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          0.064394,
+          -0.029,
+          -0.159083
+        ],
+        "max": [
+          0.091618,
+          0.029,
+          -0.096
+        ],
+        "size": [
+          0.027224,
+          0.058,
+          0.063083
+        ]
+      },
+      "triangles": 304,
+      "vertices": 200,
+      "material_slots": [
+        "M_Hair35"
+      ],
+      "boundary_edges": 92,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "Beard0835",
+      "fbx": "SM_Beard0835.fbx",
+      "asset": "/Game/Art/Meshes/SM_Beard0835",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          0.021587,
+          -0.06367,
+          -0.171083
+        ],
+        "max": [
+          0.091618,
+          0.06367,
+          -0.083
+        ],
+        "size": [
+          0.07003,
+          0.127341,
+          0.088083
+        ]
+      },
+      "triangles": 368,
+      "vertices": 246,
+      "material_slots": [
+        "M_Hair35"
+      ],
+      "boundary_edges": 120,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "Beard0935",
+      "fbx": "SM_Beard0935.fbx",
+      "asset": "/Game/Art/Meshes/SM_Beard0935",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          0.021587,
+          -0.06367,
+          -0.186083
+        ],
+        "max": [
+          0.091618,
+          0.06367,
+          -0.083
+        ],
+        "size": [
+          0.07003,
+          0.127341,
+          0.103083
+        ]
+      },
+      "triangles": 368,
+      "vertices": 246,
+      "material_slots": [
+        "M_Hair35"
+      ],
+      "boundary_edges": 120,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "Beard1035",
+      "fbx": "SM_Beard1035.fbx",
+      "asset": "/Game/Art/Meshes/SM_Beard1035",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          0.021587,
+          -0.06367,
+          -0.171083
+        ],
+        "max": [
+          0.091618,
+          0.06367,
+          -0.083
+        ],
+        "size": [
+          0.07003,
+          0.127341,
+          0.088083
+        ]
+      },
+      "triangles": 368,
+      "vertices": 246,
+      "material_slots": [
+        "M_Hair35"
+      ],
+      "boundary_edges": 120,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "NPCLeg035",
+      "fbx": "SM_NPCLeg035.fbx",
+      "asset": "/Game/Art/Meshes/SM_NPCLeg035",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.085653,
+          -0.077423,
+          -0.87241
+        ],
+        "max": [
+          0.156,
+          0.080971,
+          0.02575
+        ],
+        "size": [
+          0.241653,
+          0.158394,
+          0.89816
+        ]
+      },
+      "triangles": 810,
+      "vertices": 420,
+      "material_slots": [
+        "M_Cotton35",
+        "M_Denim35",
+        "M_Leather35",
+        "M_Rubber35"
+      ],
+      "boundary_edges": 12,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "NPCLeg135",
+      "fbx": "SM_NPCLeg135.fbx",
+      "asset": "/Game/Art/Meshes/SM_NPCLeg135",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.093953,
+          -0.1135,
+          -0.87241
+        ],
+        "max": [
+          0.156,
+          0.1135,
+          0.02575
+        ],
+        "size": [
+          0.249953,
+          0.227,
+          0.89816
+        ]
+      },
+      "triangles": 818,
+      "vertices": 430,
+      "material_slots": [
+        "M_Canvas35",
+        "M_Cotton35",
+        "M_Leather35",
+        "M_Rubber35"
+      ],
+      "boundary_edges": 20,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "NPCLeg235",
+      "fbx": "SM_NPCLeg235.fbx",
+      "asset": "/Game/Art/Meshes/SM_NPCLeg235",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.081503,
+          -0.073608,
+          -0.87241
+        ],
+        "max": [
+          0.156,
+          0.077021,
+          0.02575
+        ],
+        "size": [
+          0.237503,
+          0.150629,
+          0.89816
+        ]
+      },
+      "triangles": 810,
+      "vertices": 420,
+      "material_slots": [
+        "M_Cotton35",
+        "M_Leather35",
+        "M_Rubber35"
+      ],
+      "boundary_edges": 12,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "NPCLeg335",
+      "fbx": "SM_NPCLeg335.fbx",
+      "asset": "/Game/Art/Meshes/SM_NPCLeg335",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.09813,
+          -0.090489,
+          -0.87241
+        ],
+        "max": [
+          0.156,
+          0.094907,
+          0.02575
+        ],
+        "size": [
+          0.25413,
+          0.185396,
+          0.89816
+        ]
+      },
+      "triangles": 1046,
+      "vertices": 540,
+      "material_slots": [
+        "M_Cotton35",
+        "M_Denim35",
+        "M_Leather35",
+        "M_Rubber35",
+        "M_Skin35"
+      ],
+      "boundary_edges": 12,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "NPCLeg435",
+      "fbx": "SM_NPCLeg435.fbx",
+      "asset": "/Game/Art/Meshes/SM_NPCLeg435",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.092293,
+          -0.083528,
+          -0.87241
+        ],
+        "max": [
+          0.156,
+          0.087291,
+          0.02575
+        ],
+        "size": [
+          0.248293,
+          0.170819,
+          0.89816
+        ]
+      },
+      "triangles": 810,
+      "vertices": 420,
+      "material_slots": [
+        "M_Cotton35",
+        "M_Knit35",
+        "M_Leather35",
+        "M_Rubber35"
+      ],
+      "boundary_edges": 12,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "NPCLeg535",
+      "fbx": "SM_NPCLeg535.fbx",
+      "asset": "/Game/Art/Meshes/SM_NPCLeg535",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.076703,
+          -0.069027,
+          -0.87241
+        ],
+        "max": [
+          0.156,
+          0.070013,
+          0.02575
+        ],
+        "size": [
+          0.232703,
+          0.13904,
+          0.89816
+        ]
+      },
+      "triangles": 810,
+      "vertices": 420,
+      "material_slots": [
+        "M_Cotton35",
+        "M_Knit35",
+        "M_Leather35",
+        "M_Rubber35"
+      ],
+      "boundary_edges": 12,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "Hat135",
+      "fbx": "SM_Hat135.fbx",
+      "asset": "/Game/Art/Meshes/SM_Hat135",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.108,
+          -0.08665,
+          0.022
+        ],
+        "max": [
+          0.17,
+          0.08935,
+          0.082
+        ],
+        "size": [
+          0.278,
+          0.176,
+          0.06
+        ]
+      },
+      "triangles": 191,
+      "vertices": 101,
+      "material_slots": [
+        "M_Canvas35"
+      ],
+      "boundary_edges": 5,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "Hat235",
+      "fbx": "SM_Hat235.fbx",
+      "asset": "/Game/Art/Meshes/SM_Hat235",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.108,
+          -0.08665,
+          0.025
+        ],
+        "max": [
+          0.08,
+          0.08935,
+          0.105
+        ],
+        "size": [
+          0.188,
+          0.176,
+          0.08
+        ]
+      },
+      "triangles": 188,
+      "vertices": 96,
+      "material_slots": [
+        "M_Knit35"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "Hat335",
+      "fbx": "SM_Hat335.fbx",
+      "asset": "/Game/Art/Meshes/SM_Hat335",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.17,
+          -0.08935,
+          0.022
+        ],
+        "max": [
+          0.108,
+          0.08665,
+          0.082
+        ],
+        "size": [
+          0.278,
+          0.176,
+          0.06
+        ]
+      },
+      "triangles": 191,
+      "vertices": 101,
+      "material_slots": [
+        "M_Canvas35"
+      ],
+      "boundary_edges": 5,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "Hat435",
+      "fbx": "SM_Hat435.fbx",
+      "asset": "/Game/Art/Meshes/SM_Hat435",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.1296,
+          -0.116977,
+          0.022
+        ],
+        "max": [
+          0.204,
+          0.120623,
+          0.082
+        ],
+        "size": [
+          0.3336,
+          0.2376,
+          0.06
+        ]
+      },
+      "triangles": 191,
+      "vertices": 101,
+      "material_slots": [
+        "M_Canvas35"
+      ],
+      "boundary_edges": 5,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "Hat535",
+      "fbx": "SM_Hat535.fbx",
+      "asset": "/Game/Art/Meshes/SM_Hat535",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.108,
+          -0.091849,
+          0.036
+        ],
+        "max": [
+          0.17,
+          0.094711,
+          0.096
+        ],
+        "size": [
+          0.278,
+          0.18656,
+          0.06
+        ]
+      },
+      "triangles": 191,
+      "vertices": 101,
+      "material_slots": [
+        "M_Canvas35"
+      ],
+      "boundary_edges": 5,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "Eyewear135",
+      "fbx": "SM_Eyewear135.fbx",
+      "asset": "/Game/Art/Meshes/SM_Eyewear135",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.03048,
+          -0.091673,
+          -0.0522
+        ],
+        "max": [
+          0.098195,
+          0.091673,
+          -0.0178
+        ],
+        "size": [
+          0.128675,
+          0.183345,
+          0.0344
+        ]
+      },
+      "triangles": 220,
+      "vertices": 132,
+      "material_slots": [
+        "M_Metal35"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "Eyewear235",
+      "fbx": "SM_Eyewear235.fbx",
+      "asset": "/Game/Art/Meshes/SM_Eyewear235",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.03048,
+          -0.091673,
+          -0.0522
+        ],
+        "max": [
+          0.098195,
+          0.091673,
+          -0.0178
+        ],
+        "size": [
+          0.128675,
+          0.183345,
+          0.0344
+        ]
+      },
+      "triangles": 224,
+      "vertices": 140,
+      "material_slots": [
+        "M_Metal35",
+        "M_Pupil35"
+      ],
+      "boundary_edges": 8,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "Eyewear335",
+      "fbx": "SM_Eyewear335.fbx",
+      "asset": "/Game/Art/Meshes/SM_Eyewear335",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.03048,
+          -0.091673,
+          -0.0522
+        ],
+        "max": [
+          0.098195,
+          0.091673,
+          -0.0178
+        ],
+        "size": [
+          0.128675,
+          0.183345,
+          0.0344
+        ]
+      },
+      "triangles": 224,
+      "vertices": 140,
+      "material_slots": [
+        "M_Metal35",
+        "M_Pupil35"
+      ],
+      "boundary_edges": 8,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "LeftHand35",
+      "fbx": "SM_LeftHand35.fbx",
+      "asset": "/Game/Art/Meshes/SM_LeftHand35",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.35,
+          -0.054657,
+          -0.121368
+        ],
+        "max": [
+          0.12,
+          0.0517,
+          0.032
+        ],
+        "size": [
+          0.47,
+          0.106357,
+          0.153368
+        ]
+      },
+      "triangles": 608,
+      "vertices": 318,
+      "material_slots": [
+        "M_Cotton35",
+        "M_Skin35"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "RightHand35",
+      "fbx": "SM_RightHand35.fbx",
+      "asset": "/Game/Art/Meshes/SM_RightHand35",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.35,
+          -0.0517,
+          -0.121368
+        ],
+        "max": [
+          0.12,
+          0.054657,
+          0.032
+        ],
+        "size": [
+          0.47,
+          0.106357,
+          0.153368
+        ]
+      },
+      "triangles": 608,
+      "vertices": 318,
+      "material_slots": [
+        "M_Cotton35",
+        "M_Skin35"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "MaleAnatomicalHead35",
+      "fbx": "SM_MaleAnatomicalHead35.fbx",
+      "asset": "/Game/Art/Meshes/SM_MaleAnatomicalHead35",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.10916,
+          -0.08793,
+          -0.246
+        ],
+        "max": [
+          0.09807,
+          0.08793,
+          0.076
+        ],
+        "size": [
+          0.20723,
+          0.17586,
+          0.322
+        ]
+      },
+      "triangles": 7860,
+      "vertices": 4006,
+      "material_slots": [
+        "M_Eye35",
+        "M_Face035",
+        "M_Iris35",
+        "M_Pupil35",
+        "M_Skin35"
+      ],
+      "boundary_edges": 134,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "FemaleAnatomicalHead35",
+      "fbx": "SM_FemaleAnatomicalHead35.fbx",
+      "asset": "/Game/Art/Meshes/SM_FemaleAnatomicalHead35",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.111043,
+          -0.087685,
+          -0.246
+        ],
+        "max": [
+          0.098049,
+          0.087685,
+          0.076
+        ],
+        "size": [
+          0.209092,
+          0.17537,
+          0.322
+        ]
+      },
+      "triangles": 7860,
+      "vertices": 4006,
+      "material_slots": [
+        "M_Eye35",
+        "M_Face135",
+        "M_Iris35",
+        "M_Pupil35",
+        "M_Skin35"
+      ],
+      "boundary_edges": 134,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "Hair0135",
+      "fbx": "SM_Hair0135.fbx",
+      "asset": "/Game/Art/Meshes/SM_Hair0135",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.112656,
+          -0.089134,
+          -0.056687
+        ],
+        "max": [
+          0.08206,
+          0.087995,
+          0.079
+        ],
+        "size": [
+          0.194716,
+          0.177129,
+          0.135687
+        ]
+      },
+      "triangles": 1486,
+      "vertices": 768,
+      "material_slots": [
+        "M_Hair35"
+      ],
+      "boundary_edges": 48,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "Hair0235",
+      "fbx": "SM_Hair0235.fbx",
+      "asset": "/Game/Art/Meshes/SM_Hair0235",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.119305,
+          -0.092687,
+          -0.074782
+        ],
+        "max": [
+          0.088179,
+          0.092379,
+          0.093
+        ],
+        "size": [
+          0.207484,
+          0.185067,
+          0.167782
+        ]
+      },
+      "triangles": 3694,
+      "vertices": 2568,
+      "material_slots": [
+        "M_Hair35"
+      ],
+      "boundary_edges": 1344,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "Hair0335",
+      "fbx": "SM_Hair0335.fbx",
+      "asset": "/Game/Art/Meshes/SM_Hair0335",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.118809,
+          -0.091642,
+          -0.074782
+        ],
+        "max": [
+          0.075443,
+          0.09647,
+          0.091678
+        ],
+        "size": [
+          0.194252,
+          0.188112,
+          0.16646
+        ]
+      },
+      "triangles": 3694,
+      "vertices": 2568,
+      "material_slots": [
+        "M_Hair35"
+      ],
+      "boundary_edges": 1344,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "Hair0435",
+      "fbx": "SM_Hair0435.fbx",
+      "asset": "/Game/Art/Meshes/SM_Hair0435",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.119241,
+          -0.092687,
+          -0.074782
+        ],
+        "max": [
+          0.075443,
+          0.092962,
+          0.090074
+        ],
+        "size": [
+          0.194684,
+          0.185649,
+          0.164856
+        ]
+      },
+      "triangles": 3694,
+      "vertices": 2568,
+      "material_slots": [
+        "M_Hair35"
+      ],
+      "boundary_edges": 1344,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "Hair0535",
+      "fbx": "SM_Hair0535.fbx",
+      "asset": "/Game/Art/Meshes/SM_Hair0535",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.11795,
+          -0.097436,
+          -0.264782
+        ],
+        "max": [
+          0.085545,
+          0.097455,
+          0.092
+        ],
+        "size": [
+          0.203495,
+          0.194891,
+          0.356782
+        ]
+      },
+      "triangles": 3694,
+      "vertices": 2568,
+      "material_slots": [
+        "M_Hair35"
+      ],
+      "boundary_edges": 1344,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "Hair0635",
+      "fbx": "SM_Hair0635.fbx",
+      "asset": "/Game/Art/Meshes/SM_Hair0635",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.118572,
+          -0.097788,
+          -0.184782
+        ],
+        "max": [
+          0.085545,
+          0.097808,
+          0.092
+        ],
+        "size": [
+          0.204117,
+          0.195596,
+          0.276782
+        ]
+      },
+      "triangles": 3694,
+      "vertices": 2568,
+      "material_slots": [
+        "M_Hair35"
+      ],
+      "boundary_edges": 1344,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "Hair0735",
+      "fbx": "SM_Hair0735.fbx",
+      "asset": "/Game/Art/Meshes/SM_Hair0735",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.130211,
+          -0.115695,
+          -0.074526
+        ],
+        "max": [
+          0.09673,
+          0.115814,
+          0.127
+        ],
+        "size": [
+          0.226941,
+          0.231509,
+          0.201526
+        ]
+      },
+      "triangles": 3694,
+      "vertices": 2568,
+      "material_slots": [
+        "M_Hair35"
+      ],
+      "boundary_edges": 1344,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "Hair0835",
+      "fbx": "SM_Hair0835.fbx",
+      "asset": "/Game/Art/Meshes/SM_Hair0835",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.118656,
+          -0.089215,
+          -0.074782
+        ],
+        "max": [
+          0.085545,
+          0.085667,
+          0.162
+        ],
+        "size": [
+          0.204201,
+          0.174882,
+          0.236782
+        ]
+      },
+      "triangles": 3694,
+      "vertices": 2568,
+      "material_slots": [
+        "M_Hair35"
+      ],
+      "boundary_edges": 1344,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "Hair0935",
+      "fbx": "SM_Hair0935.fbx",
+      "asset": "/Game/Art/Meshes/SM_Hair0935",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.176,
+          -0.097832,
+          -0.22
+        ],
+        "max": [
+          0.085545,
+          0.097852,
+          0.092
+        ],
+        "size": [
+          0.261545,
+          0.195684,
+          0.312
+        ]
+      },
+      "triangles": 3890,
+      "vertices": 2668,
+      "material_slots": [
+        "M_Hair35"
+      ],
+      "boundary_edges": 1344,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "Hair1035",
+      "fbx": "SM_Hair1035.fbx",
+      "asset": "/Game/Art/Meshes/SM_Hair1035",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.175,
+          -0.097876,
+          -0.164782
+        ],
+        "max": [
+          0.085545,
+          0.097896,
+          0.092
+        ],
+        "size": [
+          0.260545,
+          0.195772,
+          0.256782
+        ]
+      },
+      "triangles": 3810,
+      "vertices": 2628,
+      "material_slots": [
+        "M_Hair35"
+      ],
+      "boundary_edges": 1344,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "Hair1135",
+      "fbx": "SM_Hair1135.fbx",
+      "asset": "/Game/Art/Meshes/SM_Hair1135",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.11725,
+          -0.097303,
+          -0.294782
+        ],
+        "max": [
+          0.085545,
+          0.097323,
+          0.092
+        ],
+        "size": [
+          0.202795,
+          0.194626,
+          0.386782
+        ]
+      },
+      "triangles": 3694,
+      "vertices": 2568,
+      "material_slots": [
+        "M_Hair35"
+      ],
+      "boundary_edges": 1344,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "Hair1235",
+      "fbx": "SM_Hair1235.fbx",
+      "asset": "/Game/Art/Meshes/SM_Hair1235",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.118124,
+          -0.10075,
+          -0.224526
+        ],
+        "max": [
+          0.085556,
+          0.100802,
+          0.092
+        ],
+        "size": [
+          0.20368,
+          0.201552,
+          0.316526
+        ]
+      },
+      "triangles": 3694,
+      "vertices": 2568,
+      "material_slots": [
+        "M_Hair35"
+      ],
+      "boundary_edges": 1344,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "Hair1335",
+      "fbx": "SM_Hair1335.fbx",
+      "asset": "/Game/Art/Meshes/SM_Hair1335",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.118654,
+          -0.092649,
+          -0.074782
+        ],
+        "max": [
+          0.075443,
+          0.092746,
+          0.116
+        ],
+        "size": [
+          0.194097,
+          0.185395,
+          0.190782
+        ]
+      },
+      "triangles": 3694,
+      "vertices": 2568,
+      "material_slots": [
+        "M_Hair35"
+      ],
+      "boundary_edges": 1344,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "Hair1435",
+      "fbx": "SM_Hair1435.fbx",
+      "asset": "/Game/Art/Meshes/SM_Hair1435",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.119337,
+          -0.092687,
+          -0.074782
+        ],
+        "max": [
+          0.075443,
+          0.092379,
+          0.084
+        ],
+        "size": [
+          0.194781,
+          0.185067,
+          0.158782
+        ]
+      },
+      "triangles": 3694,
+      "vertices": 2568,
+      "material_slots": [
+        "M_Hair35"
+      ],
+      "boundary_edges": 1344,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "Hair1535",
+      "fbx": "SM_Hair1535.fbx",
+      "asset": "/Game/Art/Meshes/SM_Hair1535",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.174653,
+          -0.09792,
+          -0.22
+        ],
+        "max": [
+          0.085545,
+          0.09794,
+          0.092
+        ],
+        "size": [
+          0.260198,
+          0.19586,
+          0.312
+        ]
+      },
+      "triangles": 3890,
+      "vertices": 2668,
+      "material_slots": [
+        "M_Hair35"
+      ],
+      "boundary_edges": 1344,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "Hair1635",
+      "fbx": "SM_Hair1635.fbx",
+      "asset": "/Game/Art/Meshes/SM_Hair1635",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.175,
+          -0.097876,
+          -0.164782
+        ],
+        "max": [
+          0.085545,
+          0.097896,
+          0.092
+        ],
+        "size": [
+          0.260545,
+          0.195772,
+          0.256782
+        ]
+      },
+      "triangles": 3810,
+      "vertices": 2628,
+      "material_slots": [
+        "M_Hair35"
+      ],
+      "boundary_edges": 1344,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "Hair1735",
+      "fbx": "SM_Hair1735.fbx",
+      "asset": "/Game/Art/Meshes/SM_Hair1735",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.119369,
+          -0.09672,
+          -0.074526
+        ],
+        "max": [
+          0.085556,
+          0.096706,
+          0.092
+        ],
+        "size": [
+          0.204925,
+          0.193426,
+          0.166526
+        ]
+      },
+      "triangles": 3694,
+      "vertices": 2568,
+      "material_slots": [
+        "M_Hair35"
+      ],
+      "boundary_edges": 1344,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "Hair1835",
+      "fbx": "SM_Hair1835.fbx",
+      "asset": "/Game/Art/Meshes/SM_Hair1835",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.121485,
+          -0.097347,
+          -0.284782
+        ],
+        "max": [
+          0.085545,
+          0.097367,
+          0.092
+        ],
+        "size": [
+          0.20703,
+          0.194714,
+          0.376782
+        ]
+      },
+      "triangles": 3694,
+      "vertices": 2568,
+      "material_slots": [
+        "M_Hair35"
+      ],
+      "boundary_edges": 1344,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "Hair1935",
+      "fbx": "SM_Hair1935.fbx",
+      "asset": "/Game/Art/Meshes/SM_Hair1935",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.117376,
+          -0.10189,
+          -0.334526
+        ],
+        "max": [
+          0.085556,
+          0.100467,
+          0.092
+        ],
+        "size": [
+          0.202931,
+          0.202357,
+          0.426526
+        ]
+      },
+      "triangles": 3694,
+      "vertices": 2568,
+      "material_slots": [
+        "M_Hair35"
+      ],
+      "boundary_edges": 1344,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    }
+  ],
+  "materials": {
+    "Skin35": [
+      0,
+      [
+        1,
+        1,
+        1
+      ]
+    ],
+    "Cotton35": [
+      1,
+      [
+        0.5,
+        0.55,
+        0.5
+      ]
+    ],
+    "Denim35": [
+      2,
+      [
+        0.65,
+        0.72,
+        0.85
+      ]
+    ],
+    "Leather35": [
+      3,
+      [
+        0.45,
+        0.3,
+        0.21
+      ]
+    ],
+    "Hair35": [
+      4,
+      [
+        0.2,
+        0.12,
+        0.07
+      ]
+    ],
+    "Knit35": [
+      5,
+      [
+        0.45,
+        0.48,
+        0.48
+      ]
+    ],
+    "Rubber35": [
+      6,
+      [
+        0.3,
+        0.3,
+        0.3
+      ]
+    ],
+    "Canvas35": [
+      7,
+      [
+        0.55,
+        0.52,
+        0.41
+      ]
+    ],
+    "Eye35": [
+      -1,
+      [
+        0.56,
+        0.54,
+        0.49
+      ]
+    ],
+    "Iris35": [
+      -1,
+      [
+        0.1,
+        0.075,
+        0.04
+      ]
+    ],
+    "Pupil35": [
+      -1,
+      [
+        0.008,
+        0.007,
+        0.006
+      ]
+    ],
+    "Lip35": [
+      -1,
+      [
+        0.29,
+        0.115,
+        0.09
+      ]
+    ],
+    "Metal35": [
+      -1,
+      [
+        0.32,
+        0.32,
+        0.3
+      ]
+    ],
+    "Face035": [
+      -2,
+      [
+        1,
+        1,
+        1
+      ]
+    ],
+    "Face135": [
+      -3,
+      [
+        1,
+        1,
+        1
+      ]
+    ]
+  }
+}

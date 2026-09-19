@@ -1,0 +1,606 @@
+{
+  "sounds": [
+    {
+      "slot": "Zombie_01",
+      "prompt": "undead zombie, wet raspy throat, breathy decayed groans. short wary warning call. One isolated creature sound for a horror game. Dry close recording, no reverb, no music, no background scene, no intelligible speech.",
+      "duration": 2.5,
+      "loop": false,
+      "file": "Zombie_01.wav",
+      "group": "Zombie"
+    },
+    {
+      "slot": "Zombie_02",
+      "prompt": "undead zombie, wet raspy throat, breathy decayed groans. restless low growling phrase. One isolated creature sound for a horror game. Dry close recording, no reverb, no music, no background scene, no intelligible speech.",
+      "duration": 2.5,
+      "loop": false,
+      "file": "Zombie_02.wav",
+      "group": "Zombie"
+    },
+    {
+      "slot": "Zombie_03",
+      "prompt": "undead zombie, wet raspy throat, breathy decayed groans. sharp aggressive challenge. One isolated creature sound for a horror game. Dry close recording, no reverb, no music, no background scene, no intelligible speech.",
+      "duration": 2.5,
+      "loop": false,
+      "file": "Zombie_03.wav",
+      "group": "Zombie"
+    },
+    {
+      "slot": "Zombie_04",
+      "prompt": "undead zombie, wet raspy throat, breathy decayed groans. ragged strained vocal outburst. One isolated creature sound for a horror game. Dry close recording, no reverb, no music, no background scene, no intelligible speech.",
+      "duration": 2.5,
+      "loop": false,
+      "file": "Zombie_04.wav",
+      "group": "Zombie"
+    },
+    {
+      "slot": "Zombie_05",
+      "prompt": "undead zombie, wet raspy throat, breathy decayed groans. longer intimidating rumble ending in an abrupt snarl. One isolated creature sound for a horror game. Dry close recording, no reverb, no music, no background scene, no intelligible speech.",
+      "duration": 2.5,
+      "loop": false,
+      "file": "Zombie_05.wav",
+      "group": "Zombie"
+    },
+    {
+      "slot": "DogGrowl_01",
+      "prompt": "rabid feral dog, canine barking and snarling, animal only. short wary warning call. One isolated creature sound for a horror game. Dry close recording, no reverb, no music, no background scene, no intelligible speech.",
+      "duration": 2.5,
+      "loop": false,
+      "file": "DogGrowl_01.wav",
+      "group": "DogGrowl"
+    },
+    {
+      "slot": "DogGrowl_02",
+      "prompt": "rabid feral dog, canine barking and snarling, animal only. restless low growling phrase. One isolated creature sound for a horror game. Dry close recording, no reverb, no music, no background scene, no intelligible speech.",
+      "duration": 2.5,
+      "loop": false,
+      "file": "DogGrowl_02.wav",
+      "group": "DogGrowl"
+    },
+    {
+      "slot": "DogGrowl_03",
+      "prompt": "rabid feral dog, canine barking and snarling, animal only. sharp aggressive challenge. One isolated creature sound for a horror game. Dry close recording, no reverb, no music, no background scene, no intelligible speech.",
+      "duration": 2.5,
+      "loop": false,
+      "file": "DogGrowl_03.wav",
+      "group": "DogGrowl"
+    },
+    {
+      "slot": "DogGrowl_04",
+      "prompt": "rabid feral dog, canine barking and snarling, animal only. ragged strained vocal outburst. One isolated creature sound for a horror game. Dry close recording, no reverb, no music, no background scene, no intelligible speech.",
+      "duration": 2.5,
+      "loop": false,
+      "file": "DogGrowl_04.wav",
+      "group": "DogGrowl"
+    },
+    {
+      "slot": "DogGrowl_05",
+      "prompt": "rabid feral dog, canine barking and snarling, animal only. longer intimidating rumble ending in an abrupt snarl. One isolated creature sound for a horror game. Dry close recording, no reverb, no music, no background scene, no intelligible speech.",
+      "duration": 2.5,
+      "loop": false,
+      "file": "DogGrowl_05.wav",
+      "group": "DogGrowl"
+    },
+    {
+      "slot": "MannequinMove_01",
+      "prompt": "haunted plastic mannequin, dry joint creaks and unsettling hollow plastic clicks, no human voice. short wary warning call. One isolated creature sound for a horror game. Dry close recording, no reverb, no music, no background scene, no intelligible speech.",
+      "duration": 2.5,
+      "loop": false,
+      "file": "MannequinMove_01.wav",
+      "group": "MannequinMove"
+    },
+    {
+      "slot": "MannequinMove_02",
+      "prompt": "haunted plastic mannequin, dry joint creaks and unsettling hollow plastic clicks, no human voice. restless low growling phrase. One isolated creature sound for a horror game. Dry close recording, no reverb, no music, no background scene, no intelligible speech.",
+      "duration": 2.5,
+      "loop": false,
+      "file": "MannequinMove_02.wav",
+      "group": "MannequinMove"
+    },
+    {
+      "slot": "MannequinMove_03",
+      "prompt": "haunted plastic mannequin, dry joint creaks and unsettling hollow plastic clicks, no human voice. sharp aggressive challenge. One isolated creature sound for a horror game. Dry close recording, no reverb, no music, no background scene, no intelligible speech.",
+      "duration": 2.5,
+      "loop": false,
+      "file": "MannequinMove_03.wav",
+      "group": "MannequinMove"
+    },
+    {
+      "slot": "MannequinMove_04",
+      "prompt": "haunted plastic mannequin, dry joint creaks and unsettling hollow plastic clicks, no human voice. ragged strained vocal outburst. One isolated creature sound for a horror game. Dry close recording, no reverb, no music, no background scene, no intelligible speech.",
+      "duration": 2.5,
+      "loop": false,
+      "file": "MannequinMove_04.wav",
+      "group": "MannequinMove"
+    },
+    {
+      "slot": "MannequinMove_05",
+      "prompt": "haunted plastic mannequin, dry joint creaks and unsettling hollow plastic clicks, no human voice. longer intimidating rumble ending in an abrupt snarl. One isolated creature sound for a horror game. Dry close recording, no reverb, no music, no background scene, no intelligible speech.",
+      "duration": 2.5,
+      "loop": false,
+      "file": "MannequinMove_05.wav",
+      "group": "MannequinMove"
+    },
+    {
+      "slot": "MooseRoar_01",
+      "prompt": "mutated bull moose, resonant ungulate bellows and rough snorts. short wary warning call. One isolated creature sound for a horror game. Dry close recording, no reverb, no music, no background scene, no intelligible speech.",
+      "duration": 2.5,
+      "loop": false,
+      "file": "MooseRoar_01.wav",
+      "group": "MooseRoar"
+    },
+    {
+      "slot": "MooseRoar_02",
+      "prompt": "mutated bull moose, resonant ungulate bellows and rough snorts. restless low growling phrase. One isolated creature sound for a horror game. Dry close recording, no reverb, no music, no background scene, no intelligible speech.",
+      "duration": 2.5,
+      "loop": false,
+      "file": "MooseRoar_02.wav",
+      "group": "MooseRoar"
+    },
+    {
+      "slot": "MooseRoar_03",
+      "prompt": "mutated bull moose, resonant ungulate bellows and rough snorts. sharp aggressive challenge. One isolated creature sound for a horror game. Dry close recording, no reverb, no music, no background scene, no intelligible speech.",
+      "duration": 2.5,
+      "loop": false,
+      "file": "MooseRoar_03.wav",
+      "group": "MooseRoar"
+    },
+    {
+      "slot": "MooseRoar_04",
+      "prompt": "mutated bull moose, resonant ungulate bellows and rough snorts. ragged strained vocal outburst. One isolated creature sound for a horror game. Dry close recording, no reverb, no music, no background scene, no intelligible speech.",
+      "duration": 2.5,
+      "loop": false,
+      "file": "MooseRoar_04.wav",
+      "group": "MooseRoar"
+    },
+    {
+      "slot": "MooseRoar_05",
+      "prompt": "mutated bull moose, resonant ungulate bellows and rough snorts. longer intimidating rumble ending in an abrupt snarl. One isolated creature sound for a horror game. Dry close recording, no reverb, no music, no background scene, no intelligible speech.",
+      "duration": 2.5,
+      "loop": false,
+      "file": "MooseRoar_05.wav",
+      "group": "MooseRoar"
+    },
+    {
+      "slot": "TitanRoar_01",
+      "prompt": "ten foot muscular undead brute, deep chest growls and strained guttural roars. short wary warning call. One isolated creature sound for a horror game. Dry close recording, no reverb, no music, no background scene, no intelligible speech.",
+      "duration": 2.5,
+      "loop": false,
+      "file": "TitanRoar_01.wav",
+      "group": "TitanRoar"
+    },
+    {
+      "slot": "TitanRoar_02",
+      "prompt": "ten foot muscular undead brute, deep chest growls and strained guttural roars. restless low growling phrase. One isolated creature sound for a horror game. Dry close recording, no reverb, no music, no background scene, no intelligible speech.",
+      "duration": 2.5,
+      "loop": false,
+      "file": "TitanRoar_02.wav",
+      "group": "TitanRoar"
+    },
+    {
+      "slot": "TitanRoar_03",
+      "prompt": "ten foot muscular undead brute, deep chest growls and strained guttural roars. sharp aggressive challenge. One isolated creature sound for a horror game. Dry close recording, no reverb, no music, no background scene, no intelligible speech.",
+      "duration": 2.5,
+      "loop": false,
+      "file": "TitanRoar_03.wav",
+      "group": "TitanRoar"
+    },
+    {
+      "slot": "TitanRoar_04",
+      "prompt": "ten foot muscular undead brute, deep chest growls and strained guttural roars. ragged strained vocal outburst. One isolated creature sound for a horror game. Dry close recording, no reverb, no music, no background scene, no intelligible speech.",
+      "duration": 2.5,
+      "loop": false,
+      "file": "TitanRoar_04.wav",
+      "group": "TitanRoar"
+    },
+    {
+      "slot": "TitanRoar_05",
+      "prompt": "ten foot muscular undead brute, deep chest growls and strained guttural roars. longer intimidating rumble ending in an abrupt snarl. One isolated creature sound for a horror game. Dry close recording, no reverb, no music, no background scene, no intelligible speech.",
+      "duration": 2.5,
+      "loop": false,
+      "file": "TitanRoar_05.wav",
+      "group": "TitanRoar"
+    },
+    {
+      "slot": "DeathclawRoar_01",
+      "prompt": "large fictional reptilian predator, layered reptile hiss and animal throat growl. short wary warning call. One isolated creature sound for a horror game. Dry close recording, no reverb, no music, no background scene, no intelligible speech.",
+      "duration": 2.5,
+      "loop": false,
+      "file": "DeathclawRoar_01.wav",
+      "group": "DeathclawRoar"
+    },
+    {
+      "slot": "DeathclawRoar_02",
+      "prompt": "large fictional reptilian predator, layered reptile hiss and animal throat growl. restless low growling phrase. One isolated creature sound for a horror game. Dry close recording, no reverb, no music, no background scene, no intelligible speech.",
+      "duration": 2.5,
+      "loop": false,
+      "file": "DeathclawRoar_02.wav",
+      "group": "DeathclawRoar"
+    },
+    {
+      "slot": "DeathclawRoar_03",
+      "prompt": "large fictional reptilian predator, layered reptile hiss and animal throat growl. sharp aggressive challenge. One isolated creature sound for a horror game. Dry close recording, no reverb, no music, no background scene, no intelligible speech.",
+      "duration": 2.5,
+      "loop": false,
+      "file": "DeathclawRoar_03.wav",
+      "group": "DeathclawRoar"
+    },
+    {
+      "slot": "DeathclawRoar_04",
+      "prompt": "large fictional reptilian predator, layered reptile hiss and animal throat growl. ragged strained vocal outburst. One isolated creature sound for a horror game. Dry close recording, no reverb, no music, no background scene, no intelligible speech.",
+      "duration": 2.5,
+      "loop": false,
+      "file": "DeathclawRoar_04.wav",
+      "group": "DeathclawRoar"
+    },
+    {
+      "slot": "DeathclawRoar_05",
+      "prompt": "large fictional reptilian predator, layered reptile hiss and animal throat growl. longer intimidating rumble ending in an abrupt snarl. One isolated creature sound for a horror game. Dry close recording, no reverb, no music, no background scene, no intelligible speech.",
+      "duration": 2.5,
+      "loop": false,
+      "file": "DeathclawRoar_05.wav",
+      "group": "DeathclawRoar"
+    },
+    {
+      "slot": "ScorpionHiss_01",
+      "prompt": "giant scorpion, chitin mandible rattles and dry arthropod hissing, no mammal voice. short wary warning call. One isolated creature sound for a horror game. Dry close recording, no reverb, no music, no background scene, no intelligible speech.",
+      "duration": 2.5,
+      "loop": false,
+      "file": "ScorpionHiss_01.wav",
+      "group": "ScorpionHiss"
+    },
+    {
+      "slot": "ScorpionHiss_02",
+      "prompt": "giant scorpion, chitin mandible rattles and dry arthropod hissing, no mammal voice. restless low growling phrase. One isolated creature sound for a horror game. Dry close recording, no reverb, no music, no background scene, no intelligible speech.",
+      "duration": 2.5,
+      "loop": false,
+      "file": "ScorpionHiss_02.wav",
+      "group": "ScorpionHiss"
+    },
+    {
+      "slot": "ScorpionHiss_03",
+      "prompt": "giant scorpion, chitin mandible rattles and dry arthropod hissing, no mammal voice. sharp aggressive challenge. One isolated creature sound for a horror game. Dry close recording, no reverb, no music, no background scene, no intelligible speech.",
+      "duration": 2.5,
+      "loop": false,
+      "file": "ScorpionHiss_03.wav",
+      "group": "ScorpionHiss"
+    },
+    {
+      "slot": "ScorpionHiss_04",
+      "prompt": "giant scorpion, chitin mandible rattles and dry arthropod hissing, no mammal voice. ragged strained vocal outburst. One isolated creature sound for a horror game. Dry close recording, no reverb, no music, no background scene, no intelligible speech.",
+      "duration": 2.5,
+      "loop": false,
+      "file": "ScorpionHiss_04.wav",
+      "group": "ScorpionHiss"
+    },
+    {
+      "slot": "ScorpionHiss_05",
+      "prompt": "giant scorpion, chitin mandible rattles and dry arthropod hissing, no mammal voice. longer intimidating rumble ending in an abrupt snarl. One isolated creature sound for a horror game. Dry close recording, no reverb, no music, no background scene, no intelligible speech.",
+      "duration": 2.5,
+      "loop": false,
+      "file": "ScorpionHiss_05.wav",
+      "group": "ScorpionHiss"
+    },
+    {
+      "slot": "KarenShriek_01",
+      "prompt": "female undead creature, ragged furious shrieks and throaty zombie groans, no words. short wary warning call. One isolated creature sound for a horror game. Dry close recording, no reverb, no music, no background scene, no intelligible speech.",
+      "duration": 2.5,
+      "loop": false,
+      "file": "KarenShriek_01.wav",
+      "group": "KarenShriek"
+    },
+    {
+      "slot": "KarenShriek_02",
+      "prompt": "female undead creature, ragged furious shrieks and throaty zombie groans, no words. restless low growling phrase. One isolated creature sound for a horror game. Dry close recording, no reverb, no music, no background scene, no intelligible speech.",
+      "duration": 2.5,
+      "loop": false,
+      "file": "KarenShriek_02.wav",
+      "group": "KarenShriek"
+    },
+    {
+      "slot": "KarenShriek_03",
+      "prompt": "female undead creature, ragged furious shrieks and throaty zombie groans, no words. sharp aggressive challenge. One isolated creature sound for a horror game. Dry close recording, no reverb, no music, no background scene, no intelligible speech.",
+      "duration": 2.5,
+      "loop": false,
+      "file": "KarenShriek_03.wav",
+      "group": "KarenShriek"
+    },
+    {
+      "slot": "KarenShriek_04",
+      "prompt": "female undead creature, ragged furious shrieks and throaty zombie groans, no words. ragged strained vocal outburst. One isolated creature sound for a horror game. Dry close recording, no reverb, no music, no background scene, no intelligible speech.",
+      "duration": 2.5,
+      "loop": false,
+      "file": "KarenShriek_04.wav",
+      "group": "KarenShriek"
+    },
+    {
+      "slot": "KarenShriek_05",
+      "prompt": "female undead creature, ragged furious shrieks and throaty zombie groans, no words. longer intimidating rumble ending in an abrupt snarl. One isolated creature sound for a horror game. Dry close recording, no reverb, no music, no background scene, no intelligible speech.",
+      "duration": 2.5,
+      "loop": false,
+      "file": "KarenShriek_05.wav",
+      "group": "KarenShriek"
+    },
+    {
+      "slot": "BehemothVoice44_01",
+      "prompt": "enormous thirty foot undead behemoth, powerful bass bellow with rough breathing. short wary warning call. One isolated creature sound for a horror game. Dry close recording, no reverb, no music, no background scene, no intelligible speech.",
+      "duration": 2.5,
+      "loop": false,
+      "file": "BehemothVoice44_01.wav",
+      "group": "BehemothVoice44"
+    },
+    {
+      "slot": "BehemothVoice44_02",
+      "prompt": "enormous thirty foot undead behemoth, powerful bass bellow with rough breathing. restless low growling phrase. One isolated creature sound for a horror game. Dry close recording, no reverb, no music, no background scene, no intelligible speech.",
+      "duration": 2.5,
+      "loop": false,
+      "file": "BehemothVoice44_02.wav",
+      "group": "BehemothVoice44"
+    },
+    {
+      "slot": "BehemothVoice44_03",
+      "prompt": "enormous thirty foot undead behemoth, powerful bass bellow with rough breathing. sharp aggressive challenge. One isolated creature sound for a horror game. Dry close recording, no reverb, no music, no background scene, no intelligible speech.",
+      "duration": 2.5,
+      "loop": false,
+      "file": "BehemothVoice44_03.wav",
+      "group": "BehemothVoice44"
+    },
+    {
+      "slot": "BehemothVoice44_04",
+      "prompt": "enormous thirty foot undead behemoth, powerful bass bellow with rough breathing. ragged strained vocal outburst. One isolated creature sound for a horror game. Dry close recording, no reverb, no music, no background scene, no intelligible speech.",
+      "duration": 2.5,
+      "loop": false,
+      "file": "BehemothVoice44_04.wav",
+      "group": "BehemothVoice44"
+    },
+    {
+      "slot": "BehemothVoice44_05",
+      "prompt": "enormous thirty foot undead behemoth, powerful bass bellow with rough breathing. longer intimidating rumble ending in an abrupt snarl. One isolated creature sound for a horror game. Dry close recording, no reverb, no music, no background scene, no intelligible speech.",
+      "duration": 2.5,
+      "loop": false,
+      "file": "BehemothVoice44_05.wav",
+      "group": "BehemothVoice44"
+    },
+    {
+      "slot": "ColossusVoice44_01",
+      "prompt": "colossal ninety foot undead giant, subterranean chest resonance and thunderous guttural bellow. short wary warning call. One isolated creature sound for a horror game. Dry close recording, no reverb, no music, no background scene, no intelligible speech.",
+      "duration": 2.5,
+      "loop": false,
+      "file": "ColossusVoice44_01.wav",
+      "group": "ColossusVoice44"
+    },
+    {
+      "slot": "ColossusVoice44_02",
+      "prompt": "colossal ninety foot undead giant, subterranean chest resonance and thunderous guttural bellow. restless low growling phrase. One isolated creature sound for a horror game. Dry close recording, no reverb, no music, no background scene, no intelligible speech.",
+      "duration": 2.5,
+      "loop": false,
+      "file": "ColossusVoice44_02.wav",
+      "group": "ColossusVoice44"
+    },
+    {
+      "slot": "ColossusVoice44_03",
+      "prompt": "colossal ninety foot undead giant, subterranean chest resonance and thunderous guttural bellow. sharp aggressive challenge. One isolated creature sound for a horror game. Dry close recording, no reverb, no music, no background scene, no intelligible speech.",
+      "duration": 2.5,
+      "loop": false,
+      "file": "ColossusVoice44_03.wav",
+      "group": "ColossusVoice44"
+    },
+    {
+      "slot": "ColossusVoice44_04",
+      "prompt": "colossal ninety foot undead giant, subterranean chest resonance and thunderous guttural bellow. ragged strained vocal outburst. One isolated creature sound for a horror game. Dry close recording, no reverb, no music, no background scene, no intelligible speech.",
+      "duration": 2.5,
+      "loop": false,
+      "file": "ColossusVoice44_04.wav",
+      "group": "ColossusVoice44"
+    },
+    {
+      "slot": "ColossusVoice44_05",
+      "prompt": "colossal ninety foot undead giant, subterranean chest resonance and thunderous guttural bellow. longer intimidating rumble ending in an abrupt snarl. One isolated creature sound for a horror game. Dry close recording, no reverb, no music, no background scene, no intelligible speech.",
+      "duration": 2.5,
+      "loop": false,
+      "file": "ColossusVoice44_05.wav",
+      "group": "ColossusVoice44"
+    },
+    {
+      "slot": "WorldEaterVoice44_01",
+      "prompt": "massive subterranean worm monster, wet cavernous throat rumble and alien rasping clicks. short wary warning call. One isolated creature sound for a horror game. Dry close recording, no reverb, no music, no background scene, no intelligible speech.",
+      "duration": 2.5,
+      "loop": false,
+      "file": "WorldEaterVoice44_01.wav",
+      "group": "WorldEaterVoice44"
+    },
+    {
+      "slot": "WorldEaterVoice44_02",
+      "prompt": "massive subterranean worm monster, wet cavernous throat rumble and alien rasping clicks. restless low growling phrase. One isolated creature sound for a horror game. Dry close recording, no reverb, no music, no background scene, no intelligible speech.",
+      "duration": 2.5,
+      "loop": false,
+      "file": "WorldEaterVoice44_02.wav",
+      "group": "WorldEaterVoice44"
+    },
+    {
+      "slot": "WorldEaterVoice44_03",
+      "prompt": "massive subterranean worm monster, wet cavernous throat rumble and alien rasping clicks. sharp aggressive challenge. One isolated creature sound for a horror game. Dry close recording, no reverb, no music, no background scene, no intelligible speech.",
+      "duration": 2.5,
+      "loop": false,
+      "file": "WorldEaterVoice44_03.wav",
+      "group": "WorldEaterVoice44"
+    },
+    {
+      "slot": "WorldEaterVoice44_04",
+      "prompt": "massive subterranean worm monster, wet cavernous throat rumble and alien rasping clicks. ragged strained vocal outburst. One isolated creature sound for a horror game. Dry close recording, no reverb, no music, no background scene, no intelligible speech.",
+      "duration": 2.5,
+      "loop": false,
+      "file": "WorldEaterVoice44_04.wav",
+      "group": "WorldEaterVoice44"
+    },
+    {
+      "slot": "WorldEaterVoice44_05",
+      "prompt": "massive subterranean worm monster, wet cavernous throat rumble and alien rasping clicks. longer intimidating rumble ending in an abrupt snarl. One isolated creature sound for a horror game. Dry close recording, no reverb, no music, no background scene, no intelligible speech.",
+      "duration": 2.5,
+      "loop": false,
+      "file": "WorldEaterVoice44_05.wav",
+      "group": "WorldEaterVoice44"
+    },
+    {
+      "slot": "HumanMale44_01",
+      "prompt": "One adult male human voice speaking a brief calm greeting in an entirely invented gibberish language. Expressive conversational syllables, natural breath and rhythm. Absolutely no English or real language words, no narration, no singing. Single speaker, dry close clean game dialogue recording, no music or background noise.",
+      "duration": 3,
+      "loop": false,
+      "file": "HumanMale44_01.wav",
+      "group": "HumanMale44"
+    },
+    {
+      "slot": "HumanMale44_02",
+      "prompt": "One adult male human voice speaking a brief curious question in an entirely invented gibberish language. Expressive conversational syllables, natural breath and rhythm. Absolutely no English or real language words, no narration, no singing. Single speaker, dry close clean game dialogue recording, no music or background noise.",
+      "duration": 3,
+      "loop": false,
+      "file": "HumanMale44_02.wav",
+      "group": "HumanMale44"
+    },
+    {
+      "slot": "HumanMale44_03",
+      "prompt": "One adult male human voice speaking a brief friendly explanation in an entirely invented gibberish language. Expressive conversational syllables, natural breath and rhythm. Absolutely no English or real language words, no narration, no singing. Single speaker, dry close clean game dialogue recording, no music or background noise.",
+      "duration": 3,
+      "loop": false,
+      "file": "HumanMale44_03.wav",
+      "group": "HumanMale44"
+    },
+    {
+      "slot": "HumanMale44_04",
+      "prompt": "One adult male human voice speaking a brief quiet disagreement in an entirely invented gibberish language. Expressive conversational syllables, natural breath and rhythm. Absolutely no English or real language words, no narration, no singing. Single speaker, dry close clean game dialogue recording, no music or background noise.",
+      "duration": 3,
+      "loop": false,
+      "file": "HumanMale44_04.wav",
+      "group": "HumanMale44"
+    },
+    {
+      "slot": "HumanMale44_05",
+      "prompt": "One adult male human voice speaking a brief excited discovery in an entirely invented gibberish language. Expressive conversational syllables, natural breath and rhythm. Absolutely no English or real language words, no narration, no singing. Single speaker, dry close clean game dialogue recording, no music or background noise.",
+      "duration": 3,
+      "loop": false,
+      "file": "HumanMale44_05.wav",
+      "group": "HumanMale44"
+    },
+    {
+      "slot": "HumanMale44_06",
+      "prompt": "One adult male human voice speaking a brief worried warning in an entirely invented gibberish language. Expressive conversational syllables, natural breath and rhythm. Absolutely no English or real language words, no narration, no singing. Single speaker, dry close clean game dialogue recording, no music or background noise.",
+      "duration": 3,
+      "loop": false,
+      "file": "HumanMale44_06.wav",
+      "group": "HumanMale44"
+    },
+    {
+      "slot": "HumanMale44_07",
+      "prompt": "One adult male human voice speaking a brief confident answer in an entirely invented gibberish language. Expressive conversational syllables, natural breath and rhythm. Absolutely no English or real language words, no narration, no singing. Single speaker, dry close clean game dialogue recording, no music or background noise.",
+      "duration": 3,
+      "loop": false,
+      "file": "HumanMale44_07.wav",
+      "group": "HumanMale44"
+    },
+    {
+      "slot": "HumanMale44_08",
+      "prompt": "One adult male human voice speaking a brief tired complaint in an entirely invented gibberish language. Expressive conversational syllables, natural breath and rhythm. Absolutely no English or real language words, no narration, no singing. Single speaker, dry close clean game dialogue recording, no music or background noise.",
+      "duration": 3,
+      "loop": false,
+      "file": "HumanMale44_08.wav",
+      "group": "HumanMale44"
+    },
+    {
+      "slot": "HumanMale44_09",
+      "prompt": "One adult male human voice speaking a brief amused remark in an entirely invented gibberish language. Expressive conversational syllables, natural breath and rhythm. Absolutely no English or real language words, no narration, no singing. Single speaker, dry close clean game dialogue recording, no music or background noise.",
+      "duration": 3,
+      "loop": false,
+      "file": "HumanMale44_09.wav",
+      "group": "HumanMale44"
+    },
+    {
+      "slot": "HumanMale44_10",
+      "prompt": "One adult male human voice speaking a brief angry challenge in an entirely invented gibberish language. Expressive conversational syllables, natural breath and rhythm. Absolutely no English or real language words, no narration, no singing. Single speaker, dry close clean game dialogue recording, no music or background noise.",
+      "duration": 3,
+      "loop": false,
+      "file": "HumanMale44_10.wav",
+      "group": "HumanMale44"
+    },
+    {
+      "slot": "HumanFemale44_01",
+      "prompt": "One adult female human voice speaking a brief calm greeting in an entirely invented gibberish language. Expressive conversational syllables, natural breath and rhythm. Absolutely no English or real language words, no narration, no singing. Single speaker, dry close clean game dialogue recording, no music or background noise.",
+      "duration": 3,
+      "loop": false,
+      "file": "HumanFemale44_01.wav",
+      "group": "HumanFemale44"
+    },
+    {
+      "slot": "HumanFemale44_02",
+      "prompt": "One adult female human voice speaking a brief curious question in an entirely invented gibberish language. Expressive conversational syllables, natural breath and rhythm. Absolutely no English or real language words, no narration, no singing. Single speaker, dry close clean game dialogue recording, no music or background noise.",
+      "duration": 3,
+      "loop": false,
+      "file": "HumanFemale44_02.wav",
+      "group": "HumanFemale44"
+    },
+    {
+      "slot": "HumanFemale44_03",
+      "prompt": "One adult female human voice speaking a brief friendly explanation in an entirely invented gibberish language. Expressive conversational syllables, natural breath and rhythm. Absolutely no English or real language words, no narration, no singing. Single speaker, dry close clean game dialogue recording, no music or background noise.",
+      "duration": 3,
+      "loop": false,
+      "file": "HumanFemale44_03.wav",
+      "group": "HumanFemale44"
+    },
+    {
+      "slot": "HumanFemale44_04",
+      "prompt": "One adult female human voice speaking a brief quiet disagreement in an entirely invented gibberish language. Expressive conversational syllables, natural breath and rhythm. Absolutely no English or real language words, no narration, no singing. Single speaker, dry close clean game dialogue recording, no music or background noise.",
+      "duration": 3,
+      "loop": false,
+      "file": "HumanFemale44_04.wav",
+      "group": "HumanFemale44"
+    },
+    {
+      "slot": "HumanFemale44_05",
+      "prompt": "One adult female human voice speaking a brief excited discovery in an entirely invented gibberish language. Expressive conversational syllables, natural breath and rhythm. Absolutely no English or real language words, no narration, no singing. Single speaker, dry close clean game dialogue recording, no music or background noise.",
+      "duration": 3,
+      "loop": false,
+      "file": "HumanFemale44_05.wav",
+      "group": "HumanFemale44"
+    },
+    {
+      "slot": "HumanFemale44_06",
+      "prompt": "One adult female human voice speaking a brief worried warning in an entirely invented gibberish language. Expressive conversational syllables, natural breath and rhythm. Absolutely no English or real language words, no narration, no singing. Single speaker, dry close clean game dialogue recording, no music or background noise.",
+      "duration": 3,
+      "loop": false,
+      "file": "HumanFemale44_06.wav",
+      "group": "HumanFemale44"
+    },
+    {
+      "slot": "HumanFemale44_07",
+      "prompt": "One adult female human voice speaking a brief confident answer in an entirely invented gibberish language. Expressive conversational syllables, natural breath and rhythm. Absolutely no English or real language words, no narration, no singing. Single speaker, dry close clean game dialogue recording, no music or background noise.",
+      "duration": 3,
+      "loop": false,
+      "file": "HumanFemale44_07.wav",
+      "group": "HumanFemale44"
+    },
+    {
+      "slot": "HumanFemale44_08",
+      "prompt": "One adult female human voice speaking a brief tired complaint in an entirely invented gibberish language. Expressive conversational syllables, natural breath and rhythm. Absolutely no English or real language words, no narration, no singing. Single speaker, dry close clean game dialogue recording, no music or background noise.",
+      "duration": 3,
+      "loop": false,
+      "file": "HumanFemale44_08.wav",
+      "group": "HumanFemale44"
+    },
+    {
+      "slot": "HumanFemale44_09",
+      "prompt": "One adult female human voice speaking a brief amused remark in an entirely invented gibberish language. Expressive conversational syllables, natural breath and rhythm. Absolutely no English or real language words, no narration, no singing. Single speaker, dry close clean game dialogue recording, no music or background noise.",
+      "duration": 3,
+      "loop": false,
+      "file": "HumanFemale44_09.wav",
+      "group": "HumanFemale44"
+    },
+    {
+      "slot": "HumanFemale44_10",
+      "prompt": "One adult female human voice speaking a brief angry challenge in an entirely invented gibberish language. Expressive conversational syllables, natural breath and rhythm. Absolutely no English or real language words, no narration, no singing. Single speaker, dry close clean game dialogue recording, no music or background noise.",
+      "duration": 3,
+      "loop": false,
+      "file": "HumanFemale44_10.wav",
+      "group": "HumanFemale44"
+    }
+  ],
+  "estimated_credits": 1975,
+  "budget": 2500
+}

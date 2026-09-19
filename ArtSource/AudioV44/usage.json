@@ -1,0 +1,452 @@
+{
+  "Zombie_01": {
+    "cost": 25.0,
+    "state": "complete",
+    "rms": 0.1899999976158142,
+    "seconds": 2.48
+  },
+  "Zombie_02": {
+    "cost": 25.0,
+    "state": "complete",
+    "rms": 0.18078427016735077,
+    "seconds": 2.48
+  },
+  "Zombie_03": {
+    "cost": 25.0,
+    "state": "complete",
+    "rms": 0.1900000274181366,
+    "seconds": 2.48
+  },
+  "Zombie_04": {
+    "cost": 25.0,
+    "state": "complete",
+    "rms": 0.1899999976158142,
+    "seconds": 2.48
+  },
+  "Zombie_05": {
+    "cost": 25.0,
+    "state": "complete",
+    "rms": 0.1899999976158142,
+    "seconds": 2.48
+  },
+  "DogGrowl_01": {
+    "cost": 25.0,
+    "state": "complete",
+    "rms": 0.16238395869731903,
+    "seconds": 2.48
+  },
+  "DogGrowl_02": {
+    "cost": 25.0,
+    "state": "complete",
+    "rms": 0.1370452642440796,
+    "seconds": 2.48
+  },
+  "DogGrowl_03": {
+    "cost": 25.0,
+    "state": "complete",
+    "rms": 0.1899999976158142,
+    "seconds": 2.48
+  },
+  "DogGrowl_04": {
+    "cost": 25.0,
+    "state": "complete",
+    "rms": 0.1900000125169754,
+    "seconds": 2.48
+  },
+  "DogGrowl_05": {
+    "cost": 25.0,
+    "state": "complete",
+    "rms": 0.18999998271465302,
+    "seconds": 2.48
+  },
+  "MannequinMove_01": {
+    "cost": 25.0,
+    "state": "complete",
+    "rms": 0.03746284916996956,
+    "seconds": 2.48
+  },
+  "MannequinMove_02": {
+    "cost": 25.0,
+    "state": "complete",
+    "rms": 0.019179072231054306,
+    "seconds": 2.48
+  },
+  "MannequinMove_03": {
+    "cost": 25.0,
+    "state": "complete",
+    "rms": 0.07911303639411926,
+    "seconds": 2.48
+  },
+  "MannequinMove_04": {
+    "cost": 25.0,
+    "state": "complete",
+    "rms": 0.04068959504365921,
+    "seconds": 2.48
+  },
+  "MannequinMove_05": {
+    "cost": 25.0,
+    "state": "complete",
+    "rms": 0.04197569563984871,
+    "seconds": 2.48
+  },
+  "MooseRoar_01": {
+    "cost": 25.0,
+    "state": "complete",
+    "rms": 0.1900000125169754,
+    "seconds": 2.48
+  },
+  "MooseRoar_02": {
+    "cost": 25.0,
+    "state": "complete",
+    "rms": 0.1900000125169754,
+    "seconds": 2.48
+  },
+  "MooseRoar_03": {
+    "cost": 25.0,
+    "state": "complete",
+    "rms": 0.1900000125169754,
+    "seconds": 2.48
+  },
+  "MooseRoar_04": {
+    "cost": 25.0,
+    "state": "complete",
+    "rms": 0.1899999976158142,
+    "seconds": 2.48
+  },
+  "MooseRoar_05": {
+    "cost": 25.0,
+    "state": "complete",
+    "rms": 0.1899999976158142,
+    "seconds": 2.48
+  },
+  "TitanRoar_01": {
+    "cost": 25.0,
+    "state": "complete",
+    "rms": 0.1899999976158142,
+    "seconds": 2.48
+  },
+  "TitanRoar_02": {
+    "cost": 25.0,
+    "state": "complete",
+    "rms": 0.17662307620048523,
+    "seconds": 2.48
+  },
+  "TitanRoar_03": {
+    "cost": 25.0,
+    "state": "complete",
+    "rms": 0.1900000274181366,
+    "seconds": 2.48
+  },
+  "TitanRoar_04": {
+    "cost": 25.0,
+    "state": "complete",
+    "rms": 0.1900000125169754,
+    "seconds": 2.48
+  },
+  "TitanRoar_05": {
+    "cost": 25.0,
+    "state": "complete",
+    "rms": 0.18999998271465302,
+    "seconds": 2.48
+  },
+  "DeathclawRoar_01": {
+    "cost": 25.0,
+    "state": "complete",
+    "rms": 0.1899999976158142,
+    "seconds": 2.48
+  },
+  "DeathclawRoar_02": {
+    "cost": 25.0,
+    "state": "complete",
+    "rms": 0.1899999976158142,
+    "seconds": 2.48
+  },
+  "DeathclawRoar_03": {
+    "cost": 25.0,
+    "state": "complete",
+    "rms": 0.1899999976158142,
+    "seconds": 2.48
+  },
+  "DeathclawRoar_04": {
+    "cost": 25.0,
+    "state": "complete",
+    "rms": 0.1899999976158142,
+    "seconds": 2.48
+  },
+  "DeathclawRoar_05": {
+    "cost": 25.0,
+    "state": "complete",
+    "rms": 0.1899999976158142,
+    "seconds": 2.48
+  },
+  "ScorpionHiss_01": {
+    "cost": 25.0,
+    "state": "complete",
+    "rms": 0.14455543458461761,
+    "seconds": 2.48
+  },
+  "ScorpionHiss_02": {
+    "cost": 25.0,
+    "state": "complete",
+    "rms": 0.1662423461675644,
+    "seconds": 2.48
+  },
+  "ScorpionHiss_03": {
+    "cost": 25.0,
+    "state": "complete",
+    "rms": 0.14667879045009613,
+    "seconds": 2.48
+  },
+  "ScorpionHiss_04": {
+    "cost": 25.0,
+    "state": "complete",
+    "rms": 0.18999998271465302,
+    "seconds": 2.48
+  },
+  "ScorpionHiss_05": {
+    "cost": 25.0,
+    "state": "complete",
+    "rms": 0.1597255915403366,
+    "seconds": 2.48
+  },
+  "KarenShriek_01": {
+    "cost": 25.0,
+    "state": "complete",
+    "rms": 0.1900000274181366,
+    "seconds": 2.48
+  },
+  "KarenShriek_02": {
+    "cost": 25.0,
+    "state": "complete",
+    "rms": 0.1892806738615036,
+    "seconds": 2.48
+  },
+  "KarenShriek_03": {
+    "cost": 25.0,
+    "state": "complete",
+    "rms": 0.1899999976158142,
+    "seconds": 2.48
+  },
+  "KarenShriek_04": {
+    "cost": 25.0,
+    "state": "complete",
+    "rms": 0.1899999976158142,
+    "seconds": 2.48
+  },
+  "KarenShriek_05": {
+    "cost": 25.0,
+    "state": "complete",
+    "rms": 0.1900000125169754,
+    "seconds": 2.48
+  },
+  "BehemothVoice44_01": {
+    "cost": 25.0,
+    "state": "complete",
+    "rms": 0.1900000274181366,
+    "seconds": 2.48
+  },
+  "BehemothVoice44_02": {
+    "cost": 25.0,
+    "state": "complete",
+    "rms": 0.1899999976158142,
+    "seconds": 2.48
+  },
+  "BehemothVoice44_03": {
+    "cost": 25.0,
+    "state": "complete",
+    "rms": 0.1900000125169754,
+    "seconds": 2.48
+  },
+  "BehemothVoice44_04": {
+    "cost": 25.0,
+    "state": "complete",
+    "rms": 0.17949163913726807,
+    "seconds": 2.48
+  },
+  "BehemothVoice44_05": {
+    "cost": 25.0,
+    "state": "complete",
+    "rms": 0.1899999976158142,
+    "seconds": 2.48
+  },
+  "ColossusVoice44_01": {
+    "cost": 25.0,
+    "state": "complete",
+    "rms": 0.1899999976158142,
+    "seconds": 2.48
+  },
+  "ColossusVoice44_02": {
+    "cost": 25.0,
+    "state": "complete",
+    "rms": 0.18047842383384705,
+    "seconds": 2.48
+  },
+  "ColossusVoice44_03": {
+    "cost": 25.0,
+    "state": "complete",
+    "rms": 0.1899999976158142,
+    "seconds": 2.48
+  },
+  "ColossusVoice44_04": {
+    "cost": 25.0,
+    "state": "complete",
+    "rms": 0.1900000274181366,
+    "seconds": 2.48
+  },
+  "ColossusVoice44_05": {
+    "cost": 25.0,
+    "state": "complete",
+    "rms": 0.1899999976158142,
+    "seconds": 2.48
+  },
+  "WorldEaterVoice44_01": {
+    "cost": 25.0,
+    "state": "complete",
+    "rms": 0.18999998271465302,
+    "seconds": 2.48
+  },
+  "WorldEaterVoice44_02": {
+    "cost": 25.0,
+    "state": "complete",
+    "rms": 0.17602132260799408,
+    "seconds": 2.48
+  },
+  "WorldEaterVoice44_03": {
+    "cost": 25.0,
+    "state": "complete",
+    "rms": 0.1899999976158142,
+    "seconds": 2.48
+  },
+  "WorldEaterVoice44_04": {
+    "cost": 25.0,
+    "state": "complete",
+    "rms": 0.18662093579769135,
+    "seconds": 2.48
+  },
+  "WorldEaterVoice44_05": {
+    "cost": 25.0,
+    "state": "complete",
+    "rms": 0.16344577074050903,
+    "seconds": 2.48
+  },
+  "HumanMale44_01": {
+    "cost": 30.0,
+    "state": "complete",
+    "rms": 0.15590976178646088,
+    "seconds": 3.0
+  },
+  "HumanMale44_02": {
+    "cost": 30.0,
+    "state": "complete",
+    "rms": 0.17407073080539703,
+    "seconds": 3.0
+  },
+  "HumanMale44_03": {
+    "cost": 30.0,
+    "state": "complete",
+    "rms": 0.1899999976158142,
+    "seconds": 3.0
+  },
+  "HumanMale44_04": {
+    "cost": 30.0,
+    "state": "complete",
+    "rms": 0.11463942378759384,
+    "seconds": 3.0
+  },
+  "HumanMale44_05": {
+    "cost": 30.0,
+    "state": "complete",
+    "rms": 0.16118015348911285,
+    "seconds": 3.0
+  },
+  "HumanMale44_06": {
+    "cost": 30.0,
+    "state": "complete",
+    "rms": 0.17984269559383392,
+    "seconds": 3.0
+  },
+  "HumanMale44_07": {
+    "cost": 30.0,
+    "state": "complete",
+    "rms": 0.15299712121486664,
+    "seconds": 3.0
+  },
+  "HumanMale44_08": {
+    "cost": 30.0,
+    "state": "complete",
+    "rms": 0.1899999976158142,
+    "seconds": 3.0
+  },
+  "HumanMale44_09": {
+    "cost": 30.0,
+    "state": "complete",
+    "rms": 0.14988724887371063,
+    "seconds": 3.0
+  },
+  "HumanMale44_10": {
+    "cost": 30.0,
+    "state": "complete",
+    "rms": 0.18235136568546295,
+    "seconds": 3.0
+  },
+  "HumanFemale44_01": {
+    "cost": 30.0,
+    "state": "complete",
+    "rms": 0.14977005124092102,
+    "seconds": 3.0
+  },
+  "HumanFemale44_02": {
+    "cost": 30.0,
+    "state": "complete",
+    "rms": 0.17297424376010895,
+    "seconds": 3.0
+  },
+  "HumanFemale44_03": {
+    "cost": 30.0,
+    "state": "complete",
+    "rms": 0.18999998271465302,
+    "seconds": 3.0
+  },
+  "HumanFemale44_04": {
+    "cost": 30.0,
+    "state": "complete",
+    "rms": 0.14221973717212677,
+    "seconds": 3.0
+  },
+  "HumanFemale44_05": {
+    "cost": 30.0,
+    "state": "complete",
+    "rms": 0.1900000274181366,
+    "seconds": 3.0
+  },
+  "HumanFemale44_06": {
+    "cost": 30.0,
+    "state": "complete",
+    "rms": 0.11493341624736786,
+    "seconds": 3.0
+  },
+  "HumanFemale44_07": {
+    "cost": 30.0,
+    "state": "complete",
+    "rms": 0.1900000274181366,
+    "seconds": 3.0
+  },
+  "HumanFemale44_08": {
+    "cost": 30.0,
+    "state": "complete",
+    "rms": 0.18074378371238708,
+    "seconds": 3.0
+  },
+  "HumanFemale44_09": {
+    "cost": 30.0,
+    "state": "complete",
+    "rms": 0.12429549545049667,
+    "seconds": 3.0
+  },
+  "HumanFemale44_10": {
+    "cost": 30.0,
+    "state": "complete",
+    "rms": 0.1899999976158142,
+    "seconds": 3.0
+  }
+}

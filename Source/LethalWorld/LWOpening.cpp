@@ -1,0 +1,61 @@
+#include "LWAppearance.h"
+#include "LWCreator35.h"
+#include "LWOpening.h"
+#include "LWWorld.h"
+#include "LWAudioCatalog.h"
+#include "Camera/CameraComponent.h"
+#include "Components/StaticMeshComponent.h"
+#include "Components/PointLightComponent.h"
+#include "Components/AudioComponent.h"
+#include "Materials/MaterialInstanceDynamic.h"
+#include "Engine/World.h"
+#include "Engine/StaticMesh.h"
+const TArray<LWOpening::FBeat>& LWOpening::Beats(){static const TArray<FBeat> B={
+ {TEXT("2030 / BEFORE THE SILENCE"),TEXT("IntroArchive"),{TEXT("You remember ordinary things. A late bus. Coffee gone cold.\nThe porch light someone always left on."),TEXT("The year was 2030. The city still lit up every evening.\nFrom your window, it looked as though it always would."),TEXT("Then the deliveries stopped arriving. First a day late.\nThen a week. Then the loading bays stood empty.")}},
+ {TEXT("THE EMPTY SHELVES"),TEXT("IntroArchive"),{TEXT("People counted what they had. Grocers counted cans.\nHospitals counted batteries. Families counted days."),TEXT("A paycheck meant little when there was nothing to buy.\nThe queue outside the pharmacy reached around the block."),TEXT("You learned to carry water before you learned to carry a gun.\nAt night, the elevators stopped between floors.")}},
+ {TEXT("THE LONG NIGHT"),TEXT("IntroUnrest"),{TEXT("Fear filled the places routine had left behind.\nShop windows shattered. Fires spread through empty buildings."),TEXT("Some people took what they could. Others stayed to help.\nYou remember both. You remember the neighbors who never came home."),TEXT("The fire engines stopped answering. Smoke covered the street signs.\nBy morning, you could no longer see the end of your own road.")}},
+ {TEXT("NO REPLY"),TEXT("IntroAlarm"),{TEXT("Emergency channels spoke over one another.\nInstructions arrived late, or cut off in the middle of a sentence."),TEXT("You called the same number until your phone died.\nAn unfamiliar voice on the radio said to find shelter."),TEXT("There was no single warning everyone heard.\nThere was only the moment the sky changed.")}},
+ {TEXT("THE EXCHANGE"),TEXT("IntroBlast"),{TEXT("A flash erased the skyline. For a moment, every shadow\npointed away from the horizon."),TEXT("The windows bowed inward. The sound came after the light.\nThen came another flash, farther away. Then another."),TEXT("Beyond the city, beyond the state, the same nightmare unfolded.\nBy the time the broadcasts stopped, the war was already everywhere.")}},
+ {TEXT("BELOW GROUND"),TEXT("IntroShelter"),{TEXT("You found a maintenance stairwell beneath an old shelter sign.\nSomeone had painted an arrow on the wall: DOWN."),TEXT("The hatch was heavy. The air tasted of iron and old dust.\nYou turned the wheel until the noise outside disappeared."),TEXT("A generator coughed to life. One strip light flickered on.\nFor the first time that night, you could hear yourself breathing.")}},
+ {TEXT("THE DAYS AFTER"),TEXT("IntroAftermath"),{TEXT("You marked the days beside the bunk. You rationed water.\nEvery morning, you swept the radio dial."),TEXT("Sometimes there were voices. Fragments. Coordinates.\nA request for medicine. A warning not to take the highway."),TEXT("No rescue came. The routes out were gone or closed.\nWhatever remained beyond the exclusion zone stayed beyond your reach.")}},
+ {TEXT("WHAT REMAINS"),TEXT("IntroAftermath"),{TEXT("The country you knew had become a wasteland.\nRoads led to hollow towns, wrecked convoys, and locked doors."),TEXT("But lights still appeared in distant windows. Traders walked\nthe roads. Somewhere, people were planting things again."),TEXT("You cannot bring back the world you remember.\nYou can decide what kind of life comes after it.")}},
+ {TEXT("SHELTER 01"),TEXT("IntroShelter"),{TEXT("A bed. A work light. A dry place to keep what matters.\nThis bunker is yours now."),TEXT("Outside, every journey is a risk. Inside, there is room\nfor supplies, for plans, and perhaps for people you come to trust."),TEXT("The old world left you a name and a few things you know how to do.\nBefore you open the door, remember who you are.")}}
+ };return B;}
+FLinearColor LWOpening::Skin(int I){const FLinearColor C[]={FLinearColor(.78,.56,.42),FLinearColor(.62,.39,.25),FLinearColor(.43,.25,.15),FLinearColor(.28,.14,.085),FLinearColor(.16,.072,.04),FLinearColor(.68,.47,.33)};return C[FMath::Clamp(I,0,5)];}
+FLinearColor LWOpening::Cloth(int I){const FLinearColor C[]={FLinearColor(.16,.23,.15),FLinearColor(.19,.26,.34),FLinearColor(.38,.16,.09),FLinearColor(.48,.41,.28)};return C[FMath::Clamp(I,0,3)];}
+bool LWOpening::ValidAllocation(const TArray<int32>& A){if(A.Num()!=7)return false;int Sum=0;for(int V:A){if(V<1||V>10)return false;Sum+=V;}return Sum==28;}
+ALWOpeningScene::ALWOpeningScene(){RootComponent=CreateDefaultSubobject<USceneComponent>(TEXT("Root"));Camera=CreateDefaultSubobject<UCameraComponent>(TEXT("Camera"));Camera->SetupAttachment(RootComponent);Camera->FieldOfView=50;Camera->PostProcessSettings.bOverride_AutoExposureMethod=true;Camera->PostProcessSettings.AutoExposureMethod=AEM_Manual;Camera->PostProcessSettings.bOverride_AutoExposureApplyPhysicalCameraExposure=true;Camera->PostProcessSettings.AutoExposureApplyPhysicalCameraExposure=false;Camera->PostProcessSettings.bOverride_VignetteIntensity=true;Camera->PostProcessSettings.VignetteIntensity=.55;}
+UStaticMeshComponent* ALWOpeningScene::Piece(FName Mesh,FName Material,FVector At,FVector Size,FRotator Rot){auto* C=NewObject<UStaticMeshComponent>(this);C->SetupAttachment(RootComponent);C->SetStaticMesh(Mesh==TEXT("Sphere")?LoadObject<UStaticMesh>(nullptr,TEXT("/Engine/BasicShapes/Sphere.Sphere")):World->Mesh(Mesh));if(!Material.IsNone())C->SetMaterial(0,World->Material(Material));C->SetRelativeLocation(At);C->SetRelativeRotation(Rot);C->SetRelativeScale3D(Size/100);C->SetCollisionEnabled(ECollisionEnabled::NoCollision);C->RegisterComponent();Pieces.Add(C);return C;}
+void ALWOpeningScene::Light(FVector At,FLinearColor Color,float Power,float Radius){auto* L=NewObject<UPointLightComponent>(this);L->SetupAttachment(RootComponent);L->SetRelativeLocation(At);L->SetIntensity(Power);L->SetAttenuationRadius(Radius);L->SetLightColor(Color);L->SetCastShadows(false);L->RegisterComponent();Lamps.Add(L);}
+void ALWOpeningScene::Clear(){LWCreator35::Cleanup(this);for(auto& C:Pieces)if(C)C->DestroyComponent();for(auto& L:Lamps)if(L)L->DestroyComponent();Pieces.Empty();Lamps.Empty();Animated.Empty();if(Audio){Audio->Stop();Audio->DestroyComponent();Audio=nullptr;}}
+void ALWOpeningScene::EndPlay(const EEndPlayReason::Type R){Clear();Super::EndPlay(R);}
+void ALWOpeningScene::Stage(int32 Index){Clear();Camera->FieldOfView=60;Shot=Index;FRandomStream R(1500+Index);Piece(TEXT("Cube"),TEXT("Asphalt"),FVector(0,0,-20),FVector(8000,8000,30));Light(FVector(0,0,1200),FLinearColor(.58,.68,.8),500000,7000);
+ if(Index==0||Index==2||Index==4||Index==7){
+ for(int S:{-1,1})for(int I=0;I<12;I++){float X=I*440-2200,Y=S*(480+R.FRandRange(0,180)),H=R.FRandRange(250,1100);Piece(TEXT("Cube"),Index==7?TEXT("Concrete"):TEXT("Brick"),FVector(X,Y,H*.5),FVector(360,380,H));for(int Z=80;Z<H-30;Z+=100)for(int W=-1;W<=1;W++)Piece(TEXT("Cube"),Index==0?TEXT("Bone"):TEXT("Rubber"),FVector(X+W*86,Y-S*192,Z),FVector(40,3,58));}
+ for(int I=0;I<22;I++)Piece(TEXT("Cube"),TEXT("Bone"),FVector(I*230-2500,0,1),FVector(85,6,2));
+ for(int I=0;I<6;I++){auto* C=Piece(TEXT("Vehicle_sedan_V9"),NAME_None,FVector(I*580-1700,150*(I%2?1:-1),20),FVector(100),FRotator(0,I%2?180:0,0));if(Index==0)Animated.Add(C);}
+ if(Index==2||Index==7)for(int I=0;I<26;I++)Piece(TEXT("Cube"),TEXT("Concrete"),FVector(R.FRandRange(-1800,1800),R.FRandRange(-420,420),15),FVector(R.FRandRange(12,60),28,25),FRotator(0,R.FRandRange(0,360),15));
+ if(Index==2)for(int I=0;I<12;I++){FVector At(R.FRandRange(-1600,1600),I%2?440:-440,80);Animated.Add(Piece(TEXT("IntroFlameV15"),TEXT("IntroFire"),At,FVector(55,65,180),FRotator(0,0,15)));Light(At,FLinearColor(1,.2,.02),220000,700);}
+ From=FVector(-2400,0,360);To=FVector(-1100,0,330);Focus=FVector(1300,0,350);
+ if(Index==4){From=FVector(-1900,-80,240);To=FVector(-1700,-50,240);Focus=FVector(1500,0,850);Light(FVector(2000,0,1000),FLinearColor(1,.65,.3),2000000,8000);for(int I=0;I<5;I++)Animated.Add(Piece(TEXT("IntroCloudV15"),TEXT("IntroFire"),FVector(2300,0,230+I*130),FVector(230,230,240)));for(int I=0;I<9;I++){float A=I*PI*2/9;Animated.Add(Piece(TEXT("IntroCloudV15"),I%3?TEXT("IntroSmoke"):TEXT("IntroFire"),FVector(2300+FMath::Cos(A)*330,FMath::Sin(A)*330,980),FVector(630,620,430)));}}
+ if(Index==7){From=FVector(-1500,-1400,950);To=FVector(-700,-1000,650);Focus=FVector(450,0,200);}
+ }else if(Index==1){
+ Piece(TEXT("Cube"),TEXT("Concrete"),FVector(500,0,180),FVector(30,1800,400));for(int J=0;J<4;J++){float Y=J*280-400;for(int H=30;H<220;H+=60)Piece(TEXT("Cube"),TEXT("Steel"),FVector(180,Y,H),FVector(180,200,5));for(int S:{-1,1})Piece(TEXT("Cube"),TEXT("Steel"),FVector(180,Y+S*95,130),FVector(8,8,260));if(J%2)Piece(TEXT("Cube"),TEXT("Bone"),FVector(170,Y,40),FVector(25,25,30));}From=FVector(-500,-650,155);To=FVector(-200,-350,155);Focus=FVector(180,240,120);
+ }else{
+ Piece(TEXT("Cube"),TEXT("Concrete"),FVector(280,0,150),FVector(30,700,330));Piece(TEXT("Cube"),TEXT("Concrete"),FVector(0,340,150),FVector(600,30,330));Piece(TEXT("Cube"),TEXT("Concrete"),FVector(0,-340,150),FVector(600,30,330));
+ Piece(TEXT("Cube"),TEXT("Steel"),FVector(259,0,100),FVector(10,130,205));for(int Y:{-60,60})Piece(TEXT("Cube"),TEXT("Rust"),FVector(251,Y,100),FVector(8,8,210));
+ Piece(TEXT("Cube"),TEXT("Wood"),FVector(0,-190,68),FVector(145,65,12));for(int X:{-65,65})Piece(TEXT("Cube"),TEXT("Steel"),FVector(X,-190,32),FVector(8,55,65));
+ Piece(TEXT("Cube"),TEXT("Rubber"),FVector(0,-190,92),FVector(50,30,40));Piece(TEXT("Cube"),TEXT("Glow"),FVector(-25,-172,92),FVector(2,2,15));
+ Piece(TEXT("CamperBedV14"),NAME_None,FVector(20,185,0),FVector(70));Piece(TEXT("Cube"),TEXT("Cloth"),FVector(10,180,55),FVector(90,125,10));
+ for(int I=0;I<Index*3;I++)Piece(TEXT("Cube"),TEXT("Bone"),FVector(260,-150+I*3,175),FVector(1,1,8),FRotator(0,0,10));
+ Light(FVector(40,0,230),FLinearColor(1,.65,.3),38000,650);From=Index==3?FVector(-150,-310,120):FVector(-270,-230,165);To=Index==3?FVector(-90,-260,115):FVector(-190,-145,170);Focus=Index==3?FVector(0,-190,95):FVector(100,100,95);
+ }
+ Audio=ULWAudioCatalog::PlaySlot(this,FName(LWOpening::Beats()[Index].Cue),GetActorLocation(),1,1);Pose(0);
+}
+void ALWOpeningScene::Pose(float P){P=FMath::Clamp(P,0.f,1.f);FVector At=FMath::Lerp(From,To,P*P*(3-2*P));Camera->SetRelativeLocation(At);Camera->SetRelativeRotation((Focus-At).Rotation());for(int I=0;I<Animated.Num();I++){auto* C=Animated[I].Get();if(Shot==2)C->SetRelativeScale3D(FVector(.4,.55,1.4+FMath::Sin(P*90+I)*.45));else if(Shot==4)C->SetRelativeScale3D(I<5?FVector(2.3+P*2,2.3+P*2,2.4+P):FVector(6.3+P*4,6.2+P*4,4.3+P*2));else if(Shot==0)C->SetRelativeLocation(FVector(I*580-1700+P*800,150*(I%2?1:-1),20));}}
+void ALWOpeningScene::Portrait(const FLWIdentity& V,float Yaw){Clear();Shot=-1;
+ auto& PP=Camera->PostProcessSettings;PP.WeightedBlendables.Array.Empty();PP.bOverride_ColorSaturation=true;PP.ColorSaturation=FVector4(1,1,1,1);PP.bOverride_ColorContrast=true;PP.ColorContrast=FVector4(1,1,1,1);PP.bOverride_FilmGrainIntensity=true;PP.FilmGrainIntensity=0;PP.bOverride_SceneFringeIntensity=true;PP.SceneFringeIntensity=0;PP.bOverride_VignetteIntensity=true;PP.VignetteIntensity=.08f;PP.bOverride_AutoExposureBias=true;PP.AutoExposureBias=-1;
+Piece(TEXT("Cube"),TEXT("Concrete"),FVector(0,0,-8),FVector(1200,1200,15));auto* Backdrop=Piece(TEXT("Cube"),NAME_None,FVector(-90,0,130),FVector(8,800,500));Backdrop->SetMaterial(0,LoadObject<UMaterialInterface>(nullptr,TEXT("/Game/Materials/M_CreatorBackdrop35.M_CreatorBackdrop35")));Light(FVector(150,-160,230),FLinearColor(1,.96,.92),18000,700);Light(FVector(-50,150,180),FLinearColor(.88,.94,1),11000,700);
+ TArray<TObjectPtr<UStaticMeshComponent>> Body;LWAppearance::Build(this,GetRootComponent(),V,Body);for(auto& C:Body){C->SetRelativeLocation(FRotator(0,Yaw,0).RotateVector(C->GetRelativeLocation()));C->SetRelativeRotation(FRotator(0,Yaw,0));Pieces.Add(C);}
+ From=To=FVector(510,-290,175);Focus=FVector(0,0,100);Camera->FieldOfView=40;Pose(0);
+}

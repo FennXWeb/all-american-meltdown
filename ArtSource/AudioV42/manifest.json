@@ -1,0 +1,432 @@
+{
+  "estimated_credits": 7320.0,
+  "sounds": [
+    {
+      "slot": "Vehicle42_sedan_Idle",
+      "prompt": "worn 1990s naturally aspirated inline four sedan, soft uneven gasoline purr. steady warm idle, 800 RPM. Isolated dry close engine recording for a racing game layered engine loop. Constant continuous engine tone, no gear changes, no rev sweep, no driving past, no start or stop, no music or voices.",
+      "duration": 4,
+      "loop": true,
+      "file": "Vehicle42_sedan_Idle.wav"
+    },
+    {
+      "slot": "Vehicle42_sedan_Low",
+      "prompt": "worn 1990s naturally aspirated inline four sedan, soft uneven gasoline purr. steady loaded engine at moderate RPM, gentle acceleration torque, constant speed. Isolated dry close engine recording for a racing game layered engine loop. Constant continuous engine tone, no gear changes, no rev sweep, no driving past, no start or stop, no music or voices.",
+      "duration": 4,
+      "loop": true,
+      "file": "Vehicle42_sedan_Low.wav"
+    },
+    {
+      "slot": "Vehicle42_sedan_High",
+      "prompt": "worn 1990s naturally aspirated inline four sedan, soft uneven gasoline purr. steady engine at high RPM under full throttle load, constant speed. Isolated dry close engine recording for a racing game layered engine loop. Constant continuous engine tone, no gear changes, no rev sweep, no driving past, no start or stop, no music or voices.",
+      "duration": 4,
+      "loop": true,
+      "file": "Vehicle42_sedan_High.wav"
+    },
+    {
+      "slot": "Vehicle42_police_Idle",
+      "prompt": "large police cruiser 4.6 litre V8, smooth authoritative burble. steady warm idle, 800 RPM. Isolated dry close engine recording for a racing game layered engine loop. Constant continuous engine tone, no gear changes, no rev sweep, no driving past, no start or stop, no music or voices.",
+      "duration": 4,
+      "loop": true,
+      "file": "Vehicle42_police_Idle.wav"
+    },
+    {
+      "slot": "Vehicle42_police_Low",
+      "prompt": "large police cruiser 4.6 litre V8, smooth authoritative burble. steady loaded engine at moderate RPM, gentle acceleration torque, constant speed. Isolated dry close engine recording for a racing game layered engine loop. Constant continuous engine tone, no gear changes, no rev sweep, no driving past, no start or stop, no music or voices.",
+      "duration": 4,
+      "loop": true,
+      "file": "Vehicle42_police_Low.wav"
+    },
+    {
+      "slot": "Vehicle42_police_High",
+      "prompt": "large police cruiser 4.6 litre V8, smooth authoritative burble. steady engine at high RPM under full throttle load, constant speed. Isolated dry close engine recording for a racing game layered engine loop. Constant continuous engine tone, no gear changes, no rev sweep, no driving past, no start or stop, no music or voices.",
+      "duration": 4,
+      "loop": true,
+      "file": "Vehicle42_police_High.wav"
+    },
+    {
+      "slot": "Vehicle42_boxtruck_Idle",
+      "prompt": "commercial box truck inline six turbodiesel, clattering heavy compression. steady warm idle, 800 RPM. Isolated dry close engine recording for a racing game layered engine loop. Constant continuous engine tone, no gear changes, no rev sweep, no driving past, no start or stop, no music or voices.",
+      "duration": 4,
+      "loop": true,
+      "file": "Vehicle42_boxtruck_Idle.wav"
+    },
+    {
+      "slot": "Vehicle42_boxtruck_Low",
+      "prompt": "commercial box truck inline six turbodiesel, clattering heavy compression. steady loaded engine at moderate RPM, gentle acceleration torque, constant speed. Isolated dry close engine recording for a racing game layered engine loop. Constant continuous engine tone, no gear changes, no rev sweep, no driving past, no start or stop, no music or voices.",
+      "duration": 4,
+      "loop": true,
+      "file": "Vehicle42_boxtruck_Low.wav"
+    },
+    {
+      "slot": "Vehicle42_boxtruck_High",
+      "prompt": "commercial box truck inline six turbodiesel, clattering heavy compression. steady engine at high RPM under full throttle load, constant speed. Isolated dry close engine recording for a racing game layered engine loop. Constant continuous engine tone, no gear changes, no rev sweep, no driving past, no start or stop, no music or voices.",
+      "duration": 4,
+      "loop": true,
+      "file": "Vehicle42_boxtruck_High.wav"
+    },
+    {
+      "slot": "Vehicle42_rv_Idle",
+      "prompt": "luxury rear engine motorcoach diesel pusher, deep insulated low rumble. steady warm idle, 800 RPM. Isolated dry close engine recording for a racing game layered engine loop. Constant continuous engine tone, no gear changes, no rev sweep, no driving past, no start or stop, no music or voices.",
+      "duration": 4,
+      "loop": true,
+      "file": "Vehicle42_rv_Idle.wav"
+    },
+    {
+      "slot": "Vehicle42_rv_Low",
+      "prompt": "luxury rear engine motorcoach diesel pusher, deep insulated low rumble. steady loaded engine at moderate RPM, gentle acceleration torque, constant speed. Isolated dry close engine recording for a racing game layered engine loop. Constant continuous engine tone, no gear changes, no rev sweep, no driving past, no start or stop, no music or voices.",
+      "duration": 4,
+      "loop": true,
+      "file": "Vehicle42_rv_Low.wav"
+    },
+    {
+      "slot": "Vehicle42_rv_High",
+      "prompt": "luxury rear engine motorcoach diesel pusher, deep insulated low rumble. steady engine at high RPM under full throttle load, constant speed. Isolated dry close engine recording for a racing game layered engine loop. Constant continuous engine tone, no gear changes, no rev sweep, no driving past, no start or stop, no music or voices.",
+      "duration": 4,
+      "loop": true,
+      "file": "Vehicle42_rv_High.wav"
+    },
+    {
+      "slot": "Vehicle42_bus_Idle",
+      "prompt": "old school bus diesel, metallic rattles and heavy exhaust pulses. steady warm idle, 800 RPM. Isolated dry close engine recording for a racing game layered engine loop. Constant continuous engine tone, no gear changes, no rev sweep, no driving past, no start or stop, no music or voices.",
+      "duration": 4,
+      "loop": true,
+      "file": "Vehicle42_bus_Idle.wav"
+    },
+    {
+      "slot": "Vehicle42_bus_Low",
+      "prompt": "old school bus diesel, metallic rattles and heavy exhaust pulses. steady loaded engine at moderate RPM, gentle acceleration torque, constant speed. Isolated dry close engine recording for a racing game layered engine loop. Constant continuous engine tone, no gear changes, no rev sweep, no driving past, no start or stop, no music or voices.",
+      "duration": 4,
+      "loop": true,
+      "file": "Vehicle42_bus_Low.wav"
+    },
+    {
+      "slot": "Vehicle42_bus_High",
+      "prompt": "old school bus diesel, metallic rattles and heavy exhaust pulses. steady engine at high RPM under full throttle load, constant speed. Isolated dry close engine recording for a racing game layered engine loop. Constant continuous engine tone, no gear changes, no rev sweep, no driving past, no start or stop, no music or voices.",
+      "duration": 4,
+      "loop": true,
+      "file": "Vehicle42_bus_High.wav"
+    },
+    {
+      "slot": "Vehicle42_van_Idle",
+      "prompt": "cargo van gasoline V6, hollow resonant exhaust. steady warm idle, 800 RPM. Isolated dry close engine recording for a racing game layered engine loop. Constant continuous engine tone, no gear changes, no rev sweep, no driving past, no start or stop, no music or voices.",
+      "duration": 4,
+      "loop": true,
+      "file": "Vehicle42_van_Idle.wav"
+    },
+    {
+      "slot": "Vehicle42_van_Low",
+      "prompt": "cargo van gasoline V6, hollow resonant exhaust. steady loaded engine at moderate RPM, gentle acceleration torque, constant speed. Isolated dry close engine recording for a racing game layered engine loop. Constant continuous engine tone, no gear changes, no rev sweep, no driving past, no start or stop, no music or voices.",
+      "duration": 4,
+      "loop": true,
+      "file": "Vehicle42_van_Low.wav"
+    },
+    {
+      "slot": "Vehicle42_van_High",
+      "prompt": "cargo van gasoline V6, hollow resonant exhaust. steady engine at high RPM under full throttle load, constant speed. Isolated dry close engine recording for a racing game layered engine loop. Constant continuous engine tone, no gear changes, no rev sweep, no driving past, no start or stop, no music or voices.",
+      "duration": 4,
+      "loop": true,
+      "file": "Vehicle42_van_High.wav"
+    },
+    {
+      "slot": "Vehicle42_pickup_Idle",
+      "prompt": "pickup truck large displacement V8, throaty workhorse rumble. steady warm idle, 800 RPM. Isolated dry close engine recording for a racing game layered engine loop. Constant continuous engine tone, no gear changes, no rev sweep, no driving past, no start or stop, no music or voices.",
+      "duration": 4,
+      "loop": true,
+      "file": "Vehicle42_pickup_Idle.wav"
+    },
+    {
+      "slot": "Vehicle42_pickup_Low",
+      "prompt": "pickup truck large displacement V8, throaty workhorse rumble. steady loaded engine at moderate RPM, gentle acceleration torque, constant speed. Isolated dry close engine recording for a racing game layered engine loop. Constant continuous engine tone, no gear changes, no rev sweep, no driving past, no start or stop, no music or voices.",
+      "duration": 4,
+      "loop": true,
+      "file": "Vehicle42_pickup_Low.wav"
+    },
+    {
+      "slot": "Vehicle42_pickup_High",
+      "prompt": "pickup truck large displacement V8, throaty workhorse rumble. steady engine at high RPM under full throttle load, constant speed. Isolated dry close engine recording for a racing game layered engine loop. Constant continuous engine tone, no gear changes, no rev sweep, no driving past, no start or stop, no music or voices.",
+      "duration": 4,
+      "loop": true,
+      "file": "Vehicle42_pickup_High.wav"
+    },
+    {
+      "slot": "Vehicle42_dirtbike_Idle",
+      "prompt": "single cylinder four stroke motocross bike, sharp thudding exhaust. steady warm idle, 800 RPM. Isolated dry close engine recording for a racing game layered engine loop. Constant continuous engine tone, no gear changes, no rev sweep, no driving past, no start or stop, no music or voices.",
+      "duration": 4,
+      "loop": true,
+      "file": "Vehicle42_dirtbike_Idle.wav"
+    },
+    {
+      "slot": "Vehicle42_dirtbike_Low",
+      "prompt": "single cylinder four stroke motocross bike, sharp thudding exhaust. steady loaded engine at moderate RPM, gentle acceleration torque, constant speed. Isolated dry close engine recording for a racing game layered engine loop. Constant continuous engine tone, no gear changes, no rev sweep, no driving past, no start or stop, no music or voices.",
+      "duration": 4,
+      "loop": true,
+      "file": "Vehicle42_dirtbike_Low.wav"
+    },
+    {
+      "slot": "Vehicle42_dirtbike_High",
+      "prompt": "single cylinder four stroke motocross bike, sharp thudding exhaust. steady engine at high RPM under full throttle load, constant speed. Isolated dry close engine recording for a racing game layered engine loop. Constant continuous engine tone, no gear changes, no rev sweep, no driving past, no start or stop, no music or voices.",
+      "duration": 4,
+      "loop": true,
+      "file": "Vehicle42_dirtbike_High.wav"
+    },
+    {
+      "slot": "Vehicle42_suv_Idle",
+      "prompt": "large SUV V6, refined low torque growl. steady warm idle, 800 RPM. Isolated dry close engine recording for a racing game layered engine loop. Constant continuous engine tone, no gear changes, no rev sweep, no driving past, no start or stop, no music or voices.",
+      "duration": 4,
+      "loop": true,
+      "file": "Vehicle42_suv_Idle.wav"
+    },
+    {
+      "slot": "Vehicle42_suv_Low",
+      "prompt": "large SUV V6, refined low torque growl. steady loaded engine at moderate RPM, gentle acceleration torque, constant speed. Isolated dry close engine recording for a racing game layered engine loop. Constant continuous engine tone, no gear changes, no rev sweep, no driving past, no start or stop, no music or voices.",
+      "duration": 4,
+      "loop": true,
+      "file": "Vehicle42_suv_Low.wav"
+    },
+    {
+      "slot": "Vehicle42_suv_High",
+      "prompt": "large SUV V6, refined low torque growl. steady engine at high RPM under full throttle load, constant speed. Isolated dry close engine recording for a racing game layered engine loop. Constant continuous engine tone, no gear changes, no rev sweep, no driving past, no start or stop, no music or voices.",
+      "duration": 4,
+      "loop": true,
+      "file": "Vehicle42_suv_High.wav"
+    },
+    {
+      "slot": "Vehicle42_muscle_Idle",
+      "prompt": "classic muscle car crossplane big block V8, loping cam and thunderous exhaust. steady warm idle, 800 RPM. Isolated dry close engine recording for a racing game layered engine loop. Constant continuous engine tone, no gear changes, no rev sweep, no driving past, no start or stop, no music or voices.",
+      "duration": 4,
+      "loop": true,
+      "file": "Vehicle42_muscle_Idle.wav"
+    },
+    {
+      "slot": "Vehicle42_muscle_Low",
+      "prompt": "classic muscle car crossplane big block V8, loping cam and thunderous exhaust. steady loaded engine at moderate RPM, gentle acceleration torque, constant speed. Isolated dry close engine recording for a racing game layered engine loop. Constant continuous engine tone, no gear changes, no rev sweep, no driving past, no start or stop, no music or voices.",
+      "duration": 4,
+      "loop": true,
+      "file": "Vehicle42_muscle_Low.wav"
+    },
+    {
+      "slot": "Vehicle42_muscle_High",
+      "prompt": "classic muscle car crossplane big block V8, loping cam and thunderous exhaust. steady engine at high RPM under full throttle load, constant speed. Isolated dry close engine recording for a racing game layered engine loop. Constant continuous engine tone, no gear changes, no rev sweep, no driving past, no start or stop, no music or voices.",
+      "duration": 4,
+      "loop": true,
+      "file": "Vehicle42_muscle_High.wav"
+    },
+    {
+      "slot": "Vehicle42_supercar_Idle",
+      "prompt": "mid engine twin turbo flat plane V8 supercar, exotic high frequency mechanical howl. steady warm idle, 800 RPM. Isolated dry close engine recording for a racing game layered engine loop. Constant continuous engine tone, no gear changes, no rev sweep, no driving past, no start or stop, no music or voices.",
+      "duration": 4,
+      "loop": true,
+      "file": "Vehicle42_supercar_Idle.wav"
+    },
+    {
+      "slot": "Vehicle42_supercar_Low",
+      "prompt": "mid engine twin turbo flat plane V8 supercar, exotic high frequency mechanical howl. steady loaded engine at moderate RPM, gentle acceleration torque, constant speed. Isolated dry close engine recording for a racing game layered engine loop. Constant continuous engine tone, no gear changes, no rev sweep, no driving past, no start or stop, no music or voices.",
+      "duration": 4,
+      "loop": true,
+      "file": "Vehicle42_supercar_Low.wav"
+    },
+    {
+      "slot": "Vehicle42_supercar_High",
+      "prompt": "mid engine twin turbo flat plane V8 supercar, exotic high frequency mechanical howl. steady engine at high RPM under full throttle load, constant speed. Isolated dry close engine recording for a racing game layered engine loop. Constant continuous engine tone, no gear changes, no rev sweep, no driving past, no start or stop, no music or voices.",
+      "duration": 4,
+      "loop": true,
+      "file": "Vehicle42_supercar_High.wav"
+    },
+    {
+      "slot": "CarDoorOpen",
+      "prompt": "car door handle latch click then heavy door hinge opening. Isolated dry Foley, one action, no voices or music.",
+      "duration": 1.5,
+      "loop": false,
+      "file": "CarDoorOpen.wav"
+    },
+    {
+      "slot": "CarDoorClose",
+      "prompt": "single weighty car door closing with a solid low thud and latch. Isolated dry Foley, one action, no voices or music.",
+      "duration": 1.5,
+      "loop": false,
+      "file": "CarDoorClose.wav"
+    },
+    {
+      "slot": "CarGloveOpen",
+      "prompt": "plastic glove compartment latch then damped hinged lid opening. Isolated dry Foley, one action, no voices or music.",
+      "duration": 1.5,
+      "loop": false,
+      "file": "CarGloveOpen.wav"
+    },
+    {
+      "slot": "CarGloveClose",
+      "prompt": "glove compartment gently clicks shut. Isolated dry Foley, one action, no voices or music.",
+      "duration": 1.5,
+      "loop": false,
+      "file": "CarGloveClose.wav"
+    },
+    {
+      "slot": "CarSwitch",
+      "prompt": "single tactile automotive dashboard rocker switch click. Isolated dry Foley, one action, no voices or music.",
+      "duration": 1.5,
+      "loop": false,
+      "file": "CarSwitch.wav"
+    },
+    {
+      "slot": "CarSignal",
+      "prompt": "single mechanical automotive turn signal relay tick tock. Isolated dry Foley, one action, no voices or music.",
+      "duration": 1.5,
+      "loop": false,
+      "file": "CarSignal.wav"
+    },
+    {
+      "slot": "CarGearShift",
+      "prompt": "automatic car transmission shifts gear, subtle mechanical clunk. Isolated dry Foley, one action, no voices or music.",
+      "duration": 1.5,
+      "loop": false,
+      "file": "CarGearShift.wav"
+    },
+    {
+      "slot": "CarEngineStop",
+      "prompt": "car engine shutting down, short soft descending mechanical shudder. Isolated dry Foley, one action, no voices or music.",
+      "duration": 1.5,
+      "loop": false,
+      "file": "CarEngineStop.wav"
+    },
+    {
+      "slot": "CarAirBrake",
+      "prompt": "heavy vehicle air brakes release with a short sharp compressed air hiss. Isolated dry Foley, one action, no voices or music.",
+      "duration": 1.5,
+      "loop": false,
+      "file": "CarAirBrake.wav"
+    },
+    {
+      "slot": "CarHorn",
+      "prompt": "single ordinary dual tone car horn blast. Isolated dry Foley, one action, no voices or music.",
+      "duration": 1.5,
+      "loop": false,
+      "file": "CarHorn.wav"
+    },
+    {
+      "slot": "CarCargoOpen",
+      "prompt": "heavy vehicle cargo latch releases and hinged metal hatch creaks open. Isolated dry Foley, one action, no voices or music.",
+      "duration": 1.5,
+      "loop": false,
+      "file": "CarCargoOpen.wav"
+    },
+    {
+      "slot": "CarCargoClose",
+      "prompt": "heavy metal cargo hatch thumps shut and latches. Isolated dry Foley, one action, no voices or music.",
+      "duration": 1.5,
+      "loop": false,
+      "file": "CarCargoClose.wav"
+    },
+    {
+      "slot": "CarSeat",
+      "prompt": "leather vehicle seat compresses and creaks as someone sits. Isolated dry Foley, one action, no voices or music.",
+      "duration": 1.5,
+      "loop": false,
+      "file": "CarSeat.wav"
+    },
+    {
+      "slot": "CarHandbrake",
+      "prompt": "car handbrake lever ratchets and clicks into place. Isolated dry Foley, one action, no voices or music.",
+      "duration": 1.5,
+      "loop": false,
+      "file": "CarHandbrake.wav"
+    },
+    {
+      "slot": "CarRadioSwitch",
+      "prompt": "old automotive radio clicks on with a brief tuning static burst. Isolated dry Foley, one action, no voices or music.",
+      "duration": 1.5,
+      "loop": false,
+      "file": "CarRadioSwitch.wav"
+    },
+    {
+      "slot": "CarFuelCap",
+      "prompt": "fuel filler cap unscrews with plastic ratchet clicks. Isolated dry Foley, one action, no voices or music.",
+      "duration": 1.5,
+      "loop": false,
+      "file": "CarFuelCap.wav"
+    },
+    {
+      "slot": "CarImpact",
+      "prompt": "vehicle metal panel denting with a heavy collision crunch, no explosion. Isolated dry Foley, one action, no voices or music.",
+      "duration": 1.5,
+      "loop": false,
+      "file": "CarImpact.wav"
+    },
+    {
+      "slot": "CarGlassBreak",
+      "prompt": "automotive safety glass shatters and small fragments scatter. Isolated dry Foley, one action, no voices or music.",
+      "duration": 1.5,
+      "loop": false,
+      "file": "CarGlassBreak.wav"
+    },
+    {
+      "slot": "CarTires",
+      "prompt": "continuous tires rolling on dry asphalt, soft road friction hiss. Seamless continuous isolated game sound loop.",
+      "duration": 3,
+      "loop": true,
+      "file": "CarTires.wav"
+    },
+    {
+      "slot": "CarBrake",
+      "prompt": "continuous restrained disc brake friction under moderate braking. Seamless continuous isolated game sound loop.",
+      "duration": 3,
+      "loop": true,
+      "file": "CarBrake.wav"
+    },
+    {
+      "slot": "CarSkid",
+      "prompt": "continuous tire skid squeal on asphalt under hard braking. Seamless continuous isolated game sound loop.",
+      "duration": 3,
+      "loop": true,
+      "file": "CarSkid.wav"
+    },
+    {
+      "slot": "CarWipers",
+      "prompt": "rhythmic rubber windshield wipers sweeping wet glass with quiet motor. Seamless continuous isolated game sound loop.",
+      "duration": 3,
+      "loop": true,
+      "file": "CarWipers.wav"
+    },
+    {
+      "slot": "CarWind42",
+      "prompt": "continuous muffled wind around moving car body, no voices. Seamless continuous isolated game sound loop.",
+      "duration": 3,
+      "loop": true,
+      "file": "CarWind42.wav"
+    },
+    {
+      "slot": "PoliceSiren",
+      "prompt": "American police emergency siren alternating wail, isolated. Seamless continuous isolated game sound loop.",
+      "duration": 3,
+      "loop": true,
+      "file": "PoliceSiren.wav"
+    },
+    {
+      "slot": "CarStart42Petrol",
+      "prompt": "gasoline sedan ignition starter cranks and engine catches, dry isolated recording, no speech.",
+      "duration": 1.5,
+      "loop": false,
+      "file": "CarStart42Petrol.wav"
+    },
+    {
+      "slot": "CarStart42Diesel",
+      "prompt": "heavy turbodiesel truck ignition starter cranks and engine catches, dry isolated recording, no speech.",
+      "duration": 1.5,
+      "loop": false,
+      "file": "CarStart42Diesel.wav"
+    },
+    {
+      "slot": "CarStart42Sport",
+      "prompt": "high performance V8 sports car ignition starter cranks and engine catches, dry isolated recording, no speech.",
+      "duration": 1.5,
+      "loop": false,
+      "file": "CarStart42Sport.wav"
+    },
+    {
+      "slot": "CarStart42Bike",
+      "prompt": "single cylinder dirt bike ignition starter cranks and engine catches, dry isolated recording, no speech.",
+      "duration": 1.5,
+      "loop": false,
+      "file": "CarStart42Bike.wav"
+    }
+  ]
+}

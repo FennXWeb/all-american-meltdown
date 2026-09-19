@@ -1,0 +1,802 @@
+[
+  {
+    "file": "T_TradingCard00136.png",
+    "sha256": "7fdac01cfc8a5c4ad66a7d9c65486f3f13ecbf9ee263f951bb7798b18af137f7",
+    "dimensions": [
+      1024,
+      1536
+    ]
+  },
+  {
+    "file": "T_TradingCard00236.png",
+    "sha256": "eef34fdbb39a2b3d62e94fbfe15448f75eb2366e44141779473320415ec7dbbf",
+    "dimensions": [
+      1024,
+      1536
+    ]
+  },
+  {
+    "file": "T_TradingCard00336.png",
+    "sha256": "970e79a9a922edaea2d4c07b01147b8e206d823fef89d89d7c6d79f6fbea7348",
+    "dimensions": [
+      1024,
+      1536
+    ]
+  },
+  {
+    "file": "T_TradingCard00436.png",
+    "sha256": "d06abbf54dabcbdbe0fb3c1669eb22bdbbd1d902e9651a6eefbd91fa8d14bd38",
+    "dimensions": [
+      1024,
+      1536
+    ]
+  },
+  {
+    "file": "T_TradingCard00536.png",
+    "sha256": "de812e0844b314082b66999ea187939ee7e51c62f68781e777e9b4fd0d7acc8e",
+    "dimensions": [
+      1024,
+      1536
+    ]
+  },
+  {
+    "file": "T_TradingCard00636.png",
+    "sha256": "179a85bb125f3e4e1e6845b29cb5f9ec41e0ea72a1e0700a18fecf4684ddbe10",
+    "dimensions": [
+      1024,
+      1536
+    ]
+  },
+  {
+    "file": "T_TradingCard00736.png",
+    "sha256": "d7d0732d2d81fd6f7b91de25689c6e5691ace42deebd7d42b77adfcbd8f9e54b",
+    "dimensions": [
+      1024,
+      1536
+    ]
+  },
+  {
+    "file": "T_TradingCard00836.png",
+    "sha256": "1dfb8bbbb4c83745439c7d9da5e26bf1b9e9207b62951d76de4b213d4e6eff22",
+    "dimensions": [
+      1024,
+      1536
+    ]
+  },
+  {
+    "file": "T_TradingCard00936.png",
+    "sha256": "bdd9c35a72fa641c7cbb0717e48db3a7acabfe6a52c5b0511229f347143cfae1",
+    "dimensions": [
+      1024,
+      1536
+    ]
+  },
+  {
+    "file": "T_TradingCard01036.png",
+    "sha256": "8fbbf44fe3a63073d0875e7b0fee80868d1c3a27b3b6e712412cf64b4447c20e",
+    "dimensions": [
+      1024,
+      1536
+    ]
+  },
+  {
+    "file": "T_TradingCard01136.png",
+    "sha256": "9ffda8faf192adbc31d5d9b495eda1d33eee9552ce71b29f04aebf853376f95b",
+    "dimensions": [
+      1024,
+      1536
+    ]
+  },
+  {
+    "file": "T_TradingCard01236.png",
+    "sha256": "19289ce8a4f9ee3fd3c2ab6d5b0c4cdb7bb94132ee750e4162c1f3bf58b6126b",
+    "dimensions": [
+      1024,
+      1536
+    ]
+  },
+  {
+    "file": "T_TradingCard01336.png",
+    "sha256": "c283fa656bb19b1d29f2dd5a606a858804589036825240f9629c58e8fe7c0b5d",
+    "dimensions": [
+      1024,
+      1536
+    ]
+  },
+  {
+    "file": "T_TradingCard01436.png",
+    "sha256": "7cd449acfd4ac58fb2a4f4837fd85de87a565e5441d105d116dca3b027fd2c61",
+    "dimensions": [
+      1024,
+      1536
+    ]
+  },
+  {
+    "file": "T_TradingCard01536.png",
+    "sha256": "efa72fd82a4d82b2ca6e342f762f5cc45e3d8eef960160b638860bb1a6faae55",
+    "dimensions": [
+      1024,
+      1536
+    ]
+  },
+  {
+    "file": "T_TradingCard01636.png",
+    "sha256": "cadf4e38ab7c8e4b9823a5348f5eb96df7b7289f9112108d42644ae932813d4f",
+    "dimensions": [
+      1024,
+      1536
+    ]
+  },
+  {
+    "file": "T_TradingCard01736.png",
+    "sha256": "761dcef413914d1d188ed311ca7e24902870d383e5701ed98477959c00c3ed1d",
+    "dimensions": [
+      1024,
+      1536
+    ]
+  },
+  {
+    "file": "T_TradingCard01836.png",
+    "sha256": "1e2b018e3bd582a4ea2b52aad54976becbcf691b59b06a195baab3aba4bec3de",
+    "dimensions": [
+      1024,
+      1536
+    ]
+  },
+  {
+    "file": "T_TradingCard01936.png",
+    "sha256": "5b2cafce8fe811d626154e8ec7e18c2542f6876a61f8207398f81984900f138c",
+    "dimensions": [
+      1024,
+      1536
+    ]
+  },
+  {
+    "file": "T_TradingCard02036.png",
+    "sha256": "94d706f0a12c60f2dff5504b360150cab3841ad6843e5016d961a54116a64700",
+    "dimensions": [
+      1024,
+      1536
+    ]
+  },
+  {
+    "file": "T_TradingCard02136.png",
+    "sha256": "57eeccf32ba0caa3ca144ecbd5781d2c5ec634a43b2a732065d0e36f15f9bbd1",
+    "dimensions": [
+      1024,
+      1536
+    ]
+  },
+  {
+    "file": "T_TradingCard02236.png",
+    "sha256": "c8442531742f1594e865113cfc89dc5f575fc591fba04f8829f6cd0665e7d0c3",
+    "dimensions": [
+      1024,
+      1536
+    ]
+  },
+  {
+    "file": "T_TradingCard02336.png",
+    "sha256": "9739794ab1adf5ce7d3408f252dda8a0bd3cf035df25466edb1fa3114258161e",
+    "dimensions": [
+      1024,
+      1536
+    ]
+  },
+  {
+    "file": "T_TradingCard02436.png",
+    "sha256": "d5ef28170b9db2cd756f764ff1624612dc97b7faf648c9a4982cee55186a12a4",
+    "dimensions": [
+      1024,
+      1536
+    ]
+  },
+  {
+    "file": "T_TradingCard02536.png",
+    "sha256": "828157d9c8bef516b2c9ef9e0ceaadce4e18115765ebe546c8ec2fc37907a77e",
+    "dimensions": [
+      1024,
+      1536
+    ]
+  },
+  {
+    "file": "T_TradingCard02636.png",
+    "sha256": "dbee1565f5e88b7cffbaa54a3d02098a0181b5d8ac6a41b0f03bd31a67ed4d35",
+    "dimensions": [
+      1024,
+      1536
+    ]
+  },
+  {
+    "file": "T_TradingCard02736.png",
+    "sha256": "5a514c1eb7993541ea82e575719ac8c65e5573db73d2435882a6779a01b9437d",
+    "dimensions": [
+      1024,
+      1536
+    ]
+  },
+  {
+    "file": "T_TradingCard02836.png",
+    "sha256": "5cbe7f843a704e95e9151c21caf2bba3614c7aaaa7987f7317dd964a1a38145c",
+    "dimensions": [
+      1024,
+      1536
+    ]
+  },
+  {
+    "file": "T_TradingCard02936.png",
+    "sha256": "3403830e841d4691d69dc966c59283f89225b8ec16235ba6cd1ec21cabba28e9",
+    "dimensions": [
+      1024,
+      1536
+    ]
+  },
+  {
+    "file": "T_TradingCard03036.png",
+    "sha256": "006f49e9879778c3936f9bd728f5c16adc3f383630df0e0286edd951400ec9e7",
+    "dimensions": [
+      1024,
+      1536
+    ]
+  },
+  {
+    "file": "T_TradingCard03136.png",
+    "sha256": "41e36798287c0b5e560c716ec07ecdcc16d6350dca446af5149840c131bdfdb8",
+    "dimensions": [
+      1024,
+      1536
+    ]
+  },
+  {
+    "file": "T_TradingCard03236.png",
+    "sha256": "54938c1cfa9b8a8034daeee9256af36560f4fdbbecedde3df54221fec057cb3b",
+    "dimensions": [
+      1024,
+      1536
+    ]
+  },
+  {
+    "file": "T_TradingCard03336.png",
+    "sha256": "191f129a5e37fc7582c6be5b282985b094bd28cefde7d78ad51d272c5c5aa39d",
+    "dimensions": [
+      1024,
+      1536
+    ]
+  },
+  {
+    "file": "T_TradingCard03436.png",
+    "sha256": "a9400e9c75d13c56e3f66569c004fb3f112555e0f64732f46affb57a2716c621",
+    "dimensions": [
+      1024,
+      1536
+    ]
+  },
+  {
+    "file": "T_TradingCard03536.png",
+    "sha256": "6a22b20ccf6a5e32b27af23064eba34ba680e466d802060ac5dfa451a23f97c5",
+    "dimensions": [
+      1024,
+      1536
+    ]
+  },
+  {
+    "file": "T_TradingCard03636.png",
+    "sha256": "3ce76d967a649ca26300b0bb1afb629a4a6b0947f3b44f5872b6c77df3a4ac81",
+    "dimensions": [
+      1024,
+      1536
+    ]
+  },
+  {
+    "file": "T_TradingCard03736.png",
+    "sha256": "b2b61b4a434a593ec36c31e5b1790873f351f6fe8fb0d5116130727f488fb3d0",
+    "dimensions": [
+      1024,
+      1536
+    ]
+  },
+  {
+    "file": "T_TradingCard03836.png",
+    "sha256": "ed08714fb49a0e655ff7702a68f6b3c51b69aa9aa52b6278a38b5c68ceb28e8b",
+    "dimensions": [
+      1024,
+      1536
+    ]
+  },
+  {
+    "file": "T_TradingCard03936.png",
+    "sha256": "198ead27762b91faa3c75ebd3f5b7961d631d51c1a5f2d7b2a2e11e6a48d5d20",
+    "dimensions": [
+      1024,
+      1536
+    ]
+  },
+  {
+    "file": "T_TradingCard04036.png",
+    "sha256": "6803a6fe960cdf63943eb6ecf0fdc2e37b01b77ba23e5fd759a5999054a94c52",
+    "dimensions": [
+      1024,
+      1536
+    ]
+  },
+  {
+    "file": "T_TradingCard04136.png",
+    "sha256": "388061ecd99182ad868c3c441e629025438409549ea50203d7e29f960efe96a4",
+    "dimensions": [
+      1024,
+      1536
+    ]
+  },
+  {
+    "file": "T_TradingCard04236.png",
+    "sha256": "71c35c6425acad33ab2faab6a137ec3570ce43634407da109a0b2b83e93da848",
+    "dimensions": [
+      1024,
+      1536
+    ]
+  },
+  {
+    "file": "T_TradingCard04336.png",
+    "sha256": "3221363efd210eaa1ae933f2b82d68ba30023198842dd8e79c1fff393ffca57a",
+    "dimensions": [
+      1024,
+      1536
+    ]
+  },
+  {
+    "file": "T_TradingCard04436.png",
+    "sha256": "5ecacc783acdaf0d591cfa35813008521142e05f2c391ea0935b604f80f3f554",
+    "dimensions": [
+      1024,
+      1536
+    ]
+  },
+  {
+    "file": "T_TradingCard04536.png",
+    "sha256": "58683fa1f332ba8b4b5c7b9b897ea71b656c0bc1bef225ea8cc09304557dc09d",
+    "dimensions": [
+      1024,
+      1536
+    ]
+  },
+  {
+    "file": "T_TradingCard04636.png",
+    "sha256": "6cff72d2faf2724e573a0e50fd5dcc397968e0cc6a42a3cd31245e99c88e9b2c",
+    "dimensions": [
+      1024,
+      1536
+    ]
+  },
+  {
+    "file": "T_TradingCard04736.png",
+    "sha256": "e43017afa5b6bb3267cbf6c24f4c33b41306743aa1e817769ad51b658e2511b8",
+    "dimensions": [
+      1024,
+      1536
+    ]
+  },
+  {
+    "file": "T_TradingCard04836.png",
+    "sha256": "b9f75a2d59c140ff48290005c9bdb28b740ad46439eff0296463ada8e3e0c651",
+    "dimensions": [
+      1024,
+      1536
+    ]
+  },
+  {
+    "file": "T_TradingCard04936.png",
+    "sha256": "7c100b40707f3c4a317c221ac71c55369d2180024e2a1784f1160d4b3a7a1f1e",
+    "dimensions": [
+      1024,
+      1536
+    ]
+  },
+  {
+    "file": "T_TradingCard05036.png",
+    "sha256": "72f7e8b962662df864235edcba4751c1b1d81f25a2cdd3e9ab85f041cc18ec50",
+    "dimensions": [
+      1024,
+      1536
+    ]
+  },
+  {
+    "file": "T_TradingCard05136.png",
+    "sha256": "a11b278692e72253300d382b6b4331916752c621753efd2d64265fe9f8ad004b",
+    "dimensions": [
+      1024,
+      1536
+    ]
+  },
+  {
+    "file": "T_TradingCard05236.png",
+    "sha256": "db3b9e10e84d3a55fe917a166c2d7d3783882e812e533a10ab98a5224d33e2f3",
+    "dimensions": [
+      1024,
+      1536
+    ]
+  },
+  {
+    "file": "T_TradingCard05336.png",
+    "sha256": "ae0cbcaedb4ca83f09ee63744e925fa19c00d7fa80861a3727cff00dead92f0c",
+    "dimensions": [
+      1024,
+      1536
+    ]
+  },
+  {
+    "file": "T_TradingCard05436.png",
+    "sha256": "97786668694b8997c6d8f4ec077f0c5bb3895870fa47323b360e6bacca1255ea",
+    "dimensions": [
+      1024,
+      1536
+    ]
+  },
+  {
+    "file": "T_TradingCard05536.png",
+    "sha256": "f84152687749960c66c729ef2fa73c22965df97903b6067b4fe6c0473232eb6c",
+    "dimensions": [
+      1024,
+      1536
+    ]
+  },
+  {
+    "file": "T_TradingCard05636.png",
+    "sha256": "04b09a873ffa0aa2b169a94de2f181da5471b081038afe7d63dbb7d2833eeb32",
+    "dimensions": [
+      1024,
+      1536
+    ]
+  },
+  {
+    "file": "T_TradingCard05736.png",
+    "sha256": "2a58d2620a6e63fd3cb14a3a719bbeee11a1fb3ef5605645c2ce6260b7a11e51",
+    "dimensions": [
+      1024,
+      1536
+    ]
+  },
+  {
+    "file": "T_TradingCard05836.png",
+    "sha256": "8077d11917b203c4086d32910d3e1fff0e3aac3bedfbe145b36bd2ca63ef4d81",
+    "dimensions": [
+      1024,
+      1536
+    ]
+  },
+  {
+    "file": "T_TradingCard05936.png",
+    "sha256": "4187985f6171e66eb2450d164352081bc11ca19d483678dae8aad3fd4472ce60",
+    "dimensions": [
+      1024,
+      1536
+    ]
+  },
+  {
+    "file": "T_TradingCard06036.png",
+    "sha256": "3e3b204beba9b3b5ce3f9a568a8a1b298f299b8851bd19724a18b3ff13989b51",
+    "dimensions": [
+      1024,
+      1536
+    ]
+  },
+  {
+    "file": "T_TradingCard06136.png",
+    "sha256": "5483a4380da8a9fa5f082940dcaaf7b1e2a45c0ac4a3bf1c5bf69a9121ad5292",
+    "dimensions": [
+      1024,
+      1536
+    ]
+  },
+  {
+    "file": "T_TradingCard06236.png",
+    "sha256": "8783a69b53c569d7e3302386bd017e331a1b05e08e32d64b9e09fcbf0f124afe",
+    "dimensions": [
+      1024,
+      1536
+    ]
+  },
+  {
+    "file": "T_TradingCard06336.png",
+    "sha256": "2f03d7a09669ee46002a2160563c739233f6b0bbe7b83b7e3153dcd66808edf6",
+    "dimensions": [
+      1024,
+      1536
+    ]
+  },
+  {
+    "file": "T_TradingCard06436.png",
+    "sha256": "0ec9079791b57220b2e4c722c02da0ab83b43ddfab061e0f9d41f40277b0b268",
+    "dimensions": [
+      1024,
+      1536
+    ]
+  },
+  {
+    "file": "T_TradingCard06536.png",
+    "sha256": "4cb63e569bfeb62647bdbf60ccf3988593cc0848ce144616332251ce8e2e356d",
+    "dimensions": [
+      1024,
+      1536
+    ]
+  },
+  {
+    "file": "T_TradingCard06636.png",
+    "sha256": "967e0e82ac8ee8ebcbffac3a23e0e384ac7dea3f17f9cbde018aaf69df68fc21",
+    "dimensions": [
+      1024,
+      1536
+    ]
+  },
+  {
+    "file": "T_TradingCard06736.png",
+    "sha256": "538f084e7dfa09385f9b2af4baf08dab61623b05e681efcef81c099752f96a53",
+    "dimensions": [
+      1024,
+      1536
+    ]
+  },
+  {
+    "file": "T_TradingCard06836.png",
+    "sha256": "df42173924f096b14b7861ccdf8b1208faf693ab0e1ab61aaf5d00e2c686e5e7",
+    "dimensions": [
+      1024,
+      1536
+    ]
+  },
+  {
+    "file": "T_TradingCard06936.png",
+    "sha256": "582d53ae1c83eb21a2c6df8576190d907c42394a61fc1f67b844741f3285c9d2",
+    "dimensions": [
+      1024,
+      1536
+    ]
+  },
+  {
+    "file": "T_TradingCard07036.png",
+    "sha256": "9649c90f6a9f3d20db48b3545bf30471332afb27352ae5f41732b25048ea429a",
+    "dimensions": [
+      1024,
+      1536
+    ]
+  },
+  {
+    "file": "T_TradingCard07136.png",
+    "sha256": "79d95588a29e7bce56a0357522551760461a5f857a3c06922a258028e817874a",
+    "dimensions": [
+      1024,
+      1536
+    ]
+  },
+  {
+    "file": "T_TradingCard07236.png",
+    "sha256": "ffc4bb4932404f67ea482d7becb400826fbc4c130eff56f0f2dd892a0dd9f309",
+    "dimensions": [
+      1024,
+      1536
+    ]
+  },
+  {
+    "file": "T_TradingCard07336.png",
+    "sha256": "4a70106c5e00c6b6309bd24147683fe6d436c962350b68ac25a937833858bbd8",
+    "dimensions": [
+      1024,
+      1536
+    ]
+  },
+  {
+    "file": "T_TradingCard07436.png",
+    "sha256": "34cdb777131291d45c19842460d5f219e7470da7a89cb3b74ea99dc83725b7ad",
+    "dimensions": [
+      1024,
+      1536
+    ]
+  },
+  {
+    "file": "T_TradingCard07536.png",
+    "sha256": "94ac662645a9a86978d6342824d4eb5d727dbca247202b01ed267efb230f1ac4",
+    "dimensions": [
+      1024,
+      1536
+    ]
+  },
+  {
+    "file": "T_TradingCard07636.png",
+    "sha256": "adb650354788b6040e46eb2a6c3a267df4e8a0fa70900209f5661dc96862bd6b",
+    "dimensions": [
+      1024,
+      1536
+    ]
+  },
+  {
+    "file": "T_TradingCard07736.png",
+    "sha256": "eb94c425f2ada3327a515961683dfe2a54586ca6bbf53e962405ef63000eb1e8",
+    "dimensions": [
+      1024,
+      1536
+    ]
+  },
+  {
+    "file": "T_TradingCard07836.png",
+    "sha256": "33f6fcbc8a9cec48603d27f09ecacecccf9cff5d58654c60eccedec81a55d0ce",
+    "dimensions": [
+      1024,
+      1536
+    ]
+  },
+  {
+    "file": "T_TradingCard07936.png",
+    "sha256": "54eef1422a3274296de82027a3df1740ee55388265ec788c976d5b0aade0fc8b",
+    "dimensions": [
+      1024,
+      1536
+    ]
+  },
+  {
+    "file": "T_TradingCard08036.png",
+    "sha256": "ecfe26266686fa2d51c89783d318e61bd0454e809be089183647b3fb150a1d16",
+    "dimensions": [
+      1024,
+      1536
+    ]
+  },
+  {
+    "file": "T_TradingCard08136.png",
+    "sha256": "46ba10099f1e179721e9077a17f2c3a34ee39c110c226ae0d39babe29bd12663",
+    "dimensions": [
+      1024,
+      1536
+    ]
+  },
+  {
+    "file": "T_TradingCard08236.png",
+    "sha256": "ab3cf6dd7c9d527c20dcd88c37763efdecdcb8333c3e27e8fe668cefed8188fe",
+    "dimensions": [
+      1024,
+      1536
+    ]
+  },
+  {
+    "file": "T_TradingCard08336.png",
+    "sha256": "d2e0027791b81928def30f95e07b859336dd2130124c03147ba5ca08fe3ed44a",
+    "dimensions": [
+      1024,
+      1536
+    ]
+  },
+  {
+    "file": "T_TradingCard08436.png",
+    "sha256": "f98e91bd6d987c57d2cfbf065ef03a6737d08e48f8a05025f861625d3676e7bb",
+    "dimensions": [
+      1024,
+      1536
+    ]
+  },
+  {
+    "file": "T_TradingCard08536.png",
+    "sha256": "7b621663254ea46e755fc80871a736150d3dc588d352f3a652fe46b7a10a0f9e",
+    "dimensions": [
+      1024,
+      1536
+    ]
+  },
+  {
+    "file": "T_TradingCard08636.png",
+    "sha256": "6d1dd5f539511a756c5a7389672f0ced8768024ae47dcd21a8e2ae96d9146978",
+    "dimensions": [
+      1024,
+      1536
+    ]
+  },
+  {
+    "file": "T_TradingCard08736.png",
+    "sha256": "48aaae511d0b64907f50519d95bf199a18b7c58ba979f15832329bd8feeac4a8",
+    "dimensions": [
+      1024,
+      1536
+    ]
+  },
+  {
+    "file": "T_TradingCard08836.png",
+    "sha256": "2b4b6018121969302fa828cca02be8a1ce03077b9463a13394577214ddef38f0",
+    "dimensions": [
+      1024,
+      1536
+    ]
+  },
+  {
+    "file": "T_TradingCard08936.png",
+    "sha256": "adfcb6ac1f6b60cb1eece92a93569813c1a235b081adf31ad326744d5ffa4491",
+    "dimensions": [
+      1024,
+      1536
+    ]
+  },
+  {
+    "file": "T_TradingCard09036.png",
+    "sha256": "26301a2c55fedf5792d07a14e5cdc4118c9b4f22df98c54b32d6443409918d72",
+    "dimensions": [
+      1024,
+      1536
+    ]
+  },
+  {
+    "file": "T_TradingCard09136.png",
+    "sha256": "7ce4f3c18e5f7e5adb5da4928e0c1bf224721f9e5b6d71fca9e71198b0f2acb8",
+    "dimensions": [
+      1024,
+      1536
+    ]
+  },
+  {
+    "file": "T_TradingCard09236.png",
+    "sha256": "e9dfe20a8eba244c19d422fbaf4e03209045fcfd11429658d2c33bd9efe4cb54",
+    "dimensions": [
+      1024,
+      1536
+    ]
+  },
+  {
+    "file": "T_TradingCard09336.png",
+    "sha256": "3a33fb5800302eba10ee63b9d03db26ecb496b7e6c3cb3dc2b5d6e23c6561636",
+    "dimensions": [
+      1024,
+      1536
+    ]
+  },
+  {
+    "file": "T_TradingCard09436.png",
+    "sha256": "0f90355ec7b39cd0b9e6289f750976a0ac483c4706e2162a8693f85000093209",
+    "dimensions": [
+      1024,
+      1536
+    ]
+  },
+  {
+    "file": "T_TradingCard09536.png",
+    "sha256": "9502f4688a0925bdc3510658b436739fd891ce5c16234275ef211e3d73c89bd7",
+    "dimensions": [
+      1024,
+      1536
+    ]
+  },
+  {
+    "file": "T_TradingCard09636.png",
+    "sha256": "a0c54e367efa96039d24568914e4517f64d10c2ae6f6afcc4c5f5b46f33a1ad1",
+    "dimensions": [
+      1024,
+      1536
+    ]
+  },
+  {
+    "file": "T_TradingCard09736.png",
+    "sha256": "3b6466ecdfed76065465ab7ad8ccb1c61014d8b0887c53d943de55cbb06bd581",
+    "dimensions": [
+      1024,
+      1536
+    ]
+  },
+  {
+    "file": "T_TradingCard09836.png",
+    "sha256": "9f9bab609846fce04220a5cb09f40215a2b01e40f3ef32b97e0dc211e32b1dfa",
+    "dimensions": [
+      1024,
+      1536
+    ]
+  },
+  {
+    "file": "T_TradingCard09936.png",
+    "sha256": "03ec309f9190cfb6c7d3c7abf82058eb2dd9a413c810d30caac9dd53ca872071",
+    "dimensions": [
+      1024,
+      1536
+    ]
+  },
+  {
+    "file": "T_TradingCard10036.png",
+    "sha256": "62d435b73cbb78744cb8cae87187df2bee929ac56609439249c4645fb90d0499",
+    "dimensions": [
+      1024,
+      1536
+    ]
+  }
+]

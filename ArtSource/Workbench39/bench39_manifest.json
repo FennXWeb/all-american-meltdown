@@ -1,0 +1,61 @@
+{
+  "assets": [
+    {
+      "name": "WeaponBench39",
+      "fbx": "SM_WeaponBench39.fbx",
+      "asset": "/Game/Art/Meshes/SM_WeaponBench39",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -1.05,
+          -0.43,
+          0.0
+        ],
+        "max": [
+          1.05,
+          0.43,
+          1.882
+        ],
+        "size": [
+          2.1,
+          0.86,
+          1.882
+        ]
+      },
+      "triangles": 3396,
+      "vertices": 1976,
+      "material_slots": [
+        "M_Bone",
+        "M_Rubber",
+        "M_Rust",
+        "M_Steel",
+        "M_Wood"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    }
+  ]
+}

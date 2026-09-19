@@ -1,0 +1,52 @@
+#include "LWTradingCards36.h"
+#include "LWRPG.h"
+#include "LWLandmarkDefs.h"
+#include "Misc/PackageName.h"
+const TCHAR* LWRPG::Category(int32 I){static const TCHAR* N[]={TEXT("STRENGTH"),TEXT("AWARENESS"),TEXT("ENDURANCE"),TEXT("PRESENCE"),TEXT("INTELLECT"),TEXT("AGILITY"),TEXT("FORTUNE")};return N[FMath::Clamp(I,0,6)];}
+int64 LWRPG::Threshold(int32 L){return int64(FMath::Clamp(L,1,100))*FMath::Clamp(L,1,100)*100;}
+const ULWRPGCatalog* ULWRPGCatalog::Get(){
+ static TWeakObjectPtr<ULWRPGCatalog> C;
+ if(!C.IsValid()&&FPackageName::DoesPackageExist(TEXT("/Game/Data/DA_RPGCatalog")))C=LoadObject<ULWRPGCatalog>(nullptr,TEXT("/Game/Data/DA_RPGCatalog.DA_RPGCatalog"));
+ if(C.IsValid())for(auto& P:C->Perks)if(P.Id==TEXT("perk_23")&&P.MaxRank<8)P.MaxRank=8;
+ if(C.IsValid()){const auto* Defaults=GetDefault<ULWRPGCatalog>();for(const auto& P:Defaults->Perks)if(P.Id.ToString().StartsWith(TEXT("stamina_"))&&!C->Perks.ContainsByPredicate([&](const auto& V){return V.Id==P.Id;}))C->Perks.Add(P);for(const auto& Q:Defaults->Quests)if(Q.Id.ToString().StartsWith(TEXT("landmark_"))&&!C->Quests.ContainsByPredicate([&](const auto& V){return V.Id==Q.Id;}))C->Quests.Add(Q);}
+ return C.IsValid()?C.Get():GetDefault<ULWRPGCatalog>();
+}
+float LWRPG::Stat(const FLWRPGState& S,FName E){float V=LWCollect36::Bonus(S,E);for(const auto& P:ULWRPGCatalog::Get()->Perks)if(P.Effect==E)V+=FMath::Clamp(S.Perks.FindRef(P.Id),0,P.MaxRank)*P.Value;return V;}
+bool LWRPG::Buy(FLWRPGState& S,FName Id){
+ const auto* P=ULWRPGCatalog::Get()->Perks.FindByPredicate([&](const auto& X){return X.Id==Id;});
+ if(!P||S.Points<=0||!S.Attributes.IsValidIndex(P->Category))return false;
+ int R=S.Perks.FindRef(Id);if(R<0||R>=P->MaxRank||S.Level<P->LevelRequired+R*3||S.Attributes[P->Category]<P->AttributeRequired)return false;
+ S.Perks.Add(Id,R+1);S.Points--;return true;
+}
+int32 LWRPG::AddXP(FLWRPGState& S,int64 Amount){
+ if(Amount<=0)return 0;S.XP=FMath::Min<int64>(1000000,S.XP+FMath::Min<int64>(Amount,1000000));int Gained=0;
+ while(S.Level<100&&S.XP>=Threshold(S.Level)){S.Level++;S.Points+=2+int32(Stat(S,TEXT("learning")));Gained++;}return Gained;
+}
+ULWRPGCatalog::ULWRPGCatalog(){
+ struct Entry{const TCHAR* Name;const TCHAR* Effect;float Value;const TCHAR* Description;};
+ const Entry E[]={
+ {TEXT("BRAWLER"),TEXT("melee"),.10f,TEXT("Melee damage +10% / rank")},{TEXT("PRY SPECIALIST"),TEXT("crowbar"),.15f,TEXT("Crowbar damage +15% / rank")},{TEXT("HOME RUN"),TEXT("bat"),.15f,TEXT("Bat damage +15% / rank")},{TEXT("BREACHER"),TEXT("shotgun"),.08f,TEXT("Shotgun damage +8% / rank")},{TEXT("IRON LUNGS"),TEXT("stamina"),15,TEXT("Maximum stamina +15 / rank")},{TEXT("HARDENED"),TEXT("armor"),.04f,TEXT("Incoming damage -4% / rank")},{TEXT("BRUTE FORCE"),TEXT("melee"),.15f,TEXT("Melee damage +15% / rank")},
+ {TEXT("SIGHT PICTURE"),TEXT("spread"),.05f,TEXT("Weapon spread -5% / rank")},{TEXT("MARKSMAN"),TEXT("rifle"),.08f,TEXT("Rifle and sniper damage +8% / rank")},{TEXT("ANATOMIST"),TEXT("headshot"),.10f,TEXT("Headshot damage +10% / rank")},{TEXT("LONG WATCH"),TEXT("range"),.12f,TEXT("Ballistic falloff distance +12% / rank")},{TEXT("EAGLE EYE"),TEXT("loot"),.08f,TEXT("New-container loot quality +8% / rank")},{TEXT("PATHFINDER"),TEXT("questxp"),.10f,TEXT("Quest XP +10% / rank")},{TEXT("DEAD CENTER"),TEXT("gun"),.08f,TEXT("All firearm damage +8% / rank")},
+ {TEXT("VITAL RESERVE"),TEXT("health"),15,TEXT("Maximum health +15 / rank")},{TEXT("SECOND WIND"),TEXT("recovery"),.15f,TEXT("Stamina recovery +15% / rank")},{TEXT("SLOW METABOLISM"),TEXT("hunger"),.10f,TEXT("Hunger drain -10% / rank")},{TEXT("DESERT BLOOD"),TEXT("thirst"),.10f,TEXT("Thirst drain -10% / rank")},{TEXT("TOUGH SKIN"),TEXT("armor"),.05f,TEXT("Incoming damage -5% / rank")},{TEXT("FIELD RECOVERY"),TEXT("healing"),.15f,TEXT("Medical healing +15% / rank")},{TEXT("REGENERATION"),TEXT("regen"),.25f,TEXT("Regain 0.25 health / second / rank")},
+ {TEXT("BARTER"),TEXT("barter"),.04f,TEXT("Merchant purchases -4% / rank")},{TEXT("RECRUITER"),TEXT("hire"),.10f,TEXT("Recruitment fee -10% / rank")},{TEXT("SQUAD LEADER"),TEXT("companions"),1,TEXT("Active companion limit +1 / rank")},{TEXT("INSPIRING FIRE"),TEXT("crewdamage"),.12f,TEXT("Companion damage +12% / rank")},{TEXT("RALLY"),TEXT("revive"),.15f,TEXT("Companion recovery time -15% / rank")},{TEXT("DIPLOMAT"),TEXT("questcredits"),.10f,TEXT("Contract credit rewards +10% / rank")},{TEXT("COMMANDER"),TEXT("companions"),1,TEXT("Active companion limit +1")},
+ {TEXT("QUICK STUDY"),TEXT("xp"),.05f,TEXT("All experience +5% / rank")},{TEXT("MEDIC"),TEXT("healing"),.15f,TEXT("Medical healing +15% / rank")},{TEXT("MECHANIC"),TEXT("reload"),.05f,TEXT("Reload speed +5% / rank")},{TEXT("RESOURCEFUL"),TEXT("craft"),1,TEXT("Workshop scrap costs -1 / rank")},{TEXT("ARMORER"),TEXT("repair"),.20f,TEXT("Workbench armor repair +20% / rank")},{TEXT("RESEARCHER"),TEXT("questxp"),.12f,TEXT("Quest experience +12% / rank")},{TEXT("LIFELONG LEARNER"),TEXT("learning"),1,TEXT("Future levels grant one extra skill point")},
+ {TEXT("LIGHT FEET"),TEXT("speed"),.04f,TEXT("Walking speed +4% / rank")},{TEXT("RUNNER"),TEXT("sprint"),.05f,TEXT("Sprinting speed +5% / rank")},{TEXT("BREATH CONTROL"),TEXT("recovery"),.12f,TEXT("Stamina recovery +12% / rank")},{TEXT("STEADY HANDS"),TEXT("recoil"),.08f,TEXT("Weapon recoil -8% / rank")},{TEXT("QUICK DRAW"),TEXT("reload"),.06f,TEXT("Reload speed +6% / rank")},{TEXT("CLOSE QUARTERS"),TEXT("smg"),.10f,TEXT("SMG and LMG damage +10% / rank")},{TEXT("GUNSLINGER"),TEXT("revolver"),.12f,TEXT("Revolver damage +12% / rank")},
+ {TEXT("SALVAGER"),TEXT("loot"),.08f,TEXT("New-container loot quality +8% / rank")},{TEXT("BOUNTY HUNTER"),TEXT("credits"),.10f,TEXT("Combat credits +10% / rank")},{TEXT("LUCKY SHOT"),TEXT("critical"),.03f,TEXT("Critical hit chance +3% / rank")},{TEXT("HIGH STAKES"),TEXT("critdamage"),.15f,TEXT("Critical damage multiplier +0.15 / rank")},{TEXT("FORTUNATE FINDS"),TEXT("loot"),.10f,TEXT("New-container loot quality +10% / rank")},{TEXT("WINDFALL"),TEXT("questcredits"),.15f,TEXT("Contract credits +15% / rank")},{TEXT("SILVER LINING"),TEXT("barter"),.05f,TEXT("Merchant purchases -5% / rank")}};
+ for(int I=0;I<49;I++){FLWPerk P;P.Id=FName(*FString::Printf(TEXT("perk_%d"),I));P.Name=E[I].Name;P.Category=I/7;P.AttributeRequired=I%7+1;P.LevelRequired=1+(I%7)*2;P.Effect=E[I].Effect;P.Value=E[I].Value;P.Description=E[I].Description;if(I==23)P.MaxRank=8;if(I==27||I==34)P.MaxRank=1;Perks.Add(P);}
+ for(int I=0;I<2;I++){FLWPerk P;P.Id=I?TEXT("stamina_reserve"):TEXT("stamina_conditioning");P.Name=I?TEXT("DEEP RESERVE"):TEXT("CONDITIONING");P.Category=2;P.AttributeRequired=I?5:1;P.LevelRequired=I?10:1;P.MaxRank=I?3:5;P.Effect=TEXT("stamina");P.Value=I?25:10;P.Description=I?TEXT("Maximum stamina +25 / rank"):TEXT("Maximum stamina +10 / rank");Perks.Add(P);}
+ auto Quest=[&](const TCHAR* Id,const TCHAR* Title,const TCHAR* Description,FName Pre,TArray<FLWObjective> Objectives,int XP,int Credits){FLWQuest Q;Q.Id=Id;Q.Title=Title;Q.Description=Description;Q.Prerequisite=Pre;Q.Objectives=Objectives;Q.XP=XP;Q.Credits=Credits;Quests.Add(Q);};
+ auto O=[](FName Event,FName Target,int Count,const TCHAR* Text){FLWObjective A;A.Event=Event;A.Target=Target;A.Count=Count;A.Text=Text;return A;};
+ Quest(TEXT("shelter"),TEXT("A PLACE TO STAY"),TEXT("The wardens need the old shelter operational."),NAME_None,{O(TEXT("visit"),TEXT("bunker"),1,TEXT("Enter Shelter 01")),O(TEXT("interact"),TEXT("radio"),1,TEXT("Use the bunker communications console"))},180,120);
+ Quest(TEXT("provisions"),TEXT("EMPTY SHELVES"),TEXT("Bring water to a settlement quartermaster."),NAME_None,{O(TEXT("deliver"),TEXT("water"),3,TEXT("Deliver 3 water to a quest giver"))},160,150);
+ Quest(TEXT("patrol"),TEXT("STREET CLEANING"),TEXT("Clear threats from the settlement approaches."),NAME_None,{O(TEXT("kill"),NAME_None,5,TEXT("Defeat 5 hostile enemies"))},250,200);
+ Quest(TEXT("fuel"),TEXT("LAST LIGHT"),TEXT("Survey a fuel stop, then report to a warden."),NAME_None,{O(TEXT("visit"),TEXT("gas"),1,TEXT("Enter a fuel-stop parcel")),O(TEXT("talk"),TEXT("warden"),1,TEXT("Report to a settlement warden"))},150,125);
+ Quest(TEXT("clinic"),TEXT("CIVIL RELIEF"),TEXT("Locate medical stock and replenish the clinic."),TEXT("provisions"),{O(TEXT("visit"),TEXT("clinic"),1,TEXT("Visit a clinic")),O(TEXT("deliver"),TEXT("medkit"),2,TEXT("Deliver 2 medkits"))},300,260);
+ Quest(TEXT("repairs"),TEXT("TOOLS OF TOMORROW"),TEXT("Restore the shelter workshop."),TEXT("shelter"),{O(TEXT("deliver"),TEXT("scrap"),5,TEXT("Deliver 5 scrap")),O(TEXT("interact"),TEXT("workbench"),1,TEXT("Use a workshop bench"))},350,250);
+ Quest(TEXT("motel"),TEXT("NO VACANCY"),TEXT("Investigate the motel and clear the nearby threats."),TEXT("patrol"),{O(TEXT("visit"),TEXT("motel"),1,TEXT("Visit a motel")),O(TEXT("kill"),NAME_None,8,TEXT("Defeat 8 more hostiles"))},400,320);
+ Quest(TEXT("signal"),TEXT("LONG WAVE"),TEXT("Find a radio and make contact with a medic."),TEXT("fuel"),{O(TEXT("interact"),TEXT("radio"),1,TEXT("Tune a communications console")),O(TEXT("talk"),TEXT("medic"),1,TEXT("Speak to a settlement medic"))},300,230);
+ Quest(TEXT("depot"),TEXT("FREIGHT CLAIM"),TEXT("Survey storage and recover repair material."),TEXT("repairs"),{O(TEXT("visit"),TEXT("depot"),1,TEXT("Visit a freight depot")),O(TEXT("deliver"),TEXT("scrap"),8,TEXT("Deliver 8 scrap"))},500,400);
+ Quest(TEXT("diner"),TEXT("HOT MEALS"),TEXT("Find the diner and replenish settlement rations."),TEXT("clinic"),{O(TEXT("visit"),TEXT("diner"),1,TEXT("Visit a diner")),O(TEXT("deliver"),TEXT("food"),5,TEXT("Deliver 5 food"))},450,350);
+ Quest(TEXT("allies"),TEXT("STRENGTH IN NUMBERS"),TEXT("Recruit a survivor and show them the bunker."),TEXT("signal"),{O(TEXT("recruit"),NAME_None,1,TEXT("Hire a companion")),O(TEXT("visit"),TEXT("bunker"),1,TEXT("Return to Shelter 01"))},500,450);
+ Quest(TEXT("peace"),TEXT("A LITTLE PEACE"),TEXT("Finish a final patrol for the settlement network."),TEXT("motel"),{O(TEXT("kill"),NAME_None,15,TEXT("Defeat 15 hostiles")),O(TEXT("interact"),TEXT("bed"),1,TEXT("Rest in a bed")),O(TEXT("talk"),TEXT("warden"),1,TEXT("Report back to a warden"))},800,750);
+ for(int I=0;I<LWLandmarks::Count;I++){const auto& D=LWLandmarks::Get(LWLandmarks::First+I);Quest(*FString::Printf(TEXT("landmark_%d"),I),D.Name,D.Story,NAME_None,{O(TEXT("landmark_control"),NAME_None,1,D.Steps[0]),O(TEXT("landmark_control"),NAME_None,1,D.Steps[1]),O(TEXT("landmark_control"),NAME_None,1,D.Steps[2])},600,1500);}
+}

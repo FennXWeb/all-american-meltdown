@@ -1,0 +1,17 @@
+#include "LWCreator35.h"
+void ALWGameMode::BuildCreator35Smoke(ALWCharacter& Initial){
+ auto Add=[this](const TCHAR* Label,double Delay,FLWV2Action Begin,FLWV2Action End=FLWV2Action()){V2->Steps.Add({Label,Delay,120,MoveTemp(Begin),MoveTemp(End),[](ALWCharacter&){
+#if WITH_EDITOR
+ return !GShaderCompilingManager||!GShaderCompilingManager->IsCompiling();
+#else
+ return true;
+#endif
+ }});};
+ Add(TEXT("New creator full body"),4,[this](ALWCharacter& P){P.BeginOpening();P.OpeningClick(TEXT("intro_skip"));P.RPG.Story.Enabled=false;P.DraftIdentity.Skin=1;P.DraftIdentity.Top35=3;P.DraftIdentity.Hair=3;P.DraftIdentity.HairColor=3;P.DraftIdentity.TopColor35=3;P.CreatorDirty35=true;},[this](ALWCharacter& P){CaptureV2(TEXT("Creator35_Male"));for(auto& C:P.OpeningScene->Pieces)Check(C->GetStaticMesh()!=nullptr,TEXT("creator mesh resolves"));});
+ Add(TEXT("Face morphs and grooming"),4,[](ALWCharacter& P){P.CreatorTab35=1;P.CreatorZoom35=1;P.DraftIdentity.Beard35=6;P.DraftIdentity.BeardColor35=3;LWCreator35::SetShape(P.DraftIdentity,12,.8f);LWCreator35::SetShape(P.DraftIdentity,16,.7f);P.CreatorDirty35=true;},[this](ALWCharacter& P){CaptureV2(TEXT("Creator35_Face"));TArray<UProceduralMeshComponent*> Parts;P.OpeningScene->GetComponents(Parts);Check(Parts.Num()>=8,TEXT("geometry morph preview created"));});
+ Add(TEXT("Female wardrobe"),4,[](ALWCharacter& P){P.DraftIdentity.Body=1;P.DraftIdentity.Beard35=0;P.DraftIdentity.Hair=5;P.DraftIdentity.HairColor=0;P.DraftIdentity.Top35=2;P.DraftIdentity.TopColor35=2;P.DraftIdentity.Bottom35=1;P.DraftIdentity.BottomColor35=4;P.DraftIdentity.Shoes35=2;P.CreatorTab35=3;P.CreatorZoom35=0;P.CreatorDirty35=true;},[this](ALWCharacter& P){CaptureV2(TEXT("Creator35_Female"));});
+ Add(TEXT("Visible tattoos and gloves"),4,[](ALWCharacter& P){P.DraftIdentity.Tattoos35[0]=2;P.DraftIdentity.Tattoos35[1]=4;P.DraftIdentity.Tattoos35[4]=8;P.DraftIdentity.Gloves35=2;P.CreatorTab35=4;P.TattooZone35=0;P.CreatorZoom35=1;P.CreatorDirty35=true;},[this](ALWCharacter& P){CaptureV2(TEXT("Creator35_Tattoos"));});
+ Add(TEXT("Body tattoo underlayer"),3,[](ALWCharacter& P){P.DraftIdentity.Top35=8;P.DraftIdentity.Tattoos35[3]=1;P.DraftIdentity.TattooPosition35[3]=FVector2D(.6,.45);P.DraftIdentity.TattooRotation35[3]=.58f;P.TattooZone35=3;P.CreatorZoom35=2;P.PortraitYaw=180;P.CreatorDirty35=true;},[this](ALWCharacter& P){CaptureV2(TEXT("Creator35_BackTattoo"));});
+ Add(TEXT("Headwear and eyewear"),3,[](ALWCharacter& P){P.DraftIdentity.Top35=2;P.PortraitYaw=0;P.CreatorZoom35=1;P.DraftIdentity.Headwear35=2;P.DraftIdentity.Eyewear35=1;P.CreatorTab35=3;P.CreatorDirty35=true;},[this](ALWCharacter& P){CaptureV2(TEXT("Creator35_Accessories"));});
+ Add(TEXT("Creator commit and world NPC"),4,[this](ALWCharacter& P){P.OpeningClick(TEXT("creator_done"));Check(P.Identity.Top35==2&&P.Identity.Bottom35==1&&P.Identity.Shoes35==2,TEXT("separate clothing committed"));Check(P.Identity.Tattoos35[0]==2,TEXT("tattoos committed"));Check(P.bSafehouse,TEXT("creator still starts inside bunker"));auto* R=GetWorld()->SpawnActor<ALWResident>(P.GetActorLocation()+FVector(220,0,0),FRotator(0,180,0));R->ConfigureResident(TEXT("wardrobe_test35"),TEXT("story"),TEXT("Wardrobe Test"),1);for(auto& C:R->Parts)Check(C->GetStaticMesh()&&C->GetStaticMesh()->GetName().EndsWith(TEXT("35")),TEXT("world NPC uses rebuilt character assets"));R->SetActorTickEnabled(false);R->Say(TEXT("You look ready for the road."));},[this](ALWCharacter& P){CaptureV2(TEXT("Creator35_InGame"));});
+}

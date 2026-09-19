@@ -1,0 +1,505 @@
+{
+  "mode": "Built-in image_gen.imagegen; one generation per card",
+  "cards": [
+    {
+      "id": "card_001",
+      "name": "Ashline Medic",
+      "prompt": "A collectible trading card illustration, portrait 2:3, full bleed art only without text or border. An optimistic vintage comic-book portrait of a paramedic with a first-aid satchel standing beside a parked ambulance on a quiet abandoned American street at sunrise. She holds a lantern. Detailed travel clothing, brick storefronts, drifting autumn leaves, warm orange and teal palette, distressed offset print, 1990s hand-painted game manual art. Peaceful scene, no injuries, no fighting, no blood. Unique artwork for the card Ashline Medic in the fictional game All American Meltdown."
+    },
+    {
+      "id": "card_002",
+      "name": "Red Crossroads",
+      "prompt": "One original collectible card illustration. Portrait 2:3, full-bleed image without text, logos, numbers or borders. Card concept: \"Red Crossroads\", from the \"Last Responders\" series of All American Meltdown. Invent a highly distinctive scene or character literally evoking this title in a quiet abandoned American town reclaimed by nature. Vintage hand-painted pulp comic art with intricate details, expressive silhouettes, cinematic lighting, rich muted colors, distressed printed paper. Vary the composition to suit the subject: environmental scenes, still-life objects or character portraits. All scenes peaceful, no injury, blood, cruelty or fighting; weapons if any are inert display objects. Specific visual theme must match this particular card title, not a generic repeat."
+    },
+    {
+      "id": "card_003",
+      "name": "The Last Ambulance",
+      "prompt": "One original collectible card illustration. Portrait 2:3, full-bleed image without text, logos, numbers or borders. Card concept: \"The Last Ambulance\", from the \"Last Responders\" series of All American Meltdown. Invent a highly distinctive scene or character literally evoking this title in a quiet abandoned American town reclaimed by nature. Vintage hand-painted pulp comic art with intricate details, expressive silhouettes, cinematic lighting, rich muted colors, distressed printed paper. Vary the composition to suit the subject: environmental scenes, still-life objects or character portraits. All scenes peaceful, no injury, blood, cruelty or fighting; weapons if any are inert display objects. Specific visual theme must match this particular card title, not a generic repeat."
+    },
+    {
+      "id": "card_004",
+      "name": "Triage Angel",
+      "prompt": "One original collectible card illustration. Portrait 2:3, full-bleed image without text, logos, numbers or borders. Card concept: \"Triage Angel\", from the \"Last Responders\" series of All American Meltdown. Invent a highly distinctive scene or character literally evoking this title in a quiet abandoned American town reclaimed by nature. Vintage hand-painted pulp comic art with intricate details, expressive silhouettes, cinematic lighting, rich muted colors, distressed printed paper. Vary the composition to suit the subject: environmental scenes, still-life objects or character portraits. All scenes peaceful, no injury, blood, cruelty or fighting; weapons if any are inert display objects. Specific visual theme must match this particular card title, not a generic repeat."
+    },
+    {
+      "id": "card_005",
+      "name": "Blood Bank",
+      "prompt": "One original collectible card illustration. Portrait 2:3, full-bleed image without text, logos, numbers or borders. Card concept: \"Blood Bank\", from the \"Last Responders\" series of All American Meltdown. Invent a highly distinctive scene or character literally evoking this title in a quiet abandoned American town reclaimed by nature. Vintage hand-painted pulp comic art with intricate details, expressive silhouettes, cinematic lighting, rich muted colors, distressed printed paper. Vary the composition to suit the subject: environmental scenes, still-life objects or character portraits. All scenes peaceful, no injury, blood, cruelty or fighting; weapons if any are inert display objects. Specific visual theme must match this particular card title, not a generic repeat."
+    },
+    {
+      "id": "card_006",
+      "name": "Midnight Surgeon",
+      "prompt": "One original collectible card illustration. Portrait 2:3, full-bleed image without text, logos, numbers or borders. Card concept: \"Midnight Surgeon\", from the \"Last Responders\" series of All American Meltdown. Invent a highly distinctive scene or character literally evoking this title in a quiet abandoned American town reclaimed by nature. Vintage hand-painted pulp comic art with intricate details, expressive silhouettes, cinematic lighting, rich muted colors, distressed printed paper. Vary the composition to suit the subject: environmental scenes, still-life objects or character portraits. All scenes peaceful, no injury, blood, cruelty or fighting; weapons if any are inert display objects. Specific visual theme must match this particular card title, not a generic repeat."
+    },
+    {
+      "id": "card_007",
+      "name": "Mercy Under Fire",
+      "prompt": "One original collectible card illustration. Portrait 2:3, full-bleed image without text, logos, numbers or borders. Card concept: \"Mercy Under Fire\", from the \"Last Responders\" series of All American Meltdown. Invent a highly distinctive scene or character literally evoking this title in a quiet abandoned American town reclaimed by nature. Vintage hand-painted pulp comic art with intricate details, expressive silhouettes, cinematic lighting, rich muted colors, distressed printed paper. Vary the composition to suit the subject: environmental scenes, still-life objects or character portraits. All scenes peaceful, no injury, blood, cruelty or fighting; weapons if any are inert display objects. Specific visual theme must match this particular card title, not a generic repeat."
+    },
+    {
+      "id": "card_008",
+      "name": "Shelter Nurse",
+      "prompt": "One original collectible card illustration. Portrait 2:3, full-bleed image without text, logos, numbers or borders. Card concept: \"Shelter Nurse\", from the \"Last Responders\" series of All American Meltdown. Invent a highly distinctive scene or character literally evoking this title in a quiet abandoned American town reclaimed by nature. Vintage hand-painted pulp comic art with intricate details, expressive silhouettes, cinematic lighting, rich muted colors, distressed printed paper. Vary the composition to suit the subject: environmental scenes, still-life objects or character portraits. All scenes peaceful, no injury, blood, cruelty or fighting; weapons if any are inert display objects. Specific visual theme must match this particular card title, not a generic repeat."
+    },
+    {
+      "id": "card_009",
+      "name": "Heart of Steel",
+      "prompt": "One original collectible card illustration. Portrait 2:3, full-bleed image without text, logos, numbers or borders. Card concept: \"Heart of Steel\", from the \"Last Responders\" series of All American Meltdown. Invent a highly distinctive scene or character literally evoking this title in a quiet abandoned American town reclaimed by nature. Vintage hand-painted pulp comic art with intricate details, expressive silhouettes, cinematic lighting, rich muted colors, distressed printed paper. Vary the composition to suit the subject: environmental scenes, still-life objects or character portraits. All scenes peaceful, no injury, blood, cruelty or fighting; weapons if any are inert display objects. Specific visual theme must match this particular card title, not a generic repeat."
+    },
+    {
+      "id": "card_010",
+      "name": "The Immortal Responder",
+      "prompt": "One original collectible card illustration. Portrait 2:3, full-bleed image without text, logos, numbers or borders. Card concept: \"The Immortal Responder\", from the \"Last Responders\" series of All American Meltdown. Invent a highly distinctive scene or character literally evoking this title in a quiet abandoned American town reclaimed by nature. Vintage hand-painted pulp comic art with intricate details, expressive silhouettes, cinematic lighting, rich muted colors, distressed printed paper. Vary the composition to suit the subject: environmental scenes, still-life objects or character portraits. All scenes peaceful, no injury, blood, cruelty or fighting; weapons if any are inert display objects. Specific visual theme must match this particular card title, not a generic repeat."
+    },
+    {
+      "id": "card_011",
+      "name": "Highway Drifter",
+      "prompt": "One original collectible card illustration. Portrait 2:3, full-bleed image without text, logos, numbers or borders. Card concept: \"Highway Drifter\", from the \"Roadside Legends\" series of All American Meltdown. Invent a highly distinctive scene or character literally evoking this title in a quiet abandoned American town reclaimed by nature. Vintage hand-painted pulp comic art with intricate details, expressive silhouettes, cinematic lighting, rich muted colors, distressed printed paper. Vary the composition to suit the subject: environmental scenes, still-life objects or character portraits. All scenes peaceful, no injury, blood, cruelty or fighting; weapons if any are inert display objects. Specific visual theme must match this particular card title, not a generic repeat."
+    },
+    {
+      "id": "card_012",
+      "name": "Bootleg Courier",
+      "prompt": "One original collectible card illustration. Portrait 2:3, full-bleed image without text, logos, numbers or borders. Card concept: \"Bootleg Courier\", from the \"Roadside Legends\" series of All American Meltdown. Invent a highly distinctive scene or character literally evoking this title in a quiet abandoned American town reclaimed by nature. Vintage hand-painted pulp comic art with intricate details, expressive silhouettes, cinematic lighting, rich muted colors, distressed printed paper. Vary the composition to suit the subject: environmental scenes, still-life objects or character portraits. All scenes peaceful, no injury, blood, cruelty or fighting; weapons if any are inert display objects. Specific visual theme must match this particular card title, not a generic repeat."
+    },
+    {
+      "id": "card_013",
+      "name": "Rustbelt Runner",
+      "prompt": "One original collectible card illustration. Portrait 2:3, full-bleed image without text, logos, numbers or borders. Card concept: \"Rustbelt Runner\", from the \"Roadside Legends\" series of All American Meltdown. Invent a highly distinctive scene or character literally evoking this title in a quiet abandoned American town reclaimed by nature. Vintage hand-painted pulp comic art with intricate details, expressive silhouettes, cinematic lighting, rich muted colors, distressed printed paper. Vary the composition to suit the subject: environmental scenes, still-life objects or character portraits. All scenes peaceful, no injury, blood, cruelty or fighting; weapons if any are inert display objects. Specific visual theme must match this particular card title, not a generic repeat."
+    },
+    {
+      "id": "card_014",
+      "name": "Midnight Cyclist",
+      "prompt": "One original collectible card illustration. Portrait 2:3, full-bleed image without text, logos, numbers or borders. Card concept: \"Midnight Cyclist\", from the \"Roadside Legends\" series of All American Meltdown. Invent a highly distinctive scene or character literally evoking this title in a quiet abandoned American town reclaimed by nature. Vintage hand-painted pulp comic art with intricate details, expressive silhouettes, cinematic lighting, rich muted colors, distressed printed paper. Vary the composition to suit the subject: environmental scenes, still-life objects or character portraits. All scenes peaceful, no injury, blood, cruelty or fighting; weapons if any are inert display objects. Specific visual theme must match this particular card title, not a generic repeat."
+    },
+    {
+      "id": "card_015",
+      "name": "Bridge Jumper",
+      "prompt": "One original collectible card illustration. Portrait 2:3, full-bleed image without text, logos, numbers or borders. Card concept: \"Bridge Jumper\", from the \"Roadside Legends\" series of All American Meltdown. Invent a highly distinctive scene or character literally evoking this title in a quiet abandoned American town reclaimed by nature. Vintage hand-painted pulp comic art with intricate details, expressive silhouettes, cinematic lighting, rich muted colors, distressed printed paper. Vary the composition to suit the subject: environmental scenes, still-life objects or character portraits. All scenes peaceful, no injury, blood, cruelty or fighting; weapons if any are inert display objects. Specific visual theme must match this particular card title, not a generic repeat."
+    },
+    {
+      "id": "card_016",
+      "name": "Dust Trail Scout",
+      "prompt": "One original collectible card illustration. Portrait 2:3, full-bleed image without text, logos, numbers or borders. Card concept: \"Dust Trail Scout\", from the \"Roadside Legends\" series of All American Meltdown. Invent a highly distinctive scene or character literally evoking this title in a quiet abandoned American town reclaimed by nature. Vintage hand-painted pulp comic art with intricate details, expressive silhouettes, cinematic lighting, rich muted colors, distressed printed paper. Vary the composition to suit the subject: environmental scenes, still-life objects or character portraits. All scenes peaceful, no injury, blood, cruelty or fighting; weapons if any are inert display objects. Specific visual theme must match this particular card title, not a generic repeat."
+    },
+    {
+      "id": "card_017",
+      "name": "The Long Haul",
+      "prompt": "One original collectible card illustration. Portrait 2:3, full-bleed image without text, logos, numbers or borders. Card concept: \"The Long Haul\", from the \"Roadside Legends\" series of All American Meltdown. Invent a highly distinctive scene or character literally evoking this title in a quiet abandoned American town reclaimed by nature. Vintage hand-painted pulp comic art with intricate details, expressive silhouettes, cinematic lighting, rich muted colors, distressed printed paper. Vary the composition to suit the subject: environmental scenes, still-life objects or character portraits. All scenes peaceful, no injury, blood, cruelty or fighting; weapons if any are inert display objects. Specific visual theme must match this particular card title, not a generic repeat."
+    },
+    {
+      "id": "card_018",
+      "name": "Storm Chaser",
+      "prompt": "One original collectible card illustration. Portrait 2:3, full-bleed image without text, logos, numbers or borders. Card concept: \"Storm Chaser\", from the \"Roadside Legends\" series of All American Meltdown. Invent a highly distinctive scene or character literally evoking this title in a quiet abandoned American town reclaimed by nature. Vintage hand-painted pulp comic art with intricate details, expressive silhouettes, cinematic lighting, rich muted colors, distressed printed paper. Vary the composition to suit the subject: environmental scenes, still-life objects or character portraits. All scenes peaceful, no injury, blood, cruelty or fighting; weapons if any are inert display objects. Specific visual theme must match this particular card title, not a generic repeat."
+    },
+    {
+      "id": "card_019",
+      "name": "Marathon Ghost",
+      "prompt": "One original collectible card illustration. Portrait 2:3, full-bleed image without text, logos, numbers or borders. Card concept: \"Marathon Ghost\", from the \"Roadside Legends\" series of All American Meltdown. Invent a highly distinctive scene or character literally evoking this title in a quiet abandoned American town reclaimed by nature. Vintage hand-painted pulp comic art with intricate details, expressive silhouettes, cinematic lighting, rich muted colors, distressed printed paper. Vary the composition to suit the subject: environmental scenes, still-life objects or character portraits. All scenes peaceful, no injury, blood, cruelty or fighting; weapons if any are inert display objects. Specific visual theme must match this particular card title, not a generic repeat."
+    },
+    {
+      "id": "card_020",
+      "name": "The Endless Road",
+      "prompt": "One original collectible card illustration. Portrait 2:3, full-bleed image without text, logos, numbers or borders. Card concept: \"The Endless Road\", from the \"Roadside Legends\" series of All American Meltdown. Invent a highly distinctive scene or character literally evoking this title in a quiet abandoned American town reclaimed by nature. Vintage hand-painted pulp comic art with intricate details, expressive silhouettes, cinematic lighting, rich muted colors, distressed printed paper. Vary the composition to suit the subject: environmental scenes, still-life objects or character portraits. All scenes peaceful, no injury, blood, cruelty or fighting; weapons if any are inert display objects. Specific visual theme must match this particular card title, not a generic repeat."
+    },
+    {
+      "id": "card_021",
+      "name": "Tin Can Marksman",
+      "prompt": "One original collectible card illustration. Portrait 2:3, full-bleed image without text, logos, numbers or borders. Card concept: \"Tin Can Marksman\", from the \"Wasteland Arsenal\" series of All American Meltdown. Invent a highly distinctive scene or character literally evoking this title in a quiet abandoned American town reclaimed by nature. Vintage hand-painted pulp comic art with intricate details, expressive silhouettes, cinematic lighting, rich muted colors, distressed printed paper. Vary the composition to suit the subject: environmental scenes, still-life objects or character portraits. All scenes peaceful, no injury, blood, cruelty or fighting; weapons if any are inert display objects. Specific visual theme must match this particular card title, not a generic repeat."
+    },
+    {
+      "id": "card_022",
+      "name": "Rooftop Sentinel",
+      "prompt": "One original collectible card illustration. Portrait 2:3, full-bleed image without text, logos, numbers or borders. Card concept: \"Rooftop Sentinel\", from the \"Wasteland Arsenal\" series of All American Meltdown. Invent a highly distinctive scene or character literally evoking this title in a quiet abandoned American town reclaimed by nature. Vintage hand-painted pulp comic art with intricate details, expressive silhouettes, cinematic lighting, rich muted colors, distressed printed paper. Vary the composition to suit the subject: environmental scenes, still-life objects or character portraits. All scenes peaceful, no injury, blood, cruelty or fighting; weapons if any are inert display objects. Specific visual theme must match this particular card title, not a generic repeat."
+    },
+    {
+      "id": "card_023",
+      "name": "Brass Collector",
+      "prompt": "One original collectible card illustration. Portrait 2:3, full-bleed image without text, logos, numbers or borders. Card concept: \"Brass Collector\", from the \"Wasteland Arsenal\" series of All American Meltdown. Invent a highly distinctive scene or character literally evoking this title in a quiet abandoned American town reclaimed by nature. Vintage hand-painted pulp comic art with intricate details, expressive silhouettes, cinematic lighting, rich muted colors, distressed printed paper. Vary the composition to suit the subject: environmental scenes, still-life objects or character portraits. All scenes peaceful, no injury, blood, cruelty or fighting; weapons if any are inert display objects. Specific visual theme must match this particular card title, not a generic repeat."
+    },
+    {
+      "id": "card_024",
+      "name": "Trench Defender",
+      "prompt": "One original collectible card illustration. Portrait 2:3, full-bleed image without text, logos, numbers or borders. Card concept: \"Trench Defender\", from the \"Wasteland Arsenal\" series of All American Meltdown. Invent a highly distinctive scene or character literally evoking this title in a quiet abandoned American town reclaimed by nature. Vintage hand-painted pulp comic art with intricate details, expressive silhouettes, cinematic lighting, rich muted colors, distressed printed paper. Vary the composition to suit the subject: environmental scenes, still-life objects or character portraits. All scenes peaceful, no injury, blood, cruelty or fighting; weapons if any are inert display objects. Specific visual theme must match this particular card title, not a generic repeat."
+    },
+    {
+      "id": "card_025",
+      "name": "Railway Rifleman",
+      "prompt": "One original collectible card illustration. Portrait 2:3, full-bleed image without text, logos, numbers or borders. Card concept: \"Railway Rifleman\", from the \"Wasteland Arsenal\" series of All American Meltdown. Invent a highly distinctive scene or character literally evoking this title in a quiet abandoned American town reclaimed by nature. Vintage hand-painted pulp comic art with intricate details, expressive silhouettes, cinematic lighting, rich muted colors, distressed printed paper. Vary the composition to suit the subject: environmental scenes, still-life objects or character portraits. All scenes peaceful, no injury, blood, cruelty or fighting; weapons if any are inert display objects. Specific visual theme must match this particular card title, not a generic repeat."
+    },
+    {
+      "id": "card_026",
+      "name": "The Gunsmith",
+      "prompt": "One original collectible card illustration. Portrait 2:3, full-bleed image without text, logos, numbers or borders. Card concept: \"The Gunsmith\", from the \"Wasteland Arsenal\" series of All American Meltdown. Invent a highly distinctive scene or character literally evoking this title in a quiet abandoned American town reclaimed by nature. Vintage hand-painted pulp comic art with intricate details, expressive silhouettes, cinematic lighting, rich muted colors, distressed printed paper. Vary the composition to suit the subject: environmental scenes, still-life objects or character portraits. All scenes peaceful, no injury, blood, cruelty or fighting; weapons if any are inert display objects. Specific visual theme must match this particular card title, not a generic repeat."
+    },
+    {
+      "id": "card_027",
+      "name": "Smokehouse Duelist",
+      "prompt": "One original collectible card illustration. Portrait 2:3, full-bleed image without text, logos, numbers or borders. Card concept: \"Smokehouse Duelist\", from the \"Wasteland Arsenal\" series of All American Meltdown. Invent a highly distinctive scene or character literally evoking this title in a quiet abandoned American town reclaimed by nature. Vintage hand-painted pulp comic art with intricate details, expressive silhouettes, cinematic lighting, rich muted colors, distressed printed paper. Vary the composition to suit the subject: environmental scenes, still-life objects or character portraits. All scenes peaceful, no injury, blood, cruelty or fighting; weapons if any are inert display objects. Specific visual theme must match this particular card title, not a generic repeat."
+    },
+    {
+      "id": "card_028",
+      "name": "Tower Sniper",
+      "prompt": "One original collectible card illustration. Portrait 2:3, full-bleed image without text, logos, numbers or borders. Card concept: \"Tower Sniper\", from the \"Wasteland Arsenal\" series of All American Meltdown. Invent a highly distinctive scene or character literally evoking this title in a quiet abandoned American town reclaimed by nature. Vintage hand-painted pulp comic art with intricate details, expressive silhouettes, cinematic lighting, rich muted colors, distressed printed paper. Vary the composition to suit the subject: environmental scenes, still-life objects or character portraits. All scenes peaceful, no injury, blood, cruelty or fighting; weapons if any are inert display objects. Specific visual theme must match this particular card title, not a generic repeat."
+    },
+    {
+      "id": "card_029",
+      "name": "Last Stand Marshal",
+      "prompt": "One original collectible card illustration. Portrait 2:3, full-bleed image without text, logos, numbers or borders. Card concept: \"Last Stand Marshal\", from the \"Wasteland Arsenal\" series of All American Meltdown. Invent a highly distinctive scene or character literally evoking this title in a quiet abandoned American town reclaimed by nature. Vintage hand-painted pulp comic art with intricate details, expressive silhouettes, cinematic lighting, rich muted colors, distressed printed paper. Vary the composition to suit the subject: environmental scenes, still-life objects or character portraits. All scenes peaceful, no injury, blood, cruelty or fighting; weapons if any are inert display objects. Specific visual theme must match this particular card title, not a generic repeat."
+    },
+    {
+      "id": "card_030",
+      "name": "The Peacebreaker",
+      "prompt": "One original collectible card illustration. Portrait 2:3, full-bleed image without text, logos, numbers or borders. Card concept: \"The Peacebreaker\", from the \"Wasteland Arsenal\" series of All American Meltdown. Invent a highly distinctive scene or character literally evoking this title in a quiet abandoned American town reclaimed by nature. Vintage hand-painted pulp comic art with intricate details, expressive silhouettes, cinematic lighting, rich muted colors, distressed printed paper. Vary the composition to suit the subject: environmental scenes, still-life objects or character portraits. All scenes peaceful, no injury, blood, cruelty or fighting; weapons if any are inert display objects. Specific visual theme must match this particular card title, not a generic repeat."
+    },
+    {
+      "id": "card_031",
+      "name": "Crowbar King",
+      "prompt": "One original collectible card illustration. Portrait 2:3, full-bleed image without text, logos, numbers or borders. Card concept: \"Crowbar King\", from the \"Iron Fists\" series of All American Meltdown. Invent a highly distinctive scene or character literally evoking this title in a quiet abandoned American town reclaimed by nature. Vintage hand-painted pulp comic art with intricate details, expressive silhouettes, cinematic lighting, rich muted colors, distressed printed paper. Vary the composition to suit the subject: environmental scenes, still-life objects or character portraits. All scenes peaceful, no injury, blood, cruelty or fighting; weapons if any are inert display objects. Specific visual theme must match this particular card title, not a generic repeat."
+    },
+    {
+      "id": "card_032",
+      "name": "Concrete Boxer",
+      "prompt": "One original collectible card illustration. Portrait 2:3, full-bleed image without text, logos, numbers or borders. Card concept: \"Concrete Boxer\", from the \"Iron Fists\" series of All American Meltdown. Invent a highly distinctive scene or character literally evoking this title in a quiet abandoned American town reclaimed by nature. Vintage hand-painted pulp comic art with intricate details, expressive silhouettes, cinematic lighting, rich muted colors, distressed printed paper. Vary the composition to suit the subject: environmental scenes, still-life objects or character portraits. All scenes peaceful, no injury, blood, cruelty or fighting; weapons if any are inert display objects. Specific visual theme must match this particular card title, not a generic repeat."
+    },
+    {
+      "id": "card_033",
+      "name": "Scrapyard Bruiser",
+      "prompt": "One original collectible card illustration. Portrait 2:3, full-bleed image without text, logos, numbers or borders. Card concept: \"Scrapyard Bruiser\", from the \"Iron Fists\" series of All American Meltdown. Invent a highly distinctive scene or character literally evoking this title in a quiet abandoned American town reclaimed by nature. Vintage hand-painted pulp comic art with intricate details, expressive silhouettes, cinematic lighting, rich muted colors, distressed printed paper. Vary the composition to suit the subject: environmental scenes, still-life objects or character portraits. All scenes peaceful, no injury, blood, cruelty or fighting; weapons if any are inert display objects. Specific visual theme must match this particular card title, not a generic repeat."
+    },
+    {
+      "id": "card_034",
+      "name": "Batting Champion",
+      "prompt": "One original collectible card illustration. Portrait 2:3, full-bleed image without text, logos, numbers or borders. Card concept: \"Batting Champion\", from the \"Iron Fists\" series of All American Meltdown. Invent a highly distinctive scene or character literally evoking this title in a quiet abandoned American town reclaimed by nature. Vintage hand-painted pulp comic art with intricate details, expressive silhouettes, cinematic lighting, rich muted colors, distressed printed paper. Vary the composition to suit the subject: environmental scenes, still-life objects or character portraits. All scenes peaceful, no injury, blood, cruelty or fighting; weapons if any are inert display objects. Specific visual theme must match this particular card title, not a generic repeat."
+    },
+    {
+      "id": "card_035",
+      "name": "The Door Breaker",
+      "prompt": "One original collectible card illustration. Portrait 2:3, full-bleed image without text, logos, numbers or borders. Card concept: \"The Door Breaker\", from the \"Iron Fists\" series of All American Meltdown. Invent a highly distinctive scene or character literally evoking this title in a quiet abandoned American town reclaimed by nature. Vintage hand-painted pulp comic art with intricate details, expressive silhouettes, cinematic lighting, rich muted colors, distressed printed paper. Vary the composition to suit the subject: environmental scenes, still-life objects or character portraits. All scenes peaceful, no injury, blood, cruelty or fighting; weapons if any are inert display objects. Specific visual theme must match this particular card title, not a generic repeat."
+    },
+    {
+      "id": "card_036",
+      "name": "Foundry Brawler",
+      "prompt": "One original collectible card illustration. Portrait 2:3, full-bleed image without text, logos, numbers or borders. Card concept: \"Foundry Brawler\", from the \"Iron Fists\" series of All American Meltdown. Invent a highly distinctive scene or character literally evoking this title in a quiet abandoned American town reclaimed by nature. Vintage hand-painted pulp comic art with intricate details, expressive silhouettes, cinematic lighting, rich muted colors, distressed printed paper. Vary the composition to suit the subject: environmental scenes, still-life objects or character portraits. All scenes peaceful, no injury, blood, cruelty or fighting; weapons if any are inert display objects. Specific visual theme must match this particular card title, not a generic repeat."
+    },
+    {
+      "id": "card_037",
+      "name": "Sledgehammer Saint",
+      "prompt": "One original collectible card illustration. Portrait 2:3, full-bleed image without text, logos, numbers or borders. Card concept: \"Sledgehammer Saint\", from the \"Iron Fists\" series of All American Meltdown. Invent a highly distinctive scene or character literally evoking this title in a quiet abandoned American town reclaimed by nature. Vintage hand-painted pulp comic art with intricate details, expressive silhouettes, cinematic lighting, rich muted colors, distressed printed paper. Vary the composition to suit the subject: environmental scenes, still-life objects or character portraits. All scenes peaceful, no injury, blood, cruelty or fighting; weapons if any are inert display objects. Specific visual theme must match this particular card title, not a generic repeat."
+    },
+    {
+      "id": "card_038",
+      "name": "Chain Gang Rebel",
+      "prompt": "One original collectible card illustration. Portrait 2:3, full-bleed image without text, logos, numbers or borders. Card concept: \"Chain Gang Rebel\", from the \"Iron Fists\" series of All American Meltdown. Invent a highly distinctive scene or character literally evoking this title in a quiet abandoned American town reclaimed by nature. Vintage hand-painted pulp comic art with intricate details, expressive silhouettes, cinematic lighting, rich muted colors, distressed printed paper. Vary the composition to suit the subject: environmental scenes, still-life objects or character portraits. All scenes peaceful, no injury, blood, cruelty or fighting; weapons if any are inert display objects. Specific visual theme must match this particular card title, not a generic repeat."
+    },
+    {
+      "id": "card_039",
+      "name": "The Iron Wrestler",
+      "prompt": "One original collectible card illustration. Portrait 2:3, full-bleed image without text, logos, numbers or borders. Card concept: \"The Iron Wrestler\", from the \"Iron Fists\" series of All American Meltdown. Invent a highly distinctive scene or character literally evoking this title in a quiet abandoned American town reclaimed by nature. Vintage hand-painted pulp comic art with intricate details, expressive silhouettes, cinematic lighting, rich muted colors, distressed printed paper. Vary the composition to suit the subject: environmental scenes, still-life objects or character portraits. All scenes peaceful, no injury, blood, cruelty or fighting; weapons if any are inert display objects. Specific visual theme must match this particular card title, not a generic repeat."
+    },
+    {
+      "id": "card_040",
+      "name": "Knuckles of Liberty",
+      "prompt": "One original collectible card illustration. Portrait 2:3, full-bleed image without text, logos, numbers or borders. Card concept: \"Knuckles of Liberty\", from the \"Iron Fists\" series of All American Meltdown. Invent a highly distinctive scene or character literally evoking this title in a quiet abandoned American town reclaimed by nature. Vintage hand-painted pulp comic art with intricate details, expressive silhouettes, cinematic lighting, rich muted colors, distressed printed paper. Vary the composition to suit the subject: environmental scenes, still-life objects or character portraits. All scenes peaceful, no injury, blood, cruelty or fighting; weapons if any are inert display objects. Specific visual theme must match this particular card title, not a generic repeat."
+    },
+    {
+      "id": "card_041",
+      "name": "Barricade Guard",
+      "prompt": "One original collectible card illustration. Portrait 2:3, full-bleed image without text, logos, numbers or borders. Card concept: \"Barricade Guard\", from the \"Night Watch\" series of All American Meltdown. Invent a highly distinctive scene or character literally evoking this title in a quiet abandoned American town reclaimed by nature. Vintage hand-painted pulp comic art with intricate details, expressive silhouettes, cinematic lighting, rich muted colors, distressed printed paper. Vary the composition to suit the subject: environmental scenes, still-life objects or character portraits. All scenes peaceful, no injury, blood, cruelty or fighting; weapons if any are inert display objects. Specific visual theme must match this particular card title, not a generic repeat."
+    },
+    {
+      "id": "card_042",
+      "name": "Steel Umbrella",
+      "prompt": "One original collectible card illustration. Portrait 2:3, full-bleed image without text, logos, numbers or borders. Card concept: \"Steel Umbrella\", from the \"Night Watch\" series of All American Meltdown. Invent a highly distinctive scene or character literally evoking this title in a quiet abandoned American town reclaimed by nature. Vintage hand-painted pulp comic art with intricate details, expressive silhouettes, cinematic lighting, rich muted colors, distressed printed paper. Vary the composition to suit the subject: environmental scenes, still-life objects or character portraits. All scenes peaceful, no injury, blood, cruelty or fighting; weapons if any are inert display objects. Specific visual theme must match this particular card title, not a generic repeat."
+    },
+    {
+      "id": "card_043",
+      "name": "The Riot Shield",
+      "prompt": "One original collectible card illustration. Portrait 2:3, full-bleed image without text, logos, numbers or borders. Card concept: \"The Riot Shield\", from the \"Night Watch\" series of All American Meltdown. Invent a highly distinctive scene or character literally evoking this title in a quiet abandoned American town reclaimed by nature. Vintage hand-painted pulp comic art with intricate details, expressive silhouettes, cinematic lighting, rich muted colors, distressed printed paper. Vary the composition to suit the subject: environmental scenes, still-life objects or character portraits. All scenes peaceful, no injury, blood, cruelty or fighting; weapons if any are inert display objects. Specific visual theme must match this particular card title, not a generic repeat."
+    },
+    {
+      "id": "card_044",
+      "name": "Welded Survivor",
+      "prompt": "One original collectible card illustration. Portrait 2:3, full-bleed image without text, logos, numbers or borders. Card concept: \"Welded Survivor\", from the \"Night Watch\" series of All American Meltdown. Invent a highly distinctive scene or character literally evoking this title in a quiet abandoned American town reclaimed by nature. Vintage hand-painted pulp comic art with intricate details, expressive silhouettes, cinematic lighting, rich muted colors, distressed printed paper. Vary the composition to suit the subject: environmental scenes, still-life objects or character portraits. All scenes peaceful, no injury, blood, cruelty or fighting; weapons if any are inert display objects. Specific visual theme must match this particular card title, not a generic repeat."
+    },
+    {
+      "id": "card_045",
+      "name": "The Watchtower",
+      "prompt": "One original collectible card illustration. Portrait 2:3, full-bleed image without text, logos, numbers or borders. Card concept: \"The Watchtower\", from the \"Night Watch\" series of All American Meltdown. Invent a highly distinctive scene or character literally evoking this title in a quiet abandoned American town reclaimed by nature. Vintage hand-painted pulp comic art with intricate details, expressive silhouettes, cinematic lighting, rich muted colors, distressed printed paper. Vary the composition to suit the subject: environmental scenes, still-life objects or character portraits. All scenes peaceful, no injury, blood, cruelty or fighting; weapons if any are inert display objects. Specific visual theme must match this particular card title, not a generic repeat."
+    },
+    {
+      "id": "card_046",
+      "name": "Armored Pilgrim",
+      "prompt": "One original collectible card illustration. Portrait 2:3, full-bleed image without text, logos, numbers or borders. Card concept: \"Armored Pilgrim\", from the \"Night Watch\" series of All American Meltdown. Invent a highly distinctive scene or character literally evoking this title in a quiet abandoned American town reclaimed by nature. Vintage hand-painted pulp comic art with intricate details, expressive silhouettes, cinematic lighting, rich muted colors, distressed printed paper. Vary the composition to suit the subject: environmental scenes, still-life objects or character portraits. All scenes peaceful, no injury, blood, cruelty or fighting; weapons if any are inert display objects. Specific visual theme must match this particular card title, not a generic repeat."
+    },
+    {
+      "id": "card_047",
+      "name": "Blast Door Warden",
+      "prompt": "One original collectible card illustration. Portrait 2:3, full-bleed image without text, logos, numbers or borders. Card concept: \"Blast Door Warden\", from the \"Night Watch\" series of All American Meltdown. Invent a highly distinctive scene or character literally evoking this title in a quiet abandoned American town reclaimed by nature. Vintage hand-painted pulp comic art with intricate details, expressive silhouettes, cinematic lighting, rich muted colors, distressed printed paper. Vary the composition to suit the subject: environmental scenes, still-life objects or character portraits. All scenes peaceful, no injury, blood, cruelty or fighting; weapons if any are inert display objects. Specific visual theme must match this particular card title, not a generic repeat."
+    },
+    {
+      "id": "card_048",
+      "name": "Broken Tanker",
+      "prompt": "One original collectible card illustration. Portrait 2:3, full-bleed image without text, logos, numbers or borders. Card concept: \"Broken Tanker\", from the \"Night Watch\" series of All American Meltdown. Invent a highly distinctive scene or character literally evoking this title in a quiet abandoned American town reclaimed by nature. Vintage hand-painted pulp comic art with intricate details, expressive silhouettes, cinematic lighting, rich muted colors, distressed printed paper. Vary the composition to suit the subject: environmental scenes, still-life objects or character portraits. All scenes peaceful, no injury, blood, cruelty or fighting; weapons if any are inert display objects. Specific visual theme must match this particular card title, not a generic repeat."
+    },
+    {
+      "id": "card_049",
+      "name": "Citadel Defender",
+      "prompt": "One original collectible card illustration. Portrait 2:3, full-bleed image without text, logos, numbers or borders. Card concept: \"Citadel Defender\", from the \"Night Watch\" series of All American Meltdown. Invent a highly distinctive scene or character literally evoking this title in a quiet abandoned American town reclaimed by nature. Vintage hand-painted pulp comic art with intricate details, expressive silhouettes, cinematic lighting, rich muted colors, distressed printed paper. Vary the composition to suit the subject: environmental scenes, still-life objects or character portraits. All scenes peaceful, no injury, blood, cruelty or fighting; weapons if any are inert display objects. Specific visual theme must match this particular card title, not a generic repeat."
+    },
+    {
+      "id": "card_050",
+      "name": "The Unbroken Wall",
+      "prompt": "One original collectible card illustration. Portrait 2:3, full-bleed image without text, logos, numbers or borders. Card concept: \"The Unbroken Wall\", from the \"Night Watch\" series of All American Meltdown. Invent a highly distinctive scene or character literally evoking this title in a quiet abandoned American town reclaimed by nature. Vintage hand-painted pulp comic art with intricate details, expressive silhouettes, cinematic lighting, rich muted colors, distressed printed paper. Vary the composition to suit the subject: environmental scenes, still-life objects or character portraits. All scenes peaceful, no injury, blood, cruelty or fighting; weapons if any are inert display objects. Specific visual theme must match this particular card title, not a generic repeat."
+    },
+    {
+      "id": "card_051",
+      "name": "Library Lantern",
+      "prompt": "One original collectible card illustration. Portrait 2:3, full-bleed image without text, logos, numbers or borders. Card concept: \"Library Lantern\", from the \"Forbidden Knowledge\" series of All American Meltdown. Invent a highly distinctive scene or character literally evoking this title in a quiet abandoned American town reclaimed by nature. Vintage hand-painted pulp comic art with intricate details, expressive silhouettes, cinematic lighting, rich muted colors, distressed printed paper. Vary the composition to suit the subject: environmental scenes, still-life objects or character portraits. All scenes peaceful, no injury, blood, cruelty or fighting; weapons if any are inert display objects. Specific visual theme must match this particular card title, not a generic repeat."
+    },
+    {
+      "id": "card_052",
+      "name": "The Mapmaker",
+      "prompt": "One original collectible card illustration. Portrait 2:3, full-bleed image without text, logos, numbers or borders. Card concept: \"The Mapmaker\", from the \"Forbidden Knowledge\" series of All American Meltdown. Invent a highly distinctive scene or character literally evoking this title in a quiet abandoned American town reclaimed by nature. Vintage hand-painted pulp comic art with intricate details, expressive silhouettes, cinematic lighting, rich muted colors, distressed printed paper. Vary the composition to suit the subject: environmental scenes, still-life objects or character portraits. All scenes peaceful, no injury, blood, cruelty or fighting; weapons if any are inert display objects. Specific visual theme must match this particular card title, not a generic repeat."
+    },
+    {
+      "id": "card_053",
+      "name": "Radio Scholar",
+      "prompt": "One original collectible card illustration. Portrait 2:3, full-bleed image without text, logos, numbers or borders. Card concept: \"Radio Scholar\", from the \"Forbidden Knowledge\" series of All American Meltdown. Invent a highly distinctive scene or character literally evoking this title in a quiet abandoned American town reclaimed by nature. Vintage hand-painted pulp comic art with intricate details, expressive silhouettes, cinematic lighting, rich muted colors, distressed printed paper. Vary the composition to suit the subject: environmental scenes, still-life objects or character portraits. All scenes peaceful, no injury, blood, cruelty or fighting; weapons if any are inert display objects. Specific visual theme must match this particular card title, not a generic repeat."
+    },
+    {
+      "id": "card_054",
+      "name": "Basement Archivist",
+      "prompt": "One original collectible card illustration. Portrait 2:3, full-bleed image without text, logos, numbers or borders. Card concept: \"Basement Archivist\", from the \"Forbidden Knowledge\" series of All American Meltdown. Invent a highly distinctive scene or character literally evoking this title in a quiet abandoned American town reclaimed by nature. Vintage hand-painted pulp comic art with intricate details, expressive silhouettes, cinematic lighting, rich muted colors, distressed printed paper. Vary the composition to suit the subject: environmental scenes, still-life objects or character portraits. All scenes peaceful, no injury, blood, cruelty or fighting; weapons if any are inert display objects. Specific visual theme must match this particular card title, not a generic repeat."
+    },
+    {
+      "id": "card_055",
+      "name": "Forgotten Classroom",
+      "prompt": "One original collectible card illustration. Portrait 2:3, full-bleed image without text, logos, numbers or borders. Card concept: \"Forgotten Classroom\", from the \"Forbidden Knowledge\" series of All American Meltdown. Invent a highly distinctive scene or character literally evoking this title in a quiet abandoned American town reclaimed by nature. Vintage hand-painted pulp comic art with intricate details, expressive silhouettes, cinematic lighting, rich muted colors, distressed printed paper. Vary the composition to suit the subject: environmental scenes, still-life objects or character portraits. All scenes peaceful, no injury, blood, cruelty or fighting; weapons if any are inert display objects. Specific visual theme must match this particular card title, not a generic repeat."
+    },
+    {
+      "id": "card_056",
+      "name": "The Vault Historian",
+      "prompt": "One original collectible card illustration. Portrait 2:3, full-bleed image without text, logos, numbers or borders. Card concept: \"The Vault Historian\", from the \"Forbidden Knowledge\" series of All American Meltdown. Invent a highly distinctive scene or character literally evoking this title in a quiet abandoned American town reclaimed by nature. Vintage hand-painted pulp comic art with intricate details, expressive silhouettes, cinematic lighting, rich muted colors, distressed printed paper. Vary the composition to suit the subject: environmental scenes, still-life objects or character portraits. All scenes peaceful, no injury, blood, cruelty or fighting; weapons if any are inert display objects. Specific visual theme must match this particular card title, not a generic repeat."
+    },
+    {
+      "id": "card_057",
+      "name": "Signal Decoder",
+      "prompt": "One original collectible card illustration. Portrait 2:3, full-bleed image without text, logos, numbers or borders. Card concept: \"Signal Decoder\", from the \"Forbidden Knowledge\" series of All American Meltdown. Invent a highly distinctive scene or character literally evoking this title in a quiet abandoned American town reclaimed by nature. Vintage hand-painted pulp comic art with intricate details, expressive silhouettes, cinematic lighting, rich muted colors, distressed printed paper. Vary the composition to suit the subject: environmental scenes, still-life objects or character portraits. All scenes peaceful, no injury, blood, cruelty or fighting; weapons if any are inert display objects. Specific visual theme must match this particular card title, not a generic repeat."
+    },
+    {
+      "id": "card_058",
+      "name": "The Wandering Professor",
+      "prompt": "One original collectible card illustration. Portrait 2:3, full-bleed image without text, logos, numbers or borders. Card concept: \"The Wandering Professor\", from the \"Forbidden Knowledge\" series of All American Meltdown. Invent a highly distinctive scene or character literally evoking this title in a quiet abandoned American town reclaimed by nature. Vintage hand-painted pulp comic art with intricate details, expressive silhouettes, cinematic lighting, rich muted colors, distressed printed paper. Vary the composition to suit the subject: environmental scenes, still-life objects or character portraits. All scenes peaceful, no injury, blood, cruelty or fighting; weapons if any are inert display objects. Specific visual theme must match this particular card title, not a generic repeat."
+    },
+    {
+      "id": "card_059",
+      "name": "Book of Ashes",
+      "prompt": "One original collectible card illustration. Portrait 2:3, full-bleed image without text, logos, numbers or borders. Card concept: \"Book of Ashes\", from the \"Forbidden Knowledge\" series of All American Meltdown. Invent a highly distinctive scene or character literally evoking this title in a quiet abandoned American town reclaimed by nature. Vintage hand-painted pulp comic art with intricate details, expressive silhouettes, cinematic lighting, rich muted colors, distressed printed paper. Vary the composition to suit the subject: environmental scenes, still-life objects or character portraits. All scenes peaceful, no injury, blood, cruelty or fighting; weapons if any are inert display objects. Specific visual theme must match this particular card title, not a generic repeat."
+    },
+    {
+      "id": "card_060",
+      "name": "The Last Enlightenment",
+      "prompt": "One original collectible card illustration. Portrait 2:3, full-bleed image without text, logos, numbers or borders. Card concept: \"The Last Enlightenment\", from the \"Forbidden Knowledge\" series of All American Meltdown. Invent a highly distinctive scene or character literally evoking this title in a quiet abandoned American town reclaimed by nature. Vintage hand-painted pulp comic art with intricate details, expressive silhouettes, cinematic lighting, rich muted colors, distressed printed paper. Vary the composition to suit the subject: environmental scenes, still-life objects or character portraits. All scenes peaceful, no injury, blood, cruelty or fighting; weapons if any are inert display objects. Specific visual theme must match this particular card title, not a generic repeat."
+    },
+    {
+      "id": "card_061",
+      "name": "Bottlecap Broker",
+      "prompt": "One original collectible card illustration. Portrait 2:3, full-bleed image without text, logos, numbers or borders. Card concept: \"Bottlecap Broker\", from the \"Dust Market\" series of All American Meltdown. Invent a highly distinctive scene or character literally evoking this title in a quiet abandoned American town reclaimed by nature. Vintage hand-painted pulp comic art with intricate details, expressive silhouettes, cinematic lighting, rich muted colors, distressed printed paper. Vary the composition to suit the subject: environmental scenes, still-life objects or character portraits. All scenes peaceful, no injury, blood, cruelty or fighting; weapons if any are inert display objects. Specific visual theme must match this particular card title, not a generic repeat."
+    },
+    {
+      "id": "card_062",
+      "name": "Neon Pawnbroker",
+      "prompt": "One original collectible card illustration. Portrait 2:3, full-bleed image without text, logos, numbers or borders. Card concept: \"Neon Pawnbroker\", from the \"Dust Market\" series of All American Meltdown. Invent a highly distinctive scene or character literally evoking this title in a quiet abandoned American town reclaimed by nature. Vintage hand-painted pulp comic art with intricate details, expressive silhouettes, cinematic lighting, rich muted colors, distressed printed paper. Vary the composition to suit the subject: environmental scenes, still-life objects or character portraits. All scenes peaceful, no injury, blood, cruelty or fighting; weapons if any are inert display objects. Specific visual theme must match this particular card title, not a generic repeat."
+    },
+    {
+      "id": "card_063",
+      "name": "The Robot Trader",
+      "prompt": "One original collectible card illustration. Portrait 2:3, full-bleed image without text, logos, numbers or borders. Card concept: \"The Robot Trader\", from the \"Dust Market\" series of All American Meltdown. Invent a highly distinctive scene or character literally evoking this title in a quiet abandoned American town reclaimed by nature. Vintage hand-painted pulp comic art with intricate details, expressive silhouettes, cinematic lighting, rich muted colors, distressed printed paper. Vary the composition to suit the subject: environmental scenes, still-life objects or character portraits. All scenes peaceful, no injury, blood, cruelty or fighting; weapons if any are inert display objects. Specific visual theme must match this particular card title, not a generic repeat."
+    },
+    {
+      "id": "card_064",
+      "name": "Caravan Accountant",
+      "prompt": "One original collectible card illustration. Portrait 2:3, full-bleed image without text, logos, numbers or borders. Card concept: \"Caravan Accountant\", from the \"Dust Market\" series of All American Meltdown. Invent a highly distinctive scene or character literally evoking this title in a quiet abandoned American town reclaimed by nature. Vintage hand-painted pulp comic art with intricate details, expressive silhouettes, cinematic lighting, rich muted colors, distressed printed paper. Vary the composition to suit the subject: environmental scenes, still-life objects or character portraits. All scenes peaceful, no injury, blood, cruelty or fighting; weapons if any are inert display objects. Specific visual theme must match this particular card title, not a generic repeat."
+    },
+    {
+      "id": "card_065",
+      "name": "Junkyard Jeweler",
+      "prompt": "One original collectible card illustration. Portrait 2:3, full-bleed image without text, logos, numbers or borders. Card concept: \"Junkyard Jeweler\", from the \"Dust Market\" series of All American Meltdown. Invent a highly distinctive scene or character literally evoking this title in a quiet abandoned American town reclaimed by nature. Vintage hand-painted pulp comic art with intricate details, expressive silhouettes, cinematic lighting, rich muted colors, distressed printed paper. Vary the composition to suit the subject: environmental scenes, still-life objects or character portraits. All scenes peaceful, no injury, blood, cruelty or fighting; weapons if any are inert display objects. Specific visual theme must match this particular card title, not a generic repeat."
+    },
+    {
+      "id": "card_066",
+      "name": "The Night Auction",
+      "prompt": "One original collectible card illustration. Portrait 2:3, full-bleed image without text, logos, numbers or borders. Card concept: \"The Night Auction\", from the \"Dust Market\" series of All American Meltdown. Invent a highly distinctive scene or character literally evoking this title in a quiet abandoned American town reclaimed by nature. Vintage hand-painted pulp comic art with intricate details, expressive silhouettes, cinematic lighting, rich muted colors, distressed printed paper. Vary the composition to suit the subject: environmental scenes, still-life objects or character portraits. All scenes peaceful, no injury, blood, cruelty or fighting; weapons if any are inert display objects. Specific visual theme must match this particular card title, not a generic repeat."
+    },
+    {
+      "id": "card_067",
+      "name": "Golden Glovebox",
+      "prompt": "One original collectible card illustration. Portrait 2:3, full-bleed image without text, logos, numbers or borders. Card concept: \"Golden Glovebox\", from the \"Dust Market\" series of All American Meltdown. Invent a highly distinctive scene or character literally evoking this title in a quiet abandoned American town reclaimed by nature. Vintage hand-painted pulp comic art with intricate details, expressive silhouettes, cinematic lighting, rich muted colors, distressed printed paper. Vary the composition to suit the subject: environmental scenes, still-life objects or character portraits. All scenes peaceful, no injury, blood, cruelty or fighting; weapons if any are inert display objects. Specific visual theme must match this particular card title, not a generic repeat."
+    },
+    {
+      "id": "card_068",
+      "name": "Merchant of Echoes",
+      "prompt": "One original collectible card illustration. Portrait 2:3, full-bleed image without text, logos, numbers or borders. Card concept: \"Merchant of Echoes\", from the \"Dust Market\" series of All American Meltdown. Invent a highly distinctive scene or character literally evoking this title in a quiet abandoned American town reclaimed by nature. Vintage hand-painted pulp comic art with intricate details, expressive silhouettes, cinematic lighting, rich muted colors, distressed printed paper. Vary the composition to suit the subject: environmental scenes, still-life objects or character portraits. All scenes peaceful, no injury, blood, cruelty or fighting; weapons if any are inert display objects. Specific visual theme must match this particular card title, not a generic repeat."
+    },
+    {
+      "id": "card_069",
+      "name": "The Credit Baron",
+      "prompt": "One original collectible card illustration. Portrait 2:3, full-bleed image without text, logos, numbers or borders. Card concept: \"The Credit Baron\", from the \"Dust Market\" series of All American Meltdown. Invent a highly distinctive scene or character literally evoking this title in a quiet abandoned American town reclaimed by nature. Vintage hand-painted pulp comic art with intricate details, expressive silhouettes, cinematic lighting, rich muted colors, distressed printed paper. Vary the composition to suit the subject: environmental scenes, still-life objects or character portraits. All scenes peaceful, no injury, blood, cruelty or fighting; weapons if any are inert display objects. Specific visual theme must match this particular card title, not a generic repeat."
+    },
+    {
+      "id": "card_070",
+      "name": "Fortune of the Wastes",
+      "prompt": "One original collectible card illustration. Portrait 2:3, full-bleed image without text, logos, numbers or borders. Card concept: \"Fortune of the Wastes\", from the \"Dust Market\" series of All American Meltdown. Invent a highly distinctive scene or character literally evoking this title in a quiet abandoned American town reclaimed by nature. Vintage hand-painted pulp comic art with intricate details, expressive silhouettes, cinematic lighting, rich muted colors, distressed printed paper. Vary the composition to suit the subject: environmental scenes, still-life objects or character portraits. All scenes peaceful, no injury, blood, cruelty or fighting; weapons if any are inert display objects. Specific visual theme must match this particular card title, not a generic repeat."
+    },
+    {
+      "id": "card_071",
+      "name": "Bandage Botanist",
+      "prompt": "One original collectible card illustration. Portrait 2:3, full-bleed image without text, logos, numbers or borders. Card concept: \"Bandage Botanist\", from the \"Fieldcraft\" series of All American Meltdown. Invent a highly distinctive scene or character literally evoking this title in a quiet abandoned American town reclaimed by nature. Vintage hand-painted pulp comic art with intricate details, expressive silhouettes, cinematic lighting, rich muted colors, distressed printed paper. Vary the composition to suit the subject: environmental scenes, still-life objects or character portraits. All scenes peaceful, no injury, blood, cruelty or fighting; weapons if any are inert display objects. Specific visual theme must match this particular card title, not a generic repeat."
+    },
+    {
+      "id": "card_072",
+      "name": "Rainwater Remedy",
+      "prompt": "One original collectible card illustration. Portrait 2:3, full-bleed image without text, logos, numbers or borders. Card concept: \"Rainwater Remedy\", from the \"Fieldcraft\" series of All American Meltdown. Invent a highly distinctive scene or character literally evoking this title in a quiet abandoned American town reclaimed by nature. Vintage hand-painted pulp comic art with intricate details, expressive silhouettes, cinematic lighting, rich muted colors, distressed printed paper. Vary the composition to suit the subject: environmental scenes, still-life objects or character portraits. All scenes peaceful, no injury, blood, cruelty or fighting; weapons if any are inert display objects. Specific visual theme must match this particular card title, not a generic repeat."
+    },
+    {
+      "id": "card_073",
+      "name": "The Stitch Kit",
+      "prompt": "One original collectible card illustration. Portrait 2:3, full-bleed image without text, logos, numbers or borders. Card concept: \"The Stitch Kit\", from the \"Fieldcraft\" series of All American Meltdown. Invent a highly distinctive scene or character literally evoking this title in a quiet abandoned American town reclaimed by nature. Vintage hand-painted pulp comic art with intricate details, expressive silhouettes, cinematic lighting, rich muted colors, distressed printed paper. Vary the composition to suit the subject: environmental scenes, still-life objects or character portraits. All scenes peaceful, no injury, blood, cruelty or fighting; weapons if any are inert display objects. Specific visual theme must match this particular card title, not a generic repeat."
+    },
+    {
+      "id": "card_074",
+      "name": "Wildflower Tonic",
+      "prompt": "One original collectible card illustration. Portrait 2:3, full-bleed image without text, logos, numbers or borders. Card concept: \"Wildflower Tonic\", from the \"Fieldcraft\" series of All American Meltdown. Invent a highly distinctive scene or character literally evoking this title in a quiet abandoned American town reclaimed by nature. Vintage hand-painted pulp comic art with intricate details, expressive silhouettes, cinematic lighting, rich muted colors, distressed printed paper. Vary the composition to suit the subject: environmental scenes, still-life objects or character portraits. All scenes peaceful, no injury, blood, cruelty or fighting; weapons if any are inert display objects. Specific visual theme must match this particular card title, not a generic repeat."
+    },
+    {
+      "id": "card_075",
+      "name": "The Field Hospital",
+      "prompt": "One original collectible card illustration. Portrait 2:3, full-bleed image without text, logos, numbers or borders. Card concept: \"The Field Hospital\", from the \"Fieldcraft\" series of All American Meltdown. Invent a highly distinctive scene or character literally evoking this title in a quiet abandoned American town reclaimed by nature. Vintage hand-painted pulp comic art with intricate details, expressive silhouettes, cinematic lighting, rich muted colors, distressed printed paper. Vary the composition to suit the subject: environmental scenes, still-life objects or character portraits. All scenes peaceful, no injury, blood, cruelty or fighting; weapons if any are inert display objects. Specific visual theme must match this particular card title, not a generic repeat."
+    },
+    {
+      "id": "card_076",
+      "name": "Mushroom Apothecary",
+      "prompt": "One original collectible card illustration. Portrait 2:3, full-bleed image without text, logos, numbers or borders. Card concept: \"Mushroom Apothecary\", from the \"Fieldcraft\" series of All American Meltdown. Invent a highly distinctive scene or character literally evoking this title in a quiet abandoned American town reclaimed by nature. Vintage hand-painted pulp comic art with intricate details, expressive silhouettes, cinematic lighting, rich muted colors, distressed printed paper. Vary the composition to suit the subject: environmental scenes, still-life objects or character portraits. All scenes peaceful, no injury, blood, cruelty or fighting; weapons if any are inert display objects. Specific visual theme must match this particular card title, not a generic repeat."
+    },
+    {
+      "id": "card_077",
+      "name": "Suture Master",
+      "prompt": "One original collectible card illustration. Portrait 2:3, full-bleed image without text, logos, numbers or borders. Card concept: \"Suture Master\", from the \"Fieldcraft\" series of All American Meltdown. Invent a highly distinctive scene or character literally evoking this title in a quiet abandoned American town reclaimed by nature. Vintage hand-painted pulp comic art with intricate details, expressive silhouettes, cinematic lighting, rich muted colors, distressed printed paper. Vary the composition to suit the subject: environmental scenes, still-life objects or character portraits. All scenes peaceful, no injury, blood, cruelty or fighting; weapons if any are inert display objects. Specific visual theme must match this particular card title, not a generic repeat."
+    },
+    {
+      "id": "card_078",
+      "name": "The Greenhouse Doctor",
+      "prompt": "One original collectible card illustration. Portrait 2:3, full-bleed image without text, logos, numbers or borders. Card concept: \"The Greenhouse Doctor\", from the \"Fieldcraft\" series of All American Meltdown. Invent a highly distinctive scene or character literally evoking this title in a quiet abandoned American town reclaimed by nature. Vintage hand-painted pulp comic art with intricate details, expressive silhouettes, cinematic lighting, rich muted colors, distressed printed paper. Vary the composition to suit the subject: environmental scenes, still-life objects or character portraits. All scenes peaceful, no injury, blood, cruelty or fighting; weapons if any are inert display objects. Specific visual theme must match this particular card title, not a generic repeat."
+    },
+    {
+      "id": "card_079",
+      "name": "Phoenix Medicine",
+      "prompt": "One original collectible card illustration. Portrait 2:3, full-bleed image without text, logos, numbers or borders. Card concept: \"Phoenix Medicine\", from the \"Fieldcraft\" series of All American Meltdown. Invent a highly distinctive scene or character literally evoking this title in a quiet abandoned American town reclaimed by nature. Vintage hand-painted pulp comic art with intricate details, expressive silhouettes, cinematic lighting, rich muted colors, distressed printed paper. Vary the composition to suit the subject: environmental scenes, still-life objects or character portraits. All scenes peaceful, no injury, blood, cruelty or fighting; weapons if any are inert display objects. Specific visual theme must match this particular card title, not a generic repeat."
+    },
+    {
+      "id": "card_080",
+      "name": "The Second Sunrise",
+      "prompt": "One original collectible card illustration. Portrait 2:3, full-bleed image without text, logos, numbers or borders. Card concept: \"The Second Sunrise\", from the \"Fieldcraft\" series of All American Meltdown. Invent a highly distinctive scene or character literally evoking this title in a quiet abandoned American town reclaimed by nature. Vintage hand-painted pulp comic art with intricate details, expressive silhouettes, cinematic lighting, rich muted colors, distressed printed paper. Vary the composition to suit the subject: environmental scenes, still-life objects or character portraits. All scenes peaceful, no injury, blood, cruelty or fighting; weapons if any are inert display objects. Specific visual theme must match this particular card title, not a generic repeat."
+    },
+    {
+      "id": "card_081",
+      "name": "Pocket Mechanic",
+      "prompt": "One original collectible card illustration. Portrait 2:3, full-bleed image without text, logos, numbers or borders. Card concept: \"Pocket Mechanic\", from the \"Quick Hands\" series of All American Meltdown. Invent a highly distinctive scene or character literally evoking this title in a quiet abandoned American town reclaimed by nature. Vintage hand-painted pulp comic art with intricate details, expressive silhouettes, cinematic lighting, rich muted colors, distressed printed paper. Vary the composition to suit the subject: environmental scenes, still-life objects or character portraits. All scenes peaceful, no injury, blood, cruelty or fighting; weapons if any are inert display objects. Specific visual theme must match this particular card title, not a generic repeat."
+    },
+    {
+      "id": "card_082",
+      "name": "Magazine Juggler",
+      "prompt": "One original collectible card illustration. Portrait 2:3, full-bleed image without text, logos, numbers or borders. Card concept: \"Magazine Juggler\", from the \"Quick Hands\" series of All American Meltdown. Invent a highly distinctive scene or character literally evoking this title in a quiet abandoned American town reclaimed by nature. Vintage hand-painted pulp comic art with intricate details, expressive silhouettes, cinematic lighting, rich muted colors, distressed printed paper. Vary the composition to suit the subject: environmental scenes, still-life objects or character portraits. All scenes peaceful, no injury, blood, cruelty or fighting; weapons if any are inert display objects. Specific visual theme must match this particular card title, not a generic repeat."
+    },
+    {
+      "id": "card_083",
+      "name": "The Brass Dancer",
+      "prompt": "One original collectible card illustration. Portrait 2:3, full-bleed image without text, logos, numbers or borders. Card concept: \"The Brass Dancer\", from the \"Quick Hands\" series of All American Meltdown. Invent a highly distinctive scene or character literally evoking this title in a quiet abandoned American town reclaimed by nature. Vintage hand-painted pulp comic art with intricate details, expressive silhouettes, cinematic lighting, rich muted colors, distressed printed paper. Vary the composition to suit the subject: environmental scenes, still-life objects or character portraits. All scenes peaceful, no injury, blood, cruelty or fighting; weapons if any are inert display objects. Specific visual theme must match this particular card title, not a generic repeat."
+    },
+    {
+      "id": "card_084",
+      "name": "Workbench Wizard",
+      "prompt": "One original collectible card illustration. Portrait 2:3, full-bleed image without text, logos, numbers or borders. Card concept: \"Workbench Wizard\", from the \"Quick Hands\" series of All American Meltdown. Invent a highly distinctive scene or character literally evoking this title in a quiet abandoned American town reclaimed by nature. Vintage hand-painted pulp comic art with intricate details, expressive silhouettes, cinematic lighting, rich muted colors, distressed printed paper. Vary the composition to suit the subject: environmental scenes, still-life objects or character portraits. All scenes peaceful, no injury, blood, cruelty or fighting; weapons if any are inert display objects. Specific visual theme must match this particular card title, not a generic repeat."
+    },
+    {
+      "id": "card_085",
+      "name": "Speedloader Sally",
+      "prompt": "One original collectible card illustration. Portrait 2:3, full-bleed image without text, logos, numbers or borders. Card concept: \"Speedloader Sally\", from the \"Quick Hands\" series of All American Meltdown. Invent a highly distinctive scene or character literally evoking this title in a quiet abandoned American town reclaimed by nature. Vintage hand-painted pulp comic art with intricate details, expressive silhouettes, cinematic lighting, rich muted colors, distressed printed paper. Vary the composition to suit the subject: environmental scenes, still-life objects or character portraits. All scenes peaceful, no injury, blood, cruelty or fighting; weapons if any are inert display objects. Specific visual theme must match this particular card title, not a generic repeat."
+    },
+    {
+      "id": "card_086",
+      "name": "The Clockwork Soldier",
+      "prompt": "One original collectible card illustration. Portrait 2:3, full-bleed image without text, logos, numbers or borders. Card concept: \"The Clockwork Soldier\", from the \"Quick Hands\" series of All American Meltdown. Invent a highly distinctive scene or character literally evoking this title in a quiet abandoned American town reclaimed by nature. Vintage hand-painted pulp comic art with intricate details, expressive silhouettes, cinematic lighting, rich muted colors, distressed printed paper. Vary the composition to suit the subject: environmental scenes, still-life objects or character portraits. All scenes peaceful, no injury, blood, cruelty or fighting; weapons if any are inert display objects. Specific visual theme must match this particular card title, not a generic repeat."
+    },
+    {
+      "id": "card_087",
+      "name": "Belt Feed Bandit",
+      "prompt": "One original collectible card illustration. Portrait 2:3, full-bleed image without text, logos, numbers or borders. Card concept: \"Belt Feed Bandit\", from the \"Quick Hands\" series of All American Meltdown. Invent a highly distinctive scene or character literally evoking this title in a quiet abandoned American town reclaimed by nature. Vintage hand-painted pulp comic art with intricate details, expressive silhouettes, cinematic lighting, rich muted colors, distressed printed paper. Vary the composition to suit the subject: environmental scenes, still-life objects or character portraits. All scenes peaceful, no injury, blood, cruelty or fighting; weapons if any are inert display objects. Specific visual theme must match this particular card title, not a generic repeat."
+    },
+    {
+      "id": "card_088",
+      "name": "The Lightning Loader",
+      "prompt": "One original collectible card illustration. Portrait 2:3, full-bleed image without text, logos, numbers or borders. Card concept: \"The Lightning Loader\", from the \"Quick Hands\" series of All American Meltdown. Invent a highly distinctive scene or character literally evoking this title in a quiet abandoned American town reclaimed by nature. Vintage hand-painted pulp comic art with intricate details, expressive silhouettes, cinematic lighting, rich muted colors, distressed printed paper. Vary the composition to suit the subject: environmental scenes, still-life objects or character portraits. All scenes peaceful, no injury, blood, cruelty or fighting; weapons if any are inert display objects. Specific visual theme must match this particular card title, not a generic repeat."
+    },
+    {
+      "id": "card_089",
+      "name": "Hands of Mercury",
+      "prompt": "One original collectible card illustration. Portrait 2:3, full-bleed image without text, logos, numbers or borders. Card concept: \"Hands of Mercury\", from the \"Quick Hands\" series of All American Meltdown. Invent a highly distinctive scene or character literally evoking this title in a quiet abandoned American town reclaimed by nature. Vintage hand-painted pulp comic art with intricate details, expressive silhouettes, cinematic lighting, rich muted colors, distressed printed paper. Vary the composition to suit the subject: environmental scenes, still-life objects or character portraits. All scenes peaceful, no injury, blood, cruelty or fighting; weapons if any are inert display objects. Specific visual theme must match this particular card title, not a generic repeat."
+    },
+    {
+      "id": "card_090",
+      "name": "The Final Chamber",
+      "prompt": "One original collectible card illustration. Portrait 2:3, full-bleed image without text, logos, numbers or borders. Card concept: \"The Final Chamber\", from the \"Quick Hands\" series of All American Meltdown. Invent a highly distinctive scene or character literally evoking this title in a quiet abandoned American town reclaimed by nature. Vintage hand-painted pulp comic art with intricate details, expressive silhouettes, cinematic lighting, rich muted colors, distressed printed paper. Vary the composition to suit the subject: environmental scenes, still-life objects or character portraits. All scenes peaceful, no injury, blood, cruelty or fighting; weapons if any are inert display objects. Specific visual theme must match this particular card title, not a generic repeat."
+    },
+    {
+      "id": "card_091",
+      "name": "Campfire Keeper",
+      "prompt": "One original collectible card illustration. Portrait 2:3, full-bleed image without text, logos, numbers or borders. Card concept: \"Campfire Keeper\", from the \"Trailblazers\" series of All American Meltdown. Invent a highly distinctive scene or character literally evoking this title in a quiet abandoned American town reclaimed by nature. Vintage hand-painted pulp comic art with intricate details, expressive silhouettes, cinematic lighting, rich muted colors, distressed printed paper. Vary the composition to suit the subject: environmental scenes, still-life objects or character portraits. All scenes peaceful, no injury, blood, cruelty or fighting; weapons if any are inert display objects. Specific visual theme must match this particular card title, not a generic repeat."
+    },
+    {
+      "id": "card_092",
+      "name": "Quiet River",
+      "prompt": "One original collectible card illustration. Portrait 2:3, full-bleed image without text, logos, numbers or borders. Card concept: \"Quiet River\", from the \"Trailblazers\" series of All American Meltdown. Invent a highly distinctive scene or character literally evoking this title in a quiet abandoned American town reclaimed by nature. Vintage hand-painted pulp comic art with intricate details, expressive silhouettes, cinematic lighting, rich muted colors, distressed printed paper. Vary the composition to suit the subject: environmental scenes, still-life objects or character portraits. All scenes peaceful, no injury, blood, cruelty or fighting; weapons if any are inert display objects. Specific visual theme must match this particular card title, not a generic repeat."
+    },
+    {
+      "id": "card_093",
+      "name": "The Sleeping Giant",
+      "prompt": "One original collectible card illustration. Portrait 2:3, full-bleed image without text, logos, numbers or borders. Card concept: \"The Sleeping Giant\", from the \"Trailblazers\" series of All American Meltdown. Invent a highly distinctive scene or character literally evoking this title in a quiet abandoned American town reclaimed by nature. Vintage hand-painted pulp comic art with intricate details, expressive silhouettes, cinematic lighting, rich muted colors, distressed printed paper. Vary the composition to suit the subject: environmental scenes, still-life objects or character portraits. All scenes peaceful, no injury, blood, cruelty or fighting; weapons if any are inert display objects. Specific visual theme must match this particular card title, not a generic repeat."
+    },
+    {
+      "id": "card_094",
+      "name": "Coffee at Dawn",
+      "prompt": "One original collectible card illustration. Portrait 2:3, full-bleed image without text, logos, numbers or borders. Card concept: \"Coffee at Dawn\", from the \"Trailblazers\" series of All American Meltdown. Invent a highly distinctive scene or character literally evoking this title in a quiet abandoned American town reclaimed by nature. Vintage hand-painted pulp comic art with intricate details, expressive silhouettes, cinematic lighting, rich muted colors, distressed printed paper. Vary the composition to suit the subject: environmental scenes, still-life objects or character portraits. All scenes peaceful, no injury, blood, cruelty or fighting; weapons if any are inert display objects. Specific visual theme must match this particular card title, not a generic repeat."
+    },
+    {
+      "id": "card_095",
+      "name": "The Rest Stop",
+      "prompt": "One original collectible card illustration. Portrait 2:3, full-bleed image without text, logos, numbers or borders. Card concept: \"The Rest Stop\", from the \"Trailblazers\" series of All American Meltdown. Invent a highly distinctive scene or character literally evoking this title in a quiet abandoned American town reclaimed by nature. Vintage hand-painted pulp comic art with intricate details, expressive silhouettes, cinematic lighting, rich muted colors, distressed printed paper. Vary the composition to suit the subject: environmental scenes, still-life objects or character portraits. All scenes peaceful, no injury, blood, cruelty or fighting; weapons if any are inert display objects. Specific visual theme must match this particular card title, not a generic repeat."
+    },
+    {
+      "id": "card_096",
+      "name": "Mountain Refuge",
+      "prompt": "One original collectible card illustration. Portrait 2:3, full-bleed image without text, logos, numbers or borders. Card concept: \"Mountain Refuge\", from the \"Trailblazers\" series of All American Meltdown. Invent a highly distinctive scene or character literally evoking this title in a quiet abandoned American town reclaimed by nature. Vintage hand-painted pulp comic art with intricate details, expressive silhouettes, cinematic lighting, rich muted colors, distressed printed paper. Vary the composition to suit the subject: environmental scenes, still-life objects or character portraits. All scenes peaceful, no injury, blood, cruelty or fighting; weapons if any are inert display objects. Specific visual theme must match this particular card title, not a generic repeat."
+    },
+    {
+      "id": "card_097",
+      "name": "Warm Hearth",
+      "prompt": "One original collectible card illustration. Portrait 2:3, full-bleed image without text, logos, numbers or borders. Card concept: \"Warm Hearth\", from the \"Trailblazers\" series of All American Meltdown. Invent a highly distinctive scene or character literally evoking this title in a quiet abandoned American town reclaimed by nature. Vintage hand-painted pulp comic art with intricate details, expressive silhouettes, cinematic lighting, rich muted colors, distressed printed paper. Vary the composition to suit the subject: environmental scenes, still-life objects or character portraits. All scenes peaceful, no injury, blood, cruelty or fighting; weapons if any are inert display objects. Specific visual theme must match this particular card title, not a generic repeat."
+    },
+    {
+      "id": "card_098",
+      "name": "The Oasis Keeper",
+      "prompt": "One original collectible card illustration. Portrait 2:3, full-bleed image without text, logos, numbers or borders. Card concept: \"The Oasis Keeper\", from the \"Trailblazers\" series of All American Meltdown. Invent a highly distinctive scene or character literally evoking this title in a quiet abandoned American town reclaimed by nature. Vintage hand-painted pulp comic art with intricate details, expressive silhouettes, cinematic lighting, rich muted colors, distressed printed paper. Vary the composition to suit the subject: environmental scenes, still-life objects or character portraits. All scenes peaceful, no injury, blood, cruelty or fighting; weapons if any are inert display objects. Specific visual theme must match this particular card title, not a generic repeat."
+    },
+    {
+      "id": "card_099",
+      "name": "Spirit of the Trail",
+      "prompt": "One original collectible card illustration. Portrait 2:3, full-bleed image without text, logos, numbers or borders. Card concept: \"Spirit of the Trail\", from the \"Trailblazers\" series of All American Meltdown. Invent a highly distinctive scene or character literally evoking this title in a quiet abandoned American town reclaimed by nature. Vintage hand-painted pulp comic art with intricate details, expressive silhouettes, cinematic lighting, rich muted colors, distressed printed paper. Vary the composition to suit the subject: environmental scenes, still-life objects or character portraits. All scenes peaceful, no injury, blood, cruelty or fighting; weapons if any are inert display objects. Specific visual theme must match this particular card title, not a generic repeat."
+    },
+    {
+      "id": "card_100",
+      "name": "The Eternal Campfire",
+      "prompt": "One original collectible card illustration. Portrait 2:3, full-bleed image without text, logos, numbers or borders. Card concept: \"The Eternal Campfire\", from the \"Trailblazers\" series of All American Meltdown. Invent a highly distinctive scene or character literally evoking this title in a quiet abandoned American town reclaimed by nature. Vintage hand-painted pulp comic art with intricate details, expressive silhouettes, cinematic lighting, rich muted colors, distressed printed paper. Vary the composition to suit the subject: environmental scenes, still-life objects or character portraits. All scenes peaceful, no injury, blood, cruelty or fighting; weapons if any are inert display objects. Specific visual theme must match this particular card title, not a generic repeat."
+    }
+  ]
+}

@@ -1,0 +1,393 @@
+{
+  "assets": [
+    {
+      "name": "LockerV4",
+      "fbx": "SM_LockerV4.fbx",
+      "asset": "/Game/Art/Meshes/SM_LockerV4",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.36,
+          -0.3875,
+          0.0
+        ],
+        "max": [
+          0.36,
+          0.3,
+          1.85
+        ],
+        "size": [
+          0.72,
+          0.6875,
+          1.85
+        ]
+      },
+      "triangles": 208,
+      "vertices": 128,
+      "material_slots": [
+        "M_Rubber",
+        "M_Rust",
+        "M_Steel"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "FridgeV4",
+      "fbx": "SM_FridgeV4.fbx",
+      "asset": "/Game/Art/Meshes/SM_FridgeV4",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.39,
+          -0.435,
+          0.0
+        ],
+        "max": [
+          0.39,
+          0.34,
+          1.72
+        ],
+        "size": [
+          0.78,
+          0.775,
+          1.72
+        ]
+      },
+      "triangles": 136,
+      "vertices": 80,
+      "material_slots": [
+        "M_Bone",
+        "M_Rubber",
+        "M_Rust",
+        "M_Steel"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "StoveV4",
+      "fbx": "SM_StoveV4.fbx",
+      "asset": "/Game/Art/Meshes/SM_StoveV4",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.44,
+          -0.47,
+          0.0
+        ],
+        "max": [
+          0.44,
+          0.36,
+          0.965
+        ],
+        "size": [
+          0.88,
+          0.83,
+          0.965
+        ]
+      },
+      "triangles": 640,
+      "vertices": 336,
+      "material_slots": [
+        "M_Bone",
+        "M_Rubber",
+        "M_Rust",
+        "M_Steel"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "RadioV4",
+      "fbx": "SM_RadioV4.fbx",
+      "asset": "/Game/Art/Meshes/SM_RadioV4",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.6,
+          -0.415,
+          0.0
+        ],
+        "max": [
+          0.6,
+          0.325,
+          2.0
+        ],
+        "size": [
+          1.2,
+          0.74,
+          2.0
+        ]
+      },
+      "triangles": 376,
+      "vertices": 220,
+      "material_slots": [
+        "M_Bone",
+        "M_Glow",
+        "M_Rubber",
+        "M_Rust",
+        "M_Steel"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "WorkbenchV4",
+      "fbx": "SM_WorkbenchV4.fbx",
+      "asset": "/Game/Art/Meshes/SM_WorkbenchV4",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.865,
+          -0.44,
+          0.0
+        ],
+        "max": [
+          0.865,
+          0.44,
+          1.235
+        ],
+        "size": [
+          1.73,
+          0.88,
+          1.235
+        ]
+      },
+      "triangles": 196,
+      "vertices": 120,
+      "material_slots": [
+        "M_Rubber",
+        "M_Rust",
+        "M_Steel",
+        "M_Wood"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "SinkV4",
+      "fbx": "SM_SinkV4.fbx",
+      "asset": "/Game/Art/Meshes/SM_SinkV4",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.395,
+          -0.32,
+          0.0
+        ],
+        "max": [
+          0.395,
+          0.32,
+          1.223
+        ],
+        "size": [
+          0.79,
+          0.64,
+          1.223
+        ]
+      },
+      "triangles": 152,
+      "vertices": 88,
+      "material_slots": [
+        "M_Bone",
+        "M_Rubber",
+        "M_Rust",
+        "M_Steel"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "ToiletV4",
+      "fbx": "SM_ToiletV4.fbx",
+      "asset": "/Game/Art/Meshes/SM_ToiletV4",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.24,
+          -0.4,
+          0.04
+        ],
+        "max": [
+          0.24,
+          0.29,
+          0.885
+        ],
+        "size": [
+          0.48,
+          0.69,
+          0.845
+        ]
+      },
+      "triangles": 196,
+      "vertices": 104,
+      "material_slots": [
+        "M_Bone"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    }
+  ]
+}

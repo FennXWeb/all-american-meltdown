@@ -1,0 +1,15 @@
+# Rarity colors, injuries, ragdoll forces and vehicle dents
+
+Weapons use a consistent five-color palette: common white, uncommon green, rare blue, epic purple, legendary gold. Colors appear on inventory borders and item labels, equipment labels, the inspection title and the equipped-weapon HUD. Rarity names remain visible in the inspector/HUD.
+
+Enemy body segments now provide precise query-only hitboxes. Limbs detach while enemies remain alive. Limb hits apply 55% of their damage to overall health while retaining full local severing damage. One missing leg produces a hobble or crawl; two missing legs force a low crawl with a reduced capsule and step height. Arm loss slows attacks and reloads. Raiders can continue firing slowly without the support arm, but losing the right trigger arm hides/disables their firearm and forces close-range attacks. Armless enemies can make weak, slow close-range attacks.
+
+Head loss starts a randomized 3–10 second headless movement period, then collapses into a ragdoll and credits the original attacker. Missing parts are excluded from animation and death constraints. Shooting an already detached limb moves that limb without damaging its living former owner. Companions and friendly residents retain their existing recoverable injury system.
+
+Dead bodies accept repeated car impacts, bullets and explosion forces. Velocity transfer scales with body mass and distance from the contact; localized impulses produce torque. Sleeping bodies wake when struck, CCD limits tunneling, and angular speed is capped. Detached parts remain independent after death. Corpses now persist for 30 seconds.
+
+Car dents deform actual body mesh vertices around saved local impact points. Broad low-poly panels are subdivided for localized crumpling, and normals/tangents are recalculated. Bullet hits, crashes and pedestrian impacts create bounded dents. The original chassis collision shape and cabin controls remain intact. Materials and wetness are retained. Rapid repeated hits batch geometry updates to avoid rebuilding for every pellet or bullet. Up to 12 impact regions persist in the vehicle record and reconstruct when the vehicle loads. Wrecked dented shells use rust materials.
+
+Tools/build_v23_content.py enables CPU geometry access for all vehicle shells so deformation works in a user-packaged build. Tools/VerifyInjury23.ps1 imports this setting and runs automation plus offscreen injury/dent checks. No packaging is performed.
+
+Validation completed: Editor build succeeded (Saved/Build23h.log). All 48 automation tests passed (Saved/Injury23_VerifiedAutomation.log; exported report in Saved/Injury23Report). All 32 final gameplay assertions passed (Saved/Injury23_FinalPose.log), including actual crawler movement, timed headless collapse, repeated vehicle contact and corpse acceleration, geometry deformation and reconstruction, bounded dent history, and existing impact safeguards. Visual captures inspected: Injury23_Rarities.png, Injury23_Dents.png and Injury23_Crawler.png in Saved/ScreenshotsV17. No packaging performed.

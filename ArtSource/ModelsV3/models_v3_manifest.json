@@ -1,0 +1,1312 @@
+{
+  "assets": [
+    {
+      "name": "POIDoor",
+      "fbx": "SM_POIDoor.fbx",
+      "asset": "/Game/Art/Meshes/SM_POIDoor",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.028532,
+          -0.12,
+          0.0
+        ],
+        "max": [
+          1.6,
+          0.12,
+          2.36
+        ],
+        "size": [
+          1.628532,
+          0.24,
+          2.36
+        ]
+      },
+      "triangles": 336,
+      "vertices": 192,
+      "material_slots": [
+        "M_Rust",
+        "M_Steel",
+        "M_Wood"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "Hinge yaw 0 to 100 degrees",
+      "sockets_m": {}
+    },
+    {
+      "name": "SignFrameV3",
+      "fbx": "SM_SignFrameV3.fbx",
+      "asset": "/Game/Art/Meshes/SM_SignFrameV3",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.39,
+          -1.06,
+          -0.56
+        ],
+        "max": [
+          0.078,
+          1.06,
+          0.56
+        ],
+        "size": [
+          0.468,
+          2.12,
+          1.12
+        ]
+      },
+      "triangles": 196,
+      "vertices": 120,
+      "material_slots": [
+        "M_Rust",
+        "M_Steel"
+      ],
+      "boundary_edges": 0,
+      "collision": "none",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "SignMarqueeV3",
+      "fbx": "SM_SignMarqueeV3.fbx",
+      "asset": "/Game/Art/Meshes/SM_SignMarqueeV3",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.39,
+          -1.2,
+          -0.56
+        ],
+        "max": [
+          0.16,
+          1.2,
+          0.68
+        ],
+        "size": [
+          0.55,
+          2.4,
+          1.24
+        ]
+      },
+      "triangles": 1888,
+      "vertices": 988,
+      "material_slots": [
+        "M_Glow",
+        "M_Red",
+        "M_Rust",
+        "M_Steel"
+      ],
+      "boundary_edges": 0,
+      "collision": "none",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "SignPylonV3",
+      "fbx": "SM_SignPylonV3.fbx",
+      "asset": "/Game/Art/Meshes/SM_SignPylonV3",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.39,
+          -1.06,
+          -2.5
+        ],
+        "max": [
+          0.078,
+          1.06,
+          0.56
+        ],
+        "size": [
+          0.468,
+          2.12,
+          3.06
+        ]
+      },
+      "triangles": 220,
+      "vertices": 136,
+      "material_slots": [
+        "M_Rust",
+        "M_Steel"
+      ],
+      "boundary_edges": 0,
+      "collision": "none",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "ClinicBedV3",
+      "fbx": "SM_ClinicBedV3.fbx",
+      "asset": "/Game/Art/Meshes/SM_ClinicBedV3",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.975,
+          -0.607119,
+          0.0
+        ],
+        "max": [
+          0.975,
+          0.607119,
+          0.878
+        ],
+        "size": [
+          1.95,
+          1.214238,
+          0.878
+        ]
+      },
+      "triangles": 328,
+      "vertices": 184,
+      "material_slots": [
+        "M_Bone",
+        "M_Cloth",
+        "M_Steel"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "MotelBedV3",
+      "fbx": "SM_MotelBedV3.fbx",
+      "asset": "/Game/Art/Meshes/SM_MotelBedV3",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.975,
+          -0.607119,
+          0.0
+        ],
+        "max": [
+          0.975,
+          0.607119,
+          0.878
+        ],
+        "size": [
+          1.95,
+          1.214238,
+          0.878
+        ]
+      },
+      "triangles": 328,
+      "vertices": 184,
+      "material_slots": [
+        "M_Bone",
+        "M_Cloth",
+        "M_Red",
+        "M_Steel"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "ChairV3",
+      "fbx": "SM_ChairV3.fbx",
+      "asset": "/Game/Art/Meshes/SM_ChairV3",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.325,
+          -0.3,
+          0.0
+        ],
+        "max": [
+          0.32,
+          0.3,
+          1.19
+        ],
+        "size": [
+          0.645,
+          0.6,
+          1.19
+        ]
+      },
+      "triangles": 232,
+      "vertices": 128,
+      "material_slots": [
+        "M_Red",
+        "M_Steel"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "CabinetV3",
+      "fbx": "SM_CabinetV3.fbx",
+      "asset": "/Game/Art/Meshes/SM_CabinetV3",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.79,
+          -0.381413,
+          0.01
+        ],
+        "max": [
+          0.79,
+          0.345,
+          0.985
+        ],
+        "size": [
+          1.58,
+          0.726413,
+          0.975
+        ]
+      },
+      "triangles": 568,
+      "vertices": 312,
+      "material_slots": [
+        "M_Bone",
+        "M_Rust",
+        "M_Steel"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "ServiceBenchV3",
+      "fbx": "SM_ServiceBenchV3.fbx",
+      "asset": "/Game/Art/Meshes/SM_ServiceBenchV3",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.55,
+          -0.485,
+          0.0
+        ],
+        "max": [
+          0.55,
+          0.375,
+          1.4
+        ],
+        "size": [
+          1.1,
+          0.86,
+          1.4
+        ]
+      },
+      "triangles": 596,
+      "vertices": 314,
+      "material_slots": [
+        "M_Bone",
+        "M_Rubber",
+        "M_Rust",
+        "M_Steel"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "RaiderTorso",
+      "fbx": "SM_RaiderTorso.fbx",
+      "asset": "/Game/Art/Meshes/SM_RaiderTorso",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.23,
+          -0.22,
+          -0.47
+        ],
+        "max": [
+          0.215,
+          0.22,
+          0.11
+        ],
+        "size": [
+          0.445,
+          0.44,
+          0.58
+        ]
+      },
+      "triangles": 388,
+      "vertices": 206,
+      "material_slots": [
+        "M_Cloth",
+        "M_Rubber",
+        "M_Rust"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "RaiderHead",
+      "fbx": "SM_RaiderHead.fbx",
+      "asset": "/Game/Art/Meshes/SM_RaiderHead",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.11,
+          -0.1,
+          -0.3
+        ],
+        "max": [
+          0.18,
+          0.1,
+          0.025
+        ],
+        "size": [
+          0.29,
+          0.2,
+          0.325
+        ]
+      },
+      "triangles": 744,
+      "vertices": 384,
+      "material_slots": [
+        "M_Cloth",
+        "M_Glass",
+        "M_Rubber",
+        "M_Skin",
+        "M_Steel"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "RaiderPelvis",
+      "fbx": "SM_RaiderPelvis.fbx",
+      "asset": "/Game/Art/Meshes/SM_RaiderPelvis",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.13,
+          -0.17,
+          -0.19
+        ],
+        "max": [
+          0.13,
+          0.17,
+          0.07
+        ],
+        "size": [
+          0.26,
+          0.34,
+          0.26
+        ]
+      },
+      "triangles": 168,
+      "vertices": 86,
+      "material_slots": [
+        "M_Cloth"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "RaiderArm",
+      "fbx": "SM_RaiderArm.fbx",
+      "asset": "/Game/Art/Meshes/SM_RaiderArm",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.065,
+          -0.065,
+          -0.65
+        ],
+        "max": [
+          0.105,
+          0.065,
+          0.065
+        ],
+        "size": [
+          0.17,
+          0.13,
+          0.715
+        ]
+      },
+      "triangles": 576,
+      "vertices": 298,
+      "material_slots": [
+        "M_Cloth",
+        "M_Rubber"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "RaiderLeg",
+      "fbx": "SM_RaiderLeg.fbx",
+      "asset": "/Game/Art/Meshes/SM_RaiderLeg",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.085,
+          -0.085,
+          -0.87
+        ],
+        "max": [
+          0.16,
+          0.085,
+          0.085
+        ],
+        "size": [
+          0.245,
+          0.17,
+          0.955
+        ]
+      },
+      "triangles": 576,
+      "vertices": 298,
+      "material_slots": [
+        "M_Cloth",
+        "M_Rubber"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "MannequinTorso",
+      "fbx": "SM_MannequinTorso.fbx",
+      "asset": "/Game/Art/Meshes/SM_MannequinTorso",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.145,
+          -0.22,
+          -0.47
+        ],
+        "max": [
+          0.145,
+          0.22,
+          0.11
+        ],
+        "size": [
+          0.29,
+          0.44,
+          0.58
+        ]
+      },
+      "triangles": 168,
+      "vertices": 86,
+      "material_slots": [
+        "M_Bone"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "MannequinHead",
+      "fbx": "SM_MannequinHead.fbx",
+      "asset": "/Game/Art/Meshes/SM_MannequinHead",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.11,
+          -0.1,
+          -0.3
+        ],
+        "max": [
+          0.11,
+          0.1,
+          0.025
+        ],
+        "size": [
+          0.22,
+          0.2,
+          0.325
+        ]
+      },
+      "triangles": 204,
+      "vertices": 106,
+      "material_slots": [
+        "M_Bone",
+        "M_Steel"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "MannequinPelvis",
+      "fbx": "SM_MannequinPelvis.fbx",
+      "asset": "/Game/Art/Meshes/SM_MannequinPelvis",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.13,
+          -0.17,
+          -0.19
+        ],
+        "max": [
+          0.13,
+          0.17,
+          0.07
+        ],
+        "size": [
+          0.26,
+          0.34,
+          0.26
+        ]
+      },
+      "triangles": 168,
+      "vertices": 86,
+      "material_slots": [
+        "M_Bone"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "MannequinArm",
+      "fbx": "SM_MannequinArm.fbx",
+      "asset": "/Game/Art/Meshes/SM_MannequinArm",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.065,
+          -0.065,
+          -0.65
+        ],
+        "max": [
+          0.105,
+          0.065,
+          0.065
+        ],
+        "size": [
+          0.17,
+          0.13,
+          0.715
+        ]
+      },
+      "triangles": 576,
+      "vertices": 298,
+      "material_slots": [
+        "M_Bone",
+        "M_Steel"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "MannequinLeg",
+      "fbx": "SM_MannequinLeg.fbx",
+      "asset": "/Game/Art/Meshes/SM_MannequinLeg",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.085,
+          -0.085,
+          -0.87
+        ],
+        "max": [
+          0.16,
+          0.085,
+          0.085
+        ],
+        "size": [
+          0.245,
+          0.17,
+          0.955
+        ]
+      },
+      "triangles": 576,
+      "vertices": 298,
+      "material_slots": [
+        "M_Bone",
+        "M_Steel"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "DogTorso",
+      "fbx": "SM_DogTorso.fbx",
+      "asset": "/Game/Art/Meshes/SM_DogTorso",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.37,
+          -0.17,
+          -0.2
+        ],
+        "max": [
+          0.37,
+          0.17,
+          0.2
+        ],
+        "size": [
+          0.74,
+          0.34,
+          0.4
+        ]
+      },
+      "triangles": 168,
+      "vertices": 86,
+      "material_slots": [
+        "M_Cloth"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "DogHead",
+      "fbx": "SM_DogHead.fbx",
+      "asset": "/Game/Art/Meshes/SM_DogHead",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.16,
+          -0.147063,
+          -0.14
+        ],
+        "max": [
+          0.29,
+          0.147063,
+          0.251272
+        ],
+        "size": [
+          0.45,
+          0.294127,
+          0.391272
+        ]
+      },
+      "triangles": 800,
+      "vertices": 424,
+      "material_slots": [
+        "M_Bone",
+        "M_Cloth",
+        "M_Red",
+        "M_Skin"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "DogPelvis",
+      "fbx": "SM_DogPelvis.fbx",
+      "asset": "/Game/Art/Meshes/SM_DogPelvis",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.414903,
+          -0.14,
+          -0.17
+        ],
+        "max": [
+          0.17,
+          0.14,
+          0.17
+        ],
+        "size": [
+          0.584903,
+          0.28,
+          0.34
+        ]
+      },
+      "triangles": 208,
+      "vertices": 110,
+      "material_slots": [
+        "M_Cloth"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "DogArm",
+      "fbx": "SM_DogArm.fbx",
+      "asset": "/Game/Art/Meshes/SM_DogArm",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.0807,
+          -0.045,
+          -0.385
+        ],
+        "max": [
+          0.155,
+          0.045,
+          0.012697
+        ],
+        "size": [
+          0.2357,
+          0.09,
+          0.397698
+        ]
+      },
+      "triangles": 240,
+      "vertices": 126,
+      "material_slots": [
+        "M_Cloth",
+        "M_Rubber",
+        "M_Skin"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "DogLeg",
+      "fbx": "SM_DogLeg.fbx",
+      "asset": "/Game/Art/Meshes/SM_DogLeg",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.0807,
+          -0.045,
+          -0.385
+        ],
+        "max": [
+          0.155,
+          0.045,
+          0.012697
+        ],
+        "size": [
+          0.2357,
+          0.09,
+          0.397698
+        ]
+      },
+      "triangles": 240,
+      "vertices": 126,
+      "material_slots": [
+        "M_Cloth",
+        "M_Rubber",
+        "M_Skin"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    }
+  ]
+}

@@ -1,0 +1,443 @@
+{
+  "assets": [
+    {
+      "name": "SentinelTorso51",
+      "fbx": "SM_SentinelTorso51.fbx",
+      "asset": "/Game/Art/Meshes/SM_SentinelTorso51",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.58,
+          -0.95,
+          -0.6
+        ],
+        "max": [
+          0.67,
+          0.95,
+          0.525
+        ],
+        "size": [
+          1.25,
+          1.9,
+          1.125
+        ]
+      },
+      "triangles": 763,
+      "vertices": 425,
+      "material_slots": [
+        "M_CanadaArmor51",
+        "M_CanadaRed51",
+        "M_Rubber",
+        "M_Steel"
+      ],
+      "boundary_edges": 17,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "SentinelHead51",
+      "fbx": "SM_SentinelHead51.fbx",
+      "asset": "/Game/Art/Meshes/SM_SentinelHead51",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.35,
+          -0.43,
+          -0.25
+        ],
+        "max": [
+          0.4,
+          0.438,
+          0.9
+        ],
+        "size": [
+          0.75,
+          0.868,
+          1.15
+        ]
+      },
+      "triangles": 160,
+      "vertices": 88,
+      "material_slots": [
+        "M_CanadaArmor51",
+        "M_Glass",
+        "M_Rubber",
+        "M_Steel"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "SentinelPelvis51",
+      "fbx": "SM_SentinelPelvis51.fbx",
+      "asset": "/Game/Art/Meshes/SM_SentinelPelvis51",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.36,
+          -0.64,
+          -0.45
+        ],
+        "max": [
+          0.47,
+          0.64,
+          0.26
+        ],
+        "size": [
+          0.83,
+          1.28,
+          0.71
+        ]
+      },
+      "triangles": 132,
+      "vertices": 72,
+      "material_slots": [
+        "M_CanadaArmor51"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "SentinelArm51",
+      "fbx": "SM_SentinelArm51.fbx",
+      "asset": "/Game/Art/Meshes/SM_SentinelArm51",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.325,
+          -0.37,
+          -0.94
+        ],
+        "max": [
+          1.535,
+          0.37,
+          0.16306
+        ],
+        "size": [
+          1.86,
+          0.74,
+          1.10306
+        ]
+      },
+      "triangles": 1044,
+      "vertices": 560,
+      "material_slots": [
+        "M_CanadaArmor51",
+        "M_CanadaRed51",
+        "M_Rubber",
+        "M_Steel"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "SentinelLeg51",
+      "fbx": "SM_SentinelLeg51.fbx",
+      "asset": "/Game/Art/Meshes/SM_SentinelLeg51",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.31,
+          -0.385,
+          -1.775
+        ],
+        "max": [
+          0.805,
+          0.385,
+          0.04
+        ],
+        "size": [
+          1.115,
+          0.77,
+          1.815
+        ]
+      },
+      "triangles": 356,
+      "vertices": 192,
+      "material_slots": [
+        "M_CanadaArmor51",
+        "M_Rubber",
+        "M_Steel"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "GuardHelmet51",
+      "fbx": "SM_GuardHelmet51.fbx",
+      "asset": "/Game/Art/Meshes/SM_GuardHelmet51",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.135,
+          -0.135,
+          -0.09
+        ],
+        "max": [
+          0.175,
+          0.135,
+          0.11
+        ],
+        "size": [
+          0.31,
+          0.27,
+          0.2
+        ]
+      },
+      "triangles": 204,
+      "vertices": 112,
+      "material_slots": [
+        "M_CanadaArmor51",
+        "M_Glass",
+        "M_Rubber"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "GuardVest51",
+      "fbx": "SM_GuardVest51.fbx",
+      "asset": "/Game/Art/Meshes/SM_GuardVest51",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.12,
+          -0.185,
+          -0.25
+        ],
+        "max": [
+          0.2075,
+          0.185,
+          0.13
+        ],
+        "size": [
+          0.3275,
+          0.37,
+          0.38
+        ]
+      },
+      "triangles": 176,
+      "vertices": 96,
+      "material_slots": [
+        "M_CanadaArmor51",
+        "M_Cloth"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "LivingPine51",
+      "fbx": "SM_LivingPine51.fbx",
+      "asset": "/Game/Art/Meshes/SM_LivingPine51",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -2.631587,
+          -2.679979,
+          -0.000937
+        ],
+        "max": [
+          2.625308,
+          2.682395,
+          8.099765
+        ],
+        "size": [
+          5.256895,
+          5.362374,
+          8.100702
+        ]
+      },
+      "triangles": 6268,
+      "vertices": 3596,
+      "material_slots": [
+        "M_CanadaLeaf51",
+        "M_Wood"
+      ],
+      "boundary_edges": 192,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    }
+  ]
+}

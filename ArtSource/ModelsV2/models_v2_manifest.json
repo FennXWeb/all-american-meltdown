@@ -1,0 +1,1509 @@
+{
+  "generator": "Tools/make_models_v2.py",
+  "version": 2,
+  "source_units": "metres",
+  "unreal_units": "centimetres",
+  "forward": "+X",
+  "up": "+Z",
+  "side_axis": "+Y",
+  "fbx_axis_forward": "-Y",
+  "fbx_axis_up": "Z",
+  "fbx_geometry_pre_reflection": [1, -1, 1],
+  "import_uniform_scale": 1.0,
+  "coordinate_note": "Same FBX axis/unit flags as make_models.py, plus export-only Y vertex reflection and reversed winding to compensate Unreal handedness. Import with scene and scene-unit conversion on, force_front_x_axis off. Bounds/importer validation must pass before runtime placement. Never multiply scale by 100.",
+  "handedness_note": "Reflection is baked into temporary render and UCX export geometry with identity object transforms. Source Blender geometry, previews, all documented bounds and parent-relative rest transforms remain in canonical +X forward, +Z up coordinates. Unreal handedness conversion restores these coordinates; no actor or component negative scale is required.",
+  "validation_note": "Per-asset Blender roundtrip records predate the export-only handedness correction and describe canonical source geometry. Corrected serialized FBXs passed all 23 bounds, triangle-count, UV-layer and mesh-name checks, including four frame UCX meshes. Main subsequently confirmed all 23 assets passed Unreal bounds/material validation and were saved to Content.",
+  "assets": [
+    {
+      "name": "Revolver",
+      "fbx": "SM_Revolver.fbx",
+      "asset": "/Game/Art/Meshes/SM_Revolver",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.099,
+          -0.0286,
+          -0.165
+        ],
+        "max": [
+          0.345,
+          0.0286,
+          0.113
+        ],
+        "size": [
+          0.444,
+          0.0572,
+          0.278
+        ]
+      },
+      "triangles": 1368,
+      "vertices": 830,
+      "material_slots": [
+        "M_Glow",
+        "M_Red",
+        "M_Rubber",
+        "M_Rust",
+        "M_Steel",
+        "M_Wood"
+      ],
+      "boundary_edges": 0,
+      "collision": "none",
+      "animation": "",
+      "sockets_m": {
+        "muzzle": [
+          0.345,
+          0,
+          0.045
+        ],
+        "right_wrist": [
+          -0.102,
+          0.009,
+          -0.188
+        ],
+        "left_wrist": [
+          -0.065,
+          -0.07,
+          -0.183
+        ]
+      },
+      "fbx_roundtrip": {
+        "passed": true,
+        "max_bound_error_m": 1e-08
+      }
+    },
+    {
+      "name": "RevolverCylinder",
+      "fbx": "SM_RevolverCylinder.fbx",
+      "asset": "/Game/Art/Meshes/SM_RevolverCylinder",
+      "parent": "Revolver",
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0.08,
+        0,
+        0.045
+      ],
+      "rest_location_cm": [
+        8.0,
+        0,
+        4.5
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.038,
+          -0.042,
+          -0.042
+        ],
+        "max": [
+          0.039,
+          0.042,
+          0.042
+        ],
+        "size": [
+          0.077,
+          0.084,
+          0.084
+        ]
+      },
+      "triangles": 932,
+      "vertices": 504,
+      "material_slots": [
+        "M_Bone",
+        "M_Rust",
+        "M_Steel"
+      ],
+      "boundary_edges": 0,
+      "collision": "none",
+      "animation": "Spin about local X in 60-degree steps. For swing-out, add a crane parent at (8,-3.6,-0.5) cm on Revolver; cylinder rest relative to crane is (0,3.6,5) cm. Rotate the crane about X; do not spin the entire revolver.",
+      "sockets_m": {},
+      "fbx_roundtrip": {
+        "passed": true,
+        "max_bound_error_m": 1e-08
+      }
+    },
+    {
+      "name": "Sniper",
+      "fbx": "SM_Sniper.fbx",
+      "asset": "/Game/Art/Meshes/SM_Sniper",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.494,
+          -0.05118,
+          -0.131
+        ],
+        "max": [
+          0.923,
+          0.05118,
+          0.187
+        ],
+        "size": [
+          1.417,
+          0.10236,
+          0.318
+        ]
+      },
+      "triangles": 3052,
+      "vertices": 1706,
+      "material_slots": [
+        "M_Cloth",
+        "M_Glass",
+        "M_Red",
+        "M_Rubber",
+        "M_Rust",
+        "M_Steel",
+        "M_Wood"
+      ],
+      "boundary_edges": 0,
+      "collision": "none",
+      "animation": "",
+      "sockets_m": {
+        "muzzle": [
+          0.923,
+          0,
+          0.043
+        ],
+        "right_wrist": [
+          -0.25,
+          0.005,
+          -0.139
+        ],
+        "left_wrist": [
+          0.32,
+          -0.035,
+          -0.09
+        ],
+        "sight": [
+          -0.19,
+          0,
+          0.138
+        ]
+      },
+      "fbx_roundtrip": {
+        "passed": true,
+        "max_bound_error_m": 5e-08
+      }
+    },
+    {
+      "name": "SniperBolt",
+      "fbx": "SM_SniperBolt.fbx",
+      "asset": "/Game/Art/Meshes/SM_SniperBolt",
+      "parent": "Sniper",
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0.02,
+        0,
+        0.04
+      ],
+      "rest_location_cm": [
+        2.0,
+        0,
+        4.0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.101,
+          -0.020923,
+          -0.051163
+        ],
+        "max": [
+          0.12,
+          0.093315,
+          0.022
+        ],
+        "size": [
+          0.221,
+          0.114238,
+          0.073163
+        ]
+      },
+      "triangles": 172,
+      "vertices": 96,
+      "material_slots": [
+        "M_Rubber",
+        "M_Steel"
+      ],
+      "boundary_edges": 0,
+      "collision": "none",
+      "animation": "Unlock by rotating +60 degrees about local X, then translate -9 cm local X. Reverse translation, then rotation to lock. Bolt and handle share the bore-axis pivot.",
+      "sockets_m": {},
+      "fbx_roundtrip": {
+        "passed": true,
+        "max_bound_error_m": 3.7e-07
+      }
+    },
+    {
+      "name": "SniperMag",
+      "fbx": "SM_SniperMag.fbx",
+      "asset": "/Game/Art/Meshes/SM_SniperMag",
+      "parent": "Sniper",
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0.07,
+        0,
+        -0.047
+      ],
+      "rest_location_cm": [
+        7.0,
+        0,
+        -4.7
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.03476,
+          -0.01989,
+          -0.096
+        ],
+        "max": [
+          0.04276,
+          0.01989,
+          0.02
+        ],
+        "size": [
+          0.07752,
+          0.03978,
+          0.116
+        ]
+      },
+      "triangles": 432,
+      "vertices": 276,
+      "material_slots": [
+        "M_Bone",
+        "M_Red",
+        "M_Rubber",
+        "M_Rust",
+        "M_Steel"
+      ],
+      "boundary_edges": 0,
+      "collision": "none",
+      "animation": "Origin is the top seating point. Remove along local -Z; use 16 cm travel (SniperMag: 11 cm) before tilting. Reinsert to the exact rest transform.",
+      "sockets_m": {},
+      "fbx_roundtrip": {
+        "passed": true,
+        "max_bound_error_m": 1e-08
+      }
+    },
+    {
+      "name": "SMG",
+      "fbx": "SM_SMG.fbx",
+      "asset": "/Game/Art/Meshes/SM_SMG",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.3305,
+          -0.069,
+          -0.165
+        ],
+        "max": [
+          0.373,
+          0.04,
+          0.098
+        ],
+        "size": [
+          0.7035,
+          0.109,
+          0.263
+        ]
+      },
+      "triangles": 2724,
+      "vertices": 1584,
+      "material_slots": [
+        "M_Bone",
+        "M_Glow",
+        "M_Red",
+        "M_Rubber",
+        "M_Rust",
+        "M_Steel"
+      ],
+      "boundary_edges": 0,
+      "collision": "none",
+      "animation": "",
+      "sockets_m": {
+        "muzzle": [
+          0.373,
+          0,
+          0.019
+        ],
+        "right_wrist": [
+          -0.14,
+          0.007,
+          -0.184
+        ],
+        "left_wrist": [
+          0.205,
+          -0.04,
+          -0.065
+        ]
+      },
+      "fbx_roundtrip": {
+        "passed": true,
+        "max_bound_error_m": 1e-08
+      }
+    },
+    {
+      "name": "SMGMag",
+      "fbx": "SM_SMGMag.fbx",
+      "asset": "/Game/Art/Meshes/SM_SMGMag",
+      "parent": "SMG",
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0.084,
+        0,
+        -0.047
+      ],
+      "rest_location_cm": [
+        8.4,
+        0,
+        -4.7
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.0175,
+          -0.016,
+          -0.188
+        ],
+        "max": [
+          0.02695,
+          0.016,
+          0.02
+        ],
+        "size": [
+          0.04445,
+          0.032,
+          0.208
+        ]
+      },
+      "triangles": 432,
+      "vertices": 276,
+      "material_slots": [
+        "M_Bone",
+        "M_Red",
+        "M_Rubber",
+        "M_Rust",
+        "M_Steel"
+      ],
+      "boundary_edges": 0,
+      "collision": "none",
+      "animation": "Origin is the top seating point. Remove along local -Z; use 16 cm travel (SniperMag: 11 cm) before tilting. Reinsert to the exact rest transform.",
+      "sockets_m": {},
+      "fbx_roundtrip": {
+        "passed": true,
+        "max_bound_error_m": 2e-08
+      }
+    },
+    {
+      "name": "Rifle",
+      "fbx": "SM_Rifle.fbx",
+      "asset": "/Game/Art/Meshes/SM_Rifle",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.417,
+          -0.0665,
+          -0.165
+        ],
+        "max": [
+          0.644,
+          0.047,
+          0.113
+        ],
+        "size": [
+          1.061,
+          0.1135,
+          0.278
+        ]
+      },
+      "triangles": 4564,
+      "vertices": 2634,
+      "material_slots": [
+        "M_Bone",
+        "M_Glow",
+        "M_Red",
+        "M_Rubber",
+        "M_Rust",
+        "M_Steel"
+      ],
+      "boundary_edges": 0,
+      "collision": "none",
+      "animation": "",
+      "sockets_m": {
+        "muzzle": [
+          0.644,
+          0,
+          0.027
+        ],
+        "right_wrist": [
+          -0.14,
+          0.005,
+          -0.183
+        ],
+        "left_wrist": [
+          0.299,
+          -0.035,
+          -0.11
+        ]
+      },
+      "fbx_roundtrip": {
+        "passed": true,
+        "max_bound_error_m": 3e-08
+      }
+    },
+    {
+      "name": "RifleMag",
+      "fbx": "SM_RifleMag.fbx",
+      "asset": "/Game/Art/Meshes/SM_RifleMag",
+      "parent": "Rifle",
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0.097,
+        0,
+        -0.052
+      ],
+      "rest_location_cm": [
+        9.7,
+        0,
+        -5.2
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.0305,
+          -0.01989,
+          -0.178
+        ],
+        "max": [
+          0.08177,
+          0.01989,
+          0.02
+        ],
+        "size": [
+          0.11227,
+          0.03978,
+          0.198
+        ]
+      },
+      "triangles": 432,
+      "vertices": 276,
+      "material_slots": [
+        "M_Bone",
+        "M_Red",
+        "M_Rubber",
+        "M_Rust",
+        "M_Steel"
+      ],
+      "boundary_edges": 0,
+      "collision": "none",
+      "animation": "Origin is the top seating point. Remove along local -Z; use 16 cm travel (SniperMag: 11 cm) before tilting. Reinsert to the exact rest transform.",
+      "sockets_m": {},
+      "fbx_roundtrip": {
+        "passed": true,
+        "max_bound_error_m": 1e-08
+      }
+    },
+    {
+      "name": "LMG",
+      "fbx": "SM_LMG.fbx",
+      "asset": "/Game/Art/Meshes/SM_LMG",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.435,
+          -0.0865,
+          -0.165
+        ],
+        "max": [
+          0.805,
+          0.090315,
+          0.148986
+        ],
+        "size": [
+          1.24,
+          0.176815,
+          0.313986
+        ]
+      },
+      "triangles": 3120,
+      "vertices": 1774,
+      "material_slots": [
+        "M_Cloth",
+        "M_Glow",
+        "M_Red",
+        "M_Rubber",
+        "M_Rust",
+        "M_Steel",
+        "M_Wood"
+      ],
+      "boundary_edges": 0,
+      "collision": "none",
+      "animation": "",
+      "sockets_m": {
+        "muzzle": [
+          0.805,
+          0,
+          0.028
+        ],
+        "right_wrist": [
+          -0.15,
+          0.004,
+          -0.184
+        ],
+        "left_wrist": [
+          0.3,
+          -0.047,
+          -0.111
+        ]
+      },
+      "fbx_roundtrip": {
+        "passed": true,
+        "max_bound_error_m": 1.7e-07
+      }
+    },
+    {
+      "name": "LMGCover",
+      "fbx": "SM_LMGCover.fbx",
+      "asset": "/Game/Art/Meshes/SM_LMGCover",
+      "parent": "LMG",
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0.173,
+        0,
+        0.068
+      ],
+      "rest_location_cm": [
+        17.3,
+        0,
+        6.8
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.2795,
+          -0.057,
+          -0.026
+        ],
+        "max": [
+          0.011413,
+          0.057,
+          0.017
+        ],
+        "size": [
+          0.290913,
+          0.114,
+          0.043
+        ]
+      },
+      "triangles": 356,
+      "vertices": 196,
+      "material_slots": [
+        "M_Bone",
+        "M_Rust",
+        "M_Steel"
+      ],
+      "boundary_edges": 0,
+      "collision": "none",
+      "animation": "Front hinge, local Y axis. Rotate +75 degrees about Y to lift the rear of the lid. In Unreal use FQuat(FVector::YAxisVector, angleRadians).",
+      "sockets_m": {},
+      "fbx_roundtrip": {
+        "passed": true,
+        "max_bound_error_m": 3.2e-07
+      }
+    },
+    {
+      "name": "LMGBelt",
+      "fbx": "SM_LMGBelt.fbx",
+      "asset": "/Game/Art/Meshes/SM_LMGBelt",
+      "parent": "LMG",
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0.063,
+        -0.065,
+        0.021
+      ],
+      "rest_location_cm": [
+        6.3,
+        -6.5,
+        2.1
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.029,
+          -0.1205,
+          -0.058779
+        ],
+        "max": [
+          0.042,
+          0.0072,
+          0.0072
+        ],
+        "size": [
+          0.071,
+          0.1277,
+          0.065979
+        ]
+      },
+      "triangles": 1188,
+      "vertices": 648,
+      "material_slots": [
+        "M_Bone",
+        "M_Rust",
+        "M_Steel"
+      ],
+      "boundary_edges": 0,
+      "collision": "none",
+      "animation": "Rigid nine-round belt segment, not a skinned chain. Feed along local +Y by 1.35 cm per shot and reset after one pitch; hide/swap on depletion. Use multiple instances or a procedural chain for flexible reload deformation.",
+      "sockets_m": {},
+      "fbx_roundtrip": {
+        "passed": true,
+        "max_bound_error_m": 4.3e-07
+      }
+    },
+    {
+      "name": "AmmoBox",
+      "fbx": "SM_AmmoBox.fbx",
+      "asset": "/Game/Art/Meshes/SM_AmmoBox",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.1025,
+          -0.0725,
+          0.0
+        ],
+        "max": [
+          0.1045,
+          0.0725,
+          0.185
+        ],
+        "size": [
+          0.207,
+          0.145,
+          0.185
+        ]
+      },
+      "triangles": 776,
+      "vertices": 472,
+      "material_slots": [
+        "M_Bone",
+        "M_Red",
+        "M_Rubber",
+        "M_Rust",
+        "M_Steel"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "Floor pivot. Suggested LMG-relative location: (6,-14,-22) cm.",
+      "sockets_m": {},
+      "fbx_roundtrip": {
+        "passed": true,
+        "max_bound_error_m": 1e-08
+      }
+    },
+    {
+      "name": "Cartridge",
+      "fbx": "SM_Cartridge.fbx",
+      "asset": "/Game/Art/Meshes/SM_Cartridge",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.0005,
+          -0.005706,
+          -0.006
+        ],
+        "max": [
+          0.066,
+          0.005706,
+          0.006
+        ],
+        "size": [
+          0.0665,
+          0.011413,
+          0.012
+        ]
+      },
+      "triangles": 208,
+      "vertices": 116,
+      "material_slots": [
+        "M_Bone",
+        "M_Rust",
+        "M_Steel"
+      ],
+      "boundary_edges": 0,
+      "collision": "none",
+      "animation": "Primer centre pivot. Projectile points +X. Full cartridge, not an empty casing.",
+      "sockets_m": {},
+      "fbx_roundtrip": {
+        "passed": true,
+        "max_bound_error_m": 3.4e-07
+      }
+    },
+    {
+      "name": "LeftHand",
+      "fbx": "SM_LeftHand.fbx",
+      "asset": "/Game/Art/Meshes/SM_LeftHand",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.129824,
+          -0.04,
+          -0.056133
+        ],
+        "max": [
+          0.116416,
+          0.058693,
+          0.031941
+        ],
+        "size": [
+          0.24624,
+          0.098693,
+          0.088075
+        ]
+      },
+      "triangles": 1276,
+      "vertices": 720,
+      "material_slots": [
+        "M_Bone",
+        "M_Cloth",
+        "M_Rubber",
+        "M_Rust",
+        "M_Steel"
+      ],
+      "boundary_edges": 0,
+      "collision": "none",
+      "animation": "Wrist centre pivot. Neutral grip: fingers +X, knuckles +Z, palm -Z; thumb lies +Y. Sleeve extends -X. Rigid gloved hand with modelled fingers; animate whole component. Weapon socket wrist locations are starting anchors; adjust rotation/position for the final camera and grip.",
+      "sockets_m": {},
+      "fbx_roundtrip": {
+        "passed": true,
+        "max_bound_error_m": 3.4e-07
+      }
+    },
+    {
+      "name": "RightHand",
+      "fbx": "SM_RightHand.fbx",
+      "asset": "/Game/Art/Meshes/SM_RightHand",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.129824,
+          -0.058693,
+          -0.056133
+        ],
+        "max": [
+          0.116416,
+          0.04,
+          0.031941
+        ],
+        "size": [
+          0.24624,
+          0.098693,
+          0.088075
+        ]
+      },
+      "triangles": 1276,
+      "vertices": 720,
+      "material_slots": [
+        "M_Bone",
+        "M_Cloth",
+        "M_Rubber",
+        "M_Rust",
+        "M_Steel"
+      ],
+      "boundary_edges": 0,
+      "collision": "none",
+      "animation": "Wrist centre pivot. Neutral grip: fingers +X, knuckles +Z, palm -Z; thumb lies -Y. Sleeve extends -X. Rigid gloved hand with modelled fingers; animate whole component. Weapon socket wrist locations are starting anchors; adjust rotation/position for the final camera and grip.",
+      "sockets_m": {},
+      "fbx_roundtrip": {
+        "passed": true,
+        "max_bound_error_m": 3.4e-07
+      }
+    },
+    {
+      "name": "TraderBody",
+      "fbx": "SM_TraderBody.fbx",
+      "asset": "/Game/Art/Meshes/SM_TraderBody",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.285928,
+          -0.41687,
+          0.223
+        ],
+        "max": [
+          0.409653,
+          0.37,
+          1.084
+        ],
+        "size": [
+          0.695581,
+          0.78687,
+          0.861
+        ]
+      },
+      "triangles": 1788,
+      "vertices": 1092,
+      "material_slots": [
+        "M_Glass",
+        "M_Glow",
+        "M_Red",
+        "M_Rubber",
+        "M_Rust",
+        "M_Steel"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "Ground/root pivot. Head and both wheels attach using manifest placements.",
+      "sockets_m": {},
+      "fbx_roundtrip": {
+        "passed": true,
+        "max_bound_error_m": 1.3e-07
+      }
+    },
+    {
+      "name": "TraderHead",
+      "fbx": "SM_TraderHead.fbx",
+      "asset": "/Game/Art/Meshes/SM_TraderHead",
+      "parent": "TraderBody",
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        -0.017,
+        0,
+        1.061
+      ],
+      "rest_location_cm": [
+        -1.7,
+        0,
+        106.1
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.126,
+          -0.1914,
+          -0.007
+        ],
+        "max": [
+          0.187,
+          0.1914,
+          0.358
+        ],
+        "size": [
+          0.313,
+          0.3828,
+          0.365
+        ]
+      },
+      "triangles": 796,
+      "vertices": 476,
+      "material_slots": [
+        "M_Glow",
+        "M_Red",
+        "M_Rubber",
+        "M_Rust",
+        "M_Steel"
+      ],
+      "boundary_edges": 0,
+      "collision": "none",
+      "animation": "Neck yaw about Z; pitch about Y. Default joint (-1.7,0,106.1) cm.",
+      "sockets_m": {},
+      "fbx_roundtrip": {
+        "passed": true,
+        "max_bound_error_m": 1e-07
+      }
+    },
+    {
+      "name": "TraderWheel",
+      "fbx": "SM_TraderWheel.fbx",
+      "asset": "/Game/Art/Meshes/SM_TraderWheel",
+      "parent": "TraderBody",
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        -0.32,
+        0.265
+      ],
+      "rest_location_cm": [
+        0,
+        -32,
+        26.5
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.272551,
+          -0.0876,
+          -0.2635
+        ],
+        "max": [
+          0.272551,
+          0.0876,
+          0.2635
+        ],
+        "size": [
+          0.545101,
+          0.1752,
+          0.527
+        ]
+      },
+      "triangles": 1444,
+      "vertices": 792,
+      "material_slots": [
+        "M_Bone",
+        "M_Rubber",
+        "M_Rust",
+        "M_Steel"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "Axle pivot, rotate about local Y. Instantiate at (0,-32,26.5) cm and (0,32,26.5) cm; no mirror scale needed. Rolling radius 26.4 cm.",
+      "sockets_m": {},
+      "instances_cm": [
+        [
+          0,
+          -32,
+          26.5
+        ],
+        [
+          0,
+          32,
+          26.5
+        ]
+      ],
+      "fbx_roundtrip": {
+        "passed": true,
+        "max_bound_error_m": 3.9e-07
+      }
+    },
+    {
+      "name": "LootBag",
+      "fbx": "SM_LootBag.fbx",
+      "asset": "/Game/Art/Meshes/SM_LootBag",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.221,
+          -0.169,
+          0.0
+        ],
+        "max": [
+          0.226,
+          0.171,
+          0.50783
+        ],
+        "size": [
+          0.447,
+          0.34,
+          0.50783
+        ]
+      },
+      "triangles": 808,
+      "vertices": 480,
+      "material_slots": [
+        "M_Bone",
+        "M_Cloth",
+        "M_Red",
+        "M_Rubber",
+        "M_Rust"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "Floor-centred pivot. Visible drawcord and empty handle loops.",
+      "sockets_m": {},
+      "fbx_roundtrip": {
+        "passed": true,
+        "max_bound_error_m": 3.8e-07
+      }
+    },
+    {
+      "name": "BunkerDoorFrame",
+      "fbx": "SM_BunkerDoorFrame.fbx",
+      "asset": "/Game/Art/Meshes/SM_BunkerDoorFrame",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.16,
+          -0.97,
+          0.0
+        ],
+        "max": [
+          0.221,
+          0.97,
+          2.55
+        ],
+        "size": [
+          0.381,
+          1.94,
+          2.55
+        ]
+      },
+      "triangles": 508,
+      "vertices": 288,
+      "material_slots": [
+        "M_Concrete",
+        "M_Rust",
+        "M_Steel"
+      ],
+      "boundary_edges": 0,
+      "collision": "frame_ucx",
+      "animation": "Ground centre pivot. Clear opening 154 cm wide, 225 cm tall from Z=12 to 237 cm. +X faces exterior. Includes four separate UCX collision boxes; use simple collision so the aperture remains passable.",
+      "sockets_m": {},
+      "fbx_roundtrip": {
+        "passed": true,
+        "max_bound_error_m": 1.9e-07
+      }
+    },
+    {
+      "name": "BunkerDoor",
+      "fbx": "SM_BunkerDoor.fbx",
+      "asset": "/Game/Art/Meshes/SM_BunkerDoor",
+      "parent": "BunkerDoorFrame",
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0.22,
+        -0.735,
+        0.145
+      ],
+      "rest_location_cm": [
+        22.0,
+        -73.5,
+        14.5
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.08,
+          -0.077,
+          0.005
+        ],
+        "max": [
+          0.161776,
+          1.485,
+          2.175
+        ],
+        "size": [
+          0.241776,
+          1.562,
+          2.17
+        ]
+      },
+      "triangles": 860,
+      "vertices": 492,
+      "material_slots": [
+        "M_Bone",
+        "M_Rubber",
+        "M_Rust",
+        "M_Steel"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "Vertical hinge pivot. From closed, rotate -100 degrees about local Z to open outward toward +X. Decorative bolt ends turn with leaf; no independent bolt retraction. Clearance around the leaf is intentional.",
+      "sockets_m": {},
+      "fbx_roundtrip": {
+        "passed": true,
+        "max_bound_error_m": 3.2e-07
+      }
+    },
+    {
+      "name": "BunkerDoorWheel",
+      "fbx": "SM_BunkerDoorWheel.fbx",
+      "asset": "/Game/Art/Meshes/SM_BunkerDoorWheel",
+      "parent": "BunkerDoor",
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0.166,
+        0.735,
+        1.085
+      ],
+      "rest_location_cm": [
+        16.6,
+        73.5,
+        108.5
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.03,
+          -0.226,
+          -0.226
+        ],
+        "max": [
+          0.14,
+          0.226,
+          0.226
+        ],
+        "size": [
+          0.17,
+          0.452,
+          0.452
+        ]
+      },
+      "triangles": 348,
+      "vertices": 188,
+      "material_slots": [
+        "M_Rubber",
+        "M_Rust",
+        "M_Steel"
+      ],
+      "boundary_edges": 0,
+      "collision": "none",
+      "animation": "Spindle pivot, rotate local X. Rest location is relative to the hinged BunkerDoor, not to the frame.",
+      "sockets_m": {},
+      "fbx_roundtrip": {
+        "passed": true,
+        "max_bound_error_m": 5e-08
+      }
+    }
+  ]
+}

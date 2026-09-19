@@ -1,0 +1,42 @@
+Binaries/
+DerivedDataCache/
+Intermediate/
+Saved/
+.vs/
+*.sln
+*.VC.db
+*.VC.opendb
+Builds/
+__pycache__/
+*.log
+BuildLog.txt
+
+# Local editor/IDE output and automation logs
+.idea/
+.vscode/
+*.suo
+*.sdf
+*.opensdf
+*.VC.VC.opendb
+*.pyc
+*.pyo
+/BuildLog*.json
+/BuildLog*.txt
+*.blend1
+*.blend2
+*.tmp
+*.bak
+
+# Credentials and machine-local configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.pfx
+*.p12
+credentials.json
+secrets.json
+.codex/
+
+# Keep Build/Windows/Application.ico; it is a source asset.

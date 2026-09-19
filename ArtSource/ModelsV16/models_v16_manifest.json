@@ -1,0 +1,921 @@
+{
+  "assets": [
+    {
+      "name": "SurvivorMaleV16",
+      "fbx": "SM_SurvivorMaleV16.fbx",
+      "asset": "/Game/Art/Meshes/SM_SurvivorMaleV16",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.135,
+          -0.24,
+          0.79
+        ],
+        "max": [
+          0.165,
+          0.24,
+          1.415
+        ],
+        "size": [
+          0.3,
+          0.48,
+          0.625
+        ]
+      },
+      "triangles": 632,
+      "vertices": 332,
+      "material_slots": [
+        "M_Cloth",
+        "M_Rubber",
+        "M_Steel"
+      ],
+      "boundary_edges": 0,
+      "collision": "none",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "SurvivorHeadMaleV16",
+      "fbx": "SM_SurvivorHeadMaleV16.fbx",
+      "asset": "/Game/Art/Meshes/SM_SurvivorHeadMaleV16",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.118,
+          -0.111,
+          1.41
+        ],
+        "max": [
+          0.139,
+          0.111,
+          1.72
+        ],
+        "size": [
+          0.257,
+          0.222,
+          0.31
+        ]
+      },
+      "triangles": 604,
+      "vertices": 324,
+      "material_slots": [
+        "M_Bone",
+        "M_Rubber",
+        "M_Skin"
+      ],
+      "boundary_edges": 0,
+      "collision": "none",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "SurvivorFemaleV16",
+      "fbx": "SM_SurvivorFemaleV16.fbx",
+      "asset": "/Game/Art/Meshes/SM_SurvivorFemaleV16",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.14,
+          -0.21,
+          0.79
+        ],
+        "max": [
+          0.18,
+          0.21,
+          1.415
+        ],
+        "size": [
+          0.32,
+          0.42,
+          0.625
+        ]
+      },
+      "triangles": 632,
+      "vertices": 332,
+      "material_slots": [
+        "M_Cloth",
+        "M_Rubber",
+        "M_Steel"
+      ],
+      "boundary_edges": 0,
+      "collision": "none",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "SurvivorHeadFemaleV16",
+      "fbx": "SM_SurvivorHeadFemaleV16.fbx",
+      "asset": "/Game/Art/Meshes/SM_SurvivorHeadFemaleV16",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.118,
+          -0.111,
+          1.41
+        ],
+        "max": [
+          0.139,
+          0.111,
+          1.72
+        ],
+        "size": [
+          0.257,
+          0.222,
+          0.31
+        ]
+      },
+      "triangles": 604,
+      "vertices": 324,
+      "material_slots": [
+        "M_Bone",
+        "M_Rubber",
+        "M_Skin"
+      ],
+      "boundary_edges": 0,
+      "collision": "none",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "SurvivorLegV16",
+      "fbx": "SM_SurvivorLegV16.fbx",
+      "asset": "/Game/Art/Meshes/SM_SurvivorLegV16",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.105,
+          -0.097,
+          -0.845
+        ],
+        "max": [
+          0.18,
+          0.097,
+          0.0
+        ],
+        "size": [
+          0.285,
+          0.194,
+          0.845
+        ]
+      },
+      "triangles": 208,
+      "vertices": 112,
+      "material_slots": [
+        "M_Cloth",
+        "M_Rubber"
+      ],
+      "boundary_edges": 0,
+      "collision": "none",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "SurvivorArmV16",
+      "fbx": "SM_SurvivorArmV16.fbx",
+      "asset": "/Game/Art/Meshes/SM_SurvivorArmV16",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.09,
+          -0.08,
+          -0.597106
+        ],
+        "max": [
+          0.09,
+          0.08,
+          0.0
+        ],
+        "size": [
+          0.18,
+          0.16,
+          0.597106
+        ]
+      },
+      "triangles": 260,
+      "vertices": 144,
+      "material_slots": [
+        "M_Cloth",
+        "M_Skin"
+      ],
+      "boundary_edges": 0,
+      "collision": "none",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "Hair00V16",
+      "fbx": "SM_Hair00V16.fbx",
+      "asset": "/Game/Art/Meshes/SM_Hair00V16",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.132,
+          -0.095,
+          1.62
+        ],
+        "max": [
+          0.082,
+          0.095,
+          1.744
+        ],
+        "size": [
+          0.214,
+          0.19,
+          0.124
+        ]
+      },
+      "triangles": 156,
+      "vertices": 80,
+      "material_slots": [
+        "M_Cloth"
+      ],
+      "boundary_edges": 0,
+      "collision": "none",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "Hair01V16",
+      "fbx": "SM_Hair01V16.fbx",
+      "asset": "/Game/Art/Meshes/SM_Hair01V16",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.132,
+          -0.095,
+          1.62
+        ],
+        "max": [
+          0.082,
+          0.095,
+          1.781608
+        ],
+        "size": [
+          0.214,
+          0.19,
+          0.161608
+        ]
+      },
+      "triangles": 516,
+      "vertices": 296,
+      "material_slots": [
+        "M_Cloth"
+      ],
+      "boundary_edges": 0,
+      "collision": "none",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "Hair02V16",
+      "fbx": "SM_Hair02V16.fbx",
+      "asset": "/Game/Art/Meshes/SM_Hair02V16",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.132,
+          -0.095,
+          1.62
+        ],
+        "max": [
+          0.08631,
+          0.095,
+          1.784098
+        ],
+        "size": [
+          0.21831,
+          0.19,
+          0.164098
+        ]
+      },
+      "triangles": 516,
+      "vertices": 296,
+      "material_slots": [
+        "M_Cloth"
+      ],
+      "boundary_edges": 0,
+      "collision": "none",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "Hair03V16",
+      "fbx": "SM_Hair03V16.fbx",
+      "asset": "/Game/Art/Meshes/SM_Hair03V16",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.182971,
+          -0.127348,
+          1.268933
+        ],
+        "max": [
+          0.082,
+          0.127349,
+          1.744
+        ],
+        "size": [
+          0.264971,
+          0.254697,
+          0.475067
+        ]
+      },
+      "triangles": 780,
+      "vertices": 444,
+      "material_slots": [
+        "M_Cloth"
+      ],
+      "boundary_edges": 0,
+      "collision": "none",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "Hair04V16",
+      "fbx": "SM_Hair04V16.fbx",
+      "asset": "/Game/Art/Meshes/SM_Hair04V16",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.182869,
+          -0.127332,
+          1.427723
+        ],
+        "max": [
+          0.082,
+          0.127332,
+          1.744
+        ],
+        "size": [
+          0.264869,
+          0.254664,
+          0.316277
+        ]
+      },
+      "triangles": 780,
+      "vertices": 444,
+      "material_slots": [
+        "M_Cloth"
+      ],
+      "boundary_edges": 0,
+      "collision": "none",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "Hair05V16",
+      "fbx": "SM_Hair05V16.fbx",
+      "asset": "/Game/Art/Meshes/SM_Hair05V16",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.242798,
+          -0.127196,
+          1.377957
+        ],
+        "max": [
+          0.082,
+          0.127196,
+          1.744
+        ],
+        "size": [
+          0.324798,
+          0.254391,
+          0.366043
+        ]
+      },
+      "triangles": 852,
+      "vertices": 484,
+      "material_slots": [
+        "M_Cloth"
+      ],
+      "boundary_edges": 0,
+      "collision": "none",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "Hair06V16",
+      "fbx": "SM_Hair06V16.fbx",
+      "asset": "/Game/Art/Meshes/SM_Hair06V16",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.164313,
+          -0.137049,
+          1.62
+        ],
+        "max": [
+          0.107598,
+          0.139364,
+          1.842
+        ],
+        "size": [
+          0.271911,
+          0.276413,
+          0.222
+        ]
+      },
+      "triangles": 1164,
+      "vertices": 668,
+      "material_slots": [
+        "M_Cloth"
+      ],
+      "boundary_edges": 0,
+      "collision": "none",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "Hair07V16",
+      "fbx": "SM_Hair07V16.fbx",
+      "asset": "/Game/Art/Meshes/SM_Hair07V16",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.132,
+          -0.095,
+          1.62
+        ],
+        "max": [
+          0.082,
+          0.095,
+          1.865
+        ],
+        "size": [
+          0.214,
+          0.19,
+          0.245
+        ]
+      },
+      "triangles": 224,
+      "vertices": 116,
+      "material_slots": [
+        "M_Cloth"
+      ],
+      "boundary_edges": 0,
+      "collision": "none",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "Hair08V16",
+      "fbx": "SM_Hair08V16.fbx",
+      "asset": "/Game/Art/Meshes/SM_Hair08V16",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.18203,
+          -0.127196,
+          1.191899
+        ],
+        "max": [
+          0.082,
+          0.127196,
+          1.744
+        ],
+        "size": [
+          0.26403,
+          0.254391,
+          0.552101
+        ]
+      },
+      "triangles": 1172,
+      "vertices": 668,
+      "material_slots": [
+        "M_Cloth"
+      ],
+      "boundary_edges": 0,
+      "collision": "none",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "Hair09V16",
+      "fbx": "SM_Hair09V16.fbx",
+      "asset": "/Game/Art/Meshes/SM_Hair09V16",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.208,
+          -0.095,
+          1.62
+        ],
+        "max": [
+          0.082,
+          0.095,
+          1.77
+        ],
+        "size": [
+          0.29,
+          0.19,
+          0.15
+        ]
+      },
+      "triangles": 224,
+      "vertices": 116,
+      "material_slots": [
+        "M_Cloth"
+      ],
+      "boundary_edges": 0,
+      "collision": "none",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "CamperShellV16",
+      "fbx": "SM_CamperShellV16.fbx",
+      "asset": "/Game/Art/Meshes/SM_CamperShellV16",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -10.0825,
+          -1.535,
+          0.253001
+        ],
+        "max": [
+          2.06,
+          1.535,
+          3.496
+        ],
+        "size": [
+          12.142499,
+          3.07,
+          3.242999
+        ]
+      },
+      "triangles": 6948,
+      "vertices": 3940,
+      "material_slots": [
+        "M_Bone",
+        "M_CamperPearlV14",
+        "M_CamperWalnutV14",
+        "M_Glass",
+        "M_Red",
+        "M_Rubber",
+        "M_Steel"
+      ],
+      "boundary_edges": 60,
+      "collision": "none",
+      "animation": "",
+      "sockets_m": {}
+    }
+  ]
+}

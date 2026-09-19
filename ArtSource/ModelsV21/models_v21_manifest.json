@@ -1,0 +1,448 @@
+{
+  "assets": [
+    {
+      "name": "SlotMachineV21",
+      "fbx": "SM_SlotMachineV21.fbx",
+      "asset": "/Game/Art/Meshes/SM_SlotMachineV21",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.36,
+          -0.59,
+          0.0
+        ],
+        "max": [
+          0.36,
+          0.35,
+          2.03
+        ],
+        "size": [
+          0.72,
+          0.94,
+          2.03
+        ]
+      },
+      "triangles": 400,
+      "vertices": 222,
+      "material_slots": [
+        "M_Bone",
+        "M_Carbon21",
+        "M_CasinoGold21",
+        "M_Glow",
+        "M_Red",
+        "M_Rubber",
+        "M_Steel"
+      ],
+      "boundary_edges": 0,
+      "collision": "complex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "CasinoChairV21",
+      "fbx": "SM_CasinoChairV21.fbx",
+      "asset": "/Game/Art/Meshes/SM_CasinoChairV21",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.42,
+          -0.37,
+          0.03
+        ],
+        "max": [
+          0.42,
+          0.37,
+          1.19
+        ],
+        "size": [
+          0.84,
+          0.74,
+          1.16
+        ]
+      },
+      "triangles": 320,
+      "vertices": 176,
+      "material_slots": [
+        "M_CasinoGold21",
+        "M_CasinoVelvet21"
+      ],
+      "boundary_edges": 0,
+      "collision": "complex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "CasinoColumnV21",
+      "fbx": "SM_CasinoColumnV21.fbx",
+      "asset": "/Game/Art/Meshes/SM_CasinoColumnV21",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.34,
+          -0.34,
+          0.0
+        ],
+        "max": [
+          0.34,
+          0.34,
+          4.04
+        ],
+        "size": [
+          0.68,
+          0.68,
+          4.04
+        ]
+      },
+      "triangles": 180,
+      "vertices": 96,
+      "material_slots": [
+        "M_CasinoGold21",
+        "M_CasinoMarble21"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "CasinoChandelierV21",
+      "fbx": "SM_CasinoChandelierV21.fbx",
+      "asset": "/Game/Art/Meshes/SM_CasinoChandelierV21",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.77332,
+          -0.77332,
+          -1.14
+        ],
+        "max": [
+          0.77332,
+          0.77332,
+          0.0
+        ],
+        "size": [
+          1.546639,
+          1.546639,
+          1.14
+        ]
+      },
+      "triangles": 1828,
+      "vertices": 1044,
+      "material_slots": [
+        "M_CasinoGold21",
+        "M_Glow"
+      ],
+      "boundary_edges": 0,
+      "collision": "none",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "CasinoCounterV21",
+      "fbx": "SM_CasinoCounterV21.fbx",
+      "asset": "/Game/Art/Meshes/SM_CasinoCounterV21",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -1.175,
+          -0.41,
+          0.0
+        ],
+        "max": [
+          1.175,
+          0.41,
+          1.15
+        ],
+        "size": [
+          2.35,
+          0.82,
+          1.15
+        ]
+      },
+      "triangles": 148,
+      "vertices": 88,
+      "material_slots": [
+        "M_CasinoGold21",
+        "M_CasinoMarble21",
+        "M_CasinoVelvet21"
+      ],
+      "boundary_edges": 0,
+      "collision": "complex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "CasinoBarShelfV21",
+      "fbx": "SM_CasinoBarShelfV21.fbx",
+      "asset": "/Game/Art/Meshes/SM_CasinoBarShelfV21",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.55,
+          -0.25,
+          0.0
+        ],
+        "max": [
+          0.55,
+          0.25,
+          1.22
+        ],
+        "size": [
+          1.1,
+          0.5,
+          1.22
+        ]
+      },
+      "triangles": 416,
+      "vertices": 240,
+      "material_slots": [
+        "M_CasinoGold21",
+        "M_Glass",
+        "M_Wood"
+      ],
+      "boundary_edges": 0,
+      "collision": "complex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "SupercarV21",
+      "fbx": "SM_SupercarV21.fbx",
+      "asset": "/Game/Art/Meshes/SM_SupercarV21",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -2.4,
+          -1.155,
+          0.195
+        ],
+        "max": [
+          2.225,
+          1.155,
+          1.415
+        ],
+        "size": [
+          4.625,
+          2.31,
+          1.22
+        ]
+      },
+      "triangles": 4010,
+      "vertices": 2507,
+      "material_slots": [
+        "M_Bone",
+        "M_Carbon21",
+        "M_Red",
+        "M_Steel",
+        "M_SuperOrange21",
+        "M_WindshieldV9"
+      ],
+      "boundary_edges": 408,
+      "collision": "none",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "SuperWheelV21",
+      "fbx": "SM_SuperWheelV21.fbx",
+      "asset": "/Game/Art/Meshes/SM_SuperWheelV21",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.35,
+          -0.16299,
+          -0.35
+        ],
+        "max": [
+          0.35,
+          0.16299,
+          0.35
+        ],
+        "size": [
+          0.7,
+          0.325981,
+          0.7
+        ]
+      },
+      "triangles": 1128,
+      "vertices": 608,
+      "material_slots": [
+        "M_Carbon21",
+        "M_Rubber",
+        "M_Steel"
+      ],
+      "boundary_edges": 0,
+      "collision": "none",
+      "animation": "",
+      "sockets_m": {}
+    }
+  ]
+}

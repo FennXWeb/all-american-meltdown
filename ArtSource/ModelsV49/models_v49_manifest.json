@@ -1,0 +1,184 @@
+{
+  "assets": [
+    {
+      "name": "Cabin42_sedan",
+      "fbx": "SM_Cabin42_sedan.fbx",
+      "asset": "/Game/Art/Meshes/SM_Cabin42_sedan",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -1.7999999523162842,
+          -0.8159013390541077,
+          0.3425000011920929
+        ],
+        "max": [
+          1.2999999523162842,
+          0.800000011920929,
+          1.5575001239776611
+        ],
+        "size": [
+          3.0999999046325684,
+          1.6159013509750366,
+          1.2150001227855682
+        ]
+      },
+      "triangles": 6620,
+      "vertices": 3625,
+      "material_slots": [
+        "M_V42_Carpet",
+        "M_V42_Chrome",
+        "M_V42_Fabric",
+        "M_V42_Glass",
+        "M_V42_Leather",
+        "M_V42_Metal",
+        "M_V42_Rubber",
+        "M_V42_Vinyl"
+      ],
+      "boundary_edges": 104,
+      "collision": "none",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "Cabin42_muscle",
+      "fbx": "SM_Cabin42_muscle.fbx",
+      "asset": "/Game/Art/Meshes/SM_Cabin42_muscle",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -2.4000000953674316,
+          -0.9300000071525574,
+          0.3425000011920929
+        ],
+        "max": [
+          1.2999999523162842,
+          0.9300000071525574,
+          1.4900000095367432
+        ],
+        "size": [
+          3.700000047683716,
+          1.8600000143051147,
+          1.1475000083446503
+        ]
+      },
+      "triangles": 6620,
+      "vertices": 3625,
+      "material_slots": [
+        "M_V42_Carpet",
+        "M_V42_Chrome",
+        "M_V42_Fabric",
+        "M_V42_Glass",
+        "M_V42_Leather",
+        "M_V42_Metal",
+        "M_V42_Rubber",
+        "M_V42_Vinyl"
+      ],
+      "boundary_edges": 104,
+      "collision": "none",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "Cabin42_supercar",
+      "fbx": "SM_Cabin42_supercar.fbx",
+      "asset": "/Game/Art/Meshes/SM_Cabin42_supercar",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -2.200000047683716,
+          -0.9300000071525574,
+          0.1875
+        ],
+        "max": [
+          1.2999999523162842,
+          0.9300000071525574,
+          1.3574999570846558
+        ],
+        "size": [
+          3.5,
+          1.8600000143051147,
+          1.1699999570846558
+        ]
+      },
+      "triangles": 4600,
+      "vertices": 2521,
+      "material_slots": [
+        "M_V42_Carpet",
+        "M_V42_Chrome",
+        "M_V42_Fabric",
+        "M_V42_Glass",
+        "M_V42_Leather",
+        "M_V42_Metal",
+        "M_V42_Rubber",
+        "M_V42_Vinyl"
+      ],
+      "boundary_edges": 80,
+      "collision": "none",
+      "animation": "",
+      "sockets_m": {}
+    }
+  ]
+}

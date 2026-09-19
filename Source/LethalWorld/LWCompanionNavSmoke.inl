@@ -1,0 +1,40 @@
+#include "LWThreatAwareness.h"
+void ALWGameMode::BuildCompanionNavSmoke(ALWCharacter& Initial){
+ auto Add=[this](FString N,double W,FLWV2Action B,FLWV2Action E=FLWV2Action()){V2->Steps.Add({N,W,45,MoveTemp(B),MoveTemp(E),FLWV2Ready()});};
+ struct FState{TWeakObjectPtr<ALWResident> Crew;TWeakObjectPtr<ALWChunk> Room;TWeakObjectPtr<ALWWorldObject> Door,Other;};auto S=MakeShared<FState>();
+ Add(TEXT("door maze setup"),1,[this,S](ALWCharacter& P){P.NewGame();P.LeaveSafehouse();P.World->EnableEncounters=false;P.Health=10000;P.World->TimeOfDay=12;P.World->TickWeather(0,&P);P.Flashlight->SetVisibility(false);P.RPG.Crew.Empty();LWV2Teleport(P,FVector(20000,21100,5100));auto* C=GetWorld()->SpawnActor<ALWChunk>();S->Room=C;
+ C->Box(P.World,TEXT("Concrete"),FVector(20000,20000,4988),FVector(3600,3400,24));
+ // An enclosed wall with an offset doorway; direct following runs into the wall.
+ C->Box(P.World,TEXT("BrickV7"),FVector(19585,20000,5165),FVector(1370,20,330));C->Box(P.World,TEXT("BrickV7"),FVector(21165,20000,5165),FVector(1470,20,330));C->Box(P.World,TEXT("BrickV7"),FVector(20350,20000,5285),FVector(160,20,90));
+ for(int Side:{-1,1})C->Box(P.World,TEXT("BrickV7"),FVector(20000+Side*1800,20000,5165),FVector(20,3400,330));
+ auto* Door=P.World->SpawnObject(ELWObjectKind::Door,TEXT("nav19_door"),FVector(20270,20000,5000));S->Door=Door;Door->bChanged=false;Door->DoorAngle=0;Door->Body->SetRelativeRotation(FRotator::ZeroRotator);
+ auto* N=GetWorld()->SpawnActor<ALWResident>(FVector(20000,19300,5091),FRotator::ZeroRotator);S->Crew=N;N->ConfigureResident(TEXT("nav19crew"),TEXT("recruit"),TEXT("Ada"),1);N->ActivitySpots={FVector(20000,21100,5091)};N->ActivityTime=60;
+ Check(Door->CanCompanionOpenDoor(),TEXT("ordinary POI door supports companion passage"));});
+ Add(TEXT("threat relevance"),0,[this,S](ALWCharacter& P){
+  auto* N=S->Crew.Get();const FVector At=N->GetActorLocation();
+  auto* Z=GetWorld()->SpawnActor<ALWZombie>(At+FVector(300,0,0),FRotator::ZeroRotator);
+  if(!RequireV2(Z!=nullptr,TEXT("threat fixture spawned")))return;
+  Z->SetActorTickEnabled(false);Z->GetCharacterMovement()->DisableMovement();Z->Alert=12;Z->Interest=At;
+  Check(LWThreatAwareness::Engaged(Z,N)&&LWThreatAwareness::Visible(N,Z),TEXT("visible same-floor engaged enemy is relevant"));
+  Z->Interest=At+FVector(2500,0,0);Check(!LWThreatAwareness::Engaged(Z,N),TEXT("unrelated noise alert is irrelevant"));
+  Z->Interest=At;Z->SetActorLocation(At+FVector(300,0,400));Check(!LWThreatAwareness::Engaged(Z,N),TEXT("enemy on another floor is irrelevant"));
+  Z->SetActorLocation(FVector(20000,20500,At.Z));Check(!LWThreatAwareness::Visible(N,Z),TEXT("wall-separated exterior enemy has no visual contact"));
+  Z->SetActorLocation(At+FVector(300,0,0));Z->Kind=ELWEnemyKind::Mannequin;Z->bAggressive=false;
+  Check(!LWThreatAwareness::Engaged(Z,N),TEXT("passive mannequin does not cause combat"));
+  Z->bAggressive=true;Check(LWThreatAwareness::Engaged(Z,N),TEXT("aggressive mannequin remains a threat"));
+  Z->bDead=true;Check(!LWThreatAwareness::Engaged(Z,N),TEXT("dead enemy is irrelevant"));Z->Destroy();
+ });
+ Add(TEXT("navigate offset doorway"),14,[](ALWCharacter& P){},[this,S](ALWCharacter& P){auto* N=S->Crew.Get();UE_LOG(LogTemp,Display,TEXT("NAV19 reached %s"),*N->GetActorLocation().ToString());Check(N->GetActorLocation().Y>20300,TEXT("resident routes to offset door and walks through"));Check(P.World->PropStates.Contains(TEXT("nav19_door")),TEXT("door interaction updates persisted state"));CaptureV2(TEXT("CompanionDoor19"));});
+ Add(TEXT("close door after passage"),4,[this,S](ALWCharacter& P){S->Crew->SetActorLocation(FVector(20000,21100,5091));},[this,S](ALWCharacter& P){Check(!S->Door->bChanged&&S->Door->DoorAngle<1,TEXT("companion closes its door after passage"));});
+ Add(TEXT("hold doorway for player"),3,[this,S](ALWCharacter& P){LWV2Teleport(P,FVector(20350,19960,5091));S->Crew->SetActorLocation(FVector(20350,19820,5091));S->Crew->SetActorTickEnabled(false);S->Crew->GetCharacterMovement()->StopMovementImmediately();S->Door->RequestCompanionDoor(S->Crew.Get());S->Crew->SetActorLocation(FVector(20000,21100,5091));},[this,S](ALWCharacter& P){Check(S->Door->bChanged,TEXT("door remains open while player occupies doorway"));});
+ Add(TEXT("player open state preserved"),3,[this,S](ALWCharacter& P){LWV2Teleport(P,FVector(20000,21100,5091));S->Door->CompanionOpenedDoor=false;S->Door->bChanged=true;S->Crew->SetActorLocation(FVector(20350,19820,5091));S->Door->RequestCompanionDoor(S->Crew.Get());S->Crew->SetActorLocation(FVector(20000,21100,5091));},[this,S](ALWCharacter& P){Check(S->Door->bChanged,TEXT("originally open door is not automatically closed"));});
+ Add(TEXT("locked door cannot be bypassed"),4,[this,S](ALWCharacter& P){auto* D=S->Door.Get();D->bChanged=false;D->DoorAngle=0;D->Body->SetRelativeRotation(FRotator::ZeroRotator);FLWContainerRecord Lock;Lock.Id=D->RecordId;Lock.LockTier=3;P.World->Containers.Add(Lock.Id,Lock);auto* N=S->Crew.Get();N->SetActorLocation(FVector(20350,19820,5091));N->ResetCompanionNavigation();N->SetActorTickEnabled(true);Check(!D->RequestCompanionDoor(N),TEXT("companion cannot unlock locked door"));},[this,S](ALWCharacter& P){Check(!S->Door->bChanged&&S->Crew->GetActorLocation().Y<20000,TEXT("locked doorway stays blocked"));});
+ Add(TEXT("stairs and upper landing"),1,[this,S](ALWCharacter& P){S->Door->Destroy();S->Room->Destroy();auto* C=GetWorld()->SpawnActor<ALWChunk>();S->Room=C;C->Box(P.World,TEXT("Concrete"),FVector(20000,20000,4988),FVector(3600,1600,24));for(int I=0;I<20;I++)C->Box(P.World,TEXT("Concrete"),FVector(19800+I*40,20000,5010+I*10),FVector(40,320,20+I*20));C->Box(P.World,TEXT("Concrete"),FVector(20950,20000,5390),FVector(740,800,20));auto* N=S->Crew.Get();N->SetActorLocation(FVector(19500,20000,5091));N->ActivitySpots={FVector(21000,20000,5491)};N->ActivityTime=60;N->ResetCompanionNavigation();LWV2Teleport(P,FVector(21000,20400,5491));});
+ Add(TEXT("climb stairs"),12,[](ALWCharacter& P){},[this,S](ALWCharacter& P){auto At=S->Crew->GetActorLocation();UE_LOG(LogTemp,Display,TEXT("NAV19 stairs %s"),*At.ToString());Check(At.X>20580&&At.Z>5420,TEXT("route finds stairs and reaches upper landing"));CaptureV2(TEXT("CompanionStairs19"));});
+#include "LWCompanionVerticalSmoke.inl"
+ Add(TEXT("unreachable ledge"),5,[this,S](ALWCharacter& P){S->Crew->ActivitySpots={FVector(20000,20000,5891)};S->Crew->ActivityTime=60;S->Crew->ResetCompanionNavigation();},[this,S](ALWCharacter& P){Check(S->Crew->GetActorLocation().Z>5400,TEXT("unreachable target does not make companion jump off landing"));});
+ Add(TEXT("dynamic route setup"),1,[this,S](ALWCharacter& P){S->Room->Destroy();auto* C=GetWorld()->SpawnActor<ALWChunk>();S->Room=C;C->Box(P.World,TEXT("Concrete"),FVector(20000,20000,4988),FVector(3600,2400,24));auto* N=S->Crew.Get();N->SetActorLocation(FVector(19000,20000,5091));N->ActivitySpots={FVector(21000,20000,5091)};N->ActivityTime=60;N->ResetCompanionNavigation();LWV2Teleport(P,FVector(21000,20700,5091));});
+ Add(TEXT("replan around new obstruction"),16,[this,S](ALWCharacter& P){auto* O=P.World->SpawnObject(ELWObjectKind::Container,TEXT("nav19_blocker"),FVector(19900,20000,5140));S->Other=O;O->Body->SetStaticMesh(P.World->Mesh(TEXT("Cube")));O->Body->SetWorldScale3D(FVector(.8,8,2.8));},[this,S](ALWCharacter& P){UE_LOG(LogTemp,Display,TEXT("NAV19 obstacle %s"),*S->Crew->GetActorLocation().ToString());Check(S->Crew->GetActorLocation().X>20600,TEXT("route recovers around newly placed blocking furniture"));});
+ Add(TEXT("follow moving player"),15,[this,S](ALWCharacter& P){FLWCrewRecord C;C.Id=S->Crew->ResidentId;C.Name=TEXT("Ada");C.Bedroom=0;C.Following=true;P.RPG.Crew.Add(C);LWV2Teleport(P,FVector(19000,20500,5091));},[this,S](ALWCharacter& P){Check(FVector::Dist2D(S->Crew->GetActorLocation(),P.GetActorLocation())<650,TEXT("active companion replans toward relocated player"));P.RPG.Crew.Empty();S->Crew->Destroy();S->Room->Destroy();S->Other->Destroy();});
+#include "LWCompanionAISmoke.inl"
+}

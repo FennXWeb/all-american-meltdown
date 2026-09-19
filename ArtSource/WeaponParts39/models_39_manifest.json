@@ -1,0 +1,2696 @@
+{
+  "assets": [
+    {
+      "name": "WP39_action_00",
+      "fbx": "SM_WP39_action_00.fbx",
+      "asset": "/Game/Art/Meshes/SM_WP39_action_00",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.12,
+          -0.0125,
+          -0.025
+        ],
+        "max": [
+          0.22,
+          0.0125,
+          0.15
+        ],
+        "size": [
+          0.34,
+          0.025,
+          0.175
+        ]
+      },
+      "triangles": 28,
+      "vertices": 16,
+      "material_slots": [
+        "M_Rust"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "WP39_action_01",
+      "fbx": "SM_WP39_action_01.fbx",
+      "asset": "/Game/Art/Meshes/SM_WP39_action_01",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.17,
+          -0.052,
+          -0.052
+        ],
+        "max": [
+          0.2,
+          0.052,
+          0.052
+        ],
+        "size": [
+          0.37,
+          0.104,
+          0.104
+        ]
+      },
+      "triangles": 120,
+      "vertices": 64,
+      "material_slots": [
+        "M_Wood"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "WP39_action_02",
+      "fbx": "SM_WP39_action_02.fbx",
+      "asset": "/Game/Art/Meshes/SM_WP39_action_02",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.17,
+          -0.041,
+          -0.045
+        ],
+        "max": [
+          0.18,
+          0.0431,
+          0.073
+        ],
+        "size": [
+          0.35,
+          0.0841,
+          0.118
+        ]
+      },
+      "triangles": 384,
+      "vertices": 210,
+      "material_slots": [
+        "M_Rust",
+        "M_Steel"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "WP39_action_03",
+      "fbx": "SM_WP39_action_03.fbx",
+      "asset": "/Game/Art/Meshes/SM_WP39_action_03",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.17,
+          -0.041,
+          -0.12
+        ],
+        "max": [
+          0.18,
+          0.0431,
+          0.073
+        ],
+        "size": [
+          0.35,
+          0.0841,
+          0.193
+        ]
+      },
+      "triangles": 412,
+      "vertices": 226,
+      "material_slots": [
+        "M_Rust",
+        "M_Steel"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "WP39_action_04",
+      "fbx": "SM_WP39_action_04.fbx",
+      "asset": "/Game/Art/Meshes/SM_WP39_action_04",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.17,
+          -0.041,
+          -0.045
+        ],
+        "max": [
+          0.18,
+          0.0431,
+          0.073
+        ],
+        "size": [
+          0.35,
+          0.0841,
+          0.118
+        ]
+      },
+      "triangles": 384,
+      "vertices": 210,
+      "material_slots": [
+        "M_Rust",
+        "M_Steel"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "WP39_action_05",
+      "fbx": "SM_WP39_action_05.fbx",
+      "asset": "/Game/Art/Meshes/SM_WP39_action_05",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.17,
+          -0.041,
+          -0.045
+        ],
+        "max": [
+          0.18,
+          0.0431,
+          0.073
+        ],
+        "size": [
+          0.35,
+          0.0841,
+          0.118
+        ]
+      },
+      "triangles": 384,
+      "vertices": 210,
+      "material_slots": [
+        "M_Rust",
+        "M_Steel"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "WP39_action_06",
+      "fbx": "SM_WP39_action_06.fbx",
+      "asset": "/Game/Art/Meshes/SM_WP39_action_06",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.17,
+          -0.041,
+          -0.045
+        ],
+        "max": [
+          0.18,
+          0.0431,
+          0.073
+        ],
+        "size": [
+          0.35,
+          0.0841,
+          0.118
+        ]
+      },
+      "triangles": 384,
+      "vertices": 210,
+      "material_slots": [
+        "M_Rust",
+        "M_Steel"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "WP39_action_07",
+      "fbx": "SM_WP39_action_07.fbx",
+      "asset": "/Game/Art/Meshes/SM_WP39_action_07",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.17,
+          -0.056,
+          -0.045
+        ],
+        "max": [
+          0.18,
+          0.059,
+          0.073
+        ],
+        "size": [
+          0.35,
+          0.115,
+          0.118
+        ]
+      },
+      "triangles": 384,
+      "vertices": 210,
+      "material_slots": [
+        "M_Rust",
+        "M_Steel"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "WP39_action_08",
+      "fbx": "SM_WP39_action_08.fbx",
+      "asset": "/Game/Art/Meshes/SM_WP39_action_08",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.17,
+          -0.041,
+          -0.12
+        ],
+        "max": [
+          0.18,
+          0.0431,
+          0.073
+        ],
+        "size": [
+          0.35,
+          0.0841,
+          0.193
+        ]
+      },
+      "triangles": 412,
+      "vertices": 226,
+      "material_slots": [
+        "M_Rust",
+        "M_Steel"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "WP39_action_09",
+      "fbx": "SM_WP39_action_09.fbx",
+      "asset": "/Game/Art/Meshes/SM_WP39_action_09",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.17,
+          -0.076,
+          -0.045
+        ],
+        "max": [
+          0.18,
+          0.076,
+          0.073
+        ],
+        "size": [
+          0.35,
+          0.152,
+          0.118
+        ]
+      },
+      "triangles": 576,
+      "vertices": 306,
+      "material_slots": [
+        "M_Rust",
+        "M_Steel"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "WP39_action_10",
+      "fbx": "SM_WP39_action_10.fbx",
+      "asset": "/Game/Art/Meshes/SM_WP39_action_10",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.17,
+          -0.07,
+          -0.09
+        ],
+        "max": [
+          0.18,
+          0.07,
+          0.073
+        ],
+        "size": [
+          0.35,
+          0.14,
+          0.163
+        ]
+      },
+      "triangles": 488,
+      "vertices": 266,
+      "material_slots": [
+        "M_Rubber",
+        "M_Rust",
+        "M_Steel"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "WP39_action_11",
+      "fbx": "SM_WP39_action_11.fbx",
+      "asset": "/Game/Art/Meshes/SM_WP39_action_11",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.17,
+          -0.041,
+          -0.12
+        ],
+        "max": [
+          0.18,
+          0.0431,
+          0.073
+        ],
+        "size": [
+          0.35,
+          0.0841,
+          0.193
+        ]
+      },
+      "triangles": 412,
+      "vertices": 226,
+      "material_slots": [
+        "M_Rust",
+        "M_Steel"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "WP39_action_12",
+      "fbx": "SM_WP39_action_12.fbx",
+      "asset": "/Game/Art/Meshes/SM_WP39_action_12",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.17,
+          -0.041,
+          -0.045
+        ],
+        "max": [
+          0.18,
+          0.0431,
+          0.073
+        ],
+        "size": [
+          0.35,
+          0.0841,
+          0.118
+        ]
+      },
+      "triangles": 384,
+      "vertices": 210,
+      "material_slots": [
+        "M_Rust",
+        "M_Steel"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "WP39_action_13",
+      "fbx": "SM_WP39_action_13.fbx",
+      "asset": "/Game/Art/Meshes/SM_WP39_action_13",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.17,
+          -0.041,
+          -0.045
+        ],
+        "max": [
+          0.18,
+          0.0431,
+          0.073
+        ],
+        "size": [
+          0.35,
+          0.0841,
+          0.118
+        ]
+      },
+      "triangles": 384,
+      "vertices": 210,
+      "material_slots": [
+        "M_Rust",
+        "M_Steel"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "WP39_action_14",
+      "fbx": "SM_WP39_action_14.fbx",
+      "asset": "/Game/Art/Meshes/SM_WP39_action_14",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.17,
+          -0.041,
+          -0.045
+        ],
+        "max": [
+          0.18,
+          0.0431,
+          0.073
+        ],
+        "size": [
+          0.35,
+          0.0841,
+          0.118
+        ]
+      },
+      "triangles": 428,
+      "vertices": 234,
+      "material_slots": [
+        "M_Bone",
+        "M_Rust",
+        "M_Steel"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "WP39_action_15",
+      "fbx": "SM_WP39_action_15.fbx",
+      "asset": "/Game/Art/Meshes/SM_WP39_action_15",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.17,
+          -0.076,
+          -0.045
+        ],
+        "max": [
+          0.18,
+          0.076,
+          0.073
+        ],
+        "size": [
+          0.35,
+          0.152,
+          0.118
+        ]
+      },
+      "triangles": 576,
+      "vertices": 306,
+      "material_slots": [
+        "M_Rust",
+        "M_Steel"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "WP39_barrel_02",
+      "fbx": "SM_WP39_barrel_02.fbx",
+      "asset": "/Game/Art/Meshes/SM_WP39_barrel_02",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.0,
+          -0.036,
+          -0.05
+        ],
+        "max": [
+          0.6,
+          0.036,
+          0.027
+        ],
+        "size": [
+          0.6,
+          0.072,
+          0.077
+        ]
+      },
+      "triangles": 768,
+      "vertices": 400,
+      "material_slots": [
+        "M_Steel",
+        "M_Wood"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "WP39_barrel_03",
+      "fbx": "SM_WP39_barrel_03.fbx",
+      "asset": "/Game/Art/Meshes/SM_WP39_barrel_03",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.0,
+          -0.027,
+          -0.027
+        ],
+        "max": [
+          0.2,
+          0.027,
+          0.027
+        ],
+        "size": [
+          0.2,
+          0.054,
+          0.054
+        ]
+      },
+      "triangles": 416,
+      "vertices": 208,
+      "material_slots": [
+        "M_Steel"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "WP39_barrel_04",
+      "fbx": "SM_WP39_barrel_04.fbx",
+      "asset": "/Game/Art/Meshes/SM_WP39_barrel_04",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.0,
+          -0.027,
+          -0.027
+        ],
+        "max": [
+          0.75,
+          0.027,
+          0.027
+        ],
+        "size": [
+          0.75,
+          0.054,
+          0.054
+        ]
+      },
+      "triangles": 416,
+      "vertices": 208,
+      "material_slots": [
+        "M_Steel"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "WP39_barrel_05",
+      "fbx": "SM_WP39_barrel_05.fbx",
+      "asset": "/Game/Art/Meshes/SM_WP39_barrel_05",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.0,
+          -0.036,
+          -0.05
+        ],
+        "max": [
+          0.28,
+          0.036,
+          0.027
+        ],
+        "size": [
+          0.28,
+          0.072,
+          0.077
+        ]
+      },
+      "triangles": 768,
+      "vertices": 400,
+      "material_slots": [
+        "M_Rubber",
+        "M_Steel"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "WP39_barrel_06",
+      "fbx": "SM_WP39_barrel_06.fbx",
+      "asset": "/Game/Art/Meshes/SM_WP39_barrel_06",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.0,
+          -0.036,
+          -0.05
+        ],
+        "max": [
+          0.48,
+          0.036,
+          0.027
+        ],
+        "size": [
+          0.48,
+          0.072,
+          0.077
+        ]
+      },
+      "triangles": 768,
+      "vertices": 400,
+      "material_slots": [
+        "M_Rubber",
+        "M_Steel"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "WP39_barrel_07",
+      "fbx": "SM_WP39_barrel_07.fbx",
+      "asset": "/Game/Art/Meshes/SM_WP39_barrel_07",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.0,
+          -0.036,
+          -0.05
+        ],
+        "max": [
+          0.64,
+          0.036,
+          0.027
+        ],
+        "size": [
+          0.64,
+          0.072,
+          0.077
+        ]
+      },
+      "triangles": 768,
+      "vertices": 400,
+      "material_slots": [
+        "M_Rubber",
+        "M_Steel"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "WP39_barrel_08",
+      "fbx": "SM_WP39_barrel_08.fbx",
+      "asset": "/Game/Art/Meshes/SM_WP39_barrel_08",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.0,
+          -0.044,
+          -0.022
+        ],
+        "max": [
+          0.58,
+          0.044,
+          0.022
+        ],
+        "size": [
+          0.58,
+          0.088,
+          0.044
+        ]
+      },
+      "triangles": 832,
+      "vertices": 416,
+      "material_slots": [
+        "M_Steel"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "WP39_barrel_09",
+      "fbx": "SM_WP39_barrel_09.fbx",
+      "asset": "/Game/Art/Meshes/SM_WP39_barrel_09",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.0,
+          -0.059,
+          -0.059
+        ],
+        "max": [
+          0.68,
+          0.059,
+          0.059
+        ],
+        "size": [
+          0.68,
+          0.118,
+          0.118
+        ]
+      },
+      "triangles": 416,
+      "vertices": 208,
+      "material_slots": [
+        "M_Steel"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "WP39_barrel_10",
+      "fbx": "SM_WP39_barrel_10.fbx",
+      "asset": "/Game/Art/Meshes/SM_WP39_barrel_10",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.0,
+          -0.061,
+          -0.060073
+        ],
+        "max": [
+          0.7,
+          0.061,
+          0.060073
+        ],
+        "size": [
+          0.7,
+          0.122,
+          0.120147
+        ]
+      },
+      "triangles": 2784,
+      "vertices": 1392,
+      "material_slots": [
+        "M_Steel"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "WP39_barrel_11",
+      "fbx": "SM_WP39_barrel_11.fbx",
+      "asset": "/Game/Art/Meshes/SM_WP39_barrel_11",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.0,
+          -0.044,
+          -0.022
+        ],
+        "max": [
+          0.26,
+          0.044,
+          0.022
+        ],
+        "size": [
+          0.26,
+          0.088,
+          0.044
+        ]
+      },
+      "triangles": 832,
+      "vertices": 416,
+      "material_slots": [
+        "M_Steel"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "WP39_barrel_12",
+      "fbx": "SM_WP39_barrel_12.fbx",
+      "asset": "/Game/Art/Meshes/SM_WP39_barrel_12",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.0,
+          -0.027,
+          -0.027
+        ],
+        "max": [
+          0.16,
+          0.027,
+          0.027
+        ],
+        "size": [
+          0.16,
+          0.054,
+          0.054
+        ]
+      },
+      "triangles": 416,
+      "vertices": 208,
+      "material_slots": [
+        "M_Steel"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "WP39_barrel_13",
+      "fbx": "SM_WP39_barrel_13.fbx",
+      "asset": "/Game/Art/Meshes/SM_WP39_barrel_13",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.0,
+          -0.036,
+          -0.05
+        ],
+        "max": [
+          0.48,
+          0.036,
+          0.027
+        ],
+        "size": [
+          0.48,
+          0.072,
+          0.077
+        ]
+      },
+      "triangles": 768,
+      "vertices": 400,
+      "material_slots": [
+        "M_Rubber",
+        "M_Steel"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "WP39_barrel_14",
+      "fbx": "SM_WP39_barrel_14.fbx",
+      "asset": "/Game/Art/Meshes/SM_WP39_barrel_14",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          0.0,
+          -0.0325,
+          -0.0225
+        ],
+        "max": [
+          0.14,
+          0.0325,
+          0.0225
+        ],
+        "size": [
+          0.14,
+          0.065,
+          0.045
+        ]
+      },
+      "triangles": 100,
+      "vertices": 56,
+      "material_slots": [
+        "M_Rubber",
+        "M_Steel"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "WP39_barrel_15",
+      "fbx": "SM_WP39_barrel_15.fbx",
+      "asset": "/Game/Art/Meshes/SM_WP39_barrel_15",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.0,
+          -0.047,
+          -0.045822
+        ],
+        "max": [
+          0.593348,
+          0.047,
+          0.045822
+        ],
+        "size": [
+          0.593348,
+          0.094,
+          0.091643
+        ]
+      },
+      "triangles": 556,
+      "vertices": 280,
+      "material_slots": [
+        "M_Rust",
+        "M_Steel"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "WP39_stock_00",
+      "fbx": "SM_WP39_stock_00.fbx",
+      "asset": "/Game/Art/Meshes/SM_WP39_stock_00",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.344,
+          -0.038,
+          -0.12
+        ],
+        "max": [
+          0.0,
+          0.038,
+          0.056
+        ],
+        "size": [
+          0.344,
+          0.076,
+          0.176
+        ]
+      },
+      "triangles": 292,
+      "vertices": 160,
+      "material_slots": [
+        "M_Rubber",
+        "M_Steel"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "WP39_stock_01",
+      "fbx": "SM_WP39_stock_01.fbx",
+      "asset": "/Game/Art/Meshes/SM_WP39_stock_01",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.344,
+          -0.038,
+          -0.12
+        ],
+        "max": [
+          0.0,
+          0.038,
+          0.04
+        ],
+        "size": [
+          0.344,
+          0.076,
+          0.16
+        ]
+      },
+      "triangles": 248,
+      "vertices": 136,
+      "material_slots": [
+        "M_Rubber",
+        "M_Steel"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "WP39_stock_02",
+      "fbx": "SM_WP39_stock_02.fbx",
+      "asset": "/Game/Art/Meshes/SM_WP39_stock_02",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.3225,
+          -0.0325,
+          -0.085
+        ],
+        "max": [
+          -0.01335,
+          0.0325,
+          0.055
+        ],
+        "size": [
+          0.30915,
+          0.065,
+          0.14
+        ]
+      },
+      "triangles": 116,
+      "vertices": 64,
+      "material_slots": [
+        "M_Rubber",
+        "M_Steel"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "WP39_stock_03",
+      "fbx": "SM_WP39_stock_03.fbx",
+      "asset": "/Game/Art/Meshes/SM_WP39_stock_03",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.344,
+          -0.038,
+          -0.12
+        ],
+        "max": [
+          0.0,
+          0.038,
+          0.04
+        ],
+        "size": [
+          0.344,
+          0.076,
+          0.16
+        ]
+      },
+      "triangles": 248,
+      "vertices": 136,
+      "material_slots": [
+        "M_Rubber",
+        "M_Steel"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "WP39_stock_04",
+      "fbx": "SM_WP39_stock_04.fbx",
+      "asset": "/Game/Art/Meshes/SM_WP39_stock_04",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.344,
+          -0.038,
+          -0.12
+        ],
+        "max": [
+          0.0,
+          0.038,
+          0.04
+        ],
+        "size": [
+          0.344,
+          0.076,
+          0.16
+        ]
+      },
+      "triangles": 72,
+      "vertices": 40,
+      "material_slots": [
+        "M_Rubber",
+        "M_Wood"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "WP39_stock_05",
+      "fbx": "SM_WP39_stock_05.fbx",
+      "asset": "/Game/Art/Meshes/SM_WP39_stock_05",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.344,
+          -0.038,
+          -0.12
+        ],
+        "max": [
+          0.0,
+          0.038,
+          0.04
+        ],
+        "size": [
+          0.344,
+          0.076,
+          0.16
+        ]
+      },
+      "triangles": 72,
+      "vertices": 40,
+      "material_slots": [
+        "M_Rubber",
+        "M_Wood"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "WP39_stock_06",
+      "fbx": "SM_WP39_stock_06.fbx",
+      "asset": "/Game/Art/Meshes/SM_WP39_stock_06",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.344,
+          -0.038,
+          -0.12
+        ],
+        "max": [
+          0.0,
+          0.038,
+          0.056
+        ],
+        "size": [
+          0.344,
+          0.076,
+          0.176
+        ]
+      },
+      "triangles": 292,
+      "vertices": 160,
+      "material_slots": [
+        "M_Rubber",
+        "M_Steel"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "WP39_stock_07",
+      "fbx": "SM_WP39_stock_07.fbx",
+      "asset": "/Game/Art/Meshes/SM_WP39_stock_07",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.344,
+          -0.038,
+          -0.12
+        ],
+        "max": [
+          0.0,
+          0.038,
+          0.056
+        ],
+        "size": [
+          0.344,
+          0.076,
+          0.176
+        ]
+      },
+      "triangles": 292,
+      "vertices": 160,
+      "material_slots": [
+        "M_Rubber",
+        "M_Steel"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "WP39_grip_00",
+      "fbx": "SM_WP39_grip_00.fbx",
+      "asset": "/Game/Art/Meshes/SM_WP39_grip_00",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.065,
+          -0.03,
+          -0.19
+        ],
+        "max": [
+          0.075,
+          0.029,
+          0.0
+        ],
+        "size": [
+          0.14,
+          0.059,
+          0.19
+        ]
+      },
+      "triangles": 316,
+      "vertices": 174,
+      "material_slots": [
+        "M_Rubber",
+        "M_Steel"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "WP39_grip_01",
+      "fbx": "SM_WP39_grip_01.fbx",
+      "asset": "/Game/Art/Meshes/SM_WP39_grip_01",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.065,
+          -0.03,
+          -0.19
+        ],
+        "max": [
+          0.075,
+          0.029,
+          0.0
+        ],
+        "size": [
+          0.14,
+          0.059,
+          0.19
+        ]
+      },
+      "triangles": 316,
+      "vertices": 174,
+      "material_slots": [
+        "M_Steel",
+        "M_Wood"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "WP39_grip_02",
+      "fbx": "SM_WP39_grip_02.fbx",
+      "asset": "/Game/Art/Meshes/SM_WP39_grip_02",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.065,
+          -0.03,
+          -0.19
+        ],
+        "max": [
+          0.075,
+          0.029,
+          0.0
+        ],
+        "size": [
+          0.14,
+          0.059,
+          0.19
+        ]
+      },
+      "triangles": 316,
+      "vertices": 174,
+      "material_slots": [
+        "M_Rubber",
+        "M_Steel"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "WP39_grip_03",
+      "fbx": "SM_WP39_grip_03.fbx",
+      "asset": "/Game/Art/Meshes/SM_WP39_grip_03",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.065,
+          -0.03,
+          -0.19
+        ],
+        "max": [
+          0.075,
+          0.029,
+          0.0
+        ],
+        "size": [
+          0.14,
+          0.059,
+          0.19
+        ]
+      },
+      "triangles": 316,
+      "vertices": 174,
+      "material_slots": [
+        "M_Rubber",
+        "M_Steel"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "WP39_grip_04",
+      "fbx": "SM_WP39_grip_04.fbx",
+      "asset": "/Game/Art/Meshes/SM_WP39_grip_04",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.28,
+          -0.026,
+          -0.026
+        ],
+        "max": [
+          0.0,
+          0.026,
+          0.026
+        ],
+        "size": [
+          0.28,
+          0.052,
+          0.052
+        ]
+      },
+      "triangles": 1196,
+      "vertices": 600,
+      "material_slots": [
+        "M_Rubber",
+        "M_Steel"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "WP39_grip_05",
+      "fbx": "SM_WP39_grip_05.fbx",
+      "asset": "/Game/Art/Meshes/SM_WP39_grip_05",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.28,
+          -0.026,
+          -0.026
+        ],
+        "max": [
+          0.0,
+          0.026,
+          0.026
+        ],
+        "size": [
+          0.28,
+          0.052,
+          0.052
+        ]
+      },
+      "triangles": 1196,
+      "vertices": 600,
+      "material_slots": [
+        "M_Rubber",
+        "M_Wood"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "WP39_feed_00",
+      "fbx": "SM_WP39_feed_00.fbx",
+      "asset": "/Game/Art/Meshes/SM_WP39_feed_00",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.09,
+          -0.018,
+          -0.017549
+        ],
+        "max": [
+          0.2,
+          0.018,
+          0.017549
+        ],
+        "size": [
+          0.29,
+          0.036,
+          0.035097
+        ]
+      },
+      "triangles": 112,
+      "vertices": 56,
+      "material_slots": [
+        "M_Steel"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "WP39_feed_01",
+      "fbx": "SM_WP39_feed_01.fbx",
+      "asset": "/Game/Art/Meshes/SM_WP39_feed_01",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.05,
+          -0.048,
+          -0.048
+        ],
+        "max": [
+          0.054,
+          0.048,
+          0.048
+        ],
+        "size": [
+          0.104,
+          0.096,
+          0.096
+        ]
+      },
+      "triangles": 572,
+      "vertices": 288,
+      "material_slots": [
+        "M_Rust",
+        "M_Steel"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "WP39_feed_02",
+      "fbx": "SM_WP39_feed_02.fbx",
+      "asset": "/Game/Art/Meshes/SM_WP39_feed_02",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.082,
+          -0.047,
+          -0.08
+        ],
+        "max": [
+          0.082,
+          0.047,
+          0.02
+        ],
+        "size": [
+          0.164,
+          0.094,
+          0.1
+        ]
+      },
+      "triangles": 176,
+      "vertices": 96,
+      "material_slots": [
+        "M_Steel"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "WP39_feed_03",
+      "fbx": "SM_WP39_feed_03.fbx",
+      "asset": "/Game/Art/Meshes/SM_WP39_feed_03",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.1,
+          -0.07,
+          -0.0275
+        ],
+        "max": [
+          0.021448,
+          0.07,
+          0.022
+        ],
+        "size": [
+          0.121448,
+          0.14,
+          0.0495
+        ]
+      },
+      "triangles": 96,
+      "vertices": 52,
+      "material_slots": [
+        "M_Rust",
+        "M_Steel"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "WP39_feed_04",
+      "fbx": "SM_WP39_feed_04.fbx",
+      "asset": "/Game/Art/Meshes/SM_WP39_feed_04",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.09,
+          -0.13,
+          -0.145
+        ],
+        "max": [
+          0.09,
+          0.055,
+          0.02
+        ],
+        "size": [
+          0.18,
+          0.185,
+          0.165
+        ]
+      },
+      "triangles": 256,
+      "vertices": 144,
+      "material_slots": [
+        "M_Bone",
+        "M_Rubber",
+        "M_Steel"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "WP39_feed_05",
+      "fbx": "SM_WP39_feed_05.fbx",
+      "asset": "/Game/Art/Meshes/SM_WP39_feed_05",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.06,
+          -0.036,
+          -0.12
+        ],
+        "max": [
+          0.07,
+          0.036,
+          0.036
+        ],
+        "size": [
+          0.13,
+          0.072,
+          0.156
+        ]
+      },
+      "triangles": 200,
+      "vertices": 104,
+      "material_slots": [
+        "M_Rust",
+        "M_Steel"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    }
+  ]
+}

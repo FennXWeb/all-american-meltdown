@@ -1,0 +1,1052 @@
+[
+  {
+    "id": "part_action_00",
+    "name": "Crowbar hook",
+    "group": "Action",
+    "mesh": "WP39_action_00",
+    "size": [
+      38,
+      7,
+      10
+    ],
+    "weapon": "crowbar",
+    "damage": 0.015,
+    "handling": 0,
+    "speed": 0,
+    "price": 70,
+    "muzzle": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "part_action_01",
+    "name": "Bat striking head",
+    "group": "Action",
+    "mesh": "WP39_action_01",
+    "size": [
+      38,
+      7,
+      10
+    ],
+    "weapon": "bat",
+    "damage": 0.015,
+    "handling": 0,
+    "speed": 0,
+    "price": 78,
+    "muzzle": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "part_action_02",
+    "name": "Pump shotgun action",
+    "group": "Action",
+    "mesh": "WP39_action_02",
+    "size": [
+      32,
+      7,
+      10
+    ],
+    "weapon": "shotgun",
+    "damage": 0.015,
+    "handling": 0,
+    "speed": 0,
+    "price": 86,
+    "muzzle": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "part_action_03",
+    "name": ".357 revolver frame",
+    "group": "Action",
+    "mesh": "WP39_action_03",
+    "size": [
+      32,
+      7,
+      10
+    ],
+    "weapon": "revolver",
+    "damage": 0.015,
+    "handling": 0,
+    "speed": 0,
+    "price": 94,
+    "muzzle": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "part_action_04",
+    "name": "Sniper receiver",
+    "group": "Action",
+    "mesh": "WP39_action_04",
+    "size": [
+      32,
+      7,
+      10
+    ],
+    "weapon": "sniper",
+    "damage": 0.015,
+    "handling": 0,
+    "speed": 0,
+    "price": 102,
+    "muzzle": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "part_action_05",
+    "name": "SMG receiver",
+    "group": "Action",
+    "mesh": "WP39_action_05",
+    "size": [
+      32,
+      7,
+      10
+    ],
+    "weapon": "smg",
+    "damage": 0.015,
+    "handling": 0,
+    "speed": 0,
+    "price": 110,
+    "muzzle": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "part_action_06",
+    "name": "Combat rifle receiver",
+    "group": "Action",
+    "mesh": "WP39_action_06",
+    "size": [
+      32,
+      7,
+      10
+    ],
+    "weapon": "rifle",
+    "damage": 0.015,
+    "handling": 0,
+    "speed": 0,
+    "price": 118,
+    "muzzle": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "part_action_07",
+    "name": "LMG receiver",
+    "group": "Action",
+    "mesh": "WP39_action_07",
+    "size": [
+      32,
+      10,
+      10
+    ],
+    "weapon": "lmg",
+    "damage": 0.015,
+    "handling": 0,
+    "speed": 0,
+    "price": 126,
+    "muzzle": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "part_action_08",
+    "name": "Double-barrel action",
+    "group": "Action",
+    "mesh": "WP39_action_08",
+    "size": [
+      32,
+      7,
+      10
+    ],
+    "weapon": "doublebarrel",
+    "damage": 0.015,
+    "handling": 0,
+    "speed": 0,
+    "price": 134,
+    "muzzle": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "part_action_09",
+    "name": "Missile launcher chassis",
+    "group": "Action",
+    "mesh": "WP39_action_09",
+    "size": [
+      32,
+      10,
+      10
+    ],
+    "weapon": "missile_launcher",
+    "damage": 0.015,
+    "handling": 0,
+    "speed": 0,
+    "price": 142,
+    "muzzle": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "part_action_10",
+    "name": "Minigun drive unit",
+    "group": "Action",
+    "mesh": "WP39_action_10",
+    "size": [
+      32,
+      10,
+      10
+    ],
+    "weapon": "minigun",
+    "damage": 0.015,
+    "handling": 0,
+    "speed": 0,
+    "price": 150,
+    "muzzle": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "part_action_11",
+    "name": "Sawed-off action",
+    "group": "Action",
+    "mesh": "WP39_action_11",
+    "size": [
+      32,
+      7,
+      10
+    ],
+    "weapon": "sawedoff",
+    "damage": 0.015,
+    "handling": 0,
+    "speed": 0,
+    "price": 158,
+    "muzzle": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "part_action_12",
+    "name": ".50 pistol frame",
+    "group": "Action",
+    "mesh": "WP39_action_12",
+    "size": [
+      32,
+      7,
+      10
+    ],
+    "weapon": "desert_eagle",
+    "damage": 0.015,
+    "handling": 0,
+    "speed": 0,
+    "price": 166,
+    "muzzle": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "part_action_13",
+    "name": "M4 receiver",
+    "group": "Action",
+    "mesh": "WP39_action_13",
+    "size": [
+      32,
+      7,
+      10
+    ],
+    "weapon": "m4",
+    "damage": 0.015,
+    "handling": 0,
+    "speed": 0,
+    "price": 174,
+    "muzzle": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "part_action_14",
+    "name": "Taser power module",
+    "group": "Action",
+    "mesh": "WP39_action_14",
+    "size": [
+      32,
+      7,
+      10
+    ],
+    "weapon": "taser",
+    "damage": 0.015,
+    "handling": 0,
+    "speed": 0,
+    "price": 182,
+    "muzzle": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "part_action_15",
+    "name": "Flamethrower valve body",
+    "group": "Action",
+    "mesh": "WP39_action_15",
+    "size": [
+      32,
+      10,
+      10
+    ],
+    "weapon": "flamethrower",
+    "damage": 0.015,
+    "handling": 0,
+    "speed": 0,
+    "price": 190,
+    "muzzle": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "part_barrel_02",
+    "name": "Pump barrel and fore-end",
+    "group": "Barrel",
+    "mesh": "WP39_barrel_02",
+    "size": [
+      60,
+      6,
+      8
+    ],
+    "weapon": "",
+    "damage": 0.02,
+    "handling": 0,
+    "speed": 0,
+    "price": 60,
+    "muzzle": [
+      60,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "part_barrel_03",
+    "name": ".357 barrel",
+    "group": "Barrel",
+    "mesh": "WP39_barrel_03",
+    "size": [
+      20,
+      6,
+      8
+    ],
+    "weapon": "",
+    "damage": 0.02,
+    "handling": 0,
+    "speed": 0,
+    "price": 65,
+    "muzzle": [
+      20,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "part_barrel_04",
+    "name": "Precision rifle barrel",
+    "group": "Barrel",
+    "mesh": "WP39_barrel_04",
+    "size": [
+      75,
+      6,
+      8
+    ],
+    "weapon": "",
+    "damage": 0.035,
+    "handling": 0.015,
+    "speed": 0,
+    "price": 70,
+    "muzzle": [
+      75,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "part_barrel_05",
+    "name": "SMG barrel shroud",
+    "group": "Barrel",
+    "mesh": "WP39_barrel_05",
+    "size": [
+      28,
+      6,
+      8
+    ],
+    "weapon": "",
+    "damage": 0.02,
+    "handling": 0,
+    "speed": 0,
+    "price": 75,
+    "muzzle": [
+      28,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "part_barrel_06",
+    "name": "Combat rifle gas barrel",
+    "group": "Barrel",
+    "mesh": "WP39_barrel_06",
+    "size": [
+      48,
+      6,
+      8
+    ],
+    "weapon": "",
+    "damage": 0.02,
+    "handling": 0,
+    "speed": 0,
+    "price": 80,
+    "muzzle": [
+      48,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "part_barrel_07",
+    "name": "LMG heavy barrel",
+    "group": "Barrel",
+    "mesh": "WP39_barrel_07",
+    "size": [
+      64,
+      6,
+      8
+    ],
+    "weapon": "",
+    "damage": 0.035,
+    "handling": 0,
+    "speed": 0,
+    "price": 85,
+    "muzzle": [
+      64,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "part_barrel_08",
+    "name": "Twin shotgun barrels",
+    "group": "Barrel",
+    "mesh": "WP39_barrel_08",
+    "size": [
+      58,
+      10,
+      8
+    ],
+    "weapon": "",
+    "damage": 0.02,
+    "handling": 0,
+    "speed": 0,
+    "price": 90,
+    "muzzle": [
+      58,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "part_barrel_09",
+    "name": "Launch tube",
+    "group": "Barrel",
+    "mesh": "WP39_barrel_09",
+    "size": [
+      68,
+      10,
+      8
+    ],
+    "weapon": "",
+    "damage": 0.035,
+    "handling": 0,
+    "speed": 0,
+    "price": 95,
+    "muzzle": [
+      68,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "part_barrel_10",
+    "name": "Six-barrel rotor",
+    "group": "Barrel",
+    "mesh": "WP39_barrel_10",
+    "size": [
+      70,
+      10,
+      8
+    ],
+    "weapon": "",
+    "damage": 0.035,
+    "handling": 0,
+    "speed": 0,
+    "price": 100,
+    "muzzle": [
+      70,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "part_barrel_11",
+    "name": "Short twin barrels",
+    "group": "Barrel",
+    "mesh": "WP39_barrel_11",
+    "size": [
+      26,
+      10,
+      8
+    ],
+    "weapon": "",
+    "damage": 0.02,
+    "handling": 0,
+    "speed": 0,
+    "price": 105,
+    "muzzle": [
+      26,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "part_barrel_12",
+    "name": ".50 pistol barrel",
+    "group": "Barrel",
+    "mesh": "WP39_barrel_12",
+    "size": [
+      16,
+      6,
+      8
+    ],
+    "weapon": "",
+    "damage": 0.02,
+    "handling": 0,
+    "speed": 0,
+    "price": 110,
+    "muzzle": [
+      16,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "part_barrel_13",
+    "name": "M4 gas barrel",
+    "group": "Barrel",
+    "mesh": "WP39_barrel_13",
+    "size": [
+      48,
+      6,
+      8
+    ],
+    "weapon": "",
+    "damage": 0.02,
+    "handling": 0,
+    "speed": 0,
+    "price": 115,
+    "muzzle": [
+      48,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "part_barrel_14",
+    "name": "Taser electrodes",
+    "group": "Barrel",
+    "mesh": "WP39_barrel_14",
+    "size": [
+      14,
+      6,
+      8
+    ],
+    "weapon": "",
+    "damage": 0.02,
+    "handling": 0,
+    "speed": 0,
+    "price": 120,
+    "muzzle": [
+      14,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "part_barrel_15",
+    "name": "Flame nozzle",
+    "group": "Barrel",
+    "mesh": "WP39_barrel_15",
+    "size": [
+      58,
+      6,
+      8
+    ],
+    "weapon": "",
+    "damage": 0.02,
+    "handling": 0,
+    "speed": 0,
+    "price": 125,
+    "muzzle": [
+      58,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "part_stock_00",
+    "name": "Adjustable carbine stock",
+    "group": "Stock",
+    "mesh": "WP39_stock_00",
+    "size": [
+      32,
+      8,
+      14
+    ],
+    "weapon": "",
+    "damage": 0,
+    "handling": 0.025,
+    "speed": 0.005,
+    "price": 35,
+    "muzzle": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "part_stock_01",
+    "name": "Fixed rifle stock",
+    "group": "Stock",
+    "mesh": "WP39_stock_01",
+    "size": [
+      32,
+      8,
+      14
+    ],
+    "weapon": "",
+    "damage": 0,
+    "handling": 0.027000000000000003,
+    "speed": 0.005,
+    "price": 39,
+    "muzzle": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "part_stock_02",
+    "name": "Folding skeleton stock",
+    "group": "Stock",
+    "mesh": "WP39_stock_02",
+    "size": [
+      32,
+      8,
+      14
+    ],
+    "weapon": "",
+    "damage": 0,
+    "handling": 0.029,
+    "speed": 0.005,
+    "price": 43,
+    "muzzle": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "part_stock_03",
+    "name": "Padded survival stock",
+    "group": "Stock",
+    "mesh": "WP39_stock_03",
+    "size": [
+      32,
+      8,
+      14
+    ],
+    "weapon": "",
+    "damage": 0,
+    "handling": 0.031,
+    "speed": 0.005,
+    "price": 47,
+    "muzzle": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "part_stock_04",
+    "name": "Pump shotgun stock",
+    "group": "Stock",
+    "mesh": "WP39_stock_04",
+    "size": [
+      32,
+      8,
+      14
+    ],
+    "weapon": "",
+    "damage": 0,
+    "handling": 0.033,
+    "speed": 0.005,
+    "price": 51,
+    "muzzle": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "part_stock_05",
+    "name": "Walnut break-action stock",
+    "group": "Stock",
+    "mesh": "WP39_stock_05",
+    "size": [
+      32,
+      8,
+      14
+    ],
+    "weapon": "",
+    "damage": 0,
+    "handling": 0.035,
+    "speed": 0.005,
+    "price": 55,
+    "muzzle": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "part_stock_06",
+    "name": "Precision cheek-rest stock",
+    "group": "Stock",
+    "mesh": "WP39_stock_06",
+    "size": [
+      32,
+      8,
+      14
+    ],
+    "weapon": "",
+    "damage": 0,
+    "handling": 0.037000000000000005,
+    "speed": 0.005,
+    "price": 59,
+    "muzzle": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "part_stock_07",
+    "name": "Heavy support stock",
+    "group": "Stock",
+    "mesh": "WP39_stock_07",
+    "size": [
+      32,
+      8,
+      14
+    ],
+    "weapon": "",
+    "damage": 0,
+    "handling": 0.039,
+    "speed": -0.004,
+    "price": 63,
+    "muzzle": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "part_grip_00",
+    "name": "Ribbed pistol grip",
+    "group": "Grip",
+    "mesh": "WP39_grip_00",
+    "size": [
+      10,
+      6,
+      18
+    ],
+    "weapon": "",
+    "damage": 0,
+    "handling": 0.025,
+    "speed": 0.008,
+    "price": 24,
+    "muzzle": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "part_grip_01",
+    "name": "Revolver walnut grip",
+    "group": "Grip",
+    "mesh": "WP39_grip_01",
+    "size": [
+      10,
+      6,
+      18
+    ],
+    "weapon": "",
+    "damage": 0,
+    "handling": 0.025,
+    "speed": 0.008,
+    "price": 27,
+    "muzzle": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "part_grip_02",
+    "name": "Angled shoulder grip",
+    "group": "Grip",
+    "mesh": "WP39_grip_02",
+    "size": [
+      10,
+      6,
+      18
+    ],
+    "weapon": "",
+    "damage": 0,
+    "handling": 0.025,
+    "speed": 0.008,
+    "price": 30,
+    "muzzle": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "part_grip_03",
+    "name": "Large pistol grip",
+    "group": "Grip",
+    "mesh": "WP39_grip_03",
+    "size": [
+      10,
+      6,
+      18
+    ],
+    "weapon": "",
+    "damage": 0,
+    "handling": 0.025,
+    "speed": 0.008,
+    "price": 33,
+    "muzzle": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "part_grip_04",
+    "name": "Steel crowbar handle",
+    "group": "Grip",
+    "mesh": "WP39_grip_04",
+    "size": [
+      30,
+      4,
+      4
+    ],
+    "weapon": "",
+    "damage": 0,
+    "handling": 0.025,
+    "speed": 0.008,
+    "price": 36,
+    "muzzle": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "part_grip_05",
+    "name": "Wrapped bat handle",
+    "group": "Grip",
+    "mesh": "WP39_grip_05",
+    "size": [
+      30,
+      4,
+      4
+    ],
+    "weapon": "",
+    "damage": 0,
+    "handling": 0.025,
+    "speed": 0.008,
+    "price": 39,
+    "muzzle": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "part_feed_00",
+    "name": "Tubular feed assembly",
+    "group": "Feed",
+    "mesh": "WP39_feed_00",
+    "size": [
+      18,
+      9,
+      11
+    ],
+    "weapon": "",
+    "damage": 0,
+    "handling": 0,
+    "speed": 0.025,
+    "price": 40,
+    "muzzle": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "part_feed_01",
+    "name": "Six-chamber cylinder",
+    "group": "Feed",
+    "mesh": "WP39_feed_01",
+    "size": [
+      18,
+      9,
+      11
+    ],
+    "weapon": "",
+    "damage": 0,
+    "handling": 0,
+    "speed": 0.025,
+    "price": 47,
+    "muzzle": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "part_feed_02",
+    "name": "Detachable-magazine well",
+    "group": "Feed",
+    "mesh": "WP39_feed_02",
+    "size": [
+      18,
+      9,
+      11
+    ],
+    "weapon": "",
+    "damage": 0,
+    "handling": 0,
+    "speed": 0.025,
+    "price": 54,
+    "muzzle": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "part_feed_03",
+    "name": "Break-action hinge",
+    "group": "Feed",
+    "mesh": "WP39_feed_03",
+    "size": [
+      18,
+      9,
+      11
+    ],
+    "weapon": "",
+    "damage": 0,
+    "handling": 0,
+    "speed": 0.025,
+    "price": 61,
+    "muzzle": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "part_feed_04",
+    "name": "Belt feed and cover",
+    "group": "Feed",
+    "mesh": "WP39_feed_04",
+    "size": [
+      18,
+      9,
+      11
+    ],
+    "weapon": "",
+    "damage": 0,
+    "handling": 0,
+    "speed": 0.025,
+    "price": 68,
+    "muzzle": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "part_feed_05",
+    "name": "Sealed pressure coupling",
+    "group": "Feed",
+    "mesh": "WP39_feed_05",
+    "size": [
+      18,
+      9,
+      11
+    ],
+    "weapon": "",
+    "damage": 0,
+    "handling": 0,
+    "speed": 0.025,
+    "price": 75,
+    "muzzle": [
+      0,
+      0,
+      0
+    ]
+  }
+]

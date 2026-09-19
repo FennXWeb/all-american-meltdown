@@ -1,0 +1,3169 @@
+{
+  "assets": [
+    {
+      "name": "Vehicle42_sedan",
+      "fbx": "SM_Vehicle42_sedan.fbx",
+      "asset": "/Game/Art/Meshes/SM_Vehicle42_sedan",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -1.94,
+          -1.15,
+          0.31
+        ],
+        "max": [
+          2.24,
+          1.15,
+          1.625
+        ],
+        "size": [
+          4.18,
+          2.3,
+          1.315
+        ]
+      },
+      "triangles": 6296,
+      "vertices": 3783,
+      "material_slots": [
+        "M_V42_Chrome",
+        "M_V42_Glass",
+        "M_V42_Lamp",
+        "M_V42_Metal",
+        "M_V42_Paint_sedan",
+        "M_V42_RedLamp",
+        "M_V42_Rubber",
+        "M_V42_Vinyl"
+      ],
+      "boundary_edges": 586,
+      "collision": "none",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "Windshield42_sedan",
+      "fbx": "SM_Windshield42_sedan.fbx",
+      "asset": "/Game/Art/Meshes/SM_Windshield42_sedan",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          0.03,
+          -0.7917,
+          1.13
+        ],
+        "max": [
+          0.74,
+          0.7917,
+          1.57
+        ],
+        "size": [
+          0.71,
+          1.5834,
+          0.44
+        ]
+      },
+      "triangles": 2,
+      "vertices": 4,
+      "material_slots": [
+        "M_V42_Glass"
+      ],
+      "boundary_edges": 4,
+      "collision": "none",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "Cabin42_sedan",
+      "fbx": "SM_Cabin42_sedan.fbx",
+      "asset": "/Game/Art/Meshes/SM_Cabin42_sedan",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -1.8,
+          -0.815901,
+          0.3425
+        ],
+        "max": [
+          1.3,
+          0.8,
+          1.5275
+        ],
+        "size": [
+          3.1,
+          1.615901,
+          1.185
+        ]
+      },
+      "triangles": 6620,
+      "vertices": 3625,
+      "material_slots": [
+        "M_V42_Carpet",
+        "M_V42_Chrome",
+        "M_V42_Fabric",
+        "M_V42_Glass",
+        "M_V42_Leather",
+        "M_V42_Metal",
+        "M_V42_Rubber",
+        "M_V42_Vinyl"
+      ],
+      "boundary_edges": 104,
+      "collision": "none",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "Wheel42_sedan",
+      "fbx": "SM_Wheel42_sedan.fbx",
+      "asset": "/Game/Art/Meshes/SM_Wheel42_sedan",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.352524,
+          -0.154,
+          -0.3445
+        ],
+        "max": [
+          0.352524,
+          0.154,
+          0.3445
+        ],
+        "size": [
+          0.705049,
+          0.308,
+          0.689
+        ]
+      },
+      "triangles": 5880,
+      "vertices": 3224,
+      "material_slots": [
+        "M_V42_Chrome",
+        "M_V42_Metal",
+        "M_V42_Rubber",
+        "M_V42_Vinyl"
+      ],
+      "boundary_edges": 96,
+      "collision": "none",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "Vehicle42_police",
+      "fbx": "SM_Vehicle42_police.fbx",
+      "asset": "/Game/Art/Meshes/SM_Vehicle42_police",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -2.44,
+          -1.23,
+          0.31
+        ],
+        "max": [
+          2.24,
+          1.23,
+          1.705
+        ],
+        "size": [
+          4.68,
+          2.46,
+          1.395
+        ]
+      },
+      "triangles": 6296,
+      "vertices": 3783,
+      "material_slots": [
+        "M_V42_Chrome",
+        "M_V42_Glass",
+        "M_V42_Lamp",
+        "M_V42_Metal",
+        "M_V42_Paint_police",
+        "M_V42_RedLamp",
+        "M_V42_Rubber",
+        "M_V42_Vinyl"
+      ],
+      "boundary_edges": 586,
+      "collision": "none",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "Windshield42_police",
+      "fbx": "SM_Windshield42_police.fbx",
+      "asset": "/Game/Art/Meshes/SM_Windshield42_police",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          0.03,
+          -0.8645,
+          1.13
+        ],
+        "max": [
+          0.74,
+          0.8645,
+          1.65
+        ],
+        "size": [
+          0.71,
+          1.729,
+          0.52
+        ]
+      },
+      "triangles": 2,
+      "vertices": 4,
+      "material_slots": [
+        "M_V42_Glass"
+      ],
+      "boundary_edges": 4,
+      "collision": "none",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "Cabin42_police",
+      "fbx": "SM_Cabin42_police.fbx",
+      "asset": "/Game/Art/Meshes/SM_Cabin42_police",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -2.3,
+          -0.88,
+          0.3425
+        ],
+        "max": [
+          1.3,
+          0.88,
+          1.6075
+        ],
+        "size": [
+          3.6,
+          1.76,
+          1.265
+        ]
+      },
+      "triangles": 6620,
+      "vertices": 3625,
+      "material_slots": [
+        "M_V42_Carpet",
+        "M_V42_Chrome",
+        "M_V42_Fabric",
+        "M_V42_Glass",
+        "M_V42_Leather",
+        "M_V42_Metal",
+        "M_V42_Rubber",
+        "M_V42_Vinyl"
+      ],
+      "boundary_edges": 104,
+      "collision": "none",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "Wheel42_police",
+      "fbx": "SM_Wheel42_police.fbx",
+      "asset": "/Game/Art/Meshes/SM_Wheel42_police",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.352524,
+          -0.154,
+          -0.3445
+        ],
+        "max": [
+          0.352524,
+          0.154,
+          0.3445
+        ],
+        "size": [
+          0.705049,
+          0.308,
+          0.689
+        ]
+      },
+      "triangles": 5880,
+      "vertices": 3224,
+      "material_slots": [
+        "M_V42_Chrome",
+        "M_V42_Metal",
+        "M_V42_Rubber",
+        "M_V42_Vinyl"
+      ],
+      "boundary_edges": 96,
+      "collision": "none",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "Vehicle42_boxtruck",
+      "fbx": "SM_Vehicle42_boxtruck.fbx",
+      "asset": "/Game/Art/Meshes/SM_Vehicle42_boxtruck",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -5.44,
+          -1.43,
+          0.31
+        ],
+        "max": [
+          2.24,
+          1.43,
+          3.325
+        ],
+        "size": [
+          7.68,
+          2.86,
+          3.015
+        ]
+      },
+      "triangles": 7222,
+      "vertices": 4279,
+      "material_slots": [
+        "M_V42_Chrome",
+        "M_V42_Lamp",
+        "M_V42_Metal",
+        "M_V42_Paint_boxtruck",
+        "M_V42_RedLamp",
+        "M_V42_Rubber",
+        "M_V42_Vinyl"
+      ],
+      "boundary_edges": 574,
+      "collision": "none",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "Windshield42_boxtruck",
+      "fbx": "SM_Windshield42_boxtruck.fbx",
+      "asset": "/Game/Art/Meshes/SM_Windshield42_boxtruck",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          0.62,
+          -1.0465,
+          1.13
+        ],
+        "max": [
+          0.74,
+          1.0465,
+          2.12
+        ],
+        "size": [
+          0.12,
+          2.093,
+          0.99
+        ]
+      },
+      "triangles": 2,
+      "vertices": 4,
+      "material_slots": [
+        "M_V42_Glass"
+      ],
+      "boundary_edges": 4,
+      "collision": "none",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "Cabin42_boxtruck",
+      "fbx": "SM_Cabin42_boxtruck.fbx",
+      "asset": "/Game/Art/Meshes/SM_Cabin42_boxtruck",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -5.4,
+          -1.1,
+          0.3425
+        ],
+        "max": [
+          1.3,
+          1.1,
+          2.0775
+        ],
+        "size": [
+          6.7,
+          2.2,
+          1.735
+        ]
+      },
+      "triangles": 5128,
+      "vertices": 2809,
+      "material_slots": [
+        "M_V42_Carpet",
+        "M_V42_Chrome",
+        "M_V42_Fabric",
+        "M_V42_Glass",
+        "M_V42_Leather",
+        "M_V42_Metal",
+        "M_V42_Rubber",
+        "M_V42_Vinyl"
+      ],
+      "boundary_edges": 80,
+      "collision": "none",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "Wheel42_boxtruck",
+      "fbx": "SM_Wheel42_boxtruck.fbx",
+      "asset": "/Game/Art/Meshes/SM_Wheel42_boxtruck",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.352524,
+          -0.154,
+          -0.3445
+        ],
+        "max": [
+          0.352524,
+          0.154,
+          0.3445
+        ],
+        "size": [
+          0.705049,
+          0.308,
+          0.689
+        ]
+      },
+      "triangles": 5880,
+      "vertices": 3224,
+      "material_slots": [
+        "M_V42_Chrome",
+        "M_V42_Metal",
+        "M_V42_Rubber",
+        "M_V42_Vinyl"
+      ],
+      "boundary_edges": 96,
+      "collision": "none",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "Vehicle42_rv",
+      "fbx": "SM_Vehicle42_rv.fbx",
+      "asset": "/Game/Art/Meshes/SM_Vehicle42_rv",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -9.940001,
+          -1.56,
+          0.31
+        ],
+        "max": [
+          2.24,
+          1.56,
+          3.64
+        ],
+        "size": [
+          12.180001,
+          3.12,
+          3.33
+        ]
+      },
+      "triangles": 10794,
+      "vertices": 6322,
+      "material_slots": [
+        "M_V42_Chrome",
+        "M_V42_Glass",
+        "M_V42_Lamp",
+        "M_V42_Metal",
+        "M_V42_Paint_rv",
+        "M_V42_RedLamp",
+        "M_V42_Rubber",
+        "M_V42_Vinyl"
+      ],
+      "boundary_edges": 698,
+      "collision": "none",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "Windshield42_rv",
+      "fbx": "SM_Windshield42_rv.fbx",
+      "asset": "/Game/Art/Meshes/SM_Windshield42_rv",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          1.74,
+          -1.15,
+          1.46
+        ],
+        "max": [
+          1.98,
+          1.15,
+          2.88
+        ],
+        "size": [
+          0.24,
+          2.3,
+          1.42
+        ]
+      },
+      "triangles": 2,
+      "vertices": 4,
+      "material_slots": [
+        "M_V42_Glass"
+      ],
+      "boundary_edges": 4,
+      "collision": "none",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "Cabin42_rv",
+      "fbx": "SM_Cabin42_rv.fbx",
+      "asset": "/Game/Art/Meshes/SM_Cabin42_rv",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -9.8,
+          -1.21,
+          0.47
+        ],
+        "max": [
+          2.05,
+          1.21,
+          1.9
+        ],
+        "size": [
+          11.85,
+          2.42,
+          1.43
+        ]
+      },
+      "triangles": 2984,
+      "vertices": 1633,
+      "material_slots": [
+        "M_V42_Carpet",
+        "M_V42_Chrome",
+        "M_V42_Glass",
+        "M_V42_Leather",
+        "M_V42_Metal",
+        "M_V42_Rubber",
+        "M_V42_Vinyl"
+      ],
+      "boundary_edges": 80,
+      "collision": "none",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "Wheel42_rv",
+      "fbx": "SM_Wheel42_rv.fbx",
+      "asset": "/Game/Art/Meshes/SM_Wheel42_rv",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.442524,
+          -0.154,
+          -0.4345
+        ],
+        "max": [
+          0.442524,
+          0.154,
+          0.4345
+        ],
+        "size": [
+          0.885049,
+          0.308,
+          0.869
+        ]
+      },
+      "triangles": 5880,
+      "vertices": 3224,
+      "material_slots": [
+        "M_V42_Chrome",
+        "M_V42_Metal",
+        "M_V42_Rubber",
+        "M_V42_Vinyl"
+      ],
+      "boundary_edges": 96,
+      "collision": "none",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "Vehicle42_bus",
+      "fbx": "SM_Vehicle42_bus.fbx",
+      "asset": "/Game/Art/Meshes/SM_Vehicle42_bus",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -7.793449,
+          -1.48,
+          0.31
+        ],
+        "max": [
+          2.24,
+          1.48,
+          3.055
+        ],
+        "size": [
+          10.033449,
+          2.96,
+          2.745
+        ]
+      },
+      "triangles": 7120,
+      "vertices": 4255,
+      "material_slots": [
+        "M_V42_Chrome",
+        "M_V42_Glass",
+        "M_V42_Lamp",
+        "M_V42_Metal",
+        "M_V42_Paint_bus",
+        "M_V42_RedLamp",
+        "M_V42_Rubber",
+        "M_V42_Vinyl"
+      ],
+      "boundary_edges": 586,
+      "collision": "none",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "Windshield42_bus",
+      "fbx": "SM_Windshield42_bus.fbx",
+      "asset": "/Game/Art/Meshes/SM_Windshield42_bus",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          0.62,
+          -1.092,
+          1.13
+        ],
+        "max": [
+          0.74,
+          1.092,
+          3.0
+        ],
+        "size": [
+          0.12,
+          2.184,
+          1.87
+        ]
+      },
+      "triangles": 2,
+      "vertices": 4,
+      "material_slots": [
+        "M_V42_Glass"
+      ],
+      "boundary_edges": 4,
+      "collision": "none",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "Cabin42_bus",
+      "fbx": "SM_Cabin42_bus.fbx",
+      "asset": "/Game/Art/Meshes/SM_Cabin42_bus",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -7.5,
+          -1.13,
+          0.3425
+        ],
+        "max": [
+          1.3,
+          1.13,
+          2.9575
+        ],
+        "size": [
+          8.8,
+          2.26,
+          2.615
+        ]
+      },
+      "triangles": 11340,
+      "vertices": 6217,
+      "material_slots": [
+        "M_V42_Carpet",
+        "M_V42_Chrome",
+        "M_V42_Fabric",
+        "M_V42_Glass",
+        "M_V42_Leather",
+        "M_V42_Metal",
+        "M_V42_Rubber",
+        "M_V42_Vinyl"
+      ],
+      "boundary_edges": 80,
+      "collision": "none",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "Wheel42_bus",
+      "fbx": "SM_Wheel42_bus.fbx",
+      "asset": "/Game/Art/Meshes/SM_Wheel42_bus",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.352524,
+          -0.154,
+          -0.3445
+        ],
+        "max": [
+          0.352524,
+          0.154,
+          0.3445
+        ],
+        "size": [
+          0.705049,
+          0.308,
+          0.689
+        ]
+      },
+      "triangles": 5880,
+      "vertices": 3224,
+      "material_slots": [
+        "M_V42_Chrome",
+        "M_V42_Metal",
+        "M_V42_Rubber",
+        "M_V42_Vinyl"
+      ],
+      "boundary_edges": 96,
+      "collision": "none",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "Vehicle42_van",
+      "fbx": "SM_Vehicle42_van.fbx",
+      "asset": "/Game/Art/Meshes/SM_Vehicle42_van",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -3.46321,
+          -1.33,
+          0.31
+        ],
+        "max": [
+          2.24,
+          1.33,
+          2.405
+        ],
+        "size": [
+          5.70321,
+          2.66,
+          2.095
+        ]
+      },
+      "triangles": 6486,
+      "vertices": 3881,
+      "material_slots": [
+        "M_V42_Chrome",
+        "M_V42_Lamp",
+        "M_V42_Metal",
+        "M_V42_Paint_van",
+        "M_V42_RedLamp",
+        "M_V42_Rubber",
+        "M_V42_Vinyl"
+      ],
+      "boundary_edges": 578,
+      "collision": "none",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "Windshield42_van",
+      "fbx": "SM_Windshield42_van.fbx",
+      "asset": "/Game/Art/Meshes/SM_Windshield42_van",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          0.25,
+          -0.9555,
+          1.13
+        ],
+        "max": [
+          0.74,
+          0.9555,
+          2.35
+        ],
+        "size": [
+          0.49,
+          1.911,
+          1.22
+        ]
+      },
+      "triangles": 2,
+      "vertices": 4,
+      "material_slots": [
+        "M_V42_Glass"
+      ],
+      "boundary_edges": 4,
+      "collision": "none",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "Cabin42_van",
+      "fbx": "SM_Cabin42_van.fbx",
+      "asset": "/Game/Art/Meshes/SM_Cabin42_van",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -3.3,
+          -1.0,
+          0.3425
+        ],
+        "max": [
+          1.3,
+          1.0,
+          2.3075
+        ],
+        "size": [
+          4.6,
+          2.0,
+          1.965
+        ]
+      },
+      "triangles": 5040,
+      "vertices": 2761,
+      "material_slots": [
+        "M_V42_Carpet",
+        "M_V42_Chrome",
+        "M_V42_Fabric",
+        "M_V42_Glass",
+        "M_V42_Leather",
+        "M_V42_Metal",
+        "M_V42_Rubber",
+        "M_V42_Vinyl"
+      ],
+      "boundary_edges": 80,
+      "collision": "none",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "Wheel42_van",
+      "fbx": "SM_Wheel42_van.fbx",
+      "asset": "/Game/Art/Meshes/SM_Wheel42_van",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.352524,
+          -0.154,
+          -0.3445
+        ],
+        "max": [
+          0.352524,
+          0.154,
+          0.3445
+        ],
+        "size": [
+          0.705049,
+          0.308,
+          0.689
+        ]
+      },
+      "triangles": 5880,
+      "vertices": 3224,
+      "material_slots": [
+        "M_V42_Chrome",
+        "M_V42_Metal",
+        "M_V42_Rubber",
+        "M_V42_Vinyl"
+      ],
+      "boundary_edges": 96,
+      "collision": "none",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "Vehicle42_pickup",
+      "fbx": "SM_Vehicle42_pickup.fbx",
+      "asset": "/Game/Art/Meshes/SM_Vehicle42_pickup",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -3.24,
+          -1.33,
+          0.31
+        ],
+        "max": [
+          2.24,
+          1.33,
+          1.855
+        ],
+        "size": [
+          5.48,
+          2.66,
+          1.545
+        ]
+      },
+      "triangles": 6876,
+      "vertices": 4103,
+      "material_slots": [
+        "M_V42_Chrome",
+        "M_V42_Glass",
+        "M_V42_Lamp",
+        "M_V42_Metal",
+        "M_V42_Paint_pickup",
+        "M_V42_RedLamp",
+        "M_V42_Rubber",
+        "M_V42_Vinyl"
+      ],
+      "boundary_edges": 586,
+      "collision": "none",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "Windshield42_pickup",
+      "fbx": "SM_Windshield42_pickup.fbx",
+      "asset": "/Game/Art/Meshes/SM_Windshield42_pickup",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          0.03,
+          -0.9555,
+          1.13
+        ],
+        "max": [
+          0.74,
+          0.9555,
+          1.8
+        ],
+        "size": [
+          0.71,
+          1.911,
+          0.67
+        ]
+      },
+      "triangles": 2,
+      "vertices": 4,
+      "material_slots": [
+        "M_V42_Glass"
+      ],
+      "boundary_edges": 4,
+      "collision": "none",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "Cabin42_pickup",
+      "fbx": "SM_Cabin42_pickup.fbx",
+      "asset": "/Game/Art/Meshes/SM_Cabin42_pickup",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -3.1,
+          -0.98,
+          0.3425
+        ],
+        "max": [
+          1.3,
+          0.98,
+          1.7575
+        ],
+        "size": [
+          4.4,
+          1.96,
+          1.415
+        ]
+      },
+      "triangles": 6620,
+      "vertices": 3625,
+      "material_slots": [
+        "M_V42_Carpet",
+        "M_V42_Chrome",
+        "M_V42_Fabric",
+        "M_V42_Glass",
+        "M_V42_Leather",
+        "M_V42_Metal",
+        "M_V42_Rubber",
+        "M_V42_Vinyl"
+      ],
+      "boundary_edges": 104,
+      "collision": "none",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "Wheel42_pickup",
+      "fbx": "SM_Wheel42_pickup.fbx",
+      "asset": "/Game/Art/Meshes/SM_Wheel42_pickup",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.352524,
+          -0.154,
+          -0.3445
+        ],
+        "max": [
+          0.352524,
+          0.154,
+          0.3445
+        ],
+        "size": [
+          0.705049,
+          0.308,
+          0.689
+        ]
+      },
+      "triangles": 5880,
+      "vertices": 3224,
+      "material_slots": [
+        "M_V42_Chrome",
+        "M_V42_Metal",
+        "M_V42_Rubber",
+        "M_V42_Vinyl"
+      ],
+      "boundary_edges": 96,
+      "collision": "none",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "Vehicle42_dirtbike",
+      "fbx": "SM_Vehicle42_dirtbike.fbx",
+      "asset": "/Game/Art/Meshes/SM_Vehicle42_dirtbike",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -1.109933,
+          -0.36,
+          0.23
+        ],
+        "max": [
+          1.109933,
+          0.36,
+          1.237779
+        ],
+        "size": [
+          2.219867,
+          0.72,
+          1.007779
+        ]
+      },
+      "triangles": 1172,
+      "vertices": 680,
+      "material_slots": [
+        "M_V42_Chrome",
+        "M_V42_Leather",
+        "M_V42_Metal",
+        "M_V42_Paint_dirtbike",
+        "M_V42_Rubber"
+      ],
+      "boundary_edges": 76,
+      "collision": "none",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "Cabin42_dirtbike",
+      "fbx": "SM_Cabin42_dirtbike.fbx",
+      "asset": "/Game/Art/Meshes/SM_Cabin42_dirtbike",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          0.215,
+          -0.085,
+          1.105
+        ],
+        "max": [
+          0.345,
+          0.085,
+          1.175
+        ],
+        "size": [
+          0.13,
+          0.17,
+          0.07
+        ]
+      },
+      "triangles": 44,
+      "vertices": 24,
+      "material_slots": [
+        "M_V42_Vinyl"
+      ],
+      "boundary_edges": 0,
+      "collision": "none",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "Vehicle42_suv",
+      "fbx": "SM_Vehicle42_suv.fbx",
+      "asset": "/Game/Art/Meshes/SM_Vehicle42_suv",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -2.74,
+          -1.31,
+          0.31
+        ],
+        "max": [
+          2.24,
+          1.31,
+          2.055
+        ],
+        "size": [
+          4.98,
+          2.62,
+          1.745
+        ]
+      },
+      "triangles": 6392,
+      "vertices": 3839,
+      "material_slots": [
+        "M_V42_Chrome",
+        "M_V42_Glass",
+        "M_V42_Lamp",
+        "M_V42_Metal",
+        "M_V42_Paint_suv",
+        "M_V42_RedLamp",
+        "M_V42_Rubber",
+        "M_V42_Vinyl"
+      ],
+      "boundary_edges": 586,
+      "collision": "none",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "Windshield42_suv",
+      "fbx": "SM_Windshield42_suv.fbx",
+      "asset": "/Game/Art/Meshes/SM_Windshield42_suv",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          0.03,
+          -0.9373,
+          1.13
+        ],
+        "max": [
+          0.74,
+          0.9373,
+          2.0
+        ],
+        "size": [
+          0.71,
+          1.8746,
+          0.87
+        ]
+      },
+      "triangles": 2,
+      "vertices": 4,
+      "material_slots": [
+        "M_V42_Glass"
+      ],
+      "boundary_edges": 4,
+      "collision": "none",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "Cabin42_suv",
+      "fbx": "SM_Cabin42_suv.fbx",
+      "asset": "/Game/Art/Meshes/SM_Cabin42_suv",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -2.6,
+          -0.96,
+          0.3425
+        ],
+        "max": [
+          1.3,
+          0.96,
+          1.9575
+        ],
+        "size": [
+          3.9,
+          1.92,
+          1.615
+        ]
+      },
+      "triangles": 8852,
+      "vertices": 4849,
+      "material_slots": [
+        "M_V42_Carpet",
+        "M_V42_Chrome",
+        "M_V42_Fabric",
+        "M_V42_Glass",
+        "M_V42_Leather",
+        "M_V42_Metal",
+        "M_V42_Rubber",
+        "M_V42_Vinyl"
+      ],
+      "boundary_edges": 104,
+      "collision": "none",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "Wheel42_suv",
+      "fbx": "SM_Wheel42_suv.fbx",
+      "asset": "/Game/Art/Meshes/SM_Wheel42_suv",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.352524,
+          -0.154,
+          -0.3445
+        ],
+        "max": [
+          0.352524,
+          0.154,
+          0.3445
+        ],
+        "size": [
+          0.705049,
+          0.308,
+          0.689
+        ]
+      },
+      "triangles": 5880,
+      "vertices": 3224,
+      "material_slots": [
+        "M_V42_Chrome",
+        "M_V42_Metal",
+        "M_V42_Rubber",
+        "M_V42_Vinyl"
+      ],
+      "boundary_edges": 96,
+      "collision": "none",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "Vehicle42_muscle",
+      "fbx": "SM_Vehicle42_muscle.fbx",
+      "asset": "/Game/Art/Meshes/SM_Vehicle42_muscle",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -2.54,
+          -1.28,
+          0.31
+        ],
+        "max": [
+          2.24,
+          1.28,
+          1.555
+        ],
+        "size": [
+          4.78,
+          2.56,
+          1.245
+        ]
+      },
+      "triangles": 6296,
+      "vertices": 3783,
+      "material_slots": [
+        "M_V42_Chrome",
+        "M_V42_Glass",
+        "M_V42_Lamp",
+        "M_V42_Metal",
+        "M_V42_Paint_muscle",
+        "M_V42_RedLamp",
+        "M_V42_Rubber",
+        "M_V42_Vinyl"
+      ],
+      "boundary_edges": 586,
+      "collision": "none",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "Windshield42_muscle",
+      "fbx": "SM_Windshield42_muscle.fbx",
+      "asset": "/Game/Art/Meshes/SM_Windshield42_muscle",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          0.03,
+          -0.91,
+          1.13
+        ],
+        "max": [
+          0.74,
+          0.91,
+          1.5
+        ],
+        "size": [
+          0.71,
+          1.82,
+          0.37
+        ]
+      },
+      "triangles": 2,
+      "vertices": 4,
+      "material_slots": [
+        "M_V42_Glass"
+      ],
+      "boundary_edges": 4,
+      "collision": "none",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "Cabin42_muscle",
+      "fbx": "SM_Cabin42_muscle.fbx",
+      "asset": "/Game/Art/Meshes/SM_Cabin42_muscle",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -2.4,
+          -0.93,
+          0.3425
+        ],
+        "max": [
+          1.3,
+          0.93,
+          1.49
+        ],
+        "size": [
+          3.7,
+          1.86,
+          1.1475
+        ]
+      },
+      "triangles": 6620,
+      "vertices": 3625,
+      "material_slots": [
+        "M_V42_Carpet",
+        "M_V42_Chrome",
+        "M_V42_Fabric",
+        "M_V42_Glass",
+        "M_V42_Leather",
+        "M_V42_Metal",
+        "M_V42_Rubber",
+        "M_V42_Vinyl"
+      ],
+      "boundary_edges": 104,
+      "collision": "none",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "Wheel42_muscle",
+      "fbx": "SM_Wheel42_muscle.fbx",
+      "asset": "/Game/Art/Meshes/SM_Wheel42_muscle",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.352524,
+          -0.154,
+          -0.3445
+        ],
+        "max": [
+          0.352524,
+          0.154,
+          0.3445
+        ],
+        "size": [
+          0.705049,
+          0.308,
+          0.689
+        ]
+      },
+      "triangles": 5960,
+      "vertices": 3272,
+      "material_slots": [
+        "M_V42_Chrome",
+        "M_V42_Metal",
+        "M_V42_Rubber",
+        "M_V42_Vinyl"
+      ],
+      "boundary_edges": 96,
+      "collision": "none",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "Vehicle42_supercar",
+      "fbx": "SM_Vehicle42_supercar.fbx",
+      "asset": "/Game/Art/Meshes/SM_Vehicle42_supercar",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -2.34,
+          -1.28,
+          0.31
+        ],
+        "max": [
+          2.24,
+          1.28,
+          1.425
+        ],
+        "size": [
+          4.58,
+          2.56,
+          1.115
+        ]
+      },
+      "triangles": 6272,
+      "vertices": 3771,
+      "material_slots": [
+        "M_V42_Chrome",
+        "M_V42_Glass",
+        "M_V42_Lamp",
+        "M_V42_Metal",
+        "M_V42_Paint_supercar",
+        "M_V42_RedLamp",
+        "M_V42_Rubber",
+        "M_V42_Vinyl"
+      ],
+      "boundary_edges": 586,
+      "collision": "none",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "Windshield42_supercar",
+      "fbx": "SM_Windshield42_supercar.fbx",
+      "asset": "/Game/Art/Meshes/SM_Windshield42_supercar",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          0.03,
+          -0.91,
+          0.93
+        ],
+        "max": [
+          0.74,
+          0.91,
+          1.37
+        ],
+        "size": [
+          0.71,
+          1.82,
+          0.44
+        ]
+      },
+      "triangles": 2,
+      "vertices": 4,
+      "material_slots": [
+        "M_V42_Glass"
+      ],
+      "boundary_edges": 4,
+      "collision": "none",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "Cabin42_supercar",
+      "fbx": "SM_Cabin42_supercar.fbx",
+      "asset": "/Game/Art/Meshes/SM_Cabin42_supercar",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -2.2,
+          -0.93,
+          0.1875
+        ],
+        "max": [
+          1.3,
+          0.93,
+          1.3275
+        ],
+        "size": [
+          3.5,
+          1.86,
+          1.14
+        ]
+      },
+      "triangles": 4600,
+      "vertices": 2521,
+      "material_slots": [
+        "M_V42_Carpet",
+        "M_V42_Chrome",
+        "M_V42_Fabric",
+        "M_V42_Glass",
+        "M_V42_Leather",
+        "M_V42_Metal",
+        "M_V42_Rubber",
+        "M_V42_Vinyl"
+      ],
+      "boundary_edges": 80,
+      "collision": "none",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "Wheel42_supercar",
+      "fbx": "SM_Wheel42_supercar.fbx",
+      "asset": "/Game/Art/Meshes/SM_Wheel42_supercar",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.352524,
+          -0.154,
+          -0.3445
+        ],
+        "max": [
+          0.352524,
+          0.154,
+          0.3445
+        ],
+        "size": [
+          0.705049,
+          0.308,
+          0.689
+        ]
+      },
+      "triangles": 5960,
+      "vertices": 3272,
+      "material_slots": [
+        "M_V42_Chrome",
+        "M_V42_Metal",
+        "M_V42_Rubber",
+        "M_V42_Vinyl"
+      ],
+      "boundary_edges": 96,
+      "collision": "none",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "Seat42",
+      "fbx": "SM_Seat42.fbx",
+      "asset": "/Game/Art/Meshes/SM_Seat42",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.39,
+          -0.2548,
+          0.2575
+        ],
+        "max": [
+          0.27,
+          0.261,
+          1.36
+        ],
+        "size": [
+          0.66,
+          0.5158,
+          1.1025
+        ]
+      },
+      "triangles": 744,
+      "vertices": 408,
+      "material_slots": [
+        "M_V42_Chrome",
+        "M_V42_Leather",
+        "M_V42_Metal",
+        "M_V42_Rubber",
+        "M_V42_Vinyl"
+      ],
+      "boundary_edges": 0,
+      "collision": "none",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "Steering42",
+      "fbx": "SM_Steering42.fbx",
+      "asset": "/Game/Art/Meshes/SM_Steering42",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.055,
+          -0.185,
+          -0.185
+        ],
+        "max": [
+          0.018,
+          0.185,
+          0.185
+        ],
+        "size": [
+          0.073,
+          0.37,
+          0.37
+        ]
+      },
+      "triangles": 456,
+      "vertices": 236,
+      "material_slots": [
+        "M_V42_Leather",
+        "M_V42_Metal"
+      ],
+      "boundary_edges": 0,
+      "collision": "none",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "Dial42Speed",
+      "fbx": "SM_Dial42Speed.fbx",
+      "asset": "/Game/Art/Meshes/SM_Dial42Speed",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.003,
+          -0.1,
+          -0.1
+        ],
+        "max": [
+          -0.003,
+          0.1,
+          0.1
+        ],
+        "size": [
+          0.0,
+          0.2,
+          0.2
+        ]
+      },
+      "triangles": 2,
+      "vertices": 4,
+      "material_slots": [
+        "M_V42_DialSpeed"
+      ],
+      "boundary_edges": 4,
+      "collision": "none",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "Dial42RPM",
+      "fbx": "SM_Dial42RPM.fbx",
+      "asset": "/Game/Art/Meshes/SM_Dial42RPM",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.003,
+          -0.1,
+          -0.1
+        ],
+        "max": [
+          -0.003,
+          0.1,
+          0.1
+        ],
+        "size": [
+          0.0,
+          0.2,
+          0.2
+        ]
+      },
+      "triangles": 2,
+      "vertices": 4,
+      "material_slots": [
+        "M_V42_DialRPM"
+      ],
+      "boundary_edges": 4,
+      "collision": "none",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "Dial42Fuel",
+      "fbx": "SM_Dial42Fuel.fbx",
+      "asset": "/Game/Art/Meshes/SM_Dial42Fuel",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.003,
+          -0.1,
+          -0.1
+        ],
+        "max": [
+          -0.003,
+          0.1,
+          0.1
+        ],
+        "size": [
+          0.0,
+          0.2,
+          0.2
+        ]
+      },
+      "triangles": 2,
+      "vertices": 4,
+      "material_slots": [
+        "M_V42_DialFuel"
+      ],
+      "boundary_edges": 4,
+      "collision": "none",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "Dial42Temp",
+      "fbx": "SM_Dial42Temp.fbx",
+      "asset": "/Game/Art/Meshes/SM_Dial42Temp",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.003,
+          -0.1,
+          -0.1
+        ],
+        "max": [
+          -0.003,
+          0.1,
+          0.1
+        ],
+        "size": [
+          0.0,
+          0.2,
+          0.2
+        ]
+      },
+      "triangles": 2,
+      "vertices": 4,
+      "material_slots": [
+        "M_V42_DialTemp"
+      ],
+      "boundary_edges": 4,
+      "collision": "none",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "Needle42",
+      "fbx": "SM_Needle42.fbx",
+      "asset": "/Game/Art/Meshes/SM_Needle42",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.012,
+          -0.009,
+          -0.016
+        ],
+        "max": [
+          -0.003,
+          0.009,
+          0.086
+        ],
+        "size": [
+          0.009,
+          0.018,
+          0.102
+        ]
+      },
+      "triangles": 62,
+      "vertices": 36,
+      "material_slots": [
+        "M_V42_Amber",
+        "M_V42_Chrome"
+      ],
+      "boundary_edges": 4,
+      "collision": "none",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "Camper42Kitchen",
+      "fbx": "SM_Camper42Kitchen.fbx",
+      "asset": "/Game/Art/Meshes/SM_Camper42Kitchen",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.445,
+          -0.315,
+          0.0
+        ],
+        "max": [
+          0.445,
+          0.28,
+          0.984
+        ],
+        "size": [
+          0.89,
+          0.595,
+          0.984
+        ]
+      },
+      "triangles": 1500,
+      "vertices": 800,
+      "material_slots": [
+        "M_V42_Chrome",
+        "M_V42_Metal",
+        "M_V42_Vinyl",
+        "M_V42_Wood"
+      ],
+      "boundary_edges": 0,
+      "collision": "none",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "Camper42Sink",
+      "fbx": "SM_Camper42Sink.fbx",
+      "asset": "/Game/Art/Meshes/SM_Camper42Sink",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.435,
+          -0.315,
+          0.0
+        ],
+        "max": [
+          0.435,
+          0.28,
+          1.226
+        ],
+        "size": [
+          0.87,
+          0.595,
+          1.226
+        ]
+      },
+      "triangles": 1234,
+      "vertices": 672,
+      "material_slots": [
+        "M_V42_Chrome",
+        "M_V42_Metal",
+        "M_V42_Vinyl",
+        "M_V42_Wood"
+      ],
+      "boundary_edges": 4,
+      "collision": "none",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "Camper42Fridge",
+      "fbx": "SM_Camper42Fridge.fbx",
+      "asset": "/Game/Art/Meshes/SM_Camper42Fridge",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.41,
+          -0.315,
+          0.0
+        ],
+        "max": [
+          0.41,
+          0.26,
+          1.75
+        ],
+        "size": [
+          0.82,
+          0.575,
+          1.75
+        ]
+      },
+      "triangles": 776,
+      "vertices": 424,
+      "material_slots": [
+        "M_V42_Chrome",
+        "M_V42_Glass",
+        "M_V42_Metal",
+        "M_V42_Vinyl"
+      ],
+      "boundary_edges": 0,
+      "collision": "none",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "Camper42Wardrobe",
+      "fbx": "SM_Camper42Wardrobe.fbx",
+      "asset": "/Game/Art/Meshes/SM_Camper42Wardrobe",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.41,
+          -0.315,
+          0.0
+        ],
+        "max": [
+          0.41,
+          0.26,
+          1.75
+        ],
+        "size": [
+          0.82,
+          0.575,
+          1.75
+        ]
+      },
+      "triangles": 528,
+      "vertices": 288,
+      "material_slots": [
+        "M_V42_Chrome",
+        "M_V42_Vinyl",
+        "M_V42_Wood"
+      ],
+      "boundary_edges": 0,
+      "collision": "none",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "Camper42Bed",
+      "fbx": "SM_Camper42Bed.fbx",
+      "asset": "/Game/Art/Meshes/SM_Camper42Bed",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.74,
+          -1.036,
+          0.03
+        ],
+        "max": [
+          0.74,
+          1.036,
+          0.84
+        ],
+        "size": [
+          1.48,
+          2.072,
+          0.81
+        ]
+      },
+      "triangles": 592,
+      "vertices": 320,
+      "material_slots": [
+        "M_V42_Chrome",
+        "M_V42_Fabric",
+        "M_V42_Leather",
+        "M_V42_Wood"
+      ],
+      "boundary_edges": 0,
+      "collision": "none",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "Camper42Door",
+      "fbx": "SM_Camper42Door.fbx",
+      "asset": "/Game/Art/Meshes/SM_Camper42Door",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.9875,
+          -0.105985,
+          0.0
+        ],
+        "max": [
+          0.0275,
+          0.04,
+          2.12
+        ],
+        "size": [
+          1.015,
+          0.145985,
+          2.12
+        ]
+      },
+      "triangles": 380,
+      "vertices": 208,
+      "material_slots": [
+        "M_V42_Chrome",
+        "M_V42_Glass",
+        "M_V42_Metal",
+        "M_V42_Vinyl",
+        "M_V42_Wood"
+      ],
+      "boundary_edges": 0,
+      "collision": "none",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "Wheel42_dirtbike",
+      "fbx": "SM_Wheel42_dirtbike.fbx",
+      "asset": "/Game/Art/Meshes/SM_Wheel42_dirtbike",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.367,
+          -0.075,
+          -0.367
+        ],
+        "max": [
+          0.367,
+          0.075,
+          0.367
+        ],
+        "size": [
+          0.734,
+          0.15,
+          0.734
+        ]
+      },
+      "triangles": 6284,
+      "vertices": 3432,
+      "material_slots": [
+        "M_V42_Chrome",
+        "M_V42_Metal",
+        "M_V42_Rubber"
+      ],
+      "boundary_edges": 0,
+      "collision": "none",
+      "animation": "",
+      "sockets_m": {}
+    }
+  ]
+}

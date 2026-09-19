@@ -1,0 +1,334 @@
+{
+  "assets": [
+    {
+      "name": "Dossier52",
+      "fbx": "SM_Dossier52.fbx",
+      "asset": "/Game/Art/Meshes/SM_Dossier52",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.18,
+          -0.14,
+          -0.007
+        ],
+        "max": [
+          0.18,
+          0.14,
+          0.033
+        ],
+        "size": [
+          0.36,
+          0.28,
+          0.04
+        ]
+      },
+      "triangles": 212,
+      "vertices": 136,
+      "material_slots": [
+        "M_Concrete",
+        "M_Red",
+        "M_Rubber",
+        "M_Wood"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "Keys52",
+      "fbx": "SM_Keys52.fbx",
+      "asset": "/Game/Art/Meshes/SM_Keys52",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.055,
+          -0.03,
+          -0.008
+        ],
+        "max": [
+          0.114,
+          0.058,
+          0.008
+        ],
+        "size": [
+          0.169,
+          0.088,
+          0.016
+        ]
+      },
+      "triangles": 284,
+      "vertices": 156,
+      "material_slots": [
+        "M_Steel"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "MedicalCase52",
+      "fbx": "SM_MedicalCase52.fbx",
+      "asset": "/Game/Art/Meshes/SM_MedicalCase52",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.16,
+          -0.136,
+          -0.07
+        ],
+        "max": [
+          0.16,
+          0.115,
+          0.0865
+        ],
+        "size": [
+          0.32,
+          0.251,
+          0.1565
+        ]
+      },
+      "triangles": 92,
+      "vertices": 56,
+      "material_slots": [
+        "M_Concrete",
+        "M_Red",
+        "M_Steel"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "ControlPanel52",
+      "fbx": "SM_ControlPanel52.fbx",
+      "asset": "/Game/Art/Meshes/SM_ControlPanel52",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.225,
+          -0.240975,
+          -0.325
+        ],
+        "max": [
+          0.225,
+          0.075,
+          0.325
+        ],
+        "size": [
+          0.45,
+          0.315975,
+          0.65
+        ]
+      },
+      "triangles": 172,
+      "vertices": 100,
+      "material_slots": [
+        "M_Concrete",
+        "M_Glow",
+        "M_Red",
+        "M_Rubber",
+        "M_Steel"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "RelayConsole52",
+      "fbx": "SM_RelayConsole52.fbx",
+      "asset": "/Game/Art/Meshes/SM_RelayConsole52",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.625,
+          -0.3625,
+          0.0
+        ],
+        "max": [
+          0.625,
+          0.325,
+          1.65
+        ],
+        "size": [
+          1.25,
+          0.6875,
+          1.65
+        ]
+      },
+      "triangles": 260,
+      "vertices": 164,
+      "material_slots": [
+        "M_Glow",
+        "M_Red",
+        "M_Rubber",
+        "M_Steel"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "Scrap52",
+      "fbx": "SM_Scrap52.fbx",
+      "asset": "/Game/Art/Meshes/SM_Scrap52",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.072,
+          -0.0175,
+          -0.0175
+        ],
+        "max": [
+          0.06,
+          0.0175,
+          0.0175
+        ],
+        "size": [
+          0.132,
+          0.035,
+          0.035
+        ]
+      },
+      "triangles": 40,
+      "vertices": 24,
+      "material_slots": [
+        "M_Steel"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    }
+  ]
+}
