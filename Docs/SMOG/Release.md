@@ -16,6 +16,19 @@ The five files from the supplied [publishing contract](PUBLISHING.md) are presen
 
 The release is published as a regular, non-prerelease GitHub Release so SMOG can discover it. Version 0.84.0 is a development snapshot with the regional world, settlements, campaign, vehicles, and aviation work currently in the project. It is not a claim that every feature has received a complete manual playthrough.
 
+## Validation of 0.84.0
+
+The Win64 Shipping build completed successfully on October 7, 2026. The final packaged executable, launched through `smog_launch.bat` with fresh isolated user profiles, passed all 48 menu checks and all 52 aviation/community checks. These cover single-click menu navigation, Continue/save previews, aircraft cabin movement, individual storage, serialization, recovery, automatic landing, and populated community construction. Rendered screenshots were inspected, and the update-notes layout was adjusted to keep the current release's text inside its panel.
+
+The launcher waits for the game and propagates its exit status. Test saves were created outside the installation, with no `.sav` or debug-symbol files in the portable build. These are targeted automated checks, not a complete campaign or long-session playthrough.
+
+To repeat the packaged checks without touching player saves:
+
+```powershell
+./Tools/TestSMOGBuild.ps1 -BuildDirectory Builds/SMOG-0.84.0/Windows -Suite LWMenu81Smoke
+./Tools/TestSMOGBuild.ps1 -BuildDirectory Builds/SMOG-0.84.0/Windows -Suite LWUpdate84Smoke
+```
+
 ## Rebuild
 
 With Unreal Engine 5.8, Visual Studio C++ tools, Python with Pillow, Git and Git LFS installed:

@@ -302,7 +302,9 @@ void ALWGameMode::Check(bool Passed,const TCHAR* Label)
 {
     if(V2.IsValid())++V2->Checks;
     if(Passed){UE_LOG(LogTemp,Display,TEXT("LW_V2_CHECK PASS %s"),Label);}
-    else{++TestFailures;UE_LOG(LogTemp,Error,TEXT("LW_V2_CHECK FAIL %s"),Label);}
+    else{++TestFailures;UE_LOG(LogTemp,Error,TEXT("LW_V2_CHECK FAIL %s"),Label);
+        FFileHelper::SaveStringToFile(FString(Label)+LINE_TERMINATOR,*(FPaths::ProjectSavedDir()/TEXT("SmokeFailures.txt")),FFileHelper::EEncodingOptions::ForceUTF8WithoutBOM,&IFileManager::Get(),FILEWRITE_Append);
+    }
 }
 bool ALWGameMode::RequireV2(bool Passed,const TCHAR* Label)
 {Check(Passed,Label);if(!Passed)FinishV2Smoke();return Passed;}

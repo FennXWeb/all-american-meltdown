@@ -1,11 +1,12 @@
 param(
     [string]$BuildDirectory,
-    [ValidateSet('LWMenu81Smoke','LWUpdate84Smoke')][string]$Suite = 'LWMenu81Smoke'
+    [ValidateSet('LWMenu81Smoke','LWUpdate84Smoke')][string]$Suite = 'LWMenu81Smoke',
+    [ValidatePattern('^[a-zA-Z0-9-]+$')][string]$RunId = (Get-Date -Format 'yyyyMMdd-HHmmss')
 )
 $ErrorActionPreference='Stop'
 $root=Split-Path -Parent $PSScriptRoot
 $build=(Resolve-Path -LiteralPath $BuildDirectory).Path
-$profile=Join-Path $root "Saved/Publishing84/Profiles/$Suite"
+$profile=Join-Path $root "Saved/Publishing84/Profiles/$Suite-$RunId"
 if(Test-Path -LiteralPath $profile){throw "Test profile already exists; use a fresh profile for this test: $profile"}
 New-Item -ItemType Directory -Path $profile -Force | Out-Null
 $start=[Diagnostics.ProcessStartInfo]::new()
@@ -22,7 +23,11 @@ if(!$process.WaitForExit(600000)){throw "Smoke test exceeded ten minutes; inspec
 $report=Join-Path $profile 'AllAmericanMeltdown/Saved/SmokeResult.json'
 if(!(Test-Path -LiteralPath $report)){throw "Shipping test produced no result (exit $($process.ExitCode))."}
 $result=Get-Content -LiteralPath $report -Raw | ConvertFrom-Json
-if($process.ExitCode -ne 0 -or $result.failures -ne 0 -or $result.checks -le 0){throw "Shipping smoke failed: $(Get-Content -LiteralPath $report -Raw)"}
+if($process.ExitCode -ne 0 -or $result.failures -ne 0 -or $result.checks -le 0){
+    $failureFile=Join-Path $profile 'AllAmericanMeltdown/Saved/SmokeFailures.txt'
+    $details=if(Test-Path -LiteralPath $failureFile){Get-Content -LiteralPath $failureFile -Raw}else{'No failure labels were recorded.'}
+    throw "Shipping smoke failed: $(Get-Content -LiteralPath $report -Raw) $details"
+}
 if(Test-Path -LiteralPath (Join-Path $build 'LethalWorld/Saved/SaveGames')){throw 'Save files appeared inside the versioned installation.'}
 Write-Output "$Suite PASS: $($result.checks) checks, $($result.seconds) seconds; launcher waited and exited successfully."
 Write-Output "Isolated user data: $profile"

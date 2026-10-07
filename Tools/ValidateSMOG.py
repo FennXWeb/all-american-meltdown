@@ -56,9 +56,13 @@ def package(stage, output):
         assert all(n in z.namelist() for n in FILES)
         assert EXE in z.namelist()
     assert output.stat().st_size<2*1024**3, 'GitHub release asset exceeds 2 GiB'
-    digest=hashlib.file_digest(output.open('rb'),'sha256').hexdigest()
+    with output.open('rb') as artifact:
+        digest=hashlib.file_digest(artifact,'sha256').hexdigest()
     output.with_suffix('.zip.sha256').write_text(f'{digest}  {output.name}\n',encoding='utf-8')
     info={'version':version,'asset':output.name,'bytes':output.stat().st_size,'extracted_bytes':total,'files':len(files),'sha256':digest}
+    build_info=stage/'build-info.json'
+    if build_info.is_file():
+        info['build']=json.loads(build_info.read_text(encoding='utf-8-sig'))
     output.with_suffix('.manifest.json').write_text(json.dumps(info,indent=2)+'\n',encoding='utf-8')
     print(json.dumps(info,indent=2))
 

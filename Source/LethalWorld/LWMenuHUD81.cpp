@@ -20,16 +20,16 @@ FString Fit81(ALWHUD& H,FString S,float W,float Size){
  while(S.Len()>1&&Width81(H,S+TEXT("..."),Size)>W)S.LeftChopInline(1);
  return S+TEXT("...");
 }
-float Wrap81(ALWHUD& H,const FString& S,float X,float Y,float W,float Size,FLinearColor Color,int Limit=8){
+float Wrap81(ALWHUD& H,const FString& S,float X,float Y,float W,float Size,FLinearColor Color,int Limit=8,bool Draw=true){
  TArray<FString> Words;S.ParseIntoArrayWS(Words);FString Row;int Lines=0;
  for(int I=0;I<Words.Num();I++){
   const FString Next=Row.IsEmpty()?Words[I]:Row+TEXT(" ")+Words[I];
   if(!Row.IsEmpty()&&Width81(H,Next,Size)>W){
-   if(++Lines==Limit){for(;I<Words.Num();I++)Row+=TEXT(" ")+Words[I];H.Text(Fit81(H,Row,W,Size),X,Y,Size,Color);return Y+24*Size;}
-   H.Text(Row,X,Y,Size,Color);Y+=24*Size;Row=Words[I];
+   if(++Lines==Limit){for(;I<Words.Num();I++)Row+=TEXT(" ")+Words[I];if(Draw)H.Text(Fit81(H,Row,W,Size),X,Y,Size,Color);return Y+24*Size;}
+   if(Draw)H.Text(Row,X,Y,Size,Color);Y+=24*Size;Row=Words[I];
   }else Row=Next;
  }
- if(!Row.IsEmpty()){H.Text(Fit81(H,Row,W,Size),X,Y,Size,Color);Y+=24*Size;}return Y;
+ if(!Row.IsEmpty()){if(Draw)H.Text(Fit81(H,Row,W,Size),X,Y,Size,Color);Y+=24*Size;}return Y;
 }
 }
 
@@ -97,7 +97,10 @@ void ALWHUD::MainMenu81(ALWCharacter* P){
   DrawRect(FLinearColor(.012,.027,.037,.97),(RX)*Scale,154*Scale,910*Scale,481*Scale);
   Text(R.Date,RX+32,181,.84f,Gold81);Text(R.Title,RX+32,219,2,Paper81);
   Line(RX+32,271,RX+878,271,FLinearColor(.27,.39,.41,.55));float Y=300;
-  for(const auto& N:R.Notes){DrawRect(Gold81,(RX+34)*Scale,(Y+6)*Scale,4*Scale,4*Scale);Y=Wrap81(*this,N,RX+54,Y,812,1.03f,Paper81)+20;}
+  float NoteSize=1.03f;
+  auto NotesHeight=[&](float Size){float Height=0;for(const auto& N:R.Notes)Height=Wrap81(*this,N,0,Height,812,Size,Paper81,8,false)+12*Size;return Height;};
+  while(NoteSize>.78f&&NotesHeight(NoteSize)>315)NoteSize-=.02f;
+  for(const auto& N:R.Notes){DrawRect(Gold81,(RX+34)*Scale,(Y+6)*Scale,4*Scale,4*Scale);Y=Wrap81(*this,N,RX+54,Y,812,NoteSize,Paper81)+12*NoteSize;}
   return;
  }
  Logo(X-8,18,424,214,!ReducedMotion55);
