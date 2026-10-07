@@ -1,3 +1,4 @@
+#include "LWInteriors65.h"
 #include "LWPOIExpansion.h"
 #include "LWPOISurvivors.h"
 #include "LWWorld.h"
@@ -15,6 +16,7 @@
 // One local coordinate frame; immutable site IDs own every prop and encounter.
 // Public circulation is deliberately separate from shelves, cells and ride machinery.
 void LWPOIExpansion::Build(ALWChunk* C,ALWWorld* W,const LWGen::FSite& S){
+ LWInteriors65::FScope Interior65(C,W,S);
  const FRotator R(0,S.Yaw,0);const FVector Base=FVector(S.Position,12)-C->GetActorLocation();int Serial=0;
  auto At=[&](FVector V){return Base+R.RotateVector(V);};
  auto Box=[&](FName M,FVector V,FVector Size,float Yaw=0,bool Hit=true){C->Box(W,M,At(V),Size,R+FRotator(0,Yaw,0),Hit);};
@@ -26,7 +28,7 @@ void LWPOIExpansion::Build(ALWChunk* C,ALWWorld* W,const LWGen::FSite& S){
  auto Light=[&](FVector V){Model(TEXT("CeilingLightV13"),V);auto* L=NewObject<UPointLightComponent>(C);L->SetupAttachment(C->GetRootComponent());L->SetRelativeLocation(At(V-FVector(0,0,20)));L->SetIntensity(22000);L->SetAttenuationRadius(1600);L->SetCastShadows(false);L->RegisterComponent();};
  // Wide openings keep doors and traffic routes clear. Shells face local -Y.
  auto Wall=[&](FVector V,float Length,float Yaw=0,bool Open=false,float H=380){auto Seg=[&](float X,float L,float Z,float Tall){Box(TEXT("BrickV7"),V+FRotator(0,Yaw,0).RotateVector(FVector(X,0,Z)),FVector(L,24,Tall),Yaw);};if(Open){for(int Side:{-1,1})Seg(Side*(Length+320)*.25f,(Length-320)*.5f,H*.5f,H);Seg(0,320,(H+260)*.5f,H-260);}else Seg(0,Length,H*.5f,H);};
- auto Shell=[&](FVector V,float X,float Y,const FString& T,float H=380){Box(TEXT("TileV7"),V+FVector(0,0,12),FVector(X*2,Y*2,24));Wall(V+FVector(0,-Y,24),X*2,0,true,H);Wall(V+FVector(0,Y,24),X*2,0,false,H);for(int Side:{-1,1})Wall(V+FVector(Side*X,0,24),Y*2,90,false,H);Box(TEXT("CorrugatedV7"),V+FVector(0,0,H+40),FVector(X*2+24,Y*2+24,24));Label(T,V+FVector(0,-Y-18,320),T.Len()>26?28:36);Light(V+FVector(0,0,H));};
+ auto Shell=[&](FVector V,float X,float Y,const FString& T,float H=380){Box(TEXT("TileV7"),V+FVector(0,0,12),FVector(X*2,Y*2,24));Wall(V+FVector(0,-Y,24),X*2,0,true,H);Wall(V+FVector(0,Y,24),X*2,0,false,H);for(int Side:{-1,1})Wall(V+FVector(Side*X,0,24),Y*2,90,false,H);Box(TEXT("CorrugatedV7"),V+FVector(0,0,H+36),FVector(X*2+24,Y*2+24,24));Label(T,V+FVector(0,-Y-18,320),T.Len()>26?28:36);Light(V+FVector(0,0,H));};
  auto Shelf=[&](FVector V){Loot(TEXT("Shelf"),V);for(float Z:{13.f,65.f,118.f})Model(TEXT("PantryV13"),V+FVector(0,0,Z));};
  auto Table=[&](FVector V){Model(TEXT("DiningTableV13"),V);for(int Side:{-1,1})Furn(TEXT("chair"),V+FVector(0,Side*125,0),-Side*90);};
  const float X=S.Size.X*.5f,Y=S.Size.Y*.5f;
@@ -34,70 +36,7 @@ void LWPOIExpansion::Build(ALWChunk* C,ALWWorld* W,const LWGen::FSite& S){
  Box(TEXT("Concrete"),FVector(0,-Y+600,12),FVector(900,1200,24));
  Label(LWSites::Label(S),FVector(0,-Y+150,550),65);
  if(S.Type==LWPlaces::ShoppingMall){
-  // Enclosed 174m hall: the outer envelope surrounds every store and service room.
-  // The 12m-high common roof leaves shop roofs below it and all circulation open.
-  constexpr float MallX=8700,Front=-5500,Back=6900,Roof=1224;
-  Box(TEXT("TileV7"),FVector(0,700,12),FVector(2*MallX,Back-Front,24));
-  Box(TEXT("Concrete"),FVector(0,-6500,12),FVector(1200,2000,24));
-  for(int Side:{-1,1}){
-   Wall(FVector(Side*MallX,700,24),Back-Front,90,false,1200);
-   // A twelve-meter-wide, four-meter-high front portal leads into the concourse.
-   Box(TEXT("BrickV7"),FVector(Side*(MallX+600)*.5f,Front,624),FVector(MallX-600,24,1200));
-   Box(TEXT("Glass"),FVector(Side*2600,Front-14,640),FVector(3000,8,520),0,false);
-  }
-  Wall(FVector(0,Back,24),2*MallX,0,false,1200);
-  Box(TEXT("BrickV7"),FVector(0,Front,824),FVector(1200,24,800));
-  Label(LWSites::Label(S),FVector(0,Front-28,950),65);
-  // Opaque roof wings and end caps leave a genuine 36m-wide skylight aperture.
-  for(int Side:{-1,1})Box(TEXT("CorrugatedV7"),FVector(Side*(MallX+1800)*.5f,700,Roof),FVector(MallX-1800,Back-Front,32));
-  Box(TEXT("CorrugatedV7"),FVector(0,-5350,Roof),FVector(3600,300,32));
-  Box(TEXT("CorrugatedV7"),FVector(0,5400,Roof),FVector(3600,3000,32));
-  Box(TEXT("Glass"),FVector(0,-650,Roof),FVector(3600,9100,20));
-  for(int Side:{-1,1})Box(TEXT("Steel"),FVector(Side*1800,-650,Roof+8),FVector(32,9100,40));
-  for(int I=0;I<=7;I++)Box(TEXT("Steel"),FVector(0,-5200+I*1300,Roof+8),FVector(3600,32,40));
-  for(int I=0;I<5;I++){
-   Box(TEXT("Steel"),FVector(0,-4300+I*2400,1120),FVector(2*MallX,36,56));
-   for(int Side:{-1,1})Light(FVector(Side*1050,-4000+I*1800,1080));
-  }
-  // Twelve stores, two anchor halls, food court and cinema retain their layouts.
-  Box(TEXT("TileV7"),FVector(0,700,14),FVector(15000,11600,28));
-  for(int Side:{-1,1})for(int I=0;I<6;I++){
-   FVector V(Side*4900,-3800+I*1650,0);const TCHAR* Names[]={TEXT("FASHION"),TEXT("BOOK EXCHANGE"),TEXT("ELECTRONICS"),TEXT("PHARMACY"),TEXT("SPORTING GOODS"),TEXT("HOME & GIFTS")};
-   // Each bank opens onto the axial concourse: left faces +X, right faces -X.
-   Box(TEXT("TileV7"),V+FVector(0,0,12),FVector(3400,1440,24));
-   for(int End:{-1,1})Wall(V+FVector(0,End*720,24),3400);
-   Wall(V+FVector(Side*1700,0,24),1440,90);
-   Wall(V+FVector(-Side*1700,0,24),1440,90,true);
-   Box(TEXT("CorrugatedV7"),V+FVector(0,0,420),FVector(3424,1464,24));
-   Label(Names[I],V+FVector(-Side*1720,0,330),32,Side<0?0:180);
-   Light(V+FVector(0,0,380));
-   for(int J=0;J<4;J++){FVector P=V+FVector(-1100+J*650,360,24);if(I==1)Loot(TEXT("BookcaseV13"),P);else if(I==0)Loot(TEXT("ClothesRackV9"),P);else Shelf(P);}Loot(TEXT("ShopCounterV18"),V+FVector(Side*650,-400,24));
-  }
-  for(int Side:{-1,1}){Shell(FVector(Side*1900,5200,0),1700,1050,Side<0?TEXT("DEPARTMENT STORE"):TEXT("CINEMA / SCREEN ONE"),560);if(Side<0){for(int I=0;I<4;I++)Shelf(FVector(-2900+I*650,5750,24));}else{Box(TEXT("Bone"),FVector(1900,6160,310),FVector(2100,16,430));for(int Row=0;Row<4;Row++)for(int Col=0;Col<6;Col++)Furn(TEXT("chair"),FVector(900+Col*390,4700+Row*320,24),90);}}
-  for(int Side:{-1,1})for(int I=0;I<4;I++){Model(TEXT("PlazaPlanterV18"),FVector(Side*2500,-3300+I*1800,24));Model(TEXT("BoutiqueBenchV9"),FVector(Side*1900,-3100+I*1800,24));}
-  // Welcome amenities stay outside the central 12m clear entrance/through aisle.
-  Box(TEXT("Steel"),FVector(-1200,-4600,180),FVector(420,90,320));
-  Label(TEXT("MALL DIRECTORY"),FVector(-1200,-4650,290),27);
-  Label(TEXT("SHOPS: LEFT / RIGHT"),FVector(-1200,-4650,230),20);
-  Label(TEXT("FOOD / CINEMA: AHEAD"),FVector(-1200,-4650,185),19);
-  Model(TEXT("ShopCounterV18"),FVector(1200,-4600,28));
-  Label(TEXT("INFORMATION"),FVector(1200,-4650,240),24);
-  for(int Side:{-1,1}){
-   Model(TEXT("BoutiqueBenchV9"),FVector(Side*1850,-4100,28),Side<0?0:180);
-   Model(TEXT("PlazaPlanterV18"),FVector(Side*2500,-4450,28));
-   Model(TEXT("PlazaPlanterV18"),FVector(Side*1450,-2600,28));
-  }
-  // Lower pendant fill illuminates pedestrians and storefronts, not only the roof.
-  for(int Row=0;Row<6;Row++)for(int Side:{-1,1}){
-   const FVector V(Side*2100,-4400+Row*1600,600);
-   Model(TEXT("CeilingLightV13"),V);
-   Box(TEXT("Steel"),V+FVector(0,0,250),FVector(8,8,500),0,false);
-   auto* Fill=NewObject<UPointLightComponent>(C);Fill->SetupAttachment(C->GetRootComponent());Fill->SetRelativeLocation(At(V-FVector(0,0,30)));Fill->SetIntensity(90000);Fill->SetAttenuationRadius(2800);Fill->SetLightColor(FLinearColor(1.f,.9f,.75f));Fill->SetCastShadows(false);Fill->RegisterComponent();
-  }
-  Label(TEXT("FOOD COURT / NORTH ANCHORS"),FVector(0,3000,420),36);
-  for(int I=0;I<3;I++){Loot(TEXT("ShopCounterV18"),FVector(-900+I*900,3200,24));Furn(TEXT("cooker"),FVector(-900+I*900,3480,24));}
-  for(int Side:{-1,1})for(int I=0;I<3;I++)Table(FVector(Side*700,500+I*650,24));
-  for(int Side:{-1,1}){Shell(FVector(Side*7600,5500,0),800,1000,TEXT("DELIVERIES / STAFF"));Loot(TEXT("Crate"),FVector(Side*7600+400,6000,24),2);Furn(TEXT("workbench"),FVector(Side*7600-400,6000,24));}
+  LWInteriors65::Mall(C,W,S);
  }else if(S.Type==LWPlaces::Prison){
   // Perimeter, intake, two cell wings, open exercise yard, mess and infirmary.
   for(int Side:{-1,1}){Wall(FVector(Side*(X-120),0,24),2*Y-240,90,false,650);Wall(FVector(0,Side*(Y-120),24),2*X-240,0,Side<0,650);}

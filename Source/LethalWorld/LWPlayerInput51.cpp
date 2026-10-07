@@ -1,14 +1,17 @@
+#include "LWSettlement82.h"
 #include "LWPlayerInput51.h"
+#include "LWDebugMenu67.h"
 #include "LWCharacter.h"
+#include "LWVehicle.h"
 #include "LWHUD.h"
 #include "InputKeyEventArgs.h"
 #include "Kismet/GameplayStatics.h"
 #include "GameFramework/PlayerController.h"
 #include "Misc/ConfigCacheIni.h"
-namespace { FKey Default56(FKey K){if(K==EKeys::LeftControl)return EKeys::C;if(K==EKeys::C)return EKeys::E;if(K==EKeys::E)return EKeys::F;if(K==EKeys::F)return EKeys::H;if(K==EKeys::H)return EKeys::LeftControl;if(K==EKeys::Tab)return EKeys::M;if(K==EKeys::M)return EKeys::Tab;return K;} }
+namespace { FKey Default56(FKey K){if(K==EKeys::LeftControl)return EKeys::C;if(K==EKeys::C)return EKeys::E;if(K==EKeys::E)return EKeys::F;if(K==EKeys::F)return EKeys::H;if(K==EKeys::H)return EKeys::LeftControl;if(K==EKeys::Tab)return EKeys::M;if(K==EKeys::I)return EKeys::Tab;return K;} }
 ULWPlayerInput51* ULWPlayerInput51::Get51(const UObject* C){auto* PC=UGameplayStatics::GetPlayerController(C,0);return PC?Cast<ULWPlayerInput51>(PC->PlayerInput):nullptr;}
 void ULWPlayerInput51::Load51(){
- if(Loaded)return;Loaded=true;
+ if(Loaded)return;Loaded=true;Load58();
  auto Add=[&](FKey K,const TCHAR* S){Bindings.Add({K,K,S});};
  Add(EKeys::W,TEXT("FORWARD / ACCELERATE"));Add(EKeys::S,TEXT("BACK / BRAKE"));Add(EKeys::A,TEXT("LEFT / STEER LEFT"));Add(EKeys::D,TEXT("RIGHT / STEER RIGHT"));
  Add(EKeys::SpaceBar,TEXT("JUMP / VAULT / CLIMB / HANDBRAKE"));Add(EKeys::LeftShift,TEXT("SPRINT / MODIFIER"));Add(EKeys::LeftControl,TEXT("CROUCH / SPRINT SLIDE"));
@@ -21,17 +24,24 @@ void ULWPlayerInput51::Load51(){
  for(int I=0;I<Bindings.Num();++I){FString S;if(GConfig->GetString(TEXT("LWKeybinds51"),*Bindings[I].Logical.ToString(),S,GGameUserSettingsIni)){FKey K(*S);if(K.IsValid()&&!K.IsAnalog()&&K!=EKeys::Escape&&K!=EKeys::Tilde&&K!=EKeys::Enter){int Other=Bindings.IndexOfByPredicate([&](const auto& B){return B.Physical==K;});if(Other!=INDEX_NONE)Swap(Bindings[I].Physical,Bindings[Other].Physical);else Bindings[I].Physical=K;}}}
  int Version=0;GConfig->GetInt(TEXT("LWKeybinds51"),TEXT("DefaultsVersion"),Version,GGameUserSettingsIni);
  if(Version<56){for(auto& B:Bindings)B.Physical=Default56(B.Physical);Save51();}
+ if(Version>=56&&Version<60){const int Inv=Bindings.IndexOfByPredicate([](const auto& B){return B.Logical==EKeys::I;});if(Inv!=INDEX_NONE&&Bindings[Inv].Physical==EKeys::I&&!Bindings.ContainsByPredicate([](const auto& B){return B.Physical==EKeys::Tab;}))Bindings[Inv].Physical=EKeys::Tab;Save51();}
  for(auto& B:Bindings)if(B.Logical==EKeys::LeftControl)B.Label=TEXT("CROUCH / SPRINT SLIDE / HOLD PRONE");
 }
-void ULWPlayerInput51::Save51(){GConfig->SetInt(TEXT("LWKeybinds51"),TEXT("DefaultsVersion"),56,GGameUserSettingsIni);for(const auto& B:Bindings)GConfig->SetString(TEXT("LWKeybinds51"),*B.Logical.ToString(),*B.Physical.ToString(),GGameUserSettingsIni);GConfig->Flush(false,GGameUserSettingsIni);}
+void ULWPlayerInput51::Save51(){GConfig->SetInt(TEXT("LWKeybinds51"),TEXT("DefaultsVersion"),60,GGameUserSettingsIni);for(const auto& B:Bindings)GConfig->SetString(TEXT("LWKeybinds51"),*B.Logical.ToString(),*B.Physical.ToString(),GGameUserSettingsIni);GConfig->Flush(false,GGameUserSettingsIni);}
 void ULWPlayerInput51::Reset51(){Load51();for(auto& B:Bindings)B.Physical=Default56(B.Logical);Capture=-1;Status=TEXT("DEFAULTS RESTORED");Save51();}
 bool ULWPlayerInput51::Assign51(int I,FKey K){Load51();if(!Bindings.IsValidIndex(I)||!K.IsValid()||K.IsAnalog()||K==EKeys::Escape||K==EKeys::Tilde||K==EKeys::Enter||K==EKeys::F5||K==EKeys::F9||K==EKeys::F11||K==EKeys::Up||K==EKeys::Down||K==EKeys::Left||K==EKeys::Right){Status=TEXT("THAT KEY IS RESERVED");return false;}int Other=Bindings.IndexOfByPredicate([&](const auto& B){return B.Physical==K;});if(Other!=INDEX_NONE&&Other!=I){Swap(Bindings[I].Physical,Bindings[Other].Physical);Status=TEXT("BINDINGS SWAPPED");}else{Bindings[I].Physical=K;Status=TEXT("BINDING SAVED");}return true;}
-FKey ULWPlayerInput51::Translate51(FKey K)const{for(const auto& B:Bindings)if(B.Physical==K)return B.Logical;for(const auto& B:Bindings)if(B.Logical==K)return EKeys::Invalid;return K;}
+FKey ULWPlayerInput51::Translate51(FKey K)const{if(K==EKeys::I&&!Bindings.ContainsByPredicate([](const auto& B){return B.Physical==EKeys::I;})&&Bindings.ContainsByPredicate([](const auto& B){return B.Logical==EKeys::I&&B.Physical==EKeys::Tab;}))return EKeys::I;for(const auto& B:Bindings)if(B.Physical==K)return B.Logical;for(const auto& B:Bindings)if(B.Logical==K)return EKeys::Invalid;return K;}
 bool ULWPlayerInput51::InputKey(const FInputKeyEventArgs& P){
  Load51();auto* PC=Cast<APlayerController>(GetOuter());auto* C=PC?Cast<ALWCharacter>(PC->GetPawn()):nullptr;
+ if(C&&C->bDebug67){C->ConsumeUIAttack();if(P.Event==IE_Pressed&&(P.Key==EKeys::Escape||P.Key==EKeys::Tilde||P.Key==EKeys::Gamepad_FaceButton_Right)&&C->DebugMenu67)C->DebugMenu67->Close();return true;}
+ if(C&&C->SettlementBuild82&&C->Settlement82&&(P.Event==IE_Pressed||P.Event==IE_Released)&&C->Settlement82->Input(P.Key,P.Event==IE_Pressed)){if(P.Event==IE_Pressed)Suppressed51.Add(P.Key);return true;}
+ if(P.Key.IsGamepadKey())return PadInput58(P);
+ if(P.Event==IE_Pressed&&!P.Key.IsAnalog())Controller58=false;
  if(P.Event==IE_Released){if(Suppressed51.Remove(P.Key))return true;if(FKey* K=Held51.Find(P.Key)){auto R=P;R.Key=*K;Held51.Remove(P.Key);return Super::InputKey(R);}}
  if(Capture>=0&&C&&C->bSettings){if(P.Event==IE_Pressed&&GFrameCounter>CaptureFrame){Suppressed51.Add(P.Key);C->ConsumeUIAttack();if(P.Key==EKeys::Escape){Capture=-1;Status=TEXT("CANCELLED");}else if(Assign51(Capture,P.Key)){Capture=-1;Save51();}return true;}return true;}
- if(C&&!C->bMenu&&!C->bSettings&&(C->bMap||C->bInventory||(C->RPGPanel>=1&&C->RPGPanel<=3)||C->RPGPanel==6)&&Translate51(P.Key)==EKeys::Tab&&P.Event==IE_Pressed){C->ToggleMap();Suppressed51.Add(P.Key);return true;}
+ if(C&&!C->bMenu&&!C->bSettings&&(C->bMap||C->bInventory||(C->RPGPanel>=1&&C->RPGPanel<=3)||(C->RPGPanel==6||C->RPGPanel==7))&&Translate51(P.Key)==EKeys::Tab&&P.Event==IE_Pressed){C->ToggleMap();Suppressed51.Add(P.Key);return true;}
+ if(C&&!C->IsUIOpen()&&Cast<ALWVehicle>(C->ObjectFocus.Get())&&P.Key==EKeys::E&&Translate51(P.Key)==EKeys::C&&P.Event==IE_Pressed&&(PC->IsInputKeyDown(EKeys::LeftShift)||PC->IsInputKeyDown(EKeys::RightShift))){C->Interact();Suppressed51.Add(P.Key);return true;}
+ if(C&&!C->bMenu&&!C->bSettings&&(C->bMap||C->bInventory||(C->RPGPanel>=1&&C->RPGPanel<=3)||(C->RPGPanel==6||C->RPGPanel==7))&&Translate51(P.Key)==EKeys::I&&P.Event==IE_Pressed){C->ToggleInventory();Suppressed51.Add(P.Key);return true;}
  if(C&&C->IsUIOpen()&&P.Event==IE_Repeat&&(P.Key==EKeys::Enter||P.Key==EKeys::Gamepad_FaceButton_Bottom))return true;
  if(C&&C->IsUIOpen()&&(P.Event==IE_Pressed||P.Event==IE_Repeat))if(auto* H=Cast<ALWHUD>(PC->GetHUD());H&&H->UIKey55(P.Key)){Suppressed51.Add(P.Key);return true;}
  if(!C||C->IsUIOpen()){Capture=-1;if(C&&P.Event==IE_Pressed&&(P.Key==EKeys::LeftMouseButton||Translate51(P.Key)==EKeys::LeftMouseButton))C->ConsumeUIAttack();return Super::InputKey(P);}

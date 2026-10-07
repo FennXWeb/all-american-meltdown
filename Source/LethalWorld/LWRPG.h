@@ -3,6 +3,9 @@
 #include "Engine/DataAsset.h"
 #include "LWInventory.h"
 #include "LWStoryState.h"
+#include "LWCanada68State.h"
+#include "LWCampaign76State.h"
+#include "LWSettlement82State.h"
 #include "LWRPG.generated.h"
 
 USTRUCT(BlueprintType)
@@ -88,11 +91,21 @@ struct FLWCrewRecord {
  UPROPERTY() bool Following=false;
  UPROPERTY() int32 Bedroom=0;
  UPROPERTY() FName Station;
+ UPROPERTY() FName HomeVehicle66;
+ UPROPERTY() int32 HomeBunk66=-1;
 };
 USTRUCT()
 struct FLWRPGState {
  GENERATED_BODY()
+ UPROPERTY() TMap<FName,FLWClaim82> Claims82;
+ UPROPERTY() FLWCanadaState68 Canada68;
+ UPROPERTY() TMap<FName,FName> VoiceProfiles59;
+ UPROPERTY() TMap<FName,int32> WeaponKills62;
+UPROPERTY() TMap<FName,int32> WeaponHeads62;
+UPROPERTY() TMap<FName,int32> WeaponElites62;
+UPROPERTY() TMap<FName,int32> WeaponStuns62;
  UPROPERTY() FLWStoryState Story;
+ UPROPERTY() FLWCampaign76State Campaign76;
  UPROPERTY() TSet<int32> TradingCards36;
  UPROPERTY() int32 Level=1;
  UPROPERTY() int64 XP=0;

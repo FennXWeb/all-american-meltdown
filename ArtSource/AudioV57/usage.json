@@ -1,0 +1,254 @@
+{
+  "Vehicle42_apc_Idle": {
+    "cost": 40.0,
+    "state": "complete",
+    "rms": 0.19000000000000003,
+    "seconds": 3.9
+  },
+  "Vehicle42_apc_Low": {
+    "cost": 40.0,
+    "state": "complete",
+    "rms": 0.19,
+    "seconds": 3.9
+  },
+  "Vehicle42_apc_High": {
+    "cost": 40.0,
+    "state": "complete",
+    "rms": 0.18999999999999997,
+    "seconds": 3.9
+  },
+  "Vehicle42_armoredtruck_Idle": {
+    "cost": 40.0,
+    "state": "complete",
+    "rms": 0.18999999999999997,
+    "seconds": 3.9
+  },
+  "Vehicle42_armoredtruck_Low": {
+    "cost": 40.0,
+    "state": "complete",
+    "rms": 0.19000000000000003,
+    "seconds": 3.9
+  },
+  "Vehicle42_armoredtruck_High": {
+    "cost": 40.0,
+    "state": "complete",
+    "rms": 0.19000000000000003,
+    "seconds": 3.9
+  },
+  "Vehicle42_technical_Idle": {
+    "cost": 40.0,
+    "state": "complete",
+    "rms": 0.19000000000000003,
+    "seconds": 3.9
+  },
+  "Vehicle42_technical_Low": {
+    "cost": 40.0,
+    "state": "complete",
+    "rms": 0.18999999999999997,
+    "seconds": 3.9
+  },
+  "Vehicle42_technical_High": {
+    "cost": 40.0,
+    "state": "complete",
+    "rms": 0.18999999999999997,
+    "seconds": 3.9
+  },
+  "Vehicle42_helicopter_Idle": {
+    "cost": 40.0,
+    "state": "complete",
+    "rms": 0.19000000000000003,
+    "seconds": 3.9
+  },
+  "Vehicle42_helicopter_Low": {
+    "cost": 40.0,
+    "state": "complete",
+    "rms": 0.14829702247844137,
+    "seconds": 3.9
+  },
+  "Vehicle42_helicopter_High": {
+    "cost": 40.0,
+    "state": "complete",
+    "rms": 0.17747072859293914,
+    "seconds": 3.9
+  },
+  "Hornet57_1": {
+    "cost": 22.0,
+    "state": "complete",
+    "rms": 0.05288140848278999,
+    "seconds": 2.2
+  },
+  "Hornet57_2": {
+    "cost": 22.0,
+    "state": "complete",
+    "rms": 0.09402038902044296,
+    "seconds": 2.2
+  },
+  "Hornet57_3": {
+    "cost": 22.0,
+    "state": "complete",
+    "rms": 0.08245092630386353,
+    "seconds": 2.2
+  },
+  "Hornet57_4": {
+    "cost": 22.0,
+    "state": "complete",
+    "rms": 0.07380111515522003,
+    "seconds": 2.2
+  },
+  "Hornet57_5": {
+    "cost": 22.0,
+    "state": "complete",
+    "rms": 0.1368529051542282,
+    "seconds": 2.2
+  },
+  "Bear57_1": {
+    "cost": 22.0,
+    "state": "complete",
+    "rms": 0.1899999976158142,
+    "seconds": 2.2
+  },
+  "Bear57_2": {
+    "cost": 22.0,
+    "state": "complete",
+    "rms": 0.17478448152542114,
+    "seconds": 2.2
+  },
+  "Bear57_3": {
+    "cost": 22.0,
+    "state": "complete",
+    "rms": 0.1899999976158142,
+    "seconds": 2.2
+  },
+  "Bear57_4": {
+    "cost": 22.0,
+    "state": "complete",
+    "rms": 0.1900000125169754,
+    "seconds": 2.2
+  },
+  "Bear57_5": {
+    "cost": 22.0,
+    "state": "complete",
+    "rms": 0.1899999976158142,
+    "seconds": 2.2
+  },
+  "Rogue57_1": {
+    "cost": 22.0,
+    "state": "complete",
+    "rms": 0.16591227054595947,
+    "seconds": 2.2
+  },
+  "Rogue57_2": {
+    "cost": 22.0,
+    "state": "complete",
+    "rms": 0.1899999976158142,
+    "seconds": 2.2
+  },
+  "Rogue57_3": {
+    "cost": 22.0,
+    "state": "complete",
+    "rms": 0.1899999976158142,
+    "seconds": 2.2
+  },
+  "Rogue57_4": {
+    "cost": 22.0,
+    "state": "complete",
+    "rms": 0.18787947297096252,
+    "seconds": 2.2
+  },
+  "Rogue57_5": {
+    "cost": 22.0,
+    "state": "complete",
+    "rms": 0.18238011002540588,
+    "seconds": 2.2
+  },
+  "TurretCannon57": {
+    "cost": 7.0,
+    "state": "complete",
+    "rms": 0.10272763669490814,
+    "seconds": 0.6802494331065759
+  },
+  "TurretMG57": {
+    "cost": 5.0,
+    "state": "complete",
+    "rms": 0.07166110724210739,
+    "seconds": 0.48
+  },
+  "TurretServo57": {
+    "cost": 25.0,
+    "state": "complete",
+    "rms": 0.15505348232849248,
+    "seconds": 2.51
+  },
+  "TurretReload57": {
+    "cost": 25.0,
+    "state": "complete",
+    "rms": 0.03732595965266228,
+    "seconds": 2.48
+  },
+  "TurretEmpty57": {
+    "cost": 5.0,
+    "state": "complete",
+    "rms": 0.09486144036054611,
+    "seconds": 0.48
+  },
+  "HornetWings57": {
+    "cost": 30.0,
+    "state": "complete",
+    "rms": 0.15444820343962468,
+    "seconds": 2.9
+  },
+  "HornetSting57": {
+    "cost": 6.0,
+    "state": "complete",
+    "rms": 0.1776077300310135,
+    "seconds": 0.6
+  },
+  "BearSwipe57": {
+    "cost": 7.0,
+    "state": "complete",
+    "rms": 0.1900000125169754,
+    "seconds": 0.6802494331065759
+  },
+  "RogueDash57": {
+    "cost": 8.0,
+    "state": "complete",
+    "rms": 0.15350469946861267,
+    "seconds": 0.8
+  },
+  "RogueShot57": {
+    "cost": 6.0,
+    "state": "complete",
+    "rms": 0.1900000125169754,
+    "seconds": 0.6
+  },
+  "RogueStep57": {
+    "cost": 5.0,
+    "state": "complete",
+    "rms": 0.11995787173509598,
+    "seconds": 0.48
+  },
+  "HeliStart57": {
+    "cost": 40.0,
+    "state": "complete",
+    "rms": 0.09085287153720856,
+    "seconds": 4.0
+  },
+  "HeliStop57": {
+    "cost": 30.0,
+    "state": "complete",
+    "rms": 0.18315325677394867,
+    "seconds": 3.0
+  },
+  "Vault57": {
+    "cost": 20.0,
+    "state": "complete",
+    "rms": 0.08061333000659943,
+    "seconds": 2.0
+  },
+  "Target57": {
+    "cost": 7.0,
+    "state": "complete",
+    "rms": 0.11009731143712997,
+    "seconds": 0.6802494331065759
+  }
+}

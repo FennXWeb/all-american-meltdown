@@ -1,3 +1,4 @@
+#include "LWElectric74.h"
 #include "LWBunker45.h"
 #include "LWGarage45.h"
 #include "LWCharacter.h"
@@ -26,13 +27,13 @@ void ALWBunker45::TickLift(float Dt){
  for(int I=0;I<Gates.Num();++I){bool Closed=MovingLift||Floor!=GateFloors[I];Gates[I]->SetVisibility(Closed);Gates[I]->SetCollisionEnabled(Closed?ECollisionEnabled::QueryAndPhysics:ECollisionEnabled::NoCollision);}
 }
 bool ALWBunker45::StoreVehicle(ALWVehicle* C){
- if(!Player->Bunker45.Garage||BuildQueue.Num()||TransferCar||!IsValid(C)||!C->Record()||C->Record()->Exploded||C->Driver||C->EngineOn||FMath::Abs(C->Speed)>1){Message=TEXT("Park on the platform, stop the engine, and exit.");return false;}
+ if(!Player->Bunker45.Garage||BuildQueue.Num()||TransferCar||!IsValid(C)||C->IsAircraft84()||!C->Record()||C->Record()->Exploded||C->Driver||C->EngineOn||FMath::Abs(C->Speed)>1){Message=TEXT("Park on the platform, stop the engine, and exit.");return false;}
  const FVector D=C->GetActorLocation()-Surface;
  if(FMath::Abs(D.X)+FMath::Abs(C->GetActorForwardVector().X)*C->Spec().HalfLength+FMath::Abs(C->GetActorRightVector().X)*C->Spec().HalfWidth>760||FMath::Abs(D.Y)+FMath::Abs(C->GetActorForwardVector().Y)*C->Spec().HalfLength+FMath::Abs(C->GetActorRightVector().Y)*C->Spec().HalfWidth>360||FMath::Abs(D.Z)>250){Message=TEXT("Center the vehicle on the platform.");return false;}
- int Bay=C->Record()->Owned45?C->Record()->GarageBay45:LWGarage45::FreeBay(World->Vehicles,C->Record()->Model);
+ int Bay=C->Record()->Owned45&&C->Record()->GarageBay45>=0?C->Record()->GarageBay45:LWGarage45::FreeBay(World->Vehicles,C->Record()->Model);
  if(Bay<0){Message=TEXT("No suitable bays. RVs and buses need three adjacent bays.");return false;}
  C->UnloadPassengers();C->AutoDriving=C->Boarding=false;C->ConvoyLeader=nullptr;C->ConvoyOwner=nullptr;C->Record()->Owned45=true;C->Record()->GarageBay45=Bay;C->Record()->Unlocked=C->Record()->Hotwired=true;
- TransferCar=C;TransferClock=2;C->SetActorTickEnabled(false);C->SetActorEnableCollision(false);C->Record()->Stored45=true;C->Record()->Position=LWGarage45::BayPosition(Bay,LWGarage45::Bays(C->Record()->Model));C->Record()->Rotation=FRotator(0,LWGarage45::Bays(C->Record()->Model)>1?0:Bay<5?90:-90,0);Player->RequestSave40();Message=TEXT("Vehicle lift descending...");return true;
+ TransferCar=C;TransferClock=2;C->SetActorTickEnabled(false);C->SetActorEnableCollision(false);C->Record()->HomeSettlement82=C->Record()->HomeParking82=NAME_None;C->Record()->ParkingBay82=-1;C->Record()->Stored45=true;C->Record()->Position=LWGarage45::BayPosition(Bay,LWGarage45::Bays(C->Record()->Model));C->Record()->Rotation=FRotator(0,LWGarage45::Bays(C->Record()->Model)>1?0:Bay<5?90:-90,0);Player->RequestSave40();Message=TEXT("Vehicle lift descending...");return true;
 }
 bool ALWBunker45::Retrieve(FName Id){
  auto* R=World->Vehicles.Find(Id);if(!R||!R->Owned45||!R->Stored45||R->Exploded||TransferCar)return false;
@@ -56,8 +57,9 @@ void ALWBunker45::TickGarage(float Dt){
  }
  Poll+=Dt;if(Poll<1||BuildQueue.Num())return;float Elapsed=Poll;Poll=0;
  for(auto& Pair:World->Vehicles){
-  auto& R=Pair.Value;if(!R.Owned45)continue;
+  auto& R=Pair.Value;if(!R.Owned45||LWTraffic::IsAircraft(R.Model)||!R.HomeParking82.IsNone())continue;
   if(R.Exploded){
+   if(!Player->Bunker45.Garage||R.GarageBay45<0)continue;
    if(R.Replacement45<=0)R.Replacement45=30;R.Replacement45-=Elapsed;if(R.Replacement45>0)continue;
    for(TActorIterator<ALWVehicle> C(GetWorld());C;++C)if(C->RecordId==Pair.Key){if(C->Driver)C->Exit(true);C->Destroy();}
    R.Health=200;R.FireRemaining=0;R.Exploded=false;R.Dents.Empty();R.Stored45=true;R.Replacement45=0;R.Position=LWGarage45::BayPosition(R.GarageBay45,LWGarage45::Bays(R.Model));R.Rotation=FRotator(0,LWGarage45::Bays(R.Model)>1?0:R.GarageBay45<5?90:-90,0);Player->Notify(TEXT("Vehicle restored in your garage. Cargo secured."),6);Player->RequestSave40();
@@ -78,7 +80,7 @@ bool ALWBunker45::Paint(int Index){
 }
 bool ALWBunker45::Repair(){
  auto* R=World->Vehicles.Find(GarageCar);if(!R||!R->Owned45||!R->Stored45||R->Exploded)return false;
- int Cost=FMath::CeilToInt((200-R->Health)*3+R->Dents.Num()*5);if(Cost<=0)return true;if(Player->Money<Cost){Message=TEXT("Not enough credits.");return false;}
- Player->Money-=Cost;R->Health=200;R->FireRemaining=0;R->Dents.Empty();for(TActorIterator<ALWVehicle> C(GetWorld());C;++C)if(C->RecordId==GarageCar){C->bDentsDirty=true;C->RebuildDents();}Player->RequestSave40();Message=TEXT("Repaired");return true;
+ int Cost=FMath::CeilToInt((200-R->Health)*3+R->Dents.Num()*5+(LWTraffic::IsElectric(R->Model)?FMath::Max(0.f,LWElectric74::Capacity(R->Model==TEXT("solstice_rv"))-FMath::Max(0.f,R->BatteryKWh74))*.5f:0.f));if(Cost<=0)return true;if(Player->Money<Cost){Message=TEXT("Not enough credits.");return false;}
+ Player->Money-=Cost;R->Health=200;if(LWTraffic::IsElectric(R->Model))R->BatteryKWh74=LWElectric74::Capacity(R->Model==TEXT("solstice_rv"));R->FireRemaining=0;R->Dents.Empty();for(TActorIterator<ALWVehicle> C(GetWorld());C;++C)if(C->RecordId==GarageCar){C->bDentsDirty=true;C->RebuildDents();}Player->RequestSave40();Message=TEXT("Repaired");return true;
 }
 

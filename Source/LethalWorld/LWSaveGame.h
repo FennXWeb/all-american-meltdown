@@ -21,8 +21,13 @@ public:
     UPROPERTY() FLWEncounterState Encounters;
     UPROPERTY() FLWRPGState RPG;
     UPROPERTY() FLWIdentity Identity;
+    UPROPERTY() FString MenuLocation81;
+    UPROPERTY() FString MenuMission81;
     UPROPERTY() TMap<FName,FLWVehicleRecord> Vehicles;
     UPROPERTY() FName SeatedVehicle;
+    UPROPERTY() int32 SeatedSeat84=-1;
+    UPROPERTY() FVector CabinEye84=FVector::ZeroVector;
+    UPROPERTY() int32 Geography84=0;
     // Legacy saves omitted the default value. Keep the CDO at 1; writers explicitly stamp 2.
     UPROPERTY() int32 Version=1;
     UPROPERTY() TArray<FLWItemInstance> Inventory;

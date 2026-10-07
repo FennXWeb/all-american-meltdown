@@ -17,6 +17,7 @@ void ALWVehicle::HitPedestrians(FVector End,FRotator Rotation){
  const FVector Start=Chassis->GetComponentLocation();const auto Shape=FCollisionShape::MakeBox(Chassis->GetScaledBoxExtent());
  // Clip the query at solid scenery: pedestrians behind walls cannot be struck.
  FCollisionObjectQueryParams Solid;Solid.AddObjectTypesToQuery(ECC_WorldStatic);Solid.AddObjectTypesToQuery(ECC_WorldDynamic);
+ for(int I=0;I<12&&ImpactSpeed>=350;I++){FHitResult Prop;if(!GetWorld()->SweepSingleByObjectType(Prop,Start,End,Rotation.Quaternion(),Solid,Shape,Q))break;auto* Chunk=Cast<ALWChunk>(Prop.GetActor());if(!Chunk||!Chunk->BreakProp60(Prop.GetComponent(),End-Start,ImpactSpeed))break;Speed*=.96f;AddDent(Prop.ImpactPoint,-(End-Start).GetSafeNormal(),8);}
  FHitResult Wall;if(GetWorld()->SweepSingleByObjectType(Wall,Start,End,Rotation.Quaternion(),Solid,Shape,Q))End=FMath::Lerp(Start,End,Wall.Time);
  TArray<FHitResult> Hits;FCollisionObjectQueryParams Pawns;Pawns.AddObjectTypesToQuery(ECC_Pawn);Pawns.AddObjectTypesToQuery(ECC_PhysicsBody);
  const auto PedestrianShape=FCollisionShape::MakeBox(Chassis->GetScaledBoxExtent()+FVector(0,0,25));

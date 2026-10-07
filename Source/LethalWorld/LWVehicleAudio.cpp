@@ -13,24 +13,24 @@ void ALWVehicle::VehicleSound42(FName Event,float Volume){
   else if(N.Contains(TEXT("Door"))||N.Contains(TEXT("Cargo")))Event=TEXT("CarDoor");
   else if(N.Contains(TEXT("Glove"))||N.Contains(TEXT("Switch"))||N==TEXT("CarSeat")||N==TEXT("CarHandbrake"))Event=TEXT("Click");
  }
- World->Sound(Event,GetActorLocation(),Volume);
+ if(auto* A=World->Sound(Event,GetActorLocation(),Volume*1.3f))A->AttachToComponent(Root,FAttachmentTransformRules::KeepWorldTransform);
 }
 void ALWVehicle::StopDriveAudio(){for(auto& A:DriveAudio)if(IsValid(A)){A->Stop();A->DestroyComponent();}DriveAudio.Empty();DriveAudioGain.Empty();}
 void ALWVehicle::TickDriveAudio(float Dt,bool Brake,float Gas){
- if(!World)return;
- const FName Model(Spec().Id);const bool Diesel=Model==TEXT("rv")||Model==TEXT("bus")||Model==TEXT("boxtruck");
+ if(!World)return;if(IsElectric74()){TickElectricAudio74(Dt,Brake,Gas);return;}
+ const FName Model(Spec().Id);const bool Diesel=Model==TEXT("rv")||Model==TEXT("bus")||Model==TEXT("boxtruck")||Model==TEXT("apc")||Model==TEXT("armoredtruck");
  const bool Sport=Model==TEXT("muscle")||Model==TEXT("supercar"),Bike=Model==TEXT("dirtbike");
  const float V=FMath::Abs(Speed),Deceleration=FMath::Max(0.f,(FMath::Abs(AudioSpeed)-V)/FMath::Max(Dt,.001f));AudioSpeed=Speed;
  const float Idle=Diesel?650.f:Bike?1400.f:800.f,Redline=Diesel?3200.f:Bike?11000.f:Sport?8200.f:6500.f;
- if(!AudioWasEngine&&EngineOn)VehicleSound42(FName(*(FString(TEXT("CarStart42"))+(Diesel?TEXT("Diesel"):Bike?TEXT("Bike"):Sport?TEXT("Sport"):TEXT("Petrol")))),.65f);
- if(AudioWasEngine&&!EngineOn)VehicleSound42(TEXT("CarEngineStop"),.6f);
+ if(!AudioWasEngine&&EngineOn)VehicleSound42(IsHelicopter57()?FName(TEXT("HeliStart57")):FName(*(FString(TEXT("CarStart42"))+(Diesel?TEXT("Diesel"):Bike?TEXT("Bike"):Sport?TEXT("Sport"):TEXT("Petrol")))),.65f);
+ if(AudioWasEngine&&!EngineOn)VehicleSound42(IsHelicopter57()?TEXT("HeliStop57"):TEXT("CarEngineStop"),.6f);
  AudioWasEngine=EngineOn;if(!EngineOn&&V<3&&!WipersOn&&DriveAudio.IsEmpty()){EngineRPM=0;AudioGear=1;return;}ShiftTimer=FMath::Max(0.f,ShiftTimer-Dt);AirBrakeCooldown42=FMath::Max(0.f,AirBrakeCooldown42-Dt);
  const float Ratios[]={3.15f,2.16f,1.57f,1.19f,.94f,.75f};
  const float RoadRPM=FMath::Clamp(V/FMath::Max(1.f,Spec().MaxSpeed),0.f,1.25f)*(Redline-Idle);
  const float LoadTarget=EngineOn?FMath::Clamp(FMath::Abs(Gas),0.f,1.f):0;
  AudioLoad42=FMath::FInterpTo(AudioLoad42,LoadTarget,Dt,LoadTarget>AudioLoad42?5.f:8.f);
  float Coupled=Idle+RoadRPM*Ratios[FMath::Clamp(AudioGear-1,0,5)]/.75f;
- if(EngineOn&&ShiftTimer<=0&&Speed>=0){
+ if(!IsHelicopter57()&&EngineOn&&ShiftTimer<=0&&Speed>=0){
   int Next=AudioGear;if(Coupled>Redline*(.76f+.14f*AudioLoad42)&&AudioGear<6)++Next;
   else if(Coupled<Redline*.28f&&AudioGear>1)--Next;
   if(Next!=AudioGear){AudioGear=Next;ShiftTimer=.42f;VehicleSound42(TEXT("CarGearShift"),.18f+AudioLoad42*.18f);}
@@ -47,9 +47,9 @@ void ALWVehicle::TickDriveAudio(float Dt,bool Brake,float Gas){
  const float Harsh=Brake?FMath::Clamp(Deceleration/FMath::Max(1.f,Spec().Brake),0.f,1.f):0;
  const float Corner=FMath::Abs(SteeringAngle)*V/FMath::Max(1.f,Spec().MaxSpeed)/25;
  const float ShiftGain=ShiftTimer>.23f?.7f:1.f;
- const float Motor=EngineOn?(.38f+.22f*AudioLoad42)*ShiftGain*1.8f:0;
- const float Road=FMath::Clamp(V/Spec().MaxSpeed,0.f,1.f);
- const float Levels[]={Motor*FMath::Sqrt(IdleWeight),Motor*FMath::Sqrt(LowWeight),Motor*FMath::Sqrt(HighWeight),Road*.32f,Harsh*.30f*FMath::Clamp(V/350,0.f,1.f),FMath::Clamp((Harsh-.65f)*2+Corner-.65f,0.f,1.f)*FMath::Clamp(V/600,0.f,1.f)*.5f,WipersOn?.24f:0,Road*Road*.23f};
+ const float Motor=IsHelicopter57()?RotorSpeed57*(.7f+.45f*AudioLoad42):EngineOn?(.38f+.22f*AudioLoad42)*ShiftGain*2.5f:0;
+ const float Road=IsHelicopter57()?0.f:FMath::Clamp(V/Spec().MaxSpeed,0.f,1.f);
+ const float Levels[]={Motor*FMath::Sqrt(IdleWeight),Motor*FMath::Sqrt(LowWeight),Motor*FMath::Sqrt(HighWeight),Road*.48f,Harsh*.45f*FMath::Clamp(V/350,0.f,1.f),FMath::Clamp((Harsh-.65f)*2+Corner-.65f,0.f,1.f)*FMath::Clamp(V/600,0.f,1.f)*.65f,WipersOn?.38f:0,Road*Road*.34f};
  const FString Prefix=FString(TEXT("Vehicle42_"))+Spec().Id+TEXT("_");
  const FName Slots[]={FName(*(Prefix+TEXT("Idle"))),FName(*(Prefix+TEXT("Low"))),FName(*(Prefix+TEXT("High"))),TEXT("CarTires"),TEXT("CarBrake"),TEXT("CarSkid"),TEXT("CarWipers"),TEXT("CarWind42")};
  if(DriveAudio.Num()!=8){StopDriveAudio();DriveAudio.SetNum(8);DriveAudioGain.SetNumZeroed(16);}
@@ -66,8 +66,8 @@ void ALWVehicle::TickDriveAudio(float Dt,bool Brake,float Gas){
   A->SetVolumeMultiplier(FMath::FInterpTo(A->VolumeMultiplier,DriveAudioGain[I]*Levels[I],Dt,8));
   const float Pitch=I==0?FMath::Lerp(.93f,1.18f,Rev):I==1?FMath::Lerp(.74f,1.32f,Rev):I==2?FMath::Lerp(.72f,1.13f,Rev):I==3?FMath::Lerp(.85f,1.15f,Road):1;
   A->SetPitchMultiplier(DriveAudioGain[I+8]*Pitch);
-  const bool Inside=Driver&&Driver->Vehicle==this;
-  A->SetLowPassFilterEnabled(Inside&&I!=6);A->SetLowPassFilterFrequency(Inside?(I<3?2100.f:3400.f):20000.f);
+  // The acoustic subsystem owns cabin filtering; do not stack a second muffler on it.
+  A->SetLowPassFilterEnabled(false);
  }
  AudioQuiet42=Audible?0:AudioQuiet42+Dt;if(AudioQuiet42>1){StopDriveAudio();AudioQuiet42=0;}
  if(Brake&&!WasBrake42&&V<50)VehicleSound42(TEXT("CarHandbrake"),.3f);WasBrake42=Brake;

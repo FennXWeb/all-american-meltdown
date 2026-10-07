@@ -1,4 +1,5 @@
 #include "LWWeaponEffect.h"
+#include "LWVehicle.h"
 #include "Materials/MaterialInstanceDynamic.h"
 #include "LWWeaponMods.h"
 #include "LWVehicle.h"
@@ -516,6 +517,7 @@ FString ALWCharacter::AmmoStatus() const
 
 void ALWCharacter::ToggleFireMode()
 {
+    if(Vehicle){if(!IsUIOpen())VehicleWipers();return;}
     if (!CanAct() || !LWWeapons::Gun(*this) || (Weapon != 5 && Weapon != 6 && Weapon!=13)) return;
     bTrigger = false;
     FireMode = FireMode == 1 ? 0 : 1;
@@ -528,7 +530,7 @@ void ALWCharacter::ReleaseAttackInput(){StopAttack();bUIAttackHeld=false;}
 
 void ALWCharacter::StopAttack()
 {
-    bTrigger = false;
+    bTrigger = false;if(Vehicle)Vehicle->TurretTrigger57=false;
     LWWeapons::State(*this).Buffered54=0;
     LWWeapons::State(*this).FlashUntil = 0;
     if (Muzzle) Muzzle->SetIntensity(0);
@@ -547,6 +549,7 @@ void ALWCharacter::Attack()
     using namespace LWWeapons;
     if(IsUIOpen()){ConsumeUIAttack();return;}
     if(bUIAttackHeld||LastUIAttackFrame==GFrameCounter){StopAttack();return;}
+    if(Vehicle&&Vehicle->HasTurret57()&&Vehicle->PlayerSeat==0){Vehicle->TurretTrigger57=true;return;}
     if (!CanAct() || !World || !Camera) { StopAttack(); return; }
     if (!Gun(*this)) { Punch(); return; }
     if (InShelter(*this)) { StopAttack(); Notify(TEXT("SAFEHOUSE // WEAPONS SAFE"),1.5f); return; }
@@ -631,9 +634,9 @@ void ALWCharacter::Attack()
     // Local reports use listener-relative playback from the outset: no distance,
     // panning, occlusion or random pitch changes as the muzzle/aim pose moves.
     // Other listeners still hear a positional report at the actual muzzle.
-    ULWAudioCatalog::PlaySlot(this,S.FireSound,Bore,1,1,true,
+    ULWAudioCatalog::PlaySlot(this,S.FireSound,Bore,LWMods::Has(ActiveGun(),TEXT("att_suppressor62"))?.5f:1.f,1,true,
         World->Attenuation,World->LoudAttenuation,IsLocallyControlled());
-    World->Noise(Bore,S.Noise);
+    World->Noise(Bore,S.Noise*(LWMods::Has(ActiveGun(),TEXT("att_suppressor62"))?.35f:1.f));
     RecoilBloom54=FMath::Min(.85f,RecoilBloom54+.085f);
     ALWZombie::SuppressAlong54(this,Start,Start+ForwardVector*S.Range);
     Runtime.Kick54+=FVector2D(-S.Recoil*LWMods::Recoil(ActiveGun())*FMath::Max(.3f,1-Stat(TEXT("recoil"))),FMath::FRandRange(-S.YawRecoil,S.YawRecoil)*LWMods::Recoil(ActiveGun()));
@@ -696,7 +699,7 @@ void ALWCharacter::Attack()
 
 void ALWCharacter::Reload()
 {
-    if(Vehicle){Vehicle->Ignition();return;}
+    if(Vehicle){if(Vehicle->HasTurret57()&&Vehicle->PlayerSeat==0)Vehicle->ReloadTurret57();else Vehicle->Ignition();return;}
     using namespace LWWeapons;
     if (!CanAct() || !World || !Gun(*this) || Weapon < 2 || bReloading || AttackTimer > 0) return;
     auto* G = ActiveGun();
@@ -973,7 +976,7 @@ void ALWCharacter::ConfigureWeaponParts()
         Muzzle->SetRelativeLocation(Specs[Weapon].Muzzle);
         Muzzle->SetIntensity(0);
     }
-    for(auto* Part:{WeaponMesh.Get(),MovingPart.Get(),SecondPart.Get()})if(Part){Part->EmptyOverrideMaterials();if(!LWMods::SkinName(G).IsEmpty()){
+    for(auto* Part:{WeaponMesh.Get(),MovingPart.Get(),SecondPart.Get()})if(Part){Part->EmptyOverrideMaterials();if(G->Camo62==0&&!LWMods::SkinName(G).IsEmpty()){
         auto* Finish=World->Material(FName(*FString::Printf(TEXT("WeaponSkin24_%d_%02d"),LWMods::Tier(G),G->WeaponSkin)));
         if(Finish)for(int I=0;I<Part->GetNumMaterials();I++){FString Name=Part->GetMaterial(I)?Part->GetMaterial(I)->GetName():FString();if(!Name.Contains(TEXT("Rubber"))&&!Name.Contains(TEXT("Glass"))&&!Name.Contains(TEXT("Glow")))Part->SetMaterial(I,Finish);}
     }}
@@ -1005,7 +1008,7 @@ void ALWCharacter::UpdateWeapon(float Dt)
         Muzzle->SetIntensity(Flash ? 40000.f : 0.f);
         Muzzle->SetVisibility(Flash);
     }
-    const bool ScopeView=bAim&&(LWMods::Has(G,TEXT("att_scope4"))||LWMods::Has(G,TEXT("att_scope8")));
+    const bool ScopeView=bAim&&(LWMods::Scope(G));
     auto Visibility = [Show,ScopeView](UStaticMeshComponent* PartMesh, bool Enabled)
     { if (PartMesh) PartMesh->SetVisibility(Show && !ScopeView && Enabled && PartMesh->GetStaticMesh() != nullptr,false); };
     for(auto& A:AttachmentParts)Visibility(A,G!=nullptr);

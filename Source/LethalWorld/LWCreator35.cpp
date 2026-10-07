@@ -1,4 +1,5 @@
 #include "LWCreator35.h"
+#include "LWHair61.h"
 #include "Components/StaticMeshComponent.h"
 #include "Materials/MaterialInstanceDynamic.h"
 #include "Engine/StaticMesh.h"
@@ -67,13 +68,16 @@ void Surface(FProcMeshSection& Section,int Part,const FLWIdentity& V){
 void Materials(UMeshComponent* C,int Part,const FLWIdentity& V,bool Dead){
  for(int I=0;I<C->GetNumMaterials();I++){auto* Base=C->GetMaterial(I);if(!Base)continue;FString N=Base->GetMaterial()->GetName();auto* M=Cast<UMaterialInstanceDynamic>(Base);if(!M)M=UMaterialInstanceDynamic::Create(Base,C);
   FLinearColor Tint=(N.Contains(TEXT("Skin"))||N.Contains(TEXT("Face")))?LWOpening::Skin(V.Skin)*1.5f:N.Contains(TEXT("Hair"))?Color(V.HairColor):N.Contains(TEXT("Iris"))?Color(V.EyeColor35):Part==0||Part==3||Part==4?Color(V.TopColor35):Part==2||Part==5||Part==6?Color(V.BottomColor35):Color(V.ShoesColor35);
-  if(N.Contains(TEXT("Eye35"))||N.Contains(TEXT("Pupil"))||N.Contains(TEXT("Lip"))||N.Contains(TEXT("Metal")))Tint=FLinearColor::White;
+  if((N.Contains(TEXT("Eye35"))||N.Contains(TEXT("Eye61")))||N.Contains(TEXT("Pupil"))||N.Contains(TEXT("Lip"))||N.Contains(TEXT("Metal")))Tint=FLinearColor::White;
+  if(N.Contains(TEXT("Iris"))){static const FLinearColor Eye[]={FLinearColor(1,.85,.65),FLinearColor(.35,.85,1.3),FLinearColor(.65,1.1,.45),FLinearColor(1,.75,.5),FLinearColor(1.1,1,.6),FLinearColor(.7,.85,.9),FLinearColor(.8,.8,.7),FLinearColor(.65,.8,.55),FLinearColor(.6,.5,.4),FLinearColor(.45,.85,.75),FLinearColor(1.1,.9,.45),FLinearColor(.85,.9,1)};Tint=Eye[FMath::Clamp(V.EyeColor35,0,11)];}
+  if(N.Contains(TEXT("BootLeather61"))||N.Contains(TEXT("Rubber61")))Tint=Color(V.ShoesColor35);
   if(Dead&&(N.Contains(TEXT("Skin"))||N.Contains(TEXT("Face"))))Tint*=FLinearColor(.55f,.75f,.45f);
   M->SetVectorParameterValue(TEXT("Tint"),Tint);M->SetScalarParameterValue(TEXT("GloveAmount"),V.Gloves35?1:0);M->SetVectorParameterValue(TEXT("GloveTint"),Color(V.ShoesColor35));M->SetScalarParameterValue(TEXT("TattooOpacity"),V.TattooOpacity35);C->SetMaterial(I,M);
  }
 }
 void PreviewPart(UStaticMeshComponent* Part,int Index,const FLWIdentity& V,bool Visible){
  if(!Part||!Part->GetStaticMesh()||!Part->GetStaticMesh()->bAllowCPUAccess)return;
+ if(ULWHair61::Supports(Part)){auto* Hair=NewObject<ULWHair61>(Part->GetOwner());Hair->ComponentTags.Add(TEXT("CreatorMesh35"));Hair->SetupAttachment(Part);Hair->RegisterComponent();Hair->Initialize(Part,V,Visible,true);return;}
  auto* Mesh=NewObject<UProceduralMeshComponent>(Part->GetOwner());Mesh->ComponentTags.Add(TEXT("CreatorMesh35"));Mesh->SetupAttachment(Part);Mesh->SetCollisionEnabled(ECollisionEnabled::NoCollision);Mesh->SetCanEverAffectNavigation(false);Mesh->RegisterComponent();UKismetProceduralMeshLibrary::CopyProceduralMeshFromStaticMeshComponent(Part,0,Mesh,false);
  for(int I=0;I<Mesh->GetNumSections();I++){Mesh->SetMaterial(I,Part->GetMaterial(Part->GetStaticMesh()->GetRenderData()->LODResources[0].Sections[I].MaterialIndex));auto Section=*Mesh->GetProcMeshSection(I);Surface(Section,Index,V);Mesh->SetProcMeshSection(I,Section);}
  Mesh->SetVisibility(Visible);Part->SetVisibility(false,false);

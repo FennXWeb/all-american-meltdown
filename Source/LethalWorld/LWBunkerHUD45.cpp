@@ -1,3 +1,4 @@
+#include "LWElectric74.h"
 #include "LWBunker45.h"
 #include "Components/StaticMeshComponent.h"
 #include "LWGarage45.h"
@@ -40,8 +41,8 @@ void ALWBunker45::Draw(ALWHUD& H){
   for(int I=Page*8;I<FMath::Min(Page*8+8,Player->RPG.Crew.Num());++I){const auto& C=Player->RPG.Crew[I];FName Work=Player->Bunker45.Assignments.FindRef(C.Id);B(FName(*FString::Printf(TEXT("base_assign_%d"),I)),C.Name+TEXT(" / ")+(Work.IsNone()?TEXT("OFF DUTY"):Work.ToString().ToUpper()),I%8,50,1100);}
   H.Text(TEXT("Work pays every 5 minutes while playing. Up to 8 workers per utility room.\nSalvage and farm output goes to the supply locker beside the entrance."),50,602,.85);
  }else if(Tab==3){
-  int I=0;for(const auto& Pair:World->Vehicles)if(Pair.Value.Owned45){const auto& R=Pair.Value;if(I<Page*8||I>=Page*8+8){I++;continue;}B(FName(*(TEXT("base_car_")+Pair.Key.ToString())),FString::Printf(TEXT("BAY %d / %s / %s"),R.GarageBay45+1,LWTraffic::Get(R.Model).Name,R.Exploded?TEXT("REPLACING"):R.Stored45?TEXT("STORED"):TEXT("OUTSIDE")),(I++)%8,50,680);}
-  if(!GarageCar.IsNone()){const auto* Selected=World->Vehicles.Find(GarageCar);H.Text(Selected?FString(LWTraffic::Get(Selected->Model).Name)+TEXT(" / ")+Selected->VIN.ToString(EGuidFormats::Digits).Right(6):TEXT("SELECT A VEHICLE"),780,205,.9);B(TEXT("base_repair"),FString::Printf(TEXT("REPAIR / %d CREDITS"),Selected?FMath::CeilToInt((200-Selected->Health)*3+Selected->Dents.Num()*5):0),1,780,400);B(TEXT("base_mods"),TEXT("UPGRADES"),2,780,400);B(TEXT("base_paints"),TEXT("PAINT / 250 CREDITS"),3,780,400);B(TEXT("base_retrieve"),TEXT("SEND TO SURFACE"),4,780,400);B(TEXT("base_release"),TEXT("RELEASE OWNERSHIP"),5,780,400);}
+  int I=0;for(const auto& Pair:World->Vehicles)if(Pair.Value.Owned45&&Pair.Value.HomeParking82.IsNone()){const auto& R=Pair.Value;if(I<Page*8||I>=Page*8+8){I++;continue;}B(FName(*(TEXT("base_car_")+Pair.Key.ToString())),FString::Printf(TEXT("BAY %d / %s / %s"),R.GarageBay45+1,LWTraffic::Get(R.Model).Name,R.Exploded?TEXT("REPLACING"):R.Stored45?TEXT("STORED"):TEXT("OUTSIDE")),(I++)%8,50,680);}
+  if(!GarageCar.IsNone()){const auto* Selected=World->Vehicles.Find(GarageCar);H.Text(Selected?FString(LWTraffic::Get(Selected->Model).Name)+TEXT(" / ")+Selected->VIN.ToString(EGuidFormats::Digits).Right(6):TEXT("SELECT A VEHICLE"),780,205,.9);B(TEXT("base_repair"),FString::Printf(TEXT("SERVICE / CHARGE / %d CREDITS"),Selected?FMath::CeilToInt((200-Selected->Health)*3+Selected->Dents.Num()*5+(LWTraffic::IsElectric(Selected->Model)?FMath::Max(0.f,LWElectric74::Capacity(Selected->Model==TEXT("solstice_rv"))-FMath::Max(0.f,Selected->BatteryKWh74))*.5f:0.f)):0),1,780,400);B(TEXT("base_mods"),TEXT("UPGRADES"),2,780,400);B(TEXT("base_paints"),TEXT("PAINT / 250 CREDITS"),3,780,400);B(TEXT("base_retrieve"),TEXT("SEND TO SURFACE"),4,780,400);B(TEXT("base_release"),TEXT("RELEASE OWNERSHIP"),5,780,400);}
   if(I==0)H.Text(TEXT("Store a vehicle using the surface lift.\nSwitch off the engine and exit before pressing the button."),50,235,1);
  }else if(Tab==4){
   const auto* R=World->Vehicles.Find(GarageCar);int I=0;for(const auto& M:LWGarage45::Mods())if(R&&LWGarage45::Compatible(M,R->Model)){
@@ -64,7 +65,7 @@ void ALWBunker45::Action(FName Id){
  if(Id==TEXT("base_edit")){BeginEdit();return;}
  if(S.StartsWith(TEXT("base_build_"))){BeginEdit(FCString::Atoi(*S.Mid(11)));return;}
  if(S.StartsWith(TEXT("base_buy_"))){BuyExpansion(FName(*S.Mid(9)));return;}
- if(S.StartsWith(TEXT("base_assign_"))){int I=FCString::Atoi(*S.Mid(12));if(!Player->RPG.Crew.IsValidIndex(I))return;auto& C=Player->RPG.Crew[I];TArray<FName> Available={NAME_None};for(FName Job:Jobs)if(Player->Bunker45.Utilities.Contains(Job))Available.Add(Job);FName Old=Player->Bunker45.Assignments.FindRef(C.Id);FName Next=Available[(Available.Find(Old)+1)%Available.Num()];if(Next.IsNone())Player->Bunker45.Assignments.Remove(C.Id);else {Player->Bunker45.Assignments.Add(C.Id,Next);C.Following=false;C.Station=NAME_None;}Player->RequestSave40();return;}
+ if(S.StartsWith(TEXT("base_assign_"))){int I=FCString::Atoi(*S.Mid(12));if(!Player->RPG.Crew.IsValidIndex(I))return;auto& C=Player->RPG.Crew[I];TArray<FName> Available={NAME_None};for(FName Job:Jobs)if(Player->Bunker45.Utilities.Contains(Job))Available.Add(Job);FName Old=Player->Bunker45.Assignments.FindRef(C.Id);FName Next=Available[(Available.Find(Old)+1)%Available.Num()];if(Next.IsNone())Player->Bunker45.Assignments.Remove(C.Id);else {Player->Bunker45.Assignments.Add(C.Id,Next);C.Following=false;C.Station=NAME_None;C.HomeVehicle66=NAME_None;C.HomeBunk66=-1;}Player->RequestSave40();return;}
  if(S.StartsWith(TEXT("base_car_"))){GarageCar=FName(*S.Mid(9));return;}
  if(Id==TEXT("base_repair")){Repair();return;}if(Id==TEXT("base_mods")){Tab=4;Page=0;return;}if(Id==TEXT("base_paints")){Tab=5;Page=0;return;}
  if(Id==TEXT("base_retrieve")){Retrieve(GarageCar);return;}

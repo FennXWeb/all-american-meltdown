@@ -17,6 +17,16 @@ TArray<FJunction> Junctions(const TArray<LWGen::FRoad>& All,int Seed){
  }return Out;
 }
 int Phase(const FJunction& J,FVector2D A,double Seconds){const bool Main=FMath::Abs(FVector2D::DotProduct(A.GetSafeNormal(),J.Main))>.72;double T=FMath::Fmod(FMath::Max(0.,Seconds)+J.Id%68,68.);if(!Main)T=FMath::Fmod(T+34,68.);return T<28?2:T<32?1:0;}
+bool NeedsStop(const FJunction& J,FVector2D Approach){
+ if(J.Signals)return false;
+ // Prefer the widest continuous road. At T junctions the stem must yield even
+ // when its segment happens to be first in the generator's road array.
+ FVector2D Priority=J.Main;float Best=-1;
+ for(const auto& A:J.Arms)for(const auto& B:J.Arms)if(FVector2D::DotProduct(A.Out,B.Out)<-.90){
+  float Width=FMath::Min(A.Width,B.Width);if(Width>Best+.1f){Best=Width;Priority=A.Out;}
+ }
+ return FMath::Abs(FVector2D::DotProduct(Approach.GetSafeNormal(),Priority))<.90;
+}
 bool InJunction(FVector2D P,const TArray<FJunction>& J,float Extra){return J.ContainsByPredicate([&](const auto& X){return FVector2D::Distance(P,X.Position)<X.Radius+Extra;});}
 float TrafficSpeed(ALWVehicle* V,float Desired,float Dt){
  if(!V||!V->World)return Desired;
@@ -27,7 +37,7 @@ float TrafficSpeed(ALWVehicle* V,float Desired,float Dt){
   FVector2D Delta=Here-J.Position;double Distance=Delta.Size();if(Distance>5000||FVector2D::DotProduct(-Delta.GetSafeNormal(),Forward)<.65)continue;
   const FApproach* Arm=nullptr;double Dot=.7;for(const auto& A:J.Arms){double D=FVector2D::DotProduct(A.Out,Delta.GetSafeNormal());if(D>Dot){Dot=D;Arm=&A;}}if(!Arm)continue;
   const double Gap=FVector2D::DotProduct(Delta,Arm->Out)-J.Radius-V->Spec().HalfLength-80;if(Gap < -100)continue;
-  bool Stop=J.Signals?Phase(J,Arm->Out,V->GetWorld()->GetTimeSeconds())!=2:State.Cleared!=J.Id;
+  bool Stop=J.Signals?Phase(J,Arm->Out,V->GetWorld()->GetTimeSeconds())!=2:NeedsStop(J,Arm->Out)&&State.Cleared!=J.Id;
   if(!J.Signals&&Stop){if(State.Stop!=J.Id){State.Stop=J.Id;State.Wait=0;}if(Gap<180&&FMath::Abs(V->Speed)<20){State.Wait+=Dt;if(State.Wait>=1.5){State.Cleared=J.Id;State.Center=J.Position;Stop=false;}}}
   if(Stop)Result=FMath::Min(Result,float(FMath::Sqrt(2*V->Spec().Brake*.65*FMath::Max(0.,Gap-30))));
  }return Result;

@@ -7,6 +7,13 @@ class LETHALWORLD_API ULWPlayerInput51 : public UPlayerInput {
  GENERATED_BODY()
 public:
  virtual bool InputKey(const FInputKeyEventArgs& Params) override;
+ virtual void ProcessInputStack(const TArray<UInputComponent*>& Stack,float Dt,bool Paused) override;
+ virtual void FlushPressedKeys() override;
+ bool Controller58=false,Modifier58=false,Invert58=false;float LookSpeed58=150,DeadZone58=.16f,CursorSpeed58=850;
+ TMap<FKey,float> Axes58;TMap<FKey,FKey> Held58;
+ FString Context58;double LastPad58=0,LastFrame58=0;bool TextMode58=false;int TextCell58=0;
+ bool PadInput58(const FInputKeyEventArgs& Params);void Emit58(FKey Key,EInputEvent Event,bool MouseUI=false);void Release58();
+ void Load58();void Save58();void Change58(int Index);FString Label58(int Index)const;FString Prompt58(FKey Logical)const;
  struct FBinding {FKey Logical,Physical;FString Label;};
  TArray<FBinding> Bindings;
  int Capture=-1; uint64 CaptureFrame=0; FString Status;

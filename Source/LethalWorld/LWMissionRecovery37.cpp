@@ -1,3 +1,4 @@
+#include "LWCampaign76.h"
 #include "LWCharacter.h"
 #include "LWSaveGame.h"
 #include "LWStory.h"
@@ -9,7 +10,8 @@
 #include "ProfilingDebugging/CpuProfilerTrace.h"
 
 FName ALWCharacter::ActiveMission37()const {
- if(RPG.Story.Enabled&&RPG.Story.Stage<LWStory::Complete)return TEXT("chapter1");
+ if(RPG.Campaign76.Started&&!RPG.Campaign76.Paused&&RPG.Campaign76.Ending.IsNone())return TEXT("campaign76");
+
  for(const auto& Q:RPG.Quests)if(Q.Id==RPG.TrackedQuest&&!Q.Rewarded)return Q.Id;
  return NAME_None;
 }
@@ -19,9 +21,11 @@ bool ALWCharacter::HasMissionRecovery37()const {
 }
 void ALWCharacter::CaptureMission37(FName Key,bool Force){
  if(!bStarted||!World||Health<=0||bLoadingSave||bRestoringMission37||OpeningMode)return;
- if(Key.IsNone())Key=ActiveMission37();if(Key.IsNone())return;
+ if(Key.IsNone())Key=ActiveMission37();if(Key.IsNone()||Key==TEXT("chapter1"))return;
  int Stage=-1,StartStage=0;FString Title;
- if(Key==TEXT("chapter1")){
+ if(Key==TEXT("campaign76")){
+  const auto* Current=LWCampaign76::Stage(RPG.Campaign76.Stage);if(!Current)return;Stage=RPG.Campaign76.Revision;Title=Current->Title;StartStage=0;for(int I=0;I<LWCampaign76::Stages().Num();I++)if(LWCampaign76::Stages()[I].Mission==Current->Mission){StartStage=I;break;}
+ }else if(Key==TEXT("chapter1")){
   if(!RPG.Story.Enabled||RPG.Story.Stage>=LWStory::Complete)return;
   Stage=RPG.Story.Stage;Title=LWStory::Missions()[Stage].Title;StartStage=Stage;
   while(StartStage>0&&Title==LWStory::Missions()[StartStage-1].Title)--StartStage;
@@ -52,7 +56,7 @@ void ALWCharacter::FinishCheckpoints43(bool Wait){
   TArray<uint8> Bytes=Job->Bytes.Get();CheckpointJobs43.RemoveAt(0);CheckpointSnapshots43.RemoveAt(0);
   if(Bytes.IsEmpty()){Notify(TEXT("CHECKPOINT SAVE FAILED"),5);continue;}
   // Completed/abandoned missions must not be resurrected by an older worker.
-  const bool Active=Job->Key==TEXT("chapter1")?RPG.Story.Enabled&&RPG.Story.Stage<LWStory::Complete:
+  const bool Active=Job->Key==TEXT("campaign76")?RPG.Campaign76.Started&&!RPG.Campaign76.Paused&&RPG.Campaign76.Ending.IsNone():Job->Key==TEXT("chapter1")?RPG.Story.Enabled&&RPG.Story.Stage<LWStory::Complete:
    RPG.Quests.ContainsByPredicate([&](const auto& Q){return Q.Id==Job->Key&&!Q.Rewarded;});
   if(!Active)continue;
   auto& R=MissionRecovery37.FindOrAdd(Job->Key);
@@ -70,11 +74,11 @@ bool ALWCharacter::RecoverMission37(int32 Choice){
  TGuardValue<bool> Restoring(bRestoringMission37,true);
  TMap<FName,FLWMissionRecovery37> Recovery;Recovery.Add(Key,*R);auto Collection=RPG.TradingCards36;
  // The snapshot restores inventory, stash, vehicles, corpse loot, killed enemies and rewards together.
- if(Choice==2){if(Key==TEXT("chapter1"))Snapshot->RPG.Story.Enabled=false;
+ if(Choice==2){if(Key==TEXT("campaign76"))Snapshot->RPG.Campaign76.Paused=true;else if(Key==TEXT("chapter1"))Snapshot->RPG.Story.Enabled=false;
   else {Snapshot->RPG.Quests.RemoveAll([&](const auto& Q){return Q.Id==Key;});Snapshot->RPG.TrackedQuest=NAME_None;}
   Recovery.Remove(Key);
  }
- if(Choice!=0&&Recovery.Contains(Key)){Recovery[Key].Checkpoint=Recovery[Key].Start;Recovery[Key].CheckpointStage=Snapshot->RPG.Story.Stage;if(Key!=TEXT("chapter1"))Recovery[Key].CheckpointStage=0;}
+ if(Choice!=0&&Recovery.Contains(Key)){Recovery[Key].Checkpoint=Recovery[Key].Start;Recovery[Key].CheckpointStage=Key==TEXT("campaign76")?Snapshot->RPG.Campaign76.Revision:Key==TEXT("chapter1")?Snapshot->RPG.Story.Stage:0;}
  Snapshot->MissionRecovery37=MoveTemp(Recovery);Snapshot->RPG.TradingCards36.Append(Collection);
  Snapshot->Health=FMath::Max(1.f,Snapshot->Health);Snapshot->SeatedVehicle=NAME_None;
  ApplyProgressSnapshot37(Snapshot);bStoryLocked=false;bDeadSaved=false;bTrigger=bAim=bSprint=false;

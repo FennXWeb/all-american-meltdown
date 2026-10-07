@@ -1,18 +1,20 @@
+#include "LWAircraft84.h"
 #include "LWVehicle.h"
 #include "LWGarage45.h"
 #include "LWFuel.h"
 #include "LWCharacter.h"
 #include "LWWorld.h"
 
-float ALWVehicle::FuelCapacity()const{
- const FName Model(Spec().Id);const float Base= Model==TEXT("dirtbike")?12.f:Model==TEXT("rv")||Model==TEXT("bus")?120.f:Model==TEXT("boxtruck")?100.f:Model==TEXT("van")||Model==TEXT("pickup")||Model==TEXT("suv")?75.f:55.f;return Base*(1+(Record()?LWGarage45::Stat(Record(),TEXT("tank")):0));
+float ALWVehicle::FuelCapacity()const{if(IsAircraft84())return LWAviation84::Spec(Spec().Id).Capacity;
+ const FName Model(Spec().Id);const float Base= IsHelicopter57()?240.f:FName(Spec().Id)==TEXT("apc")?160.f:FName(Spec().Id)==TEXT("armoredtruck")?100.f:Model==TEXT("dirtbike")?12.f:Model==TEXT("rv")||Model==TEXT("bus")?120.f:Model==TEXT("boxtruck")?100.f:Model==TEXT("van")||Model==TEXT("pickup")||Model==TEXT("suv")?75.f:55.f;return Base*(1+(Record()?LWGarage45::Stat(Record(),TEXT("tank")):0));
 }
 float ALWVehicle::FuelLitres()const{
  const auto* R=Record();if(!R)return 0;
  return R->FuelLitres<0?FuelCapacity()*.65f:FMath::IsFinite(R->FuelLitres)?FMath::Clamp(R->FuelLitres,0.f,FuelCapacity()):0.f;
 }
-bool ALWVehicle::HasFuel()const{return FuelLitres()>0;}
+bool ALWVehicle::HasFuel()const{return IsElectric74()?BatteryCharge74()>.001f:FuelLitres()>0;}
 void ALWVehicle::TickFuel(float Dt){
+ if(IsElectric74()){TickBattery74(Dt);return;}
  auto* R=Record();if(!R)return;R->FuelLitres=FuelLitres();
  if(EngineOn){
   // Gameplay scale: idle burns slowly; larger tanks offset heavier road consumption.
@@ -22,6 +24,7 @@ void ALWVehicle::TickFuel(float Dt){
  }
 }
 bool ALWVehicle::Refuel(ALWCharacter* P){
+ if(IsElectric74()){if(P)P->Notify(TEXT("ELECTRIC VEHICLE / SOLAR OR GARAGE CHARGING"));return false;}
  if(!IsValid(P)||!P->CanAct()||P->World!=World||SpawnPlacementPending||!Record()||Record()->Exploded||Record()->Health<=0||Record()->FireRemaining>0)return false;
  if((P->Vehicle&&P->Vehicle!=this)||FVector::Dist2D(P->GetActorLocation(),GetActorLocation())>Spec().HalfLength+350)return false;
  if(FMath::Abs(Speed)>5||EngineOn||AutoDriving||Boarding){P->Notify(TEXT("PARK AND SWITCH OFF THE ENGINE TO REFUEL"));return false;}

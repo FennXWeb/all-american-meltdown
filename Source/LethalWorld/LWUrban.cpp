@@ -1,3 +1,5 @@
+#include "LWStreaming68.h"
+#include "LWInteriors65.h"
 #include "LWWorld.h"
 #include "Components/StaticMeshComponent.h"
 #include "LWWorldTextComponent.h"
@@ -7,6 +9,7 @@
 #include "GameFramework/Pawn.h"
 
 void ALWChunk::StreetLight(ALWWorld* W,FVector P,FRotator R,bool Neon){
+ BeginProp60(P,Neon?TEXT("neon"):TEXT("lamp"));
  auto At=[&](FVector V){return P+R.RotateVector(V);};
  if(!Neon){
  Box(W,TEXT("Concrete"),At(FVector(0,0,15)),FVector(60,60,30),R);
@@ -19,15 +22,23 @@ void ALWChunk::StreetLight(ALWWorld* W,FVector P,FRotator R,bool Neon){
  for(int Sign:{-1,1})Box(W,TEXT("NeonPink20"),At(FVector(0,-18,Sign*57)),FVector(385,5,5),R,false);
  auto* T=NewObject<ULWWorldTextComponent>(this);T->SetupAttachment(RootComponent);T->SetRelativeLocation(At(FVector(0,-20,-20)));T->SetRelativeRotation(R+FRotator(0,-90,0));T->SetHorizontalAlignment(EHTA_Center);T->SetText(FText::FromString(TEXT("OPEN LATE")));T->SetWorldSize(45);T->SetTextRenderColor(FColor(255,70,130));T->RegisterComponent();
  }
- auto* L=NewObject<UPointLightComponent>(this);L->SetupAttachment(RootComponent);L->SetRelativeLocation(At(Neon?FVector(0,-65,0):FVector(0,-138,540)));L->SetIntensity(0);L->SetAttenuationRadius(Neon?650:1250);L->SetCastShadows(false);L->SetLightColor(Neon?FLinearColor(1,.12f,.3f):FLinearColor(1,.66f,.3f));L->RegisterComponent();StreetLights.Add(L);LightingWorld=W;
+ auto* L=NewObject<UPointLightComponent>(this);L->SetupAttachment(RootComponent);L->SetRelativeLocation(At(Neon?FVector(0,-65,0):FVector(0,-138,540)));L->SetIntensity(0);L->SetAttenuationRadius(Neon?650:1250);L->SetCastShadows(false);L->SetLightColor(Neon?FLinearColor(1,.12f,.3f):FLinearColor(1,.66f,.3f));L->RegisterComponent();StreetLights.Add(L);LightingWorld=W;EndProp60();
 }
 void ALWChunk::Tick(float Dt){
- Super::Tick(Dt);TickTraffic33();if(!LightingWorld)return;auto* P=UGameplayStatics::GetPlayerPawn(this,0);
+ Super::Tick(Dt);TickProps60(Dt);TickTraffic33();if(!LightingWorld)return;auto* P=UGameplayStatics::GetPlayerPawn(this,0);
  const float Night=1-FMath::Clamp(FMath::Min(LightingWorld->TimeOfDay-5.5f,19.5f-LightingWorld->TimeOfDay),0.f,1.f);
  for(auto& L:StreetLights)if(L){const bool Near=P&&FVector::DistSquared(P->GetActorLocation(),L->GetComponentLocation())<FMath::Square(6500.f);L->SetIntensity(Near?Night*18000:0);}
 }
 void ALWChunk::BuildingTower(ALWWorld* W,const LWGen::FSite& S){
- const FVector Origin=FVector(S.Position,12)-GetActorLocation();const FRotator R(0,S.Yaw,0);FRandomStream Rand(S.Id);int Serial=0;
+ if(Plan68&&Plan68->TowerFloor68<0){
+  const int Floors=FMath::Clamp(S.Floors,12,24);auto Capture=MakeShared<LWInteriors65::FScope>(this,W,S,false);Plan68->TowerSerial68=0;
+  for(int F=0;F<Floors;F++)Plan68->Geometry.Add([this,W,S,F,Floors,Capture](){
+   Plan68->TowerFloor68=F;LWInteriors65::RecordStep68(*Capture,[&](){BuildingTower(W,S);});Plan68->TowerFloor68=-1;
+   if(F==Floors-1){Capture->EndResident68=Residents.Num();Plan68->Furnishing.Add([Capture](){return Capture->Step68();});}
+  });return;
+ }
+ LWInteriors65::FScope Interior65(this,W,S);
+ const FVector Origin=FVector(S.Position,12)-GetActorLocation();const FRotator R(0,S.Yaw,0);FRandomStream Rand(S.Id);int LocalSerial=0;int& Serial=Plan68?Plan68->TowerSerial68:LocalSerial;
  auto At=[&](FVector V){return Origin+R.RotateVector(V);};
  auto B=[&](FName M,FVector V,FVector Size,bool Hit=true){Box(W,M,At(V),Size,R,Hit);};
  auto Model=[&](FName M,FVector V,float Yaw=0){Add(W,M,NAME_None,At(V),FVector(1),R+FRotator(0,Yaw,0));};
@@ -37,10 +48,12 @@ void ALWChunk::BuildingTower(ALWWorld* W,const LWGen::FSite& S){
  auto Glass=[&](FVector V,FVector Size){const FName Key(*FString::Printf(TEXT("tower_glass_%u_%d_%d_%d"),S.Id,int(V.X),int(V.Y),int(V.Z)));if(auto* O=W->SpawnObject(ELWObjectKind::Window,Key,GetActorLocation()+At(V),R)){O->Body->SetRelativeScale3D(Size/100);Residents.Add(O);}};
  const int Variant=S.Type==56?1:S.Type==57?2:0;
  const int Floors=FMath::Clamp(S.Floors,12,24),Access=FMath::Clamp(S.AccessibleFloors,0,Floors);const float X=1800,Y=1600,FH=400;
- B(TEXT("Concrete"),FVector(0,0,-18),FVector(3900,3500,30));
+ const int First=Plan68?Plan68->TowerFloor68:0,Last=Plan68?First:Floors-1;
+ if(First==0)B(TEXT("Concrete"),FVector(0,0,-18),FVector(3900,3500,30));
  // Curtain wall panels, projecting columns and spandrels produce a complete silhouette.
- for(int F=0;F<Floors;F++){
+ for(int F=First;F<=Last;F++){
  const float Z=F*FH;
+ for(int SX:{-1,1})for(int SY:{-1,1})B(TEXT("Concrete"),FVector(SX*X,SY*Y,Z+200),FVector(55,55,400));
  for(int Side:{-1,1}){
  for(int I=0;I<9;I++){float XX=-1600+I*400;
  if(!(Side==-1&&I==4&&F==0)){Glass(FVector(XX,Side*Y,Z+200),FVector(382,22,280));B(TEXT("Steel"),FVector(XX,Side*Y,Z+30),FVector(400,35,60));}
@@ -66,6 +79,7 @@ void ALWChunk::BuildingTower(ALWWorld* W,const LWGen::FSite& S){
  // Floor circulation: wide lobby, two office suites, and a rear records/kitchen zone.
  for(int Side:{-1,1}){
  const float CY=Side*850;
+ B(TEXT("Acoustic65"),FVector(-500,Side*1225,Z+378),FVector(2580,728,12));
  if(Variant==1){
  const float Ends[]={-1800,-1380,-1220,-780,-620,-180,-20,790};
  for(int Piece=0;Piece<4;Piece++){float A=Ends[Piece*2],BEnd=Ends[Piece*2+1];B(TEXT("PlasterV7"),FVector((A+BEnd)*.5f,CY,Z+210),FVector(BEnd-A,18,384));}
@@ -83,13 +97,18 @@ void ALWChunk::BuildingTower(ALWWorld* W,const LWGen::FSite& S){
  Loot(TEXT("BookcaseV13"),FVector(-1570,Side*1450,Z+18),F>4?2:0);
  }
  if(F==0){Loot(TEXT("ShopCounterV18"),FVector(-600,-350,18));Model(TEXT("PlazaPlanterV18"),FVector(-1450,-400,18));Text(LWPlaces::Name(S.Type),FVector(-550,400,240),55);}
- else {Model(Variant==2?TEXT("PoliceDispatchV18"):TEXT("DiningTableV13"),FVector(-850,0,Z+18));Loot(TEXT("CabinetV3"),FVector(-1550,500,Z+18),F%4==0?2:0);}
- for(int Side:{-1,1}){Model(TEXT("PlazaPlanterV18"),FVector(-1550,Side*650,Z+18));Loot(Variant==2?TEXT("EvidenceCabinetV18"):TEXT("LockerV4"),FVector(620,Side*1300,Z+18),Variant==2?2:0);Model(TEXT("SinkV4"),FVector(-1350,Side*400,Z+18));Model(TEXT("ToiletV4"),FVector(-1650,Side*400,Z+18));B(TEXT("PlasterV7"),FVector(-1100,Side*475,Z+210),FVector(18,540,384));B(TEXT("Wood"),FVector(-1087,Side*475,Z+220),FVector(8,200,150));Text(Variant==1?TEXT("RENT DUE"):Variant==2?TEXT("WARD SCHEDULE"):TEXT("EVACUATION PLAN"),FVector(-1082,Side*475,Z+235),16,0);Text(Variant==1?TEXT("RESIDENT SERVICES"):Variant==2?TEXT("PATIENT WARD"):TEXT("OFFICES / RECORDS"),FVector(-850,Side*850-15,Z+285),20);}
+ else {Model(Variant==2?TEXT("PoliceDispatchV18"):TEXT("DiningTableV13"),FVector(-850,0,Z+18));Loot(TEXT("CabinetV3"),FVector(-850,500,Z+18),F%4==0?2:0);}
+ for(int Side:{-1,1}){Model(TEXT("PlazaPlanterV18"),FVector(-850,Side*650,Z+18));Loot(Variant==2?TEXT("EvidenceCabinetV18"):TEXT("LockerV4"),FVector(620,Side*1300,Z+18),Variant==2?2:0);Model(TEXT("SinkV4"),FVector(-1350,Side*400,Z+18));Model(TEXT("ToiletV4"),FVector(-1650,Side*400,Z+18));B(TEXT("PlasterV7"),FVector(-1100,Side*475,Z+210),FVector(18,540,384));B(TEXT("PlasterV7"),FVector(-1450,Side*745,Z+210),FVector(700,18,384));
+ for(int Edge:{-1,1})B(TEXT("PlasterV7"),FVector(-1450+Edge*215,Side*205,Z+210),FVector(270,18,384));
+ B(TEXT("Acoustic65"),FVector(-1450,Side*475,Z+378),FVector(682,522,12));
+ B(TEXT("PlasterV7"),FVector(-1450,Side*205,Z+326),FVector(160,18,148));Object(ELWObjectKind::Door,FVector(-1530,Side*205,Z+18));
+ B(TEXT("Wood"),FVector(-1087,Side*475,Z+220),FVector(8,200,150));Text(Variant==1?TEXT("RENT DUE"):Variant==2?TEXT("WARD SCHEDULE"):TEXT("EVACUATION PLAN"),FVector(-1082,Side*475,Z+235),16,0);Text(Variant==1?TEXT("RESIDENT SERVICES"):Variant==2?TEXT("PATIENT WARD"):TEXT("OFFICES / RECORDS"),FVector(-850,Side*850-15,Z+285),20);}
  for(int Bay=0;Bay<3;Bay++){B(TEXT("Steel"),FVector(-800+Bay*600,0,Z+370),FVector(380,160,8));B(TEXT("Bone"),FVector(-800+Bay*600,0,Z+360),FVector(330,120,5),false);}
  Text(FString::Printf(TEXT("FLOOR %02d / STAIRS >"),F+1),FVector(250,830,Z+265),28);
  Model(TEXT("CeilingLightV13"),FVector(-300,0,Z+355));
  auto* Light=NewObject<UPointLightComponent>(this);Light->SetupAttachment(RootComponent);Light->SetRelativeLocation(At(FVector(-300,0,Z+320)));Light->SetIntensity(7500);Light->SetAttenuationRadius(1100);Light->SetCastShadows(false);Light->SetMaxDrawDistance(4500);Light->RegisterComponent();
  }
+ if(Last!=Floors-1)return;
  // A blocked tower is physically sealed; partial towers stop at a structural collapse.
  if(Access==0){B(TEXT("Concrete"),FVector(0,-Y,180),FVector(410,80,360));for(int I=0;I<8;I++)Model(TEXT("Rubble"),FVector(Rand.FRandRange(-650,650),-Y-120-Rand.FRandRange(0,220),12));Text(TEXT("CONDEMNED"),FVector(0,-Y-48,260),45);}
  else{

@@ -1,3 +1,4 @@
+#include "LWDialogue59.h"
 #include "LWWorldObject.h"
 #include "LWWorld.h"
 #include "LWCharacter.h"
@@ -32,6 +33,7 @@ void ALWWorldObject::Configure(ALWWorld* W,ELWObjectKind InKind,FName Id)
         if(auto* Stock=W->Containers.Find(Id))if(!W->PropStates.Contains(PickStockFlag)){
             auto Pick=LWItems::Make(TEXT("lockpick"),12);if(LWItems::Place(Stock->Items,Pick,Stock->Width,Stock->Height))W->PropStates.Add(PickStockFlag,1);
         }
+        const FName FlagStock(*(Id.ToString()+TEXT("_flag82")));if(auto* Stock=W->Containers.Find(Id);Stock&&!W->PropStates.Contains(FlagStock)){if(Stock->Items.ContainsByPredicate([](const auto& I){return I.Definition==TEXT("settlement_flag");}))W->PropStates.Add(FlagStock,1);else {auto Flag=LWItems::Make(TEXT("settlement_flag"));if(LWItems::Place(Stock->Items,Flag,Stock->Width,Stock->Height))W->PropStates.Add(FlagStock,1);}}
         Body->SetCollisionObjectType(ECC_WorldDynamic);
         Body->SetStaticMesh(W->Mesh(TEXT("TraderBody32")));
         Part(TEXT("TraderHead32"),FVector(-1.7,0,106.1),FVector(1));
@@ -75,7 +77,7 @@ FString ALWWorldObject::Prompt()const
 {
     if(World)if(const auto* R=World->Containers.Find(RecordId))if(R->LockTier&&!R->Unlocked)return FString::Printf(TEXT("[E] PICK LOCK // TIER %d"),R->LockTier);
     switch(Kind){
-    case ELWObjectKind::Furniture:if(UseType==TEXT("base45"))return TEXT("[E] SHELTER CONTROL");if(UseType==TEXT("garage45"))return TEXT("[E] GARAGE CONTROL");if(UseType==TEXT("surface45"))return TEXT("[E] STORE VEHICLE");if(UseType==TEXT("lift45"))return TEXT("[E] SELECT FLOOR");if(UseType.ToString().StartsWith(TEXT("call45_")))return TEXT("[E] CALL ELEVATOR");return UseType==TEXT("bed")?TEXT("[E] BED / REST / RESPAWN"):UseType==TEXT("chair")?TEXT("[E] SIT DOWN"):TEXT("[E] ")+UseType.ToString().ToUpper();
+    case ELWObjectKind::Furniture:if(UseType==TEXT("airfield84"))return TEXT("[E] AIRCRAFT RECOVERY / SERVICE");if(UseType==TEXT("delivery66"))return TEXT("[E] VEHICLE DELIVERY");if(UseType==TEXT("base45"))return TEXT("[E] SHELTER CONTROL");if(UseType==TEXT("garage45"))return TEXT("[E] GARAGE CONTROL");if(UseType==TEXT("surface45"))return TEXT("[E] STORE VEHICLE");if(UseType==TEXT("lift45"))return TEXT("[E] SELECT FLOOR");if(UseType.ToString().StartsWith(TEXT("call45_")))return TEXT("[E] CALL ELEVATOR");return UseType==TEXT("bed")?TEXT("[E] BED / REST / RESPAWN"):UseType==TEXT("chair")?TEXT("[E] SIT DOWN"):TEXT("[E] ")+UseType.ToString().ToUpper();
     case ELWObjectKind::Door:return bChanged?TEXT("[E] CLOSE DOOR"):TEXT("[E] OPEN DOOR");
     case ELWObjectKind::Car:return TEXT("[E] SEARCH VEHICLE");
     case ELWObjectKind::Window:return bChanged?TEXT(""):TEXT("BREAKABLE GLASS");
@@ -95,10 +97,10 @@ void ALWWorldObject::Use(ALWCharacter* P)
     if(Kind==ELWObjectKind::Furniture){UseFurniture(P);return;}
     if(Kind==ELWObjectKind::BunkerEntrance){P->EnterSafehouse();return;}
     if(Kind==ELWObjectKind::BunkerExit){P->LeaveSafehouse();return;}
-    if(Kind==ELWObjectKind::Door){CompanionOpenedDoor=false;ManualDoorUntil=GetWorld()->GetTimeSeconds()+2;bChanged=!bChanged;World->PropStates.Add(RecordId,bChanged?1:0);World->Sound(TEXT("DoorHinge"),GetActorLocation());return;}
+    if(Kind==ELWObjectKind::Door){CompanionOpenedDoor=false;ManualDoorUntil=GetWorld()->GetTimeSeconds()+2;bChanged=!bChanged;World->PropStates.Add(RecordId,bChanged?1:0);World->Sound(UseType==TEXT("vault57")?TEXT("Vault57"):TEXT("DoorHinge"),GetActorLocation());return;}
     if(Kind==ELWObjectKind::MannequinDisplay||Kind==ELWObjectKind::Window||Kind==ELWObjectKind::FuelPump||Kind==ELWObjectKind::Sign)return;
     P->OpenContainer(this);
-    if(Kind==ELWObjectKind::Trader)World->Sound(TEXT("TraderVoice"),GetActorLocation(),.8f);
+    if(Kind==ELWObjectKind::Trader){if(ULWDialogue59::Available())ULWDialogue59::Channel(this)->Say(RecordId,false,TEXT("Supplies for sale. Fair prices."));else World->Sound(TEXT("TraderVoice"),GetActorLocation(),.8f);}
 }
 void ALWWorldObject::Tick(float Dt)
 {
@@ -115,5 +117,5 @@ void ALWWorldObject::Tick(float Dt)
     FVector Next=GetActorLocation()+FVector(D.GetSafeNormal()*Dt*105,0);Next.Z=18;
     FHitResult Hit;SetActorLocation(Next,true,&Hit);SetActorRotation(FMath::RInterpTo(GetActorRotation(),FVector(D,0).Rotation(),Dt,2));
     if(Details.Num()>=3){const float Roll=GetWorld()->GetTimeSeconds()*227;Details[1]->SetRelativeRotation(FRotator(Roll,0,0));Details[2]->SetRelativeRotation(FRotator(Roll,0,0));Details[0]->SetRelativeRotation(FRotator(FMath::Sin(GetWorld()->GetTimeSeconds()*1.7f)*2,FMath::Sin(GetWorld()->GetTimeSeconds()*.6f)*24,0));}
-    VoiceTimer-=Dt;if(VoiceTimer<0){World->Sound(TEXT("TraderVoice"),GetActorLocation(),.4f);VoiceTimer=30;}
+    VoiceTimer-=Dt;if(VoiceTimer<0){ULWDialogue59::Channel(this)->Chatter75(RecordId,false,TEXT("settler_merchant"));VoiceTimer=FMath::FRandRange(35.f,65.f);}
 }

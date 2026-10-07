@@ -1,0 +1,1419 @@
+{
+  "cast": [
+    {
+      "id": "richardson",
+      "name": "President Ronald Richardson",
+      "female": false,
+      "voice": "M04"
+    },
+    {
+      "id": "vera",
+      "name": "Vera Cho",
+      "female": true,
+      "voice": "F04"
+    }
+  ],
+  "scenes": [
+    {
+      "id": "homecoming",
+      "beats": [
+        {
+          "who": "ivo",
+          "text": "You came back. Door still catches, but the room is warm.",
+          "needs": [
+            "bell_condition=1",
+            "!dead_ivo"
+          ],
+          "gesture": "speak"
+        },
+        {
+          "who": "tessa",
+          "text": "We closed the clinic with plywood. I left your name in the departure book. Now I get to cross it out.",
+          "needs": [
+            "bell_condition=2",
+            "!dead_tessa"
+          ],
+          "gesture": "speak"
+        },
+        {
+          "who": "tessa",
+          "text": "We came back for the things we could carry. Nobody sleeps here now. We use the market rooms.",
+          "needs": [
+            "bell_condition=3",
+            "!dead_tessa"
+          ],
+          "gesture": "speak"
+        },
+        {
+          "who": "mara",
+          "text": "Canada is still there. I need everyone here to know that. We did not dream it.",
+          "needs": [
+            "mara_returns",
+            "!dead_mara"
+          ],
+          "gesture": "speak"
+        },
+        {
+          "who": "ivo",
+          "text": "The Directorate came asking for skilled households. Their list already had ours on it.",
+          "needs": [
+            "registration_active",
+            "!dead_ivo"
+          ],
+          "gesture": "speak"
+        },
+        {
+          "who": "tessa",
+          "text": "They brought a list with the names blanked out. Somebody saved us a difficult conversation.",
+          "needs": [
+            "registration_withdrawn",
+            "!dead_tessa"
+          ],
+          "gesture": "speak"
+        },
+        {
+          "who": "",
+          "text": "At the intake desk, the empty places retain the names of the people who died here."
+        },
+        {
+          "who": "lena",
+          "text": "The latest labor orders point into the Adirondack supply corridor. We can identify the missing workers by the belongings we catalogued.",
+          "needs": [
+            "!dead_lena"
+          ],
+          "gesture": "speak"
+        }
+      ],
+      "choices": [],
+      "next": "proof_life"
+    },
+    {
+      "id": "labor_names",
+      "beats": [
+        {
+          "who": "tomas",
+          "text": "Elena kept the ring? ...Then she believed I was coming back.",
+          "needs": [
+            "!dead_tomas",
+            "!tomas_released"
+          ],
+          "gesture": "point"
+        },
+        {
+          "who": "vera",
+          "text": "I teach in the resort school. These are the parents of children upstairs. The children were told their parents volunteered for a separate work district.",
+          "gesture": "speak"
+        },
+        {
+          "who": "vera",
+          "text": "I believed it until one of them asked why volunteers needed a gate code to visit. Her father works this shift.",
+          "gesture": "speak"
+        },
+        {
+          "who": "vera",
+          "text": "The roster has names, sleeping blocks, and the next transfer time. Take a copy. The service gate can be opened from the shift desk. Do not sound the general alarm with families in the yard.",
+          "gesture": "speak"
+        }
+      ],
+      "choices": [
+        {
+          "text": "Open the service gate and escort the workers out.",
+          "next": "labor_rescue",
+          "stage": "",
+          "needs": [],
+          "effects": [
+            "labor_rescued",
+            "tomas_released",
+            "civilian_rescues+=3",
+            "trust_vera+=2"
+          ]
+        },
+        {
+          "text": "Secure the roster quietly and prepare a later evacuation.",
+          "next": "labor_wait",
+          "stage": "",
+          "needs": [],
+          "effects": [
+            "prisoner_roster",
+            "insider_access",
+            "leverage+=1"
+          ]
+        }
+      ],
+      "next": ""
+    },
+    {
+      "id": "labor_rescue",
+      "beats": [
+        {
+          "who": "vera",
+          "text": "I will count them against the classroom register. That tells us which children we still have to find.",
+          "gesture": "speak"
+        },
+        {
+          "who": "tomas",
+          "text": "Give me the back end of that stretcher. I have been carried far enough.",
+          "needs": [
+            "!dead_tomas"
+          ],
+          "gesture": "speak"
+        }
+      ],
+      "choices": [],
+      "next": "voice_carries"
+    },
+    {
+      "id": "labor_wait",
+      "beats": [
+        {
+          "who": "vera",
+          "text": "I can delay the transfer once. After that, I have to tell them I was lying. Remember there are people inside the time you are buying.",
+          "gesture": "speak"
+        }
+      ],
+      "choices": [],
+      "next": "voice_carries"
+    },
+    {
+      "id": "evidence_decision",
+      "beats": [
+        {
+          "who": "della",
+          "text": "A public copy can stop crews obeying the next transfer order. It also tells Meridian exactly what we know.",
+          "needs": [
+            "!dead_della"
+          ],
+          "gesture": "speak"
+        },
+        {
+          "who": "imani",
+          "text": "Private distribution gives the guard something to check before it acts. Silence gives the Directorate another unchallenged briefing.",
+          "gesture": "speak"
+        },
+        {
+          "who": "ada",
+          "text": "You can sell access, too. Say that out loud if that is the plan. The buyers will know who paid for your silence.",
+          "needs": [
+            "!dead_ada"
+          ],
+          "gesture": "speak"
+        }
+      ],
+      "choices": [
+        {
+          "text": "Publish the corroborated evidence with protected witness identities.",
+          "next": "evidence_publish",
+          "stage": "",
+          "needs": [],
+          "effects": [
+            "evidence_public",
+            "defections=2",
+            "meridian_alert=2",
+            "coalition+=1"
+          ]
+        },
+        {
+          "text": "Share verified copies privately with the surviving allies.",
+          "next": "evidence_private",
+          "stage": "",
+          "needs": [],
+          "effects": [
+            "evidence_private",
+            "defections=1",
+            "meridian_alert=1"
+          ]
+        },
+        {
+          "text": "Withhold the American copies and preserve surprise.",
+          "next": "evidence_withhold",
+          "stage": "",
+          "needs": [],
+          "effects": [
+            "evidence_withheld",
+            "meridian_alert=0"
+          ]
+        },
+        {
+          "text": "Sell exclusive access to the Directorate. The Canadian archive remains independent.",
+          "next": "evidence_sell",
+          "stage": "",
+          "needs": [],
+          "effects": [
+            "evidence_sold",
+            "directorate_access",
+            "trust_mara-=4",
+            "trust_hannah-=3",
+            "credits_reward:300"
+          ]
+        }
+      ],
+      "next": ""
+    },
+    {
+      "id": "evidence_publish",
+      "beats": [
+        {
+          "who": "imani",
+          "text": "I will include the source dates and what we cannot confirm. People deserve something better than a new certainty shouted from the old loudspeaker.",
+          "gesture": "speak"
+        }
+      ],
+      "choices": [],
+      "next": "meridian_access"
+    },
+    {
+      "id": "evidence_private",
+      "beats": [
+        {
+          "who": "imani",
+          "text": "Separate copies. Separate couriers. If one is caught, the others still arrive.",
+          "gesture": "speak"
+        }
+      ],
+      "choices": [],
+      "next": "meridian_access"
+    },
+    {
+      "id": "evidence_withhold",
+      "beats": [
+        {
+          "who": "ada",
+          "text": "Then I will stop promising the people south of here an explanation. Surprise has a price; they are paying part of it.",
+          "gesture": "speak"
+        }
+      ],
+      "choices": [],
+      "next": "meridian_access"
+    },
+    {
+      "id": "evidence_sell",
+      "beats": [
+        {
+          "who": "ada",
+          "text": "You got paid. That part worked. Do not expect the families on those sheets to call it a negotiation.",
+          "gesture": "speak"
+        }
+      ],
+      "choices": [],
+      "next": "meridian_access"
+    },
+    {
+      "id": "access",
+      "beats": [
+        {
+          "who": "vera",
+          "text": "Meridian has guest lists, labor lists, and maintenance rosters. Being on one is not the same as being welcome everywhere.",
+          "gesture": "speak"
+        },
+        {
+          "who": "vera",
+          "text": "If you come as a guest, they will search you and escort you. If you use my maintenance route, the service corridor is your way out as well as in. A prisoner exchange happens at the guarded reception gate.",
+          "gesture": "speak"
+        }
+      ],
+      "choices": [
+        {
+          "text": "Use the Directorate invitation and submit to the escorted reception.",
+          "next": "access_guest",
+          "stage": "",
+          "needs": [
+            "directorate_access"
+          ],
+          "effects": [
+            "meridian_entry=1"
+          ]
+        },
+        {
+          "text": "Negotiate an exchange of the recovered transfer records for family access.",
+          "next": "access_exchange",
+          "stage": "",
+          "needs": [
+            "evidence_transfer"
+          ],
+          "effects": [
+            "meridian_entry=2"
+          ]
+        },
+        {
+          "text": "Use Vera's service route under an assumed maintenance assignment.",
+          "next": "access_insider",
+          "stage": "",
+          "needs": [
+            "insider_access"
+          ],
+          "effects": [
+            "meridian_entry=3",
+            "suspicion=1"
+          ]
+        },
+        {
+          "text": "Observe the deliveries and infiltrate through the maintenance gate.",
+          "next": "access_infiltrate",
+          "stage": "",
+          "needs": [],
+          "effects": [
+            "meridian_entry=4",
+            "suspicion=2"
+          ]
+        }
+      ],
+      "next": ""
+    },
+    {
+      "id": "access_guest",
+      "beats": [
+        {
+          "who": "vera",
+          "text": "They know you are coming. Expect courtesy, guards, and no room with an unobserved exit.",
+          "gesture": "speak"
+        }
+      ],
+      "choices": [],
+      "next": "meridian_life"
+    },
+    {
+      "id": "access_exchange",
+      "beats": [
+        {
+          "who": "vera",
+          "text": "I will transmit the case numbers first. They cannot pretend they do not know which families you mean.",
+          "gesture": "speak"
+        }
+      ],
+      "choices": [],
+      "next": "meridian_life"
+    },
+    {
+      "id": "access_insider",
+      "beats": [
+        {
+          "who": "vera",
+          "text": "Memorize the shift name. Do not memorize a lie about the people you meet there. Most of them do not know what is downstairs.",
+          "gesture": "speak"
+        }
+      ],
+      "choices": [],
+      "next": "meridian_life"
+    },
+    {
+      "id": "access_infiltrate",
+      "beats": [
+        {
+          "who": "vera",
+          "text": "The kitchen delivery leaves the service gate open for a trolley, not a squad. Watch its next cycle and go through before the latch resets.",
+          "gesture": "speak"
+        }
+      ],
+      "choices": [],
+      "next": "meridian_service"
+    },
+    {
+      "id": "functioning_country",
+      "beats": [
+        {
+          "who": "vera",
+          "text": "The school has heat. The infirmary has medicine. The vegetables came from covered beds here, not a warehouse nobody else can reach.",
+          "gesture": "speak"
+        },
+        {
+          "who": "vera",
+          "text": "That is why people defend this place. It saved their children. Some cannot afford to ask what paid for it.",
+          "gesture": "speak"
+        },
+        {
+          "who": "",
+          "text": "A school notice lists visiting hours for WORK DISTRICT PARENTS. A handwritten request beneath it asks who can authorize a visit outside those hours."
+        },
+        {
+          "who": "vera",
+          "text": "Come to the identity office. It is not on the guest tour.",
+          "gesture": "speak"
+        }
+      ],
+      "choices": [],
+      "next": "meridian_unregistered"
+    },
+    {
+      "id": "unregistered",
+      "beats": [
+        {
+          "who": "",
+          "text": "IDENTITY OFFICE: travel papers surrendered on admission. Reassignment requires command approval. Refusal of labor allocation suspends dependent housing privileges."
+        },
+        {
+          "who": "vera",
+          "text": "There is the choice. Work where you are told, or your family loses the room. They call it voluntary because the gate is not always locked.",
+          "gesture": "speak"
+        },
+        {
+          "who": "keene",
+          "text": "The president has asked to speak to you. Yes. The president. You will be escorted. Whatever you think you have learned, listen before you decide what it means.",
+          "needs": [
+            "!dead_keene"
+          ],
+          "gesture": "speak"
+        },
+        {
+          "who": "",
+          "text": "An escorted audience order is delivered from the executive office.",
+          "needs": [
+            "dead_keene"
+          ]
+        }
+      ],
+      "choices": [],
+      "next": "meridian_offer"
+    },
+    {
+      "id": "offer_open",
+      "beats": [
+        {
+          "who": "richardson",
+          "text": "Please. The coffee is fresh. You have spent a great deal of time among people who cannot offer that without giving something up.",
+          "pause": 1,
+          "move": [
+            0,
+            350,
+            0
+          ],
+          "gesture": "speak"
+        },
+        {
+          "who": "richardson",
+          "text": "Your arrival was expected. Keene's office kept me informed.",
+          "needs": [
+            "meridian_entry=1"
+          ],
+          "gesture": "speak"
+        },
+        {
+          "who": "richardson",
+          "text": "You negotiated your way to the door. I prefer a person who knows what their information is worth.",
+          "needs": [
+            "meridian_entry=2"
+          ],
+          "gesture": "speak"
+        },
+        {
+          "who": "richardson",
+          "text": "The maintenance supervisor noticed an extra worker. We will leave the question of whose idea that was for later.",
+          "needs": [
+            "meridian_entry=3"
+          ],
+          "gesture": "speak"
+        },
+        {
+          "who": "richardson",
+          "text": "You entered through a service gate. You are now in a guarded room because I requested a conversation instead of an arrest.",
+          "needs": [
+            "meridian_entry=4"
+          ],
+          "gesture": "speak"
+        },
+        {
+          "who": "richardson",
+          "text": "Bellwether. A shortage of fuel. A heater you chose to keep running. People remember the person who makes a cold room warm.",
+          "needs": [
+            "heat>=1",
+            "registration=1"
+          ],
+          "gesture": "speak"
+        },
+        {
+          "who": "richardson",
+          "text": "Keene sent me the clinic referral. You understand that medicine delivered today persuades more reliably than a promise about next year.",
+          "needs": [
+            "aid_received"
+          ],
+          "gesture": "speak"
+        },
+        {
+          "who": "richardson",
+          "text": "I do not need you because you are unique. I need you because people let you through their doors. I can offer food, secure transport, a medical allocation, and regional authority. In return, independent armed networks become part of one administration.",
+          "gesture": "speak"
+        }
+      ],
+      "choices": [
+        {
+          "text": "Ask about the people forbidden to leave.",
+          "next": "offer_labor",
+          "stage": "",
+          "needs": [],
+          "effects": []
+        },
+        {
+          "text": "Ask about the ceasefire he rejected in 2028.",
+          "next": "offer_ceasefire",
+          "stage": "",
+          "needs": [],
+          "effects": []
+        },
+        {
+          "text": "Ask what he expects you to do to your allies.",
+          "next": "offer_cost",
+          "stage": "",
+          "needs": [],
+          "effects": []
+        },
+        {
+          "text": "Give your answer.",
+          "next": "offer_answer",
+          "stage": "",
+          "needs": [],
+          "effects": []
+        }
+      ],
+      "next": ""
+    },
+    {
+      "id": "offer_labor",
+      "beats": [
+        {
+          "who": "richardson",
+          "text": "I cannot operate a water plant with everyone free to leave their shift at once.",
+          "gesture": "speak"
+        },
+        {
+          "who": "vera",
+          "text": "Their children lose housing if they refuse the shift. They surrendered their identities. That is not a scheduling problem.",
+          "gesture": "speak"
+        },
+        {
+          "who": "richardson",
+          "text": "It is coercion. A government uses it. The question is whether it builds something that lasts. I will not flatter you by pretending otherwise.",
+          "gesture": "speak"
+        }
+      ],
+      "choices": [
+        {
+          "text": "Return to the offer.",
+          "next": "offer_open",
+          "stage": "",
+          "needs": [],
+          "effects": []
+        }
+      ],
+      "next": ""
+    },
+    {
+      "id": "offer_ceasefire",
+      "beats": [
+        {
+          "who": "richardson",
+          "text": "They demanded my surrender in exchange for a pause they could end whenever it suited them.",
+          "gesture": "speak"
+        },
+        {
+          "who": "richardson",
+          "text": "I chose to preserve a national government. Millions died while I made that choice. You want an admission? There it is. You still have to decide who can keep the next million alive.",
+          "gesture": "point"
+        },
+        {
+          "who": "vera",
+          "text": "The personnel who stopped your next launch kept people alive without preserving your command.",
+          "gesture": "speak"
+        },
+        {
+          "who": "richardson",
+          "text": "And now you are standing in the part they did not build.",
+          "gesture": "speak"
+        }
+      ],
+      "choices": [
+        {
+          "text": "Return to the offer.",
+          "next": "offer_open",
+          "stage": "",
+          "needs": [],
+          "effects": []
+        }
+      ],
+      "next": ""
+    },
+    {
+      "id": "offer_cost",
+      "beats": [
+        {
+          "who": "richardson",
+          "text": "Names, routes, meeting places. Then disarmament, incorporation, and removal of leaders who organize violent refusal. Registration. Consolidation. Removal. Project Inheritance is a sequence, not a slogan.",
+          "gesture": "speak"
+        },
+        {
+          "who": "richardson",
+          "text": "You will not be asked merely to smile beside a flag. If you accept command, you will arrest people who trusted you. Some will refuse to submit. I expect you to carry out lawful sentences.",
+          "gesture": "speak"
+        },
+        {
+          "who": "richardson",
+          "text": "Consider it carefully. A reluctant signature is of no use to either of us.",
+          "gesture": "speak"
+        }
+      ],
+      "choices": [
+        {
+          "text": "Give your answer.",
+          "next": "offer_answer",
+          "stage": "",
+          "needs": [],
+          "effects": []
+        }
+      ],
+      "next": ""
+    },
+    {
+      "id": "offer_answer",
+      "beats": [
+        {
+          "who": "richardson",
+          "text": "I have explained the position. Ask for time if you need it. Do not agree to a responsibility you intend to pretend was unclear.",
+          "gesture": "speak"
+        }
+      ],
+      "choices": [
+        {
+          "text": "Refuse. People are not his property.",
+          "next": "offer_refuse",
+          "stage": "coalition_table",
+          "needs": [],
+          "effects": [
+            "resistance"
+          ]
+        },
+        {
+          "text": "Accept a provisional commission. Review the first order before any commitment to violence.",
+          "next": "offer_provisional",
+          "stage": "terms",
+          "needs": [],
+          "effects": [
+            "provisional",
+            "directorate_access",
+            "leverage+=1"
+          ]
+        },
+        {
+          "text": "Feign acceptance to expose the transfer system, without promising an execution.",
+          "next": "offer_deception",
+          "stage": "terms",
+          "needs": [
+            "insider_access"
+          ],
+          "effects": [
+            "double_agent",
+            "directorate_access",
+            "suspicion+=1"
+          ]
+        }
+      ],
+      "next": ""
+    },
+    {
+      "id": "offer_refuse",
+      "beats": [
+        {
+          "who": "richardson",
+          "text": "Then leave by the guest route while it is still available to you. The escort will make sure you do. I do not intend to keep offering the same terms.",
+          "gesture": "speak"
+        }
+      ],
+      "choices": [],
+      "next": ""
+    },
+    {
+      "id": "offer_provisional",
+      "beats": [
+        {
+          "who": "richardson",
+          "text": "Review it. I prefer useful agreement to theatrical loyalty. Keene's office will show you what regional authority can accomplish.",
+          "gesture": "speak"
+        }
+      ],
+      "choices": [],
+      "next": ""
+    },
+    {
+      "id": "offer_deception",
+      "beats": [
+        {
+          "who": "richardson",
+          "text": "You are careful about promises. I respect that. I will be equally careful about what access you receive.",
+          "gesture": "speak"
+        }
+      ],
+      "choices": [],
+      "next": ""
+    },
+    {
+      "id": "coalition",
+      "beats": [
+        {
+          "who": "della",
+          "text": "I can move freight and repair the route. I cannot promise a clean fight. Ask somebody who commands one.",
+          "needs": [
+            "!dead_della"
+          ],
+          "gesture": "speak"
+        },
+        {
+          "who": "rook",
+          "text": "I can coordinate units and issue a credible stand-down instruction. They will need proof and a place to surrender.",
+          "needs": [
+            "rook_cooperates",
+            "!dead_rook"
+          ],
+          "gesture": "speak"
+        },
+        {
+          "who": "imani",
+          "text": "The guard I command answers to the ward and the corridor communities. We will not trade one private chain of command for another.",
+          "needs": [
+            "imani_leads"
+          ],
+          "gesture": "speak"
+        },
+        {
+          "who": "hannah",
+          "text": "I can get families through the woods. Put a marching column on that route and you will lose both the cover and the families.",
+          "needs": [
+            "!dead_hannah"
+          ],
+          "gesture": "speak"
+        },
+        {
+          "who": "ada",
+          "text": "Extraction, decoys, the last vehicle out. Do not assign me a heroic final stand. I have spent too long learning why it is a bad plan.",
+          "needs": [
+            "!dead_ada"
+          ],
+          "gesture": "speak"
+        },
+        {
+          "who": "mara",
+          "text": "I take the wounded. I do not choose who deserves treatment by their uniform.",
+          "needs": [
+            "mara_returns",
+            "!dead_mara"
+          ],
+          "gesture": "speak"
+        },
+        {
+          "who": "imani",
+          "text": "The hospital guard has splintered since Rook died. I can provide medics and a small escort. I will not promise the units that left.",
+          "needs": [
+            "guard_fragmented"
+          ],
+          "gesture": "speak"
+        },
+        {
+          "who": "hannah",
+          "text": "I will get families out. That does not make us friends again. The people you sent to the Directorate are still missing.",
+          "needs": [
+            "defected",
+            "!dead_hannah"
+          ],
+          "gesture": "speak"
+        },
+        {
+          "who": "",
+          "text": "Absent seats remain empty. The surviving representatives divide the work they actually know; no one inherits a dead leader's experience.",
+          "needs": []
+        }
+      ],
+      "choices": [
+        {
+          "text": "Agree to a joint relief council with public accounts and divided keys.",
+          "next": "keys_shared",
+          "stage": "",
+          "needs": [],
+          "effects": [
+            "postwar_control=0",
+            "coalition+=1",
+            "support+=2"
+          ]
+        },
+        {
+          "text": "Give the Lockkeepers central control of supply distribution.",
+          "next": "keys_della",
+          "stage": "",
+          "needs": [
+            "!dead_della",
+            "trust_della>=0"
+          ],
+          "effects": [
+            "postwar_control=1",
+            "logistics+=1",
+            "support+=1"
+          ]
+        },
+        {
+          "text": "Give the Civic Guard emergency authority over supplies and security.",
+          "next": "keys_guard",
+          "stage": "",
+          "needs": [
+            "guard_support"
+          ],
+          "effects": [
+            "postwar_control=2",
+            "guard_support+=1",
+            "support+=1"
+          ]
+        },
+        {
+          "text": "Put the Freeholds in charge of food and local access, without a central council.",
+          "next": "keys_freehold",
+          "stage": "",
+          "needs": [
+            "!dead_hannah",
+            "trust_hannah>=0"
+          ],
+          "effects": [
+            "postwar_control=3",
+            "winter_food+=1",
+            "support+=1"
+          ]
+        }
+      ],
+      "next": ""
+    },
+    {
+      "id": "keys_shared",
+      "beats": [
+        {
+          "who": "imani",
+          "text": "Then put the rules on paper before we have a building worth arguing over. Two signatures to release reserves, no family loses food for refusing a job.",
+          "gesture": "speak"
+        }
+      ],
+      "choices": [],
+      "next": "prisoner_plan"
+    },
+    {
+      "id": "keys_della",
+      "beats": [
+        {
+          "who": "della",
+          "text": "A ledger, a timetable, and a single dispatch desk. It will work. People will also have to ask us before they move what they need.",
+          "gesture": "speak"
+        }
+      ],
+      "choices": [],
+      "next": "prisoner_plan"
+    },
+    {
+      "id": "keys_guard",
+      "beats": [
+        {
+          "who": "imani",
+          "text": "An emergency mandate needs an end date. If the guard will not sign that date, people will have reason to fear what we built.",
+          "gesture": "speak"
+        }
+      ],
+      "choices": [],
+      "next": "prisoner_plan"
+    },
+    {
+      "id": "keys_freehold",
+      "beats": [
+        {
+          "who": "hannah",
+          "text": "Food stays with the communities that raise it. I will not pretend that makes every village generous. We will have our own arguments to answer for.",
+          "gesture": "speak"
+        }
+      ],
+      "choices": [],
+      "next": "prisoner_plan"
+    },
+    {
+      "id": "terms",
+      "beats": [
+        {
+          "who": "keene",
+          "text": "Your commission clears supply requisitions and commands one regional detachment. It does not give you the president's personal troops.",
+          "needs": [
+            "!dead_keene"
+          ],
+          "gesture": "speak"
+        },
+        {
+          "who": "richardson",
+          "text": "The first order is to identify the opposition's gathering place and deliver an incorporation demand. Review the personnel roster and reserve allocation. You are holding authority now, not merely being shown it.",
+          "gesture": "speak"
+        },
+        {
+          "who": "vera",
+          "text": "If you are going to turn on this system, these are the transport codes. You can evacuate the people on the next list instead of delivering them. That will cost your disguise.",
+          "gesture": "speak"
+        }
+      ],
+      "choices": [
+        {
+          "text": "Audit the detachment roster and keep an independent reserve allocation.",
+          "next": "terms_leverage",
+          "stage": "",
+          "needs": [],
+          "effects": [
+            "loyal_personnel",
+            "reserve_control",
+            "leverage+=2",
+            "support+=1"
+          ]
+        },
+        {
+          "text": "Leave personnel and reserves entirely under Richardson's control.",
+          "next": "terms_dependent",
+          "stage": "",
+          "needs": [],
+          "effects": [
+            "leverage=0",
+            "support=0"
+          ]
+        },
+        {
+          "text": "Use the codes to evacuate the targeted households; expose the deception now.",
+          "next": "terms_defect",
+          "stage": "coalition_table",
+          "needs": [],
+          "effects": [
+            "resistance",
+            "double_exposed",
+            "civilian_rescues+=2",
+            "loyalist=0",
+            "suspicion+=3"
+          ]
+        }
+      ],
+      "next": ""
+    },
+    {
+      "id": "terms_leverage",
+      "beats": [
+        {
+          "who": "richardson",
+          "text": "You want a command that can function without asking permission for every crate. Sensible. I will hold you responsible for it.",
+          "gesture": "speak"
+        }
+      ],
+      "choices": [],
+      "next": "necessary_measures"
+    },
+    {
+      "id": "terms_dependent",
+      "beats": [
+        {
+          "who": "richardson",
+          "text": "Then requests come through this office. Keep the chain intact and it will keep you supplied.",
+          "gesture": "speak"
+        }
+      ],
+      "choices": [],
+      "next": "necessary_measures"
+    },
+    {
+      "id": "terms_defect",
+      "beats": [
+        {
+          "who": "vera",
+          "text": "The families are moving. They will know who opened the gate, even if nobody at your old meetings trusts you yet.",
+          "gesture": "speak"
+        }
+      ],
+      "choices": [],
+      "next": ""
+    },
+    {
+      "id": "commitment",
+      "beats": [
+        {
+          "who": "richardson",
+          "text": "The community will surrender its weapons, register every household, and accept appointed leadership. You will arrest the people who organize refusal. If you use their trust to bring them here, you will not be permitted to set them free afterward.",
+          "gesture": "speak"
+        },
+        {
+          "who": "richardson",
+          "text": "This is the commitment. You may resign the commission before you carry it out. Afterward, do not call yourself an observer.",
+          "gesture": "speak"
+        }
+      ],
+      "choices": [
+        {
+          "text": "Carry out incorporation and the arrests. I understand this betrays the community.",
+          "next": "commit_loyal",
+          "stage": "loyal_hunt",
+          "needs": [],
+          "effects": [
+            "loyalist",
+            "betrayal_committed",
+            "trust_mara-=8",
+            "trust_hannah-=8",
+            "civilian_harm+=2"
+          ]
+        },
+        {
+          "text": "Resign and take the order to the resistance.",
+          "next": "commit_resist",
+          "stage": "coalition_table",
+          "needs": [],
+          "effects": [
+            "resistance",
+            "loyalist=0",
+            "defected",
+            "evidence_order"
+          ]
+        },
+        {
+          "text": "Warn the community and falsify the departure count; accept that this exposes me.",
+          "next": "commit_double",
+          "stage": "coalition_table",
+          "needs": [
+            "double_agent"
+          ],
+          "effects": [
+            "resistance",
+            "loyalist=0",
+            "double_exposed",
+            "civilian_rescues+=2",
+            "evidence_order"
+          ]
+        }
+      ],
+      "next": ""
+    },
+    {
+      "id": "commit_loyal",
+      "beats": [
+        {
+          "who": "richardson",
+          "text": "Then proceed. Your detachment will follow a clear order. Make certain you give one.",
+          "gesture": "speak"
+        }
+      ],
+      "choices": [],
+      "next": ""
+    },
+    {
+      "id": "commit_resist",
+      "beats": [
+        {
+          "who": "richardson",
+          "text": "You have seen what we can preserve. Remember that when you choose what to destroy.",
+          "gesture": "speak"
+        }
+      ],
+      "choices": [],
+      "next": ""
+    },
+    {
+      "id": "commit_double",
+      "beats": [
+        {
+          "who": "vera",
+          "text": "The departure count buys an hour. I have already told the families what that hour is for. Now go before Keene checks the gate.",
+          "gesture": "speak"
+        }
+      ],
+      "choices": [],
+      "next": ""
+    }
+  ],
+  "stages": [
+    {
+      "id": "homecoming",
+      "mission": "homecoming",
+      "site": "bellwether",
+      "title": "The People You Left Behind",
+      "goal": "Return to Bellwether and learn what changed.",
+      "cast": [
+        "ivo",
+        "tessa",
+        "mara",
+        "lena"
+      ],
+      "actions": [],
+      "arrival": "homecoming"
+    },
+    {
+      "id": "proof_life",
+      "mission": "proof",
+      "site": "labor",
+      "title": "Proof of Life",
+      "goal": "Identify the workers behind the processing numbers.",
+      "cast": [
+        "vera",
+        "tomas",
+        "lena"
+      ],
+      "actions": [
+        {
+          "id": "labor_roster",
+          "label": "Compare the worker roster with the family records",
+          "at": [
+            200,
+            180,
+            0
+          ],
+          "scene": "labor_names",
+          "next": "",
+          "mesh": "Dossier52",
+          "needs": [],
+          "effects": [
+            "prisoner_roster"
+          ],
+          "work": 0
+        }
+      ]
+    },
+    {
+      "id": "voice_carries",
+      "mission": "broadcast",
+      "site": "rome",
+      "title": "A Voice That Carries",
+      "goal": "Choose how to use the corroborated evidence.",
+      "cast": [
+        "della",
+        "imani",
+        "ada"
+      ],
+      "actions": [
+        {
+          "id": "talk_imani",
+          "label": "Decide how the evidence travels",
+          "at": [
+            0,
+            160,
+            0
+          ],
+          "scene": "evidence_decision",
+          "next": "",
+          "mesh": "",
+          "needs": [],
+          "effects": [],
+          "work": 0
+        }
+      ]
+    },
+    {
+      "id": "meridian_access",
+      "mission": "access",
+      "site": "meridian",
+      "title": "The President Will See You Now",
+      "goal": "Choose a credible way into Meridian.",
+      "cast": [
+        "vera"
+      ],
+      "actions": [
+        {
+          "id": "talk_vera",
+          "label": "Plan the approach",
+          "at": [
+            0,
+            170,
+            0
+          ],
+          "scene": "access",
+          "next": "",
+          "mesh": "",
+          "needs": [],
+          "effects": [],
+          "work": 0
+        }
+      ]
+    },
+    {
+      "id": "meridian_service",
+      "mission": "access",
+      "site": "meridian",
+      "title": "The Service Gate",
+      "goal": "Observe a delivery cycle and pass the maintenance gate.",
+      "cast": [
+        "vera"
+      ],
+      "actions": [
+        {
+          "id": "delivery_cycle",
+          "label": "Observe and use the delivery access",
+          "at": [
+            280,
+            -220,
+            0
+          ],
+          "scene": "",
+          "next": "meridian_life",
+          "mesh": "Keys52",
+          "needs": [],
+          "effects": [
+            "service_access"
+          ],
+          "work": 7
+        }
+      ]
+    },
+    {
+      "id": "meridian_life",
+      "mission": "country",
+      "site": "meridian",
+      "title": "A Functioning Country",
+      "goal": "Walk the continuity resort and speak with Vera.",
+      "cast": [
+        "vera"
+      ],
+      "actions": [],
+      "arrival": "functioning_country"
+    },
+    {
+      "id": "meridian_unregistered",
+      "mission": "unregistered",
+      "site": "meridian",
+      "title": "The Unregistered",
+      "goal": "Read the admission terms in the identity office.",
+      "cast": [
+        "vera",
+        "keene"
+      ],
+      "actions": [
+        {
+          "id": "admission_terms",
+          "label": "Read the identity retention and labor terms",
+          "at": [
+            220,
+            170,
+            0
+          ],
+          "scene": "unregistered",
+          "next": "",
+          "mesh": "Dossier52",
+          "needs": [],
+          "effects": [
+            "inheritance_evidence"
+          ],
+          "work": 0
+        }
+      ]
+    },
+    {
+      "id": "meridian_offer",
+      "mission": "offer",
+      "site": "meridian",
+      "title": "The Offer",
+      "goal": "Answer Richardson's guarded invitation.",
+      "cast": [
+        "richardson",
+        "vera",
+        "keene"
+      ],
+      "actions": [
+        {
+          "id": "talk_richardson",
+          "label": "Speak to Richardson",
+          "at": [
+            0,
+            230,
+            0
+          ],
+          "scene": "offer_open",
+          "next": "",
+          "mesh": "",
+          "needs": [],
+          "effects": [],
+          "work": 0
+        }
+      ],
+      "arrival": "offer_open"
+    },
+    {
+      "id": "coalition_table",
+      "mission": "tableenemies",
+      "site": "rome",
+      "title": "A Table for Enemies",
+      "goal": "Negotiate responsibilities and control of the reserves.",
+      "cast": [
+        "della",
+        "rook",
+        "imani",
+        "hannah",
+        "ada",
+        "mara"
+      ],
+      "actions": [],
+      "arrival": "coalition"
+    },
+    {
+      "id": "prisoner_plan",
+      "mission": "gatesclose",
+      "site": "labor",
+      "title": "Before the Gates Close",
+      "goal": "Copy the transfer roster and prepare a civilian exit.",
+      "cast": [
+        "vera",
+        "hannah"
+      ],
+      "actions": [
+        {
+          "id": "last_roster",
+          "label": "Identify the remaining families",
+          "at": [
+            -300,
+            170,
+            0
+          ],
+          "scene": "",
+          "next": "",
+          "mesh": "Dossier52",
+          "needs": [],
+          "effects": [
+            "prisoner_roster"
+          ],
+          "work": 0
+        },
+        {
+          "id": "escape_route",
+          "label": "Prepare the service exit",
+          "at": [
+            300,
+            170,
+            0
+          ],
+          "scene": "",
+          "next": "",
+          "mesh": "Keys52",
+          "needs": [
+            "prisoner_roster"
+          ],
+          "effects": [
+            "evac_route"
+          ],
+          "work": 5
+        }
+      ],
+      "needs": [
+        "evac_route"
+      ],
+      "next": "resistance_evacuate"
+    },
+    {
+      "id": "terms",
+      "mission": "terms",
+      "site": "meridian",
+      "title": "Terms of Service",
+      "goal": "Review the authority and dependencies of the commission.",
+      "cast": [
+        "richardson",
+        "keene",
+        "vera"
+      ],
+      "actions": [],
+      "arrival": "terms"
+    },
+    {
+      "id": "necessary_measures",
+      "mission": "measures",
+      "site": "meridian",
+      "title": "Necessary Measures",
+      "goal": "Decide whether to enforce the incorporation order.",
+      "cast": [
+        "richardson",
+        "vera"
+      ],
+      "actions": [],
+      "arrival": "commitment"
+    }
+  ]
+}

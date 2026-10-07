@@ -1,0 +1,1672 @@
+{
+  "cast": [
+    {
+      "id": "chen",
+      "name": "Dr. Leila Chen",
+      "female": true,
+      "voice": "F04"
+    },
+    {
+      "id": "ada",
+      "name": "Ada Quinn",
+      "female": true,
+      "voice": "F04"
+    },
+    {
+      "id": "milo",
+      "name": "Milo Sato",
+      "female": false,
+      "voice": "M04"
+    },
+    {
+      "id": "claire",
+      "name": "Claire Boudreau",
+      "female": true,
+      "voice": "F04"
+    },
+    {
+      "id": "jules",
+      "name": "Jules Mercier",
+      "female": false,
+      "voice": "M04"
+    }
+  ],
+  "scenes": [
+    {
+      "id": "northbank_intake",
+      "beats": [
+        {
+          "who": "chen",
+          "text": "Leila Chen, Northbank Mission. Sit wherever there is a chair. If there is not a chair, tell me and I will stop using one for boxes.",
+          "gesture": "speak"
+        },
+        {
+          "who": "chen",
+          "text": "We can receive patients by protected convoy. A witness with verifiable evidence can request a confidential transfer. Neither is the only way to get north.",
+          "gesture": "speak"
+        },
+        {
+          "who": "ada",
+          "text": "And if the road is watched, I know the islands. There is a boat. There is a limit to what it carries. We will discuss that before anyone brings a wardrobe.",
+          "gesture": "speak"
+        },
+        {
+          "who": "chen",
+          "text": "An unofficial arrival still gets processed in Canada. A person does not stop needing help because they used the wrong boat. Our problem is the American approach.",
+          "gesture": "speak"
+        },
+        {
+          "who": "chen",
+          "text": "Choose the route that suits the people with you. If it closes, come back. We do not cross your name out for trying.",
+          "gesture": "speak"
+        }
+      ],
+      "choices": [
+        {
+          "text": "Help reconnect the patient station and take the humanitarian convoy.",
+          "next": "route_patients",
+          "stage": "route_patients",
+          "needs": [],
+          "effects": [
+            "entry_route=1"
+          ]
+        },
+        {
+          "text": "Request a protected transfer for the witness and evidence.",
+          "next": "route_witness",
+          "stage": "route_witness",
+          "needs": [
+            "testimony"
+          ],
+          "effects": [
+            "entry_route=2"
+          ]
+        },
+        {
+          "text": "Request a protected transfer using corroborating records.",
+          "next": "route_witness",
+          "stage": "route_witness",
+          "needs": [
+            "evidence_authentication"
+          ],
+          "effects": [
+            "entry_route=2"
+          ]
+        },
+        {
+          "text": "Arrange Ada's crossing through the islands.",
+          "next": "route_ferry",
+          "stage": "route_ferry",
+          "needs": [],
+          "effects": [
+            "entry_route=3"
+          ]
+        }
+      ],
+      "next": ""
+    },
+    {
+      "id": "route_patients",
+      "beats": [
+        {
+          "who": "chen",
+          "text": "The station lost its line to our dispatcher. Reconnect it, check the patient roster, and secure the oxygen cart. Everyone on that roster travels, including the people who cannot walk.",
+          "gesture": "speak"
+        },
+        {
+          "who": "mara",
+          "text": "Give me the triage list. And someone else the heavy end of the cart.",
+          "needs": [
+            "!dead_mara"
+          ],
+          "gesture": "speak"
+        },
+        {
+          "who": "chen",
+          "text": "When you leave, the rear stretcher goes first at each obstruction. Otherwise it becomes the one everybody forgets.",
+          "gesture": "speak"
+        }
+      ],
+      "choices": [],
+      "next": ""
+    },
+    {
+      "id": "route_witness",
+      "beats": [
+        {
+          "who": "chen",
+          "text": "I need a sealed copy, an independently checkable date, and the name of the person who can explain it. Only the receiving officer sees the full witness name.",
+          "gesture": "speak",
+          "pause": 0.8
+        },
+        {
+          "who": "simon",
+          "text": "And the family. My agreement still includes the family.",
+          "needs": [
+            "witness_travels",
+            "!dead_simon"
+          ],
+          "gesture": "speak",
+          "pause": 0.8
+        },
+        {
+          "who": "chen",
+          "text": "I have written them on the same manifest. You can watch me seal it.",
+          "gesture": "speak",
+          "pause": 0.8
+        },
+        {
+          "who": "lena",
+          "text": "My dispatch copies can verify the dates even if the original auditor is not welcome at a government desk.",
+          "needs": [
+            "!dead_lena"
+          ],
+          "gesture": "speak",
+          "pause": 0.8
+        }
+      ],
+      "choices": [],
+      "next": ""
+    },
+    {
+      "id": "route_ferry",
+      "beats": [
+        {
+          "who": "ada",
+          "text": "Six benches. Cargo below the tape line. Anything higher and we are arguing with the water, and the water is a poor negotiator.",
+          "gesture": "speak"
+        },
+        {
+          "who": "ada",
+          "text": "Before you hear it from somebody angry: I left another boat behind last year. Engine fire. I got my passengers out. I did not go back for theirs.",
+          "gesture": "speak"
+        },
+        {
+          "who": "milo",
+          "text": "My sister was on it. Do not make that a story about how hard Ada felt.",
+          "gesture": "speak"
+        },
+        {
+          "who": "ada",
+          "text": "It is his story too. Ask. Then decide whether you trust me with this crossing.",
+          "gesture": "speak"
+        }
+      ],
+      "choices": [
+        {
+          "text": "Ask Milo what happened.",
+          "next": "ada_history",
+          "stage": "",
+          "needs": [],
+          "effects": []
+        },
+        {
+          "text": "Reserve space for stranded passengers; leave surplus cargo.",
+          "next": "ferry_rescue",
+          "stage": "",
+          "needs": [],
+          "effects": [
+            "ferry_rescue_space",
+            "trust_ada+=1",
+            "ferry_load_chosen"
+          ]
+        },
+        {
+          "text": "Keep the cargo and take only the listed group.",
+          "next": "ferry_cargo",
+          "stage": "",
+          "needs": [],
+          "effects": [
+            "ferry_cargo",
+            "winter_food+=1",
+            "ferry_load_chosen"
+          ]
+        }
+      ],
+      "next": ""
+    },
+    {
+      "id": "ada_history",
+      "beats": [
+        {
+          "who": "milo",
+          "text": "She came back the next morning with a tow line. I know. I was still on the bank. My sister was not.",
+          "gesture": "speak"
+        },
+        {
+          "who": "ada",
+          "text": "I do not get a cleaner version. This time I have a second line, spare fuel, and someone watching the stern. You can check all three.",
+          "gesture": "speak"
+        }
+      ],
+      "choices": [
+        {
+          "text": "Check the rescue equipment and leave room for passengers.",
+          "next": "ferry_rescue",
+          "stage": "",
+          "needs": [],
+          "effects": [
+            "ferry_rescue_space",
+            "ada_past_known",
+            "trust_milo+=2",
+            "ferry_load_chosen"
+          ]
+        },
+        {
+          "text": "Keep the manifest limited to the agreed group.",
+          "next": "ferry_cargo",
+          "stage": "",
+          "needs": [],
+          "effects": [
+            "ferry_cargo",
+            "ada_past_known",
+            "ferry_load_chosen"
+          ]
+        }
+      ],
+      "next": ""
+    },
+    {
+      "id": "ferry_rescue",
+      "beats": [
+        {
+          "who": "ada",
+          "text": "The crates stay. People get the benches. Milo, you check the spare line. You do not have to trust my hands with it.",
+          "gesture": "speak"
+        },
+        {
+          "who": "",
+          "text": "The passenger space is marked on the manifest. American weapons will still be held in secure Canadian storage on arrival.",
+          "needs": []
+        }
+      ],
+      "choices": [],
+      "next": ""
+    },
+    {
+      "id": "ferry_cargo",
+      "beats": [
+        {
+          "who": "milo",
+          "text": "Then if we find someone out there, you explain the empty space above the crates.",
+          "gesture": "speak"
+        },
+        {
+          "who": "ada",
+          "text": "We will know the limit before we cast off. That is at least more honest than inventing it in the dark.",
+          "gesture": "speak"
+        },
+        {
+          "who": "",
+          "text": "The passenger space is marked on the manifest. American weapons will still be held in secure Canadian storage on arrival.",
+          "needs": []
+        }
+      ],
+      "choices": [],
+      "next": ""
+    },
+    {
+      "id": "lastmile_patients",
+      "beats": [
+        {
+          "who": "chen",
+          "text": "The lead truck is blocked. Two patients are still behind it. Move the obstruction and get the rear group under cover; our receiving team can see the signal light.",
+          "gesture": "speak"
+        },
+        {
+          "who": "mara",
+          "text": "I have the front stretcher. Go to the one you cannot see from here.",
+          "needs": [
+            "!dead_mara"
+          ],
+          "gesture": "speak"
+        },
+        {
+          "who": "",
+          "text": "Across the crossing, streetlights remain steady. The shooting is behind the American staging sheds."
+        }
+      ],
+      "choices": [],
+      "next": "crossing_patients"
+    },
+    {
+      "id": "lastmile_witness",
+      "beats": [
+        {
+          "who": "imani",
+          "text": "That is not a customs vehicle. They came through the side gate without stopping.",
+          "gesture": "speak"
+        },
+        {
+          "who": "simon",
+          "text": "They used my old call sign. Someone told them which transfer this was.",
+          "needs": [
+            "witness_travels",
+            "!dead_simon"
+          ],
+          "gesture": "speak"
+        },
+        {
+          "who": "chen",
+          "text": "Keep the sealed copy apart from the witness. Either can make it across and bring attention to the other. Do not let them take both.",
+          "gesture": "speak"
+        }
+      ],
+      "choices": [],
+      "next": "crossing_witness"
+    },
+    {
+      "id": "lastmile_ferry",
+      "beats": [
+        {
+          "who": "ada",
+          "text": "Lines off. No—hold. People on the last landing.",
+          "gesture": "speak"
+        },
+        {
+          "who": "milo",
+          "text": "I can reach them with the spare line if someone keeps that searchlight off us.",
+          "gesture": "speak"
+        },
+        {
+          "who": "ada",
+          "text": "The far shore is ready. We choose whether to make another approach here. Not whether Canada will let them be people.",
+          "gesture": "speak"
+        }
+      ],
+      "choices": [],
+      "next": "crossing_ferry"
+    },
+    {
+      "id": "border_arrival",
+      "beats": [
+        {
+          "who": "claire",
+          "text": "Hello. I am Claire. Before the questions: is anyone having trouble breathing?",
+          "pause": 1,
+          "move": [
+            0,
+            100,
+            0
+          ],
+          "gesture": "point"
+        },
+        {
+          "who": "mara",
+          "text": "Only when I stop to notice it.",
+          "needs": [
+            "!dead_mara"
+          ],
+          "gesture": "speak",
+          "pause": 0.8
+        },
+        {
+          "who": "claire",
+          "text": "All right. We will take it slowly. Your weapons are in sealed storage. This is the receipt. Keep it; they are yours to collect if you go back.",
+          "gesture": "speak",
+          "pause": 0.8
+        },
+        {
+          "who": "claire",
+          "text": "There is hot water through that door. It takes a moment to run warm. You do not have to fill every bottle before you use it.",
+          "move": [
+            160,
+            100,
+            0
+          ],
+          "pause": 1.6,
+          "gesture": "speak"
+        },
+        {
+          "who": "mara",
+          "text": "You have the lights on in the empty room.",
+          "needs": [
+            "!dead_mara"
+          ],
+          "pause": 1.2,
+          "gesture": "speak"
+        },
+        {
+          "who": "claire",
+          "text": "Someone will use it later. There is a clean bed for each person on your group record. We can talk about tomorrow after you have slept.",
+          "gesture": "speak",
+          "pause": 0.8
+        },
+        {
+          "who": "",
+          "text": "The processing questions stop. Claire leaves the wash station and rest bays open. There is no alarm and no order to leave."
+        }
+      ],
+      "choices": [],
+      "next": "canada_settle"
+    },
+    {
+      "id": "tuesday",
+      "beats": [
+        {
+          "who": "jules",
+          "text": "Could you hold this shelf while I tighten it? The books keep arriving faster than the brackets.",
+          "move": [
+            -120,
+            120,
+            0
+          ],
+          "pause": 0.65,
+          "gesture": "point"
+        },
+        {
+          "who": "mara",
+          "text": "People still return library books?",
+          "needs": [
+            "!dead_mara"
+          ],
+          "gesture": "point"
+        },
+        {
+          "who": "jules",
+          "text": "Late, mostly. But yes. We waived the fines for arrivals. It seemed a strange hill to die on.",
+          "gesture": "speak"
+        },
+        {
+          "who": "mara",
+          "text": "I used to think I wanted a whole day without anyone needing me. Now I have one and I keep checking the door.",
+          "needs": [
+            "!dead_mara"
+          ],
+          "pause": 1,
+          "gesture": "speak"
+        },
+        {
+          "who": "jules",
+          "text": "You can help for ten minutes and leave. We have enough people for someone to take a break.",
+          "gesture": "speak"
+        },
+        {
+          "who": "chen",
+          "text": "Your prescription is ready, Mara. No emergency queue. Just the pharmacy desk.",
+          "needs": [
+            "!dead_mara"
+          ],
+          "gesture": "speak"
+        }
+      ],
+      "choices": [],
+      "next": "canada_routine"
+    },
+    {
+      "id": "tracing",
+      "beats": [
+        {
+          "who": "chen",
+          "text": "We matched Tomas's case with Elena's inquiry. They can speak over the mission line.",
+          "needs": [
+            "tomas_released",
+            "!dead_tomas"
+          ],
+          "gesture": "speak"
+        },
+        {
+          "who": "tomas",
+          "text": "Luis? ...Yes. By the heater is a good place for them. Keep the shoes there until I come.",
+          "needs": [
+            "tomas_released",
+            "!dead_tomas"
+          ],
+          "pause": 1.7,
+          "gesture": "point"
+        },
+        {
+          "who": "chen",
+          "text": "Tomas's intake is confirmed, but we cannot locate him after the annex. I will not tell Elena that no news is good news.",
+          "needs": [
+            "!tomas_released"
+          ],
+          "gesture": "speak"
+        },
+        {
+          "who": "ruth",
+          "text": "The ring in that freight sack is ours. Simon took it off before they searched him. I thought he had sold it to get home.",
+          "needs": [
+            "witness_family",
+            "!dead_ruth"
+          ],
+          "gesture": "speak"
+        },
+        {
+          "who": "milo",
+          "text": "They found my sister's name in the shoreline recovery ledger. I asked them to check the spelling. It was right.",
+          "needs": [
+            "ada_past_known"
+          ],
+          "pause": 1.6,
+          "gesture": "speak"
+        },
+        {
+          "who": "chen",
+          "text": "Some cases are open. Some have an answer nobody wanted. Each keeps a person's name. Nothing gets reduced to the number of passengers a boat carried.",
+          "gesture": "speak"
+        }
+      ],
+      "choices": [],
+      "next": "canada_investigate"
+    },
+    {
+      "id": "world_records",
+      "beats": [
+        {
+          "who": "chen",
+          "text": "These are independent broadcast archives, intercepted warning records, and relief reports. None alone tells the whole story. Start with the dates.",
+          "gesture": "speak",
+          "pause": 0.8
+        },
+        {
+          "who": "",
+          "text": "SEPTEMBER 2028: foreign target reports record attempted American launches that failed to reach their targets. Independently timed imagery records subsequent attacks on American cities. The sequence is corroborated; individual decisions abroad remain incompletely documented."
+        },
+        {
+          "who": "",
+          "text": "A dated ceasefire channel required Richardson's surrender. The acknowledgement tape rejects those terms and orders the preservation of continuity personnel. Separate command testimony records officers preventing another outward escalation."
+        },
+        {
+          "who": "simon",
+          "text": "That is the acknowledgement I heard. Not a man on television claiming it later. The reply on our circuit that night.",
+          "needs": [
+            "testimony",
+            "!dead_simon",
+            "!witness_surrendered"
+          ],
+          "gesture": "speak",
+          "pause": 0.8
+        },
+        {
+          "who": "lena",
+          "text": "The emergency-stock transfers started before the attacks. I can match the requisition signatures to the continuity compounds. They chose who would have supplies.",
+          "needs": [
+            "!dead_lena"
+          ],
+          "gesture": "speak",
+          "pause": 0.8
+        },
+        {
+          "who": "chen",
+          "text": "A recent Meridian medical requisition bears the same live authentication chain. A defector identifies Richardson in a current secure attendance record. With the earlier evidence, we can say he survived. We cannot say he controlled every event that followed.",
+          "gesture": "speak",
+          "pause": 0.8
+        },
+        {
+          "who": "mara",
+          "text": "He let a country burn rather than surrender himself. And now he has lists of who gets a room in the part he kept.",
+          "needs": [
+            "!dead_mara"
+          ],
+          "pause": 1.3,
+          "gesture": "speak"
+        }
+      ],
+      "choices": [],
+      "next": "canada_decide"
+    },
+    {
+      "id": "canada_choice",
+      "beats": [
+        {
+          "who": "mara",
+          "text": "I am safe here. I need you to hear that before you ask what comes next. I can go a day without deciding who gets the last sterile needle.",
+          "needs": [
+            "!dead_mara"
+          ],
+          "gesture": "speak"
+        },
+        {
+          "who": "chen",
+          "text": "You may remain. You may return. Neither decision changes your right to a bed here. We cannot send an army south with you.",
+          "gesture": "speak"
+        },
+        {
+          "who": "mara",
+          "text": "If you go back, give me an honest job and an honest way out. Do not ask me to call every sacrifice worthwhile.",
+          "needs": [
+            "!dead_mara"
+          ],
+          "gesture": "speak"
+        }
+      ],
+      "choices": [
+        {
+          "text": "Stay in Canada. Build a life on this shore.",
+          "next": "other_shore",
+          "stage": "ending_other",
+          "needs": [],
+          "effects": [
+            "remain_canada",
+            "ending_other",
+            "journal:I chose to remain in Canada. Safety did not require another war."
+          ]
+        },
+        {
+          "text": "Return for the missing people. Ask Mara to stay safe here.",
+          "next": "return_mara_stays",
+          "stage": "homecoming",
+          "needs": [],
+          "effects": [
+            "return_chosen",
+            "mara_stayed",
+            "evidence_secured",
+            "humanitarian_permit"
+          ]
+        },
+        {
+          "text": "Return and ask Mara to help with medical evacuation, with a guaranteed way back.",
+          "next": "return_mara_joins",
+          "stage": "homecoming",
+          "needs": [
+            "!dead_mara",
+            "trust_mara>=1"
+          ],
+          "effects": [
+            "return_chosen",
+            "mara_returns",
+            "evidence_secured",
+            "humanitarian_permit"
+          ]
+        },
+        {
+          "text": "Return to investigate Richardson's offer of power.",
+          "next": "return_ambition",
+          "stage": "homecoming",
+          "needs": [],
+          "effects": [
+            "return_chosen",
+            "mara_stayed",
+            "ambition",
+            "evidence_secured",
+            "humanitarian_permit"
+          ]
+        }
+      ],
+      "next": ""
+    },
+    {
+      "id": "return_mara_stays",
+      "beats": [
+        {
+          "who": "mara",
+          "text": "Thank you for letting that be a complete answer. Write if you can. I will still answer.",
+          "needs": [
+            "!dead_mara"
+          ],
+          "gesture": "speak"
+        },
+        {
+          "who": "chen",
+          "text": "Your crossing record stays open. Collect your stored equipment at the American checkpoint. The mission will keep a copy of the evidence here.",
+          "gesture": "speak"
+        }
+      ],
+      "choices": [],
+      "next": ""
+    },
+    {
+      "id": "return_mara_joins",
+      "beats": [
+        {
+          "who": "mara",
+          "text": "Medical evacuation. Not revenge dressed as medicine. If you make me choose between your campaign and patients, you already know my answer.",
+          "gesture": "speak"
+        },
+        {
+          "who": "chen",
+          "text": "I will keep her return space and the evidence copy. Do not use either as a promise you can casually spend.",
+          "gesture": "speak"
+        }
+      ],
+      "choices": [],
+      "next": ""
+    },
+    {
+      "id": "return_ambition",
+      "beats": [
+        {
+          "who": "mara",
+          "text": "Then name it ambition. Do not borrow the people we lost to make it sound better.",
+          "needs": [
+            "!dead_mara"
+          ],
+          "gesture": "speak"
+        },
+        {
+          "who": "chen",
+          "text": "The archive keeps its independent copy. Whatever you choose south of here cannot make the record disappear.",
+          "gesture": "speak"
+        }
+      ],
+      "choices": [],
+      "next": ""
+    },
+    {
+      "id": "other_shore",
+      "beats": [
+        {
+          "who": "jules",
+          "text": "There is a vacancy at the workshop. Trial shift on Monday. It is all right if you have forgotten what a Monday feels like.",
+          "gesture": "speak"
+        },
+        {
+          "who": "mara",
+          "text": "I put a plant by the window. Something that needs water and is allowed to be a small problem.",
+          "needs": [
+            "!dead_mara"
+          ],
+          "pause": 1.5,
+          "gesture": "speak"
+        },
+        {
+          "who": "chen",
+          "text": "News still comes from the south. Bellwether needs roof repairs.",
+          "needs": [
+            "bell_condition=1"
+          ],
+          "gesture": "speak"
+        },
+        {
+          "who": "chen",
+          "text": "The people who left Bellwether have found another room together. They sent a list of names.",
+          "needs": [
+            "bell_condition=3"
+          ],
+          "gesture": "speak"
+        },
+        {
+          "who": "",
+          "text": "You keep the names. You work. Sometimes you answer a letter. Canada remains safe. The world you left continues beyond your choice to stop fighting."
+        }
+      ],
+      "choices": [],
+      "next": ""
+    }
+  ],
+  "stages": [
+    {
+      "id": "watertown_arrive",
+      "mission": "manifest",
+      "site": "watertown",
+      "title": "A Place on the Manifest",
+      "goal": "Discuss a crossing route with Northbank and Ada.",
+      "cast": [
+        "chen",
+        "ada",
+        "mara",
+        "simon",
+        "lena",
+        "milo"
+      ],
+      "actions": [],
+      "arrival": "northbank_intake"
+    },
+    {
+      "id": "route_patients",
+      "mission": "waitingroom",
+      "site": "watertown",
+      "title": "The Waiting Room",
+      "goal": "Reconnect dispatch and prepare the patient convoy.",
+      "cast": [
+        "chen",
+        "mara"
+      ],
+      "actions": [
+        {
+          "id": "dispatch_line",
+          "label": "Reconnect the receiving station line",
+          "at": [
+            -310,
+            190,
+            0
+          ],
+          "scene": "",
+          "next": "",
+          "mesh": "RelayConsole52",
+          "needs": [
+            "!dispatch_ready"
+          ],
+          "effects": [
+            "dispatch_ready"
+          ],
+          "work": 6
+        },
+        {
+          "id": "patient_roster",
+          "label": "Check every patient against the transport roster",
+          "at": [
+            290,
+            190,
+            0
+          ],
+          "scene": "",
+          "next": "",
+          "mesh": "Dossier52",
+          "needs": [
+            "dispatch_ready",
+            "!patients_counted"
+          ],
+          "effects": [
+            "patients_counted"
+          ],
+          "work": 4
+        },
+        {
+          "id": "oxygen_cart",
+          "label": "Secure the oxygen cart and leave with the convoy",
+          "at": [
+            230,
+            -220,
+            0
+          ],
+          "scene": "",
+          "next": "crossing_arrive",
+          "mesh": "Case77",
+          "needs": [
+            "patients_counted"
+          ],
+          "effects": [
+            "patient_convoy_ready"
+          ],
+          "work": 5
+        },
+        {
+          "id": "reconsider_route_patients",
+          "label": "Return to Northbank and choose a different route",
+          "at": [
+            0,
+            -480,
+            0
+          ],
+          "mesh": "Dossier52",
+          "scene": "",
+          "next": "watertown_arrive",
+          "needs": [],
+          "effects": [
+            "reconsider_route"
+          ],
+          "work": 0
+        }
+      ]
+    },
+    {
+      "id": "route_witness",
+      "mission": "materialwitness",
+      "site": "watertown",
+      "title": "Material Witness",
+      "goal": "Seal the evidence and protect the transfer identity.",
+      "cast": [
+        "chen",
+        "simon",
+        "ruth",
+        "lena"
+      ],
+      "actions": [
+        {
+          "id": "witness_seal",
+          "label": "Seal the corroborated evidence packet",
+          "at": [
+            -280,
+            190,
+            0
+          ],
+          "scene": "",
+          "next": "",
+          "mesh": "Dossier52",
+          "needs": [
+            "!sealed_evidence"
+          ],
+          "effects": [
+            "sealed_evidence"
+          ],
+          "work": 4
+        },
+        {
+          "id": "witness_manifest",
+          "label": "Separate the public manifest from the confidential witness record",
+          "at": [
+            270,
+            190,
+            0
+          ],
+          "scene": "",
+          "next": "crossing_arrive",
+          "mesh": "Dossier52",
+          "needs": [
+            "sealed_evidence"
+          ],
+          "effects": [
+            "witness_confidential"
+          ],
+          "work": 4
+        },
+        {
+          "id": "reconsider_route_witness",
+          "label": "Return to Northbank and choose a different route",
+          "at": [
+            0,
+            -480,
+            0
+          ],
+          "mesh": "Dossier52",
+          "scene": "",
+          "next": "watertown_arrive",
+          "needs": [],
+          "effects": [
+            "reconsider_route"
+          ],
+          "work": 0
+        }
+      ]
+    },
+    {
+      "id": "route_ferry",
+      "mission": "nightcrossing",
+      "site": "ferry",
+      "title": "Night Crossing",
+      "goal": "Check Ada's rescue equipment and passenger arrangements.",
+      "cast": [
+        "ada",
+        "milo",
+        "mara"
+      ],
+      "actions": [
+        {
+          "id": "talk_ada",
+          "label": "Decide the ferry load",
+          "at": [
+            0,
+            170,
+            0
+          ],
+          "scene": "route_ferry",
+          "next": "",
+          "mesh": "",
+          "needs": [],
+          "effects": [],
+          "work": 0
+        },
+        {
+          "id": "ferry_lines",
+          "label": "Check the spare line and fuel",
+          "at": [
+            310,
+            160,
+            0
+          ],
+          "scene": "",
+          "next": "",
+          "mesh": "Scrap52",
+          "needs": [
+            "!ferry_repaired"
+          ],
+          "effects": [
+            "ferry_repaired"
+          ],
+          "work": 5
+        },
+        {
+          "id": "ferry_leave",
+          "label": "Join the ferry staging group",
+          "at": [
+            0,
+            -300,
+            0
+          ],
+          "scene": "",
+          "next": "crossing_arrive",
+          "mesh": "Keys52",
+          "needs": [
+            "ferry_repaired",
+            "ferry_load_chosen"
+          ],
+          "effects": [
+            "ferry_ready"
+          ],
+          "work": 0
+        },
+        {
+          "id": "reconsider_route_ferry",
+          "label": "Return to Northbank and choose a different route",
+          "at": [
+            0,
+            -480,
+            0
+          ],
+          "mesh": "Dossier52",
+          "scene": "",
+          "next": "watertown_arrive",
+          "needs": [],
+          "effects": [
+            "reconsider_route"
+          ],
+          "work": 0
+        }
+      ]
+    },
+    {
+      "id": "crossing_arrive",
+      "mission": "lastmile",
+      "site": "crossing",
+      "title": "All Those Lights",
+      "goal": "Regroup at the American staging area.",
+      "cast": [
+        "chen",
+        "ada",
+        "imani",
+        "mara",
+        "simon",
+        "milo"
+      ],
+      "actions": [
+        {
+          "id": "route_patients_begin",
+          "label": "Help the stranded convoy",
+          "at": [
+            -300,
+            160,
+            0
+          ],
+          "scene": "lastmile_patients",
+          "next": "",
+          "mesh": "Case77",
+          "needs": [
+            "entry_route=1"
+          ],
+          "effects": [],
+          "work": 0
+        },
+        {
+          "id": "route_witness_begin",
+          "label": "Protect the confidential transfer",
+          "at": [
+            0,
+            160,
+            0
+          ],
+          "scene": "lastmile_witness",
+          "next": "",
+          "mesh": "Dossier52",
+          "needs": [
+            "entry_route=2"
+          ],
+          "effects": [],
+          "work": 0
+        },
+        {
+          "id": "route_ferry_begin",
+          "label": "Reach the last landing",
+          "at": [
+            300,
+            160,
+            0
+          ],
+          "scene": "lastmile_ferry",
+          "next": "",
+          "mesh": "Keys52",
+          "needs": [
+            "entry_route=3"
+          ],
+          "effects": [],
+          "work": 0
+        }
+      ]
+    },
+    {
+      "id": "crossing_patients",
+      "mission": "lastmile",
+      "site": "crossing",
+      "title": "The Last Mile",
+      "goal": "Rescue the rear patients and clear the blocked approach.",
+      "cast": [
+        "chen",
+        "ada",
+        "imani",
+        "mara",
+        "simon",
+        "milo",
+        "tomas",
+        "ruth"
+      ],
+      "actions": [
+        {
+          "id": "rescue_patients",
+          "label": "Lead the stranded group to Northbank cover",
+          "at": [
+            -360,
+            260,
+            0
+          ],
+          "scene": "",
+          "next": "",
+          "mesh": "Case77",
+          "needs": [
+            "!crossing_rescued"
+          ],
+          "effects": [
+            "crossing_rescued",
+            "civilian_rescues+=2",
+            "evacuate_group"
+          ],
+          "work": 0
+        },
+        {
+          "id": "clear_patients",
+          "label": "Clear the convoy obstruction",
+          "at": [
+            320,
+            260,
+            0
+          ],
+          "scene": "",
+          "next": "",
+          "mesh": "Scrap52",
+          "needs": [
+            "!crossing_open"
+          ],
+          "effects": [
+            "crossing_open"
+          ],
+          "work": 4
+        },
+        {
+          "id": "cross_patients",
+          "label": "Enter humanitarian processing",
+          "at": [
+            0,
+            450,
+            0
+          ],
+          "scene": "",
+          "next": "canada_arrival",
+          "mesh": "Keys52",
+          "needs": [
+            "crossing_open",
+            "group_at_cover"
+          ],
+          "effects": [
+            "humanitarian_permit",
+            "travel_canada"
+          ],
+          "work": 0
+        },
+        {
+          "id": "retreat_patients",
+          "label": "Fall back and choose another route",
+          "at": [
+            0,
+            -500,
+            0
+          ],
+          "scene": "",
+          "next": "watertown_arrive",
+          "mesh": "Dossier52",
+          "needs": [],
+          "effects": [
+            "crossing_retreat"
+          ],
+          "work": 0
+        }
+      ],
+      "enemies": 4
+    },
+    {
+      "id": "crossing_witness",
+      "mission": "lastmile",
+      "site": "crossing",
+      "title": "The Last Mile",
+      "goal": "Recover the intercepted evidence and protect the witness group.",
+      "cast": [
+        "chen",
+        "ada",
+        "imani",
+        "mara",
+        "simon",
+        "milo"
+      ],
+      "actions": [
+        {
+          "id": "rescue_witness",
+          "label": "Recover the separate evidence case",
+          "at": [
+            -360,
+            260,
+            0
+          ],
+          "scene": "",
+          "next": "",
+          "mesh": "Case77",
+          "needs": [
+            "!crossing_rescued"
+          ],
+          "effects": [
+            "crossing_rescued",
+            "civilian_rescues+=2"
+          ],
+          "work": 6
+        },
+        {
+          "id": "clear_witness",
+          "label": "Secure the witness escape gate",
+          "at": [
+            320,
+            260,
+            0
+          ],
+          "scene": "",
+          "next": "",
+          "mesh": "Scrap52",
+          "needs": [
+            "!crossing_open"
+          ],
+          "effects": [
+            "crossing_open"
+          ],
+          "work": 4
+        },
+        {
+          "id": "cross_witness",
+          "label": "Enter humanitarian processing",
+          "at": [
+            0,
+            450,
+            0
+          ],
+          "scene": "",
+          "next": "canada_arrival",
+          "mesh": "Keys52",
+          "needs": [
+            "crossing_open",
+            "crossing_rescued"
+          ],
+          "effects": [
+            "humanitarian_permit",
+            "travel_canada"
+          ],
+          "work": 0
+        },
+        {
+          "id": "retreat_witness",
+          "label": "Fall back and choose another route",
+          "at": [
+            0,
+            -500,
+            0
+          ],
+          "scene": "",
+          "next": "watertown_arrive",
+          "mesh": "Dossier52",
+          "needs": [],
+          "effects": [
+            "crossing_retreat"
+          ],
+          "work": 0
+        }
+      ],
+      "enemies": 4
+    },
+    {
+      "id": "crossing_ferry",
+      "mission": "lastmile",
+      "site": "crossing",
+      "title": "The Last Mile",
+      "goal": "Secure the landing and recover stranded passengers.",
+      "cast": [
+        "chen",
+        "ada",
+        "imani",
+        "mara",
+        "simon",
+        "milo",
+        "tomas",
+        "ruth"
+      ],
+      "actions": [
+        {
+          "id": "rescue_ferry",
+          "label": "Lead the stranded group to Northbank cover",
+          "at": [
+            -360,
+            260,
+            0
+          ],
+          "scene": "",
+          "next": "",
+          "mesh": "Case77",
+          "needs": [
+            "!crossing_rescued"
+          ],
+          "effects": [
+            "crossing_rescued",
+            "civilian_rescues+=2",
+            "evacuate_group"
+          ],
+          "work": 0
+        },
+        {
+          "id": "clear_ferry",
+          "label": "Release the last mooring",
+          "at": [
+            320,
+            260,
+            0
+          ],
+          "scene": "",
+          "next": "",
+          "mesh": "Scrap52",
+          "needs": [
+            "!crossing_open"
+          ],
+          "effects": [
+            "crossing_open"
+          ],
+          "work": 4
+        },
+        {
+          "id": "cross_ferry",
+          "label": "Process weapons and board the Night Ferry",
+          "at": [
+            0,
+            450,
+            0
+          ],
+          "scene": "",
+          "next": "canada_arrival",
+          "mesh": "Keys52",
+          "needs": [
+            "crossing_open",
+            "group_at_cover"
+          ],
+          "effects": [
+            "humanitarian_permit",
+            "travel_canada"
+          ],
+          "work": 0
+        },
+        {
+          "id": "retreat_ferry",
+          "label": "Fall back and choose another route",
+          "at": [
+            0,
+            -500,
+            0
+          ],
+          "scene": "",
+          "next": "watertown_arrive",
+          "mesh": "Dossier52",
+          "needs": [],
+          "effects": [
+            "crossing_retreat"
+          ],
+          "work": 0
+        }
+      ],
+      "enemies": 3
+    },
+    {
+      "id": "canada_arrival",
+      "mission": "arrival",
+      "site": "canada",
+      "title": "All Those Lights",
+      "goal": "Complete processing and take a clean bed.",
+      "cast": [
+        "claire",
+        "chen",
+        "mara",
+        "lena"
+      ],
+      "actions": [],
+      "arrival": "border_arrival"
+    },
+    {
+      "id": "canada_settle",
+      "mission": "arrival",
+      "site": "canada",
+      "title": "A Room With a Door",
+      "goal": "Wash at the sink. Rest in the right-hand bay, or continue when you are ready.",
+      "cast": [
+        "claire",
+        "mara"
+      ],
+      "actions": [
+        {
+          "id": "canada_wash",
+          "label": "Use the wash station",
+          "at": [
+            -950,
+            240,
+            0
+          ],
+          "scene": "",
+          "next": "",
+          "mesh": "Sink65",
+          "needs": [
+            "!washed"
+          ],
+          "effects": [
+            "washed"
+          ],
+          "work": 4
+        },
+        {
+          "id": "canada_sleep",
+          "label": "Sleep for four hours in your clean bed",
+          "at": [
+            760,
+            600,
+            0
+          ],
+          "scene": "",
+          "next": "canada_tuesday",
+          "mesh": "Bed65",
+          "needs": [
+            "washed"
+          ],
+          "effects": [
+            "canada_rested",
+            "journal:Northbank gave us a safe room. I slept before meeting the community workshop."
+          ],
+          "work": 0
+        },
+        {
+          "id": "canada_continue",
+          "label": "Continue to the workshop without sleeping",
+          "at": [
+            0,
+            -650,
+            0
+          ],
+          "scene": "",
+          "next": "canada_tuesday",
+          "mesh": "Keys52",
+          "needs": [
+            "washed"
+          ],
+          "effects": [
+            "journal:Northbank gave us a safe room. I chose to visit the workshop before sleeping."
+          ],
+          "work": 0
+        }
+      ]
+    },
+    {
+      "id": "canada_tuesday",
+      "mission": "tuesday",
+      "site": "canada",
+      "title": "A Normal Tuesday",
+      "goal": "Spend time in the community workshop.",
+      "cast": [
+        "jules",
+        "chen",
+        "mara"
+      ],
+      "actions": [],
+      "arrival": "tuesday"
+    },
+    {
+      "id": "canada_routine",
+      "mission": "tuesday",
+      "site": "canada",
+      "title": "Things People Still Do",
+      "goal": "Help with an ordinary repair, then collect the clinic prescription.",
+      "cast": [
+        "jules",
+        "chen",
+        "mara",
+        "claire"
+      ],
+      "actions": [
+        {
+          "id": "library_shelf",
+          "label": "Hold and secure the workshop shelf",
+          "at": [
+            -300,
+            200,
+            0
+          ],
+          "scene": "",
+          "next": "",
+          "mesh": "Scrap52",
+          "needs": [
+            "!ordinary_work"
+          ],
+          "effects": [
+            "ordinary_work"
+          ],
+          "work": 5
+        },
+        {
+          "id": "prescription",
+          "label": "Collect the prepared prescription",
+          "at": [
+            280,
+            200,
+            0
+          ],
+          "scene": "",
+          "next": "canada_tracing",
+          "mesh": "Case77",
+          "needs": [
+            "ordinary_work"
+          ],
+          "effects": [
+            "canada_rest",
+            "give:medkit:2"
+          ],
+          "work": 0
+        },
+        {
+          "id": "misnamed_letter",
+          "label": "Check the family letter filed under an old surname",
+          "at": [
+            -520,
+            -250,
+            0
+          ],
+          "mesh": "Dossier52",
+          "scene": "old_name",
+          "next": "",
+          "needs": [],
+          "effects": [
+            "traced_alias"
+          ],
+          "work": 0
+        }
+      ]
+    },
+    {
+      "id": "canada_tracing",
+      "mission": "names",
+      "site": "canada",
+      "title": "Names, Not Numbers",
+      "goal": "Meet the family-tracing team.",
+      "cast": [
+        "chen",
+        "tomas",
+        "ruth",
+        "milo",
+        "mara"
+      ],
+      "actions": [],
+      "arrival": "tracing"
+    },
+    {
+      "id": "canada_investigate",
+      "mission": "worldsaw",
+      "site": "canada",
+      "title": "What the World Saw",
+      "goal": "Compare the independent records with your evidence.",
+      "cast": [
+        "chen",
+        "simon",
+        "lena",
+        "mara"
+      ],
+      "actions": [
+        {
+          "id": "archive_timeline",
+          "label": "Read the corroborated September timeline",
+          "at": [
+            0,
+            190,
+            0
+          ],
+          "scene": "world_records",
+          "next": "",
+          "mesh": "Dossier52",
+          "needs": [],
+          "effects": [
+            "richardson_revealed",
+            "evidence_secured"
+          ],
+          "work": 0
+        }
+      ]
+    },
+    {
+      "id": "canada_decide",
+      "mission": "choice",
+      "site": "canada",
+      "title": "What We Owe",
+      "goal": "Decide whether to remain safe or return south.",
+      "cast": [
+        "chen",
+        "mara",
+        "jules"
+      ],
+      "actions": [
+        {
+          "id": "talk_chen",
+          "label": "Discuss what comes next",
+          "at": [
+            0,
+            170,
+            0
+          ],
+          "scene": "canada_choice",
+          "next": "",
+          "mesh": "",
+          "needs": [],
+          "effects": [],
+          "work": 0
+        }
+      ]
+    },
+    {
+      "id": "ending_other",
+      "mission": "ending",
+      "site": "canada",
+      "title": "The Other Shore",
+      "goal": "You have chosen a life in Canada.",
+      "cast": [
+        "jules",
+        "chen",
+        "mara"
+      ],
+      "actions": [],
+      "arrival": "other_shore"
+    }
+  ]
+}

@@ -1,0 +1,2220 @@
+{
+  "assets": [
+    {
+      "name": "Vehicle42_apc",
+      "fbx": "SM_Vehicle42_apc.fbx",
+      "asset": "/Game/Art/Meshes/SM_Vehicle42_apc",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -5.0,
+          -1.338856,
+          0.24
+        ],
+        "max": [
+          2.22,
+          1.338856,
+          2.333
+        ],
+        "size": [
+          7.22,
+          2.677713,
+          2.093
+        ]
+      },
+      "triangles": 3848,
+      "vertices": 2080,
+      "material_slots": [
+        "M_Armor57",
+        "M_Glass",
+        "M_Rubber",
+        "M_Steel"
+      ],
+      "boundary_edges": 0,
+      "collision": "none",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "Cabin42_apc",
+      "fbx": "SM_Cabin42_apc.fbx",
+      "asset": "/Game/Art/Meshes/SM_Cabin42_apc",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -4.0,
+          -1.1,
+          0.43
+        ],
+        "max": [
+          0.4,
+          1.1,
+          1.42
+        ],
+        "size": [
+          4.4,
+          2.2,
+          0.99
+        ]
+      },
+      "triangles": 2392,
+      "vertices": 1248,
+      "material_slots": [
+        "M_Cloth",
+        "M_Rubber",
+        "M_Steel"
+      ],
+      "boundary_edges": 0,
+      "collision": "none",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "Windshield42_apc",
+      "fbx": "SM_Windshield42_apc.fbx",
+      "asset": "/Game/Art/Meshes/SM_Windshield42_apc",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.79,
+          -1.18,
+          1.35
+        ],
+        "max": [
+          0.43,
+          1.18,
+          2.223
+        ],
+        "size": [
+          1.22,
+          2.36,
+          0.873
+        ]
+      },
+      "triangles": 12,
+      "vertices": 8,
+      "material_slots": [
+        "M_Glass"
+      ],
+      "boundary_edges": 0,
+      "collision": "none",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "Vehicle42_armoredtruck",
+      "fbx": "SM_Vehicle42_armoredtruck.fbx",
+      "asset": "/Game/Art/Meshes/SM_Vehicle42_armoredtruck",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -4.0,
+          -1.168856,
+          0.24
+        ],
+        "max": [
+          2.22,
+          1.168856,
+          2.333
+        ],
+        "size": [
+          6.22,
+          2.337713,
+          2.093
+        ]
+      },
+      "triangles": 3848,
+      "vertices": 2080,
+      "material_slots": [
+        "M_Armor57",
+        "M_Glass",
+        "M_Rubber",
+        "M_Steel"
+      ],
+      "boundary_edges": 0,
+      "collision": "none",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "Cabin42_armoredtruck",
+      "fbx": "SM_Cabin42_armoredtruck.fbx",
+      "asset": "/Game/Art/Meshes/SM_Cabin42_armoredtruck",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.83,
+          -0.9504,
+          0.43
+        ],
+        "max": [
+          0.4,
+          0.9504,
+          1.42
+        ],
+        "size": [
+          1.23,
+          1.9008,
+          0.99
+        ]
+      },
+      "triangles": 812,
+      "vertices": 428,
+      "material_slots": [
+        "M_Cloth",
+        "M_Rubber",
+        "M_Steel"
+      ],
+      "boundary_edges": 0,
+      "collision": "none",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "Windshield42_armoredtruck",
+      "fbx": "SM_Windshield42_armoredtruck.fbx",
+      "asset": "/Game/Art/Meshes/SM_Windshield42_armoredtruck",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.79,
+          -1.01,
+          1.35
+        ],
+        "max": [
+          0.43,
+          1.01,
+          2.223
+        ],
+        "size": [
+          1.22,
+          2.02,
+          0.873
+        ]
+      },
+      "triangles": 12,
+      "vertices": 8,
+      "material_slots": [
+        "M_Glass"
+      ],
+      "boundary_edges": 0,
+      "collision": "none",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "Vehicle42_technical",
+      "fbx": "SM_Vehicle42_technical.fbx",
+      "asset": "/Game/Art/Meshes/SM_Vehicle42_technical",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -3.2,
+          -1.207,
+          0.24
+        ],
+        "max": [
+          2.22,
+          1.207,
+          1.965
+        ],
+        "size": [
+          5.42,
+          2.414,
+          1.725
+        ]
+      },
+      "triangles": 1812,
+      "vertices": 992,
+      "material_slots": [
+        "M_Armor57",
+        "M_Rubber",
+        "M_Steel"
+      ],
+      "boundary_edges": 0,
+      "collision": "none",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "Cabin42_technical",
+      "fbx": "SM_Cabin42_technical.fbx",
+      "asset": "/Game/Art/Meshes/SM_Cabin42_technical",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -1.0,
+          -0.924,
+          0.43
+        ],
+        "max": [
+          0.4,
+          0.924,
+          1.42
+        ],
+        "size": [
+          1.4,
+          1.848,
+          0.99
+        ]
+      },
+      "triangles": 812,
+      "vertices": 428,
+      "material_slots": [
+        "M_Cloth",
+        "M_Rubber",
+        "M_Steel"
+      ],
+      "boundary_edges": 0,
+      "collision": "none",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "Windshield42_technical",
+      "fbx": "SM_Windshield42_technical.fbx",
+      "asset": "/Game/Art/Meshes/SM_Windshield42_technical",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.22,
+          -0.87,
+          1.1
+        ],
+        "max": [
+          0.31,
+          0.87,
+          1.893
+        ],
+        "size": [
+          0.53,
+          1.74,
+          0.793
+        ]
+      },
+      "triangles": 12,
+      "vertices": 8,
+      "material_slots": [
+        "M_Glass"
+      ],
+      "boundary_edges": 0,
+      "collision": "none",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "Turret57",
+      "fbx": "SM_Turret57.fbx",
+      "asset": "/Game/Art/Meshes/SM_Turret57",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.75,
+          -0.71,
+          -0.3
+        ],
+        "max": [
+          0.75,
+          0.71,
+          0.5
+        ],
+        "size": [
+          1.5,
+          1.42,
+          0.8
+        ]
+      },
+      "triangles": 316,
+      "vertices": 160,
+      "material_slots": [
+        "M_Armor57",
+        "M_Steel"
+      ],
+      "boundary_edges": 0,
+      "collision": "none",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "Cannon57",
+      "fbx": "SM_Cannon57.fbx",
+      "asset": "/Game/Art/Meshes/SM_Cannon57",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.45,
+          -0.16,
+          -0.16
+        ],
+        "max": [
+          2.05,
+          0.16,
+          0.16
+        ],
+        "size": [
+          2.5,
+          0.32,
+          0.32
+        ]
+      },
+      "triangles": 380,
+      "vertices": 192,
+      "material_slots": [
+        "M_Robot57",
+        "M_Steel"
+      ],
+      "boundary_edges": 0,
+      "collision": "none",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "MachineGun57",
+      "fbx": "SM_MachineGun57.fbx",
+      "asset": "/Game/Art/Meshes/SM_MachineGun57",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.41984,
+          -0.151673,
+          -0.213359
+        ],
+        "max": [
+          1.28,
+          0.151673,
+          0.12
+        ],
+        "size": [
+          1.69984,
+          0.303347,
+          0.333359
+        ]
+      },
+      "triangles": 760,
+      "vertices": 386,
+      "material_slots": [
+        "M_Robot57",
+        "M_Steel"
+      ],
+      "boundary_edges": 0,
+      "collision": "none",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "Vehicle42_helicopter",
+      "fbx": "SM_Vehicle42_helicopter.fbx",
+      "asset": "/Game/Art/Meshes/SM_Vehicle42_helicopter",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -6.7,
+          -1.4,
+          0.185
+        ],
+        "max": [
+          2.2,
+          1.4,
+          3.202085
+        ],
+        "size": [
+          8.9,
+          2.8,
+          3.017086
+        ]
+      },
+      "triangles": 2100,
+      "vertices": 1132,
+      "material_slots": [
+        "M_Armor57",
+        "M_Robot57",
+        "M_Rubber",
+        "M_Steel"
+      ],
+      "boundary_edges": 0,
+      "collision": "none",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "Cabin42_helicopter",
+      "fbx": "SM_Cabin42_helicopter.fbx",
+      "asset": "/Game/Art/Meshes/SM_Cabin42_helicopter",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -1.8,
+          -0.88,
+          0.46
+        ],
+        "max": [
+          1.1,
+          0.88,
+          1.47
+        ],
+        "size": [
+          2.9,
+          1.76,
+          1.01
+        ]
+      },
+      "triangles": 1436,
+      "vertices": 752,
+      "material_slots": [
+        "M_Cloth",
+        "M_Rubber",
+        "M_Steel"
+      ],
+      "boundary_edges": 0,
+      "collision": "none",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "Windshield42_helicopter",
+      "fbx": "SM_Windshield42_helicopter.fbx",
+      "asset": "/Game/Art/Meshes/SM_Windshield42_helicopter",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          0.7,
+          -0.68,
+          1.2
+        ],
+        "max": [
+          2.13,
+          0.68,
+          2.287
+        ],
+        "size": [
+          1.43,
+          1.36,
+          1.087
+        ]
+      },
+      "triangles": 24,
+      "vertices": 16,
+      "material_slots": [
+        "M_Glass"
+      ],
+      "boundary_edges": 0,
+      "collision": "none",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "Rotor57",
+      "fbx": "SM_Rotor57.fbx",
+      "asset": "/Game/Art/Meshes/SM_Rotor57",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -5.8,
+          -5.8,
+          -0.1
+        ],
+        "max": [
+          5.8,
+          5.8,
+          0.12
+        ],
+        "size": [
+          11.6,
+          11.6,
+          0.22
+        ]
+      },
+      "triangles": 144,
+      "vertices": 80,
+      "material_slots": [
+        "M_Robot57",
+        "M_Steel"
+      ],
+      "boundary_edges": 0,
+      "collision": "none",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "TailRotor57",
+      "fbx": "SM_TailRotor57.fbx",
+      "asset": "/Game/Art/Meshes/SM_TailRotor57",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.83,
+          -0.83,
+          0.0
+        ],
+        "max": [
+          0.83,
+          0.83,
+          0.018
+        ],
+        "size": [
+          1.66,
+          1.66,
+          0.018
+        ]
+      },
+      "triangles": 48,
+      "vertices": 32,
+      "material_slots": [
+        "M_Robot57"
+      ],
+      "boundary_edges": 0,
+      "collision": "none",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "Wheel57Light",
+      "fbx": "SM_Wheel57Light.fbx",
+      "asset": "/Game/Art/Meshes/SM_Wheel57Light",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.358821,
+          -0.21,
+          -0.360388
+        ],
+        "max": [
+          0.358821,
+          0.21,
+          0.360388
+        ],
+        "size": [
+          0.717642,
+          0.42,
+          0.720776
+        ]
+      },
+      "triangles": 3008,
+      "vertices": 1712,
+      "material_slots": [
+        "M_Rubber",
+        "M_Steel"
+      ],
+      "boundary_edges": 96,
+      "collision": "none",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "Wheel57Heavy",
+      "fbx": "SM_Wheel57Heavy.fbx",
+      "asset": "/Game/Art/Meshes/SM_Wheel57Heavy",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.440803,
+          -0.21,
+          -0.44235
+        ],
+        "max": [
+          0.440803,
+          0.21,
+          0.44235
+        ],
+        "size": [
+          0.881607,
+          0.42,
+          0.8847
+        ]
+      },
+      "triangles": 3008,
+      "vertices": 1712,
+      "material_slots": [
+        "M_Rubber",
+        "M_Steel"
+      ],
+      "boundary_edges": 96,
+      "collision": "none",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "BearTorso57",
+      "fbx": "SM_BearTorso57.fbx",
+      "asset": "/Game/Art/Meshes/SM_BearTorso57",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.8,
+          -0.58,
+          -0.44
+        ],
+        "max": [
+          0.68,
+          0.58,
+          0.7
+        ],
+        "size": [
+          1.48,
+          1.16,
+          1.14
+        ]
+      },
+      "triangles": 316,
+      "vertices": 160,
+      "material_slots": [
+        "M_Fur57"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "BearHead57",
+      "fbx": "SM_BearHead57.fbx",
+      "asset": "/Game/Art/Meshes/SM_BearHead57",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.2,
+          -0.3,
+          -0.23
+        ],
+        "max": [
+          0.6,
+          0.3,
+          0.43
+        ],
+        "size": [
+          0.8,
+          0.6,
+          0.66
+        ]
+      },
+      "triangles": 584,
+      "vertices": 304,
+      "material_slots": [
+        "M_Fur57",
+        "M_Rubber"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "BearPelvis57",
+      "fbx": "SM_BearPelvis57.fbx",
+      "asset": "/Game/Art/Meshes/SM_BearPelvis57",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.4,
+          -0.44,
+          -0.38
+        ],
+        "max": [
+          0.2,
+          0.44,
+          0.33
+        ],
+        "size": [
+          0.6,
+          0.88,
+          0.71
+        ]
+      },
+      "triangles": 140,
+      "vertices": 72,
+      "material_slots": [
+        "M_Fur57"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "BearArm57",
+      "fbx": "SM_BearArm57.fbx",
+      "asset": "/Game/Art/Meshes/SM_BearArm57",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.18,
+          -0.19,
+          -0.847755
+        ],
+        "max": [
+          0.472959,
+          0.19,
+          0.1
+        ],
+        "size": [
+          0.652959,
+          0.38,
+          0.947755
+        ]
+      },
+      "triangles": 492,
+      "vertices": 248,
+      "material_slots": [
+        "M_Bone",
+        "M_Fur57"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "BearLeg57",
+      "fbx": "SM_BearLeg57.fbx",
+      "asset": "/Game/Art/Meshes/SM_BearLeg57",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.18,
+          -0.19,
+          -0.847755
+        ],
+        "max": [
+          0.472959,
+          0.19,
+          0.1
+        ],
+        "size": [
+          0.652959,
+          0.38,
+          0.947755
+        ]
+      },
+      "triangles": 492,
+      "vertices": 248,
+      "material_slots": [
+        "M_Bone",
+        "M_Fur57"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "HornetTorso57",
+      "fbx": "SM_HornetTorso57.fbx",
+      "asset": "/Game/Art/Meshes/SM_HornetTorso57",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.3,
+          -0.31,
+          -0.25
+        ],
+        "max": [
+          0.3,
+          0.31,
+          0.25
+        ],
+        "size": [
+          0.6,
+          0.62,
+          0.5
+        ]
+      },
+      "triangles": 188,
+      "vertices": 96,
+      "material_slots": [
+        "M_Chitin57"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "HornetHead57",
+      "fbx": "SM_HornetHead57.fbx",
+      "asset": "/Game/Art/Meshes/SM_HornetHead57",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.16,
+          -0.303889,
+          -0.24
+        ],
+        "max": [
+          0.423152,
+          0.303889,
+          0.437847
+        ],
+        "size": [
+          0.583152,
+          0.607778,
+          0.677847
+        ]
+      },
+      "triangles": 484,
+      "vertices": 264,
+      "material_slots": [
+        "M_Chitin57",
+        "M_Robot57",
+        "M_Rubber"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "HornetPelvis57",
+      "fbx": "SM_HornetPelvis57.fbx",
+      "asset": "/Game/Art/Meshes/SM_HornetPelvis57",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.875866,
+          -0.32,
+          -0.22
+        ],
+        "max": [
+          0.2,
+          0.32,
+          0.22
+        ],
+        "size": [
+          1.075866,
+          0.64,
+          0.44
+        ]
+      },
+      "triangles": 412,
+      "vertices": 208,
+      "material_slots": [
+        "M_Bone",
+        "M_Chitin57"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "HornetArm57",
+      "fbx": "SM_HornetArm57.fbx",
+      "asset": "/Game/Art/Meshes/SM_HornetArm57",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.055,
+          -0.06,
+          -0.55
+        ],
+        "max": [
+          0.362,
+          0.06,
+          0.0
+        ],
+        "size": [
+          0.417,
+          0.12,
+          0.55
+        ]
+      },
+      "triangles": 116,
+      "vertices": 60,
+      "material_slots": [
+        "M_Chitin57"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "HornetLeg57",
+      "fbx": "SM_HornetLeg57.fbx",
+      "asset": "/Game/Art/Meshes/SM_HornetLeg57",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.055,
+          -0.06,
+          -0.55
+        ],
+        "max": [
+          0.362,
+          0.06,
+          0.0
+        ],
+        "size": [
+          0.417,
+          0.12,
+          0.55
+        ]
+      },
+      "triangles": 116,
+      "vertices": 60,
+      "material_slots": [
+        "M_Chitin57"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "RogueTorso57",
+      "fbx": "SM_RogueTorso57.fbx",
+      "asset": "/Game/Art/Meshes/SM_RogueTorso57",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.225,
+          -0.3,
+          -0.24
+        ],
+        "max": [
+          0.251996,
+          0.3,
+          0.45
+        ],
+        "size": [
+          0.476996,
+          0.6,
+          0.69
+        ]
+      },
+      "triangles": 256,
+      "vertices": 136,
+      "material_slots": [
+        "M_Robot57",
+        "M_Steel"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "RogueHead57",
+      "fbx": "SM_RogueHead57.fbx",
+      "asset": "/Game/Art/Meshes/SM_RogueHead57",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.14,
+          -0.12,
+          -0.12
+        ],
+        "max": [
+          0.14,
+          0.12,
+          0.23
+        ],
+        "size": [
+          0.28,
+          0.24,
+          0.35
+        ]
+      },
+      "triangles": 168,
+      "vertices": 88,
+      "material_slots": [
+        "M_Red",
+        "M_Robot57"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "RoguePelvis57",
+      "fbx": "SM_RoguePelvis57.fbx",
+      "asset": "/Game/Art/Meshes/SM_RoguePelvis57",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.15,
+          -0.22,
+          -0.12
+        ],
+        "max": [
+          0.15,
+          0.22,
+          0.16
+        ],
+        "size": [
+          0.3,
+          0.44,
+          0.28
+        ]
+      },
+      "triangles": 92,
+      "vertices": 48,
+      "material_slots": [
+        "M_Robot57"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "RogueArm57",
+      "fbx": "SM_RogueArm57.fbx",
+      "asset": "/Game/Art/Meshes/SM_RogueArm57",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.1,
+          -0.105,
+          -0.65
+        ],
+        "max": [
+          0.23,
+          0.105,
+          0.04
+        ],
+        "size": [
+          0.33,
+          0.21,
+          0.69
+        ]
+      },
+      "triangles": 380,
+      "vertices": 192,
+      "material_slots": [
+        "M_Robot57",
+        "M_Steel"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "RogueLeg57",
+      "fbx": "SM_RogueLeg57.fbx",
+      "asset": "/Game/Art/Meshes/SM_RogueLeg57",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.1,
+          -0.105,
+          -0.65
+        ],
+        "max": [
+          0.23,
+          0.105,
+          0.04
+        ],
+        "size": [
+          0.33,
+          0.21,
+          0.69
+        ]
+      },
+      "triangles": 380,
+      "vertices": 192,
+      "material_slots": [
+        "M_Robot57",
+        "M_Steel"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "HornetWing57",
+      "fbx": "SM_HornetWing57.fbx",
+      "asset": "/Game/Art/Meshes/SM_HornetWing57",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.74,
+          -0.003041,
+          -0.01
+        ],
+        "max": [
+          0.002956,
+          1.2,
+          0.033
+        ],
+        "size": [
+          0.742956,
+          1.203041,
+          0.043
+        ]
+      },
+      "triangles": 96,
+      "vertices": 58,
+      "material_slots": [
+        "M_Bone",
+        "M_Glass"
+      ],
+      "boundary_edges": 0,
+      "collision": "none",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "Teller57",
+      "fbx": "SM_Teller57.fbx",
+      "asset": "/Game/Art/Meshes/SM_Teller57",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.65,
+          -1.0,
+          0.0
+        ],
+        "max": [
+          0.6,
+          1.0,
+          1.05
+        ],
+        "size": [
+          1.25,
+          2.0,
+          1.05
+        ]
+      },
+      "triangles": 32,
+      "vertices": 20,
+      "material_slots": [
+        "M_Steel",
+        "M_Wood"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "ATM57",
+      "fbx": "SM_ATM57.fbx",
+      "asset": "/Game/Art/Meshes/SM_ATM57",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.3,
+          -0.35,
+          0.0
+        ],
+        "max": [
+          0.3,
+          0.35,
+          1.8
+        ],
+        "size": [
+          0.6,
+          0.7,
+          1.8
+        ]
+      },
+      "triangles": 36,
+      "vertices": 22,
+      "material_slots": [
+        "M_Glow",
+        "M_Robot57"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "GunRack57",
+      "fbx": "SM_GunRack57.fbx",
+      "asset": "/Game/Art/Meshes/SM_GunRack57",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.25,
+          -0.675,
+          0.0
+        ],
+        "max": [
+          0.25,
+          0.675,
+          1.8
+        ],
+        "size": [
+          0.5,
+          1.35,
+          1.8
+        ]
+      },
+      "triangles": 492,
+      "vertices": 264,
+      "material_slots": [
+        "M_Steel",
+        "M_Wood"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "RangeTarget57",
+      "fbx": "SM_RangeTarget57.fbx",
+      "asset": "/Game/Art/Meshes/SM_RangeTarget57",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.03,
+          -0.45,
+          0.0
+        ],
+        "max": [
+          0.03,
+          0.45,
+          1.9
+        ],
+        "size": [
+          0.06,
+          0.9,
+          1.9
+        ]
+      },
+      "triangles": 52,
+      "vertices": 32,
+      "material_slots": [
+        "M_Bone",
+        "M_Steel"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "SportsRack57",
+      "fbx": "SM_SportsRack57.fbx",
+      "asset": "/Game/Art/Meshes/SM_SportsRack57",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.25,
+          -0.65,
+          0.0
+        ],
+        "max": [
+          0.25,
+          0.65,
+          1.8
+        ],
+        "size": [
+          0.5,
+          1.3,
+          1.8
+        ]
+      },
+      "triangles": 920,
+      "vertices": 488,
+      "material_slots": [
+        "M_Cloth",
+        "M_Steel",
+        "M_Wood"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "VaultDoor57",
+      "fbx": "SM_VaultDoor57.fbx",
+      "asset": "/Game/Art/Meshes/SM_VaultDoor57",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.121651,
+          -1.25,
+          0.0
+        ],
+        "max": [
+          0.18,
+          1.25,
+          2.6
+        ],
+        "size": [
+          0.301651,
+          2.5,
+          2.6
+        ]
+      },
+      "triangles": 812,
+      "vertices": 424,
+      "material_slots": [
+        "M_Armor57",
+        "M_Steel"
+      ],
+      "boundary_edges": 0,
+      "collision": "convex",
+      "animation": "",
+      "sockets_m": {}
+    }
+  ]
+}

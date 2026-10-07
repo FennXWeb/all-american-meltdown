@@ -1,7 +1,13 @@
+#include "LWAircraft84.h"
+#include "LWCampaign76.h"
+#include "LWSyracuse73.h"
+#include "LWStreaming68.h"
+#include "LWInteriors65.h"
 #include "LWTradingCards36.h"
 #include "TimerManager.h"
 #include "LWWorld.h"
 #include "LWPOIExpansion.h"
+#include "LWExpansion57.h"
 #include "LWPOISurvivors.h"
 #include "Misc/ScopeExit.h"
 #include "LWZombie.h"
@@ -17,14 +23,19 @@
 // Buildings are assembled from circulation, room, facade and furnishing modules.
 // All coordinates are local to a persistent parcel; prop IDs are deterministic.
 void ALWChunk::Building(ALWWorld* W,const LWGen::FSite& Input){
+ if(LWCampaign76::Dress(this,W,Input))return;
+ if(Input.Type>=70&&Input.Type<80){LWSyracuse73::Build(this,W,Input);return;}
+ if(Input.Type==68||Input.Type==69){BuildingNewYork69(W,Input);return;}
+ LWInteriors65::FScope Interior65(this,W,Input);
  auto S=Input;
  // The same seeded selection controls the survivor cast and generic enemy exclusion.
- const bool NormalStop=!LWPlaces::Expanded(S.Type)&&LWPOISurvivors::Selected(S,W->Seed);
+ const bool NormalStop=S.Type<64&&!LWPlaces::Expanded(S.Type)&&LWPOISurvivors::Selected(S,W->Seed);
  if(NormalStop)S.Friendly=true;
  // Spawn only after the normal builder has authored its floor and furnishings.
  ON_SCOPE_EXIT { W->PendingCards37.Add({this,S});if(NormalStop)LWPOISurvivors::Spawn(this,W,S); };
+ if(S.Type>=64&&S.Type<68){LWExpansion57::Build(this,W,S);return;}
  if(LWPlaces::Expanded(S.Type)){LWPOIExpansion::Build(this,W,S);return;}
- if(S.Type==32){BuildingAirport(W,S);return;}if(LWLandmarks::Unique(S.Type)){BuildingLandmark(W,S);return;}
+ if(S.Type==32){LWAviation84::BuildAirport(this,W,S);return;}if(LWLandmarks::Unique(S.Type)){BuildingLandmark(W,S);return;}
  if(LWDungeons::IsDungeon(S.Type)){BuildingDungeon(W,S);return;}
  if(S.Type==21){BuildingCasino(W,S);return;}
  if(LWPlaces::Underground(S.Type)){BuildingUnderground(W,S);return;}
@@ -52,6 +63,7 @@ void ALWChunk::Building(ALWWorld* W,const LWGen::FSite& Input){
  // Dressing follows the supporting mesh, so plates, papers and lamps never float.
  auto Deco=[&](FName M,FVector V,float Yaw=0,FVector Scale=FVector(1)){Add(W,M,NAME_None,P(V),Scale,R+FRotator(0,Yaw,0),false);};
  int N=0;auto Prop=[&](ELWObjectKind K,FVector V,float Yaw=0,FVector Scale=FVector(1)){
+ if(K==ELWObjectKind::Car&&Plan68){const FName Id(*FString::Printf(TEXT("site_%u_v7_%d"),S.Id,N++));const FVector Position=GetActorLocation()+P(V);const FRotator Rotation=R+FRotator(0,Yaw,0);Plan68->Population.Add([this,W,Id,Position,Rotation,Scale](){if(auto* O=W->SpawnObject(ELWObjectKind::Car,Id,Position,Rotation)){O->SetActorScale3D(Scale);Residents.Add(O);}});return static_cast<ALWWorldObject*>(nullptr);}
  auto* O=W->SpawnObject(K,FName(*FString::Printf(TEXT("site_%u_v7_%d"),S.Id,N++)),GetActorLocation()+P(V),R+FRotator(0,Yaw,0));if(O){O->SetActorScale3D(Scale);Residents.Add(O);}return O;};
  auto Furn=[&](FName Type,FVector V,float Yaw=0){
  FName M=Type==TEXT("bed")?TEXT("HomeBedV13"):Type==TEXT("chair")?TEXT("ChairV3"):Type==TEXT("water")?TEXT("FridgeV4"):Type==TEXT("workbench")?TEXT("WeaponBench39"):Type==TEXT("cooker")?TEXT("StoveV4"):Type==TEXT("sink")?TEXT("SinkV4"):TEXT("LockerV4");
@@ -68,7 +80,7 @@ void ALWChunk::Building(ALWWorld* W,const LWGen::FSite& Input){
  };
  auto Shelf=[&](FVector V,float Yaw=0){if(Rand.FRand()<.08f||!Fits(TEXT("Shelf"),V,Yaw))return;Loot(TEXT("Shelf"),V,Yaw);for(float Level:{13.f,65.f,118.f})if(Rand.FRand()<.78f)Deco(TEXT("PantryV13"),V+FVector(0,0,Level),Yaw);};
  auto Rug=[&](FVector V,FVector2D Size){B(TEXT("Cloth"),V+FVector(0,0,.7f),FVector(Size,1.4f),false);for(int Side:{-1,1})B(TEXT("Red"),V+FVector(Side*(Size.X*.5f-12),0,1.5f),FVector(8,Size.Y-15,1),false);};
- auto Sofa=[&](FVector V){if(!A(TEXT("SofaV13"),V))return;Rug(V+FVector(0,-100,0),FVector2D(300,270));if(A(TEXT("CoffeeTableV13"),V+FVector(0,-145,0)))Deco(TEXT("DeskSetV13"),V+FVector(10,-145,43));for(int Side:{-1,1})if(A(TEXT("NightstandV13"),V+FVector(Side*160,0,0)))Deco(TEXT("TableLampV13"),V+FVector(Side*160,0,61));};
+ auto Sofa=[&](FVector V){if(!A(TEXT("SofaV13"),V))return;Rug(V+FVector(0,-100,0),FVector2D(300,270));if(A(TEXT("CoffeeTableV13"),V+FVector(0,-145,0)))Deco(TEXT("Papers65"),V+FVector(10,-145,43.4));for(int Side:{-1,1})if(A(TEXT("NightstandV13"),V+FVector(Side*160,0,0)))Deco(TEXT("TableLampV13"),V+FVector(Side*160,0,61));};
  auto Table=[&](FVector V){if(!A(TEXT("DiningTableV13"),V))return;for(int Side:{-1,1}){Furn(TEXT("chair"),V+FVector(0,Side*105,0),-Side*90);Deco(TEXT("TableSettingV13"),V+FVector(0,Side*27,78),Side>0?180:0);}Deco(TEXT("PantryV13"),V+FVector(-35,0,78),90,FVector(.55));};
  auto WorkDesk=[&](FVector V){if(A(TEXT("Desk"),V)){Deco(TEXT("DeskSetV13"),V+FVector(0,0,82));Furn(TEXT("chair"),V-FVector(0,100,0),90);}};
  auto Kitchen=[&](FVector V){Furn(TEXT("cooker"),V);Furn(TEXT("sink"),V+FVector(100,0,0));Furn(TEXT("water"),V+FVector(-104,0,0));if(A(TEXT("CabinetV3"),V+FVector(230,0,0)))Deco(TEXT("PantryV13"),V+FVector(230,0,99));};
@@ -78,7 +90,8 @@ void ALWChunk::Building(ALWWorld* W,const LWGen::FSite& Input){
  if(S.Size.Y*.5>Y+10){float Setback=S.Size.Y*.5-Y;B(TEXT("Concrete"),FVector(0,-Y-Setback*.5f,5),FVector(180,Setback+100,10));}
  if(Outdoor){
  B(TEXT("Asphalt"),FVector(0,0,15),FVector(2*X,2*Y,10));
- for(float XX=-X+350;XX<X-250;XX+=420)for(float YY=-Y+600;YY<Y-700;YY+=1250){B(TEXT("Lane"),FVector(XX,YY,22),FVector(9,540,2),false);if(Rand.FRand()<.35)Prop(ELWObjectKind::Car,FVector(XX+190,YY,30),90);}
+ for(float XX=-X+350;XX<X-250;XX+=420)for(float YY=-Y+600;YY<Y-700;YY+=1250){B(TEXT("Lane"),FVector(XX,YY,22),FVector(9,540,2),false);if(!(T==16&&XX<-X+1190&&YY<-Y+1850)&&Rand.FRand()<.35)Prop(ELWObjectKind::Car,FVector(XX+190,YY,30),90);}
+ if(T==16){auto* Terminal=Prop(ELWObjectKind::Furniture,FVector(-X+1200,-Y+300,22),0);if(Terminal){Terminal->UseType=TEXT("delivery66");Terminal->Body->SetStaticMesh(W->Mesh(TEXT("RV66_DeliveryTerminal")));Terminal->Route={FVector2D(GetActorLocation()+P(FVector(-X+700,-Y+1050,22)))};}Label(TEXT("VEHICLE DELIVERY / 150 CREDITS"),FVector(-X+1200,-Y+322,210),-90,13);}
  if(T==15){B(TEXT("Steel"),FVector(0,Y-160,550),FVector(2400,70,1050));B(TEXT("Bone"),FVector(0,Y-202,650),FVector(2240,8,770));Label(TEXT("LAST PICTURE SHOW"),FVector(0,Y-212,400),-90,60);for(float XX=-X+300;XX<X;XX+=840)B(TEXT("Steel"),FVector(XX,0,55),FVector(12,12,110));}
  B(TEXT("BrickV7"),FVector(X-400,-Y+300,120),FVector(600,440,240));B(TEXT("Glass"),FVector(X-400,-Y+72,150),FVector(400,8,95));Label(T==15?TEXT("TICKETS / SNACKS"):TEXT("PARKING"),FVector(X-400,-Y+64,230),-90,20);
  }else{
@@ -120,6 +133,8 @@ void ALWChunk::Building(ALWWorld* W,const LWGen::FSite& Input){
  }
  if(F<Floors-1)for(int I=0;I<18;I++)B(TEXT("Concrete"),FVector(0,Y-650+I*30,Z+(I+1)*20*.5f),FVector(250,30,(I+1)*20));
  }else if(Home){
+ // A fitted plaster ceiling closes the domestic rooms below the roof void.
+ B(TEXT("Plaster65"),FVector(0,0,Z+H+12),FVector(2*X-26,2*Y-26,12));
  const float Hall=85,Rear=-40,BathY=Y-270;
  const float BedroomDepth=(Y-Rear)*.5f;
  for(int Room=0;Room<2;Room++)Wall(FVector(-Hall,Rear+(Room+.5f)*BedroomDepth,Z),BedroomDepth,90,true,Interior,H);
@@ -131,7 +146,7 @@ void ALWChunk::Building(ALWWorld* W,const LWGen::FSite& Input){
  Wall(FVector((X+Hall)*.5f,BathY,Z),X-Hall,0,false,Interior,H);
  // Living room grouped around a coffee table, with a clear route past it.
  FVector Living(-X*.53f,-Y*.46f,Z);Sofa(Living);A(TEXT("BookcaseV13"),FVector(-X+60,-Y*.35f,Z),90);
- if(A(TEXT("SideboardV13"),FVector(-X*.52f,Rear-85,Z)))Deco(TEXT("DeskSetV13"),FVector(-X*.52f,Rear-85,Z+87));
+ if(A(TEXT("SideboardV13"),FVector(-X*.52f,Rear-85,Z)))Deco(TEXT("Papers65"),FVector(-X*.52f,Rear-85,Z+88.4));
  Table(FVector(X*.5f,-Y*.65f,Z));Kitchen(FVector(X*.48f,Rear-60,Z));
  // Two bedrooms have their own hall doors, headboards toward a wall, and bedside storage.
  for(int Room=0;Room<2;Room++){float Start=Rear+Room*BedroomDepth,End=Start+BedroomDepth;FVector Bed(-(X+Hall)*.5f,Start+140,Z);Furn(TEXT("bed"),Bed,90);Rug(Bed,FVector2D(290,270));
@@ -159,7 +174,9 @@ void ALWChunk::Building(ALWWorld* W,const LWGen::FSite& Input){
  if(T!=13&&T!=18)for(int I=0;I<3;I++){A(TEXT("ServiceBenchV3"),FVector(-X+350+I*330,-Y+260,Z));B(TEXT("Rubber"),FVector(-X+350+I*330,-Y+230,Z+112),FVector(40,30,30));}
  if(T==11){for(int I=0;I<4;I++)Label(I==0?TEXT("PHARMACY"):I==1?TEXT("VIDEO"):I==2?TEXT("MARKET"):TEXT("HARDWARE"),FVector(-X+(I+.5)*X*.5,-Y-65,Z+H+35),-90,22);}
  }else if(T==4||T==14){
- A(TEXT("KitchenRangeV9"),FVector(-X*.45,Back-135,Z));A(TEXT("KitchenHoodV9"),FVector(-X*.45,Back-135,Z+H-35));Furn(TEXT("sink"),FVector(100,Back-130,Z));Furn(TEXT("water"),FVector(X-180,Back-130,Z));A(TEXT("ServiceBenchV3"),FVector(430,Back-135,Z));
+ // The cooking line belongs in the staff kitchen, with a service counter facing diners.
+ A(TEXT("KitchenRangeV9"),FVector(-X*.60,Y-115,Z));A(TEXT("KitchenHoodV9"),FVector(-X*.60,Y-115,Z+H-35));Furn(TEXT("sink"),FVector(-X*.32,Y-115,Z));Furn(TEXT("water"),FVector(-X+100,Back+185,Z));
+ A(TEXT("CoffeeStation65"),FVector(-X*.45,Back-95,Z));
  for(float XX=-X+250;XX<X-200;XX+=450)for(float YY=-Y+380;YY<Back-330;YY+=400){if(FMath::Abs(XX)<260)continue;FVector V(XX,YY,Z);if(A(TEXT("DinerTableV9"),V)){for(int Place:{-1,1})Deco(TEXT("TableSettingV13"),V+FVector(Place*30,0,79));A(TEXT("DinerBoothV9"),V+FVector(0,125,0));A(TEXT("DinerBoothV9"),V-FVector(0,125,0),180);}}
 
  Poster(FVector(-X*.4,Back-18,Z+210),TEXT("HOT MEALS"));

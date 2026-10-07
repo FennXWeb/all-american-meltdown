@@ -1,4 +1,6 @@
 #include "LWAudioCatalog.h"
+#include "LWAcoustics64.h"
+#include "Engine/World.h"
 
 #include "Components/AudioComponent.h"
 #include "Kismet/GameplayStatics.h"
@@ -312,8 +314,16 @@ UAudioComponent* ULWAudioCatalog::PlaySlot(const UObject* WorldContextObject, FN
     const float Pitch = FMath::Clamp(Settings.Pitch * (FMath::IsFinite(PitchMultiplier) ? PitchMultiplier : 1.f), .125f, 4.f);
     if (Volume <= 0.f) return nullptr;
     USoundBase* Sound = LWAudio::PlaybackSound(Resolved);
-    if (bListenerRelative || Settings.bMusic || Settings.Attenuation == ELWAudioAttenuation::None)
+    if (Settings.bMusic || (!bListenerRelative && Settings.Attenuation == ELWAudioAttenuation::None))
         return UGameplayStatics::SpawnSound2D(WorldContextObject, Sound, Volume, Pitch);
+
+    if (bListenerRelative)
+    {
+        // Local reports retain their consistent dry volume and pick up room reflections only.
+        auto* A=UGameplayStatics::CreateSound2D(WorldContextObject,Sound,Volume,Pitch);
+        if(A){A->bIsUISound=false;FSoundAttenuationSettings Local;Local.bAttenuate=false;Local.bSpatialize=false;Local.bEnableReverbSend=Settings.bEnvironmentalProcessing;A->AdjustAttenuation(Local);A->Play();if(Settings.bEnvironmentalProcessing)if(auto* W=A->GetWorld())if(auto* Acoustics=W->GetSubsystem<ULWAcoustics64>())Acoustics->Track(A,SlotName,Local,true);}
+        return A;
+    }
 
     USoundAttenuation* Attenuation = DefaultAttenuation;
     if (Settings.Attenuation == ELWAudioAttenuation::Loud || (Settings.Attenuation == ELWAudioAttenuation::Inherit && bLoud))
@@ -322,7 +332,9 @@ UAudioComponent* ULWAudioCatalog::PlaySlot(const UObject* WorldContextObject, FN
     {
         if (USoundAttenuation* Custom = Settings.CustomAttenuation.LoadSynchronous()) Attenuation = Custom;
     }
-    return UGameplayStatics::SpawnSoundAtLocation(WorldContextObject, Sound, Location, FRotator::ZeroRotator, Volume, Pitch, 0.f, Attenuation);
+    auto* A=UGameplayStatics::SpawnSoundAtLocation(WorldContextObject, Sound, Location, FRotator::ZeroRotator, Volume, Pitch, 0.f, Attenuation);
+    if(A&&Settings.bEnvironmentalProcessing)if(auto* W=A->GetWorld())if(auto* Acoustics=W->GetSubsystem<ULWAcoustics64>())Acoustics->Track(A,SlotName,Attenuation?Attenuation->Attenuation:FSoundAttenuationSettings());
+    return A;
 }
 
 int32 ULWAudioCatalog::AddMissingDefaultSlots()

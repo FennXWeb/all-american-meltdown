@@ -1,3 +1,4 @@
+#include "LWGeography84.h"
 #include "LWBoss48.h"
 #include "LWWorld.h"
 #include "LWZombie.h"
@@ -7,10 +8,13 @@
 #include "EngineUtils.h"
 #include "Kismet/GameplayStatics.h"
 void ALWWorld::SpawnRoamingBoss(ALWChunk* C){
+ if(!C)return;
+ if(LWNY69::WaterDepth(FVector2D(C->GetActorLocation())+FVector2D(6400))>0)return;
+ if(C&&LWGeography84::Canada(FVector2D(C->GetActorLocation())))return;
  if(!C)return;const uint32 Id=LWGen::Hash(C->Coordinate.X,C->Coordinate.Y,Seed,29010);const int K=LWBoss48::Kind(Id);
  if(K==INDEX_NONE||KilledZombies.Contains(Id))return;
  // Ordinary population must not consume the entire budget for these encounters.
- int Alive=0;for(TActorIterator<ALWZombie> I(GetWorld());I;++I){if(I->PersistentId==Id)return;if(!I->bDead&&int(I->Kind)>=9)++Alive;}if(Alive>=3)return;
+ int Alive=0;for(TActorIterator<ALWZombie> I(GetWorld());I;++I){if(I->PersistentId==Id)return;if(!I->bDead&&int(I->Kind)>=9&&int(I->Kind)<=11)++Alive;}if(Alive>=1)return;
  const FVector2D Center(C->GetActorLocation()+FVector(LWGen::ChunkSize*.5,LWGen::ChunkSize*.5,0));
  TArray<LWGen::FRoad> Roads;TArray<LWGen::FSite> Sites;LWGen::Gather(Center,Seed,Roads,Sites);
  auto* Player=UGameplayStatics::GetPlayerPawn(this,0);FRandomStream Rand(Id^0x4819u);

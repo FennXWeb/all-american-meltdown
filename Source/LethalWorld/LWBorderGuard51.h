@@ -1,8 +1,8 @@
 #pragma once
-#include "LWZombie.h"
+#include "LWResident.h"
 #include "LWBorderGuard51.generated.h"
 UCLASS()
-class LETHALWORLD_API ALWBorderGuard51 : public ALWZombie {
+class LETHALWORLD_API ALWBorderGuard51 : public ALWResident {
  GENERATED_BODY()
 public:
  virtual void Tick(float Dt) override;

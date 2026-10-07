@@ -1,4 +1,5 @@
 #include "LWResident.h"
+#include "LWDialogue59.h"
 #include "LWWeaponEffect.h"
 #include "LWWorld.h"
 #include "LWCharacter.h"
@@ -12,8 +13,8 @@ bool ALWResident::IsTownHostile()const{auto* P=Cast<ALWCharacter>(UGameplayStati
 void ALWResident::AlertTown(){
  if(!World||SettlementId.IsNone())return;
  if(auto* P=Cast<ALWCharacter>(UGameplayStatics::GetPlayerPawn(this,0)))P->ChangeReputation(SettlementId,-15,true);
- for(TActorIterator<ALWResident> It(GetWorld());It;++It)if(It->SettlementId==SettlementId){It->ChatterTime=30;It->Say(TEXT("Hostile in town! Take cover!"));}
- if(auto* P=Cast<ALWCharacter>(UGameplayStatics::GetPlayerPawn(this,0))){P->ClosePanels();P->Notify(TEXT("SETTLEMENT ALERTED // REPUTATION LOST"));P->RequestSave40();}
+ for(TActorIterator<ALWResident> It(GetWorld());It;++It)if(It->SettlementId==SettlementId){It->ChatterTime=30;}
+ if(auto* P=Cast<ALWCharacter>(UGameplayStatics::GetPlayerPawn(this,0))){P->ClosePanels();ULWDialogue59::Channel(this)->Chatter75(ResidentId,Appearance35.Body==1,TEXT("settler_alarm"),true);P->Notify(TEXT("SETTLEMENT ALERTED // REPUTATION LOST"));P->RequestSave40();}
 }
 bool ALWResident::DefendSettlement(ALWCharacter* P){
  if(SettlementId.IsNone()||!World||!P||P->bSafehouse)return false;
@@ -24,6 +25,7 @@ bool ALWResident::DefendSettlement(ALWCharacter* P){
   &&(LWThreatAwareness::Engaged(*It,this)||LWThreatAwareness::Engaged(*It,P)))Consider(*It);
  if(Gun)Gun->SetVisibility(Target!=nullptr||NpcRole==TEXT("recruit"));
  if(!Target)return false;
+ ULWDialogue59::Channel(this)->Chatter75(ResidentId,Appearance35.Body==1,TEXT("settler_alarm"),true);
  GetCharacterMovement()->StopMovementImmediately();
  const FVector Eye=GetActorLocation()+FVector(0,0,45),Dir=(Target->GetActorLocation()-Eye).GetSafeNormal();SetActorRotation(FRotator(0,Dir.Rotation().Yaw,0));
  if(FireTime<=0&&CanUseGun()){

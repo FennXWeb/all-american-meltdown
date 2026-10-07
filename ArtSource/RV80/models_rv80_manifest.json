@@ -1,0 +1,443 @@
+{
+  "assets": [
+    {
+      "name": "RV80_Interior",
+      "fbx": "SM_RV80_Interior.fbx",
+      "asset": "/Game/Art/Meshes/SM_RV80_Interior",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -9.799999,
+          -1.2015,
+          0.6125
+        ],
+        "max": [
+          2.1,
+          1.2015,
+          3.3375
+        ],
+        "size": [
+          11.899999,
+          2.403,
+          2.725
+        ]
+      },
+      "triangles": 2296,
+      "vertices": 1298,
+      "material_slots": [
+        "M_RV66_Black",
+        "M_RV66_Chrome",
+        "M_RV66_Ivory",
+        "M_RV66_Light",
+        "M_RV66_Walnut"
+      ],
+      "boundary_edges": 0,
+      "collision": "none",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "RV80_Joinery",
+      "fbx": "SM_RV80_Joinery.fbx",
+      "asset": "/Game/Art/Meshes/SM_RV80_Joinery",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -9.7375,
+          -1.265,
+          0.61
+        ],
+        "max": [
+          2.16,
+          1.28,
+          3.35
+        ],
+        "size": [
+          11.8975,
+          2.545,
+          2.74
+        ]
+      },
+      "triangles": 1056,
+      "vertices": 576,
+      "material_slots": [
+        "M_RV66_Black",
+        "M_RV66_Ivory"
+      ],
+      "boundary_edges": 0,
+      "collision": "none",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "RV80_SlideSeal",
+      "fbx": "SM_RV80_SlideSeal.fbx",
+      "asset": "/Game/Art/Meshes/SM_RV80_SlideSeal",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -1.39,
+          0.0,
+          -0.04
+        ],
+        "max": [
+          1.39,
+          0.36,
+          2.64
+        ],
+        "size": [
+          2.78,
+          0.36,
+          2.68
+        ]
+      },
+      "triangles": 48,
+      "vertices": 32,
+      "material_slots": [
+        "M_RV66_Ivory",
+        "M_RV66_Walnut"
+      ],
+      "boundary_edges": 0,
+      "collision": "none",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "RV80_Radio",
+      "fbx": "SM_RV80_Radio.fbx",
+      "asset": "/Game/Art/Meshes/SM_RV80_Radio",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.046,
+          -0.1375,
+          -0.0625
+        ],
+        "max": [
+          0.033,
+          0.1375,
+          0.0625
+        ],
+        "size": [
+          0.079,
+          0.275,
+          0.125
+        ]
+      },
+      "triangles": 1328,
+      "vertices": 720,
+      "material_slots": [
+        "M_RV66_Black",
+        "M_RV66_Chrome",
+        "M_RV66_Glass",
+        "M_RV66_Light"
+      ],
+      "boundary_edges": 0,
+      "collision": "none",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "RV80_Rocker",
+      "fbx": "SM_RV80_Rocker.fbx",
+      "asset": "/Game/Art/Meshes/SM_RV80_Rocker",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.029,
+          -0.045,
+          -0.0335
+        ],
+        "max": [
+          0.019,
+          0.045,
+          0.0335
+        ],
+        "size": [
+          0.048,
+          0.09,
+          0.067
+        ]
+      },
+      "triangles": 176,
+      "vertices": 96,
+      "material_slots": [
+        "M_RV66_Black",
+        "M_RV66_Chrome",
+        "M_RV66_Light"
+      ],
+      "boundary_edges": 0,
+      "collision": "none",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "RV80_Stalk",
+      "fbx": "SM_RV80_Stalk.fbx",
+      "asset": "/Game/Art/Meshes/SM_RV80_Stalk",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.0145,
+          -0.000566,
+          -0.033941
+        ],
+        "max": [
+          0.0145,
+          0.236287,
+          0.006977
+        ],
+        "size": [
+          0.029,
+          0.236853,
+          0.040918
+        ]
+      },
+      "triangles": 284,
+      "vertices": 152,
+      "material_slots": [
+        "M_RV66_Black",
+        "M_RV66_Chrome"
+      ],
+      "boundary_edges": 0,
+      "collision": "none",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "RV80_Ignition",
+      "fbx": "SM_RV80_Ignition.fbx",
+      "asset": "/Game/Art/Meshes/SM_RV80_Ignition",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          -0.032,
+          -0.023,
+          -0.023
+        ],
+        "max": [
+          0.01,
+          0.023,
+          0.023
+        ],
+        "size": [
+          0.042,
+          0.046,
+          0.046
+        ]
+      },
+      "triangles": 212,
+      "vertices": 112,
+      "material_slots": [
+        "M_RV66_Black",
+        "M_RV66_Chrome"
+      ],
+      "boundary_edges": 0,
+      "collision": "none",
+      "animation": "",
+      "sockets_m": {}
+    },
+    {
+      "name": "RV80_ElectricLowerDash",
+      "fbx": "SM_RV80_ElectricLowerDash.fbx",
+      "asset": "/Game/Art/Meshes/SM_RV80_ElectricLowerDash",
+      "parent": null,
+      "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+      "rest_location_m": [
+        0,
+        0,
+        0
+      ],
+      "rest_location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation_degrees_xyz": [
+        0,
+        0,
+        0
+      ],
+      "rest_scale": [
+        1,
+        1,
+        1
+      ],
+      "local_bounds_m": {
+        "min": [
+          1.083,
+          -1.08,
+          0.86
+        ],
+        "max": [
+          1.35,
+          1.08,
+          1.59
+        ],
+        "size": [
+          0.267,
+          2.16,
+          0.73
+        ]
+      },
+      "triangles": 160,
+      "vertices": 88,
+      "material_slots": [
+        "M_RV66_Black",
+        "M_RV66_Chrome",
+        "M_RV66_Ivory"
+      ],
+      "boundary_edges": 0,
+      "collision": "none",
+      "animation": "",
+      "sockets_m": {}
+    }
+  ]
+}

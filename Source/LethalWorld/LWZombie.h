@@ -5,7 +5,7 @@
 #include "LWZombie.generated.h"
 class ALWCharacter;
 UENUM()
-enum class ELWEnemyKind:uint8 {Zombie,Raider,Dog,Mannequin,Moose,Titan,Deathclaw,Scorpion,Karen,Behemoth,Colossus,WorldEater};
+enum class ELWEnemyKind:uint8 {Zombie,Raider,Dog,Mannequin,Moose,Titan,Deathclaw,Scorpion,Karen,Behemoth,Colossus,WorldEater,Hornet,Bear,RogueAI};
 UCLASS()
 class LETHALWORLD_API ALWZombie : public ACharacter
 {
@@ -46,10 +46,11 @@ public:
     bool TickStatus(float Dt);
     uint8 SeveredMask=0;float BloodTime=-100;float LimbDamage[7]={};
     bool bCrawling=false;
+    FName ChallengeWeapon62;bool ChallengeHead62=false,StunCredited62=false;
     float HeadlessTime=0;FVector HeadlessDirection=FVector::ForwardVector;
     TWeakObjectPtr<AActor> InjuryCauser;TWeakObjectPtr<AController> InjuryInstigator;
     bool Missing(int Part)const{return (SeveredMask&(1<<Part))!=0;}
-    float BodyMassScale()const{return Kind==ELWEnemyKind::Behemoth?135.f:Kind==ELWEnemyKind::Colossus?3645.f:Kind==ELWEnemyKind::WorldEater?1000.f:Kind==ELWEnemyKind::Titan?5.f:Kind==ELWEnemyKind::Moose?4.f:Kind==ELWEnemyKind::Deathclaw?3.f:Kind==ELWEnemyKind::Dog?.45f:1.f;}
+    float BodyMassScale()const{return Kind==ELWEnemyKind::Behemoth?135.f:Kind==ELWEnemyKind::Colossus?3645.f:Kind==ELWEnemyKind::WorldEater?1000.f:Kind==ELWEnemyKind::Titan?5.f:Kind==ELWEnemyKind::Bear||Kind==ELWEnemyKind::Moose?4.f:Kind==ELWEnemyKind::Deathclaw?3.f:Kind==ELWEnemyKind::RogueAI?1.5f:Kind==ELWEnemyKind::Hornet||Kind==ELWEnemyKind::Dog?.45f:1.f;}
     float InjurySpeed()const;float InjuryAttackDelay()const;bool CanUseGun()const;
     void TickInjuries(float Dt,ALWCharacter* P);
     void RagdollForce(FVector Velocity,FVector Contact,float Strength=1);
@@ -62,6 +63,10 @@ public:
     bool bAggressive=false;
     int32 RaiderRounds=12;
     void ConfigureKind(ELWEnemyKind InKind);
+    void Configure57();void Tick57(float Dt,ALWCharacter* P);
+    UPROPERTY() TArray<TObjectPtr<UStaticMeshComponent>> Wings57;
+    UPROPERTY() TObjectPtr<class UAudioComponent> WingsAudio57;
+    float SpecialClock57=0;FVector AttackGoal57=FVector::ZeroVector;
  void ConfigureCreature();void TickCreature(float Dt,ALWCharacter* P);
  void TickBrain(float Dt,ALWCharacter* P);
  float DecisionClock=0,AttackWindup=0,ReloadClock=0,ContactMemory=0; bool HasVisual=false; FVector TacticalGoal,CommittedAttack; int32 Tactic=0;

@@ -1,0 +1,21 @@
+{
+  "generator": "Built-in image_gen",
+  "generated_on": "2026-10-07",
+  "assets": [
+    {
+      "name": "header",
+      "transparent": false,
+      "prompt": "Use case: ads-marketing. Create wide 2.4:1 landscape illustrated game key art for All American Meltdown, an original post-apocalyptic survival road trip game in upstate New York in 2030. Art for SMOG launcher header, target 2400x1000. Late PS2/early PS3 game-box painted concept art: a lone scavenger and two companions near a battered luxury motorhome on a cracked wet highway overlooking a ruined American city beside a broad cold lake; abandoned vehicles, damaged road signs without readable words, distant airport and a small private jet in the atmospheric sky. Moody storm-blue and charcoal with ember-orange sunlight breaking through smoke. Rich environmental detail, coherent perspective, cinematic composition, readable silhouettes. Keep meaningful action in central safe area and allow subtle quiet darker corners for launcher overlays. No lettering, no logo, no UI, no watermark. Clearly illustrated promotional art, not a screenshot or photorealism."
+    },
+    {
+      "name": "logo",
+      "transparent": true,
+      "prompt": "Use case: logo-brand. Generate a new original transparent-background game wordmark for ALL AMERICAN MELTDOWN. Wide approximately 3:1 format, target1200x400. EXACT text ALL AMERICAN on upper row, MELTDOWN larger below; every letter legible, no other words. Worn embossed cream metal top lettering and burnt orange molten-edged bottom lettering, dark navy steel backing and small distressed American star with radiation-symbol center, restrained ember highlights. Retro survival horror game box identity. Only the self-contained logo, no scenery, no background color, no rectangular backdrop, no opaque glow. Crisp silhouette and tasteful weathering, truly transparent alpha outside the letters/emblem. Keep the design within safe margins and readable at thumbnail scale."
+    },
+    {
+      "name": "icon",
+      "transparent": true,
+      "prompt": "Use case: logo-brand. Create a square Windows game application icon for All American Meltdown. A bold distressed ivory five-point American star inset into a dark navy steel circular badge, a simple black radiation trefoil on warm orange center, subtle ember-orange chipped rim. Highly readable strong silhouette at16,32,48 and256pixels. Compact dimensional painted-metal videogame emblem, consistent with retro post-apocalyptic box art. No text or small decorative details, no scenery, no rectangular backdrop. Real transparent alpha outside the emblem with generous clear edge margin. 1024x1024 PNG source intended for multi-size ICO conversion."
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "checks": {
+    "96_hair_locks": true,
+    "hair_moves_on_mesh": true,
+    "bounded_hair_motion": true,
+    "face_uv_eye_height": true,
+    "all_source_images_packed": true,
+    "finite_vertices": true,
+    "fbx_exists": true
+  },
+  "max_hair_displacement_m": 0.015042367933960658,
+  "all_passed": true
+}

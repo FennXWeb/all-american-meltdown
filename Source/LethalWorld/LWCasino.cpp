@@ -1,3 +1,4 @@
+#include "LWInteriors65.h"
 #include "LWWorld.h"
 #include "LWVehicle.h"
 #include "LWResident.h"
@@ -8,6 +9,7 @@
 #include "Components/PointLightComponent.h"
 #include "Engine/World.h"
 void ALWChunk::BuildingCasino(ALWWorld* W,const LWGen::FSite& S){
+ LWInteriors65::FScope Interior65(this,W,S);
  const FRotator R(0,S.Yaw,0);const FVector Base=FVector(S.Position,12)-GetActorLocation();int Serial=0;FRandomStream Random(S.Id);
  auto At=[&](FVector V){return Base+R.RotateVector(V+FVector(0,2000,0));};
  auto B=[&](FName M,FVector V,FVector Size){Box(W,M,At(V),Size,R);};
@@ -15,7 +17,7 @@ void ALWChunk::BuildingCasino(ALWWorld* W,const LWGen::FSite& S){
  auto Id=[&](){return FName(*FString::Printf(TEXT("resort_%u_%d"),S.Id,Serial++));};
  auto Object=[&](ELWObjectKind K,FVector V,float Yaw=0){auto* O=W->SpawnObject(K,Id(),GetActorLocation()+At(V),R+FRotator(0,Yaw,0));if(O)Residents.Add(O);return O;};
  auto Furniture=[&](FName Type,FVector V,float Yaw=0){if(auto* O=Object(ELWObjectKind::Furniture,V,Yaw))O->SetFurniture(Type);};
- auto Chair=[&](FVector V,float Yaw=0){if(auto* O=Object(ELWObjectKind::Furniture,V,Yaw)){O->SetFurniture(TEXT("chair"));O->Body->SetStaticMesh(W->Mesh(TEXT("CasinoChairV21")));}};
+ auto Chair=[&](FVector V,float Yaw=0){if(auto* O=Object(ELWObjectKind::Furniture,V,Yaw)){O->SetFurniture(TEXT("chair"));O->Body->SetStaticMesh(W->Mesh(TEXT("CasinoChairV21")));O->Body->SetRelativeRotation(FRotator::ZeroRotator);}};
  auto Loot=[&](FName M,FVector V,int Lock=0){if(auto* O=Object(ELWObjectKind::Container,V)){W->EnsureSiteContainer(O->RecordId,S,O->GetActorLocation(),Lock);O->Body->SetStaticMesh(W->Mesh(M));}};
  auto Text=[&](FString Words,FVector V,float Size=35){auto* T=NewObject<ULWWorldTextComponent>(this);T->SetupAttachment(RootComponent);T->SetRelativeLocation(At(V));T->SetRelativeRotation(R+FRotator(0,-90,0));T->SetHorizontalAlignment(EHTA_Center);T->SetWorldSize(Size);T->SetTextRenderColor(FColor(235,190,90));T->SetText(FText::FromString(Words));T->RegisterComponent();};
  auto Glass=[&](FVector V,FVector Size){FName Key(*FString::Printf(TEXT("casino_glass_%u_%d_%d_%d"),S.Id,int(V.X),int(V.Y),int(V.Z)));if(auto* O=W->SpawnObject(ELWObjectKind::Window,Key,GetActorLocation()+At(V),R)){O->Body->SetRelativeScale3D(Size/100);Residents.Add(O);}};
@@ -41,6 +43,8 @@ void ALWChunk::BuildingCasino(ALWWorld* W,const LWGen::FSite& S){
   for(int Side:{-1,1}){B(TEXT("CasinoGold21"),FVector(Side*4968,0,Z+395),FVector(28,8000,26));for(int J=0;J<6;J++){FVector V(Side*4900,-3200+J*1250,Z);B(TEXT("CasinoGold21"),V+FVector(0,0,240),FVector(25,340,210));B(TEXT("CasinoVelvet21"),V+FVector(-Side*16,0,240),FVector(8,310,180));Model(TEXT("PlazaPlanterV18"),V+FVector(-Side*120,0,0));}}
   for(int J=0;J<4;J++){Loot(TEXT("CabinetV3"),FVector(-4600+J*1800,3650,Z),F>3?2:0);}
 
+  if(F==2)for(int Side:{-1,1})B(TEXT("CasinoVelvet21"),FVector(2730,Side*2400,Z+204),FVector(18,2800,408));
+  if(F==4||F==5)for(int Side:{-1,1})B(TEXT("CasinoVelvet21"),FVector(3300,Side*2450,Z+204),FVector(24,3100,408));
   // Floor opening is retained on every level for the incoming switchback stair.
   B(TEXT("CasinoMarble21"),FVector(-675,0,Z-8),FVector(8650,8000,16));
   B(TEXT("CasinoMarble21"),FVector(4325,-2210,Z-8),FVector(1350,3580,16));B(TEXT("CasinoMarble21"),FVector(4325,2200,Z-8),FVector(1350,3600,16));
@@ -59,6 +63,19 @@ void ALWChunk::BuildingCasino(ALWWorld* W,const LWGen::FSite& S){
   B(TEXT("CasinoGold21"),FVector(3650,-30,Z+60),FVector(10,760,120));
   if(F<Floors-1){for(int I=0;I<12;I++){float H=(I+1)*FH/24;B(TEXT("CasinoMarble21"),FVector(3975,-420+(I+.5f)*32,Z+H-10),FVector(610,32,20));B(TEXT("CasinoMarble21"),FVector(4660,-36-(I+.5f)*32,Z+FH*.5f+H-10),FVector(610,32,20));}B(TEXT("CasinoMarble21"),FVector(4325,180,Z+FH*.5f-10),FVector(1350,432,20));}
   if(F<=1){
+   // Extra playable banks use their own IDs; the established resort loot and
+   // table IDs below must remain stable in existing saves.
+   for(int Row=0;Row<2;Row++)for(int Col=0;Col<7;Col++)for(int Bank=0;Bank<4;Bank++){
+    const FVector V(-3900+Col*1000+(Bank-1.5f)*150,1625+Row*850,Z);
+    const FName Key(*FString::Printf(TEXT("casino65_slot_%u_%d_%d_%d_%d"),S.Id,F,Row,Col,Bank));
+    if(auto* Slot=GetWorld()->SpawnActor<ALWSlotMachine>(GetActorLocation()+At(V),R)){Slot->Setup(W,Key);Residents.Add(Slot);}
+    if(auto* Seat=W->SpawnObject(ELWObjectKind::Furniture,FName(*(Key.ToString()+TEXT("_seat"))),GetActorLocation()+At(V+FVector(0,-135,0)),R)){Seat->SetFurniture(TEXT("chair"));Seat->Body->SetStaticMesh(W->Mesh(TEXT("CasinoChairV21")));Seat->Body->SetRelativeRotation(FRotator::ZeroRotator);Seat->SetActorTickEnabled(false);Residents.Add(Seat);}
+   }
+   for(int Col=0;Col<4;Col++){
+    const FVector V(-3600+Col*1800,-2425,Z);const FName Key(*FString::Printf(TEXT("casino65_table_%u_%d_%d"),S.Id,F,Col));
+    if(auto* Table=GetWorld()->SpawnActor<ALWCardTable>(GetActorLocation()+At(V),R)){Table->Setup(W,Key,Col%3);Residents.Add(Table);}
+    for(int Side:{-1,1})if(auto* Seat=W->SpawnObject(ELWObjectKind::Furniture,FName(*FString::Printf(TEXT("%s_seat_%d"),*Key.ToString(),Side)),GetActorLocation()+At(V+FVector(0,Side*150,0)),R+FRotator(0,Side>0?180:0,0))){Seat->SetFurniture(TEXT("chair"));Seat->Body->SetStaticMesh(W->Mesh(TEXT("CasinoChairV21")));Seat->Body->SetRelativeRotation(FRotator::ZeroRotator);Seat->SetActorTickEnabled(false);Residents.Add(Seat);}
+   }
    for(int Row=0;Row<3;Row++)for(int Col=0;Col<7;Col++)for(int Bank=0;Bank<4;Bank++){FVector V(-3900+Col*1000+(Bank-1.5f)*150,1200+Row*850,Z);auto* Slot=GetWorld()->SpawnActor<ALWSlotMachine>(GetActorLocation()+At(V),R);if(Slot){Slot->Setup(W,Id());Residents.Add(Slot);}Chair(V+FVector(0,-135,0));}
    for(int Row=0;Row<2;Row++)for(int Col=0;Col<4;Col++)for(int Pair=0;Pair<2;Pair++){FVector V(-3600+Col*1800+(Pair?350:-350),-1700-Row*1450,Z);auto* Table=GetWorld()->SpawnActor<ALWCardTable>(GetActorLocation()+At(V),R);if(Table){Table->Setup(W,Id(),Col%3);Residents.Add(Table);}for(int Side:{-1,1})Chair(V+FVector(0,Side*150,0),Side>0?180:0);}
    Loot(TEXT("CasinoCounterV21"),FVector(-4300,-500,Z));Text(TEXT("CASHIER"),FVector(-4300,-550,Z+175));if(F==0)NPC(FVector(-4300,-300,Z),TEXT("civilian"),TEXT("Marlowe Voss"));

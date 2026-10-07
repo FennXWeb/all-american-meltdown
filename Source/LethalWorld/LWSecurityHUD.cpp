@@ -30,14 +30,14 @@ void ALWHUD::SecurityScreen(ALWCharacter* P){
 }
 void ALWHUD::VehicleOverlay(ALWCharacter* P){auto* C=P->Vehicle.Get();if(!C||!C->Record())return;float W=Canvas->SizeX/Scale;
  Rect(304,630,W-745,61,FLinearColor(.015f,.03f,.02f,.60f));Text(FString::Printf(TEXT("%03d KM/H  %s  %s"),FMath::RoundToInt(FMath::Abs(C->Speed)*.036f),C->Speed< -5?TEXT("REV"):TEXT("DRV"),C->EngineOn?TEXT("ENGINE ON"):TEXT("IGNITION OFF")),315,636,.85);
- const float Capacity=C->FuelCapacity(),Fuel=C->FuelLitres();
+ const float Capacity=C->IsElectric74()?C->BatteryCapacity74():C->FuelCapacity(),Fuel=C->IsElectric74()?C->BatteryCharge74():C->FuelLitres();
  const float Fraction=Capacity>0?FMath::Clamp(Fuel/Capacity,0.f,1.f):0.f;
  const FLinearColor FuelColor=Fuel<=0?FLinearColor(.95f,.25f,.12f):Fraction<=.15f?FLinearColor(.95f,.65f,.2f):FLinearColor(.55f,.8f,.45f);
- Text(FString::Printf(TEXT("FUEL %.1f / %.0f L%s"),Fuel,Capacity,Fuel<=0?TEXT(" // EMPTY"):Fraction<=.15f?TEXT(" // LOW"):TEXT("")),315,655,.75f,FuelColor);
+ Text(FString::Printf(TEXT("%s %.1f / %.0f %s%s"),C->IsElectric74()?TEXT("BATTERY"):TEXT("FUEL"),Fuel,Capacity,C->IsElectric74()?TEXT("kWh"):TEXT("L"),Fuel<=0?TEXT(" // EMPTY"):Fraction<=.15f?TEXT(" // LOW"):TEXT("")),315,655,.75f,FuelColor);
  const float GaugeWidth=FMath::Max(0.f,W-1053.f);
  Rect(600,660,GaugeWidth,6,FLinearColor(.18f,.23f,.19f,.9f));
  if(Fraction>0)Rect(600,660,GaugeWidth*Fraction,6,FuelColor);
- Text(FString::Printf(TEXT("VIN %s // %s"),*C->Record()->VIN.ToString(EGuidFormats::Digits).Left(12),C->Record()->Hotwired?TEXT("BYPASSED"):P->HasKey(C->Record()->VIN)?TEXT("KEY MATCH"):TEXT("NO KEY")),315,675,.8f);
+ Text(C->IsHelicopter57()?FString::Printf(TEXT("ALT %.0f M / ROTOR %.0f%%"),C->Altitude57/100,C->RotorSpeed57*100):C->HasTurret57()?FString::Printf(TEXT("TURRET %d / HEAT %.0f%% %s"),C->Record()->TurretRounds57,C->TurretHeat57*100,C->ReloadClock57>0?TEXT("LOADING"):TEXT("")):FString::Printf(TEXT("VIN %s // %s"),*C->Record()->VIN.ToString(EGuidFormats::Digits).Left(12),C->Record()->Hotwired?TEXT("BYPASSED"):P->HasKey(C->Record()->VIN)?TEXT("KEY MATCH"):TEXT("NO KEY")),315,675,.8f);
  Text(TEXT("[G] GLOVE [T] RADIO [F] LIGHTS [V] WIPERS [Z] / [X] SIGNALS [E] USE / EXIT"),304,597,.8f);
  if(C->Signal)Text(C->Signal<0?TEXT("<<"):TEXT(">>"),W*.5,80,2,FLinearColor(.5f,.9f,.3f));
 }

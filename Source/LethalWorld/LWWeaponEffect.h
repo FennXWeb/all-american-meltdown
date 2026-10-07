@@ -15,7 +15,7 @@ public:
  FVector Velocity=FVector::ZeroVector;
  float Power=0,Age=0,Duration=1;
  int32 Mode=0; // 0 missile, 1 flame, 2 short-lived impact flash
- FName Modifier;
+ FName Modifier,SourceWeapon62;
  TSet<FName> Perks39;
  void Initialize(ALWCharacter* Player,FVector Direction,int32 EffectMode,float Damage,FName Perk=NAME_None);
  void Detonate();

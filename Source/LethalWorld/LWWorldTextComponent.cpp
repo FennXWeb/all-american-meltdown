@@ -1,5 +1,7 @@
 #include "LWWorldTextComponent.h"
 #include "Engine/World.h"
+#include "LWSlotMachine.h"
+#include "LWWorld.h"
 #include "GameFramework/PlayerController.h"
 
 ULWWorldTextComponent::ULWWorldTextComponent()
@@ -12,6 +14,8 @@ ULWWorldTextComponent::ULWWorldTextComponent()
 void ULWWorldTextComponent::OnRegister()
 {
     Super::OnRegister();
+    // Animated slot reels are appliance displays. POI labels never render as floating glyphs.
+    if(GetOwner()&&!Cast<ALWSlotMachine>(GetOwner()))SetVisibility(false);
     if (GetWorld()) if (auto* Updates = GetWorld()->GetSubsystem<ULWWorldTextSubsystem>()) Updates->Add(this);
 }
 
@@ -57,10 +61,15 @@ void ULWWorldTextSubsystem::Tick(float DeltaTime)
     FRotator View;
     PC->GetPlayerViewPoint(Eye, View);
     const int32 Count = FMath::Min(MaxLabelsPerFrame,Labels.Num());
+    int Built=0;
     for (int32 I=0; I<Count && !Labels.IsEmpty(); ++I)
     {
-        Cursor %= Labels.Num();
-        if (auto* Label = Labels[Cursor].Get()) { Label->UpdateFacing(Eye); ++Cursor; }
-        else Labels.RemoveAtSwap(Cursor);
+        Cursor %= Labels.Num();auto* Label=Labels[Cursor].Get();
+        if(!Label){Labels.RemoveAtSwap(Cursor);continue;}
+        if(Cast<ALWSlotMachine>(Label->GetOwner())){Label->UpdateFacing(Eye);++Cursor;continue;}
+        if(auto* Chunk=Cast<ALWChunk>(Label->GetOwner());Chunk&&!Chunk->Ready68){++Cursor;continue;}
+        // No runtime render-target burst when a city chunk is populated.
+        if(Built>=1||FVector::DistSquared(Eye,Label->GetComponentLocation())>FMath::Square(16000.f)){++Cursor;continue;}
+        Mount78(Label);++Built;Labels.RemoveAtSwap(Cursor);
     }
 }

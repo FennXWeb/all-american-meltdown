@@ -1,0 +1,115 @@
+{
+  "schema": 1,
+  "groups": {
+    "companion_travel": [
+      "I'll watch our backs. You pick the route.",
+      "Used to complain about traffic. Imagine that.",
+      "Check the corners. I'll check the windows.",
+      "If we find coffee, I'm calling that a victory.",
+      "There's still good stuff out here. Just takes looking.",
+      "Let me know if you need a breather.",
+      "I'd rather walk with you than sit worrying at home.",
+      "Keep a little water in reserve. Learned that the hard way.",
+      "Funny what survives. Street signs outlasted the country.",
+      "We should mark a way back before we go too far.",
+      "I miss hearing somebody mow their lawn.",
+      "One decent meal and a dry bed. That's the dream."
+    ],
+    "companion_combat": [
+      "Contact! Stay behind something solid!",
+      "I've got this angle. Watch your side!",
+      "Don't rush them. Make them come to us!",
+      "Still fighting! Stay with me!",
+      "Keep your head down. I'm here!",
+      "We can get through this. Keep moving!"
+    ],
+    "companion_hurt": [
+      "I'm bleeding. Could use a moment.",
+      "That one got me. Don't go too far.",
+      "Still standing. Barely."
+    ],
+    "companion_rain": [
+      "So much for keeping my socks dry.",
+      "Rain's covering our footsteps. Their footsteps too.",
+      "Next roof we find, let's take a minute."
+    ],
+    "companion_night": [
+      "Can't see much out there. Listen carefully.",
+      "Never liked walking these roads after dark.",
+      "A few hours until daylight. We can manage."
+    ],
+    "companion_vehicle": [
+      "Nice to let something else do the walking.",
+      "I'll keep an eye out through the window.",
+      "A seat and a roof. We're moving up in the world."
+    ],
+    "settler_idle": [
+      "Morning or night, there's always something to mend.",
+      "If you find seeds out there, don't throw them away.",
+      "Been patching that same coat for years.",
+      "I still catch myself checking the mailbox.",
+      "Nobody here gets through this alone.",
+      "Wish I knew a recipe that didn't start with a tin.",
+      "You learn to appreciate a quiet day.",
+      "Take care on the roads, stranger.",
+      "Got to keep busy. Helps with everything else.",
+      "Someone ought to write all this down.",
+      "I'm saving up for a proper pair of boots.",
+      "A garden would make this place feel like home.",
+      "Never thought I'd miss paying rent.",
+      "If a hinge squeaks, oil it. Don't wake the whole street.",
+      "Good to see another living face."
+    ],
+    "settler_merchant": [
+      "Have a look. Something here might keep you alive.",
+      "Buying or selling? I can do either.",
+      "Don't need it yourself? Somebody else probably does."
+    ],
+    "settler_warden": [
+      "Need work? Take a look at the contracts.",
+      "Always jobs to do around here.",
+      "Bring back supplies and we'll make it worth your while."
+    ],
+    "settler_medic": [
+      "Keep that wound clean. Dirt's as dangerous as bullets.",
+      "If you're hurt, come see me before it gets worse.",
+      "Clean water and clean bandages. Can't have too many."
+    ],
+    "settler_canada": [
+      "Welcome to Toronto. Hope you enjoy your stay.",
+      "The shops take Canadian dollars. Try the exchange first.",
+      "Plenty to see around here. Take your time."
+    ],
+    "settler_alarm": [
+      "Trouble! Get everyone inside!",
+      "Find cover! Protect the town!",
+      "Stay away from the windows!"
+    ],
+    "raider_combat": [
+      "There! Keep shooting!",
+      "You're not walking out of this!",
+      "Come on! Show yourself!",
+      "Hold that corner!",
+      "Don't give them room!",
+      "Picked a bad place to wander!"
+    ],
+    "raider_search": [
+      "Where'd you go?",
+      "Keep looking. They're close.",
+      "Check behind that cover!",
+      "Stay sharp. I lost sight of them.",
+      "I know you're still here!",
+      "Watch the exits!"
+    ],
+    "raider_reload": [
+      "Reloading! Keep them back!",
+      "Need a second! Cover me!",
+      "Changing mags!"
+    ],
+    "raider_suppressed": [
+      "Get down! Get down!",
+      "Too much fire! Find cover!",
+      "Can't get a shot from here!"
+    ]
+  }
+}

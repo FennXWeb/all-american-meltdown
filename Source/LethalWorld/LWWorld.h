@@ -26,6 +26,14 @@ class LETHALWORLD_API ALWChunk : public AActor
     GENERATED_BODY()
 public:
     ALWChunk();
+    struct FBreakable60 {FName Id;FVector Anchor;TArray<TWeakObjectPtr<USceneComponent>> Parts;TWeakObjectPtr<USceneComponent> Pivot;FQuat Target=FQuat::Identity;float Fall=-1;};
+    TArray<FBreakable60> Breakables60;
+    FName BuildingProp60;
+    TSet<UActorComponent*> BeforeProp60;
+    void BeginProp60(FVector Local,const TCHAR* Kind);
+    void EndProp60();
+    bool BreakProp60(UPrimitiveComponent* Hit,FVector Direction,float Speed);
+    void TickProps60(float Dt);
     virtual void Tick(float Dt) override;
     UPROPERTY() TObjectPtr<class ALWWorld> LightingWorld;
     UPROPERTY() TArray<TObjectPtr<class UPointLightComponent>> StreetLights;
@@ -35,12 +43,21 @@ public:
     void BuildRoads33(class ALWWorld* W,const TArray<LWGen::FRoad>& Roads,const TArray<LWGen::FSite>& Sites);
     void TickTraffic33();
     FIntPoint Coordinate;
+    bool HighFlight84=false;
     UPROPERTY() TObjectPtr<UProceduralMeshComponent> Terrain;
     UPROPERTY() TMap<FName,TObjectPtr<UInstancedStaticMeshComponent>> Batches;
     UPROPERTY() TArray<TObjectPtr<AActor>> Residents;
     void Add(class ALWWorld* World,FName Mesh,FName Material,FVector Local,FVector Scale=FVector::OneVector,FRotator Rotation=FRotator::ZeroRotator,bool Collision=true);
     void Box(class ALWWorld* World,FName Material,FVector Local,FVector Size,FRotator Rotation=FRotator::ZeroRotator,bool Collision=true);
     void Generate(class ALWWorld* World);
+    void Wilderness78(class ALWWorld* W,const TArray<LWGen::FRoad>& Roads,const TArray<LWGen::FSite>& Sites);
+    void BuildingNewYork69(class ALWWorld* W,const LWGen::FSite& Site);
+    void BuildingCanada68(class ALWWorld* W,const LWGen::FSite& Site);
+    TSharedPtr<struct FLWChunkPlan68> Plan68;
+    int Stage68=0,SiteIndex68=0;bool Ready68=false,BufferInstances68=false,SyncCollision68=false;
+    TMap<FName,TArray<FTransform>> PendingInstances68;
+    TSet<FName> DirtySurfaces68;
+    bool BuildStep68(class ALWWorld* W);bool FlushInstances68();bool FlushSurface68();
     FBox2D MajorBounds=FBox2D(ForceInit);
     bool BuildingSurfaces=false;
     TMap<int32,TArray<TArray<FVector2D>>> SlabFootprints;
@@ -154,6 +171,14 @@ public:
     UAudioComponent* Sound(FName Name,FVector Position,float Volume=1,float Pitch=1,bool Loud=false);
     void Noise(FVector Position,float Radius);
     void Stream(FVector Position,bool Immediate=false);
+    void Stream68(FVector Position,bool Immediate=false);
+    TMap<FIntPoint,TSharedPtr<struct FLWChunkJob68>> Jobs68;
+    TSet<FIntPoint> RequiredChunks68;
+    UPROPERTY() TArray<TObjectPtr<ALWChunk>> Retiring68;
+    FIntPoint LastAhead68=FIntPoint(MAX_int32,MAX_int32);
+    double StreamMaxStep68=0;
+    TWeakObjectPtr<class ALWVehicle> BorderAircraft68;
+    float BorderCountdown68=0,CanadaSafetyClock68=0;
     void Reset();
     float HeightAt(FVector2D Position) const;
     static ALWWorld* Get(const UObject* Context);

@@ -1,3 +1,13 @@
+#include "LWAviationSky84.h"
+#include "LWAircraft84.h"
+#include "LWGeography84.h"
+#include "Misc/PackageName.h"
+#include "LWCanada68.h"
+#include "LWStreaming68.h"
+#include "LWInteriors65.h"
+#include "LWAppearance.h"
+#include "LWDialogue59.h"
+#include "LWGraphics33.h"
 #include "LWBorder51.h"
 #include "LWTradingCards36.h"
 #include "LWSiteIdentity.h"
@@ -36,12 +46,16 @@ ALWChunk::ALWChunk()
 {
     PrimaryActorTick.bCanEverTick=true;PrimaryActorTick.TickInterval=.5f;
     Terrain=CreateDefaultSubobject<UProceduralMeshComponent>(TEXT("Terrain")); SetRootComponent(Terrain);
-    Terrain->bUseAsyncCooking=false;
+    Terrain->bUseAsyncCooking=true;
     Terrain->SetCollisionProfileName(TEXT("BlockAll"));
 }
 void ALWChunk::Add(ALWWorld* W,FName MeshName,FName Mat,FVector P,FVector S,FRotator R,bool Collision)
 {
-    const FName Key(*(MeshName.ToString()+TEXT("_")+Mat.ToString()+(Collision?TEXT("_C"):TEXT("_N"))));
+    if(MeshName==TEXT("ChairV3")&&LWInteriors65::Replacement(MeshName)!=MeshName)R.Yaw+=90;
+    MeshName=LWInteriors65::Replacement(LWInteriors65::SupportedModel(this,MeshName,P));
+    LWInteriors65::CaptureMesh(this,W,MeshName,P,S,R,Collision);
+    FName Key(*((BuildingProp60.IsNone()?FString():BuildingProp60.ToString()+TEXT("_"))+MeshName.ToString()+TEXT("_")+Mat.ToString()+(Collision?TEXT("_C"):TEXT("_N"))));
+    if(BufferInstances68&&Plan68){const int Page=Plan68->InstanceCounts.FindOrAdd(Key)++/128;Key=FName(*(Key.ToString()+FString::Printf(TEXT("_page%d"),Page)));}
     UInstancedStaticMeshComponent* Batch=Batches.FindRef(Key);
     if(!Batch)
     {
@@ -50,12 +64,12 @@ void ALWChunk::Add(ALWWorld* W,FName MeshName,FName Mat,FVector P,FVector S,FRot
         if(Mat==TEXT("Asphalt"))Batch->ComponentTags.Add(TEXT("RoadSurface"));
         if(!Mat.IsNone()) Batch->SetMaterial(0,W->Material(Mat));
         Batch->SetCollisionProfileName(Collision?TEXT("BlockAll"):TEXT("NoCollision"));
-        Batch->SetCanEverAffectNavigation(false); Batch->RegisterComponent(); Batches.Add(Key,Batch);
+        Batch->SetCanEverAffectNavigation(false); AddInstanceComponent(Batch);if(!BufferInstances68)Batch->RegisterComponent(); Batches.Add(Key,Batch);
     }
-    Batch->AddInstance(FTransform(R,P,S));
+    if(BufferInstances68)PendingInstances68.FindOrAdd(Key).Add(FTransform(R,P,S));else Batch->AddInstance(FTransform(R,P,S));
 }
 void ALWChunk::Box(ALWWorld* W,FName Mat,FVector P,FVector Size,FRotator R,bool Collision)
-{ if(Size.Z<=30&&Size.X>=150&&Size.Y>=150&&FMath::Abs(R.Pitch)<.01&&FMath::Abs(R.Roll)<.01)AddSlab(W,Mat,P,Size,R,Collision);else Add(W,TEXT("Cube"),Mat,P,Size/100.,R,Collision); }
+{ Mat=LWInteriors65::Surface(Mat); LWInteriors65::CaptureBox(this,Mat,P,Size,R,Collision); if(BuildingProp60.IsNone()&&Size.Z<=30&&Size.X>=150&&Size.Y>=150&&FMath::Abs(R.Pitch)<.01&&FMath::Abs(R.Roll)<.01)AddSlab(W,Mat,P,Size,R,Collision);else Add(W,TEXT("Cube"),Mat,P,Size/100.,R,Collision); }
 
 void ALWChunk::Generate(ALWWorld* W)
 {
@@ -77,7 +91,7 @@ void ALWChunk::Generate(ALWWorld* W)
     }
     Terrain->CreateMeshSection(0,V,Tri,Normals,UV,TArray<FColor>(),TArray<FProcMeshTangent>(),true);
     Terrain->SetMaterial(0,W->Material(TEXT("Earth")));
-    if(Origin.X>=LWBorder51::Strip){BuildRoads33(W,Roads,TArray<LWGen::FSite>());LWBorder51::Build(this,W);FlushSurfaces();return;}
+    if(LWGeography84::Canada(FVector2D(Origin))){BuildRoads33(W,Roads,Sites);for(const auto& Site:Sites)if(Site.Canadian&&LWGen::ChunkAt(Site.Position)==Coordinate)BuildingCanada68(W,Site);LWBorder51::Build(this,W);BuildingSurfaces=false;FlushSurfaces();Ready68=true;return;}
     BuildRoads33(W,Roads,Sites);
     for(const LWGen::FSite& Site:Sites) if(!Site.SettlementBuilding&&LWGen::ChunkAt(Site.Position)==Coordinate) Building(W,Site);
     for(const auto& S:Sites)if(LWGen::ChunkAt(S.Position)==Coordinate){
@@ -99,6 +113,7 @@ void ALWChunk::Generate(ALWWorld* W)
         const float Z=LWGen::Height(P,Roads,Sites);
         Add(W,I%4?TEXT("DeadTree"):TEXT("Rubble"),NAME_None,FVector(Local,Z),FVector(Rand.FRandRange(.55,1.6)),FRotator(0,Rand.FRandRange(0,360),0),I%4!=0);
     }
+ Wilderness78(W,Roads,Sites);
  BuildingSurfaces=false;FlushSurfaces();
  W->SpawnEnemies(this,nullptr);W->SpawnRoamingBoss(this);
 }
@@ -116,13 +131,21 @@ ALWWorld* ALWWorld::Get(const UObject* Context)
 { return Cast<ALWWorld>(UGameplayStatics::GetActorOfClass(Context,StaticClass())); }
 UStaticMesh* ALWWorld::Mesh(FName N)
 {
+    N=LWInteriors65::Replacement(N);
     if(UStaticMesh* M=Meshes.FindRef(N)) return M;
+    if(N.ToString().EndsWith(TEXT("78"))){auto* M=LoadObject<UStaticMesh>(nullptr,*FString::Printf(TEXT("/Game/Art/World78/SM_%s.SM_%s"),*N.ToString(),*N.ToString()));Meshes.Add(N,M);return M;}
+    if(N.ToString().EndsWith(TEXT("77"))){auto* M=LoadObject<UStaticMesh>(nullptr,*FString::Printf(TEXT("/Game/Art/Campaign77/SM_%s.SM_%s"),*N.ToString(),*N.ToString()));Meshes.Add(N,M);return M;}
+    if(N.ToString().EndsWith(TEXT("65"))){auto* M=LoadObject<UStaticMesh>(nullptr,*FString::Printf(TEXT("/Game/Art/Interiors65/SM_%s.SM_%s"),*N.ToString(),*N.ToString()));Meshes.Add(N,M);return M;}
+    if(N==TEXT("RightHand35")||N==TEXT("LeftHand35")){auto* M=LWAppearance::Mesh61(N.ToString());Meshes.Add(N,M);return M;}
     FString Path=(N==TEXT("Sphere")||N==TEXT("Cylinder"))?FString::Printf(TEXT("/Engine/BasicShapes/%s.%s"),*N.ToString(),*N.ToString()):N==TEXT("Cube")?TEXT("/Game/Art/Meshes/SM_UnitCube.SM_UnitCube"):FString::Printf(TEXT("/Game/Art/Meshes/SM_%s.SM_%s"),*N.ToString(),*N.ToString());
+    const FString Revised=FString::Printf(TEXT("/Game/Art/Models63/SM_%s"),*N.ToString());
+    static TMap<FName,bool> HasRevision63;bool* Found63=HasRevision63.Find(N);const bool Has63=Found63?*Found63:FPackageName::DoesPackageExist(Revised);if(!Found63)HasRevision63.Add(N,Has63);if(Has63)Path=Revised+TEXT(".SM_")+N.ToString();
     UStaticMesh* M=LoadObject<UStaticMesh>(nullptr,*Path); Meshes.Add(N,M); return M;
 }
 UMaterialInterface* ALWWorld::Material(FName N)
 {
     if(UMaterialInterface* M=Materials.FindRef(N)) return M;
+    if(N.ToString().EndsWith(TEXT("65"))){auto* M=LoadObject<UMaterialInterface>(nullptr,*FString::Printf(TEXT("/Game/Art/Interiors65/M_%s.M_%s"),*N.ToString(),*N.ToString()));Materials.Add(N,M);return M;}
     UMaterialInterface* M=LoadObject<UMaterialInterface>(nullptr,*FString::Printf(TEXT("/Game/Materials/M_%s.M_%s"),*N.ToString(),*N.ToString()));
     Materials.Add(N,M); return M;
 }
@@ -140,7 +163,7 @@ void ALWWorld::BeginPlay()
     LoudAttenuation->Attenuation.OcclusionVolumeAttenuation=.45f;
     IndoorReverb=NewObject<UReverbEffect>(this); IndoorReverb->DecayTime=1.8f; IndoorReverb->Density=.5f;
     IndoorReverb->Diffusion=.8f; IndoorReverb->Gain=.45f; IndoorReverb->GainHF=.42f; IndoorReverb->LateGain=1.5f;
-    AudioCatalog=ULWAudioCatalog::GetDefaultCatalog();WarmAudio40();
+    AudioCatalog=ULWAudioCatalog::GetDefaultCatalog();WarmAudio40();LWInteriors65::Warm(this);Material(TEXT("Explosion68"));
     for(FName N:ULWAudioCatalog::GetDefaultSlotNames()){FLWResolvedAudioSlot S;if(ULWAudioCatalog::ResolveDefaultSlot(N,S))Sounds.Add(N,S.Sound);}
     Wind=Sound(TEXT("Wind"),FVector::ZeroVector,.7f);
     Drone=Sound(TEXT("Drone"),FVector::ZeroVector,.22f);
@@ -181,6 +204,7 @@ void ALWWorld::BeginPlay()
 }
 UAudioComponent* ALWWorld::Sound(FName N,FVector P,float Volume,float Pitch,bool Loud)
 {
+    if(ULWDialogue59::Available()&&(N==TEXT("HumanMale44")||N==TEXT("HumanFemale44")||N==TEXT("Speech0")||N==TEXT("Speech1")||N==TEXT("Speech2")||N==TEXT("RaiderVoice")||N==TEXT("TraderVoice")))return nullptr;
     return ULWAudioCatalog::PlaySlot(this,N,P,Volume,Pitch,Loud,Attenuation,LoudAttenuation);
 }
 void ALWWorld::Noise(FVector P,float Radius)
@@ -192,31 +216,11 @@ float ALWWorld::HeightAt(FVector2D P) const
 { const auto& N=LWGen::Neighborhood38(P,Seed);return LWGen::Height(P,N.Roads,N.Sites); }
 void ALWWorld::Stream(FVector P,bool Immediate)
 {
-    const FIntPoint C=LWGen::ChunkAt(FVector2D(P));
-    if(C!=LastCenter || Immediate)
-    {
-        LastCenter=C; Queue.Empty();
-        TArray<FIntPoint> Remove;
-        for(const auto& Entry:Chunks)
-            if((FMath::Abs(Entry.Key.X-C.X)>RenderRadius+1 || FMath::Abs(Entry.Key.Y-C.Y)>RenderRadius+1)&&!Entry.Value->MajorBounds.IsInside(FVector2D(P))) Remove.Add(Entry.Key);
-        for(FIntPoint K:Remove) { Chunks[K]->Destroy(); Chunks.Remove(K); }
-        for(int32 Y=-RenderRadius;Y<=RenderRadius;Y++) for(int32 X=-RenderRadius;X<=RenderRadius;X++)
-        { const FIntPoint K=C+FIntPoint(X,Y); if(!Chunks.Contains(K)) Queue.Add(K); }
-        // Large airports can extend beyond the normal minimum streaming radius.
-        TArray<LWGen::FRoad> NearbyRoads;TArray<LWGen::FSite> NearbySites;LWGen::Gather(FVector2D(P),Seed,NearbyRoads,NearbySites);
-        for(const auto& Site:NearbySites)if(Site.Type==32){const FVector2D Delta=FVector2D(P)-Site.Position;if(FMath::Abs(Delta.X)<Site.Size.X*.5+4000&&FMath::Abs(Delta.Y)<Site.Size.Y*.5+4000){const auto SiteChunk=LWGen::ChunkAt(Site.Position);if(!Chunks.Contains(SiteChunk))Queue.AddUnique(SiteChunk);}}
-        Queue.Sort([C](const FIntPoint& A,const FIntPoint& B){return (A-C).SizeSquared()<(B-C).SizeSquared();});
-    }
-    const int32 Count=Immediate?Queue.Num():FMath::Min(1,Queue.Num());
-    for(int32 I=0;I<Count;I++)
-    {
-        const FIntPoint K=Queue[0]; Queue.RemoveAt(0);
-        ALWChunk* Chunk=GetWorld()->SpawnActor<ALWChunk>(FVector(K.X*LWGen::ChunkSize,K.Y*LWGen::ChunkSize,0),FRotator::ZeroRotator);
-        Chunk->Coordinate=K; Chunks.Add(K,Chunk); Chunk->Generate(this);
-    }
+    Stream68(P,Immediate);
 }
 void ALWWorld::Reset()
 {
+    Jobs68.Empty();for(auto& C:Retiring68)if(IsValid(C))C->Destroy();Retiring68.Empty();LastAhead68=FIntPoint(MAX_int32,MAX_int32);BorderAircraft68.Reset();
     PendingCards37.Empty();
     ClearEncounterActors();
     for(TActorIterator<ALWVehicle> I(GetWorld());I;++I)I->Destroy();
@@ -233,12 +237,12 @@ void ALWWorld::Tick(float Dt)
     for(AActor* A:BunkerParts)if(auto* O=Cast<ALWWorldObject>(A))if(O->RecordId.ToString().StartsWith(TEXT("bunker_storage_"))&&!Containers.Contains(O->RecordId)){FLWContainerRecord R;R.Id=O->RecordId;R.Context=TEXT("bunker");R.Position=O->GetActorLocation();Containers.Add(R.Id,R);}
     // A moved car may outlive its generating chunk. Recreate missing residents by current location.
     TArray<FName> Missing;TSet<FName> LiveVehicles;for(TActorIterator<ALWVehicle> I(GetWorld());I;++I)LiveVehicles.Add(I->RecordId);
-    for(const auto& V:Vehicles)if(!V.Value.Stored45&&Chunks.Contains(LWGen::ChunkAt(FVector2D(V.Value.Position)))){if(!LiveVehicles.Contains(V.Key)){Missing.Add(V.Key);break;}}
+    for(const auto& V:Vehicles)if(!V.Value.Stored45){auto* C=Chunks.FindRef(LWGen::ChunkAt(FVector2D(V.Value.Position))).Get();if(C&&C->Ready68&&!LiveVehicles.Contains(V.Key)){Missing.Add(V.Key);break;}}
     for(FName Id:Missing){const auto V=Vehicles.FindChecked(Id);if(auto* Car=SpawnObject(ELWObjectKind::Car,Id,V.Position,V.Rotation))if(auto* C=Chunks.FindRef(LWGen::ChunkAt(FVector2D(V.Position))).Get())C->Residents.Add(Car);}
     }
-    if(Sky)Sky->SetActorLocation(P->GetActorLocation());
-    if(P->bStarted){LWBorder51::Enforce(this,P);Stream(P->GetActorLocation());}
-    if(Queue.IsEmpty()&&!PendingCards37.IsEmpty()){const auto Job=PendingCards37[0];PendingCards37.RemoveAt(0,EAllowShrinking::No);if(Job.Chunk.IsValid())LWCollect36::Spawn(Job.Chunk.Get(),this,Job.Site);}
+    if(Sky)Sky->SetActorLocation(P->GetActorLocation());ALWAviationSky84::Ensure(this,P,Dt);
+    if(P->bStarted){LWCanada68::Tick(this,P,Dt);LWBorder51::Enforce(this,P);Stream(P->GetActorLocation());}
+    if(Queue.IsEmpty()&&Jobs68.IsEmpty()&&!PendingCards37.IsEmpty()){const auto Job=PendingCards37[0];if(!Job.Chunk.IsValid()||!Job.Chunk->Plan68){PendingCards37.RemoveAt(0,EAllowShrinking::No);if(Job.Chunk.IsValid())LWCollect36::Spawn(Job.Chunk.Get(),this,Job.Site);}}
     FName Mood=(!P->bStarted||P->bMenu)?TEXT("MenuMusic"):TEXT("ExploreMusic");
     if(P->bStarted&&!P->bMenu&&!P->bSafehouse&&P->Health>0&&!P->bStoryLocked){
         MusicScan40-=Dt;
@@ -266,13 +270,12 @@ void ALWWorld::Tick(float Dt)
     if(Indoor!=bWasIndoors)
     {
         bWasIndoors=Indoor;
-        if(Indoor) UGameplayStatics::ActivateReverbEffect(this,IndoorReverb,TEXT("Interior"),1,.42f,.5f);
-        else UGameplayStatics::DeactivateReverbEffect(this,TEXT("Interior"));
+        // ULWAcoustics64 measures the actual room instead of a single indoor preset.
     }
-    if(Wind) { const FLWAudioSlot* Slot=AudioCatalog?AudioCatalog->Slots.Find(TEXT("Wind")):nullptr;const float SlotVolume=Slot&&FMath::IsFinite(Slot->Volume)?FMath::Clamp(Slot->Volume,0.f,4.f):1.f;Wind->SetLowPassFilterFrequency(Indoor?850:12000);Wind->SetVolumeMultiplier((Indoor?.10f:.45f)*(1+CloudAmount)*SlotVolume); }
+    if(Wind) { const bool Sheltered=Indoor||(P->Vehicle&&P->Vehicle->Spec().Seats>1);const FLWAudioSlot* Slot=AudioCatalog?AudioCatalog->Slots.Find(TEXT("Wind")):nullptr;const float SlotVolume=Slot&&FMath::IsFinite(Slot->Volume)?FMath::Clamp(Slot->Volume,0.f,4.f):1.f;Wind->SetLowPassFilterFrequency(Sheltered?850:12000);Wind->SetVolumeMultiplier((Sheltered?.10f:.45f)*(1+CloudAmount)*SlotVolume); }
     TArray<LWGen::FRoad> Roads; TArray<LWGen::FSite> Sites;
     LWGen::Gather(FVector2D(P->GetActorLocation()),Seed,Roads,Sites);
-    LocationName=TEXT("OUTER EXCLUSION ZONE");
+    LocationName=LWGeography84::Canada(FVector2D(P->GetActorLocation()))?TEXT("CANADIAN WILDERNESS"):TEXT("OUTER EXCLUSION ZONE");
     const TCHAR* Names[]={TEXT("LAST LIGHT // FUEL STOP"),TEXT("THE VACANCY // MOTEL"),TEXT("CIVIL RELIEF STATION"),TEXT("SECTOR 09 // STORAGE"),TEXT("DEAD END // DINER")};
     float Best=4000;
     for(const auto& S:Sites) {float D=(S.Position-FVector2D(P->GetActorLocation())).Size(); if(D<Best) {Best=D; LocationName=LWSites::Label(S);}}

@@ -6,6 +6,7 @@ Use **Up/Down** for history, **Tab** for autocomplete, and **Page Up/Page Down**
 
 | Command | Effect |
 | --- | --- |
+| `debugmenu` | Open the searchable debug menu for cheats, items, NPCs, vehicles, and POIs. Alias: `debug`. See [Debug menu](DebugMenu67.md). |
 | `money 5000` | Add 5,000 credits. Alias: `addmoney`. |
 | `items` | List every item ID from the active catalog, including custom catalog entries. |
 | `items shotgun` | Search item IDs, names, and categories. |

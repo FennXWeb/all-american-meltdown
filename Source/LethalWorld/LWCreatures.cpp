@@ -8,7 +8,7 @@
 #include "Kismet/GameplayStatics.h"
 #include "Engine/World.h"
 void ALWZombie::ConfigureCreature(){
- for(auto* C:GetComponentsByTag(UStaticMeshComponent::StaticClass(),TEXT("CharacterHair32")))C->DestroyComponent();for(auto& C:Parts)C->EmptyOverrideMaterials();
+ for(auto* C:GetComponentsByTag(USceneComponent::StaticClass(),TEXT("CharacterHair32")))C->DestroyComponent();for(auto& C:Parts)C->EmptyOverrideMaterials();
  const TCHAR* Names[]={TEXT("Moose"),TEXT("Titan"),TEXT("Deathclaw"),TEXT("Scorpion"),TEXT("Karen")};int K=FMath::Clamp(int(Kind)-4,0,4);const TCHAR* Suffix[]={TEXT("Torso"),TEXT("Head"),TEXT("Pelvis"),TEXT("Arm"),TEXT("Arm"),TEXT("Leg"),TEXT("Leg")};
  const float Half[]={130,152,135,70,92},Radius[]={68,55,55,70,48},HP[]={320,700,480,230,200};Health=HP[K];
  double Old=GetCapsuleComponent()->GetUnscaledCapsuleHalfHeight();GetCapsuleComponent()->SetCapsuleSize(Radius[K],Half[K]);SetActorLocation(GetActorLocation()+FVector(0,0,Half[K]-Old));
@@ -16,7 +16,8 @@ void ALWZombie::ConfigureCreature(){
  if(K==0){FVector A[]={FVector(0,0,20),FVector(75,0,55),FVector(-65,0,15),FVector(60,-30,5),FVector(60,30,5),FVector(-70,-28,5),FVector(-70,28,5)};for(int I=0;I<7;I++)Pos[I]=A[I];}
  if(K==3){FVector A[]={FVector(0,0,-20),FVector(70,0,-15),FVector(-60,0,-20),FVector(60,-45,-20),FVector(60,45,-20),FVector(-20,-30,-20),FVector(-20,30,-20)};for(int I=0;I<7;I++)Pos[I]=A[I];}
  if(K==4){FVector A[]={FVector(0,0,25),FVector(0,0,74),FVector(0,0,-25),FVector(0,-35,40),FVector(0,35,40),FVector(30,-18,-12),FVector(30,18,-12)};for(int I=0;I<7;I++)Pos[I]=A[I];}
- for(int I=0;I<7;I++){Parts[I]->SetStaticMesh(World->Mesh(FName(*(FString(Names[K])+Suffix[I]+TEXT("32")))));Parts[I]->SetRelativeLocation(Pos[I]*(K==1?1.5f:1.f));Parts[I]->SetRelativeScale3D(FVector(K==1?1.5f:1.f));}
+ if(K==1){const FVector A[]={FVector(0,0,63),FVector(0,0,82.4),FVector(0,0,12),FVector(0,-24.3,58),FVector(0,24.3,58),FVector(0,-12.15,-1),FVector(0,12.15,-1)};for(int I=0;I<7;I++)Pos[I]=A[I]-FVector(0,0,2.4);}
+ for(int I=0;I<7;I++){Parts[I]->SetStaticMesh(World->Mesh(FName(*(FString(Names[K])+Suffix[I]+((K==1||K==4)&&(I==4||I==6)?TEXT("R32"):TEXT("32"))))));Parts[I]->SetRelativeLocation(Pos[I]*(K==1?1.68f:1.f));Parts[I]->SetRelativeScale3D(FVector(K==1?1.68f:1.f));}
  if(K==3){Parts[3]->SetRelativeRotation(FRotator(0,-30,0));Parts[4]->SetRelativeRotation(FRotator(0,30,0));Parts[5]->SetRelativeRotation(FRotator(0,180,0));}
  if(K==4){for(int I:{3,4})Parts[I]->SetRelativeRotation(FRotator(-70,0,0));for(int I:{5,6})Parts[I]->SetRelativeRotation(FRotator(60,0,0));}
  Home=GetActorLocation();Interest=Home;

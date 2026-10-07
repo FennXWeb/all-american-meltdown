@@ -1,0 +1,174 @@
+{
+  "schema": 1,
+  "assignment_version": 2,
+  "profiles": [
+    {
+      "id": "M01",
+      "name": "Roger",
+      "voice_id": "CwhRBWXzGAHq8TQ4Fs17",
+      "female": false,
+      "model_id": "eleven_flash_v2_5",
+      "voice_settings": {
+        "stability": 0.65,
+        "similarity_boost": 0.8,
+        "style": 0,
+        "use_speaker_boost": true,
+        "speed": 1.0
+      }
+    },
+    {
+      "id": "M02",
+      "name": "Brian",
+      "voice_id": "nPczCjzI2devNBz1zQrb",
+      "female": false,
+      "model_id": "eleven_flash_v2_5",
+      "voice_settings": {
+        "stability": 0.65,
+        "similarity_boost": 0.8,
+        "style": 0,
+        "use_speaker_boost": true,
+        "speed": 1.0
+      }
+    },
+    {
+      "id": "M03",
+      "name": "Harry",
+      "voice_id": "SOYHLrjzK2X1ezoPC6cr",
+      "female": false,
+      "model_id": "eleven_flash_v2_5",
+      "voice_settings": {
+        "stability": 0.65,
+        "similarity_boost": 0.8,
+        "style": 0,
+        "use_speaker_boost": true,
+        "speed": 1.0
+      }
+    },
+    {
+      "id": "F01",
+      "name": "Sarah",
+      "voice_id": "EXAVITQu4vr4xnSDxMaL",
+      "female": true,
+      "model_id": "eleven_flash_v2_5",
+      "voice_settings": {
+        "stability": 0.65,
+        "similarity_boost": 0.8,
+        "style": 0,
+        "use_speaker_boost": true,
+        "speed": 1.0
+      }
+    },
+    {
+      "id": "F02",
+      "name": "Jessica",
+      "voice_id": "cgSgspJ2msm6clMCkdW9",
+      "female": true,
+      "model_id": "eleven_flash_v2_5",
+      "voice_settings": {
+        "stability": 0.65,
+        "similarity_boost": 0.8,
+        "style": 0,
+        "use_speaker_boost": true,
+        "speed": 1.0
+      }
+    },
+    {
+      "id": "F03",
+      "name": "Laura",
+      "voice_id": "FGY2WhTYpPnrIDTdsKH5",
+      "female": true,
+      "model_id": "eleven_flash_v2_5",
+      "voice_settings": {
+        "stability": 0.65,
+        "similarity_boost": 0.8,
+        "style": 0,
+        "use_speaker_boost": true,
+        "speed": 1.0
+      }
+    },
+    {
+      "id": "M04",
+      "name": "Eric",
+      "voice_id": "cjVigY5qzO86Huf0OWal",
+      "female": false,
+      "model_id": "eleven_flash_v2_5",
+      "voice_settings": {
+        "stability": 0.55,
+        "similarity_boost": 0.8,
+        "style": 0,
+        "use_speaker_boost": true,
+        "speed": 1.0
+      }
+    },
+    {
+      "id": "F04",
+      "name": "Matilda",
+      "voice_id": "XrExE9yKIg1WjnnlVkGX",
+      "female": true,
+      "model_id": "eleven_flash_v2_5",
+      "voice_settings": {
+        "stability": 0.55,
+        "similarity_boost": 0.8,
+        "style": 0,
+        "use_speaker_boost": true,
+        "speed": 1.0
+      }
+    },
+    {
+      "id": "M05",
+      "name": "Bill",
+      "voice_id": "pqHfZKP75CvOlQylNhV4",
+      "female": false,
+      "model_id": "eleven_flash_v2_5",
+      "voice_settings": {
+        "stability": 0.55,
+        "similarity_boost": 0.8,
+        "style": 0,
+        "use_speaker_boost": true,
+        "speed": 1.0
+      }
+    },
+    {
+      "id": "F05",
+      "name": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "female": true,
+      "model_id": "eleven_flash_v2_5",
+      "voice_settings": {
+        "stability": 0.55,
+        "similarity_boost": 0.8,
+        "style": 0,
+        "use_speaker_boost": true,
+        "speed": 1.0
+      }
+    }
+  ],
+  "cast": {
+    "story_mara": "F01",
+    "story_inez": "F02",
+    "story_elsie": "F03",
+    "story_voss": "F03",
+    "story_tessa": "F01",
+    "story_jonah": "M01",
+    "story_tomas": "M02",
+    "story_rusk": "M03",
+    "story_mercer": "M02",
+    "narrator": "M01",
+    "choir_collector": "M03",
+    "heroes_sergeant": "M01"
+  },
+  "active_procedural_profiles": [
+    "M04",
+    "M05",
+    "F04",
+    "F05"
+  ],
+  "procedural_replacements": {
+    "M01": "M04",
+    "M02": "M05",
+    "M03": "M04",
+    "F01": "F04",
+    "F02": "F05",
+    "F03": "F04"
+  }
+}

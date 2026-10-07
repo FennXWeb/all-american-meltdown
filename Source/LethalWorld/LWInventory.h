@@ -116,6 +116,7 @@ struct LETHALWORLD_API FLWItemInstance
     UPROPERTY(EditAnywhere, BlueprintReadWrite, SaveGame, Category="Weapon") int32 WeaponTier=0;
     UPROPERTY(EditAnywhere, BlueprintReadWrite, SaveGame, Category="Weapon") FName LegendaryModifier;
     UPROPERTY(EditAnywhere, BlueprintReadWrite, SaveGame, Category="Weapon") int32 WeaponSkin=-1;
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, SaveGame, Category="Weapon") int32 Camo62=0;
     UPROPERTY(EditAnywhere, BlueprintReadWrite, SaveGame, Category="Weapon") TMap<FName,FName> Attachments;
 
     UPROPERTY(EditAnywhere, BlueprintReadWrite, SaveGame, Category="Item")

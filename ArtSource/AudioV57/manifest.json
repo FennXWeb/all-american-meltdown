@@ -1,0 +1,314 @@
+{
+  "sounds": [
+    {
+      "slot": "Vehicle42_apc_Idle",
+      "prompt": "eight wheel armored personnel carrier, deep heavy turbo diesel and gear whine, steady idle. Constant close stationary sound for a seamless engine loop, no music, no voices, no start or end transient.",
+      "duration": 4,
+      "loop": true,
+      "file": "Vehicle42_apc_Idle.wav"
+    },
+    {
+      "slot": "Vehicle42_apc_Low",
+      "prompt": "eight wheel armored personnel carrier, deep heavy turbo diesel and gear whine, steady moderate loaded operation. Constant close stationary sound for a seamless engine loop, no music, no voices, no start or end transient.",
+      "duration": 4,
+      "loop": true,
+      "file": "Vehicle42_apc_Low.wav"
+    },
+    {
+      "slot": "Vehicle42_apc_High",
+      "prompt": "eight wheel armored personnel carrier, deep heavy turbo diesel and gear whine, steady maximum loaded operation. Constant close stationary sound for a seamless engine loop, no music, no voices, no start or end transient.",
+      "duration": 4,
+      "loop": true,
+      "file": "Vehicle42_apc_High.wav"
+    },
+    {
+      "slot": "Vehicle42_armoredtruck_Idle",
+      "prompt": "armored bank security truck, powerful muffled diesel and armored cabin resonance, steady idle. Constant close stationary sound for a seamless engine loop, no music, no voices, no start or end transient.",
+      "duration": 4,
+      "loop": true,
+      "file": "Vehicle42_armoredtruck_Idle.wav"
+    },
+    {
+      "slot": "Vehicle42_armoredtruck_Low",
+      "prompt": "armored bank security truck, powerful muffled diesel and armored cabin resonance, steady moderate loaded operation. Constant close stationary sound for a seamless engine loop, no music, no voices, no start or end transient.",
+      "duration": 4,
+      "loop": true,
+      "file": "Vehicle42_armoredtruck_Low.wav"
+    },
+    {
+      "slot": "Vehicle42_armoredtruck_High",
+      "prompt": "armored bank security truck, powerful muffled diesel and armored cabin resonance, steady maximum loaded operation. Constant close stationary sound for a seamless engine loop, no music, no voices, no start or end transient.",
+      "duration": 4,
+      "loop": true,
+      "file": "Vehicle42_armoredtruck_High.wav"
+    },
+    {
+      "slot": "Vehicle42_technical_Idle",
+      "prompt": "battle worn pickup truck V8 with loud throaty exhaust, steady idle. Constant close stationary sound for a seamless engine loop, no music, no voices, no start or end transient.",
+      "duration": 4,
+      "loop": true,
+      "file": "Vehicle42_technical_Idle.wav"
+    },
+    {
+      "slot": "Vehicle42_technical_Low",
+      "prompt": "battle worn pickup truck V8 with loud throaty exhaust, steady moderate loaded operation. Constant close stationary sound for a seamless engine loop, no music, no voices, no start or end transient.",
+      "duration": 4,
+      "loop": true,
+      "file": "Vehicle42_technical_Low.wav"
+    },
+    {
+      "slot": "Vehicle42_technical_High",
+      "prompt": "battle worn pickup truck V8 with loud throaty exhaust, steady maximum loaded operation. Constant close stationary sound for a seamless engine loop, no music, no voices, no start or end transient.",
+      "duration": 4,
+      "loop": true,
+      "file": "Vehicle42_technical_High.wav"
+    },
+    {
+      "slot": "Vehicle42_helicopter_Idle",
+      "prompt": "medium utility helicopter turboshaft and rhythmic rotor blade slap, no flyby, steady idle. Constant close stationary sound for a seamless engine loop, no music, no voices, no start or end transient.",
+      "duration": 4,
+      "loop": true,
+      "file": "Vehicle42_helicopter_Idle.wav"
+    },
+    {
+      "slot": "Vehicle42_helicopter_Low",
+      "prompt": "medium utility helicopter turboshaft and rhythmic rotor blade slap, no flyby, steady moderate loaded operation. Constant close stationary sound for a seamless engine loop, no music, no voices, no start or end transient.",
+      "duration": 4,
+      "loop": true,
+      "file": "Vehicle42_helicopter_Low.wav"
+    },
+    {
+      "slot": "Vehicle42_helicopter_High",
+      "prompt": "medium utility helicopter turboshaft and rhythmic rotor blade slap, no flyby, steady maximum loaded operation. Constant close stationary sound for a seamless engine loop, no music, no voices, no start or end transient.",
+      "duration": 4,
+      "loop": true,
+      "file": "Vehicle42_helicopter_High.wav"
+    },
+    {
+      "slot": "Hornet57_1",
+      "prompt": "giant hornet alien insect, chitin mandible clicks, angry insect hiss and buzzing, not a mammal. wary alert call. Single isolated dry game creature effect, no background, no music or words.",
+      "duration": 2.2,
+      "loop": false,
+      "file": "Hornet57_1.wav",
+      "group": "Hornet57"
+    },
+    {
+      "slot": "Hornet57_2",
+      "prompt": "giant hornet alien insect, chitin mandible clicks, angry insect hiss and buzzing, not a mammal. aggressive attack outburst. Single isolated dry game creature effect, no background, no music or words.",
+      "duration": 2.2,
+      "loop": false,
+      "file": "Hornet57_2.wav",
+      "group": "Hornet57"
+    },
+    {
+      "slot": "Hornet57_3",
+      "prompt": "giant hornet alien insect, chitin mandible clicks, angry insect hiss and buzzing, not a mammal. short injured response. Single isolated dry game creature effect, no background, no music or words.",
+      "duration": 2.2,
+      "loop": false,
+      "file": "Hornet57_3.wav",
+      "group": "Hornet57"
+    },
+    {
+      "slot": "Hornet57_4",
+      "prompt": "giant hornet alien insect, chitin mandible clicks, angry insect hiss and buzzing, not a mammal. restless searching call. Single isolated dry game creature effect, no background, no music or words.",
+      "duration": 2.2,
+      "loop": false,
+      "file": "Hornet57_4.wav",
+      "group": "Hornet57"
+    },
+    {
+      "slot": "Hornet57_5",
+      "prompt": "giant hornet alien insect, chitin mandible clicks, angry insect hiss and buzzing, not a mammal. long dying mechanical or animal decay. Single isolated dry game creature effect, no background, no music or words.",
+      "duration": 2.2,
+      "loop": false,
+      "file": "Hornet57_5.wav",
+      "group": "Hornet57"
+    },
+    {
+      "slot": "Bear57_1",
+      "prompt": "large aggressive grizzly bear, realistic deep throaty growls, snorts and explosive roars. wary alert call. Single isolated dry game creature effect, no background, no music or words.",
+      "duration": 2.2,
+      "loop": false,
+      "file": "Bear57_1.wav",
+      "group": "Bear57"
+    },
+    {
+      "slot": "Bear57_2",
+      "prompt": "large aggressive grizzly bear, realistic deep throaty growls, snorts and explosive roars. aggressive attack outburst. Single isolated dry game creature effect, no background, no music or words.",
+      "duration": 2.2,
+      "loop": false,
+      "file": "Bear57_2.wav",
+      "group": "Bear57"
+    },
+    {
+      "slot": "Bear57_3",
+      "prompt": "large aggressive grizzly bear, realistic deep throaty growls, snorts and explosive roars. short injured response. Single isolated dry game creature effect, no background, no music or words.",
+      "duration": 2.2,
+      "loop": false,
+      "file": "Bear57_3.wav",
+      "group": "Bear57"
+    },
+    {
+      "slot": "Bear57_4",
+      "prompt": "large aggressive grizzly bear, realistic deep throaty growls, snorts and explosive roars. restless searching call. Single isolated dry game creature effect, no background, no music or words.",
+      "duration": 2.2,
+      "loop": false,
+      "file": "Bear57_4.wav",
+      "group": "Bear57"
+    },
+    {
+      "slot": "Bear57_5",
+      "prompt": "large aggressive grizzly bear, realistic deep throaty growls, snorts and explosive roars. long dying mechanical or animal decay. Single isolated dry game creature effect, no background, no music or words.",
+      "duration": 2.2,
+      "loop": false,
+      "file": "Bear57_5.wav",
+      "group": "Bear57"
+    },
+    {
+      "slot": "Rogue57_1",
+      "prompt": "hostile humanoid robot, threatening electronic chirps, broken modem chatter and grinding servos, no human speech. wary alert call. Single isolated dry game creature effect, no background, no music or words.",
+      "duration": 2.2,
+      "loop": false,
+      "file": "Rogue57_1.wav",
+      "group": "Rogue57"
+    },
+    {
+      "slot": "Rogue57_2",
+      "prompt": "hostile humanoid robot, threatening electronic chirps, broken modem chatter and grinding servos, no human speech. aggressive attack outburst. Single isolated dry game creature effect, no background, no music or words.",
+      "duration": 2.2,
+      "loop": false,
+      "file": "Rogue57_2.wav",
+      "group": "Rogue57"
+    },
+    {
+      "slot": "Rogue57_3",
+      "prompt": "hostile humanoid robot, threatening electronic chirps, broken modem chatter and grinding servos, no human speech. short injured response. Single isolated dry game creature effect, no background, no music or words.",
+      "duration": 2.2,
+      "loop": false,
+      "file": "Rogue57_3.wav",
+      "group": "Rogue57"
+    },
+    {
+      "slot": "Rogue57_4",
+      "prompt": "hostile humanoid robot, threatening electronic chirps, broken modem chatter and grinding servos, no human speech. restless searching call. Single isolated dry game creature effect, no background, no music or words.",
+      "duration": 2.2,
+      "loop": false,
+      "file": "Rogue57_4.wav",
+      "group": "Rogue57"
+    },
+    {
+      "slot": "Rogue57_5",
+      "prompt": "hostile humanoid robot, threatening electronic chirps, broken modem chatter and grinding servos, no human speech. long dying mechanical or animal decay. Single isolated dry game creature effect, no background, no music or words.",
+      "duration": 2.2,
+      "loop": false,
+      "file": "Rogue57_5.wav",
+      "group": "Rogue57"
+    },
+    {
+      "slot": "TurretCannon57",
+      "prompt": "single heavy 25 mm autocannon shot, powerful sharp crack then short mechanical recoil clunk, dry isolated. No music or speech.",
+      "duration": 0.7,
+      "loop": false,
+      "file": "TurretCannon57.wav"
+    },
+    {
+      "slot": "TurretMG57",
+      "prompt": "single mounted heavy machine gun shot, hard ballistic crack and deep report, no burst. No music or speech.",
+      "duration": 0.5,
+      "loop": false,
+      "file": "TurretMG57.wav"
+    },
+    {
+      "slot": "TurretServo57",
+      "prompt": "steady electric turret traverse servo motor whir, subtle gears, seamless. No music or speech.",
+      "duration": 2.5,
+      "loop": true,
+      "file": "TurretServo57.wav"
+    },
+    {
+      "slot": "TurretReload57",
+      "prompt": "heavy mounted machine gun feed cover opens, ammunition belt clatters into receiver, feed cover snaps shut. No music or speech.",
+      "duration": 2.5,
+      "loop": false,
+      "file": "TurretReload57.wav"
+    },
+    {
+      "slot": "TurretEmpty57",
+      "prompt": "mounted gun dry firing metal hammer clicks once. No music or speech.",
+      "duration": 0.5,
+      "loop": false,
+      "file": "TurretEmpty57.wav"
+    },
+    {
+      "slot": "HornetWings57",
+      "prompt": "giant hornet wings fluttering rapidly, angry insect wing buzz, constant seamless hovering loop. No music or speech.",
+      "duration": 3,
+      "loop": true,
+      "file": "HornetWings57.wav"
+    },
+    {
+      "slot": "HornetSting57",
+      "prompt": "giant insect stinger strikes with a sharp wet chitin snap. No music or speech.",
+      "duration": 0.6,
+      "loop": false,
+      "file": "HornetSting57.wav"
+    },
+    {
+      "slot": "BearSwipe57",
+      "prompt": "heavy bear paw swishes then strikes with a deep fleshy impact, no voice. No music or speech.",
+      "duration": 0.7,
+      "loop": false,
+      "file": "BearSwipe57.wav"
+    },
+    {
+      "slot": "RogueDash57",
+      "prompt": "fast powered robotic leg servos accelerating with a short electrical swoosh. No music or speech.",
+      "duration": 0.8,
+      "loop": false,
+      "file": "RogueDash57.wav"
+    },
+    {
+      "slot": "RogueShot57",
+      "prompt": "single sharp futuristic electromagnetic rifle shot with a brief electrical tail. No music or speech.",
+      "duration": 0.6,
+      "loop": false,
+      "file": "RogueShot57.wav"
+    },
+    {
+      "slot": "RogueStep57",
+      "prompt": "single heavy articulated robot foot contacts concrete, metallic clack with hydraulic hiss. No music or speech.",
+      "duration": 0.5,
+      "loop": false,
+      "file": "RogueStep57.wav"
+    },
+    {
+      "slot": "HeliStart57",
+      "prompt": "utility helicopter turboshaft ignition, quick starter whine and rotor catching, isolated. No music or speech.",
+      "duration": 4,
+      "loop": false,
+      "file": "HeliStart57.wav"
+    },
+    {
+      "slot": "HeliStop57",
+      "prompt": "utility helicopter turboshaft winds down with gradually slowing rotor flutter, isolated. No music or speech.",
+      "duration": 3,
+      "loop": false,
+      "file": "HeliStop57.wav"
+    },
+    {
+      "slot": "Vault57",
+      "prompt": "heavy bank vault steel door unlocking with tumblers clanking and a weighty hinge opening. No music or speech.",
+      "duration": 2,
+      "loop": false,
+      "file": "Vault57.wav"
+    },
+    {
+      "slot": "Target57",
+      "prompt": "single distant steel shooting target impact with bright metallic ring. No music or speech.",
+      "duration": 0.7,
+      "loop": false,
+      "file": "Target57.wav"
+    }
+  ],
+  "estimated_credits": 4144.0
+}

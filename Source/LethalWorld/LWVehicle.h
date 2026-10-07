@@ -7,6 +7,53 @@ UCLASS()
 class LETHALWORLD_API ALWVehicle:public ALWWorldObject {
  GENERATED_BODY()
 public:
+ bool IsAircraft84()const{return LWTraffic::IsAircraft(Spec().Id);}
+ void BuildAircraft84();void TickAircraft84(float Dt);void TickAircraftCabin84(float Dt);
+ bool UseAircraft84(class ALWCharacter* P,FName Action);FName AircraftFocus84(const class ALWCharacter* P)const;FString AircraftPrompt84(FName Action)const;
+ void ToggleAutopilot84();void OpenAircraftStorage84(class ALWCharacter* P,FName Action);void DrawFlightDisplay84();
+ FVector AircraftEye84()const;bool ChangeAircraftSeat84(int Seat);void StandAircraft84();
+ UPROPERTY() TObjectPtr<UStaticMeshComponent> GearMesh84;
+ UPROPERTY() TObjectPtr<UStaticMeshComponent> AircraftDoor84;
+ UPROPERTY() TArray<TObjectPtr<UStaticMeshComponent>> AircraftSeats84;
+ UPROPERTY() TArray<TObjectPtr<UStaticMeshComponent>> AircraftSeatBacks84;
+ UPROPERTY() TArray<TObjectPtr<UStaticMeshComponent>> SuiteDoors84;
+ UPROPERTY() TArray<TObjectPtr<UStaticMeshComponent>> BinLids84;
+ UPROPERTY() TArray<TObjectPtr<UStaticMeshComponent>> AircraftShades84;
+ UPROPERTY() TArray<TObjectPtr<UStaticMeshComponent>> AircraftScreens84;
+ UPROPERTY() TObjectPtr<class UTextureRenderTarget2D> FlightDisplay84;
+ UPROPERTY() TObjectPtr<class UAudioComponent> TurbineAudio84;
+ TArray<FVector> AircraftSeatRest84;TArray<FBox> CabinObstacles84;
+ float GearAlpha84=1,AlarmClock84=0,FlightDisplayClock84=0,AircraftSyncClock84=0;
+ bool AircraftOnGround84=true,AircraftDoorOpen84=false;
+ bool IsElectric74()const{return LWTraffic::IsElectric(Spec().Id);}
+ bool IsCamper74()const{return LWTraffic::IsCamper(Spec().Id);}
+ bool IsSolarRV74()const{return FName(Spec().Id)==TEXT("solstice_rv");}
+ bool SelfDriving74=false;float DashClock74=0,SolarKW74=0,PowerKW74=0,RoofCheck74=0,CabinPitch74=0;bool RoofClear74=true;
+ FVector CabinVelocity74=FVector::ZeroVector;
+ UPROPERTY() TObjectPtr<class UTextureRenderTarget2D> DashTarget74;
+ UPROPERTY() TObjectPtr<class UMaterialInstanceDynamic> DashMaterial74;
+ TArray<FVector2D> DashRoads74;FVector2D DashRoadCenter74=FVector2D(1.e12,1.e12);
+ void BuildElectric74();void TickElectric74(float Dt);void DrawDashboard74();void TickElectricAudio74(float Dt,bool Brake,float Gas);
+ float BatteryCapacity74()const;float BatteryCharge74()const;void TickBattery74(float Dt);
+ void ToggleSelfDrive74();bool TickSelfDriveGate74(float Dt);bool UseElectric74(class ALWCharacter* P,FName Action);
+ FVector CabinToActor74(FVector V)const;FVector ActorToCabin74(FVector V)const;
+ void BuildLuxury66();void TickLuxury66(float Dt);bool UseLuxury66(class ALWCharacter* P,FName Action);
+ void RepairCoach80();
+ UPROPERTY() TArray<TObjectPtr<UStaticMeshComponent>> SlideSeals80;
+ FString LuxuryLabel66(FName Action)const;bool ReadyToDrive66();bool ClearExtension66()const;
+ FVector BunkPosition66(int Bunk)const;float SeatYaw66(int Seat)const;
+ UPROPERTY() TArray<TObjectPtr<UStaticMeshComponent>> Slides66;
+ UPROPERTY() TArray<TObjectPtr<UStaticMeshComponent>> ShadesMesh66;
+ UPROPERTY() TArray<TObjectPtr<class UPointLightComponent>> CabinLamps66;
+ UPROPERTY() TObjectPtr<UStaticMeshComponent> AwningMesh66;
+ UPROPERTY() TObjectPtr<UStaticMeshComponent> Water66;
+ UPROPERTY() TArray<TObjectPtr<class UTextRenderComponent>> Screens66;
+ UPROPERTY() TArray<TObjectPtr<class UMaterialInstanceDynamic>> TVMaterials66;
+ UPROPERTY() TObjectPtr<class UAudioComponent> TVAudio66;
+ UPROPERTY() TObjectPtr<class USceneCaptureComponent2D> TVCamera66;
+ UPROPERTY() TObjectPtr<class UTextureRenderTarget2D> TVTarget66;
+ TArray<FVector> SlideRest66;TArray<int32> SlideSide66;TArray<FVector> ShadeRest66;
+ float SlideAlpha66=0,AwningAlpha66=0,ScreenClock66=0;bool PendingIgnition66=false;
  TWeakObjectPtr<class ALWZombie> Grabber49,ThrowIgnore49;bool Held49=false;
  FVector FlightVelocity49=FVector::ZeroVector;bool Airborne49=false,FlightHitPlayer49=false;float FlightTime49=0;int FlightBounces49=0;
  bool Flip49(class ALWCharacter* P);bool TickThrown49(float Dt);bool Grab49(class ALWZombie* Boss);void Throw49(FVector Velocity);FString VehiclePrompt49()const;
@@ -61,6 +108,15 @@ public:
  static FName LastDrivenId(const class ALWWorld* W);
  static FGuid LastDrivenVIN(const class ALWWorld* W);
  bool Board(class ALWResident* NPC);void UnloadPassengers();
+ bool IsExpansion57()const;bool HasTurret57()const;bool IsHelicopter57()const;
+ void Build57();void TickTurret57(float Dt);bool TickFlight57(float Dt);void ReloadTurret57();
+ UPROPERTY() TObjectPtr<UStaticMeshComponent> Turret57;
+ UPROPERTY() TObjectPtr<UStaticMeshComponent> Barrel57;
+ UPROPERTY() TObjectPtr<UStaticMeshComponent> Rotor57;
+ UPROPERTY() TObjectPtr<class UAudioComponent> ServoAudio57;
+ TWeakObjectPtr<class ALWZombie> GunnerTarget57;
+ FVector Velocity57=FVector::ZeroVector;float RotorSpeed57=0,Altitude57=0,ShotClock57=0,ReloadClock57=0,TargetClock57=0,TurretHeat57=0;
+ bool TurretTrigger57=false;
  ALWVehicle();
  const LWTraffic::FSpec& Spec()const{return LWTraffic::Get(Record()?Record()->Model:FName(TEXT("sedan")));}
  FVector SeatLocation(int Seat)const;

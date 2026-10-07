@@ -1,3 +1,4 @@
+#include "LWStreaming68.h"
 #include "LWPOISurvivors.h"
 #include "LWWorld.h"
 #include "LWCharacter.h"
@@ -15,7 +16,8 @@ FString LWPOISurvivors::Name(uint32 SiteId,int Role){
  // Distinct first names for all three roles at the same stop.
  return FString::Printf(TEXT("%s %c. %c. %s"),First[((H&31)+Role*11)%32],TCHAR('A'+Detail%26),TCHAR('A'+(Detail/26)%26),Last[(Detail>>12)&31]);
 }
-void LWPOISurvivors::Spawn(ALWChunk* C,ALWWorld* W,const LWGen::FSite& S){
+void LWPOISurvivors::Spawn(ALWChunk* C,ALWWorld* W,const LWGen::FSite& S,int Role68){
+ if(C->Plan68&&Role68<0){for(int I=0;I<3;I++)C->Plan68->Population.Add([C,W,S,I](){LWPOISurvivors::Spawn(C,W,S,I);});return;}
  auto* P=Cast<ALWCharacter>(UGameplayStatics::GetPlayerPawn(W,0));const FRotator R(0,S.Yaw,0);
  const bool Expanded=LWPlaces::Expanded(S.Type);const float Y=-S.Size.Y*.5f+(Expanded?700.f:-180.f);
  auto At=[&](FVector V){return FVector(S.Position,12)+R.RotateVector(V);};
@@ -24,10 +26,11 @@ void LWPOISurvivors::Spawn(ALWChunk* C,ALWWorld* W,const LWGen::FSite& S){
  const TCHAR* Roles[]={TEXT("merchant"),TEXT("recruit"),TEXT("warden")};
  // An existing authored NPC cast takes precedence over this optional shared stop.
  for(auto A:C->Residents)if(auto* N=Cast<ALWResident>(A)){
+  if(N->ResidentId.ToString().StartsWith(FString::Printf(TEXT("poi30_%u_resident_"),S.Id)))continue;
   const FVector Local=R.UnrotateVector(N->GetActorLocation()-FVector(S.Position,12));
   if(FMath::Abs(Local.X)<S.Size.X*.5&&FMath::Abs(Local.Y)<S.Size.Y*.5){UE_LOG(LogTemp,Display,TEXT("POI30_SURVIVOR_SKIP site=%u authored=%s"),S.Id,*N->ResidentId.ToString());return;}
  }
- for(int I=0;I<3;I++){
+ for(int I=Role68<0?0:Role68;I<(Role68<0?3:Role68+1);I++){
   FName Id(*FString::Printf(TEXT("poi30_%u_resident_%d"),S.Id,I));
   if(P&&P->RPG.Crew.ContainsByPredicate([&](const auto& Crew){return Crew.Id==Id;})){UE_LOG(LogTemp,Display,TEXT("POI30_SURVIVOR_SKIP site=%u role=%d hired"),S.Id,I);continue;}
   bool Exists=false;for(TActorIterator<ALWResident> N(W->GetWorld());N;++N)if(N->ResidentId==Id){Exists=true;break;}if(Exists){UE_LOG(LogTemp,Display,TEXT("POI30_SURVIVOR_SKIP site=%u role=%d already_present"),S.Id,I);continue;}
@@ -46,5 +49,6 @@ void LWPOISurvivors::Spawn(ALWChunk* C,ALWWorld* W,const LWGen::FSite& S){
   if(N){N->ConfigureResident(Id,Roles[I],Name(S.Id,I),I);N->ActivitySpots={N->Home,N->Home};C->Residents.Add(N);UE_LOG(LogTemp,Display,TEXT("POI30_SURVIVOR_SPAWN site=%u role=%d position=%s"),S.Id,I,*N->GetActorLocation().ToString());}
   else UE_LOG(LogTemp,Warning,TEXT("POI30_SURVIVOR_BLOCKED site=%u type=%d role=%d final_position=%s"),S.Id,S.Type,I,*Candidate.ToString());
  }
+ if(Role68>=0&&Role68!=2)return;
  auto* Sign=NewObject<ULWWorldTextComponent>(C);Sign->SetupAttachment(C->GetRootComponent());Sign->SetRelativeLocation(At(FVector(0,Y+(Expanded?400:-90),290))-C->GetActorLocation());Sign->SetRelativeRotation(R+FRotator(0,-90,0));Sign->SetText(FText::FromString(TEXT("SURVIVOR STOP / TRADE / CREW / CONTRACTS")));Sign->SetWorldSize(27);Sign->SetHorizontalAlignment(EHTA_Center);Sign->RegisterComponent();
 }

@@ -1,8 +1,9 @@
+#include "LWSettlement82.h"
 #include "LWCharacter.h"
 #include "LWWorld.h"
 #include "LWWorldObject.h"
 #include "Components/SceneComponent.h"
-void ALWCharacter::SwitchTab(int32 Tab){if(Workbench39)return;if(bStoryLocked||!bStarted||bMenu||Health<=0||Tab<0||Tab>5)return;auto Storage=OpenObject;ClosePanels();OpenObject=IsValid(Storage)?Storage:nullptr;bInventory=Tab==0;bMap=Tab==1;RPGPanel=Tab==5?6:Tab>=2?Tab-1:0;CancelReload();bAim=bSprint=false;SetMenuInput(true);}
+void ALWCharacter::SwitchTab(int32 Tab){if(Workbench39)return;if(bStoryLocked||!bStarted||bMenu||Health<=0||Tab<0||Tab>6)return;auto Storage=OpenObject;ClosePanels();OpenObject=IsValid(Storage)?Storage:nullptr;bInventory=Tab==0;bMap=Tab==1;RPGPanel=Tab==6?7:Tab==5?6:Tab>=2?Tab-1:0;if(Tab==6){ALWSettlement82::Ensure(this)->Open();return;}CancelReload();bAim=bSprint=false;SetMenuInput(true);}
 void ALWCharacter::EquipSlot(FName Slot){if(!CanAct())return;const auto* I=Inventory.FindByPredicate([Slot](const auto& V){return V.Slot==Slot;});if(!I){if(Slot==TEXT("Melee")){CancelReload();StopAttack();ActiveWeaponId.Invalidate();AttackTimer=AttackDuration=0;ConfigureWeaponParts();ConfigureAttachments();Notify(TEXT("UNARMED"));}else Notify(TEXT("SLOT EMPTY"));return;}ActiveWeaponId=I->Id;Equip(LWItems::Def(I->Definition).WeaponIndex);}
 bool ALWCharacter::QuickTransferItem(int32 From,FGuid Id){if(!bInventory||!IsValid(OpenObject))return false;int To=From==0?(OpenObject->Kind==ELWObjectKind::Stash?1:2):0;auto* A=ItemsFor(From);auto* B=ItemsFor(To);if(!A||!B)return false;int W=12,H=To==0?LWItems::InventoryHeight(Inventory):14;if(To==2){auto* R=World->Containers.Find(OpenObject->RecordId);if(!R)return false;W=R->Width;H=R->Height;}
  if(OpenObject->Kind==ELWObjectKind::Trader){auto* I=A->FindByPredicate([Id](const auto& V){return V.Id==Id;});if(!I)return false;for(int R=0;R<2;R++)for(int Y=0;Y<H;Y++)for(int X=0;X<W;X++)if(LWItems::Fits(*B,*I,X,Y,R!=0,W,H))return MoveItem(From,To,Id,X,Y,R!=0);return false;}

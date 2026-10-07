@@ -9,6 +9,8 @@ int Lanes(const LWGen::FRoad& R);
 TArray<FJunction> Junctions(const TArray<LWGen::FRoad>& Roads,int Seed);
 // 0 red, 1 amber, 2 green. Main and cross traffic never share green.
 int Phase(const FJunction& J,FVector2D Approach,double Seconds);
+// Only terminating/minor approaches stop; through roads keep priority.
+bool NeedsStop(const FJunction& J,FVector2D Approach);
 bool InJunction(FVector2D P,const TArray<FJunction>& Junctions,float Extra=0);
 float TrafficSpeed(ALWVehicle* Vehicle,float Desired,float Dt);
 }

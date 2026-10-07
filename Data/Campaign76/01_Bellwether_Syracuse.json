@@ -1,0 +1,2121 @@
+{
+  "cast": [
+    {
+      "id": "mara",
+      "name": "Mara Finch",
+      "female": true,
+      "voice": "F04"
+    },
+    {
+      "id": "lena",
+      "name": "Lena Ortiz",
+      "female": true,
+      "voice": "F04"
+    },
+    {
+      "id": "ivo",
+      "name": "Ivo Bell",
+      "female": false,
+      "voice": "M04"
+    },
+    {
+      "id": "tessa",
+      "name": "Tessa Rowan",
+      "female": true,
+      "voice": "F04"
+    },
+    {
+      "id": "nadia",
+      "name": "Nadia Sayegh",
+      "female": true,
+      "voice": "F04"
+    },
+    {
+      "id": "samir",
+      "name": "Samir Bell",
+      "female": false,
+      "voice": "M04"
+    },
+    {
+      "id": "keene",
+      "name": "Marshal Adrian Keene",
+      "female": false,
+      "voice": "M04"
+    },
+    {
+      "id": "mercer",
+      "name": "June Mercer",
+      "female": true,
+      "voice": "F04"
+    },
+    {
+      "id": "elena",
+      "name": "Elena Paredes",
+      "female": true,
+      "voice": "F04"
+    }
+  ],
+  "scenes": [
+    {
+      "id": "bell_intro",
+      "beats": [
+        {
+          "who": "mara",
+          "text": "Morning. Before you ask: no, the blanket over the kettle is not a repair. Ivo says the heater has opinions.",
+          "gesture": "wry",
+          "pause": 0.65,
+          "move": [
+            -40,
+            70,
+            0
+          ]
+        },
+        {
+          "who": "ivo",
+          "text": "It has a cracked contact. Opinions would be cheaper. Breaker is off; seat the contact, then prime it. No sparks near the fuel.",
+          "gesture": "speak"
+        },
+        {
+          "who": "mara",
+          "text": "Three sealed cans left. The heater, clinic sterilizer, and aerial generator all drink from that pile. The allocation board shows what each can buys.",
+          "gesture": "speak"
+        },
+        {
+          "who": "tessa",
+          "text": "And put the heat where people actually sleep. Last night the pipes were warm and my shoes froze.",
+          "move": [
+            -210,
+            160,
+            0
+          ],
+          "gesture": "speak"
+        },
+        {
+          "who": "mara",
+          "text": "We have known worse mornings. We have also had enough of them. Help me get this room through one more.",
+          "gesture": "speak"
+        }
+      ],
+      "choices": [
+        {
+          "text": "I will repair it.",
+          "next": "",
+          "stage": "",
+          "needs": [],
+          "effects": [
+            "met_bellwether",
+            "journal:Bellwether has three cans of fuel. Heat, sterilization, and communications compete for them."
+          ]
+        }
+      ],
+      "next": ""
+    },
+    {
+      "id": "fuel",
+      "beats": [
+        {
+          "who": "ivo",
+          "text": "Two cans keep the heater running through the night. One gives us a warm room now, but cold beds later.",
+          "gesture": "speak"
+        },
+        {
+          "who": "mara",
+          "text": "One for the clinic lets me sterilize instruments. Two also powers the suction unit. Neither makes us a hospital.",
+          "gesture": "speak"
+        },
+        {
+          "who": "ivo",
+          "text": "One for the aerial lets Tessa reach our road watch. No aerial, no early warning. We can survive any split, but call the cost what it is.",
+          "gesture": "speak"
+        }
+      ],
+      "choices": [
+        {
+          "text": "Two heat, one clinic. Keep the sleeping room warm.",
+          "next": "fuel_heat",
+          "stage": "",
+          "needs": [],
+          "effects": [
+            "heat=2",
+            "clinic=1",
+            "comms=0",
+            "fuel_assigned",
+            "trust_ivo+=1"
+          ]
+        },
+        {
+          "text": "Two clinic, one communications. Prioritize treatment and warning.",
+          "next": "fuel_clinic",
+          "stage": "",
+          "needs": [],
+          "effects": [
+            "heat=0",
+            "clinic=2",
+            "comms=1",
+            "fuel_assigned",
+            "trust_mara+=1"
+          ]
+        },
+        {
+          "text": "One each. Share the shortage.",
+          "next": "fuel_shared",
+          "stage": "",
+          "needs": [],
+          "effects": [
+            "heat=1",
+            "clinic=1",
+            "comms=1",
+            "fuel_assigned",
+            "trust_tessa+=1"
+          ]
+        }
+      ],
+      "next": ""
+    },
+    {
+      "id": "fuel_heat",
+      "beats": [
+        {
+          "who": "ivo",
+          "text": "I will bank it for tonight. Tessa will have to watch the road herself.",
+          "gesture": "speak"
+        },
+        {
+          "who": "tessa",
+          "text": "I heard. Save me a place by the vent when I come back.",
+          "gesture": "speak"
+        }
+      ],
+      "choices": [],
+      "next": ""
+    },
+    {
+      "id": "fuel_clinic",
+      "beats": [
+        {
+          "who": "mara",
+          "text": "Thank you. I will move the patients together and bring the blankets. I will not pretend the cold is harmless.",
+          "gesture": "speak"
+        },
+        {
+          "who": "ivo",
+          "text": "I can warm the room briefly while we test the contact. After that, we shut it down.",
+          "gesture": "speak"
+        }
+      ],
+      "choices": [],
+      "next": ""
+    },
+    {
+      "id": "fuel_shared",
+      "beats": [
+        {
+          "who": "mara",
+          "text": "A little margin everywhere. I can work with that.",
+          "gesture": "speak"
+        },
+        {
+          "who": "tessa",
+          "text": "I will take the aerial shift. Someone tell my father that turning it louder does not make the signal travel further.",
+          "gesture": "speak"
+        }
+      ],
+      "choices": [],
+      "next": ""
+    },
+    {
+      "id": "warm_room",
+      "beats": [
+        {
+          "who": "ivo",
+          "text": "There. Hear the fan? That is the bearing I could not find in three counties.",
+          "cue": "Click",
+          "pause": 1.6,
+          "gesture": "point"
+        },
+        {
+          "who": "tessa",
+          "text": "My gloves are steaming. That cannot be good for them.",
+          "gesture": "speak"
+        },
+        {
+          "who": "mara",
+          "text": "Give them here. Slowly. You put numb hands over that vent and you will burn them before you feel it.",
+          "move": [
+            -60,
+            140,
+            0
+          ],
+          "pause": 1,
+          "gesture": "speak"
+        },
+        {
+          "who": "ivo",
+          "text": "We will have this all night.",
+          "needs": [
+            "heat>=2"
+          ],
+          "gesture": "speak"
+        },
+        {
+          "who": "mara",
+          "text": "Then move Mrs. Vale closer before she insists she is not cold.",
+          "needs": [
+            "heat>=2"
+          ],
+          "gesture": "speak"
+        },
+        {
+          "who": "ivo",
+          "text": "Only the test run. Clinic gets the cans after this.",
+          "needs": [
+            "heat=0"
+          ],
+          "gesture": "speak"
+        },
+        {
+          "who": "mara",
+          "text": "I know. Leave the blankets here. Nobody owes us a brave face.",
+          "needs": [
+            "heat=0"
+          ],
+          "gesture": "speak"
+        },
+        {
+          "who": "tessa",
+          "text": "I will sit here until the aerial warms up. Five minutes.",
+          "needs": [
+            "heat=1"
+          ],
+          "gesture": "speak"
+        },
+        {
+          "who": "mara",
+          "text": "Five minutes, then I need someone to help with the road gate. ...I used to complain about radiators I could not turn down.",
+          "pause": 1.4,
+          "gesture": "speak"
+        },
+        {
+          "who": "ivo",
+          "text": "You still can. I will take it as a professional compliment.",
+          "gesture": "speak"
+        }
+      ],
+      "choices": [],
+      "next": "bell_prepare"
+    },
+    {
+      "id": "ivo_break",
+      "beats": [
+        {
+          "who": "ivo",
+          "text": "My son Samir is at the market clinic. We argue by courier. He says I cannot repair everyone. I say he picked a poor profession to make that argument.",
+          "gesture": "speak"
+        },
+        {
+          "who": "ivo",
+          "text": "If you get north before I do, there is a parcel under my bench. His mother's keys. There is no house to open. That is not the point.",
+          "gesture": "speak"
+        }
+      ],
+      "choices": [
+        {
+          "text": "I will carry them.",
+          "next": "ivo_parcel",
+          "stage": "",
+          "needs": [],
+          "effects": [
+            "parcel_accepted",
+            "journal:Ivo asked me to deliver his wife's keys to Samir at the market clinic."
+          ]
+        },
+        {
+          "text": "I cannot promise that yet.",
+          "next": "",
+          "stage": "",
+          "needs": [],
+          "effects": []
+        }
+      ],
+      "next": ""
+    },
+    {
+      "id": "ivo_parcel",
+      "beats": [
+        {
+          "who": "ivo",
+          "text": "Thank you. Tell him I put the blue tag back on. He will know.",
+          "gesture": "speak"
+        }
+      ],
+      "choices": [],
+      "next": ""
+    },
+    {
+      "id": "tessa_break",
+      "beats": [
+        {
+          "who": "tessa",
+          "text": "The road-watch notebook has two columns: arrivals and departures. They stopped matching last winter.",
+          "gesture": "speak"
+        },
+        {
+          "who": "tessa",
+          "text": "I still write both. You can decide it is pointless after you have looked for someone who never got written down.",
+          "gesture": "speak"
+        }
+      ],
+      "choices": [],
+      "next": ""
+    },
+    {
+      "id": "prepare_go",
+      "beats": [
+        {
+          "who": "mara",
+          "text": "Before we settle in: brace the side gate, check the aerial, or put the clinic kit within reach. You choose how much time to spend. Come back when you are ready.",
+          "gesture": "speak"
+        },
+        {
+          "who": "tessa",
+          "text": "There is someone on the west approach. A cart. They are waving a shirt.",
+          "gesture": "speak"
+        }
+      ],
+      "choices": [
+        {
+          "text": "Let them in.",
+          "next": "",
+          "stage": "bell_arrival",
+          "needs": [],
+          "effects": []
+        },
+        {
+          "text": "I need to finish preparing.",
+          "next": "",
+          "stage": "",
+          "needs": [],
+          "effects": []
+        }
+      ],
+      "next": ""
+    },
+    {
+      "id": "lena_arrival",
+      "beats": [
+        {
+          "who": "tessa",
+          "text": "Three at the gate. Two walking. One on the cart. Nobody behind them that I can see.",
+          "gesture": "point"
+        },
+        {
+          "who": "mara",
+          "text": "You with the cart, take that corner. Easy. Easy. What is your name?",
+          "move": [
+            80,
+            -100,
+            0
+          ],
+          "pause": 0.7,
+          "gesture": "point"
+        },
+        {
+          "who": "lena",
+          "text": "Lena Ortiz. Do not throw the lining away. My coat. Please.",
+          "gesture": "speak"
+        },
+        {
+          "who": "mara",
+          "text": "I am trying to keep the rest of you. Tessa, scissors.",
+          "gesture": "speak"
+        },
+        {
+          "who": "lena",
+          "text": "They looked through the bags. Left the tins. They kept asking who had the transfer sheets. I copied them at work. I did not know what else to do.",
+          "gesture": "speak"
+        },
+        {
+          "who": "mara",
+          "text": "We will talk after I stop the bleeding. You can help at this medical case. Or cover the gate. I cannot do both.",
+          "gesture": "speak"
+        },
+        {
+          "who": "ivo",
+          "text": "Two vehicles stopped short of the forecourt. Their lights are off.",
+          "pause": 0.8,
+          "gesture": "speak"
+        }
+      ],
+      "choices": [
+        {
+          "text": "Hold the plaza. I will help where I can.",
+          "next": "",
+          "stage": "bell_attack",
+          "needs": [],
+          "effects": [
+            "defend_bellwether",
+            "journal:Armed strangers followed Lena. They searched luggage instead of taking food."
+          ]
+        },
+        {
+          "text": "Prepare an evacuation as well. Nobody is trapped here.",
+          "next": "",
+          "stage": "bell_attack",
+          "needs": [],
+          "effects": [
+            "evac_plan",
+            "journal:Mara has an evacuation route behind the plaza if the defense fails."
+          ]
+        }
+      ],
+      "next": ""
+    },
+    {
+      "id": "lena_treat",
+      "beats": [
+        {
+          "who": "mara",
+          "text": "Press here. Keep pressing. Good. The suction unit is doing the rest.",
+          "needs": [
+            "clinic>=2"
+          ],
+          "gesture": "speak"
+        },
+        {
+          "who": "mara",
+          "text": "Clean instruments. I can close this. Hold the light steady.",
+          "needs": [
+            "clinic=1"
+          ],
+          "gesture": "speak"
+        },
+        {
+          "who": "mara",
+          "text": "No power for the sterilizer. The kit we set aside will do; do not open anything else.",
+          "needs": [
+            "clinic=0",
+            "medical_ready"
+          ],
+          "gesture": "speak"
+        },
+        {
+          "who": "mara",
+          "text": "We are short of sterile dressings. A field medkit will cover it.",
+          "needs": [
+            "clinic=0",
+            "!medical_ready"
+          ],
+          "gesture": "speak"
+        },
+        {
+          "who": "lena",
+          "text": "My coat. Inside seam. Blue stamps. Those are the copies, not the originals.",
+          "pause": 0.6,
+          "gesture": "speak"
+        }
+      ],
+      "choices": [],
+      "next": "bell_attack"
+    },
+    {
+      "id": "bell_after",
+      "beats": [
+        {
+          "who": "tessa",
+          "text": "They went for my intake book. Not the till. Not the pantry. One shouted names I had only just written down.",
+          "needs": [
+            "!dead_tessa"
+          ],
+          "gesture": "speak"
+        },
+        {
+          "who": "ivo",
+          "text": "Gate held. I can mend the rest without losing the room.",
+          "needs": [
+            "bell_condition=1",
+            "!dead_ivo"
+          ],
+          "gesture": "speak"
+        },
+        {
+          "who": "ivo",
+          "text": "Clinic window is gone. I have plywood. We keep one room heated until I can close it.",
+          "needs": [
+            "bell_condition=2",
+            "!dead_ivo"
+          ],
+          "gesture": "speak"
+        },
+        {
+          "who": "mara",
+          "text": "We left the plaza. I counted everyone I could reach. I will not call that saving the building.",
+          "needs": [
+            "bell_condition=3",
+            "!dead_mara"
+          ],
+          "gesture": "speak"
+        },
+        {
+          "who": "mara",
+          "text": "Lena is alive. She needs a powered suction unit and clean tubing from the market clinic.",
+          "needs": [
+            "!dead_lena",
+            "!dead_mara"
+          ],
+          "gesture": "speak"
+        },
+        {
+          "who": "mara",
+          "text": "Lena died. I have written her name down. The clinic still needs equipment; the others are not out of danger.",
+          "needs": [
+            "dead_lena",
+            "!dead_mara"
+          ],
+          "pause": 1.8,
+          "gesture": "speak"
+        },
+        {
+          "who": "tessa",
+          "text": "Lena's coat had transfer copies sewn inside. I kept them dry. If she cannot explain them, the stamps still name a Syracuse office.",
+          "needs": [
+            "dead_lena",
+            "!dead_tessa"
+          ],
+          "gesture": "speak"
+        },
+        {
+          "who": "lena",
+          "text": "I audited emergency deliveries. These sheets do not prove what happened to the people. They do prove someone kept moving their supplies.",
+          "needs": [
+            "!dead_lena"
+          ],
+          "gesture": "speak"
+        },
+        {
+          "who": "mara",
+          "text": "Samir works the old shopping complex clinic. Ask him about Northbank, too. I want an actual road to Canada. Not another promise.",
+          "needs": [
+            "!dead_mara"
+          ],
+          "gesture": "speak"
+        },
+        {
+          "who": "",
+          "text": "The survivors have marked the market clinic and the municipal relocation office. The damaged transfer copies remain readable.",
+          "needs": [
+            "dead_mara"
+          ]
+        }
+      ],
+      "choices": [],
+      "next": "market_arrive"
+    },
+    {
+      "id": "market_intro",
+      "beats": [
+        {
+          "who": "samir",
+          "text": "Bellwether? Father wrote that the heater ate another contact. ...You are bleeding. Sit down.",
+          "gesture": "point"
+        },
+        {
+          "who": "mara",
+          "text": "An attack. They were looking for papers. We need powered suction and proper tubing.",
+          "needs": [
+            "!dead_mara"
+          ],
+          "gesture": "speak"
+        },
+        {
+          "who": "samir",
+          "text": "The service annex has a portable unit. Nadia kept it running when the lower corridor flooded. She needs it for her brother, too. Ask her. Do not just carry it off.",
+          "gesture": "speak"
+        },
+        {
+          "who": "lena",
+          "text": "I can tell you which cabinet the service manual used to live in. That does not mean the cabinet is still there.",
+          "needs": [
+            "!dead_lena"
+          ],
+          "gesture": "speak"
+        },
+        {
+          "who": "samir",
+          "text": "And yes, Northbank is real. Their receiving station is north, around Watertown. They take people, not just people with useful résumés. Getting to them is the hard part.",
+          "gesture": "speak"
+        }
+      ],
+      "choices": [],
+      "next": "market_claim"
+    },
+    {
+      "id": "parcel",
+      "beats": [
+        {
+          "who": "samir",
+          "text": "The blue tag. He kept it.",
+          "gesture": "speak"
+        },
+        {
+          "who": "samir",
+          "text": "She used to label everything except her own keys. He said the tag was ugly. It was. ...I will write him. Thank you.",
+          "pause": 1.8,
+          "gesture": "speak"
+        },
+        {
+          "who": "samir",
+          "text": "There are two clean field dressings in that drawer. Take them. That is me thanking you, not the clinic selling you anything.",
+          "gesture": "speak"
+        }
+      ],
+      "choices": [],
+      "next": ""
+    },
+    {
+      "id": "nadia_claim",
+      "beats": [
+        {
+          "who": "nadia",
+          "text": "Stop there. That pump is connected to my brother. We do not have another. If you are looking for a convenient abandoned thing, this is the wrong room.",
+          "gesture": "stop"
+        },
+        {
+          "who": "nadia",
+          "text": "There is a second unit under the service platform. Drain the water, isolate the dead feeder, and I can test it. You cannot power the drain and the socket at the same time.",
+          "gesture": "speak"
+        },
+        {
+          "who": "samir",
+          "text": "Or we share this one and make a treatment schedule. It means someone waits, and someone has to carry it back.",
+          "gesture": "speak"
+        }
+      ],
+      "choices": [
+        {
+          "text": "I will help recover the second unit. Nobody loses treatment.",
+          "next": "nadia_work",
+          "stage": "market_drain",
+          "needs": [],
+          "effects": [
+            "market_cooperation",
+            "trust_nadia+=2"
+          ]
+        },
+        {
+          "text": "Let us share it. I will return the pump after treatment.",
+          "next": "nadia_share",
+          "stage": "market_return",
+          "needs": [],
+          "effects": [
+            "pump_loan",
+            "equipment_ready",
+            "trust_nadia+=1"
+          ]
+        },
+        {
+          "text": "Offer 60 credits toward her replacement, with Samir taking over care.",
+          "next": "nadia_buy",
+          "stage": "market_resolve",
+          "needs": [
+            "credits>=60"
+          ],
+          "effects": [
+            "spend:60",
+            "market_paid",
+            "equipment_ready"
+          ]
+        },
+        {
+          "text": "Threaten to take it by force. Her patients will lose it.",
+          "next": "nadia_warning",
+          "stage": "",
+          "needs": [],
+          "effects": []
+        }
+      ],
+      "next": ""
+    },
+    {
+      "id": "nadia_work",
+      "beats": [
+        {
+          "who": "nadia",
+          "text": "Drain valve first. Disconnect the feeder before you touch the platform. I will meet you at the test socket.",
+          "gesture": "speak"
+        },
+        {
+          "who": "nadia",
+          "text": "I am not asking you to be a hero. I am asking you not to elect somebody else expendable.",
+          "gesture": "speak"
+        }
+      ],
+      "choices": [],
+      "next": ""
+    },
+    {
+      "id": "nadia_share",
+      "beats": [
+        {
+          "who": "nadia",
+          "text": "Samir gets the case number. I get your word and a return time. If it does not come back, I will tell every clinic north of here.",
+          "gesture": "speak"
+        },
+        {
+          "who": "samir",
+          "text": "I will bring the patient here for this treatment cycle. Carry the case to the clinic chair, then return it here. Nobody needs to walk to Bellwether with a tube in their chest.",
+          "gesture": "speak"
+        }
+      ],
+      "choices": [],
+      "next": ""
+    },
+    {
+      "id": "nadia_buy",
+      "beats": [
+        {
+          "who": "nadia",
+          "text": "That buys tubing and a battery. Samir has agreed to keep my brother until I have the replacement. You are paying for a workable alternative. Not for him to stop mattering.",
+          "gesture": "speak"
+        }
+      ],
+      "choices": [],
+      "next": ""
+    },
+    {
+      "id": "nadia_warning",
+      "beats": [
+        {
+          "who": "nadia",
+          "text": "If you pull a weapon, the corridor watch will fight you. Say what you mean. Say you are taking it from a person.",
+          "gesture": "speak"
+        }
+      ],
+      "choices": [
+        {
+          "text": "Take the pump. I understand this means violence.",
+          "next": "",
+          "stage": "market_force",
+          "needs": [],
+          "effects": [
+            "market_violence",
+            "trust_nadia=-3",
+            "civilian_harm+=1"
+          ]
+        },
+        {
+          "text": "Back down. We can work something out.",
+          "next": "nadia_claim",
+          "stage": "",
+          "needs": [],
+          "effects": []
+        }
+      ],
+      "next": ""
+    },
+    {
+      "id": "pump_test",
+      "beats": [
+        {
+          "who": "nadia",
+          "text": "Pressure holds. Leave that cracked hose; use mine. Here, put your hand over the outlet. Feel that? Your people get a pump. My brother keeps his.",
+          "gesture": "point"
+        },
+        {
+          "who": "samir",
+          "text": "This is what I mean when I say the market is a town. It is not the shops. It is whether this happens.",
+          "gesture": "speak"
+        }
+      ],
+      "choices": [],
+      "next": "market_resolve"
+    },
+    {
+      "id": "market_aftermath",
+      "beats": [
+        {
+          "who": "samir",
+          "text": "Treatment is underway. I cannot promise everyone recovers. I can promise we are no longer improvising suction with a kettle.",
+          "gesture": "speak"
+        },
+        {
+          "who": "nadia",
+          "text": "You brought it back. Next time, just say who sent you.",
+          "needs": [
+            "pump_returned"
+          ],
+          "gesture": "speak"
+        },
+        {
+          "who": "samir",
+          "text": "The corridor watch will bury their own. You got equipment. That does not make what happened in there necessary.",
+          "needs": [
+            "market_violence"
+          ],
+          "gesture": "speak"
+        },
+        {
+          "who": "mara",
+          "text": "Thank you for staying with the practical part. I needed something I could actually put my hands on.",
+          "needs": [
+            "!dead_mara",
+            "!market_violence"
+          ],
+          "gesture": "speak"
+        },
+        {
+          "who": "samir",
+          "text": "Directorate table at the old municipal office has sealed antibiotics and referral forms. Keene is here in person. Their medicine has worked. The questions on their forms are another matter.",
+          "gesture": "speak"
+        }
+      ],
+      "choices": [],
+      "next": "aid_arrive"
+    },
+    {
+      "id": "aid_intro",
+      "beats": [
+        {
+          "who": "keene",
+          "text": "Marshal Adrian Keene. Restoration Directorate. Do not mind the seals: the medicine inside is current, and the clinic can test a dose before signing anything.",
+          "gesture": "speak"
+        },
+        {
+          "who": "mercer",
+          "text": "The northern referral has a space for every household member, including dependents. Registration is not a guarantee of a seat.",
+          "gesture": "speak"
+        },
+        {
+          "who": "keene",
+          "text": "We need an accurate survey around Bellwether: trades, relatives, chronic conditions. We cannot plan with guesses. In return, your clinic gets antibiotics and you get a named contact on the northern road.",
+          "gesture": "speak"
+        },
+        {
+          "who": "lena",
+          "text": "Who receives the household sheet after you?",
+          "needs": [
+            "!dead_lena"
+          ],
+          "gesture": "point"
+        },
+        {
+          "who": "mercer",
+          "text": "The transfer office. The copy stays here until the next dispatch. Names and skills can determine placement. Read that part before you agree.",
+          "gesture": "speak"
+        }
+      ],
+      "choices": [
+        {
+          "text": "Explain what registration means.",
+          "next": "aid_questions",
+          "stage": "",
+          "needs": [],
+          "effects": []
+        },
+        {
+          "text": "Supply accurate household records.",
+          "next": "aid_accept",
+          "stage": "housing_visit",
+          "needs": [],
+          "effects": [
+            "registration=1",
+            "aid_received",
+            "give:medkit:2",
+            "trust_keene+=1",
+            "journal:Keene supplied medicine for Bellwether's household survey. The duplicate remains at the municipal office until dispatch."
+          ]
+        },
+        {
+          "text": "Submit a falsified survey that omits residents and skills.",
+          "next": "aid_false",
+          "stage": "housing_visit",
+          "needs": [],
+          "effects": [
+            "registration=2",
+            "aid_received",
+            "give:medkit:2",
+            "directorate_suspicion+=1"
+          ]
+        },
+        {
+          "text": "Refuse the survey. Keep people off the register.",
+          "next": "aid_refuse",
+          "stage": "housing_visit",
+          "needs": [],
+          "effects": [
+            "registration=3"
+          ]
+        },
+        {
+          "text": "Offer to check the duplicate records before deciding.",
+          "next": "aid_investigate",
+          "stage": "aid_records",
+          "needs": [],
+          "effects": [
+            "registration=4"
+          ]
+        }
+      ],
+      "next": ""
+    },
+    {
+      "id": "aid_questions",
+      "beats": [
+        {
+          "who": "keene",
+          "text": "It means a location, a head count, and somebody responsible for correcting it. Some trades are urgently needed. Families move together where possible.",
+          "gesture": "speak"
+        },
+        {
+          "who": "mercer",
+          "text": "Where possible is not a promise. You can inspect your duplicate or withdraw it here before dispatch.",
+          "gesture": "speak"
+        },
+        {
+          "who": "keene",
+          "text": "June is right. If you know a cleaner way to deliver medicine across three counties, bring it to me. Until then, we will use lists.",
+          "gesture": "speak"
+        }
+      ],
+      "choices": [
+        {
+          "text": "Return to the offer.",
+          "next": "aid_intro",
+          "stage": "",
+          "needs": [],
+          "effects": []
+        }
+      ],
+      "next": ""
+    },
+    {
+      "id": "aid_accept",
+      "beats": [
+        {
+          "who": "mercer",
+          "text": "Sign below the household count. Keep this receipt. The red duplicate is the one to correct if anything is wrong.",
+          "gesture": "speak"
+        },
+        {
+          "who": "keene",
+          "text": "You will find the antibiotics do more good than the argument about who sent them. I hope we can keep it that way.",
+          "gesture": "speak"
+        }
+      ],
+      "choices": [],
+      "next": ""
+    },
+    {
+      "id": "aid_false",
+      "beats": [
+        {
+          "who": "mercer",
+          "text": "This is unusually sparse. I will mark it provisional. The transport office may ask to verify it.",
+          "gesture": "speak"
+        },
+        {
+          "who": "keene",
+          "text": "Provisional is better than nothing. June, release the clinic pack.",
+          "gesture": "speak"
+        }
+      ],
+      "choices": [],
+      "next": ""
+    },
+    {
+      "id": "aid_refuse",
+      "beats": [
+        {
+          "who": "keene",
+          "text": "That is your decision. The package is tied to the survey; I cannot keep making private exceptions.",
+          "gesture": "speak"
+        },
+        {
+          "who": "mercer",
+          "text": "The market clinic can still refer patients through Northbank. Ask Samir. Humanitarian intake is not ours to deny.",
+          "gesture": "speak"
+        }
+      ],
+      "choices": [],
+      "next": ""
+    },
+    {
+      "id": "aid_investigate",
+      "beats": [
+        {
+          "who": "mercer",
+          "text": "Duplicates are in the side office. Read only what the household authorized. If a name is missing, bring me a case number.",
+          "gesture": "speak"
+        },
+        {
+          "who": "keene",
+          "text": "Accuracy is the point. If you find a mistake, I want it on paper.",
+          "gesture": "speak"
+        }
+      ],
+      "choices": [],
+      "next": ""
+    },
+    {
+      "id": "duplicates",
+      "beats": [
+        {
+          "who": "",
+          "text": "DUPLICATE 14 / TOMAS PAREDES / water technician. Dependents: Elena Paredes, spouse; Luis Paredes, child. Destination on applicant copy: FAMILY HOUSING. Destination on dispatch carbon: PROCESSING / SEPARATE TRANSPORT."
+        },
+        {
+          "who": "",
+          "text": "The carbon is dated two days before the housing inspection was signed. A marginal note reads: retain trade classification; no forwarding address."
+        },
+        {
+          "who": "mercer",
+          "text": "That is not a typo I can fix at this desk. Elena still lives at the listed address. She came here yesterday asking where they took her husband.",
+          "gesture": "speak"
+        }
+      ],
+      "choices": [],
+      "next": "housing_visit"
+    },
+    {
+      "id": "elena_intro",
+      "beats": [
+        {
+          "who": "elena",
+          "text": "If you are here for the rest of the house, go away. They already measured the kitchen.",
+          "gesture": "speak"
+        },
+        {
+          "who": "mara",
+          "text": "We are not taking anything. Samir sent us.",
+          "needs": [
+            "!dead_mara"
+          ],
+          "gesture": "speak"
+        },
+        {
+          "who": "elena",
+          "text": "Tomas repaired water pumps. They offered us housing where the pipes worked. The transport came for him first. They said Luis and I would follow.",
+          "gesture": "speak"
+        },
+        {
+          "who": "elena",
+          "text": "He left his wedding ring because the pump casings catch it. It is not a clue he planted. It is just what he always did.",
+          "pause": 1.4,
+          "gesture": "speak"
+        },
+        {
+          "who": "elena",
+          "text": "The driver asked me to pack our documents separately. Tomas made a rubbing of the cargo tag while they waited. It is on the kitchen table. Please find an address, not a rumor.",
+          "gesture": "speak"
+        }
+      ],
+      "choices": [],
+      "next": "housing_search"
+    },
+    {
+      "id": "cargo_tag",
+      "beats": [
+        {
+          "who": "",
+          "text": "A pencil rubbing: ROME FREIGHT / TRANSFER 14 / RETAIN TECHNICIAN. Beneath it, Tomas wrote: ask D. Voss at canal terminal if the housing office loses us."
+        },
+        {
+          "who": "elena",
+          "text": "Della knew him before any of this. He helped her get the old pumps turning. If she has seen that tag, she will know where it went.",
+          "gesture": "speak"
+        },
+        {
+          "who": "elena",
+          "text": "Take the family photograph, if you need it. Leave the ring. I need one thing to stay where he left it.",
+          "gesture": "speak"
+        }
+      ],
+      "choices": [],
+      "next": "records_remedy"
+    },
+    {
+      "id": "remedy",
+      "beats": [
+        {
+          "who": "mercer",
+          "text": "I checked transfer fourteen. The transport office will not give me a forwarding address. They say the family is not authorized to ask.",
+          "gesture": "speak"
+        },
+        {
+          "who": "mercer",
+          "text": "Your Bellwether duplicate is still here. I warned you about placement. I did not understand it could mean this.",
+          "needs": [
+            "registration=1"
+          ],
+          "gesture": "speak"
+        },
+        {
+          "who": "mercer",
+          "text": "Your provisional survey has not been verified. I can still withdraw it.",
+          "needs": [
+            "registration=2"
+          ],
+          "gesture": "speak"
+        },
+        {
+          "who": "mercer",
+          "text": "There is no Bellwether submission from you. There are still other families on these sheets.",
+          "needs": [
+            "registration>=3"
+          ],
+          "gesture": "speak"
+        },
+        {
+          "who": "mercer",
+          "text": "If you take the dispatch carbon, people can compare the two destinations. If you burn every copy, fewer names leave this room, but so does part of the trail. Decide while the courier is away.",
+          "gesture": "speak"
+        }
+      ],
+      "choices": [
+        {
+          "text": "Take the carbon; withdraw my survey and hide the dependent addresses.",
+          "next": "remedy_protect",
+          "stage": "",
+          "needs": [],
+          "effects": [
+            "records_recovered",
+            "registration_withdrawn",
+            "evidence_transfer",
+            "trust_mercer+=2",
+            "journal:June withdrew the Bellwether survey. I retained the conflicting transfer carbon without the dependent addresses."
+          ]
+        },
+        {
+          "text": "Destroy the dispatch bundle so these families cannot be traced from it.",
+          "next": "remedy_destroy",
+          "stage": "",
+          "needs": [],
+          "effects": [
+            "records_destroyed",
+            "registration_withdrawn",
+            "evidence_transfer=0",
+            "trust_mercer+=1",
+            "journal:The dispatch bundle was destroyed. Elena's rubbing remains an alternate lead to Rome."
+          ]
+        },
+        {
+          "text": "Keep the evidence, but leave registration active to maintain access.",
+          "next": "remedy_keep",
+          "stage": "",
+          "needs": [],
+          "effects": [
+            "evidence_transfer",
+            "registration_active",
+            "leverage+=1",
+            "journal:I kept the carbon but left registration active. Listed families remain exposed to placement orders."
+          ]
+        }
+      ],
+      "next": ""
+    },
+    {
+      "id": "remedy_protect",
+      "beats": [
+        {
+          "who": "mercer",
+          "text": "I will mark those files withdrawn. Do not tell Elena I solved this. Her husband is still missing.",
+          "gesture": "speak"
+        }
+      ],
+      "choices": [],
+      "next": "syracuse_after"
+    },
+    {
+      "id": "remedy_destroy",
+      "beats": [
+        {
+          "who": "mercer",
+          "text": "The stove is hot enough. I will say the pipe burst. Tomas's wife still has the tag; do not let anyone take that from her.",
+          "gesture": "speak"
+        }
+      ],
+      "choices": [],
+      "next": "syracuse_after"
+    },
+    {
+      "id": "remedy_keep",
+      "beats": [
+        {
+          "who": "mercer",
+          "text": "Then understand what you are leaving in their hands. An open file is not a disguise for the families written in it.",
+          "gesture": "speak"
+        }
+      ],
+      "choices": [],
+      "next": "syracuse_after"
+    },
+    {
+      "id": "syracuse_after",
+      "beats": [
+        {
+          "who": "lena",
+          "text": "Rome is where several emergency consignments vanished from my ledger. I can explain that part to Voss. Nothing I have says who gave the order.",
+          "needs": [
+            "!dead_lena"
+          ],
+          "gesture": "speak"
+        },
+        {
+          "who": "mara",
+          "text": "Lena would have known the ledger. We have her copies and a family willing to put names to one transfer. That is enough to ask a real question.",
+          "needs": [
+            "dead_lena",
+            "!dead_mara"
+          ],
+          "gesture": "speak"
+        },
+        {
+          "who": "elena",
+          "text": "If you find Tomas, tell him Luis still puts his shoes by the heater. He says we should be ready when his dad comes home.",
+          "gesture": "speak"
+        },
+        {
+          "who": "mara",
+          "text": "I want Canada. I have not changed my mind. But I will not step over these people on the way to it.",
+          "needs": [
+            "!dead_mara"
+          ],
+          "gesture": "speak"
+        },
+        {
+          "who": "samir",
+          "text": "I sent word ahead to the canal crews. Bellwether will hear from us, too. You do not have to disappear to travel north.",
+          "gesture": "speak"
+        }
+      ],
+      "choices": [],
+      "next": "rome_arrive"
+    },
+    {
+      "id": "clinic_quiet",
+      "beats": [
+        {
+          "who": "samir",
+          "text": "You can sit. Nobody has a form for sitting.",
+          "gesture": "speak"
+        },
+        {
+          "who": "samir",
+          "text": "Father wrote back. Three pages about the heater bearing. Two lines about himself. I am choosing to call that good news.",
+          "needs": [
+            "parcel_delivered",
+            "!dead_ivo"
+          ],
+          "gesture": "speak"
+        },
+        {
+          "who": "samir",
+          "text": "I kept the parcel. I know he meant to bring it himself.",
+          "needs": [
+            "parcel_delivered",
+            "dead_ivo"
+          ],
+          "pause": 1.2,
+          "gesture": "speak"
+        },
+        {
+          "who": "samir",
+          "text": "The clinic will be here when you need it. Bring clean water if you have some. Bring yourself even if you do not.",
+          "gesture": "speak"
+        }
+      ],
+      "choices": [],
+      "next": ""
+    }
+  ],
+  "stages": [
+    {
+      "id": "bell_lights",
+      "mission": "lights",
+      "site": "bellwether",
+      "title": "Keep the Lights On",
+      "goal": "Repair the heater contact and allocate the three cans of fuel.",
+      "cast": [
+        "mara",
+        "ivo",
+        "tessa"
+      ],
+      "actions": [
+        {
+          "id": "heater",
+          "label": "Seat and prime the heater contact",
+          "at": [
+            -210,
+            200,
+            0
+          ],
+          "scene": "",
+          "next": "",
+          "mesh": "ControlPanel52",
+          "needs": [
+            "!heater_fixed"
+          ],
+          "effects": [
+            "heater_fixed"
+          ],
+          "work": 4
+        },
+        {
+          "id": "fuel",
+          "label": "Read the fuel allocation board",
+          "at": [
+            210,
+            200,
+            0
+          ],
+          "scene": "fuel",
+          "next": "",
+          "mesh": "Dossier52",
+          "needs": [
+            "!fuel_assigned"
+          ],
+          "effects": [],
+          "work": 0
+        },
+        {
+          "id": "talk_ivo",
+          "label": "Talk to Ivo",
+          "at": [
+            -300,
+            -60,
+            0
+          ],
+          "scene": "ivo_break",
+          "next": "",
+          "mesh": "",
+          "needs": [],
+          "effects": [],
+          "work": 0
+        },
+        {
+          "id": "talk_tessa",
+          "label": "Talk to Tessa",
+          "at": [
+            280,
+            -50,
+            0
+          ],
+          "scene": "tessa_break",
+          "next": "",
+          "mesh": "",
+          "needs": [],
+          "effects": [],
+          "work": 0
+        }
+      ],
+      "arrival": "bell_intro",
+      "needs": [
+        "heater_fixed",
+        "fuel_assigned"
+      ],
+      "next": "bell_warm"
+    },
+    {
+      "id": "bell_warm",
+      "mission": "lights",
+      "site": "bellwether",
+      "title": "Keep the Lights On",
+      "goal": "Join the others by the heater.",
+      "cast": [
+        "mara",
+        "ivo",
+        "tessa"
+      ],
+      "actions": [],
+      "arrival": "warm_room"
+    },
+    {
+      "id": "bell_prepare",
+      "mission": "door",
+      "site": "bellwether",
+      "title": "Someone at the Door",
+      "goal": "Prepare the plaza, then meet Mara at the gate.",
+      "cast": [
+        "mara",
+        "ivo",
+        "tessa"
+      ],
+      "actions": [
+        {
+          "id": "brace_gate",
+          "label": "Brace the side gate",
+          "at": [
+            -350,
+            -380,
+            0
+          ],
+          "scene": "",
+          "next": "",
+          "mesh": "Scrap52",
+          "needs": [
+            "!gate_braced"
+          ],
+          "effects": [
+            "gate_braced"
+          ],
+          "work": 5
+        },
+        {
+          "id": "road_watch",
+          "label": "Tune the road-watch aerial",
+          "at": [
+            370,
+            180,
+            0
+          ],
+          "scene": "",
+          "next": "",
+          "mesh": "RelayConsole52",
+          "needs": [
+            "comms",
+            "!watch_ready"
+          ],
+          "effects": [
+            "watch_ready"
+          ],
+          "work": 4
+        },
+        {
+          "id": "stage_medical",
+          "label": "Set aside sterile dressings",
+          "at": [
+            210,
+            100,
+            0
+          ],
+          "scene": "",
+          "next": "",
+          "mesh": "Case77",
+          "needs": [
+            "!medical_ready"
+          ],
+          "effects": [
+            "medical_ready"
+          ],
+          "work": 3
+        },
+        {
+          "id": "talk_mara",
+          "label": "Meet Mara",
+          "at": [
+            80,
+            -160,
+            0
+          ],
+          "scene": "prepare_go",
+          "next": "",
+          "mesh": "",
+          "needs": [],
+          "effects": [],
+          "work": 0
+        },
+        {
+          "id": "talk_ivo",
+          "label": "Talk to Ivo",
+          "at": [
+            -300,
+            -60,
+            0
+          ],
+          "scene": "ivo_break",
+          "next": "",
+          "mesh": "",
+          "needs": [
+            "!parcel_accepted"
+          ],
+          "effects": [],
+          "work": 0
+        },
+        {
+          "id": "talk_tessa",
+          "label": "Talk to Tessa",
+          "at": [
+            280,
+            -50,
+            0
+          ],
+          "scene": "tessa_break",
+          "next": "",
+          "mesh": "",
+          "needs": [],
+          "effects": [],
+          "work": 0
+        }
+      ]
+    },
+    {
+      "id": "bell_arrival",
+      "mission": "door",
+      "site": "bellwether",
+      "title": "Someone at the Door",
+      "goal": "Help bring the injured travelers inside.",
+      "cast": [
+        "mara",
+        "ivo",
+        "tessa",
+        "lena"
+      ],
+      "actions": [],
+      "arrival": "lena_arrival"
+    },
+    {
+      "id": "bell_attack",
+      "mission": "door",
+      "site": "bellwether",
+      "title": "Someone at the Door",
+      "goal": "Defend the plaza or evacuate. Treat Lena and protect the intake records.",
+      "cast": [
+        "mara",
+        "ivo",
+        "tessa",
+        "lena"
+      ],
+      "actions": [
+        {
+          "id": "treat_lena",
+          "label": "Help Mara stabilize Lena",
+          "at": [
+            530,
+            250,
+            0
+          ],
+          "scene": "lena_treat",
+          "next": "",
+          "mesh": "Case77",
+          "needs": [
+            "!lena_treated",
+            "!dead_lena"
+          ],
+          "effects": [
+            "lena_treated"
+          ],
+          "work": 5
+        },
+        {
+          "id": "save_intake",
+          "label": "Carry the intake book to safety",
+          "at": [
+            -170,
+            80,
+            0
+          ],
+          "scene": "",
+          "next": "",
+          "mesh": "Dossier52",
+          "needs": [
+            "!intake_saved",
+            "!intake_burned"
+          ],
+          "effects": [
+            "intake_saved"
+          ],
+          "work": 0
+        },
+        {
+          "id": "isolate_power",
+          "label": "Isolate the damaged clinic circuit",
+          "at": [
+            290,
+            220,
+            0
+          ],
+          "scene": "",
+          "next": "",
+          "mesh": "ControlPanel52",
+          "needs": [
+            "!fire_contained"
+          ],
+          "effects": [
+            "fire_contained"
+          ],
+          "work": 3
+        },
+        {
+          "id": "evacuate",
+          "label": "Lead the evacuation behind the plaza",
+          "at": [
+            -350,
+            420,
+            0
+          ],
+          "scene": "",
+          "next": "bell_after",
+          "mesh": "Keys52",
+          "needs": [],
+          "effects": [
+            "bell_condition=3",
+            "evacuated"
+          ],
+          "work": 0
+        }
+      ],
+      "enemies": 4,
+      "duration": 150,
+      "next": "bell_after"
+    },
+    {
+      "id": "bell_after",
+      "mission": "door",
+      "site": "bellwether",
+      "title": "Someone at the Door",
+      "goal": "Check on the survivors.",
+      "cast": [
+        "mara",
+        "ivo",
+        "tessa",
+        "lena"
+      ],
+      "actions": [],
+      "arrival": "bell_after"
+    },
+    {
+      "id": "market_arrive",
+      "mission": "customer",
+      "site": "market",
+      "title": "Customer Service",
+      "goal": "Find Samir at the market clinic entrance.",
+      "cast": [
+        "samir",
+        "mara",
+        "lena"
+      ],
+      "actions": [
+        {
+          "id": "talk_samir",
+          "label": "Give Samir the parcel",
+          "at": [
+            0,
+            0,
+            0
+          ],
+          "scene": "parcel",
+          "next": "",
+          "mesh": "",
+          "needs": [
+            "parcel_accepted",
+            "!parcel_delivered"
+          ],
+          "effects": [
+            "parcel_delivered",
+            "trust_samir+=2",
+            "give:medkit:2"
+          ],
+          "work": 0
+        }
+      ],
+      "arrival": "market_intro"
+    },
+    {
+      "id": "market_claim",
+      "mission": "customer",
+      "site": "market",
+      "title": "Customer Service",
+      "goal": "Talk to Nadia about the service-area pump.",
+      "cast": [
+        "samir",
+        "nadia",
+        "mara",
+        "lena"
+      ],
+      "actions": [
+        {
+          "id": "talk_nadia",
+          "label": "Speak with Nadia",
+          "at": [
+            -160,
+            180,
+            0
+          ],
+          "scene": "nadia_claim",
+          "next": "",
+          "mesh": "",
+          "needs": [],
+          "effects": [],
+          "work": 0
+        },
+        {
+          "id": "talk_samir",
+          "label": "Give Samir the parcel",
+          "at": [
+            200,
+            -60,
+            0
+          ],
+          "scene": "parcel",
+          "next": "",
+          "mesh": "",
+          "needs": [
+            "parcel_accepted",
+            "!parcel_delivered"
+          ],
+          "effects": [
+            "parcel_delivered",
+            "trust_samir+=2",
+            "give:medkit:2"
+          ],
+          "work": 0
+        },
+        {
+          "id": "clinic_break",
+          "label": "Sit with Samir between patients",
+          "at": [
+            470,
+            -180,
+            0
+          ],
+          "mesh": "Dossier52",
+          "scene": "clinic_quiet",
+          "next": "",
+          "needs": [],
+          "effects": [],
+          "work": 0
+        }
+      ]
+    },
+    {
+      "id": "market_drain",
+      "mission": "customer",
+      "site": "market",
+      "title": "Customer Service",
+      "goal": "Drain the service annex before opening the feeder.",
+      "cast": [
+        "nadia",
+        "samir"
+      ],
+      "actions": [
+        {
+          "id": "drain",
+          "label": "Open the service drain",
+          "at": [
+            -320,
+            100,
+            0
+          ],
+          "scene": "",
+          "next": "",
+          "mesh": "Scrap52",
+          "needs": [
+            "!annex_drained"
+          ],
+          "effects": [
+            "annex_drained"
+          ],
+          "work": 6
+        },
+        {
+          "id": "feeder",
+          "label": "Isolate the flooded feeder",
+          "at": [
+            220,
+            220,
+            0
+          ],
+          "scene": "",
+          "next": "",
+          "mesh": "ControlPanel52",
+          "needs": [
+            "annex_drained",
+            "!feeder_isolated"
+          ],
+          "effects": [
+            "feeder_isolated"
+          ],
+          "work": 4
+        },
+        {
+          "id": "recover_pump",
+          "label": "Recover the second pump",
+          "at": [
+            -210,
+            210,
+            0
+          ],
+          "scene": "",
+          "next": "",
+          "mesh": "Case77",
+          "needs": [
+            "feeder_isolated",
+            "!pump_recovered"
+          ],
+          "effects": [
+            "pump_recovered"
+          ],
+          "work": 4
+        },
+        {
+          "id": "test_pump",
+          "label": "Reconnect the isolated test socket",
+          "at": [
+            200,
+            100,
+            0
+          ],
+          "scene": "pump_test",
+          "next": "",
+          "mesh": "ControlPanel52",
+          "needs": [
+            "pump_recovered"
+          ],
+          "effects": [
+            "equipment_ready"
+          ],
+          "work": 4
+        }
+      ]
+    },
+    {
+      "id": "market_return",
+      "mission": "customer",
+      "site": "market",
+      "title": "Customer Service",
+      "goal": "Complete the treatment cycle, then return Nadia's pump.",
+      "cast": [
+        "nadia",
+        "samir",
+        "mara"
+      ],
+      "actions": [
+        {
+          "id": "treatment",
+          "label": "Assist with the treatment cycle",
+          "at": [
+            220,
+            -100,
+            0
+          ],
+          "scene": "",
+          "next": "",
+          "mesh": "Case77",
+          "needs": [
+            "!treatment_done"
+          ],
+          "effects": [
+            "treatment_done"
+          ],
+          "work": 8
+        },
+        {
+          "id": "return_pump",
+          "label": "Return the pump to Nadia",
+          "at": [
+            -160,
+            180,
+            0
+          ],
+          "scene": "",
+          "next": "market_resolve",
+          "mesh": "Case77",
+          "needs": [
+            "treatment_done"
+          ],
+          "effects": [
+            "pump_returned",
+            "trust_nadia+=1"
+          ],
+          "work": 0
+        }
+      ]
+    },
+    {
+      "id": "market_force",
+      "mission": "customer",
+      "site": "market",
+      "title": "Customer Service",
+      "goal": "Take the pump through the corridor watch.",
+      "cast": [
+        "nadia",
+        "samir"
+      ],
+      "actions": [
+        {
+          "id": "seize_pump",
+          "label": "Take the pump",
+          "at": [
+            -160,
+            180,
+            0
+          ],
+          "scene": "",
+          "next": "market_resolve",
+          "mesh": "Case77",
+          "needs": [
+            "enemies_clear"
+          ],
+          "effects": [
+            "equipment_ready"
+          ],
+          "work": 0
+        }
+      ],
+      "enemies": 2
+    },
+    {
+      "id": "market_resolve",
+      "mission": "customer",
+      "site": "market",
+      "title": "Customer Service",
+      "goal": "Check the clinic before leaving.",
+      "cast": [
+        "samir",
+        "nadia",
+        "mara",
+        "lena"
+      ],
+      "actions": [],
+      "arrival": "market_aftermath"
+    },
+    {
+      "id": "aid_arrive",
+      "mission": "tomorrow",
+      "site": "records",
+      "title": "A Better Tomorrow",
+      "goal": "Meet the Directorate at the municipal aid desk.",
+      "cast": [
+        "keene",
+        "mercer",
+        "mara",
+        "lena"
+      ],
+      "actions": [
+        {
+          "id": "talk_keene",
+          "label": "Discuss the household survey",
+          "at": [
+            -150,
+            150,
+            0
+          ],
+          "scene": "aid_intro",
+          "next": "",
+          "mesh": "",
+          "needs": [],
+          "effects": [],
+          "work": 0
+        }
+      ],
+      "arrival": "aid_intro"
+    },
+    {
+      "id": "aid_records",
+      "mission": "tomorrow",
+      "site": "records",
+      "title": "A Better Tomorrow",
+      "goal": "Compare the applicant copy with the dispatch carbon.",
+      "cast": [
+        "mercer"
+      ],
+      "actions": [
+        {
+          "id": "read_duplicates",
+          "label": "Read transfer fourteen",
+          "at": [
+            210,
+            130,
+            0
+          ],
+          "scene": "duplicates",
+          "next": "",
+          "mesh": "Dossier52",
+          "needs": [],
+          "effects": [
+            "evidence_transfer"
+          ],
+          "work": 0
+        }
+      ]
+    },
+    {
+      "id": "housing_visit",
+      "mission": "address",
+      "site": "housing",
+      "title": "No Forwarding Address",
+      "goal": "Visit Elena Paredes at the address on transfer fourteen.",
+      "cast": [
+        "elena",
+        "mara",
+        "lena"
+      ],
+      "actions": [],
+      "arrival": "elena_intro"
+    },
+    {
+      "id": "housing_search",
+      "mission": "address",
+      "site": "housing",
+      "title": "No Forwarding Address",
+      "goal": "Examine Tomas's cargo-tag rubbing.",
+      "cast": [
+        "elena",
+        "mara",
+        "lena"
+      ],
+      "actions": [
+        {
+          "id": "rubbing",
+          "label": "Examine the cargo-tag rubbing",
+          "at": [
+            150,
+            120,
+            0
+          ],
+          "scene": "cargo_tag",
+          "next": "",
+          "mesh": "Dossier52",
+          "needs": [],
+          "effects": [
+            "evidence_rubbing",
+            "journal:Tomas Paredes was sent through Rome Freight. His tag names Della Voss at the canal terminal."
+          ],
+          "work": 0
+        }
+      ]
+    },
+    {
+      "id": "records_remedy",
+      "mission": "address",
+      "site": "records",
+      "title": "No Forwarding Address",
+      "goal": "Meet June before the dispatch courier leaves.",
+      "cast": [
+        "mercer"
+      ],
+      "actions": [
+        {
+          "id": "talk_mercer",
+          "label": "Decide what to do with the dispatch bundle",
+          "at": [
+            0,
+            100,
+            0
+          ],
+          "scene": "remedy",
+          "next": "",
+          "mesh": "",
+          "needs": [],
+          "effects": [],
+          "work": 0
+        }
+      ],
+      "arrival": "remedy"
+    },
+    {
+      "id": "syracuse_after",
+      "mission": "address",
+      "site": "market",
+      "title": "No Forwarding Address",
+      "goal": "Bring the confirmed route back to the clinic.",
+      "cast": [
+        "samir",
+        "elena",
+        "mara",
+        "lena"
+      ],
+      "actions": [],
+      "arrival": "syracuse_after"
+    }
+  ]
+}

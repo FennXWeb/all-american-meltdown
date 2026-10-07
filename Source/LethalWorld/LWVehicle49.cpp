@@ -1,3 +1,4 @@
+#include "LWAircraft84.h"
 #include "LWVehicle.h"
 #include "LWWorld.h"
 #include "LWCharacter.h"
@@ -8,11 +9,14 @@
 #include "GameFramework/CharacterMovementComponent.h"
 #include "Engine/World.h"
 #include "Kismet/GameplayStatics.h"
-FVector ALWVehicle::DriverEye()const{
+FVector ALWVehicle::DriverEye()const{if(IsAircraft84())return LWAviation84::Seat(Spec().Id,-1)+FVector(0,0,83);
+ if(IsSolarRV74())return CabinToActor74(FVector(65,-55,220));
+ if(FName(Spec().Id)==TEXT("apex_ev"))return CabinToActor74(FVector(-68,-43,114));
+ if(IsExpansion57())return FVector(LWTraffic::FrontOffset(Spec())+(IsHelicopter57()?20:-35),-43,IsHelicopter57()?96:69);
  const FName M(Spec().Id);float Z=M==TEXT("rv")?145:M==TEXT("bus")||M==TEXT("boxtruck")?109:M==TEXT("supercar")?44:M==TEXT("muscle")?59:M==TEXT("sedan")?61:M==TEXT("dirtbike")?75:69;
  return FVector(LWTraffic::FrontOffset(Spec())+(M==TEXT("rv")?65:-35),Spec().Seats==1?0:M==TEXT("rv")?-55:-43,Z);
 }
-FString ALWVehicle::Prompt()const{if(Held49||Airborne49)return TEXT("KEEP CLEAR");FString S=VehiclePrompt49();if(!SpawnPlacementPending&&Record()&&!Record()->Exploded&&!Driver&&!Chauffeur&&!ConvoyOwner&&FMath::Abs(Speed)<120)S+=TEXT("  [SHIFT+E] FLIP / UNSTICK");return S;}
+FString ALWVehicle::Prompt()const{if(Held49||Airborne49)return TEXT("KEEP CLEAR");FString S=VehiclePrompt49();if(!IsAircraft84()&&!SpawnPlacementPending&&Record()&&!Record()->Exploded&&!Driver&&!Chauffeur&&!ConvoyOwner&&FMath::Abs(Speed)<120)S+=TEXT("  [SHIFT+E] FLIP / UNSTICK");return S;}
 bool ALWVehicle::Flip49(ALWCharacter* P){
  if(!P||!P->CanAct()||FVector::Dist2D(P->GetActorLocation(),GetActorLocation())>Spec().HalfLength+450)return false;
  if(Driver||Chauffeur||ConvoyOwner||Passengers.ContainsByPredicate([](auto& N){return IsValid(N);})||Grabber49.IsValid()||Airborne49||FMath::Abs(Speed)>120||!Record()||Record()->Exploded){P->Notify(TEXT("STOP AND EMPTY THE VEHICLE FIRST"));return false;}
@@ -27,7 +31,7 @@ bool ALWVehicle::Flip49(ALWCharacter* P){
 }
 bool ALWVehicle::Grab49(ALWZombie* Boss){
  if(!Boss||Boss->bDead||Grabber49.IsValid()||Airborne49||SpawnPlacementPending||!Record()||Record()->Exploded||Record()->Stored45)return false;
- Held49=true;Grabber49=ThrowIgnore49=Boss;Speed=Throttle=Steer=0;AutoDriving=Boarding=false;EngineOn=false;StopDriveAudio();Chassis->IgnoreActorWhenMoving(Boss,true);if(Driver){Driver->ClosePanels();Driver->Notify(TEXT("HOLD ON!"));}return true;
+ Held49=true;Grabber49=ThrowIgnore49=Boss;Speed=Throttle=Steer=0;SelfDriving74=AutoDriving=Boarding=false;CabinVelocity74=FVector::ZeroVector;CabinMove=FVector2D::ZeroVector;EngineOn=false;StopDriveAudio();Chassis->IgnoreActorWhenMoving(Boss,true);if(Driver){Driver->ClosePanels();Driver->Notify(TEXT("HOLD ON!"));}return true;
 }
 void ALWVehicle::Throw49(FVector V){Held49=false;Grabber49.Reset();FlightVelocity49=V;Airborne49=true;FlightTime49=0;FlightBounces49=0;FlightHitPlayer49=false;Speed=Throttle=Steer=0;if(!V.IsNearlyZero())SetActorRotation(FRotator(0,V.Rotation().Yaw,0));}
 bool ALWVehicle::TickThrown49(float Dt){

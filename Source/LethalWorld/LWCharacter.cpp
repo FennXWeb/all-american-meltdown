@@ -1,3 +1,10 @@
+#include "LWSettlement82.h"
+#include "LWCampaign76.h"
+#include "LWHUD.h"
+#include "Engine/GameViewportClient.h"
+#include "Framework/Application/SlateApplication.h"
+#include "LWNewGame72.h"
+#include "LWDebugMenu67.h"
 #include "LWConsole47.h"
 #include "LWBunker45.h"
 #include "LWLoading45.h"
@@ -94,7 +101,7 @@ void ALWCharacter::SetupPlayerInputComponent(UInputComponent* I)
     I->BindAction(TEXT("Map"),IE_Pressed,this,&ALWCharacter::ToggleMap);I->BindAction(TEXT("Inventory"),IE_Pressed,this,&ALWCharacter::ToggleInventory);
     I->BindAction(TEXT("Save"),IE_Pressed,this,&ALWCharacter::SaveProgress);I->BindAction(TEXT("Load"),IE_Pressed,this,&ALWCharacter::LoadProgress);I->BindAction(TEXT("BunkerWaypoint"),IE_Pressed,this,&ALWCharacter::RouteToBunker);
 }
-void ALWCharacter::Forward(float V){InputForward54=V;if(Vehicle){if(Vehicle->PlayerSeat==-2)Vehicle->CabinMove.X=V;else if(Vehicle->PlayerSeat==-1)Vehicle->Throttle=V;return;}if(CanAct()&&!Sliding54)AddMovementInput(GetActorForwardVector(),V);}void ALWCharacter::Right(float V){InputRight54=V;if(Vehicle){if(Vehicle->PlayerSeat==-2)Vehicle->CabinMove.Y=V;else if(Vehicle->PlayerSeat==-1)Vehicle->Steer=V;return;}if(CanAct()&&!Sliding54)AddMovementInput(GetActorRightVector(),V);}
+void ALWCharacter::Forward(float V){InputForward54=V;if(Vehicle){if(Vehicle->PlayerSeat==-2)Vehicle->CabinMove.X=V;else if(Vehicle->PlayerSeat==-1){if(Vehicle->SelfDriving74&&FMath::Abs(V)>.2f)Vehicle->RequestDriverStop();else if(!Vehicle->SelfDriving74)Vehicle->Throttle=V;}return;}if(CanAct()&&!Sliding54)AddMovementInput(GetActorForwardVector(),V);}void ALWCharacter::Right(float V){InputRight54=V;if(Vehicle){if(Vehicle->PlayerSeat==-2)Vehicle->CabinMove.Y=V;else if(Vehicle->PlayerSeat==-1){if(Vehicle->SelfDriving74&&FMath::Abs(V)>.2f)Vehicle->RequestDriverStop();else if(!Vehicle->SelfDriving74)Vehicle->Steer=V;}return;}if(CanAct()&&!Sliding54)AddMovementInput(GetActorRightVector(),V);}
 void ALWCharacter::Turn(float V){if(SecurityMode==1){PickAngle=FMath::Clamp(PickAngle+V*Sensitivity*4,-90.f,90.f);return;}if(Vehicle&&!bMenu&&!bInventory&&!bMap&&!RPGPanel&&!SecurityMode){SeatYaw=Vehicle->PlayerSeat!=-1?FMath::UnwindDegrees(SeatYaw+V*Sensitivity*2):FMath::Clamp(SeatYaw+V*Sensitivity*2,-115.f,115.f);return;}if(CanAct()){AddControllerYawInput(V*Sensitivity);LookX=V;}}void ALWCharacter::Look(float V){if(Vehicle&&!bMenu&&!bInventory&&!bMap&&!RPGPanel&&!SecurityMode){SeatPitch=FMath::Clamp(SeatPitch-V*Sensitivity*2,-65.f,55.f);return;}if(CanAct()){AddControllerPitchInput(V*Sensitivity);LookY=V;}}
 void ALWCharacter::StartSprint(){if(CanAct())bSprint=true;}void ALWCharacter::StopSprint(){bSprint=false;}
 void ALWCharacter::StartCrouch(){if(!CanAct())return;CrouchHeld54=true;CrouchHold56=0;CrouchHoldUsed56=false;if(Prone54){Stand54();return;}if(bSprint&&GetCharacterMovement()->IsMovingOnGround()&&GetVelocity().Size2D()>430&&Stamina>=18&&SlideCooldown54<=0){Sliding54=true;SlideTime54=0;SlideDirection54=GetVelocity().GetSafeNormal2D();Stamina-=18;bSprint=bAim=false;World->Sound(TEXT("Slide54"),GetActorLocation(),.7f);Crouch();return;}if(bIsCrouched)Stand54();else Crouch();}
@@ -102,19 +109,27 @@ void ALWCharacter::StopCrouch(){CrouchHeld54=false;CrouchHold56=0;}void ALWChara
 void ALWCharacter::DoJump(){if(bStoryLocked)return;if(Vehicle){Vehicle->StandInCamper();return;}if(SittingChair){StandFromChair();return;}if(CanAct()&&Stamina>12){if(Prone54){Stand54();return;}if(TryTraverse54())return;if(Sliding54){Sliding54=false;SlideCooldown54=.8f;UnCrouch();}if(GetCharacterMovement()->IsMovingOnGround()){Jump();Stamina-=10;GroundGrace54=0;}else if(GroundGrace54>0){LaunchCharacter(FVector(0,0,420),false,true);Stamina-=10;GroundGrace54=0;}else JumpBuffer54=.14f;}}
 void ALWCharacter::ToggleFlashlight(){if(Vehicle){VehicleLights();return;}if(CanAct()){Flashlight->ToggleVisibility();World->Sound(TEXT("Click"),GetActorLocation());}}
 void ALWCharacter::Notify(FString Text,float Seconds){Message=Text;MessageTime=Seconds;}
-void ALWCharacter::ClosePanels(){if((BaseUI45||BuildMode45)&&BunkerManager45)BunkerManager45->Close();CloseWorkbench39();CancelSecurity();CardTable=nullptr;RestBed=nullptr;RPGPanel=0;Speaker=nullptr;EncounterSpeaker=nullptr;bInventory=false;bMap=false;OpenObject=nullptr;bTrigger=false;SetMenuInput(bMenu);}
+void ALWCharacter::ClosePanels(){if(Settlement82&&SettlementBuild82)Settlement82->Close();if(Campaign76&&Campaign76->SceneOpen){Campaign76->Pause();RPG.Campaign76.Paused=true;}if(bDebug67&&DebugMenu67)DebugMenu67->Close();SavePanel62=0;if((BaseUI45||BuildMode45)&&BunkerManager45)BunkerManager45->Close();CloseWorkbench39();CancelSecurity();CardTable=nullptr;RestBed=nullptr;Service66=nullptr;RPGPanel=0;Speaker=nullptr;EncounterSpeaker=nullptr;bInventory=false;bMap=false;OpenObject=nullptr;bTrigger=false;SetMenuInput(bMenu);}
 void ALWCharacter::ToggleMap(){if(Workbench39)return;if(!bStarted||bMenu||Health<=0)return;if(bMap)ClosePanels();else SwitchTab(1);}
 void ALWCharacter::ToggleInventory(){if(Workbench39)return;if(!bStarted||bMenu||Health<=0)return;if(bInventory)ClosePanels();else SwitchTab(0);}
 void ALWCharacter::OpenContainer(ALWWorldObject* O){if(IsLocked(O)){StartLockpick(O);return;}ClosePanels();bInventory=true;OpenObject=O;CancelReload();bAim=false;bSprint=false;SetMenuInput(true);}
 FString ALWCharacter::FocusPrompt()const{if(QuickContainer54())return FString();if(CorpseFocus)return TEXT("[E] SEARCH BODY");if(SittingChair)return TEXT("[E / SPACE] STAND UP");if(Vehicle)return Vehicle->CabinPrompt();return ResidentFocus?(ResidentFocus->NpcRole==TEXT("civilian")?FString():TEXT("[E] TALK ")+ResidentFocus->DisplayName):ObjectFocus?ObjectFocus->Prompt():Focus?Focus->Prompt():FString();}
-void ALWCharacter::Interact(){if(BaseUI45||BuildMode45)return;if(Workbench39)return;if(bStoryLocked)return;if(OpeningMode){if(OpeningMode==2&&NameEditing){NameEditing=false;return;}OpeningClick(OpeningMode==1?TEXT("intro_pause"):TEXT("creator_done"));return;}if(bWorldSetup)return;if(SittingChair){StandFromChair();return;}if(!bStarted){StartGame(true);return;}if(Health<=0){Respawn();return;}if(bMenu){ToggleMenu();return;}if(Workbench39||bInventory||bMap||RPGPanel||SecurityMode){ClosePanels();return;}if(Vehicle){FName Action=Vehicle->FocusControl();if(Action.IsNone()&&Vehicle->PlayerSeat!=-2)Vehicle->Exit();else Vehicle->Control(Action);return;}if(QuickContainer54()){TakeQuick54();return;}if(CorpseFocus)CorpseFocus->LootBody(this);else if(ResidentFocus)Talk(ResidentFocus);else if(ObjectFocus)ObjectFocus->Use(this);else if(Focus)Focus->Use(this);}
+void ALWCharacter::Interact(){if(bDebug67)return;if(BaseUI45||BuildMode45||SettlementBuild82)return;if(Workbench39)return;if(bStoryLocked)return;if(OpeningMode){if(OpeningMode==2&&NameEditing){NameEditing=false;return;}OpeningClick(OpeningMode==1?TEXT("intro_pause"):TEXT("creator_done"));return;}if(bWorldSetup)return;if(SittingChair){StandFromChair();return;}if(!bStarted){StartGame(true);return;}if(Health<=0){Respawn();return;}if(bMenu){ToggleMenu();return;}if(Workbench39||bInventory||bMap||RPGPanel||SecurityMode){ClosePanels();return;}if(Vehicle){FName Action=Vehicle->FocusControl();if(Action.IsNone()&&Vehicle->PlayerSeat!=-2)Vehicle->Exit();else Vehicle->Control(Action);return;}if(QuickContainer54()){TakeQuick54();return;}if(CorpseFocus)CorpseFocus->LootBody(this);else if(ResidentFocus)Talk(ResidentFocus);else if(ObjectFocus)ObjectFocus->Use(this);else if(Focus)Focus->Use(this);}
 void ALWCharacter::SetMenuInput(bool Enabled)
 {
+    // A scene owns input until it has actually closed, including load/creation handoffs.
+    Enabled=Enabled||(Campaign76&&Campaign76->SceneOpen);
     bUIInputActive=Enabled;
     if(Enabled){StopAttack();bAim=false;bSprint=false;}
     if(auto* PC=Cast<APlayerController>(Controller))if(PC->IsInputKeyDown(EKeys::LeftMouseButton))ConsumeUIAttack();
     WeaponRoot->SetVisibility(!Enabled&&!Vehicle&&!SittingChair&&ActiveGun()!=nullptr,true);
-    if(auto* PC=Cast<APlayerController>(Controller)){PC->bShowMouseCursor=Enabled;if(Enabled){FInputModeGameAndUI Mode;Mode.SetHideCursorDuringCapture(false);PC->SetInputMode(Mode);}else{FInputModeGameOnly Mode;PC->SetInputMode(Mode);}}
+    if(auto* PC=Cast<APlayerController>(Controller)){PC->bShowMouseCursor=Enabled;if(Enabled){FInputModeGameAndUI Mode;Mode.SetHideCursorDuringCapture(false);Mode.SetLockMouseToViewportBehavior(EMouseLockMode::DoNotLock);PC->SetInputMode(Mode);
+      if(FSlateApplication::IsInitialized())FSlateApplication::Get().ReleaseAllPointerCapture();
+    }else{FInputModeGameOnly Mode;PC->SetInputMode(Mode);}
+    // Canvas HUD buttons need the first press forwarded by FSceneViewport.
+    // NoCapture skips IE_Pressed in a game viewport (but still sends double-clicks).
+    // Temporary capture forwards the press and releases on mouse-up; the cursor stays visible.
+    if(auto* Viewport=GetWorld()->GetGameViewport()){Viewport->SetMouseCaptureMode(Enabled?EMouseCaptureMode::CaptureDuringMouseDown:EMouseCaptureMode::CapturePermanently_IncludingInitialMouseDown);Viewport->SetMouseLockMode(Enabled?EMouseLockMode::DoNotLock:EMouseLockMode::LockOnCapture);}}
 }
 void ALWCharacter::StartGame(bool Continue)
 {
@@ -126,17 +141,17 @@ void ALWCharacter::NewGame()
     DrainSave40();SaveDirty40=SaveUrgent43=false;
     FLWLoadingScope45 Loading(TEXT("Preparing new survivor"));if(World->BunkerParts.IsEmpty())World->CreateBunker();Bunker45=FLWBunker45State();
     MissionRecovery37.Empty();
-    if(Story){Story->Destroy();Story=nullptr;}bStoryLocked=false;
+    if(Campaign76){Campaign76->Destroy();Campaign76=nullptr;}if(Story){Story->Destroy();Story=nullptr;}bStoryLocked=false;
     Identity=FLWIdentity();
     if(Vehicle)Vehicle->Exit(true);
-    StandFromChair(true);World->ApplyGenerationSettings();World->SurfaceWetness=0;RPG=FLWRPGState();
+    StandFromChair(true);World->Seed=198706;World->TownSetting=World->POISetting=World->TerrainSetting=1;World->ApplyGenerationSettings();World->SurfaceWetness=0;if(Settlement82)Settlement82->Reset();RPG=FLWRPGState();
     UGameplayStatics::SetGamePaused(this,false);ClosePanels();World->KilledZombies.Empty();World->Containers.Empty();World->PropStates.Empty();World->Reset();World->Encounters=FLWEncounterState();Cards=FLWCardGame();World->Vehicles.Empty();
     Health=Stamina=Hunger=Thirst=100;Money=0;Kills=0;bDeadSaved=false;LastDeathBag=NAME_None;World->TimeOfDay=6.f;World->DayNumber=1;InitializeInventory();InitializeStash();World->RestoreBunkerContainers();
-    World->Stream(FVector(1400,2300,200),true);SetActorLocation(FVector(1400,2300,180));GetCharacterMovement()->SetMovementMode(MOVE_Walking);GetCharacterMovement()->StopMovementImmediately();if(Controller)Controller->SetControlRotation(FRotator(-2,98,0));
+    const FVector Start(LWNewGame72::StartXY(),World->HeightAt(LWNewGame72::StartXY())+110);SetActorLocation(Start);World->Stream(Start,true);GetCharacterMovement()->SetMovementMode(MOVE_Walking);GetCharacterMovement()->StopMovementImmediately();if(Controller)Controller->SetControlRotation(FRotator(-2,98,0));
     for(AActor* A:World->BunkerParts)if(auto* F=Cast<ALWWorldObject>(A))if(F->Kind==ELWObjectKind::Furniture)F->SetFurniture(F->UseType);
-    bStarted=true;bMenu=false;bSettings=false;bSafehouse=false;bWaypoint=false;CancelReload();Equip(0);SetMenuInput(false);ApplyIdentity();if(BunkerManager45)BunkerManager45->Rebuild();RPG.Story.Enabled=!FParse::Param(FCommandLine::Get(),TEXT("LWV17Smoke"))&&!FParse::Param(FCommandLine::Get(),TEXT("LWSmoke"));SaveProgress();
+    bStarted=true;bMenu=false;bSettings=false;bSafehouse=false;bWaypoint=false;CancelReload();Equip(0);SetMenuInput(false);ApplyIdentity();if(BunkerManager45)BunkerManager45->Rebuild();RPG.Story.Enabled=false;SaveProgress();
 }
-void ALWCharacter::ToggleMenu(){if((BaseUI45||BuildMode45)&&BunkerManager45){BunkerManager45->Close();return;}if(OpeningMode){OpeningClick(OpeningMode==1?TEXT("intro_pause"):TEXT("creator_back"));return;}if(bWorldSetup){bWorldSetup=false;bSeedEdit=false;return;}if(!bStarted)return;if(Workbench39||bInventory||bMap||RPGPanel||SecurityMode){ClosePanels();return;}if(bVideoConfirm)RevertVideo();bMenu=!bMenu;bSettings=false;bSprint=false;bAim=false;bTrigger=false;UGameplayStatics::SetGamePaused(this,bMenu);SetMenuInput(bMenu);if(bMenu&&Health>0)RequestSave40();}
+void ALWCharacter::ToggleMenu(){if(SettlementBuild82&&Settlement82){Settlement82->Input(EKeys::Escape,true);return;}if(!bStarted)if(auto* PC=Cast<APlayerController>(Controller))if(auto* H=Cast<ALWHUD>(PC->GetHUD());H&&H->News81){H->News81=false;ConsumeUIAttack();return;}if(Campaign76&&Campaign76->SceneOpen){ClosePanels();return;}if(bDebug67&&DebugMenu67){DebugMenu67->Close();return;}if(SavePanel62){SavePanel62=0;return;}if((BaseUI45||BuildMode45)&&BunkerManager45){BunkerManager45->Close();return;}if(OpeningMode){OpeningClick(OpeningMode==1?TEXT("intro_pause"):TEXT("creator_back"));return;}if(bWorldSetup){bWorldSetup=false;bSeedEdit=false;return;}if(!bStarted)return;if(Workbench39||bInventory||bMap||RPGPanel||SecurityMode){ClosePanels();return;}if(bVideoConfirm)RevertVideo();bMenu=!bMenu;bSettings=false;bSprint=false;bAim=false;bTrigger=false;UGameplayStatics::SetGamePaused(this,bMenu);SetMenuInput(bMenu);if(bMenu&&Health>0)RequestSave40();}
 void ALWCharacter::ToggleSettings(){if(bVideoConfirm)RevertVideo();bSettings=!bSettings;}void ALWCharacter::ToggleCrust(){bCrust=!bCrust;ApplySettings();}
 void ALWCharacter::CycleVolume(){MasterVolume=MasterVolume>=.99f?0:FMath::Min(1.f,MasterVolume+.1f);ApplySettings();}
 void ALWCharacter::CycleSensitivity(){Sensitivity=FMath::Min(5.f,Sensitivity+(Sensitivity<.5f?.05f:Sensitivity<1?.1f:.25f));ApplySettings();}
@@ -162,8 +177,8 @@ float ALWCharacter::TakeDamage(float D,const FDamageEvent& E,AController* I,AAct
 void ALWCharacter::Reward(int32 Amount){Money+=FMath::RoundToInt(FMath::Max(0,Amount)*(1+Stat(TEXT("credits"))));Kills++;GainXP(40);QuestEvent(TEXT("kill"));Notify(FString::Printf(TEXT("CONTAINMENT CREDIT +$%d"),Amount),3);World->Sound(TEXT("Credit"),GetActorLocation(),.5f);}
 void ALWCharacter::Tick(float Dt)
 {
-    Super::Tick(Dt);if(bConsole47)return;if(TickRecoil50(Dt))return;TickSave40(Dt);TickLean40(Dt);TickMovement54(Dt);TickNightVision();TickSurvivorBody(Dt);if(!World)return;if(bVideoConfirm&&GetWorld()->GetRealTimeSeconds()>VideoConfirmTimer)RevertVideo();if(!bStarted||bMenu)return;ALWBunker45::Ensure(this);
-    if(Health>0&&RPG.Story.Enabled&&!Story)ALWStoryDirector::Ensure(this)->Start(false);if(bStoryLocked){bTrigger=bSprint=bAim=false;GetCharacterMovement()->StopMovementImmediately();return;}
+    Super::Tick(Dt);if(bConsole47)return;if(TickRecoil50(Dt))return;TickSave40(Dt);TickLean40(Dt);TickMovement54(Dt);TickNightVision();TickSurvivorBody(Dt);if(!World)return;if(bVideoConfirm&&GetWorld()->GetRealTimeSeconds()>VideoConfirmTimer)RevertVideo();if(!bStarted||bMenu)return;ALWBunker45::Ensure(this);if(!RPG.Claims82.IsEmpty())ALWSettlement82::Ensure(this);
+    if(bStoryLocked){bTrigger=bSprint=bAim=false;GetCharacterMovement()->StopMovementImmediately();return;}
     HurtFlash=FMath::Max(0.f,HurtFlash-Dt);HitMarker=FMath::Max(0.f,HitMarker-Dt);MessageTime-=Dt;bSafehouse=ALWWorld::IsSafePosition(GetActorLocation());
     if(Health<=0){if(!bDeadSaved)HandleDeath();return;}if(bInventory||bMap||SecurityMode){bTrigger=false;GetCharacterMovement()->StopMovementImmediately();}
     CaptureMission37();TickDiscovery(Dt);TickAttachments();TickVehicleSeat();TickSecurity(Dt);TickRPG(Dt);if(!Vehicle)UpdateWeapon(Dt);TickRoute(Dt);const bool Moving=GetVelocity().Size2D()>30,Running=bSprint&&Moving&&Stamina>1&&!bIsCrouched&&!bAim&&!Prone54&&!Sliding54&&!Traversing54;

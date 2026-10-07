@@ -1,4 +1,5 @@
 #include "LWNPCLife.h"
+#include "LWCampaignProduction77.h"
 #include "LWCreator35.h"
 #include "LWZombie.h"
 #include "LWResident.h"
@@ -29,6 +30,10 @@ void ULWNPCLife::Speak(UAudioComponent* Audio,const FString& Text){
  Speech=Audio;HadSpeechAudio=Audio!=nullptr;HasEnvelope=false;VoiceLevel=0;VoiceEnd=Clock+FMath::Clamp(Text.Len()*.045f,1.f,5.f);
  if(Audio)Audio->OnAudioSingleEnvelopeValue.AddDynamic(this,&ULWNPCLife::Envelope);
  NextGesture=Clock; // A new sentence starts a new gesture, independent of subtitle persistence.
+}
+FVector ULWNPCLife::HandPosition77(int32 Side)const{
+ if(!NPC||!NPC->Parts.IsValidIndex(3+Side))return FVector::ZeroVector;
+ return NPC->Parts[3+Side]->GetComponentTransform().TransformPosition(Bend(FVector(0,0,-56),-27,Elbows[Side]));
 }
 void ULWNPCLife::RestoreVisuals(){
  if(NPC)for(int I=0;I<Visuals.Num();I++)if(Visuals[I]){if(NPC->Parts.IsValidIndex(I))NPC->Parts[I]->SetVisibility(true,false);Visuals[I]->DestroyComponent();}
@@ -88,7 +93,7 @@ void ULWNPCLife::TickComponent(float Dt,ELevelTick Type,FActorComponentTickFunct
  auto* R=Cast<ALWResident>(NPC);const bool Human=R||NPC->Kind==ELWEnemyKind::Zombie||NPC->Kind==ELWEnemyKind::Raider;
  if(!Human){DetailQueue34.Remove(this);if(!Visuals.IsEmpty())RestoreVisuals();CreatureAnimation51(Dt,Player);return;}
  if(NPC->bDead||NPC->SeveredMask||NPC->bCrawling||NPC->HeadlessTime>0){DetailQueue34.Remove(this);AnimationState=TEXT("Physics / injury");if(Mouth)Mouth->SetVisibility(false);return;}
- if(!Initialized){Random.Initialize(R?FCrc::StrCrc32(*R->ResidentId.ToString()):NPC->PersistentId^FCrc::StrCrc32(*NPC->Home.ToString()));Personality=Random.FRandRange(0,2*PI);Clock=Personality;Phase=Personality;NextBlink=Clock+Random.FRandRange(.3f,4.f);for(int I=0;I<7;I++)Pose[I]=NPC->Parts[I]->GetRelativeRotation();Initialized=true;}
+ if(!Initialized){Random.Initialize(R?FCrc::StrCrc32(*R->ResidentId.ToString()):NPC->PersistentId^FCrc::StrCrc32(*NPC->Home.ToString()));Personality=Random.FRandRange(0,2*PI);Clock=Personality;Phase=Personality;NextBlink=Clock+Random.FRandRange(.3f,4.f);for(int I=0;I<7;I++){Pose[I]=NPC->Parts[I]->GetRelativeRotation();RestLocations77[I]=NPC->Parts[I]->GetRelativeLocation();}Initialized=true;}
  Dt=FMath::Min(Dt,.1f);Clock+=Dt;const float Distance=FVector::Distance(NPC->GetActorLocation(),Player->GetActorLocation());
  if(Distance>5000){DetailQueue34.Remove(this);if(!Visuals.IsEmpty())RestoreVisuals();return;}
  if(PreviousHealth>=0&&NPC->Health<PreviousHealth)Flinch=1;PreviousHealth=NPC->Health;Flinch=FMath::Max(0.f,Flinch-Dt*3);
@@ -120,6 +125,9 @@ void ULWNPCLife::TickComponent(float Dt,ELevelTick Type,FActorComponentTickFunct
  if(Combat){AnimationState=TEXT("Combat");Goal[0].Pitch+=5;if(NPC->Gun&&NPC->Gun->IsVisible()){Goal[3].Pitch=Goal[4].Pitch=-65;E[0]=E[1]=0;}else if(NPC->AttackWindup>0){Goal[3]=NPC->Parts[3]->GetRelativeRotation();Goal[4]=NPC->Parts[4]->GetRelativeRotation();if(NPC->AttackStyle54==1){Goal[3].Roll=-55;Goal[4].Pitch=-20;Goal[0].Yaw=-18;}else if(NPC->AttackStyle54==2){Goal[3].Pitch=Goal[4].Pitch=-140;Goal[0].Pitch=-10;}E[0]=E[1]=0;}if(NPC->ReloadClock>0){Goal[3].Roll=FMath::Sin(Clock*9)*15;E[0]=35;}}
  if(Riding){AnimationState=TEXT("Seated");Goal[5].Pitch=Goal[6].Pitch=85;K[0]=K[1]=85;Goal[0].Pitch=3;Goal[3].Pitch=Goal[4].Pitch=R->SeatIndex==0?45:12;E[0]=E[1]=R->SeatIndex==0?35:65;}
  if(Down){AnimationState=TEXT("Wounded");Goal[0].Pitch=55;Goal[3].Pitch=35;E[0]=100;}
+ if(PerformancePose77==1||PerformancePose77==3){Goal[5].Pitch=Goal[6].Pitch=85;K[0]=K[1]=85;Goal[0].Pitch=5;Goal[3]=Goal[4]=FRotator(12,0,0);E[0]=E[1]=65;AnimationState=PerformancePose77==1?TEXT("Restrained passenger"):TEXT("Seated conversation");}
+ if(PerformancePose77==2){Goal[5].Pitch=-70;Goal[6].Pitch=15;K[0]=95;K[1]=110;Goal[0].Pitch=0;AnimationState=TEXT("Treatment / kneeling");}
+ if(PerformancePose77==4){E[0]=E[1]=K[0]=K[1]=0;AnimationState=TEXT("Supine casualty");}
  GazeClock-=Dt;if(GazeClock<=0){GazeClock=Random.FRandRange(.35f,1.3f);FVector Target=NPC->GetActorLocation()+NPC->GetActorForwardVector()*500;
   if((Talking||Listening||Combat)&&Distance<1800)Target=(R&&R->CompanionThreat.IsValid()?R->CompanionThreat->GetActorLocation():Player->GetActorLocation())+FVector(0,0,55);
   FRotator Look=NPC->GetActorTransform().InverseTransformVectorNoScale(Target-NPC->Parts[1]->GetComponentLocation()).Rotation();Gaze=FRotator(FMath::Clamp(Look.Pitch,-12.f,12.f),FMath::Clamp(Look.Yaw,-42.f,42.f),0);if(!Talking&&!Listening&&!Combat)Gaze.Yaw=Random.FRandRange(-24,24);
@@ -128,6 +136,21 @@ void ULWNPCLife::TickComponent(float Dt,ELevelTick Type,FActorComponentTickFunct
  Goal[1]+=Gaze;Goal[0].Pitch-=Flinch*12;Goal[1].Roll+=Flinch*10;
  for(int I=0;I<7;I++){Pose[I]=FMath::RInterpTo(Pose[I],Goal[I],Dt,I==1?5.f:9.f);NPC->Parts[I]->SetRelativeRotation(Pose[I]);}
  for(int I=0;I<2;I++){Elbows[I]=FMath::FInterpTo(Elbows[I],-E[I],Dt,9);Knees[I]=FMath::FInterpTo(Knees[I],K[I],Dt,10);}
+ for(int I=0;I<7;I++){
+  FVector Local=RestLocations77[I];if(PerformancePose77==2){Local.Z-=35;Local.X+=34;}
+  if(PerformancePose77==4){Local=FQuat(FVector::YAxisVector,-PI*.5).RotateVector(Local-FVector(0,0,10))+FVector(0,0,-20);NPC->Parts[I]->SetRelativeRotation(FRotator(90,0,0));}
+  NPC->Parts[I]->SetRelativeLocation(Local);
+ }
+ for(int Side=0;Side<2;Side++)if(HandWeights77[Side]>KINDA_SMALL_NUMBER){
+  auto* Arm=NPC->Parts[3+Side].Get();const FTransform Parent=Arm->GetAttachParent()->GetComponentTransform();
+  FVector Shoulder=Arm->GetRelativeLocation(),Target=Parent.InverseTransformPosition(HandTargets77[Side]);
+  const FVector Pole=FVector(-1,Side?1:-1,-.2).GetSafeNormal();const FVector Elbow=LWProduction77::ArmElbow(Shoulder,Target,Pole,27,29);
+  const FVector Upper=(Elbow-Shoulder).GetSafeNormal(),Lower=(Target-Elbow).GetSafeNormal();
+  FVector Forward=(Lower-Upper*FVector::DotProduct(Upper,Lower)).GetSafeNormal();if(Forward.IsNearlyZero())Forward=FVector::CrossProduct(Upper,FVector::YAxisVector).GetSafeNormal();
+  const FQuat Q=FRotationMatrix::MakeFromXZ(Forward,-Upper).ToQuat();
+  Arm->SetRelativeRotation(FQuat::Slerp(Arm->GetRelativeRotation().Quaternion(),Q,HandWeights77[Side]));
+  Elbows[Side]=FMath::Lerp(Elbows[Side],-FMath::RadiansToDegrees(FMath::Acos(FMath::Clamp(FVector::DotProduct(Upper,Lower),-1.,1.))),HandWeights77[Side]);
+ }
  DetailClock+=Dt;if(Distance>DetailDistance){DetailQueue34.Remove(this);if(!Visuals.IsEmpty())RestoreVisuals();return;}
  const float Interval=Distance<650?1.f/30:1.f/15;if(DetailClock<Interval)return;
  // Bound CPU skinning across a crowded settlement; independent phases avoid synchronized updates.

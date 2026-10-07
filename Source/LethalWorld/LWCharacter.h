@@ -8,6 +8,7 @@
 #include "LWCardGame.h"
 #include "LWMissionRecovery37.h"
 #include "LWBunker45State.h"
+#include "LWSaveSlots62.h"
 #include "LWCharacter.generated.h"
 UCLASS()
 class LETHALWORLD_API ALWCharacter : public ACharacter
@@ -17,6 +18,8 @@ public:
     UPROPERTY() FLWBunker45State Bunker45;
     UPROPERTY() TObjectPtr<class ALWBunker45> BunkerManager45;
     bool BaseUI45=false,BuildMode45=false;
+    UPROPERTY() TObjectPtr<class ALWSettlement82> Settlement82;
+    bool SettlementBuild82=false;
     UPROPERTY() TObjectPtr<class USceneComponent> LeanPivot40;
     bool LeanLeft40=false,LeanRight40=false,SaveDirty40=false;
     float LeanAmount40=0,SaveQuiet40=0,SaveAge40=0;int32 AutoSaves40=0;
@@ -27,11 +30,16 @@ public:
     // Immutable value-only snapshot; keep alive until background serialization completes.
     UPROPERTY() TObjectPtr<class ULWSaveGame> SaveSnapshot43;
     bool SaveUrgent43=false;
+    int SavePanel62=0,SavePage62=0;FString PendingSave62,WritingSave62,SaveConfirm62,SaveMessage62;
+    TArray<FLWSlot62> SaveEntries62;
+    void OpenSaves62(bool Saving);bool ManualSave62(const FString& Slot);bool LoadSlot62(const FString& Slot);
     double LastSaveCaptureMs43=0;
     void StartSave43();bool FinishSave43();
     FString SaveSlot40()const;void RequestSave40();void TickSave40(float Dt);void DrainSave40();
     virtual void EndPlay(const EEndPlayReason::Type Reason) override;
     void TickLean40(float Dt);void LeanLeftStart40();void LeanLeftStop40();void LeanRightStart40();void LeanRightStop40();void QuickHeal40();
+    FName DamageWeapon62;
+    UPROPERTY() TObjectPtr<class ULWMystic62> Mystic62;
     UPROPERTY() TObjectPtr<class ALWWorkbench39> Workbench39;
     UPROPERTY() TArray<TObjectPtr<class UStaticMeshComponent>> CustomMeshes39;
     void OpenWorkbench39(class ALWWorldObject* Station);void CloseWorkbench39();
@@ -57,6 +65,7 @@ public:
     void TickVehicleSeat();void VehicleGlove();void VehicleLights();void VehicleRadio();void VehicleWipers();void VehicleLeft();void VehicleRight();
     UPROPERTY() FLWRPGState RPG;
     UPROPERTY() TObjectPtr<class ALWStoryDirector> Story;
+    UPROPERTY() TObjectPtr<class ALWCampaign76> Campaign76;
     bool bStoryLocked=false;
     UPROPERTY() TObjectPtr<class ALWResident> ResidentFocus;
     UPROPERTY() TObjectPtr<class ALWEncounterScene> EncounterSpeaker;
@@ -151,8 +160,9 @@ public:
     void SitOnChair(class ALWWorldObject* Chair);void StandFromChair(bool Force=false);bool SleepInBed(float Hours=4);
     bool bUIInputActive=false,bUIAttackHeld=false;
     uint64 LastUIAttackFrame=MAX_uint64;
-    bool bConsole47=false,bGod47=false;
-    bool IsUIOpen() const {return bConsole47|| BaseUI45||BuildMode45||Workbench39||bStoryLocked||bUIInputActive||bMenu||bSettings||bVideoConfirm||bInventory||bMap||RPGPanel||SecurityMode||OpeningMode||bWorldSetup||Speaker||EncounterSpeaker||CardTable;}
+    bool bConsole47=false,bGod47=false,bDebug67=false;
+    UPROPERTY() TObjectPtr<class ULWDebugMenu67> DebugMenu67;
+    bool IsUIOpen() const {return bDebug67||SavePanel62||bConsole47|| BaseUI45||BuildMode45||SettlementBuild82||Workbench39||bStoryLocked||bUIInputActive||bMenu||bSettings||bVideoConfirm||bInventory||bMap||RPGPanel||SecurityMode||OpeningMode||bWorldSetup||Speaker||EncounterSpeaker||CardTable;}
     float BudgetBrace50=0;
     bool Recoiling50=false;
     void StartRecoil50(FVector Impulse);bool TickRecoil50(float Dt);
@@ -223,6 +233,11 @@ public:
     bool RestoreRespawn();
     void OpenBedMenu(ALWWorldObject* Bed);
     UPROPERTY() TObjectPtr<ALWWorldObject> RestBed;
+    UPROPERTY() TObjectPtr<ALWWorldObject> Service66;
+    int32 ServiceBunk66=-1,ServicePage66=0;
+    void OpenRVHome66(class ALWVehicle* RV,int Bunk);void OpenDelivery66(ALWWorldObject* Terminal);
+    bool ChooseService66(int Choice);bool AssignRVBunk66(class ALWVehicle* RV,int Bunk,FName CrewId);
+    bool DeliverVehicle66(FName Id,ALWWorldObject* Terminal);
     int32 SettlementPage=0;
 
     void ToggleInventory(); void ClosePanels(); void OpenContainer(class ALWWorldObject* Object);

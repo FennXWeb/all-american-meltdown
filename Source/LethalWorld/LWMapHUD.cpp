@@ -1,3 +1,4 @@
+#include "LWGeography84.h"
 #include "LWSiteIdentity.h"
 #include "Engine/Texture2D.h"
 #include "LWVehicle.h"
@@ -21,19 +22,19 @@ namespace LWMapHUD
 {
 namespace
 {
-    const FLinearColor Paper(.040f, .052f, .037f, 1.f);
+    const FLinearColor Paper(.020f, .040f, .051f, 1.f);
     const FLinearColor Ink(.013f, .019f, .013f, 1.f);
-    const FLinearColor Bone(.82f, .82f, .67f, 1.f);
+    const FLinearColor Bone(.87f, .91f, .90f, 1.f);
     const FLinearColor Muted(.39f, .45f, .33f, 1.f);
-    const FLinearColor Grid(.095f, .12f, .075f, 1.f);
-    const FLinearColor RoadColor(.29f, .34f, .24f, 1.f);
+    const FLinearColor Grid(.07f, .12f, .15f, 1.f);
+    const FLinearColor RoadColor(.32f, .45f, .48f, 1.f);
     const FLinearColor Highway(.48f, .37f, .20f, 1.f);
     const FLinearColor Amber(.98f, .59f, .22f, 1.f);
     const FLinearColor Shelter(.40f, .78f, .67f, 1.f);
     const FLinearColor Loss(.89f, .33f, .24f, 1.f);
     // At minimum zoom a 1216 x 482 survey, plus owner-region padding, needs
     // at most 6 x 10 regions. Zooming/panning never generates an unbounded world.
-    constexpr float MinZoom = .0035f;
+    constexpr float MinZoom = .0003f;
     constexpr float MaxZoom = .04f;
     constexpr float MiniZoom = .014f;
 
@@ -164,6 +165,7 @@ namespace
             Roads.Reset(); Sites.Reset();
             const int64 Width = int64(Max.X) - Min.X + 1, Height = int64(Max.Y) - Min.Y + 1;
             Valid = Width > 0 && Height > 0 && Width <= 12 && Height <= 12 && Width * Height <= 64;
+            if(View.Zoom<.0035){Valid=true;Roads=LWNY69::Roads();Roads.RemoveAll([](const auto& R){return R.Width<850;});Sites=LWNY69::Sites();TArray<LWGen::FRoad> CR;TArray<LWGen::FSite> CS;LWGen::Gather(LWGen::CanadaCity68(),Seed,CR,CS);Roads.Append(CR);Sites.Append(CS);return;}
             if (!Valid) return;
             Roads.Reserve(int32(Width * Height) * 28);
             Sites.Reserve(int32(Width * Height) * 10);
@@ -201,6 +203,7 @@ namespace
     {
         const FRect& R = View.Bounds;
         HUD.Rect(R.X, R.Y, R.W, R.H, Paper);
+        for(double Y=R.Y;Y<R.Bottom();Y+=20)for(double X=R.X;X<R.Right();X+=20){if(LWNY69::WaterDepth(View.Unplot(FVector2D(X+10,Y+10)))>0)Fill(HUD,R,{X,Y,20,20},FLinearColor(.035,.10,.13,1));}
         for (int32 I = 0; I < (Mini ? 18 : 90); ++I)
         {
             const uint32 H = LWGen::Hash(I, 17, 4101);
@@ -256,8 +259,9 @@ namespace
                 for(int I=0;I<4;I++)Stroke(HUD,View.Bounds,Corners[I],Corners[(I+1)%4],Muted*.6f);
             }
             Fill(HUD,View.Bounds,{C.X-IconSize*.5,C.Y-IconSize*.5,IconSize,IconSize},Ink);
-            if(HUD.POIAtlas&&Site.Type>=0&&Site.Type<64){
-                const float U=(Site.Type%8)/8.f,V=(Site.Type/8)/8.f;
+            const int IconType=Site.Type==68?15:Site.Type==69?58:Site.Type>=70?(Site.Type==74||Site.Type==76?15:Site.Type==72?5:Site.Type==78?16:60):Site.Type;
+            if(HUD.POIAtlas&&IconType>=0&&IconType<64){
+                const float U=(IconType%8)/8.f,V=(IconType/8)/8.f;
                 HUD.DrawTexture(HUD.POIAtlas,(C.X-IconSize*.5)*HUD.Scale,(C.Y-IconSize*.5)*HUD.Scale,IconSize*HUD.Scale,IconSize*HUD.Scale,U+.001f,V+.001f,.123f,.123f,Color,BLEND_Translucent);
             }else Fill(HUD,View.Bounds,{C.X-3,C.Y-3,6,6},Color);
             const FString Label=LWSites::Label(Site);
@@ -359,6 +363,7 @@ namespace
             DrawMarker(HUD,View,FVector2D(Position),EMarker::Vehicle,Mini,true,Mouse,HasMouse,Label,Hover);
         }
         for(const auto& Pair:P.World->Vehicles)if(Pair.Value.Owned45&&Pair.Key!=LastVehicle)DrawMarker(HUD,View,FVector2D(Pair.Value.Position),EMarker::Vehicle,Mini,true,Mouse,HasMouse,FString(Pair.Value.Stored45?TEXT("GARAGE / "):TEXT("OWNED / "))+LWTraffic::Get(Pair.Value.Model).Name,Hover);
+        for(const auto& C:P.RPG.Claims82)DrawMarker(HUD,View,FVector2D(C.Value.Center),EMarker::Bunker,Mini,true,Mouse,HasMouse,C.Value.Name,Hover);
         TSet<FName> LiveTraders;
         FVector2D BagPosition = FVector2D::ZeroVector;
         bool HasBag = false;
@@ -506,8 +511,9 @@ namespace
         DrawPaper(HUD, View, Mini);
         DrawRoads(HUD, View, Geometry, Mini);
         DrawSites(HUD, View, Geometry, Mini, Mouse, HasMouse, Hover, P);
-        const FVector2D BorderPoint=View.Plot(FVector2D(LWBorder51::North,View.Center.Y));
-        if(BorderPoint.Y>=View.Bounds.Y&&BorderPoint.Y<=View.Bounds.Bottom()){HUD.Line(View.Bounds.X,BorderPoint.Y,View.Bounds.Right(),BorderPoint.Y,FLinearColor(.8f,.22f,.18f),3);if(!Mini)HUD.Text(TEXT("CANADA / CLOSED BORDER"),View.Bounds.X+14,BorderPoint.Y+9,.9f,Amber);}
+        if(!Mini){auto Q=View.Plot(LWGen::CanadaCity68());if(View.Bounds.Contains(Q,24))HUD.Text(TEXT("TORONTO"),Q.X-40,Q.Y-22,.7f,Bone);Q=View.Plot(LWNY69::Project(43.75,-77.85));if(View.Bounds.Contains(Q,95))HUD.Text(TEXT("LAKE ONTARIO"),Q.X-60,Q.Y,.7f,Bone);}
+        if(!Mini)for(const auto& T:LWNY69::Towns()){const auto Q=View.Plot(LWNY69::Project(T.Latitude,T.Longitude));if(View.Bounds.Contains(Q,95)&&(View.Zoom>.001||T.Blocks>=3))HUD.Text(T.Name,Q.X-45,Q.Y-22,.7f,Bone);}
+        for(const auto& Segment:LWGeography84::Border())Stroke(HUD,View.Bounds,View.Plot(Segment.A),View.Plot(Segment.B),FLinearColor(.8f,.22f,.18f),Mini?1.f:2.f);
         for(int StoryIndex=0;StoryIndex<9;StoryIndex++){int64 Id=0xEF320000u+StoryIndex;if(!P.RPG.KnownPlaces.Contains(Id))continue;FVector2D Point=View.Plot(LWStory::Site(StoryIndex));if(!View.Bounds.Contains(Point,10))continue;HUD.Rect(Point.X-5,Point.Y-5,10,10,Amber);if(!Mini&&HasMouse&&(Point-Mouse).Size()<20)Hover=LWStory::SiteName(StoryIndex);}
         DrawRoute(HUD, View, P, Mini);
         DrawScale(HUD, View, Mini);
@@ -554,14 +560,14 @@ void ALWHUD::Map(ALWCharacter* P)
     // Fit the 1280x720 survey even on narrower displays; restore DrawHUD's scale on exit.
     const TGuardValue<float> SurveyScale(Scale, FMath::Min(Canvas->ClipX / 1280.f, Canvas->ClipY / 720.f));
     const double Width = Canvas->ClipX / Scale, Height = Canvas->ClipY / Scale;
-    const double Left = (Width - 1280.0) * .5, Top = 0;
-    const LWMapHUD::FRect Area{Left + 32, Top + 108, 1216, 482};
+    const double Left = 0, Top = 0;
+    const LWMapHUD::FRect Area{Left + 32, Top + 108, Width - 64, 482};
     const LWMapHUD::FRect BunkerButton{Left + 32, Top + 62, 264, 34};
     const LWMapHUD::FRect CenterButton{Left + 308, Top + 62, 176, 34};
     const LWMapHUD::FRect GoalButton{Left + 496, Top + 62, 196, 34};
     const LWMapHUD::FRect CasinoButton{Left + 704, Top + 62, 210, 34};
-    const LWMapHUD::FRect MinusButton{Left + 1096, Top + 62, 54, 34};
-    const LWMapHUD::FRect PlusButton{Left + 1162, Top + 62, 86, 34};
+    const LWMapHUD::FRect MinusButton{Width - 184, Top + 62, 54, 34};
+    const LWMapHUD::FRect PlusButton{Width - 118, Top + 62, 86, 34};
     const FVector2D Player(P->GetActorLocation());
     MapZoom = FMath::IsFinite(MapZoom) ? FMath::Clamp(MapZoom, LWMapHUD::MinZoom, LWMapHUD::MaxZoom) : .005f;
     if (!LWMapHUD::Finite(MapPan)) MapPan = FVector2D::ZeroVector;
@@ -638,26 +644,26 @@ void ALWHUD::Map(ALWCharacter* P)
     View.Zoom = MapZoom;
 
     Rect(0, 0, Width, Height, LWMapHUD::Ink);
-    Rect(Left + 16, Top + 14, 1248, 692, FLinearColor(.030f, .038f, .025f));
-    Text(TEXT("FIELD SURVEY"), Left + 32, Top + 21, 1.65f, LWMapHUD::Bone);
+    Rect(Left + 16, Top + 14, Width - 32, 692, FLinearColor(.030f, .038f, .025f));
+    Text(TEXT("MAP"), Left + 32, Top + 21, 1.65f, LWMapHUD::Bone);
     Text(TEXT(""), Left + 790, Top + 29, 1.f, LWMapHUD::Muted);
-    Line(Left + 32, Top + 52, Left + 1248, Top + 52, LWMapHUD::Muted);
+    Line(Left + 32, Top + 52, Width - 32, Top + 52, LWMapHUD::Muted);
     LWMapHUD::Control(*this, BunkerButton, TEXT("[B] ROUTE TO BUNKER"), Mouse, HasMouse);
     LWMapHUD::Control(*this, CenterButton, TEXT("[HOME] CENTER"), Mouse, HasMouse);
     LWMapHUD::Control(*this, GoalButton, TEXT("[END] WAYPOINT"), Mouse, HasMouse, P->bWaypoint);
     LWMapHUD::Control(*this, CasinoButton, TEXT("FAST TRAVEL"), Mouse, HasMouse);
     LWMapHUD::Control(*this, MinusButton, TEXT(" - "), Mouse, HasMouse);
     LWMapHUD::Control(*this, PlusButton, TEXT(" + ZOOM"), Mouse, HasMouse);
-    Text(FString::Printf(TEXT("SURVEY %.1fX"), MapZoom / .005f), Left + 858, Top + 72, .9f, LWMapHUD::Muted);
+    Text(FString::Printf(TEXT("ZOOM %.1fX"), MapZoom / .005f), Width - 344, Top + 72, .9f, LWMapHUD::Muted);
 
     const FString Hover = LWMapHUD::Paint(*this, View, State.Survey, *P, false, Mouse, OverMap);
     Text(LWMapHUD::RouteStatus(*P), Left + 36, Top + 602, .9f, P->bWaypoint ? LWMapHUD::Amber : LWMapHUD::Muted);
     const FVector2D Readout = OverMap ? View.Unplot(Mouse) : View.Center;
     const FString Coordinates = FString::Printf(TEXT("N %+.0f M  /  E %+.0f M"), Readout.X / 100.0, Readout.Y / 100.0);
     Text(Hover.IsEmpty() ? TEXT("") : Hover, Left + 36, Top + 622, .8f, LWMapHUD::Bone);
-    Text(Coordinates, Left + 1242 - Coordinates.Len() * 7.2, Top + 622, .8f, LWMapHUD::Muted);
-    Line(Left + 32, Top + 646, Left + 1248, Top + 646, LWMapHUD::Muted * .5f);
-    const LWMapHUD::FRect Legend{Left + 32, Top + 648, 1216, 28};
+    Text(Coordinates, Width - 38 - Coordinates.Len() * 7.2, Top + 622, .8f, LWMapHUD::Muted);
+    Line(Left + 32, Top + 646, Width - 32, Top + 646, LWMapHUD::Muted * .5f);
+    const LWMapHUD::FRect Legend{Left + 32, Top + 648, Width - 64, 28};
     Rect(Left + 43, Top + 657, 5, 5, LWMapHUD::Muted); Text(TEXT("SITE"), Left + 58, Top + 652, .85f, LWMapHUD::Muted);
     Text(TEXT("+ RELIEF"), Left + 186, Top + 652, .85f, LWMapHUD::Bone);
     LWMapHUD::Glyph(*this, Legend, FVector2D(Left + 359, Top + 662), LWMapHUD::EMarker::Trader, false);
@@ -682,7 +688,7 @@ void ALWHUD::MiniMap(ALWCharacter* P)
     State.Dragging = false;
     Rect(Panel.X, Panel.Y, Panel.W, Panel.H, LWMapHUD::Ink);
     LWMapHUD::Border(*this, Panel, LWMapHUD::Muted * .65f);
-    Text(TEXT("LOCAL / N UP"), Panel.X + 8, Panel.Y + 5, .8f, LWMapHUD::Bone);
+    Text(TEXT("N"), Panel.X + 8, Panel.Y + 5, .8f, LWMapHUD::Bone);
     Text(TEXT("[TAB]"), Panel.Right() - 44, Panel.Y + 5, .8f, LWMapHUD::Muted);
     LWMapHUD::Paint(*this, View, State.Mini, *P, true);
     FString Status = P->bSafehouse ? TEXT("SHELTER 01 / SECURE") : TEXT("[B] ROUTE TO BUNKER");

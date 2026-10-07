@@ -1,3 +1,4 @@
+#include "LWInteriors65.h"
 #include "LWWorld.h"
 #include "LWCharacter.h"
 #include "Components/StaticMeshComponent.h"
@@ -5,6 +6,7 @@
 #include "Components/PointLightComponent.h"
 #include "Engine/World.h"
 void ALWChunk::BuildingV18(ALWWorld* W,const LWGen::FSite& S){
+ LWInteriors65::FScope Interior65(this,W,S);
  const FVector Base=FVector(S.Position,12)-GetActorLocation();const FRotator Rot(0,S.Yaw,0);int Serial=0;FRandomStream Rand(S.Id);
  auto At=[&](FVector V){return Base+Rot.RotateVector(V);};
  auto BoxAt=[&](FName Mat,FVector V,FVector Size,float Yaw=0,bool Hit=true){Box(W,Mat,At(V),Size,Rot+FRotator(0,Yaw,0),Hit);};
@@ -24,6 +26,7 @@ void ALWChunk::BuildingV18(ALWWorld* W,const LWGen::FSite& S){
  Wall(U(FVector(0,Y,24)),2*X,Yaw,false,Exterior);for(int Side:{-1,1})Wall(U(FVector(Side*X,0,24)),2*Y,Yaw+90,false,Exterior);
  for(int Side:{-1,1}){float Mid=Side*(X+100)*.5f,Width=X-100;BoxAt(Exterior,U(FVector(Mid,-Y,72)),FVector(Width,18,96),Yaw);BoxAt(Exterior,U(FVector(Mid,-Y,304)),FVector(Width,18,100),Yaw);int Panes=FMath::Max(1,int(Width/210));for(int I=0;I<Panes;I++){float PX=Mid-Width*.5+(I+.5)*Width/Panes;auto* Window=Object(ELWObjectKind::Window,U(FVector(PX,-Y,186)),Yaw);if(Window)Window->SetActorScale3D(FVector((Width/Panes-16)/100,.035,1.3));BoxAt(TEXT("Steel"),U(FVector(PX-Width/Panes*.5,-Y,187)),FVector(12,26,142),Yaw);}}
  Wall(U(FVector(0,-Y,24)),200,Yaw,true,Exterior);BoxAt(TEXT("CorrugatedV7"),U(FVector(0,0,367)),FVector(2*X+65,2*Y+65,26),Yaw);
+ BoxAt(TEXT("Acoustic65"),U(FVector(0,0,350)),FVector(2*X-18,2*Y-18,8),Yaw);
  BoxAt(TEXT("Steel"),U(FVector(0,-Y-25,342)),FVector(FMath::Min(X*1.8f,1500.f),32,80),Yaw);Text(Name,U(FVector(0,-Y-45,325)),Yaw-90,Name.Len()>20?22:32);
  for(float XX=-X+300;XX<X;XX+=800)for(float YY=-Y+330;YY<Y;YY+=800)Light(U(FVector(XX,YY,334)),S.Type==5?FLinearColor(.65f,.68f,1.f):FLinearColor(.9f,.8f,.65f));
  };

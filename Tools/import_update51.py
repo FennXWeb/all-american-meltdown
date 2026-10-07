@@ -9,7 +9,7 @@ for name,color,rough in [('CanadaArmor51',(.62,.67,.64),.46),('CanadaRed51',(.48
  # Existing grain texture gives the new palette surface detail without the rust patches of the wasteland materials.
  tex=ml.create_material_expression(mat,u.MaterialExpressionTextureSample);tex.texture=lib.load_asset('/Game/Art/Textures/T_Concrete')
  if tex.texture and name not in ['CanadaLeaf51','CanadaGrass51']:
-  des=ml.create_material_expression(mat,u.MaterialExpressionDesaturation);ml.connect_material_expressions(tex,'RGB',des,'Input')
+  des=ml.create_material_expression(mat,u.MaterialExpressionDesaturation);ml.connect_material_expressions(tex,'RGB',des,'')
   mul=ml.create_material_expression(mat,u.MaterialExpressionMultiply);ml.connect_material_expressions(tint,'',mul,'A');ml.connect_material_expressions(des,'',mul,'B');ml.connect_material_property(mul,'',u.MaterialProperty.MP_BASE_COLOR)
  else:ml.connect_material_property(tint,'',u.MaterialProperty.MP_BASE_COLOR)
  r=ml.create_material_expression(mat,u.MaterialExpressionConstant);r.r=rough;ml.connect_material_property(r,'',u.MaterialProperty.MP_ROUGHNESS)

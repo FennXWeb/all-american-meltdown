@@ -9,8 +9,9 @@
 #include "Engine/StaticMesh.h"
 
 void ALWVehicle::BuildDetail42(){
- const FName Id(Spec().Id);const bool Camper=Id==TEXT("rv"),Bike=Id==TEXT("dirtbike"),Raised=Id==TEXT("bus")||Id==TEXT("boxtruck");
- Body->EmptyOverrideMaterials();Body->SetStaticMesh(World->Mesh(FName(*(FString(TEXT("Vehicle42_"))+Spec().Id))));PaintWet.Empty();
+ if(IsExpansion57()){Build57();return;}
+ const FName Id(IsSolarRV74()?TEXT("rv"):IsElectric74()?TEXT("supercar"):Spec().Id);const bool Camper=IsCamper74(),Bike=Id==TEXT("dirtbike"),Raised=Id==TEXT("bus")||Id==TEXT("boxtruck");
+ Body->EmptyOverrideMaterials();Body->SetStaticMesh(World->Mesh(FName(*(FString(TEXT("Vehicle42_"))+Id.ToString()))));PaintWet.Empty();
  for(int i=0;i<Body->GetNumMaterials();++i)if(auto* Base=Body->GetMaterial(i))if(Base->GetName().Contains(TEXT("V42_Paint"))){auto* M=Body->CreateDynamicMaterialInstance(i);PaintWet.Add(M);}
  for(int i=0;i<Body->GetNumMaterials();++i)if(auto* M=Body->GetMaterial(i)){if(M->GetName()==TEXT("M_V42_Lamp"))HeadLens42=Body->CreateDynamicMaterialInstance(i);if(M->GetName()==TEXT("M_V42_RedLamp"))BrakeLens42=Body->CreateDynamicMaterialInstance(i);}
  // Keep interaction hit targets, moving hardware and camper furnishings; remove
@@ -31,10 +32,10 @@ void ALWVehicle::BuildDetail42(){
   C->SetVisibility(false);if(C->ComponentTags.IsEmpty())C->SetCollisionEnabled(ECollisionEnabled::NoCollision);
  }
  if(Id==TEXT("police")){Part(TEXT("Cube"),FVector(-65,0,165),FVector(.24f,1.12f,.04f),FRotator::ZeroRotator,TEXT("V42_Vinyl"));Details.Last()->SetCollisionEnabled(ECollisionEnabled::NoCollision);}
- Part(FName(*(FString(TEXT("Cabin42_"))+Spec().Id)),FVector::ZeroVector,FVector(1));Details.Last()->SetCollisionEnabled(ECollisionEnabled::NoCollision);
- for(auto& W:Wheels){W->EmptyOverrideMaterials();W->SetStaticMesh(World->Mesh(FName(*(FString(TEXT("Wheel42_"))+Spec().Id))));W->SetRelativeScale3D(FVector(1));}
+ Part(FName(*(FString(TEXT("Cabin42_"))+Id.ToString())),FVector::ZeroVector,FVector(1));Details.Last()->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+ for(auto& W:Wheels){W->EmptyOverrideMaterials();W->SetStaticMesh(World->Mesh(FName(*(FString(TEXT("Wheel42_"))+Id.ToString()))));W->SetRelativeScale3D(FVector(1));}
  SteeringWheel->SetStaticMesh(World->Mesh(TEXT("Steering42")));SteeringWheel->EmptyOverrideMaterials();SteeringWheel->SetRelativeScale3D(FVector(1));
- if(!Bike&&Windshield){Windshield->SetStaticMesh(World->Mesh(FName(*(FString(TEXT("Windshield42_"))+Spec().Id))));Windshield->SetRelativeLocation(FVector::ZeroVector);Windshield->SetRelativeRotation(FRotator::ZeroRotator);Windshield->SetRelativeScale3D(FVector(1));Windshield->SetMaterial(0,World->Material(TEXT("WindshieldV9")));GlassWet=Windshield->CreateDynamicMaterialInstance(0);}
+ if(!Bike&&Windshield){Windshield->SetStaticMesh(World->Mesh(FName(*(FString(TEXT("Windshield42_"))+Id.ToString()))));Windshield->SetRelativeLocation(FVector::ZeroVector);Windshield->SetRelativeRotation(FRotator::ZeroRotator);Windshield->SetRelativeScale3D(FVector(1));Windshield->SetMaterial(0,World->Material(TEXT("WindshieldV9")));GlassWet=Windshield->CreateDynamicMaterialInstance(0);}
  if(GloveLid){for(int i=0;i<GloveLid->GetNumMaterials();++i)GloveLid->SetMaterial(i,World->Material(TEXT("V42_Leather")));if(Raised)GloveLid->AddLocalOffset(FVector(0,0,27));}
  if(Camper&&GloveLid)GloveLid->AddLocalOffset(FVector(50,0,45));
  if(Camper&&CamperDoor){CamperDoor->SetStaticMesh(World->Mesh(TEXT("Camper42Door")));CamperDoor->EmptyOverrideMaterials();}

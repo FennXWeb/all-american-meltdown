@@ -1,5 +1,7 @@
+#include "LWCurrency70.h"
 #include "LWWeaponMods.h"
 #include "LWHUD.h"
+#include "LWCanada68.h"
 #include "LWCharacter.h"
 #include "LWInventory.h"
 #include "LWFuel.h"
@@ -19,8 +21,8 @@ namespace LWInventoryHUD
     const FLinearColor InvAmber(.90f, .57f, .25f);
     const FLinearColor InvGreen(.43f, .72f, .38f);
     const FLinearColor InvRed(.86f, .28f, .18f);
-    const FLinearColor InvPanel(.035f, .046f, .036f, .98f);
-    const FLinearColor InvEdge(.23f, .28f, .21f);
+    const FLinearColor InvPanel(.012f, .024f, .032f, .98f);
+    const FLinearColor InvEdge(.16f, .27f, .31f);
 
     struct FArea
     {
@@ -296,7 +298,9 @@ void ALWHUD::InventoryScreen(ALWCharacter* P)
         return;
     }
 
-    const float OriginX = FMath::Max(0.f, (Canvas->ClipX / Scale - 1280.f) * .5f);
+    const float Width83=Canvas->ClipX/Scale, Extra83=FMath::Max(0.f,Width83-1280.f);
+    const float PlayerShift83=Extra83*.25f, OtherShift83=Extra83*.75f;
+    const float OriginX = 0;
     const float OriginY = 0;
     auto Fill = [&](FArea A, FLinearColor C) { if (A.W > 0 && A.H > 0) Rect(OriginX+A.X, OriginY+A.Y, A.W, A.H, C); };
     auto Stroke = [&](FVector2D A, FVector2D B, FLinearColor C, float Weight = 1.f)
@@ -334,6 +338,7 @@ void ALWHUD::InventoryScreen(ALWCharacter* P)
         (MouseWasDown || PlayerOwner->WasInputKeyJustReleased(EKeys::LeftMouseButton));
 
     FGrid PlayerGrid;
+    PlayerGrid.X += PlayerShift83;
     PlayerGrid.PanelId = 0;
     PlayerGrid.Items = P->ItemsFor(0);
     PlayerGrid.Height=LWItems::InventoryHeight(P->Inventory);
@@ -343,14 +348,14 @@ void ALWHUD::InventoryScreen(ALWCharacter* P)
     }
     PlayerInventoryScroll=FMath::Clamp(PlayerInventoryScroll,0,PlayerGrid.Height-PlayerGrid.Rows);PlayerGrid.FirstRow=PlayerInventoryScroll;
     FGrid OtherGrid;
-    OtherGrid.X = 804;
+    OtherGrid.X = 804 + OtherShift83;
     OtherGrid.PanelId = IsValid(P->OpenObject) && P->OpenObject->Kind == ELWObjectKind::Stash ? 1 : 2;
     OtherGrid.Items = P->ItemsFor(OtherGrid.PanelId);
     const bool Trader = IsValid(P->OpenObject) && P->OpenObject->Kind == ELWObjectKind::Trader;
-    FString OtherTitle = TEXT("FIELD STORAGE");
+    FString OtherTitle = TEXT("CONTAINER");
     if (OtherGrid.PanelId == 1)
     {
-        OtherGrid.Width = 12; OtherGrid.Height = 14; OtherTitle = TEXT("SECURED STASH");
+        OtherGrid.Width = 12; OtherGrid.Height = 14; OtherTitle = TEXT("STASH");
     }
     else if (IsValid(P->OpenObject) && P->World)
     {
@@ -366,23 +371,24 @@ void ALWHUD::InventoryScreen(ALWCharacter* P)
     OtherGrid.Rows = FMath::Min(OtherGrid.Height, FMath::Max(1, FMath::FloorToInt(448.f / OtherGrid.Cell)));
     const int32 MaxScroll = FMath::Max(0, OtherGrid.Height - OtherGrid.Rows);
     InventoryScroll = FMath::Clamp(InventoryScroll, 0, MaxScroll);
-    const FArea OtherPanel{784,90,472,568};
-    const FArea CloseButton{1125,28,115,30};
+    const FArea OtherPanel{784+Extra83*.5f,90,472+Extra83*.5f,568};
+    const FArea Sort83{620+Extra83*.5f,97,140,34}, OtherSort83{Width83-190,97,158,34}, TakeAll83{OtherPanel.X+6,616,168,34};
+    const FArea CloseButton{Width83-155,28,115,30};
     const float ScrollX = OtherGrid.Bounds().Right() + 12;
     const FArea ScrollUp{ScrollX,144,20,22};
     const FArea ScrollDown{ScrollX,OtherGrid.Bounds().Bottom()-22,20,22};
     const FArea ScrollTrack{ScrollX+3,171,14,FMath::Max(1.f,OtherGrid.Bounds().H-54)};
     bool ConsumedPress = false;
-    const FArea PlayerUp{730,144,20,22},PlayerDown{730,442,20,22},PlayerTrack{734,173,12,240};
+    const FArea PlayerUp{730+PlayerShift83,144,20,22},PlayerDown{730+PlayerShift83,442,20,22},PlayerTrack{734+PlayerShift83,173,12,240};
     if(PlayerGrid.Height>PlayerGrid.Rows){
         if(Pressed&&PlayerUp.Contains(Mouse)){--PlayerInventoryScroll;ConsumedPress=true;}
         if(Pressed&&PlayerDown.Contains(Mouse)){++PlayerInventoryScroll;ConsumedPress=true;}
         if(MouseDown&&!DragId.IsValid()&&PlayerTrack.Contains(Mouse)){PlayerInventoryScroll=FMath::RoundToInt((Mouse.Y-PlayerTrack.Y)/PlayerTrack.H*(PlayerGrid.Height-PlayerGrid.Rows));ConsumedPress=true;}
         PlayerInventoryScroll=FMath::Clamp(PlayerInventoryScroll,0,PlayerGrid.Height-PlayerGrid.Rows);PlayerGrid.FirstRow=PlayerInventoryScroll;
     }
-    if(Pressed && Mouse.X>=620 && Mouse.X<760 && Mouse.Y>=97 && Mouse.Y<136){CancelDrag();ConsumedPress=true;}
-    if(Pressed && OtherGrid.Items && !Trader && Mouse.X>=1090 && Mouse.X<1248 && Mouse.Y>=97 && Mouse.Y<136){CancelDrag();ConsumedPress=true;}
-    if(Pressed && OtherGrid.Items && !Trader && Mouse.X>=790 && Mouse.X<958 && Mouse.Y>=616 && Mouse.Y<652){CancelDrag();ConsumedPress=true;}
+    if(Pressed && Sort83.Contains(Mouse)){CancelDrag();ConsumedPress=true;}
+    if(Pressed && OtherGrid.Items && !Trader && OtherSort83.Contains(Mouse)){CancelDrag();ConsumedPress=true;}
+    if(Pressed && OtherGrid.Items && !Trader && TakeAll83.Contains(Mouse)){CancelDrag();ConsumedPress=true;}
     if (Pressed && CloseButton.Contains(Mouse))
     {
         CancelDrag(); MouseWasDown = MouseDown; P->ClosePanels(); InventoryLastFrame = 0;
@@ -556,11 +562,11 @@ void ALWHUD::InventoryScreen(ALWCharacter* P)
             DropHint = ValidDrop ? (Hover.Slot.IsNone() ? TEXT("RELEASE TO MOVE") : TEXT("RELEASE TO EQUIP / SWAP")) : TEXT("BLOCKED // CHECK SPACE, SHAPE OR SLOT");
             if (Trader && DragPanel == 2 && Hover.PanelId == 0)
             {
-                if (Price(Dragged) > P->Money) { ValidDrop = false; DropHint = TEXT("INSUFFICIENT CREDITS"); }
-                else if (ValidDrop) DropHint = FString::Printf(TEXT("RELEASE TO BUY // $%d"),Price(Dragged));
+                if (LWCanada68::TradePrice(P,Dragged,true) > LWCurrency70::Balance(P)) { ValidDrop = false; DropHint = FString(TEXT("INSUFFICIENT "))+LWCurrency70::Unit(P); }
+                else if (ValidDrop) DropHint = FString::Printf(TEXT("RELEASE TO BUY // %s%d"),LWCurrency70::Unit(P),LWCanada68::TradePrice(P,Dragged,true));
             }
             else if (Trader && DragPanel == 0 && Hover.PanelId == 2 && ValidDrop)
-                DropHint = FString::Printf(TEXT("RELEASE TO SELL // $%d"),Price(Dragged)/2);
+                DropHint = FString::Printf(TEXT("RELEASE TO SELL // %s%d"),LWCurrency70::Unit(P),LWCanada68::TradePrice(P,Dragged,false));
         }
         if (Released)
         {
@@ -587,23 +593,23 @@ void ALWHUD::InventoryScreen(ALWCharacter* P)
 
     // Rendering follows input and reacquires arrays after every transaction; no stale item pointer survives a mutation.
     Rect(0,0,Canvas->ClipX/Scale,Canvas->ClipY/Scale,FLinearColor(.008f,.014f,.010f,.91f));
-    Fill({16,16,1248,690},FLinearColor(.020f,.028f,.022f,.97f));
-    for (int32 Y = 20; Y < 704; Y += 4) Fill({20,float(Y),1240,1},FLinearColor(.22f,.28f,.18f,.045f));
-    Stroke({24,77},{1256,77},InvEdge);
-    Label(FitText(FString::Printf(TEXT("$%lld"),P->Money),200),1040,64,.9f,InvAmber);
-    Label(FString::Printf(TEXT("CREDIT  $%06lld"),P->Money),790,36,1.1f,InvAmber);
+    Fill({16,16,Width83-32,690},FLinearColor(.020f,.028f,.022f,.97f));
+
+    Stroke({24,77},{Width83-24,77},InvEdge);
+    Label(FitText(FString::Printf(TEXT("CAD $%lld"),P->RPG.Canada68.CanadianDollars),200),Width83-240,64,.9f,InvAmber);
+    Label(FitText(FString::Printf(TEXT("CR %lld"),P->Money),280),Width83-490,64,.9f,InvAmber);
     Fill(CloseButton,CloseButton.Contains(Mouse) ? FLinearColor(.29f,.19f,.10f) : FLinearColor(.08f,.10f,.07f));
     Border(CloseButton,CloseButton.Contains(Mouse) ? InvAmber : InvEdge);
     Label(TEXT("[I] CLOSE"),CloseButton.X+10,CloseButton.Y+7,.9f,InvBone);
 
-    const FArea EquipmentPanel{24,90,260,568}, InventoryPanel{304,90,460,568};
+    const FArea EquipmentPanel{24,90,260,568}, InventoryPanel{304,90,460+Extra83*.5f,568};
     for (FArea A : {EquipmentPanel,InventoryPanel,OtherPanel}) { Fill(A,InvPanel); Border(A,InvEdge); Fill({A.X,A.Y,3,26},InvAmber); }
     Label(TEXT("EQUIPMENT"),36,103,1.f,InvBone);
     Label(TEXT("ITEMS"),320,103,1.f,InvBone);
-    Control55(TEXT("inv_sort55"),TEXT("AUTO SORT"),OriginX+620,OriginY+97,140,34,false,true);
-    if(OtherGrid.Items&&!Trader){Control55(TEXT("inv_all55"),TEXT("TAKE ALL"),OriginX+790,OriginY+616,168,34,false,true);}
-    if(OtherGrid.Items&&!Trader){Control55(TEXT("inv_other55"),TEXT("AUTO SORT"),OriginX+1090,OriginY+97,158,34,false,true);}
-    Label(FitText(TEXT("")+OtherTitle,436,1.f),800,103,1.f,InvBone);
+    Control55(TEXT("inv_sort55"),TEXT("AUTO SORT"),Sort83.X,Sort83.Y,Sort83.W,Sort83.H,false,true);
+    if(OtherGrid.Items&&!Trader){Control55(TEXT("inv_all55"),TEXT("TAKE ALL"),TakeAll83.X,TakeAll83.Y,TakeAll83.W,TakeAll83.H,false,true);}
+    if(OtherGrid.Items&&!Trader){Control55(TEXT("inv_other55"),TEXT("AUTO SORT"),OtherSort83.X,OtherSort83.Y,OtherSort83.W,OtherSort83.H,false,true);}
+    Label(FitText(OtherTitle,(OtherGrid.Items&&!Trader?280.f:436.f)+Extra83*.5f,1.f),OtherPanel.X+16,103,1.f,InvBone);
 
     auto DrawItem = [&](const FLWItemInstance& I, const TArray<FLWItemInstance>* Items,
         FVector2D Origin, float Cell, bool Rotated, FArea Clip, bool Selected, bool Ghost, bool Allowed, bool Compact)
@@ -708,9 +714,9 @@ void ALWHUD::InventoryScreen(ALWCharacter* P)
         }
     };
     DrawGrid(PlayerGrid);
-    Label(FString::Printf(TEXT("%d SLOTS"),12*PlayerGrid.Height),330,476,.7f,InvMuted);
+    Label(FString::Printf(TEXT("%d SLOTS"),12*PlayerGrid.Height),PlayerGrid.X+2,476,.7f,InvMuted);
     if(PlayerGrid.Height>PlayerGrid.Rows){
-        Label(TEXT("^"),734,147,.8f,InvBone);Label(TEXT("v"),734,445,.8f,InvBone);Fill(PlayerTrack,InvEdge);
+        Label(TEXT("^"),PlayerTrack.X,147,.8f,InvBone);Label(TEXT("v"),PlayerTrack.X,445,.8f,InvBone);Fill(PlayerTrack,InvEdge);
         const float Thumb=PlayerTrack.H*PlayerGrid.Rows/PlayerGrid.Height;
         Fill({PlayerTrack.X,PlayerTrack.Y+(PlayerTrack.H-Thumb)*PlayerInventoryScroll/(PlayerGrid.Height-PlayerGrid.Rows),PlayerTrack.W,Thumb},InvMuted);
     }
@@ -767,24 +773,24 @@ void ALWHUD::InventoryScreen(ALWCharacter* P)
     }
     else
     {
-        Border({985,295,64,46},InvEdge,2);Stroke({985,307},{1049,307},InvEdge,2);Fill({1010,303,14,8},InvEdge);
-        Label(TEXT("NO CONTAINER OPEN"),935,366,.95f,InvMuted);
+        Border({985+OtherShift83,295,64,46},InvEdge,2);Stroke({985+OtherShift83,307},{1049+OtherShift83,307},InvEdge,2);Fill({1010+OtherShift83,303,14,8},InvEdge);
+        Label(TEXT("NO CONTAINER OPEN"),935+OtherShift83,366,.95f,InvMuted);
         
     }
 
     const FLWItemInstance* Inspect = HasDrag ? &Dragged : Find(P->ItemsFor(Hover.PanelId),Hover.Id);
     int32 InspectPanel = HasDrag ? DragPanel : Hover.PanelId;
     if (!Inspect) { InspectPanel = SelectedPanel; Inspect = Find(P->ItemsFor(SelectedPanel),SelectedId); }
-    const FArea Details{320,503,428,144};
+    const FArea Details{320,503,428+Extra83*.5f,144};
     Fill(Details,FLinearColor(.057f,.073f,.050f));
-    Stroke({320,503},{748,503},InvEdge);
+    Stroke({320,503},{748+Extra83*.5f,503},InvEdge);
     if (Inspect)
     {
         const FLWItemDefinition& D = LWItems::Def(Inspect->Definition);
         const bool InspectRotated = HasDrag ? bDragRotated : Inspect->bRotated;
-        Label(FitText(((D.Category==TEXT("Weapon")||D.Category==TEXT("WeaponPart"))?FString(LWMods::TierName(Inspect->WeaponTier))+TEXT(" "):FString())+(Inspect->CustomName39.IsEmpty()?Name(D):Inspect->CustomName39),408,1.05f),330,511,1.05f,(D.Category==TEXT("Weapon")||D.Category==TEXT("WeaponPart"))?LWMods::TierColor(Inspect->WeaponTier):InvAmber);
+        Label(FitText(((D.Category==TEXT("Weapon")||D.Category==TEXT("WeaponPart"))?FString(LWMods::TierName(Inspect->WeaponTier))+TEXT(" "):FString())+(Inspect->CustomName39.IsEmpty()?Name(D):Inspect->CustomName39),408+Extra83*.5f,1.05f),330,511,1.05f,(D.Category==TEXT("Weapon")||D.Category==TEXT("WeaponPart"))?LWMods::TierColor(Inspect->WeaponTier):InvAmber);
         Label(FitText(FString::Printf(TEXT("%s / %dx%d / STACK %d OF %d"),*D.Category.ToString().ToUpper(),
-            InspectRotated ? D.Height : D.Width,InspectRotated ? D.Width : D.Height,Inspect->Count,D.MaxStack),408),330,534,.8f,InvMuted);
+            InspectRotated ? D.Height : D.Width,InspectRotated ? D.Width : D.Height,Inspect->Count,D.MaxStack),408+Extra83*.5f),330,534,.8f,InvMuted);
         FString DetailA, DetailB;
         if (!Inspect->Cylinder.IsEmpty())
         {
@@ -835,26 +841,27 @@ void ALWHUD::InventoryScreen(ALWCharacter* P)
         else if (D.Id == TEXT("water")) { DetailA = TEXT("RESTORES UP TO 55 WATER"); DetailB = TEXT("RIGHT CLICK TO DRINK ONE BOTTLE"); }
         else { DetailA = D.EquipSlots.IsEmpty() ? TEXT("SUPPLY / TRADE ITEM") : TEXT("RIGHT CLICK TO EQUIP OR SELECT WEAPON"); DetailB = TEXT("DRAG TO MOVE / R ROTATES WHILE DRAGGING"); }
         if(D.Category==TEXT("WeaponPart")){const auto* Part=LWParts39::Find(D.Id);DetailA=Part?Part->Group.ToString().ToUpper()+TEXT(" / WEAPON WORKBENCH"):FString();DetailB=LWMods::Modifier(Inspect).IsNone()?TEXT("BUILD OR MODIFY WEAPONS AT A WORKBENCH"):LWMods::Modifier(Inspect).ToString().ToUpper();}
+        if(D.Id==TEXT("settlement_flag")){DetailA=TEXT("CLAIM A SETTLEMENT OUTDOORS");DetailB=TEXT("RIGHT CLICK TO PLACE / SETTLEMENTS TAB TO MANAGE");}
         if(D.Category==TEXT("Attachment")){DetailA=TEXT("MOUNT: ")+LWMods::Mount(D.Id).ToString();DetailB=TEXT("DRAG ONTO A COMPATIBLE WEAPON");}
         if(D.Category==TEXT("Weapon")){
             if(InspectPanel==0&&!HasDrag&&Inspect->Parts39.IsEmpty()){const FName Mounts[]={TEXT("Optic"),TEXT("Light"),TEXT("Laser"),TEXT("Grip")};const FKey Keys[]={EKeys::F1,EKeys::F2,EKeys::F3,EKeys::F4};for(int M=0;M<4;M++)if(PlayerOwner->WasInputKeyJustPressed(Keys[M])){const FGuid Id=Inspect->Id;if(LWMods::Detach(P->Inventory,Id,Mounts[M])){P->ConfigureAttachments();P->PersistWorldChange();}else P->Notify(TEXT("MOUNT EMPTY OR INVENTORY FULL"));return;}}
         }
-        Label(FitText(DetailA,408),330,551,.8f,InvBone);
-        Label(FitText(DetailB,408),330,567,.8f,InvMuted);
+        Label(FitText(DetailA,408+Extra83*.5f),330,551,.8f,InvBone);
+        Label(FitText(DetailB,408+Extra83*.5f),330,567,.8f,InvMuted);
         if(D.Category==TEXT("Weapon"))
         {
             FString Attachments;
             const FName Mounts[]={TEXT("Optic"),TEXT("Light"),TEXT("Laser"),TEXT("Grip")};
             for(int M=0;M<4;++M){const FName A=Inspect->Attachments.FindRef(Mounts[M]);Attachments+=FString::Printf(TEXT("F%d:%s "),M+1,A.IsNone()?TEXT("-"):*A.ToString().Replace(TEXT("att_"),TEXT("")));}
             if(!Inspect->Parts39.IsEmpty())Attachments=FString::Printf(TEXT("CUSTOM BUILD / %d PARTS / EDIT AT WORKBENCH"),Inspect->Parts39.Num());
-            Label(FitText(Attachments,408),330,583,.8f,InvMuted);
+            Label(FitText(Attachments,408+Extra83*.5f),330,583,.8f,InvMuted);
             FString Finish=FString::Printf(TEXT("DMG +%d%%"),LWMods::Tier(Inspect)*12);
             if(!LWMods::Modifier(Inspect).IsNone())Finish+=TEXT(" / ")+LWMods::Modifier(Inspect).ToString();
             if(!LWMods::SkinName(Inspect).IsEmpty())Finish+=TEXT(" / ")+LWMods::SkinName(Inspect);
-            Label(FitText(Finish,408),330,599,.8f,LWMods::TierColor(Inspect->WeaponTier));
+            Label(FitText(Finish,408+Extra83*.5f),330,599,.8f,LWMods::TierColor(Inspect->WeaponTier));
         }
         const FString Condition = D.MaxDurability > 0 ? FString::Printf(TEXT("COND %d/%d  "),Inspect->Durability,D.MaxDurability) : FString();
-        Label(FitText(Condition+FString::Printf(TEXT("BUY $%d / SELL $%d"),Price(*Inspect),Price(*Inspect)/2),408),330,615,.8f,Trader ? InvAmber : InvBone);
+        Label(FitText(Condition+FString::Printf(TEXT("BUY %s%d / SELL %s%d"),LWCurrency70::Unit(P),LWCanada68::TradePrice(P,*Inspect,true),LWCurrency70::Unit(P),LWCanada68::TradePrice(P,*Inspect,false)),408+Extra83*.5f),330,615,.8f,Trader ? InvAmber : InvBone);
         Label(InspectPanel == 0 ? TEXT("[RMB] USE/EQUIP   [U] UNLOAD   [DEL] DROP") : Trader ? TEXT("DRAG INTO CARRIED ITEMS TO BUY") : TEXT("DRAG INTO CARRIED ITEMS TO USE"),330,632,.8f,InvMuted);
     }
     else
@@ -866,7 +873,7 @@ void ALWHUD::InventoryScreen(ALWCharacter* P)
     {
         const float GhostCell = Hover.Grid ? Hover.Grid->Cell : 32.f;
         FVector2D GhostOrigin = Mouse-DragOffset*GhostCell;
-        FArea GhostClip{18,80,1244,580};
+        FArea GhostClip{18,80,Width83-36,580};
         if (Hover.Grid)
         {
             GhostOrigin = {Hover.Grid->X+DropX*GhostCell,Hover.Grid->Y+(DropY-Hover.Grid->FirstRow)*GhostCell};
@@ -885,17 +892,17 @@ void ALWHUD::InventoryScreen(ALWCharacter* P)
                 }
             }
         }
-        Fill({306,664,944,34},FLinearColor(.025f,.034f,.021f,.98f));
-        Label(FitText(DropHint+TEXT("   [R] ROTATE / [RMB] CANCEL"),930,.9f),316,673,.9f,ValidDrop ? InvGreen : InvRed);
+        Fill({306,664,Width83-336,34},FLinearColor(.025f,.034f,.021f,.98f));
+        Label(FitText(DropHint+TEXT("   [R] ROTATE / [RMB] CANCEL"),Width83-350,.9f),316,673,.9f,ValidDrop ? InvGreen : InvRed);
     }
     else
     {
-        Stroke({24,665},{1256,665},InvEdge);
+        Stroke({24,665},{Width83-24,665},InvEdge);
         Label(TEXT("LMB DRAG   /   RMB USE OR EQUIP   /   U UNLOAD   /   DEL DROP   /   I OR ESC CLOSE"),34,680,.8f,InvMuted);
         if (P->MessageTime > 0)
         {
-            Fill({307,664,944,31},FLinearColor(.065f,.070f,.041f,.98f));
-            Label(FitText(P->Message.ToUpper(),924,.85f),317,672,.85f,InvAmber);
+            Fill({307,664,Width83-336,31},FLinearColor(.065f,.070f,.041f,.98f));
+            Label(FitText(P->Message.ToUpper(),Width83-356,.85f),317,672,.85f,InvAmber);
         }
     }
     if (HasMouse)

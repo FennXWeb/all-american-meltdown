@@ -1,0 +1,15 @@
+# Main menu art — built-in image generation
+
+Generated September 26, 2026. All three outputs were copied directly into `ArtSource/Menu81` and imported without image editing. Foreground and mist use genuine alpha transparency.
+
+## T_Skyline81.png
+
+Create a production game main menu background painting for All American Meltdown, an alternate-history 2030 post-nuclear upstate New York survival game. Wide cinematic 21:9 landscape, full bleed, no lettering, no logo, no interface, no people. Hand-painted PS2/PS3-era prestige game loading-screen illustration with crisp architectural silhouettes, restrained grain, detailed worn surfaces, sophisticated lighting, not photoreal. Syracuse-like American industrial city on the RIGHT half: art deco tower and distant ruined rooftops and water towers across a dark lake. Vast stormy slate blue sky taking upper two thirds, narrow molten amber sunset break at the low horizon, distant haze and smoke plumes, wet charcoal waterfront in lower third. Keep LEFT half darker and relatively simple for overlay menu. Palette midnight navy, desaturated petrol teal, warm ivory highlights and copper orange. Atmospheric and ominous but beautiful. No flags, readable signs, framing, borders or UI. This is the BASE scenic layer; keep near foreground unobstructed so separate foreground parallax art can be composited later.
+
+## T_Foreground81.png
+
+Create a game-menu PARALLAX FOREGROUND LAYER with a genuinely transparent RGBA background. Wide 21:9 composition. Only a near-camera ruined lakeside promenade railing and concrete rubble: dark chipped wrought iron railing along bottom 12 percent of canvas, broken sections with rusted bolts, tufts of dried grass, a tall slender abandoned bent street lamp on the extreme right edge occupying rightmost 12 percent and top right corner, loose cable hanging in from the right. Keep the entire center and upper-left 85 percent empty transparent. No environment behind these objects, no sky, no buildings, no ground plane beyond the narrow bottom foreground. Hand-painted PS2/PS3 game concept art with detailed surfaces, restrained graphic grain and clean silhouettes. Midnight navy charcoal with very subtle copper sunset rim lighting along the upper edges. No text, logos, interface, watermarks. The isolated objects will overlay a twilight city across a lake; do not generate that background. Actual transparent alpha, not a checkerboard painted into the image.
+
+## T_Mist81.png
+
+A production VFX texture for an animated game main menu: one thin panoramic ribbon of wispy lake mist on a truly transparent RGBA background. Wide 21:9. Sparse translucent pale desaturated blue-grey drifting fog, concentrated in lower half, feathered soft edges, widely varying alpha with transparent holes, most of canvas completely transparent. Nothing else: no scene, sky, landscape, horizon, objects, letters, symbols, border or solid backdrop. Restrained hand-painted atmospheric smoke, cinematic stylized game-art quality. Fog must be subtle and thin, not thick opaque clouds. Left and right edges fade to full transparency for crossfaded horizontal drift. Transparent alpha, never draw a checkerboard.

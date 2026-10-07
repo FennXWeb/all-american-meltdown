@@ -1,3 +1,4 @@
+#include "LWArsenal62.h"
 #include "LWInventory.h"
 #include "LWWeaponParts39.h"
 #include "LWFuel.h"
@@ -284,6 +285,7 @@ TArray<FLWItemDefinition> LWItems::Defaults()
     Magazine(TEXT("mag_lmg100"), TEXT("Detachable 7.62 Belt Box (100)"), TEXT("ammo_762"), 100, 2, 2, 160);
 
     Ammo(TEXT("ammo_rocket"),TEXT("Missile"),4,220);
+    Ammo(TEXT("ammo_30mm"),TEXT("30mm Turret Shell"),24,45);
     Ammo(TEXT("ammo_50ae"),TEXT(".50 AE"),35,12);
     Ammo(TEXT("ammo_dart"),TEXT("Taser Dart Pair"),8,35);
     Ammo(TEXT("ammo_fuel"),TEXT("Flamethrower Fuel"),100,4);
@@ -319,12 +321,17 @@ TArray<FLWItemDefinition> LWItems::Defaults()
     Add(TEXT("food"), TEXT("Canned Food"), TEXT("Consumable"), 1, 1, 20).MaxStack = 5;
     Add(TEXT("water"), TEXT("Drinking Water"), TEXT("Consumable"), 1, 2, 15).MaxStack = 3;
     Add(TEXT("medkit"), TEXT("Medical Kit"), TEXT("Consumable"), 2, 2, 120).MaxStack = 3;
-    Add(TEXT("scrap"), TEXT("Scrap Metal"), TEXT("Material"), 1, 1, 2).MaxStack = 60;
+    Add(TEXT("ca_trauma"),TEXT("Northern Trauma Kit"),TEXT("Consumable"),2,2,350).MaxStack=3;
+    Add(TEXT("ca_meal"),TEXT("Toronto Trail Meal"),TEXT("Consumable"),1,1,95).MaxStack=5;
+    Add(TEXT("ca_tonic"),TEXT("Alpine Recovery Tonic"),TEXT("Consumable"),1,2,130).MaxStack=3;
+    Add(TEXT("scrap"), TEXT("Scrap Metal"), TEXT("Material"), 1, 1, 2).MaxStack = 240;
+    Add(TEXT("settlement_flag"),TEXT("Settlement Flag"),TEXT("Tool"),2,2,650).MaxStack=1;
     Add(TEXT("lockpick"), TEXT("Lockpicks"), TEXT("Tool"), 1, 2, 12).MaxStack=20;
     Add(TEXT("car_key"), TEXT("Vehicle Key"), TEXT("Tool"), 1, 1, 15);
     Result.Add(LWFuel::GasCanDefinition());
     Add(TEXT("battery"), TEXT("Battery"), TEXT("Consumable"), 1, 1, 12).MaxStack = 10;
-    Result.Append(LWParts39::Items());
+    for(const auto& A:LWArsenal62::Attachments()){auto& D=Add(*A.Id.ToString(),*A.Name,TEXT("Attachment"),2,1,280);}
+    Result.Append(LWParts39::Items()); // Legacy definitions remain readable for migration; never generated.
     return Result;
 }
 
@@ -586,4 +593,4 @@ int32 LWItems::LoadMagazine(FLWItemInstance& Mag, FLWItemInstance& Ammo)
     return Loaded;
 }
 
-TArray<FLWItemDefinition> LWItems::All47(){LWEnsureCatalog();TArray<FLWItemDefinition> Result;LWCatalogState().Definitions.GenerateValueArray(Result);Result.Sort([](const auto& A,const auto& B){return A.Id.LexicalLess(B.Id);});return Result;}
+TArray<FLWItemDefinition> LWItems::All47(){LWEnsureCatalog();TArray<FLWItemDefinition> Result;LWCatalogState().Definitions.GenerateValueArray(Result);Result.RemoveAll([](const auto& D){return D.Category==TEXT("WeaponPart");});Result.Sort([](const auto& A,const auto& B){return A.Id.LexicalLess(B.Id);});return Result;}

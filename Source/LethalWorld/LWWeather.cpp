@@ -1,3 +1,4 @@
+#include "LWGeography84.h"
 #include "Engine/StaticMesh.h"
 #include "LWWorld.h"
 #include "LWCharacter.h"
@@ -26,6 +27,7 @@ void ALWWorld::TickWeather(float Dt,ALWCharacter* P)
  auto Type=[&](int N){uint32 H=LWGen::Hash(N,0,Seed,8181)%100;return H<20?0:H<35?1:H<45?2:H<61?3:H<72?4:H<80?5:H<83?6:H<89?7:H<93?8:H<97?9:10;};
  const int CrownUntil=PropStates.FindRef(TEXT("weather_crown_until"));const int Override=Hours*60<CrownUntil?PropStates.FindRef(TEXT("weather_crown_type")):WeatherOverride;
  WeatherType=Override>=0?Override:Type(Period);int Prev=Override>=0?Override:Type(Period-1);
+ if(LWGeography84::Canada(FVector2D(P->GetActorLocation()))){WeatherType=WeatherType>=5?1:WeatherType;Prev=Prev>=5?1:Prev;}
  float Blend=FMath::SmoothStep(0.f,1.f,float(FMath::Fmod(Hours,3.)/.35));
  auto Cloud=[](int T){return T==0?.05f:T==1?.65f:T==2?.8f:1.f;};
  auto Wet=[](int T){return T==3?.6f:T==4||T==6?1.f:0.f;};
@@ -45,9 +47,13 @@ void ALWWorld::TickWeather(float Dt,ALWCharacter* P)
  MoonLight->SetActorRotation((-MoonDirection).Rotation());MoonLight->GetLightComponent()->SetIntensity((1-Day)*.055f*(1-CloudAmount*.75f));
  AmbientLight->GetLightComponent()->SetIntensity(.022f+Day*(1.15f-.50f*CloudAmount));
  FLinearColor SkyColor=FMath::Lerp(FLinearColor(.006f,.012f,.022f),FLinearColor(.29f,.38f,.46f),Day)*(1-.5f*CloudAmount);
- if(!WeatherSky){WeatherSky=UMaterialInstanceDynamic::Create(Material(TEXT("Sky")),this);Sky->GetStaticMeshComponent()->SetMaterial(0,WeatherSky);}
+ if(LWGeography84::Canada(FVector2D(P->GetActorLocation())))SkyColor=FMath::Lerp(FLinearColor(.006,.012,.022),FLinearColor(.22,.45,.72),Day)*(1-.5f*CloudAmount);
+ if(!WeatherSky){WeatherSky=UMaterialInstanceDynamic::Create(Material(TEXT("AviationSky84")),this);Sky->GetStaticMeshComponent()->SetMaterial(0,WeatherSky);}
+ const float ThinAir84=FMath::SmoothStep(350000.f,1400000.f,float(P->GetActorLocation().Z));SkyColor=FMath::Lerp(SkyColor,FLinearColor(.002,.005,.018),ThinAir84*.92f);
+ Sky->SetActorScale3D(FVector(P->GetActorLocation().Z>18000?200000:3000));
+ WeatherSky->SetScalarParameterValue(TEXT("ThinAir84"),ThinAir84);
  WeatherSky->SetVectorParameterValue(TEXT("SkyColor"),SkyColor+FLinearColor(Flash*.15f,Flash*.15f,Flash*.15f,0));
- WeatherFog->GetComponent()->SetFogDensity(.005f+FogAmount*.06f+RainAmount*.018f);
+ WeatherFog->GetComponent()->SetFogDensity((.005f+FogAmount*.06f+RainAmount*.018f)*(1-ThinAir84*.97f));
  WeatherFog->GetComponent()->SetStartDistance(FMath::Lerp(1800.f,70.f,FMath::Max(FogAmount,RainAmount*.65f)));
  WeatherFog->GetComponent()->SetFogInscatteringColor(SkyColor);
  if(!Rain){Rain=NewObject<UInstancedStaticMeshComponent>(this);Rain->SetStaticMesh(Mesh(TEXT("Cube")));Rain->SetMaterial(0,Material(TEXT("Bone")));Rain->SetCollisionEnabled(ECollisionEnabled::NoCollision);Rain->SetCastShadow(false);Rain->RegisterComponent();for(int I=0;I<128;I++)Rain->AddInstance(FTransform(FVector::ZeroVector));}

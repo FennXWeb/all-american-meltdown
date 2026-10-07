@@ -21,7 +21,7 @@ bool RejoinPlayerVehicle(ALWResident* N,ALWCharacter* P){
  if(FVector::Dist2D(From->GetActorLocation(),To->GetActorLocation())>From->Spec().HalfLength+To->Spec().HalfLength+450||FMath::Abs(From->GetActorLocation().Z-To->GetActorLocation().Z)>150)return false;
 
  int32 Seat=INDEX_NONE;
- const bool BecomeDriver=To->PlayerSeat>=0&&!IsValid(To->Chauffeur)&&!To->DriverDismissed&&P->bWaypoint;
+ const bool BecomeDriver=!To->SelfDriving74&&!To->IsHelicopter57()&&!To->IsAircraft84()&&To->PlayerSeat>=0&&!IsValid(To->Chauffeur)&&!To->DriverDismissed&&P->bWaypoint;
  if(!BecomeDriver){for(int32 I=0;I<To->Spec().Seats-1;I++)if(I!=To->PlayerSeat&&(!To->Passengers.IsValidIndex(I)||!IsValid(To->Passengers[I]))){Seat=I;break;}if(Seat==INDEX_NONE)return false;}
  const bool WasDriver=From->Chauffeur==N;const int32 OldSeat=N->SeatIndex;
  if(!WasDriver&&(!From->Passengers.IsValidIndex(OldSeat)||From->Passengers[OldSeat]!=N))return false;
@@ -57,13 +57,13 @@ bool RejoinPlayerVehicle(ALWResident* N,ALWCharacter* P){
 
 bool ALWVehicle::HasFreeCompanionSeat()const{
  if(SpawnPlacementPending||!Record()||Record()->Exploded||Record()->Health<=0||Record()->FireRemaining>0)return false;
- if(Driver&&PlayerSeat>=0&&!IsValid(Chauffeur)&&!DriverDismissed&&Driver->bWaypoint)return true;
+ if(!IsAircraft84()&&!IsHelicopter57()&&!SelfDriving74&&Driver&&PlayerSeat>=0&&!IsValid(Chauffeur)&&!DriverDismissed&&Driver->bWaypoint)return true;
  for(int I=0;I<Spec().Seats-1;I++)if(I!=PlayerSeat&&(!Passengers.IsValidIndex(I)||!IsValid(Passengers[I])))return true;
  return false;
 }
 
 bool ALWVehicle::BoardConvoy(ALWResident* N,ALWCharacter* P){
- if(!N||!P||!P->Vehicle||SpawnPlacementPending||!HasFuel()||P->Vehicle==this||Driver||N->Riding||N->DownTime>0||!Record()||Record()->Exploded||Record()->FireRemaining>0||Record()->Health<=0||FMath::Abs(Speed)>100||FVector::Dist2D(N->GetActorLocation(),GetActorLocation())>Spec().HalfLength+350)return false;
+ if(IsAircraft84()||IsHelicopter57()||!N||!P||!P->Vehicle||P->Vehicle->IsAircraft84()||SpawnPlacementPending||!HasFuel()||P->Vehicle==this||Driver||N->Riding||N->DownTime>0||!Record()||Record()->Exploded||Record()->FireRemaining>0||Record()->Health<=0||FMath::Abs(Speed)>100||FVector::Dist2D(N->GetActorLocation(),GetActorLocation())>Spec().HalfLength+350)return false;
  if(P->Vehicle->HasFreeCompanionSeat()){P->Vehicle->Board(N);return N->Riding==P->Vehicle;}
  if(ConvoyOwner&&ConvoyOwner!=P)return false;ConvoyOwner=P;ConvoyLeader=P->Vehicle;DriverDismissed=false;
  if(Chauffeur)return Board(N);
@@ -73,7 +73,7 @@ void ALWVehicle::TickConvoy(float Dt){
  if(!IsValid(ConvoyOwner)){ConvoyOwner=nullptr;return;}
  if(!IsValid(ConvoyLeader)||ConvoyOwner->Vehicle!=ConvoyLeader||!IsValid(Chauffeur)||Chauffeur->DownTime>0||!Record()||Record()->Health<=0||!HasFuel()){Throttle=Steer=0;AutoDriving=false;if(FMath::Abs(Speed)<5){UnloadPassengers();ConvoyOwner=nullptr;ConvoyLeader=nullptr;EngineOn=false;}return;}
  StuckClock=FVector::Dist2D(GetActorLocation(),ConvoyLeader->GetActorLocation())>12000?StuckClock+Dt:0;
- if(StuckClock>=8){auto* SquadPlayer=ConvoyOwner.Get();TArray<FName> Crew;if(IsValid(Chauffeur))Crew.Add(Chauffeur->ResidentId);for(auto& N:Passengers)if(IsValid(N))Crew.Add(N->ResidentId);UnloadPassengers();Throttle=Steer=Speed=0;EngineOn=AutoDriving=false;ConvoyOwner=nullptr;ConvoyLeader=nullptr;for(FName Id:Crew)SquadPlayer->SetCompanion(Id,false);SquadPlayer->Notify(TEXT("CONVOY LOST CONTACT / CREW RETURNING TO BUNKER"));SyncRecord();return;}
+ if(StuckClock>=8){auto* SquadPlayer=ConvoyOwner.Get();TArray<FName> Crew;if(IsValid(Chauffeur))Crew.Add(Chauffeur->ResidentId);for(auto& N:Passengers)if(IsValid(N))Crew.Add(N->ResidentId);UnloadPassengers();Throttle=Steer=Speed=0;EngineOn=AutoDriving=false;ConvoyOwner=nullptr;ConvoyLeader=nullptr;for(FName Id:Crew)SquadPlayer->SetCompanion(Id,false);SquadPlayer->Notify(TEXT("CONVOY LOST CONTACT / CREW RETURNING HOME"));SyncRecord();return;}
  AutoDriving=true;BoardingClock+=Dt;if(BoardingClock<ConvoyStartDelay||ConvoyOwner->IsUIOpen()){Throttle=0;return;}
  if(!EngineOn){Record()->Hotwired=true;EngineOn=true;SyncRecord();}
  const FVector Goal=ConvoyLeader->GetActorLocation()-ConvoyLeader->GetActorForwardVector()*(ConvoyLeader->Spec().HalfLength+Spec().HalfLength+320);

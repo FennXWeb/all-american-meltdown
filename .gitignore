@@ -38,5 +38,21 @@ BuildLog.txt
 credentials.json
 secrets.json
 .codex/
+.aws/
 
 # Keep Build/Windows/Application.ico; it is a source asset.
+
+# NVIDIA runtime SDK DLLs are shipped dependencies, not generated game binaries.
+!/Plugins/**/Binaries/
+/Plugins/**/Binaries/*
+!/Plugins/**/Binaries/ThirdParty/
+!/Plugins/**/Binaries/ThirdParty/**
+
+# Restore the official vendor SDK with Tools/InstallDLSS58.ps1.
+# Portable builds contain the required runtime binaries; vendor SDK source stays local.
+/Plugins/DLSS/
+/Plugins/Streamline/
+/Plugins/StreamlineCore/
+/Plugins/StreamlineDLSSG/
+/Plugins/StreamlineNGXCommon/
+/Plugins/StreamlineReflex/

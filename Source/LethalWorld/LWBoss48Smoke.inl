@@ -4,7 +4,7 @@ void ALWGameMode::BuildBoss48Smoke(ALWCharacter& Initial){
  Add(TEXT("large enemy spawn integration"),[this](ALWCharacter& P){P.NewGame();P.EnterSafehouse();for(TActorIterator<ALWZombie> I(GetWorld());I;++I)if(int(I->Kind)>=9)I->Destroy();
  const int Before=P.World->ZombieCount;P.World->ZombieCount=100;int Found=0;
  for(int Kind=9;Kind<=11;++Kind){bool Spawned=false;
-  for(int Index=0;Index<2000&&!Spawned;++Index){FIntPoint Coord(60+Index%50,60+Index/50);uint32 Id=LWGen::Hash(Coord.X,Coord.Y,P.World->Seed,29010);if(LWBoss48::Kind(Id)!=Kind)continue;
+  for(int Index=0;Index<30000&&!Spawned;++Index){FIntPoint Coord(60+Index%50,60+Index/50);uint32 Id=LWGen::Hash(Coord.X,Coord.Y,P.World->Seed,29010);if(LWBoss48::Kind(Id)!=Kind)continue;
    FVector Origin(Coord.X*LWGen::ChunkSize,Coord.Y*LWGen::ChunkSize,0);TArray<LWGen::FRoad> Roads;TArray<LWGen::FSite> Sites;LWGen::Gather(FVector2D(Origin)+FVector2D(6400),P.World->Seed,Roads,Sites);FRandomStream R(Id^0x4819u);FVector2D At;bool Clear=false;
    for(int Try=0;Try<24;++Try){At=LWBoss48::Candidate(Coord,R);float Yaw=R.FRandRange(0,360);if(LWBoss48::Clear(At,Kind,Yaw,Roads,Sites)){Clear=true;break;}}if(!Clear)continue;
    auto* C=GetWorld()->SpawnActor<ALWChunk>(Origin,FRotator::ZeroRotator);C->Coordinate=Coord;float Ground=P.World->HeightAt(At);C->Box(P.World,TEXT("Concrete"),FVector(6400,6400,Ground-20),FVector(20000,20000,40));

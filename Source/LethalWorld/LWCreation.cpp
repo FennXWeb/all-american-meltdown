@@ -1,3 +1,4 @@
+#include "LWCampaign76.h"
 #include "LWCharacter.h"
 #include "LWCreator35.h"
 #include "LWWorld.h"
@@ -15,8 +16,8 @@
 void ALWCharacter::BeginOpening(){
  ClosePanels();bSettings=false;bWorldSetup=false;bMenu=true;bAim=bSprint=bTrigger=false;CancelReload();DraftIdentity=FLWIdentity();LWCreator35::Normalize(DraftIdentity);CreatorTab35=CreatorPage35=0;CreatorZoom35=0;StartingAttributes.Init(4,7);CreationMessage.Empty();PortraitYaw=0;OpeningPaused=false;NameEditing=false;
  if(World->Music)World->Music->Stop();
- OpeningMode=1;OpeningShot=0;OpeningSince=GetWorld()->GetRealTimeSeconds();
- OpeningScene=GetWorld()->SpawnActor<ALWOpeningScene>(FVector(0,0,80000),FRotator::ZeroRotator);OpeningScene->World=World;OpeningScene->Camera->PostProcessSettings=Camera->PostProcessSettings;OpeningScene->Stage(0);
+ OpeningMode=2;OpeningShot=0;OpeningSince=GetWorld()->GetRealTimeSeconds();
+ OpeningScene=GetWorld()->SpawnActor<ALWOpeningScene>(FVector(0,0,80000),FRotator::ZeroRotator);OpeningScene->World=World;OpeningScene->Camera->PostProcessSettings=Camera->PostProcessSettings;OpeningScene->Portrait(DraftIdentity,PortraitYaw);
  if(auto* PC=Cast<APlayerController>(Controller)){PC->SetViewTarget(OpeningScene);}
  SetMenuInput(true);UGameplayStatics::SetGamePaused(this,true);
 }
@@ -36,7 +37,6 @@ void ALWCharacter::OpeningClick(FName N){
  if(N==TEXT("intro_pause")&&OpeningMode==1){double Now=GetWorld()->GetRealTimeSeconds();if(!OpeningPaused)OpeningSince=Now-OpeningSince;else OpeningSince=Now-OpeningSince;OpeningPaused=!OpeningPaused;if(OpeningScene&&OpeningScene->Audio)OpeningScene->Audio->SetPaused(OpeningPaused);return;}
  if(N==TEXT("intro_skip")&&OpeningMode==1){OpeningMode=2;OpeningPaused=false;OpeningScene->Portrait(DraftIdentity,PortraitYaw);return;}
  if(N==TEXT("creator_back")){EndOpening(false);bWorldSetup=true;bSeedEdit=false;SetMenuInput(true);return;}
- if(N==TEXT("creator_replay")){OpeningMode=1;OpeningShot=0;OpeningPaused=false;OpeningSince=GetWorld()->GetRealTimeSeconds();OpeningScene->Camera->FieldOfView=50;OpeningScene->Stage(0);return;}
  if(OpeningMode!=2)return;
  if(LWCreator35::Click(this,N))return;
  if(N==TEXT("creator_done")){if(!LWOpening::ValidAllocation(StartingAttributes)){CreationMessage=TEXT("ASSIGN ALL 28 CATEGORY POINTS BEFORE STARTING.");return;}if(DraftIdentity.Name.TrimStartAndEnd().IsEmpty()){CreationMessage=TEXT("ENTER A NAME.");return;}EndOpening(true);return;}
@@ -60,10 +60,10 @@ void ALWCharacter::EndOpening(bool Commit){
  if(auto* PC=Cast<APlayerController>(Controller)){PC->SetViewTarget(this);}
  OpeningMode=0;NameEditing=false;OpeningPaused=false;
  if(!Commit)return;
- TGuardValue<bool> Guard(bLoadingSave,true);World->Seed=FCString::Atoi(*SeedText);World->TownSetting=SetupTowns;World->POISetting=SetupPOIs;World->TerrainSetting=SetupTerrain;World->Difficulty=SetupDifficulty;
- NewGame();Identity=Chosen;RPG.Attributes=Stats;ApplyIdentity();EnterSafehouse();Message=TEXT("WELCOME HOME, ")+Identity.Name+TEXT(". [TAB] SURVIVOR MENU / [I] INVENTORY");MessageTime=9;
+ TGuardValue<bool> Guard(bLoadingSave,true);World->Difficulty=SetupDifficulty;
+ NewGame();Identity=Chosen;RPG.Attributes=Stats;ApplyIdentity();ALWCampaign76::Ensure(this)->Begin(true);Message.Empty();MessageTime=0;
  // Commit one complete record after creation, not an intermediate outdoor spawn.
- bLoadingSave=false;RequestSave40();
+ bLoadingSave=false;CaptureMission37(TEXT("campaign76"),true);RequestSave40();
 }
 void ALWCharacter::ApplyIdentity(){
  LWCreator35::Normalize(Identity);
@@ -71,8 +71,8 @@ void ALWCharacter::ApplyIdentity(){
  Identity.Skin=FMath::Clamp(Identity.Skin,0,5);Identity.Outfit=FMath::Clamp(Identity.Outfit,0,3);
  if(auto* Base=LoadObject<UMaterialInterface>(nullptr,TEXT("/Game/Materials/M_SurvivorTint")))for(auto* C:{Arms.Get(),LoadingHand.Get(),Weapon==19?WeaponMesh.Get():nullptr})if(C&&C->GetStaticMesh()){
  C->EmptyOverrideMaterials();const auto& Slots=C->GetStaticMesh()->GetStaticMaterials();for(int I=0;I<Slots.Num();I++){
- FString Name=Slots[I].MaterialInterface?Slots[I].MaterialInterface->GetName():FString();bool Sleeve=Name.Contains(TEXT("Cloth"))||Name.Contains(TEXT("Cotton35"));bool Skin=Name.Contains(TEXT("Skin"))||Name.Contains(TEXT("Flesh"));if(!Sleeve&&!Skin)continue;
- auto* Material=Slots[I].MaterialInterface.Get();auto* M=UMaterialInstanceDynamic::Create((Name.Contains(TEXT("32"))||Name.Contains(TEXT("35")))&&Material?Material:Base,C);M->SetVectorParameterValue(TEXT("Tint"),Sleeve?LWCreator35::Color(Identity.TopColor35):LWOpening::Skin(Identity.Skin)*1.5f);M->SetScalarParameterValue(TEXT("GloveAmount"),Identity.Gloves35?1:0);M->SetVectorParameterValue(TEXT("GloveTint"),LWCreator35::Color(Identity.ShoesColor35));C->SetMaterial(I,M);
+ FString Name=Slots[I].MaterialInterface?Slots[I].MaterialInterface->GetName():FString();bool Sleeve=Name.Contains(TEXT("Cloth"))||Name.Contains(TEXT("Cotton35"))||Name.Contains(TEXT("Cotton61"));bool Skin=Name.Contains(TEXT("Skin"))||Name.Contains(TEXT("Flesh"));if(!Sleeve&&!Skin)continue;
+ auto* Material=Slots[I].MaterialInterface.Get();auto* M=UMaterialInstanceDynamic::Create((Name.Contains(TEXT("32"))||Name.Contains(TEXT("35"))||Name.Contains(TEXT("61")))&&Material?Material:Base,C);M->SetVectorParameterValue(TEXT("Tint"),Sleeve?LWCreator35::Color(Identity.TopColor35):LWOpening::Skin(Identity.Skin)*1.5f);M->SetScalarParameterValue(TEXT("GloveAmount"),Identity.Gloves35?1:0);M->SetVectorParameterValue(TEXT("GloveTint"),LWCreator35::Color(Identity.ShoesColor35));C->SetMaterial(I,M);
  }}
 }
 void ALWCharacter::BindIdentityInput(UInputComponent* I){

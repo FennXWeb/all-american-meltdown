@@ -1,10 +1,11 @@
+#include "LWCampaign76.h"
 #include "LWHUD.h"
 #include "LWStory.h"
 #include "LWCharacter.h"
 #include "Engine/Canvas.h"
 #include "GameFramework/PlayerController.h"
 namespace {FString StoryWrap(const FString& S,int Width){FString Out;int Col=0;TArray<FString> Words;S.ParseIntoArray(Words,TEXT(" "),true);for(const auto& W:Words){if(Col+W.Len()+1>Width){Out+=TEXT("\n");Col=0;}if(Col){Out+=TEXT(" ");Col++;}Out+=W;Col+=W.Len();}return Out;}}
-bool ALWHUD::StoryScreen(ALWCharacter* P){auto* D=P->Story.Get();if(!D||P->bMenu||P->OpeningMode)return false;if(!D->Locked()){if(P->RPG.Story.Enabled&&P->RPG.Story.Stage<29&&!P->IsUIOpen()){FVector2D Mark;FVector Goal=D->Target();if(PlayerOwner->ProjectWorldLocationToScreen(Goal+FVector(0,0,100),Mark)){Mark=(Mark-Origin55)/Scale;if(Mark.X>30&&Mark.X<Canvas->ClipX/Scale-180&&Mark.Y>180&&Mark.Y<500){Text(TEXT("+")+FString::Printf(TEXT(" %dm"),FMath::RoundToInt(FVector::Dist(P->GetActorLocation(),Goal)/100)),Mark.X,Mark.Y,.85f,FLinearColor(.95,.65,.25));}}}return false;}float W=Canvas->ClipX/Scale;
+bool ALWHUD::StoryScreen(ALWCharacter* P){if(P->Campaign76&&P->Campaign76->Screen(*this))return true;auto* D=P->Story.Get();if(!D||P->bMenu||P->OpeningMode)return false;if(!D->Locked()){if(P->RPG.Story.Enabled&&P->RPG.Story.Stage<29&&!P->IsUIOpen()){FVector2D Mark;FVector Goal=D->Target();if(PlayerOwner->ProjectWorldLocationToScreen(Goal+FVector(0,0,100),Mark)){Mark=(Mark-Origin55)/Scale;if(Mark.X>30&&Mark.X<Canvas->ClipX/Scale-180&&Mark.Y>180&&Mark.Y<500){Text(TEXT("+")+FString::Printf(TEXT(" %dm"),FMath::RoundToInt(FVector::Dist(P->GetActorLocation(),Goal)/100)),Mark.X,Mark.Y,.85f,FLinearColor(.95,.65,.25));}}}return false;}float W=Canvas->ClipX/Scale;
  Rect(0,0,W,75,FLinearColor(0,0,0,.95));Rect(0,490,W,230,FLinearColor(0,0,0,.92));
  Text(D->VoiceName,60,510,1,FLinearColor(.93,.66,.32));Text(StoryWrap(D->Speech,FMath::Max(50,int((W-120)/9))),60,544,1);
  if(D->InScene)Button(TEXT("story_skip"),TEXT("SKIP SCENE"),W-270,20,230);

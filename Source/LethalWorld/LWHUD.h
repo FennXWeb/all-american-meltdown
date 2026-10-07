@@ -9,11 +9,27 @@ class LETHALWORLD_API ALWHUD : public AHUD
 {
     GENERATED_BODY()
 public:
+ void SaveScreen62(class ALWCharacter* P);void SaveClick62(class ALWCharacter* P,FName N);
+public:
     virtual void BeginPlay() override;
+    virtual void EndPlay(const EEndPlayReason::Type Reason) override;
+    void MainMenu81(class ALWCharacter* P);void MenuBackdrop81();
+    bool MenuClick81(class ALWCharacter* P,FName Id);
+    void MenuTile81(FName Id,const FString& Label,float X,float Y,float W,float H,int Icon,bool Enabled=true);
+    UPROPERTY() TObjectPtr<class ULWMainMenu81> Menu81;
+    UPROPERTY() TObjectPtr<class UTexture2D> Skyline81;
+    UPROPERTY() TObjectPtr<class UTexture2D> Foreground81;
+    UPROPERTY() TObjectPtr<class UTexture2D> Mist81;
+    bool News81=false;int Release81=0;
+    void Menu78(class ALWCharacter* P);
+    void Settings78(class ALWCharacter* P);
+    void NewSurvivor78(class ALWCharacter* P);
+    int SettingsSection78=0;
     UPROPERTY() TObjectPtr<class USoundBase> UIClick55;
     FString Tooltip55;
     FVector2D TooltipAt55;
     void Finish55();
+    void ControllerOverlay58();
     int SettingsDrag55=-1;
     void SettingsSlider55(class ALWCharacter* P,int Kind,float X,float Y,float W);
     UPROPERTY() TObjectPtr<class UFont> UIFont55;

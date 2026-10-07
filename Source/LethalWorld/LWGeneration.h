@@ -1,15 +1,18 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "LWBorder51.h"
+#include "LWGeography84.h"
+#include "LWAircraft84.h"
 #include "Math/RandomStream.h"
 #include "LWPOITypes.h"
 #include "LWStoryState.h"
+#include "LWNewYork69.h"
 
 // Global generation is pure: same seed + coordinate yields the same graph, regardless of load order.
 namespace LWGen
 {
-    inline int32 TownDensity=43,ParcelLevel=1;
-    inline float Ruggedness=1;
+    inline thread_local int32 TownDensity=43,ParcelLevel=1;
+    inline thread_local float Ruggedness=1;
     constexpr double ChunkSize = 12800.0;
     constexpr double RegionSize = 51200.0;
     inline int32 FloorDiv(double Value, double Divisor) { return FMath::FloorToInt(Value / Divisor); }
@@ -24,16 +27,19 @@ namespace LWGen
     {
         FVector2D Position; float Yaw=0; int32 Type=0; uint32 Id=0;
         FVector2D Size=FVector2D(1400,1000);
+        FString PlaceName69;
         bool Friendly=false;
+        bool Canadian=false;
         bool SettlementBuilding=false;
         int32 District=0; // 0 countryside, 1 residential, 2 commercial, 3 industrial, 4 downtown
         int32 Floors=1, AccessibleFloors=1;
     };
+    LETHALWORLD_API FVector2D CanadaCity68();
+    LETHALWORLD_API double CanadaRoadY68(double X,double Y);
+    LETHALWORLD_API void CanadaRegion68(FIntPoint R,int Seed,TArray<FRoad>& Roads,TArray<FSite>& Sites);
     inline FVector2D Hub(FIntPoint R, int32 Seed)
     {
-        if (R==FIntPoint::ZeroValue) return FVector2D(0,0);
-        FRandomStream Rand(Hash(R.X,R.Y,Seed));
-        FVector2D P(R.X*RegionSize+Rand.FRandRange(-16500,16500),R.Y*RegionSize+Rand.FRandRange(-16500,16500));for(int I=0;I<9;I++){FVector2D D=P-LWStory::Site(I);if(FMath::Abs(D.X)<7800&&FMath::Abs(D.Y)<7800){if(FMath::Abs(D.X)>FMath::Abs(D.Y))D.X=D.X>=0?7800:-7800;else D.Y=D.Y>=0?7800:-7800;P=LWStory::Site(I)+D;}}return P;
+        return LWNY69::RoadHub(R);
     }
     inline float DistanceToSegment(FVector2D P, const FRoad& R, FVector2D* Closest=nullptr)
     {
@@ -44,15 +50,16 @@ namespace LWGen
     }
     inline FVector2D Entrance(const FSite& S){return S.Position+FVector2D(0,-S.Size.Y*.5-400).GetRotated(S.Yaw);}
     inline bool RoadOverlaps(const FSite& S,const FRoad& R){
+        if(S.Type==70||S.Type==78)return false; // Open fairgrounds and lakeshore paths may contain roads.
         const FVector2D A=(R.A-S.Position).GetRotated(-S.Yaw),B=(R.B-S.Position).GetRotated(-S.Yaw),D=B-A,E=S.Size*.5+FVector2D(R.Width*.5+100);double Lo=0,Hi=1;for(int I=0;I<2;I++){double P=I?A.Y:A.X,V=I?D.Y:D.X,H=I?E.Y:E.X;if(FMath::Abs(V)<.0001){if(FMath::Abs(P)>H)return false;}else{double L=(-H-P)/V,U=(H-P)/V;if(L>U)Swap(L,U);Lo=FMath::Max(Lo,L);Hi=FMath::Min(Hi,U);if(Lo>Hi)return false;}}return true;
     }
     inline FIntPoint UniqueRegion(int I,int Seed){int X=(I%5-2)*3,Y=(I/5-2)*3;if(X==0&&Y==0)Y=8;const int Rotation=Hash(0,0,Seed,28000)%4;for(int K=0;K<Rotation;K++){int Old=X;X=-Y;Y=Old;}return {X,Y};}
     inline int UniqueIndex(FIntPoint R,int Seed){for(int I=0;I<20;I++)if(UniqueRegion(I,Seed)==R)return I;return INDEX_NONE;}
-    inline bool HasTown(FIntPoint R,int32 Seed){return R==FIntPoint::ZeroValue||(UniqueIndex(R,Seed)==INDEX_NONE&&Hash(R.X,R.Y,Seed,898)%100<uint32(TownDensity));}
+    inline bool HasTown(FIntPoint R,int32 Seed){return LWNY69::Settlement(R);}
     inline bool IsCity(FIntPoint R,int32 Seed){return R!=FIntPoint::ZeroValue && HasTown(R,Seed) && Hash(R.X,R.Y,Seed,20001)%100<36;}
     inline int DistrictPOI(int District,FRandomStream& Rand){
-        static const int Housing[]={7,7,8,9,9,6};static const int Shops[]={4,5,2,14,18,17};static const int Industry[]={3,13,13,0,16};
-        return District==1?Housing[Rand.RandRange(0,5)]:District==3?Industry[Rand.RandRange(0,4)]:Shops[Rand.RandRange(0,5)];
+        static const int Housing[]={7,7,8,9,9,6};static const int Shops[]={4,5,2,14,18,17,65,67};static const int Industry[]={3,13,13,0,16,66};
+        return District==1?Housing[Rand.RandRange(0,5)]:District==3?Industry[Rand.RandRange(0,5)]:Shops[Rand.RandRange(0,7)];
     }
     inline bool AirportHere(FIntPoint R,int Seed){return UniqueIndex(R,Seed)==INDEX_NONE&&!HasTown(R,Seed)&&Hash(R.X,R.Y,Seed,28032)%1000<3;}
     // Reserve major destinations before laying out roads and ordinary parcels.
@@ -60,6 +67,8 @@ namespace LWGen
         if(R==FIntPoint::ZeroValue||UniqueIndex(R,Seed)!=INDEX_NONE||R.X*RegionSize>LWBorder51::Strip-30000)return INDEX_NONE;
         const FIntPoint Cell(FloorDiv(R.X,4),FloorDiv(R.Y,4));const int Slot=(R.Y-Cell.Y*4)*4+R.X-Cell.X*4;
         const uint32 H=Hash(Cell.X,Cell.Y,Seed,53001);const int Start=H%16;
+        if(Slot==(Start+2)%16&&H%100<55)return 64;
+        if(Slot==(Start+7)%16)return 65;if(Slot==(Start+9)%16)return 67;
         if(Slot==Start)return 58;if(Slot==(Start+5)%16)return 59;
         if(Slot==(Start+10)%16&&Hash(Cell.X,Cell.Y,Seed,53002)%100<45)return 21;
         if(Slot==(Start+13)%16)return (H>>8)%2?63:22+(H>>12)%10;
@@ -159,7 +168,7 @@ namespace LWGen
             Roads.Add({H,Start,580,false});Roads.Add({Start,End,520,false});
             for(int I=0;I<4;I++)for(int Side:{-1,1})Parcel(Start+FVector2D(0,2200+I*3100),FVector2D(0,1),I%3==0?9:7+I%2,Hash(R.X,R.Y,Seed,22000+I*2+(Side+1)/2),Side,520);
         }
-        auto Reserved=SpecialNear(R,Seed);for(int StoryIndex=0;StoryIndex<9;StoryIndex++){FSite Plot;Plot.Position=LWStory::Site(StoryIndex);Plot.Size=FVector2D(9600);if(FVector2D::Distance(Plot.Position,FVector2D(R.X*RegionSize,R.Y*RegionSize))<RegionSize*2)Reserved.Add(Plot);}TArray<FRoad> OwnRoads;for(int I=RoadStart;I<Roads.Num();I++)OwnRoads.Add(Roads[I]);BypassSpecials(OwnRoads,Reserved);Roads.SetNum(RoadStart);Roads.Append(OwnRoads);
+        auto Reserved=SpecialNear(R,Seed);TArray<FRoad> OwnRoads;for(int I=RoadStart;I<Roads.Num();I++)OwnRoads.Add(Roads[I]);BypassSpecials(OwnRoads,Reserved);Roads.SetNum(RoadStart);Roads.Append(OwnRoads);
         // Exclusive landmark reservations take priority over repeatable parcels.
         for(int I=Sites.Num()-1;I>=SiteStart;I--){const auto S=Sites[I];if(Reserved.ContainsByPredicate([&](const auto& U){FVector2D D=S.Position-U.Position;return FMath::Abs(D.X)<S.Size.Size()*.5+U.Size.X*.5+500&&FMath::Abs(D.Y)<S.Size.Size()*.5+U.Size.Y*.5+500;}))Sites.RemoveAt(I);}
         FSite Special;if(SpecialSite(R,Seed,Special)){const FVector2D Door=Entrance(Special),Approach=Door+FVector2D(0,-3000);FVector2D Access=Approach;double Best=DBL_MAX;for(const auto& Road:OwnRoads){FVector2D Q;double D=DistanceToSegment(Approach,Road,&Q);if(D<Best){Best=D;Access=Q;}}TArray<FRoad> Drive{{Access,Approach,400,false}};BypassSpecials(Drive,Reserved);Roads.Append(Drive);Roads.Add({Approach,Door,400,false});Sites.Add(Special);}
@@ -170,111 +179,27 @@ namespace LWGen
         for(auto Axis:{AX,AY,BX,BY}){double RA=FMath::Abs(FVector2D::DotProduct(AX,Axis))*A.Size.X*.5+FMath::Abs(FVector2D::DotProduct(AY,Axis))*A.Size.Y*.5;double RB=FMath::Abs(FVector2D::DotProduct(BX,Axis))*B.Size.X*.5+FMath::Abs(FVector2D::DotProduct(BY,Axis))*B.Size.Y*.5;if(FMath::Abs(FVector2D::DotProduct(D,Axis))>=RA+RB+150)return false;}return true;
     }
     inline void Region(FIntPoint R,int32 Seed,TArray<FRoad>& Roads,TArray<FSite>& Sites){
-        struct FCachedRegion{TArray<FRoad> Roads;TArray<FSite> Sites;};static TMap<FIntVector,FCachedRegion> Cache;FIntVector Key(R.X,R.Y,int32(Hash(TownDensity,ParcelLevel,Seed,uint32(Ruggedness*100))));
-        if(const auto* Hit=Cache.Find(Key)){Roads.Append(Hit->Roads);Sites.Append(Hit->Sites);return;}
-        TArray<FSite> Filtered;TArray<FRoad> Local,Check;TArray<FSite> Candidates,Neighbors;RegionRaw(R,Seed,Local,Candidates);Check=Local;
-        for(int Y=-1;Y<=1;Y++)for(int X=-1;X<=1;X++)if(X||Y)RegionRaw(R+FIntPoint(X,Y),Seed,Check,Neighbors);
-        for(const auto& S:Candidates){
-            FSite ReservedMajor;if((SpecialSite(R,Seed,ReservedMajor)&&S.Id==ReservedMajor.Id)||S.Type==32||LWLandmarks::Unique(S.Type)){Filtered.Add(S);continue;}
-            if(Check.ContainsByPredicate([&](const auto& Road){return RoadOverlaps(S,Road);}))continue;
-            if(Candidates.ContainsByPredicate([&](const auto& O){return O.Id<S.Id&&ParcelsOverlap(S,O);})||Neighbors.ContainsByPredicate([&](const auto& O){return O.Id<S.Id&&ParcelsOverlap(S,O);}))continue;
-            Filtered.Add(S);
-        }
-        // Reserve a resort-sized roadside plot after ordinary parcels have been filtered.
-        // Keep new reservations inside their owning region so neighboring passes cannot conflict.
-        if(!Filtered.ContainsByPredicate([](const auto& S){return S.Type==21;}) &&
-           (R!=FIntPoint::ZeroValue && TownDensity>0 && HasTown(R,Seed) && Hash(R.X,R.Y,Seed,22099)%100<4)){
-            const FVector2D Center(R.X*RegionSize,R.Y*RegionSize);
-            bool Placed=false;
-            for(const FRoad& Road:Check){
-                if(Placed)break;if((Road.B-Road.A).Size()<1800||Road.Width<580)continue;
-                const FVector2D Dir=(Road.B-Road.A).GetSafeNormal(),Side(-Dir.Y,Dir.X);
-                for(double T:{.5,.25,.75})for(int Sign:{-1,1}){
-                    if(Placed)break;FSite S;S.Type=21;S.Friendly=true;S.Size=LWPlaces::Size(21);S.Id=Hash(R.X,R.Y,Seed,22101);
-                    S.Yaw=FMath::RadiansToDegrees(FMath::Atan2(Dir.Y*Sign,Dir.X*Sign));
-                    const FVector2D Access=FMath::Lerp(Road.A,Road.B,T);
-                    S.Position=Access+Side*Sign*(Road.Width*.5+S.Size.Y*.5+1300);
-                    const FVector2D Ext=FVector2D(FMath::Abs(Dir.X)*S.Size.X+FMath::Abs(Dir.Y)*S.Size.Y,FMath::Abs(Dir.Y)*S.Size.X+FMath::Abs(Dir.X)*S.Size.Y)*.5;
-                    const FVector2D D=S.Position-Center;
-                    if(FMath::Abs(D.X)+Ext.X>RegionSize*.5-250||FMath::Abs(D.Y)+Ext.Y>RegionSize*.5-250)continue;
-                    if(Check.ContainsByPredicate([&](const auto& A){return RoadOverlaps(S,A);})||Candidates.ContainsByPredicate([&](const auto& A){return ParcelsOverlap(S,A);})||Neighbors.ContainsByPredicate([&](const auto& A){return ParcelsOverlap(S,A);}))continue;
-                    if(FMath::Abs(Access.X-Center.X)>RegionSize*.5-250||FMath::Abs(Access.Y-Center.Y)>RegionSize*.5-250)continue;
-                    FRoad Drive{Access,Entrance(S),500,false};
-                    if(Candidates.ContainsByPredicate([&](const auto& A){return RoadOverlaps(A,Drive);})||Neighbors.ContainsByPredicate([&](const auto& A){return RoadOverlaps(A,Drive);}))continue;
-                    Filtered.Add(S);Local.Add(Drive);Placed=true;
-                }
-            }
-        }
-        // Dedicated roadside dungeon reservations stay within the owning region and never
-        // overwrite a surviving parcel. Their access road is checked against all buildings.
-        if(R==FIntPoint::ZeroValue||Hash(R.X,R.Y,Seed,27000)%100<65){
-            const FVector2D Center(R.X*RegionSize,R.Y*RegionSize);bool Placed=false;
-            const int Type=R==FIntPoint::ZeroValue?22:22+Hash(R.X,R.Y,Seed,27001)%10;
-            for(const auto& Road:Check){if(Placed)break;if((Road.B-Road.A).Size()<1500||Road.Width<580)continue;
-             const FVector2D Dir=(Road.B-Road.A).GetSafeNormal(),Side(-Dir.Y,Dir.X);
-             for(double T:{.5,.2,.8})for(int Sign:{-1,1}){if(Placed)break;FSite S;S.Type=Type;S.Size=LWPlaces::Size(Type);S.Id=Hash(R.X,R.Y,Seed,27002);S.Floors=LWDungeons::Profile(Type).Floors;S.AccessibleFloors=S.Floors;
-              const FVector2D Access=FMath::Lerp(Road.A,Road.B,T);S.Yaw=FMath::RadiansToDegrees(FMath::Atan2(Dir.Y*Sign,Dir.X*Sign));S.Position=Access+Side*Sign*(Road.Width*.5+S.Size.Y*.5+1200);
-              const FVector2D Ext(FMath::Abs(Dir.X)*S.Size.X+FMath::Abs(Dir.Y)*S.Size.Y,FMath::Abs(Dir.Y)*S.Size.X+FMath::Abs(Dir.X)*S.Size.Y);const FVector2D D=S.Position-Center;
-              if(FMath::Abs(D.X)+Ext.X*.5>RegionSize*.5-1000||FMath::Abs(D.Y)+Ext.Y*.5>RegionSize*.5-1000||FMath::Abs(Access.X-Center.X)>RegionSize*.5-1000||FMath::Abs(Access.Y-Center.Y)>RegionSize*.5-1000)continue;
-              if(Check.ContainsByPredicate([&](const auto& A){return RoadOverlaps(S,A);})||Local.ContainsByPredicate([&](const auto& A){return RoadOverlaps(S,A);})||Candidates.ContainsByPredicate([&](const auto& A){return ParcelsOverlap(S,A);})||Neighbors.ContainsByPredicate([&](const auto& A){return ParcelsOverlap(S,A);})||Filtered.ContainsByPredicate([&](const auto& A){return ParcelsOverlap(S,A);}))continue;
-              FRoad Drive{Access,Entrance(S),500,false};if(Candidates.ContainsByPredicate([&](const auto& A){return RoadOverlaps(A,Drive);})||Neighbors.ContainsByPredicate([&](const auto& A){return RoadOverlaps(A,Drive);})||Filtered.ContainsByPredicate([&](const auto& A){return RoadOverlaps(A,Drive);}))continue;
-              Filtered.Add(S);Local.Add(Drive);Placed=true;
-             }
-            }
-        }
-        // Expanded POIs use an independent hash stream and stay within their region; never
-        // overwrite a surviving parcel. Their access road is checked against all buildings.
-        if(!Filtered.ContainsByPredicate([](const auto& S){return LWPlaces::Expanded(S.Type);})&&R!=FIntPoint::ZeroValue&&UniqueIndex(R,Seed)==INDEX_NONE&&Hash(R.X,R.Y,Seed,30000)%100<55){
-            const FVector2D Center(R.X*RegionSize,R.Y*RegionSize);bool Placed=false;
-            const int Type=LWPlaces::ShoppingMall+Hash(R.X,R.Y,Seed,30001)%6;
-            for(const auto& Road:Check){if(Placed)break;if((Road.B-Road.A).Size()<1500||Road.Width<580)continue;
-             const FVector2D Dir=(Road.B-Road.A).GetSafeNormal(),Side(-Dir.Y,Dir.X);
-             for(double T:{.5,.2,.8})for(int Sign:{-1,1}){if(Placed)break;FSite S;S.Type=Type;S.Size=LWPlaces::Size(Type);S.Id=Hash(R.X,R.Y,Seed,30002);S.Floors=1;S.AccessibleFloors=S.Floors;
-              const FVector2D Access=FMath::Lerp(Road.A,Road.B,T);S.Yaw=FMath::RadiansToDegrees(FMath::Atan2(Dir.Y*Sign,Dir.X*Sign));S.Position=Access+Side*Sign*(Road.Width*.5+S.Size.Y*.5+1200);
-              const FVector2D Ext(FMath::Abs(Dir.X)*S.Size.X+FMath::Abs(Dir.Y)*S.Size.Y,FMath::Abs(Dir.Y)*S.Size.X+FMath::Abs(Dir.X)*S.Size.Y);const FVector2D D=S.Position-Center;
-              if(FMath::Abs(D.X)+Ext.X*.5>RegionSize*.5-1000||FMath::Abs(D.Y)+Ext.Y*.5>RegionSize*.5-1000||FMath::Abs(Access.X-Center.X)>RegionSize*.5-1000||FMath::Abs(Access.Y-Center.Y)>RegionSize*.5-1000)continue;
-              if(Check.ContainsByPredicate([&](const auto& A){return RoadOverlaps(S,A);})||Local.ContainsByPredicate([&](const auto& A){return RoadOverlaps(S,A);})||Candidates.ContainsByPredicate([&](const auto& A){return ParcelsOverlap(S,A);})||Neighbors.ContainsByPredicate([&](const auto& A){return ParcelsOverlap(S,A);})||Filtered.ContainsByPredicate([&](const auto& A){return ParcelsOverlap(S,A);}))continue;
-              FRoad Drive{Access,Entrance(S),500,false};if(Candidates.ContainsByPredicate([&](const auto& A){return RoadOverlaps(A,Drive);})||Neighbors.ContainsByPredicate([&](const auto& A){return RoadOverlaps(A,Drive);})||Filtered.ContainsByPredicate([&](const auto& A){return RoadOverlaps(A,Drive);}))continue;
-              Filtered.Add(S);Local.Add(Drive);Placed=true;
-             }
-            }
-        }
-        // Convert only a plot which survived the complete neighboring-road/parcel checks.
-        // Preserve the approved footprint and entrance so the existing approach remains connected.
-        if(R==FIntPoint::ZeroValue||Hash(R.X,R.Y,Seed,7011)%100<65){
-            int Pick=INDEX_NONE;
-            for(int Preferred:{4,1,2}){Pick=Filtered.IndexOfByPredicate([&](const auto& S){return S.SettlementBuilding&&S.Type==Preferred;});if(Pick!=INDEX_NONE)break;}
-            if(Pick!=INDEX_NONE){Filtered[Pick].Type=LWPlaces::Tavern;}
-        }
-        Filtered.RemoveAll([](const FSite& S){return LWStory::Reserved(S.Position,S.Size.Size()*.5f+500);});
-        TArray<FSite> StoryReservations;for(int I=0;I<9;I++){FSite P;P.Position=LWStory::Site(I);P.Size=FVector2D(9600);StoryReservations.Add(P);}BypassSpecials(Local,StoryReservations);
-        for(int I=0;I<9;I++){const FVector2D P=LWStory::Site(I);if(FIntPoint(FloorDiv(P.X+RegionSize*.5,RegionSize),FloorDiv(P.Y+RegionSize*.5,RegionSize))!=R)continue;FVector2D Entry=P+FVector2D(0,-4800),Nearest=Entry;double Best=DBL_MAX;for(const auto& Road:Local){if(Road.Width<=400)continue;FVector2D Q;double D=DistanceToSegment(Entry,Road,&Q);if(D<Best){Best=D;Nearest=Q;}}if(Best<15000&&Best>1)Local.Add({Nearest,Entry,400,false});}
-        // Detouring an arterial can move its old driveway junction. Reattach orphaned
-        // final driveways to a real parent segment, dropping intermediate detour stubs.
-        // Preserve connected multi-segment access routes, including detours around a major POI.
-        TSet<int> Attached;bool Changed=true;while(Changed){Changed=false;for(int I=0;I<Local.Num();I++){if(Local[I].Width!=400||Attached.Contains(I))continue;for(int J=0;J<Local.Num();J++){if(I==J||(Local[J].Width<=400&&!Attached.Contains(J)))continue;if(DistanceToSegment(Local[I].A,Local[J])<.1f||DistanceToSegment(Local[I].B,Local[J])<.1f){Attached.Add(I);Changed=true;break;}}}}
-        TArray<FRoad> Repaired;for(int RoadIndex=0;RoadIndex<Local.Num();RoadIndex++){auto D=Local[RoadIndex];if(D.Width!=400||Attached.Contains(RoadIndex)){Repaired.Add(D);continue;}double Gap=DBL_MAX;for(const auto& Parent:Local)if(Parent.Width>400)Gap=FMath::Min(Gap,DistanceToSegment(D.A,Parent));if(Gap<.1){Repaired.Add(D);continue;}
-         bool Destination=Filtered.ContainsByPredicate([&](const FSite& S){return Entrance(S).Equals(D.B,1);})||D.B.Equals(FVector2D(-1700,1700),1);for(int I=0;I<9;I++)Destination|=D.B.Equals(LWStory::Site(I)+FVector2D(0,-4800),1);if(!Destination)continue;
-         double Best=DBL_MAX;FVector2D Join;for(const auto& Parent:Local){if(Parent.Width<=400)continue;FVector2D Q;double Dist=DistanceToSegment(D.B,Parent,&Q);if(Dist>=Best||Dist>18000)continue;bool Blocked=false;for(int I=0;I<9;I++)Blocked|=CutsBox(Q,D.B,LWStory::Site(I),FVector2D(4500));FRoad Candidate{Q,D.B,400,false};Blocked|=Filtered.ContainsByPredicate([&](const FSite& S){return RoadOverlaps(S,Candidate);});if(!Blocked){Best=Dist;Join=Q;}}
-         if(Best<DBL_MAX){D.A=Join;if((D.A-D.B).Size()>1)Repaired.Add(D);}
-        }Local=MoveTemp(Repaired);
-        Filtered.RemoveAll([&](const FSite& S){return Local.ContainsByPredicate([&](const FRoad& Road){return RoadOverlaps(S,Road);});});
-        Filtered.RemoveAll([](const FSite& S){return S.Position.X+S.Size.Size()*.5>LWBorder51::Strip-1000;});
-        for(auto& Road:Local){if(Road.A.X>LWBorder51::Warning&&Road.B.X<LWBorder51::Warning)Road.A=FMath::Lerp(Road.B,Road.A,(LWBorder51::Warning-Road.B.X)/(Road.A.X-Road.B.X));else if(Road.B.X>LWBorder51::Warning&&Road.A.X<LWBorder51::Warning)Road.B=FMath::Lerp(Road.A,Road.B,(LWBorder51::Warning-Road.A.X)/(Road.B.X-Road.A.X));}
-        Local.RemoveAll([](const FRoad& R){return R.A.X>=LWBorder51::Warning&&R.B.X>=LWBorder51::Warning;});
-        if(Cache.Num()>=512){auto Oldest=Cache.CreateIterator();Oldest.RemoveCurrent();}FCachedRegion Entry;Entry.Roads=Local;Entry.Sites=Filtered;Cache.Add(Key,MoveTemp(Entry));Roads.Append(Local);Sites.Append(Filtered);
+        LWNY69::Region(R,Roads,Sites);
+        CanadaRegion68(R,Seed,Roads,Sites);
     }
     struct FNeighborhood38 {
         FIntPoint Region; int32 Seed=0,Towns=0,Parcels=0;float Ruggedness=0;uint64 Used=0;
         TArray<FRoad> Roads;TArray<FSite> Sites;
     };
-    // Game-thread generation cache. Placement is invariant throughout a centered region.
+    inline thread_local TArray<FNeighborhood38> NeighborhoodCache68;
+    inline thread_local uint64 NeighborhoodClock68=0;
+    inline void PublishNeighborhood68(FNeighborhood38 Entry){
+        auto& Cache=NeighborhoodCache68;for(const auto& E:Cache)if(E.Region==Entry.Region&&E.Seed==Entry.Seed&&E.Towns==Entry.Towns&&E.Parcels==Entry.Parcels&&E.Ruggedness==Entry.Ruggedness)return;
+        Entry.Used=++NeighborhoodClock68;if(Cache.Num()>=16){int Old=0;for(int I=1;I<Cache.Num();I++)if(Cache[I].Used<Cache[Old].Used)Old=I;Cache.RemoveAt(Old);}Cache.Add(MoveTemp(Entry));
+    }
+    // Each planning worker owns a cache; completed neighborhoods are published to gameplay.
     inline const FNeighborhood38& Neighborhood38(FVector2D Position,int32 Seed) {
         const FIntPoint R(FloorDiv(Position.X+RegionSize*.5,RegionSize),FloorDiv(Position.Y+RegionSize*.5,RegionSize));
-        static TArray<FNeighborhood38> Cache;static uint64 Clock=0;++Clock;
+        auto& Cache=NeighborhoodCache68;auto& Clock=NeighborhoodClock68;++Clock;
         if(auto* Hit=Cache.FindByPredicate([&](const auto& E){return E.Region==R&&E.Seed==Seed&&E.Towns==TownDensity&&E.Parcels==ParcelLevel&&E.Ruggedness==Ruggedness;})){Hit->Used=Clock;return *Hit;}
         FNeighborhood38 Entry;Entry.Region=R;Entry.Seed=Seed;Entry.Towns=TownDensity;Entry.Parcels=ParcelLevel;Entry.Ruggedness=Ruggedness;Entry.Used=Clock;
         for(int Y=-1;Y<=1;++Y)for(int X=-1;X<=1;++X)Region(R+FIntPoint(X,Y),Seed,Entry.Roads,Entry.Sites);
+        TSet<uint32> SeenSites73;Entry.Sites.RemoveAll([&](const FSite& S){if(SeenSites73.Contains(S.Id))return true;SeenSites73.Add(S.Id);return false;});
         Entry.Sites.RemoveAll([&](const FSite& S){return Entry.Roads.ContainsByPredicate([&](const FRoad& Road){return RoadOverlaps(S,Road);});});
         if(Cache.Num()>=8){int Oldest=0;for(int I=1;I<Cache.Num();++I)if(Cache[I].Used<Cache[Oldest].Used)Oldest=I;Cache.RemoveAt(Oldest);}
         Cache.Add(MoveTemp(Entry));return Cache.Last();
@@ -286,12 +211,13 @@ namespace LWGen
     }
     inline float Height(FVector2D P, const TArray<FRoad>& Roads,const TArray<FSite>& Sites)
     {
-        if(P.X>=LWBorder51::Strip){float Blend=FMath::Clamp(float((P.X-LWBorder51::North-2200)/6500),0.f,1.f);Blend=Blend*Blend*(3-2*Blend);return Blend*(300+FMath::PerlinNoise2D(P*.00010)*350+FMath::PerlinNoise2D(P*.000025)*850);}
+        const float Water=LWNY69::WaterDepth(P);
+        if(Water>0&&!LWStory::Reserved(P,6000)&&!Sites.ContainsByPredicate([&](const auto& S){return (P-S.Position).Size()<S.Size.Size()*.5+1200;}))return -Water;
+        if(LWGeography84::Canada(P)){float Blend=1.f;Blend=Blend*Blend*(3-2*Blend);for(const auto& R:Roads)Blend=FMath::Min(Blend,FMath::Clamp((DistanceToSegment(P,R)-R.Width*.5f-800)/2200.f,0.f,1.f));for(const auto& S:Sites){auto D=P-S.Position;Blend=FMath::Min(Blend,FMath::Clamp(float(FMath::Max(FMath::Abs(D.X)-S.Size.X*.5-1000,FMath::Abs(D.Y)-S.Size.Y*.5-1000)/2200),0.f,1.f));}return LWAviation84::Surface(P,Blend*(300+FMath::PerlinNoise2D(P*.00010)*350+FMath::PerlinNoise2D(P*.000025)*850));}
         // The permanent bunker parcel uses global coordinates so every chunk agrees.
         const FVector2D ShelterOffset=P-FVector2D(-1700,1700);
         const double ShelterDistance=FMath::Max(FMath::Abs(ShelterOffset.X)-650.,FMath::Abs(ShelterOffset.Y)-650.);
         float Blend=FMath::Clamp(float(ShelterDistance/900.),0.f,1.f);
-        for(int I=0;I<9;I++){auto D=P-LWStory::Site(I);Blend=FMath::Min(Blend,FMath::Clamp(float((FMath::Max(FMath::Abs(D.X),FMath::Abs(D.Y))-5300)/900),0.f,1.f));}
         for(const FRoad& R:Roads) Blend=FMath::Min(Blend,FMath::Clamp((DistanceToSegment(P,R)-R.Width*.5f-110)/900.f,0.f,1.f));
         for(const FSite& S:Sites)
         {
@@ -306,6 +232,6 @@ namespace LWGen
             Blend=FMath::Min(Blend,FMath::Clamp(D/900,0.f,1.f));
         }
         Blend=Blend*Blend*(3-2*Blend);
-        return FMath::Min(1.f,float(FMath::Max(0.,LWBorder51::Strip-P.X)/2000))*Blend*Ruggedness*(180+FMath::PerlinNoise2D(P*.000075)*420+FMath::PerlinNoise2D(P*.00039)*120);
+        return LWAviation84::Surface(P,Blend*Ruggedness*(180+FMath::PerlinNoise2D(P*.000075)*420+FMath::PerlinNoise2D(P*.00039)*120));
     }
 }

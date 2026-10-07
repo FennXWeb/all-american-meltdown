@@ -1,3 +1,5 @@
+#include "LWGeography84.h"
+#include "LWCanada68.h"
 #include "LWSiteIdentity.h"
 #include "LWCharacter.h"
 #include "LWWorld.h"
@@ -15,9 +17,9 @@ void ALWCharacter::TickDiscovery(float Dt){
  DiscoveryAlert=FMath::Max(0.f,DiscoveryAlert-Dt);DiscoveryClock-=Dt;if(DiscoveryClock>0||bSafehouse)return;DiscoveryClock=.75f;
  for(TActorIterator<ALWWorldObject> O(GetWorld());O;++O)if(O->Kind==ELWObjectKind::Trader&&!RPG.Discoveries.Contains(O->RecordId)&&FVector::DistSquared(GetActorLocation(),O->GetActorLocation())<FMath::Square(900.f)){FHitResult H;FCollisionQueryParams Q(NAME_None,false,this);if(!GetWorld()->LineTraceSingleByChannel(H,GetActorLocation()+FVector(0,0,50),O->GetActorLocation()+FVector(0,0,80),ECC_Visibility,Q)||H.GetActor()==*O){RPG.Discoveries.Add(O->RecordId);PersistWorldChange();}}
  const FIntPoint Region(LWGen::FloorDiv(GetActorLocation().X+LWGen::RegionSize*.5,LWGen::RegionSize),LWGen::FloorDiv(GetActorLocation().Y+LWGen::RegionSize*.5,LWGen::RegionSize));
- if(LWGen::HasTown(Region,World->Seed)){FVector2D Hub=LWGen::Hub(Region,World->Seed)+FVector2D(0,-5000);if(FVector2D::Distance(FVector2D(GetActorLocation()),Hub)<2200)DiscoverPlace(LWGen::Hash(Region.X,Region.Y,World->Seed,26001),FVector(Hub+FVector2D(0,1600),0),EnsureSettlement(Region).Name);}
+ if(!LWGeography84::Canada(FVector2D(GetActorLocation()))&&LWGen::HasTown(Region,World->Seed)){FVector2D Hub=LWGen::Hub(Region,World->Seed)+FVector2D(0,-5000);if(FVector2D::Distance(FVector2D(GetActorLocation()),Hub)<2200)DiscoverPlace(LWGen::Hash(Region.X,Region.Y,World->Seed,26001),FVector(Hub+FVector2D(0,1600),0),EnsureSettlement(Region).Name);}
  TArray<LWGen::FRoad> Roads;TArray<LWGen::FSite> Sites;LWGen::Gather(FVector2D(GetActorLocation()),World->Seed,Roads,Sites);
- for(const auto& S:Sites){if(S.SettlementBuilding)continue;if(RPG.KnownPlaces.Contains(int64(S.Id))){RPG.PlaceNames.Add(int64(S.Id),LWSites::Name(S));continue;}const FVector2D Q=(FVector2D(GetActorLocation())-S.Position).GetRotated(-S.Yaw);
+ for(const auto& S:Sites){if(S.SettlementBuilding||S.Type==79)continue;if(RPG.KnownPlaces.Contains(int64(S.Id))){RPG.PlaceNames.Add(int64(S.Id),LWSites::Name(S));continue;}const FVector2D Q=(FVector2D(GetActorLocation())-S.Position).GetRotated(-S.Yaw);
  if(FMath::Abs(Q.X)<S.Size.X*.5+250&&FMath::Abs(Q.Y)<S.Size.Y*.5+250&&FMath::Abs(GetActorLocation().Z)<1500){DiscoverPlace(S.Id,FVector(LWGen::Entrance(S),0),LWSites::Name(S));break;}}
 }
 bool ALWCharacter::FastTravel(){
@@ -28,6 +30,7 @@ bool ALWCharacter::FastTravel(){
  const FVector2D Bunker(ALWWorld::BunkerDoorPosition());if(FVector2D::Distance(Waypoint,Bunker)<600){Goal=ALWWorld::BunkerDoorPosition()+FVector(0,350,0);Found=true;Best=FVector2D::Distance(Waypoint,Bunker);}
  for(const auto& E:RPG.KnownPlaces){double D=FVector2D::Distance(Waypoint,FVector2D(E.Value));if(D<Best){Best=D;Goal=E.Value;Found=true;}}
  if(!Found){Notify(TEXT("FAST TRAVEL REQUIRES A DISCOVERED LOCATION"));return false;}
+ if(LWGeography84::Canada(FVector2D(Goal))&&!LWCanada68::Authorized(this)){Notify(TEXT("CLEAR CANADIAN CUSTOMS BEFORE TRAVELLING NORTH"));return false;}
  auto Threat=[&](FVector At){for(TActorIterator<ALWZombie> Z(GetWorld());Z;++Z)if(!Z->bDead&&!Cast<ALWResident>(*Z)&&FVector::DistSquared(Z->GetActorLocation(),At)<FMath::Square(Z->Alert>0?6500.f:1800.f))return true;for(TActorIterator<ALWResident> N(GetWorld());N;++N)if(N->IsTownHostile()&&FVector::DistSquared(N->GetActorLocation(),At)<FMath::Square(1800.f))return true;return false;};
  if(!bSafehouse&&Threat(GetActorLocation())){Notify(TEXT("ENEMIES NEARBY"));return false;}
  TArray<TWeakObjectPtr<ALWResident>> Followers;for(TActorIterator<ALWResident> N(GetWorld());N;++N)if(RPG.Crew.ContainsByPredicate([&](const auto& C){return C.Following&&C.Id==N->ResidentId;}))Followers.Add(*N);

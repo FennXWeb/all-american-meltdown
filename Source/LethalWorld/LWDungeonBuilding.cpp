@@ -1,3 +1,4 @@
+#include "LWInteriors65.h"
 #include "LWDungeon.h"
 #include "LWWorld.h"
 #include "Components/StaticMeshComponent.h"
@@ -6,6 +7,7 @@
 #include "Engine/StaticMesh.h"
 #include "Engine/World.h"
 void ALWChunk::BuildingDungeon(ALWWorld* W,const LWGen::FSite& S){
+ LWInteriors65::FScope Interior65(this,W,S);
  using namespace LWDungeons;const auto& P=Profile(S.Type);const int Theme=S.Type==53?7:S.Type==54?0:S.Type==55?8:S.Type-First;const float X=P.Columns*Cell*.5f,Y=P.Rows*Cell*.5f,Front=-Y+Apron*.5f;const FRotator R(0,S.Yaw,0);const FVector Base=FVector(S.Position,0)-GetActorLocation();int Serial=0;
  auto At=[&](FVector V){return Base+R.RotateVector(V);};
  auto B=[&](FName M,FVector V,FVector Size,bool Solid=true){Box(W,M,At(V),Size,R,Solid);};

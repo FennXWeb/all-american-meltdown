@@ -18,7 +18,7 @@ struct FLWCompanionRoute {
  double Started=0,DebugTime=0;float Retry=0,Stalled=0,Blocked=0,ProgressClock=0;bool Searching=false,Complete=false;
 };
 namespace {
- constexpr float Cell=70;
+ constexpr float CompanionCell57=70;
  FCollisionQueryParams NavQuery(ALWResident* N,bool Doors){
   FCollisionQueryParams Q(NAME_None,false,N);
   for(TActorIterator<APawn> It(N->GetWorld());It;++It)Q.AddIgnoredActor(*It);
@@ -45,7 +45,7 @@ namespace {
   }
   End=Previous;return true;
  }
- FIntVector Key(FVector At,FVector Origin){return FIntVector(FMath::RoundToInt((At.X-Origin.X)/Cell),FMath::RoundToInt((At.Y-Origin.Y)/Cell),FMath::RoundToInt((At.Z-Origin.Z)/20));}
+ FIntVector Key(FVector At,FVector Origin){return FIntVector(FMath::RoundToInt((At.X-Origin.X)/CompanionCell57),FMath::RoundToInt((At.Y-Origin.Y)/CompanionCell57),FMath::RoundToInt((At.Z-Origin.Z)/20));}
  float Heuristic(FVector A,FVector B){return FVector::Dist(A,B);}
  void Finish(FLWCompanionRoute& R,int Node,bool Complete){R.Waypoints.Empty();for(int I=Node;I>0;I=R.Nodes[I].Parent)R.Waypoints.Insert(R.Nodes[I].At,0);R.Step=0;R.Searching=false;R.Complete=Complete;R.Retry=Complete?1.5f:2.5f;}
 }
@@ -100,7 +100,7 @@ bool ALWResident::NavigateCompanion(FVector Goal,float Speed,float Dt){
    int Id=R.Open[BestIndex];R.Open.RemoveAtSwap(BestIndex);if(R.Nodes[Id].Closed)continue;R.Nodes[Id].Closed=true;const auto Node=R.Nodes[Id];
    if(Heuristic(Node.At,R.Goal)<Heuristic(R.Nodes[R.Best].At,R.Goal))R.Best=Id;
    FVector FinalPoint;if(FVector::Dist2D(Node.At,R.Goal)<95&&FMath::Abs(Node.At.Z-R.Goal.Z)<35&&WalkEdge(this,Node.At,R.Goal,FinalPoint,Q)){Finish(R,Id,true);R.Waypoints.Add(FinalPoint);break;}
-   for(int X=-1;X<=1;X++)for(int Y=-1;Y<=1;Y++)if(X||Y){FVector Want=Node.At+FVector(X*Cell,Y*Cell,0),Next;if(FVector::Dist2D(Want,R.Origin)>6500||!WalkEdge(this,Node.At,Want,Next,Q))continue;
+   for(int X=-1;X<=1;X++)for(int Y=-1;Y<=1;Y++)if(X||Y){FVector Want=Node.At+FVector(X*CompanionCell57,Y*CompanionCell57,0),Next;if(FVector::Dist2D(Want,R.Origin)>6500||!WalkEdge(this,Node.At,Want,Next,Q))continue;
     FIntVector K=Key(Next,R.Origin);float G=Node.G+FVector::Dist(Node.At,Next);int* Old=R.Known.Find(K);if(Old){auto& V=R.Nodes[*Old];if(V.Closed||G>=V.G)continue;V.G=G;V.F=G+Heuristic(Next,R.Goal);V.Parent=Id;R.Open.Add(*Old);}else{int Added=R.Nodes.Add({Next,G,G+Heuristic(Next,R.Goal),Id});R.Known.Add(K,Added);R.Open.Add(Added);}
    }
   }

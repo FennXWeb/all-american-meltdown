@@ -1,3 +1,4 @@
+#include "LWVehicleExplosion68.h"
 #include "LWCharacter.h"
 #include "Misc/Crc.h"
 #include "LWWorldObject.h"
@@ -50,10 +51,11 @@ float ALWWorldObject::TakeDamage(float D,const FDamageEvent& E,AController* Dama
     if(!Pump){Body->SetVisibility(false);Body->SetCollisionEnabled(ECollisionEnabled::NoCollision);}
     else {
         for(int I=0;I<Body->GetNumMaterials();I++)Body->SetMaterial(I,World->Material(TEXT("Rubber")));
+        ALWVehicleExplosion68::Burst(World,GetActorLocation()+FVector(0,0,70),1.6f,40);
         // Mark spent before radial damage, so neighbouring pumps can safely chain once.
         UGameplayStatics::ApplyRadialDamageWithFalloff(this,170,15,GetActorLocation()+FVector(0,0,100),250,1050,1,nullptr,{this},this,DamageInstigator,ECC_Visibility);
     }
-    for(int I=0;I<(Pump?10:12);I++){
+    for(int I=0;I<(Pump?0:12);I++){
         Part(TEXT("Cube"),FVector(FMath::FRandRange(-35.f,35.f),FMath::FRandRange(-35.f,35.f),FMath::FRandRange(30.f,160.f)),FVector(Pump?.6f:.045f),FRotator::MakeFromEuler(FVector(I*31,I*73,I*17)),Pump?TEXT("Glow"):TEXT("Steel"));
         auto* C=Details.Last().Get();C->SetCollisionEnabled(ECollisionEnabled::NoCollision);
         // World-sized fragments must not inherit a pane's nonuniform scale.

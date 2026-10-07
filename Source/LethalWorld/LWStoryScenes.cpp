@@ -1,5 +1,6 @@
 #include "LWChapter52.h"
 #include "LWVoice44.h"
+#include "LWDialogue59.h"
 #include "LWStory.h"
 #include "LWCharacter.h"
 #include "LWWorld.h"
@@ -92,9 +93,9 @@ void ALWStoryDirector::Scene(int S){
  if(S==12){for(auto& B:Shots){const FVector F=Objective52(TEXT("relay_b"));B.From=F+FVector(-180,-250,100);B.To=F+FVector(120,-240,80);B.Look=F;}}
  if(S==24){for(auto& B:Shots){B.From=At(8,FVector(2500,-2800,190));B.To=At(8,FVector(2600,-2700,180));B.Look=At(8,FVector(2500,-2100,140));}}
  if(S==26){for(auto& B:Shots){B.From=At(8,FVector(0,2250,180));B.To=At(8,FVector(150,2300,170));B.Look=At(8,FVector(0,3100,150));}}
- SceneLight->SetIntensity(FMath::Clamp(float(FVector::DistSquared(Shots[0].From,Shots[0].Look)*.05),4000.f,90000.f));SceneLight->SetVisibility(true);Speech=Shots[0].Line;VoiceName=Shots[0].Speaker;Camera->SetWorldLocation(Shots[0].From);Camera->SetWorldRotation((Shots[0].Look-Shots[0].From).Rotation());if(auto* PC=Cast<APlayerController>(Player->Controller))PC->SetViewTarget(this);SceneAudio=World->Sound(S==1?FName(TEXT("CarRadio")):LWVoice44::Story(VoiceName),Camera->GetComponentLocation(),.5f);Player->RequestSave40();
+ SceneLight->SetIntensity(FMath::Clamp(float(FVector::DistSquared(Shots[0].From,Shots[0].Look)*.05),4000.f,90000.f));SceneLight->SetVisibility(true);Speech=Shots[0].Line;VoiceName=Shots[0].Speaker;Camera->SetWorldLocation(Shots[0].From);Camera->SetWorldRotation((Shots[0].Look-Shots[0].From).Rotation());if(auto* PC=Cast<APlayerController>(Player->Controller))PC->SetViewTarget(this);if(ULWDialogue59::Available()&&S!=1)ULWDialogue59::Channel(this)->Say(ULWDialogueCatalog59::StoryIdentity(VoiceName),false,Speech,true);else SceneAudio=World->Sound(S==1?FName(TEXT("CarRadio")):LWVoice44::Story(VoiceName),Camera->GetComponentLocation(),.5f);Player->RequestSave40();
 }
-void ALWStoryDirector::FinishScene(){SceneLight->SetVisibility(false);if(SceneAudio){SceneAudio->Stop();SceneAudio->DestroyComponent();SceneAudio=nullptr;}int S=FCString::Atoi(*Conversation.ToString());InScene=false;Shots.Empty();CombatGrace52=GetWorld()->GetTimeSeconds()+4;Player->bStoryLocked=false;if(auto* PC=Cast<APlayerController>(Player->Controller))PC->SetViewTarget(Player);Player->SetMenuInput(false);State().SceneFinished=true;
+void ALWStoryDirector::FinishScene(){ULWDialogue59::Channel(this)->Stop();SceneLight->SetVisibility(false);if(SceneAudio){SceneAudio->Stop();SceneAudio->DestroyComponent();SceneAudio=nullptr;}int S=FCString::Atoi(*Conversation.ToString());InScene=false;Shots.Empty();CombatGrace52=GetWorld()->GetTimeSeconds()+4;Player->bStoryLocked=false;if(auto* PC=Cast<APlayerController>(Player->Controller))PC->SetViewTarget(Player);Player->SetMenuInput(false);State().SceneFinished=true;
  if(S==-2){State().Flags.Add(TEXT("execution_ending"));Failed=true;Choosing=false;Speech=TEXT("You were executed. Liberty's Heroes recorded you as nonessential.");VoiceName=TEXT("NO CITIZENSHIP RECORD");Player->bStoryLocked=true;Player->SetMenuInput(true);Player->RequestSave40();return;}
  if(S==20){for(auto& E:Enemies)if(IsValid(E)&&!E->bDead){FDamageEvent Damage;E->Die(Damage,this,500,nullptr);}State().Flags.Add(TEXT("rusk_executed"));Choosing=true;Player->bStoryLocked=true;Player->SetMenuInput(true);VoiceName=TEXT("Captain Adrienne Voss");Speech=TEXT("Give up your weapons. Come with us. Now.");Choices={TEXT("Surrender my weapons and follow."),TEXT("Refuse. They will take me by force.")};Player->RequestSave40();return;}
  if(S==-3){RestorePrison();Player->RequestSave40();return;}if(S==26){for(auto& E:Enemies)if(IsValid(E))E->SetActorTickEnabled(true);Player->RequestSave40();return;}Advance();

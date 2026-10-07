@@ -1,4 +1,5 @@
 #include "LWVoice44.h"
+#include "LWDialogue59.h"
 #include "LWWeaponEffect.h"
 #include "LWZombie.h"
 #include "LWNPCLife.h"
@@ -13,7 +14,7 @@
 #include "Engine/World.h"
 #include "EngineUtils.h"
 void ALWZombie::TickBrain(float Dt,ALWCharacter* P){
- if(int(Kind)>=9){TickBoss(Dt,P);return;}const int K=int(Kind);const FVector Here=GetActorLocation(),Eye=Here+FVector(0,0,K==2?15:40),Delta=P->GetActorLocation()-Here;const float Dist=Delta.Size2D(),Now=GetWorld()->GetTimeSeconds();if(Dist>12500){ClearTarget();return;}
+ if(int(Kind)>=12){Tick57(Dt,P);return;}if(int(Kind)>=9){TickBoss(Dt,P);return;}const int K=int(Kind);const FVector Here=GetActorLocation(),Eye=Here+FVector(0,0,K==2?15:40),Delta=P->GetActorLocation()-Here;const float Dist=Delta.Size2D(),Now=GetWorld()->GetTimeSeconds();if(Dist>12500){ClearTarget();return;}
  AttackCooldown-=Dt;Stagger=FMath::Max(0.f,Stagger-Dt);DecisionClock-=Dt;ContactMemory=FMath::Max(0.f,ContactMemory-Dt);PathClock-=Dt;VoiceClock-=Dt;
  FCollisionQueryParams Q(NAME_None,false,this);FHitResult Hit;
  auto Visible=[&](FVector A,FVector B){return !GetWorld()->LineTraceSingleByChannel(Hit,A,B,ECC_Visibility,Q)||Hit.GetActor()==P;};
@@ -35,7 +36,7 @@ void ALWZombie::TickBrain(float Dt,ALWCharacter* P){
   }
  }
  if(K==3&&!bAggressive&&IsObserved(P)){ConsumeMovementInputVector();GetCharacterMovement()->StopMovementImmediately();return;}
- if(VoiceClock<=0&&Alert>0){auto* VoiceAudio=World->Sound(LWVoice44::Enemy(Kind,Appearance35.Body),Here,.7f,Persona);if(LifeAnimation&&(K==0||K==1))LifeAnimation->Speak(VoiceAudio,TEXT("..."));VoiceClock=6+PersistentId%5;}
+ if(VoiceClock<=0&&Alert>0){if(Kind==ELWEnemyKind::Raider&&ULWDialogue59::Available()){const FName Group=ReloadClock>0||RaiderRounds<=0?TEXT("raider_reload"):Suppression54>.55f?TEXT("raider_suppressed"):HasVisual?TEXT("raider_combat"):TEXT("raider_search");auto* R=Cast<ALWResident>(this);ULWDialogue59::Channel(this)->Chatter75(R?R->ResidentId:FName(*FString::Printf(TEXT("enemy_%u"),PersistentId)),Appearance35.Body==1,R?FName(TEXT("settler_alarm")):Group,true);}else{auto* VoiceAudio=World->Sound(LWVoice44::Enemy(Kind,Appearance35.Body),Here,.7f,Persona);if(LifeAnimation&&(K==0||K==1))LifeAnimation->Speak(VoiceAudio,TEXT("..."));}VoiceClock=6+PersistentId%5;}
  ReactTactics54(Dt,P);
  if(Stagger>0)return;
  if(K==1&&RaiderRounds<=0&&ReloadClock<=0&&Alert>0){ReloadClock=CombatRandom54.FRandRange(2.4f,3.f);World->Sound(TEXT("RifleMagOut"),Here);}

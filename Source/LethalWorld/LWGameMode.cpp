@@ -1,9 +1,50 @@
+#include "LWAircraft84.h"
+#include "LWCommunities84.h"
+#include "LWAviationSky84.h"
+#include "LWSettlement82.h"
+#include "Materials/MaterialInstanceDynamic.h"
+#include "LWCampaign76.h"
+#include "LWMainMenu81.h"
+#include "LWLoading45.h"
+#include "LWLoading79.h"
+#include "LWWorldTextComponent.h"
+#include "Engine/Canvas.h"
+#include "LWSlotMachine.h"
+#include "LWCampaignProduction77.h"
+#include "LWNPCLife.h"
+#include "LWNewGame72.h"
+#include "LWDestiny71.h"
+#include "LWCurrency70.h"
+#include "LWCanada68.h"
+#include "LWUnderground.h"
+#include "Camera/PlayerCameraManager.h"
+#include "LWVehicleExplosion68.h"
+#include "LWArsenal62.h"
+#include "LWWorkbench39.h"
+#include "LWSaveSlots62.h"
+#include "LWConsole47.h"
+#include "LWDebugMenu67.h"
+#include "Framework/Application/SlateApplication.h"
+#include "Widgets/SWindow.h"
+#include "Widgets/SViewport.h"
+#include "Slate/SceneViewport.h"
+#include "LWHair61.h"
+#include "LWAppearance.h"
+#include "LWCreator35.h"
+#include "Engine/GameViewportClient.h"
+#include "LWDialogue59.h"
 #include "Camera/CameraActor.h"
+#include "LWExpansion57.h"
+#include "Engine/SkyLight.h"
+#include "Components/SkyLightComponent.h"
 #include "Engine/StaticMeshActor.h"
 #include "InputKeyEventArgs.h"
 #include "LWBorderGuard51.h"
 #include "LWBorder51.h"
 #include "LWPlayerInput51.h"
+#include "LWGraphics33.h"
+#include "DLSSLibrary.h"
+#include "StreamlineLibraryDLSSG.h"
 #include "LWNPCLife.h"
 #if WITH_EDITOR
 #include "ShaderCompiler.h"
@@ -28,6 +69,9 @@
 #include "Components/SpotLightComponent.h"
 #include "GameFramework/PlayerInput.h"
 #include "LWAudioCatalog.h"
+#include "LWAcoustics64.h"
+#include "LWInteriors65.h"
+#include "Components/BoxComponent.h"
 #include "LWZombie.h"
 #include "LWResident.h"
 #include "LWInteractable.h"
@@ -50,6 +94,7 @@
 #include "Misc/CommandLine.h"
 #include "Misc/Parse.h"
 #include "Misc/Paths.h"
+#include "Misc/FileHelper.h"
 #include "Misc/ScopeExit.h"
 #include "PhysicsEngine/PhysicsConstraintComponent.h"
 #include "Serialization/MemoryWriter.h"
@@ -308,7 +353,10 @@ void ALWGameMode::FinishV2Smoke()
     if(FParse::Param(FCommandLine::Get(),TEXT("LWV3Smoke")))UE_LOG(LogTemp,Display,TEXT("LW_V3_DONE failures=%d checks=%d"),TestFailures,V2->Checks);
     UE_LOG(LogTemp,Display,TEXT("LW_V2_DONE failures=%d checks=%d seconds=%.1f"),TestFailures,V2->Checks,FPlatformTime::Seconds()-V2->StartedAt);
     if(FParse::Param(FCommandLine::Get(),TEXT("LWSmoke")))UE_LOG(LogTemp,Display,TEXT("LW_SMOKE_DONE failures=%d"),TestFailures);
-    FPlatformMisc::RequestExit(false);
+    // Shipping strips ordinary logs. Explicit smoke runs still need a verifiable result.
+    const FString SmokeReport=FString::Printf(TEXT("{\"failures\":%d,\"checks\":%d,\"seconds\":%.2f}\n"),TestFailures,V2->Checks,FPlatformTime::Seconds()-V2->StartedAt);
+    FFileHelper::SaveStringToFile(SmokeReport,*(FPaths::ProjectSavedDir()/TEXT("SmokeResult.json")));
+    FPlatformMisc::RequestExitWithStatus(false,TestFailures?1:0);
 }
 void ALWGameMode::AuditV2(const ALWCharacter& Player,const TCHAR* Context)
 {
@@ -339,7 +387,7 @@ void ALWGameMode::Tick(float Dt)
     // Finish marks bDone before restoring volume, so this guard cannot mute the restored device.
     ON_SCOPE_EXIT {MuteAudio();};
     TestClock=float(FPlatformTime::Seconds()-V2->StartedAt);
-    if(TestClock>210){Check(false,TEXT("overall smoke watchdog exceeded 210 seconds"));FinishV2Smoke();return;}
+    if(TestClock>((FParse::Param(FCommandLine::Get(),TEXT("LWSettlement82Smoke"))||FParse::Param(FCommandLine::Get(),TEXT("LWCampaign77Smoke"))||FParse::Param(FCommandLine::Get(),TEXT("LWUpdate78Smoke")))?720:210)){Check(false,TEXT("overall smoke watchdog exceeded 210 seconds"));FinishV2Smoke();return;}
     ALWCharacter* Player=Cast<ALWCharacter>(UGameplayStatics::GetPlayerPawn(this,0));
     if(!IsValid(Player)||!IsValid(Player->World)||!IsValid(Player->Controller))
     {
@@ -349,7 +397,7 @@ void ALWGameMode::Tick(float Dt)
     if(V2->Steps.IsEmpty()){Player->World->EnableEncounters=false;if(FParse::Param(FCommandLine::Get(),TEXT("LWV17Smoke")))BuildV17Smoke(*Player);else if(FParse::Param(FCommandLine::Get(),TEXT("LWV16Smoke")))BuildV16Smoke(*Player);else if(FParse::Param(FCommandLine::Get(),TEXT("LWV15Smoke")))BuildV15Smoke(*Player);else if(FParse::Param(FCommandLine::Get(),TEXT("LWV14Smoke")))BuildV14Smoke(*Player);else if(FParse::Param(FCommandLine::Get(),TEXT("LWV11Smoke")))BuildV11Smoke(*Player);else if(FParse::Param(FCommandLine::Get(),TEXT("LWV10Smoke")))BuildV10Smoke(*Player);else if(FParse::Param(FCommandLine::Get(),TEXT("LWV9Smoke")))BuildV9Smoke(*Player);else if(FParse::Param(FCommandLine::Get(),TEXT("LWV7Smoke")))BuildV7Smoke(*Player);else if(FParse::Param(FCommandLine::Get(),TEXT("LWV6Smoke")))BuildV6Smoke(*Player);else if(FParse::Param(FCommandLine::Get(),TEXT("LWV5Smoke")))BuildV5Smoke(*Player);else if(FParse::Param(FCommandLine::Get(),TEXT("LWV4Smoke")))BuildV4Smoke(*Player);else if(FParse::Param(FCommandLine::Get(),TEXT("LWV3Smoke")))BuildV3Smoke(*Player);else BuildV2Smoke(*Player);}
     if(V2->bDone)return;
     // Quiet procedural bystanders only; the designated zombie keeps its real AI and physics.
-    for(TActorIterator<ALWZombie> It(GetWorld());It;++It)if(*It!=TestEnemy&&!It->bDead&&!Cast<ALWResident>(*It)&&!Cast<ALWStoryEnemy>(*It)&&!Cast<ALWBorderGuard51>(*It))
+    for(TActorIterator<ALWZombie> It(GetWorld());It;++It)if(*It!=TestEnemy&&!It->bDead&&!Cast<ALWResident>(*It)&&!Cast<ALWStoryEnemy>(*It)&&!Cast<ALWCampaignEnemy76>(*It)&&!Cast<ALWBorderGuard51>(*It))
     {It->SetActorTickEnabled(false);It->GetCharacterMovement()->StopMovementImmediately();It->GetCharacterMovement()->DisableMovement();}
     if(V2->Observe)V2->Observe(*Player);
     if(V2->Index>=V2->Steps.Num()){FinishV2Smoke();return;}

@@ -1,3 +1,5 @@
+#include "LWAircraft84.h"
+#include "Engine/StaticMesh.h"
 #include "LWBunker45.h"
 #include "LWVehicle.h"
 #include "EngineUtils.h"
@@ -8,10 +10,11 @@
 #include "LWLootTable.h"
 #include "Components/StaticMeshComponent.h"
 void ALWWorldObject::SetFurniture(FName Type){
- UseType=Type;FName Mesh=Type==TEXT("bed")?TEXT("MotelBedV3"):Type==TEXT("chair")?TEXT("ChairV3"):Type==TEXT("radio")?TEXT("RadioV4"):Type==TEXT("water")?TEXT("FridgeV4"):Type==TEXT("workbench")?TEXT("WeaponBench39"):Type==TEXT("cooker")?TEXT("StoveV4"):Type==TEXT("sink")?TEXT("SinkV4"):TEXT("LockerV4");if(Type==TEXT("bed")&&RecordId.ToString().StartsWith(TEXT("bunker_")))Mesh=TEXT("HomeBedV13");Body->SetStaticMesh(World->Mesh(Mesh));
+ UseType=Type;FName Mesh=Type==TEXT("bed")?TEXT("MotelBedV3"):Type==TEXT("chair")?TEXT("ChairV3"):Type==TEXT("radio")?TEXT("RadioV4"):Type==TEXT("water")?TEXT("FridgeV4"):Type==TEXT("workbench")?TEXT("WeaponBench39"):Type==TEXT("cooker")?TEXT("StoveV4"):Type==TEXT("sink")?TEXT("SinkV4"):TEXT("LockerV4");if(Type==TEXT("bed")&&RecordId.ToString().StartsWith(TEXT("bunker_")))Mesh=TEXT("HomeBedV13");Body->SetStaticMesh(World->Mesh(Mesh));if(Type==TEXT("chair")&&Body->GetStaticMesh()&&Body->GetStaticMesh()->GetName()==TEXT("SM_Chair65"))Body->SetRelativeRotation(FRotator(0,90,0));
  if(Type==TEXT("locker")&&!World->Containers.Contains(RecordId)){FLWContainerRecord R;R.Id=RecordId;R.Context=TEXT("road");R.Position=GetActorLocation();if(!RecordId.ToString().StartsWith(TEXT("bunker_")))for(auto I:LWLoot::Roll(TEXT("road"),int32(FCrc::StrCrc32(*RecordId.ToString()))))LWItems::Place(R.Items,I,12,12);World->Containers.Add(RecordId,R);}
 }
-void ALWWorldObject::UseFurniture(ALWCharacter* P){
+void ALWWorldObject::UseFurniture(ALWCharacter* P){if(UseType==TEXT("airfield84")){LWAviation84::OpenService(P,GetActorLocation());return;}
+ if(UseType==TEXT("delivery66")){P->OpenDelivery66(this);return;}
  if(UseType==TEXT("base45")||UseType==TEXT("garage45")||UseType==TEXT("surface45")||UseType==TEXT("lift45")||UseType.ToString().StartsWith(TEXT("call45_"))){
  auto* B=ALWBunker45::Ensure(P);if(!B)return;
  if(UseType==TEXT("surface45")){ALWVehicle* Car=nullptr;float Best=1500;for(TActorIterator<ALWVehicle> C(GetWorld());C;++C){float D=FVector::Dist(C->GetActorLocation(),B->Surface);if(D<Best){Best=D;Car=*C;}}B->StoreVehicle(Car);P->Notify(B->Message,5);}

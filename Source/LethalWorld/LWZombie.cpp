@@ -1,4 +1,8 @@
+#include "LWArsenal62.h"
+#include "LWWeaponEffect.h"
+#include "LWResident.h"
 #include "LWZombie.h"
+#include "Components/AudioComponent.h"
 #include "LWNPCLife.h"
 #include "LWAppearance.h"
 #include "LWWorld.h"
@@ -48,6 +52,7 @@ void ALWZombie::BeginPlay()
 }
 void ALWZombie::EndPlay(const EEndPlayReason::Type R)
 {
+    if(WingsAudio57){WingsAudio57->Stop();WingsAudio57->DestroyComponent();}
     // Release joints before component teardown destroys their simulated bodies.
     for(UPhysicsConstraintComponent* Joint:RagdollJoints)if(IsValid(Joint))Joint->TermComponentConstraint();
     if(IsValid(World))World->ZombieCount=FMath::Max(0,World->ZombieCount-1);
@@ -184,6 +189,7 @@ float ALWZombie::TakeDamage(float D,const FDamageEvent& E,AController* I,AActor*
     if(D<=0||!FMath::IsFinite(D))return 0;EnsureLegendary();if(Kind==ELWEnemyKind::WorldEater&&BurrowPhase==2)return 0;D*=1.f/(1.f+Stars*.12f);if(auto* Attacker=Cast<ALWCharacter>(I?I->GetPawn():C);Attacker&&!bDead){Attacker->CombatTarget=this;Attacker->CombatTargetTime=8;}
     if(!bDead&&E.IsOfType(FPointDamageEvent::ClassID)){const auto& Hit=static_cast<const FPointDamageEvent&>(E);for(int N=0;N<Parts.Num();N++)if(Missing(N)&&Hit.HitInfo.GetComponent()==Parts[N]){Parts[N]->AddImpulse(Hit.ShotDirection*D*4,NAME_None,true);return 0;}}
 
+    if(!bDead){auto* Attacker=Cast<ALWCharacter>(I?I->GetPawn():C);if(Attacker){FName Source=!Attacker->DamageWeapon62.IsNone()?Attacker->DamageWeapon62:Attacker->ActiveGun()?Attacker->ActiveGun()->Definition:NAME_None;if(auto* FX=Cast<ALWWeaponEffect>(C))Source=FX->SourceWeapon62;else if(C!=Attacker)Source=NAME_None;ChallengeWeapon62=Source;ChallengeHead62=E.IsOfType(FPointDamageEvent::ClassID)&&(static_cast<const FPointDamageEvent&>(E).HitInfo.GetComponent()==Parts[1]||static_cast<const FPointDamageEvent&>(E).HitInfo.ImpactPoint.Z>Parts[1]->Bounds.Origin.Z-Parts[1]->Bounds.BoxExtent.Z*.4f);}}
     if(bDead){BloodHit(E,C,D);Dismember(E,C,D);FVector V=C?(GetActorLocation()-C->GetActorLocation()).GetSafeNormal()*D*4:FVector(100,0,0);if(E.IsOfType(FPointDamageEvent::ClassID))V=static_cast<const FPointDamageEvent&>(E).ShotDirection*D*4;if(E.IsOfType(FRadialDamageEvent::ClassID))V=(Parts[0]->Bounds.Origin-static_cast<const FRadialDamageEvent&>(E).Origin).GetSafeNormal()*D*6+FVector(0,0,D);RagdollForce(V,E.IsOfType(FPointDamageEvent::ClassID)?FVector(static_cast<const FPointDamageEvent&>(E).HitInfo.ImpactPoint):Parts[0]->Bounds.Origin);return D;}
     if(E.IsOfType(FRadialDamageEvent::ClassID))D=Super::TakeDamage(D,E,I,C);
     BloodHit(E,C,D);
@@ -198,9 +204,9 @@ float ALWZombie::TakeDamage(float D,const FDamageEvent& E,AController* I,AActor*
     return D;
 }
 void ALWZombie::Die(const FDamageEvent& E,AActor* C,float D,AController* I){
- if(bDead)return;EnsureLegendary();bDead=true;Health=0;HeadlessTime=0;if(Gun)Gun->SetVisibility(false);StartRagdoll(E,C,D);
+ if(bDead)return;EnsureLegendary();if(WingsAudio57)WingsAudio57->Stop();bDead=true;Health=0;HeadlessTime=0;if(Gun)Gun->SetVisibility(false);StartRagdoll(E,C,D);
  if(IsValid(World)){World->KilledZombies.Add(PersistentId);MakeCorpseLoot();}
- ALWCharacter* Credit=Cast<ALWCharacter>(C);if(!Credit&&I)Credit=Cast<ALWCharacter>(I->GetPawn());if(Credit)Credit->Reward(12+Stars*15+(int(Kind)>=9?60:0));
+ ALWCharacter* Credit=Cast<ALWCharacter>(C);if(!Credit&&I)Credit=Cast<ALWCharacter>(I->GetPawn());if(Credit&&!IsA(ALWResident::StaticClass()))LWArsenal62::Credit(Credit,ChallengeWeapon62,ChallengeHead62,Stars>0);if(Credit)Credit->Reward(12+Stars*15+(int(Kind)>=9&&int(Kind)<=11?60:Kind==ELWEnemyKind::Bear?20:Kind==ELWEnemyKind::RogueAI?25:0));
  if(IsValid(World))World->Sound(TEXT("FleshHit"),Parts[0]->Bounds.Origin,.7f,.7f);SetLifeSpan(180);
 }
 void ALWZombie::Tick(float Dt)
@@ -211,5 +217,5 @@ void ALWZombie::Tick(float Dt)
     if(P&&P->bStarted&&!P->bMenu&&TickStatus(Dt))return;
     if(P&&P->bStarted&&!P->bMenu&&(Missing(1)||Missing(5)||Missing(6))){TickInjuries(Dt,P);return;}
     if(!P||P->bSafehouse||!P->bStarted||P->bMenu||P->Health<=0){ClearTarget();return;}
-    if(int(Kind)>=9)TickBoss(Dt,P);else TickBrain(Dt,P);
+    if(int(Kind)>=12)Tick57(Dt,P);else if(int(Kind)>=9)TickBoss(Dt,P);else TickBrain(Dt,P);
 }

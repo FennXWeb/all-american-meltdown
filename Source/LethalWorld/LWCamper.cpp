@@ -1,3 +1,4 @@
+#include "LWAircraft84.h"
 #include "Engine/StaticMesh.h"
 #include "Components/SpotLightComponent.h"
 #include "Components/BoxComponent.h"
@@ -5,6 +6,7 @@
 #include "Engine/World.h"
 #include "LWVehicle.h"
 #include "LWCharacter.h"
+#include "LWResident.h"
 #include "LWWorld.h"
 #include "Components/StaticMeshComponent.h"
 #include "Components/PointLightComponent.h"
@@ -42,20 +44,49 @@ void ALWVehicle::BuildCamper(){
  Add(TEXT("CamperFridgeV14"),FVector(-774,94,61),TEXT("wardrobe"));Details.Last()->SetRelativeScale3D(FVector(1,1,1));
  Add(TEXT("CamperKitchenV14"),FVector(-535,-100,266),TEXT("pantry"),FRotator(0,180,0));Details.Last()->SetRelativeScale3D(FVector(1,.65,.4));
  for(auto Pair:{TPair<FName,FVector>(TEXT("kitchen_storage"),FVector(-535,-65,101)),TPair<FName,FVector>(TEXT("sink_storage"),FVector(-640,-65,101)),TPair<FName,FVector>(TEXT("bed_storage"),FVector(-818,0,89))}){Add(TEXT("Cube"),Pair.Value,Pair.Key);Details.Last()->SetRelativeScale3D(FVector(.72,.04,.60));if(Pair.Key==TEXT("bed_storage"))Details.Last()->SetRelativeScale3D(FVector(.04,1.65,.45));Details.Last()->SetMaterial(0,World->Material(TEXT("Wood")));}
- for(float X:{-810.f,-410.f,-30.f}){auto* L=NewObject<UPointLightComponent>(this);L->SetupAttachment(Root);L->SetRelativeLocation(FVector(X,0,295));L->SetIntensity(11000);L->SetAttenuationRadius(650);L->SetLightColor(FLinearColor(1,.83,.6));L->SetCastShadows(true);L->RegisterComponent();}
+ for(float X:{-810.f,-410.f,-30.f}){auto* L=NewObject<UPointLightComponent>(this);L->ComponentTags.Add(TEXT("LegacyCamperCabinLight"));L->SetupAttachment(Root);L->SetRelativeLocation(FVector(X,0,295));L->SetIntensity(11000);L->SetAttenuationRadius(650);L->SetLightColor(FLinearColor(1,.83,.6));L->SetCastShadows(true);L->RegisterComponent();}
 }
 
-void ALWVehicle::StandInCamper(){
- if(!Driver||FName(Spec().Id)!=TEXT("rv")||Driver->bMenu||Driver->bInventory||Driver->SecurityMode)return;
- if(FMath::Abs(Speed)>5||Chauffeur||AutoDriving||Boarding){Driver->Notify(TEXT("PARK AND DISMISS THE DRIVER FIRST"));return;}
+void ALWVehicle::StandInCamper(){if(IsAircraft84()){StandAircraft84();return;}
+ if(!Driver||!IsCamper74()||Driver->bMenu||Driver->bInventory||Driver->SecurityMode)return;
+ if((FMath::Abs(Speed)>5||Chauffeur||AutoDriving||Boarding)&&!(IsSolarRV74()&&SelfDriving74&&!Chauffeur&&!StopRequested)){Driver->Notify(TEXT("PARK OR ENGAGE AUTOPILOT FIRST"));return;}
  if(PlayerSeat==-2)return;
  CabinEye=FVector(FMath::Clamp(PlayerEye().X,LWTraffic::FrontOffset(Spec())-760.f,LWTraffic::FrontOffset(Spec())+30.f),0,150);
- CabinMove=FVector2D::ZeroVector;PlayerSeat=-2;Throttle=Steer=0;Driver->TickVehicleSeat();Driver->Notify(TEXT("WASD MOVE / E INTERACT"));
+ if(IsSolarRV74()){FVector Local=ActorToCabin74(PlayerEye());Local.Y=0;Local.Z=225;Local.X=FMath::Clamp(Local.X,-805.,30.);CabinEye=CabinToActor74(Local);}
+ CabinMove=FVector2D::ZeroVector;CabinVelocity74=FVector::ZeroVector;PlayerSeat=-2;if(!SelfDriving74)Throttle=Steer=0;Driver->TickVehicleSeat();Driver->Notify(TEXT("WASD MOVE / INTERACT WITH SEATS TO SIT"));
 }
 void ALWVehicle::TickCabinWalk(float Dt){
+ if(IsSolarRV74()){
+  if(!Driver||PlayerSeat!=-2)return;
+  if(Driver->IsUIOpen()||Held49||Airborne49){CabinMove=FVector2D::ZeroVector;CabinVelocity74=FVector::ZeroVector;return;}
+  // Integrate exclusively in cabin coordinates. The actor receives the vehicle's
+  // final transform after its tick, so road motion is never added to walking twice.
+  const FVector Intent=FRotator(0,Driver->SeatYaw,0).RotateVector(FVector(CabinMove.GetClampedToMaxSize(1),0))*165;
+  const int Steps=FMath::Clamp(FMath::CeilToInt(Dt*90),1,12);const float Step=FMath::Clamp(Dt,0.f,.15f)/Steps;
+  FVector Eye=ActorToCabin74(CabinEye);
+  FCollisionQueryParams Q(SCENE_QUERY_STAT(ElectricCabin74),false,Driver);Q.AddIgnoredComponent(Chassis.Get());
+  for(const auto& N:Passengers)if(N)Q.AddIgnoredActor(N);if(Chauffeur)Q.AddIgnoredActor(Chauffeur);
+  for(int I=0;I<Steps;I++){
+   CabinVelocity74=FMath::VInterpConstantTo(CabinVelocity74,Intent,Step,900);
+   FVector Next=Eye+CabinVelocity74*Step;Next.X=FMath::Clamp(Next.X,-813.,75.);Next.Z=225;
+   const bool Door=CamperDoorOpen&&!SelfDriving74&&FMath::Abs(Speed)<5&&Next.X>-10&&Next.X<80;
+   const float Width=85+((Next.X> -365&&Next.X< -145)?SlideAlpha66*80:0);
+   Next.Y=FMath::Clamp(Next.Y,-double(Width),Door?220.:double(Width));
+   if(Door&&Next.Y>185){CabinEye=CabinToActor74(Next);Exit();return;}
+   const FTransform X=Root->GetComponentTransform();const FVector Start=X.TransformPosition(Eye-FVector(0,0,50)),End=X.TransformPosition(Next-FVector(0,0,50));FHitResult Hit;
+   if(!GetWorld()->SweepSingleByChannel(Hit,Start,End,GetActorQuat(),ECC_Visibility,FCollisionShape::MakeCapsule(22,65),Q))Eye=Next;
+   else if(!Hit.bStartPenetrating){
+    const FVector Advance=(End-Start)*FMath::Max(0.f,Hit.Time-.01f);const FVector Contact=Start+Advance;
+    const FVector Slide=FVector::VectorPlaneProject(End-Contact,Hit.Normal);FHitResult Side;
+    const bool Block=GetWorld()->SweepSingleByChannel(Side,Contact,Contact+Slide,GetActorQuat(),ECC_Visibility,FCollisionShape::MakeCapsule(22,65),Q);
+    Eye=X.InverseTransformPosition(Contact+Slide*(Block?FMath::Max(0.f,Side.Time-.01f):1.f))+FVector(0,0,50);
+   }else CabinVelocity74=FVector::ZeroVector;
+  }
+  Eye.Z=225;CabinEye=CabinToActor74(Eye);return;
+ }
  if(!Driver||PlayerSeat!=-2||Driver->bMenu||Driver->bInventory||Driver->bMap||Driver->RPGPanel||Driver->SecurityMode)return;
  FVector Delta=FRotator(0,Driver->SeatYaw,0).RotateVector(FVector(CabinMove.GetSafeNormal()*FMath::Min(1.,CabinMove.Size()),0))*150*Dt;
- const float F=LWTraffic::FrontOffset(Spec());FVector Next=CabinEye+Delta;Next.X=FMath::Clamp(Next.X,F-790.,F+75.);const bool Doorway=CamperDoorOpen&&Next.X>F-10&&Next.X<F+80;Next.Y=FMath::Clamp(Next.Y,-85.,Doorway?220.:85.);Next.Z=150;
+ const float F=LWTraffic::FrontOffset(Spec());FVector Next=CabinEye+Delta;Next.X=FMath::Clamp(Next.X,F-813.,F+75.);const bool Doorway=CamperDoorOpen&&Next.X>F-10&&Next.X<F+80;const bool SlideRoom=Next.X>F-365&&Next.X<F-145;const double Width=85.+(SlideRoom?SlideAlpha66*80:0);Next.Y=FMath::Clamp(Next.Y,-Width,Doorway?220.:Width);Next.Z=150;
  if(Doorway&&Next.Y>185){Exit();return;}
  FCollisionQueryParams Q(NAME_None,false,Driver);Q.AddIgnoredComponent(Chassis.Get());FHitResult Hit;
  FVector Start=GetActorTransform().TransformPosition(CabinEye-FVector(0,0,50)),End=GetActorTransform().TransformPosition(Next-FVector(0,0,50));

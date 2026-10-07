@@ -1,0 +1,1181 @@
+{
+  "schema": 1,
+  "lines": [
+    {
+      "key": "M01_cc976d7d8a118ee26407e2a5ab26847d",
+      "profile": "M01",
+      "text": "The roads are quiet. Stay close, and watch the rooftops.",
+      "file": "M01_cc976d7d8a118ee26407e2a5ab26847d.wav",
+      "sample": true
+    },
+    {
+      "key": "M01_c226ffbc9e2bd4a17c7edcb4b63928bd",
+      "profile": "M01",
+      "text": "Still with you. Keep your eyes on the street.",
+      "file": "M01_c226ffbc9e2bd4a17c7edcb4b63928bd.wav",
+      "sample": false
+    },
+    {
+      "key": "M01_b3707246319958253367243bd4e85372",
+      "profile": "M01",
+      "text": "Looking for work? We have contracts.",
+      "file": "M01_b3707246319958253367243bd4e85372.wav",
+      "sample": false
+    },
+    {
+      "key": "M01_aebaaac1c720e850793197e042c92c28",
+      "profile": "M01",
+      "text": "Supplies for sale. Fair prices.",
+      "file": "M01_aebaaac1c720e850793197e042c92c28.wav",
+      "sample": false
+    },
+    {
+      "key": "M01_037280aab044e5cedb7a005d75d0d3e7",
+      "profile": "M01",
+      "text": "The clinic is open. Stay safe out there.",
+      "file": "M01_037280aab044e5cedb7a005d75d0d3e7.wav",
+      "sample": false
+    },
+    {
+      "key": "M01_0c29978ec9453c2aab4c395acd0251f3",
+      "profile": "M01",
+      "text": "Rain is coming. I can feel it.",
+      "file": "M01_0c29978ec9453c2aab4c395acd0251f3.wav",
+      "sample": false
+    },
+    {
+      "key": "M01_5e110ec140466f67ec07ecd2a4cb0925",
+      "profile": "M01",
+      "text": "Someone fixed the water pump.",
+      "file": "M01_5e110ec140466f67ec07ecd2a4cb0925.wav",
+      "sample": false
+    },
+    {
+      "key": "M01_654c15db366aa3b0e9048b706f133eb2",
+      "profile": "M01",
+      "text": "I used to live north of here.",
+      "file": "M01_654c15db366aa3b0e9048b706f133eb2.wav",
+      "sample": false
+    },
+    {
+      "key": "M01_277b106559996d381a36fadc55997ffd",
+      "profile": "M01",
+      "text": "Need another pair of hands?",
+      "file": "M01_277b106559996d381a36fadc55997ffd.wav",
+      "sample": false
+    },
+    {
+      "key": "M01_eb14c570664d9118501fc335f3db9a0d",
+      "profile": "M01",
+      "text": "I am hit. Give me a moment!",
+      "file": "M01_eb14c570664d9118501fc335f3db9a0d.wav",
+      "sample": false
+    },
+    {
+      "key": "M01_22905fdc3eed8a2170c7227af9183551",
+      "profile": "M01",
+      "text": "Hostile in town! Take cover!",
+      "file": "M01_22905fdc3eed8a2170c7227af9183551.wav",
+      "sample": false
+    },
+    {
+      "key": "M01_f94d82c1ef17348ce3ec6572f38e677d",
+      "profile": "M01",
+      "text": "There you are!",
+      "file": "M01_f94d82c1ef17348ce3ec6572f38e677d.wav",
+      "sample": false
+    },
+    {
+      "key": "M01_0093ec2cea7f80169c854476a64fe75f",
+      "profile": "M01",
+      "text": "You cannot hide forever!",
+      "file": "M01_0093ec2cea7f80169c854476a64fe75f.wav",
+      "sample": false
+    },
+    {
+      "key": "M01_45011a1159396607e732e562ebe2677e",
+      "profile": "M01",
+      "text": "Keep them pinned down!",
+      "file": "M01_45011a1159396607e732e562ebe2677e.wav",
+      "sample": false
+    },
+    {
+      "key": "M01_ec585771aac5bc8fafa5093250ebb7ff",
+      "profile": "M01",
+      "text": "Moving up! Cover me!",
+      "file": "M01_ec585771aac5bc8fafa5093250ebb7ff.wav",
+      "sample": false
+    },
+    {
+      "key": "M01_1255983cb5d038cf6546dc07a10d0c73",
+      "profile": "M01",
+      "text": "You picked the wrong fight!",
+      "file": "M01_1255983cb5d038cf6546dc07a10d0c73.wav",
+      "sample": false
+    },
+    {
+      "key": "M01_e93ad42b18c46e6adab4f250f9cb15c9",
+      "profile": "M01",
+      "text": "Over here. Could use a hand.",
+      "file": "M01_e93ad42b18c46e6adab4f250f9cb15c9.wav",
+      "sample": false
+    },
+    {
+      "key": "M01_7df26d5591a8e5c2dec26e53809f3164",
+      "profile": "M01",
+      "text": "Thank you. We will remember this.",
+      "file": "M01_7df26d5591a8e5c2dec26e53809f3164.wav",
+      "sample": false
+    },
+    {
+      "key": "M01_0a8f57e4183d1478a50b9e481615bd7e",
+      "profile": "M01",
+      "text": "Then we will find another way.",
+      "file": "M01_0a8f57e4183d1478a50b9e481615bd7e.wav",
+      "sample": false
+    },
+    {
+      "key": "M01_f0f31e5be424013171e0887e83f1c335",
+      "profile": "M01",
+      "text": "We survive by looking after each other. What do you need?",
+      "file": "M01_f0f31e5be424013171e0887e83f1c335.wav",
+      "sample": false
+    },
+    {
+      "key": "M02_cc976d7d8a118ee26407e2a5ab26847d",
+      "profile": "M02",
+      "text": "The roads are quiet. Stay close, and watch the rooftops.",
+      "file": "M02_cc976d7d8a118ee26407e2a5ab26847d.wav",
+      "sample": true
+    },
+    {
+      "key": "M02_c226ffbc9e2bd4a17c7edcb4b63928bd",
+      "profile": "M02",
+      "text": "Still with you. Keep your eyes on the street.",
+      "file": "M02_c226ffbc9e2bd4a17c7edcb4b63928bd.wav",
+      "sample": false
+    },
+    {
+      "key": "M02_b3707246319958253367243bd4e85372",
+      "profile": "M02",
+      "text": "Looking for work? We have contracts.",
+      "file": "M02_b3707246319958253367243bd4e85372.wav",
+      "sample": false
+    },
+    {
+      "key": "M02_aebaaac1c720e850793197e042c92c28",
+      "profile": "M02",
+      "text": "Supplies for sale. Fair prices.",
+      "file": "M02_aebaaac1c720e850793197e042c92c28.wav",
+      "sample": false
+    },
+    {
+      "key": "M02_037280aab044e5cedb7a005d75d0d3e7",
+      "profile": "M02",
+      "text": "The clinic is open. Stay safe out there.",
+      "file": "M02_037280aab044e5cedb7a005d75d0d3e7.wav",
+      "sample": false
+    },
+    {
+      "key": "M02_0c29978ec9453c2aab4c395acd0251f3",
+      "profile": "M02",
+      "text": "Rain is coming. I can feel it.",
+      "file": "M02_0c29978ec9453c2aab4c395acd0251f3.wav",
+      "sample": false
+    },
+    {
+      "key": "M02_5e110ec140466f67ec07ecd2a4cb0925",
+      "profile": "M02",
+      "text": "Someone fixed the water pump.",
+      "file": "M02_5e110ec140466f67ec07ecd2a4cb0925.wav",
+      "sample": false
+    },
+    {
+      "key": "M02_654c15db366aa3b0e9048b706f133eb2",
+      "profile": "M02",
+      "text": "I used to live north of here.",
+      "file": "M02_654c15db366aa3b0e9048b706f133eb2.wav",
+      "sample": false
+    },
+    {
+      "key": "M02_277b106559996d381a36fadc55997ffd",
+      "profile": "M02",
+      "text": "Need another pair of hands?",
+      "file": "M02_277b106559996d381a36fadc55997ffd.wav",
+      "sample": false
+    },
+    {
+      "key": "M02_eb14c570664d9118501fc335f3db9a0d",
+      "profile": "M02",
+      "text": "I am hit. Give me a moment!",
+      "file": "M02_eb14c570664d9118501fc335f3db9a0d.wav",
+      "sample": false
+    },
+    {
+      "key": "M02_22905fdc3eed8a2170c7227af9183551",
+      "profile": "M02",
+      "text": "Hostile in town! Take cover!",
+      "file": "M02_22905fdc3eed8a2170c7227af9183551.wav",
+      "sample": false
+    },
+    {
+      "key": "M02_f94d82c1ef17348ce3ec6572f38e677d",
+      "profile": "M02",
+      "text": "There you are!",
+      "file": "M02_f94d82c1ef17348ce3ec6572f38e677d.wav",
+      "sample": false
+    },
+    {
+      "key": "M02_0093ec2cea7f80169c854476a64fe75f",
+      "profile": "M02",
+      "text": "You cannot hide forever!",
+      "file": "M02_0093ec2cea7f80169c854476a64fe75f.wav",
+      "sample": false
+    },
+    {
+      "key": "M02_45011a1159396607e732e562ebe2677e",
+      "profile": "M02",
+      "text": "Keep them pinned down!",
+      "file": "M02_45011a1159396607e732e562ebe2677e.wav",
+      "sample": false
+    },
+    {
+      "key": "M02_ec585771aac5bc8fafa5093250ebb7ff",
+      "profile": "M02",
+      "text": "Moving up! Cover me!",
+      "file": "M02_ec585771aac5bc8fafa5093250ebb7ff.wav",
+      "sample": false
+    },
+    {
+      "key": "M02_1255983cb5d038cf6546dc07a10d0c73",
+      "profile": "M02",
+      "text": "You picked the wrong fight!",
+      "file": "M02_1255983cb5d038cf6546dc07a10d0c73.wav",
+      "sample": false
+    },
+    {
+      "key": "M02_e93ad42b18c46e6adab4f250f9cb15c9",
+      "profile": "M02",
+      "text": "Over here. Could use a hand.",
+      "file": "M02_e93ad42b18c46e6adab4f250f9cb15c9.wav",
+      "sample": false
+    },
+    {
+      "key": "M02_7df26d5591a8e5c2dec26e53809f3164",
+      "profile": "M02",
+      "text": "Thank you. We will remember this.",
+      "file": "M02_7df26d5591a8e5c2dec26e53809f3164.wav",
+      "sample": false
+    },
+    {
+      "key": "M02_0a8f57e4183d1478a50b9e481615bd7e",
+      "profile": "M02",
+      "text": "Then we will find another way.",
+      "file": "M02_0a8f57e4183d1478a50b9e481615bd7e.wav",
+      "sample": false
+    },
+    {
+      "key": "M02_f0f31e5be424013171e0887e83f1c335",
+      "profile": "M02",
+      "text": "We survive by looking after each other. What do you need?",
+      "file": "M02_f0f31e5be424013171e0887e83f1c335.wav",
+      "sample": false
+    },
+    {
+      "key": "M03_cc976d7d8a118ee26407e2a5ab26847d",
+      "profile": "M03",
+      "text": "The roads are quiet. Stay close, and watch the rooftops.",
+      "file": "M03_cc976d7d8a118ee26407e2a5ab26847d.wav",
+      "sample": true
+    },
+    {
+      "key": "M03_c226ffbc9e2bd4a17c7edcb4b63928bd",
+      "profile": "M03",
+      "text": "Still with you. Keep your eyes on the street.",
+      "file": "M03_c226ffbc9e2bd4a17c7edcb4b63928bd.wav",
+      "sample": false
+    },
+    {
+      "key": "M03_b3707246319958253367243bd4e85372",
+      "profile": "M03",
+      "text": "Looking for work? We have contracts.",
+      "file": "M03_b3707246319958253367243bd4e85372.wav",
+      "sample": false
+    },
+    {
+      "key": "M03_aebaaac1c720e850793197e042c92c28",
+      "profile": "M03",
+      "text": "Supplies for sale. Fair prices.",
+      "file": "M03_aebaaac1c720e850793197e042c92c28.wav",
+      "sample": false
+    },
+    {
+      "key": "M03_037280aab044e5cedb7a005d75d0d3e7",
+      "profile": "M03",
+      "text": "The clinic is open. Stay safe out there.",
+      "file": "M03_037280aab044e5cedb7a005d75d0d3e7.wav",
+      "sample": false
+    },
+    {
+      "key": "M03_0c29978ec9453c2aab4c395acd0251f3",
+      "profile": "M03",
+      "text": "Rain is coming. I can feel it.",
+      "file": "M03_0c29978ec9453c2aab4c395acd0251f3.wav",
+      "sample": false
+    },
+    {
+      "key": "M03_5e110ec140466f67ec07ecd2a4cb0925",
+      "profile": "M03",
+      "text": "Someone fixed the water pump.",
+      "file": "M03_5e110ec140466f67ec07ecd2a4cb0925.wav",
+      "sample": false
+    },
+    {
+      "key": "M03_654c15db366aa3b0e9048b706f133eb2",
+      "profile": "M03",
+      "text": "I used to live north of here.",
+      "file": "M03_654c15db366aa3b0e9048b706f133eb2.wav",
+      "sample": false
+    },
+    {
+      "key": "M03_277b106559996d381a36fadc55997ffd",
+      "profile": "M03",
+      "text": "Need another pair of hands?",
+      "file": "M03_277b106559996d381a36fadc55997ffd.wav",
+      "sample": false
+    },
+    {
+      "key": "M03_eb14c570664d9118501fc335f3db9a0d",
+      "profile": "M03",
+      "text": "I am hit. Give me a moment!",
+      "file": "M03_eb14c570664d9118501fc335f3db9a0d.wav",
+      "sample": false
+    },
+    {
+      "key": "M03_22905fdc3eed8a2170c7227af9183551",
+      "profile": "M03",
+      "text": "Hostile in town! Take cover!",
+      "file": "M03_22905fdc3eed8a2170c7227af9183551.wav",
+      "sample": false
+    },
+    {
+      "key": "M03_f94d82c1ef17348ce3ec6572f38e677d",
+      "profile": "M03",
+      "text": "There you are!",
+      "file": "M03_f94d82c1ef17348ce3ec6572f38e677d.wav",
+      "sample": false
+    },
+    {
+      "key": "M03_0093ec2cea7f80169c854476a64fe75f",
+      "profile": "M03",
+      "text": "You cannot hide forever!",
+      "file": "M03_0093ec2cea7f80169c854476a64fe75f.wav",
+      "sample": false
+    },
+    {
+      "key": "M03_45011a1159396607e732e562ebe2677e",
+      "profile": "M03",
+      "text": "Keep them pinned down!",
+      "file": "M03_45011a1159396607e732e562ebe2677e.wav",
+      "sample": false
+    },
+    {
+      "key": "M03_ec585771aac5bc8fafa5093250ebb7ff",
+      "profile": "M03",
+      "text": "Moving up! Cover me!",
+      "file": "M03_ec585771aac5bc8fafa5093250ebb7ff.wav",
+      "sample": false
+    },
+    {
+      "key": "M03_1255983cb5d038cf6546dc07a10d0c73",
+      "profile": "M03",
+      "text": "You picked the wrong fight!",
+      "file": "M03_1255983cb5d038cf6546dc07a10d0c73.wav",
+      "sample": false
+    },
+    {
+      "key": "M03_e93ad42b18c46e6adab4f250f9cb15c9",
+      "profile": "M03",
+      "text": "Over here. Could use a hand.",
+      "file": "M03_e93ad42b18c46e6adab4f250f9cb15c9.wav",
+      "sample": false
+    },
+    {
+      "key": "M03_7df26d5591a8e5c2dec26e53809f3164",
+      "profile": "M03",
+      "text": "Thank you. We will remember this.",
+      "file": "M03_7df26d5591a8e5c2dec26e53809f3164.wav",
+      "sample": false
+    },
+    {
+      "key": "M03_0a8f57e4183d1478a50b9e481615bd7e",
+      "profile": "M03",
+      "text": "Then we will find another way.",
+      "file": "M03_0a8f57e4183d1478a50b9e481615bd7e.wav",
+      "sample": false
+    },
+    {
+      "key": "M03_f0f31e5be424013171e0887e83f1c335",
+      "profile": "M03",
+      "text": "We survive by looking after each other. What do you need?",
+      "file": "M03_f0f31e5be424013171e0887e83f1c335.wav",
+      "sample": false
+    },
+    {
+      "key": "F01_cc976d7d8a118ee26407e2a5ab26847d",
+      "profile": "F01",
+      "text": "The roads are quiet. Stay close, and watch the rooftops.",
+      "file": "F01_cc976d7d8a118ee26407e2a5ab26847d.wav",
+      "sample": true
+    },
+    {
+      "key": "F01_c226ffbc9e2bd4a17c7edcb4b63928bd",
+      "profile": "F01",
+      "text": "Still with you. Keep your eyes on the street.",
+      "file": "F01_c226ffbc9e2bd4a17c7edcb4b63928bd.wav",
+      "sample": false
+    },
+    {
+      "key": "F01_b3707246319958253367243bd4e85372",
+      "profile": "F01",
+      "text": "Looking for work? We have contracts.",
+      "file": "F01_b3707246319958253367243bd4e85372.wav",
+      "sample": false
+    },
+    {
+      "key": "F01_aebaaac1c720e850793197e042c92c28",
+      "profile": "F01",
+      "text": "Supplies for sale. Fair prices.",
+      "file": "F01_aebaaac1c720e850793197e042c92c28.wav",
+      "sample": false
+    },
+    {
+      "key": "F01_037280aab044e5cedb7a005d75d0d3e7",
+      "profile": "F01",
+      "text": "The clinic is open. Stay safe out there.",
+      "file": "F01_037280aab044e5cedb7a005d75d0d3e7.wav",
+      "sample": false
+    },
+    {
+      "key": "F01_0c29978ec9453c2aab4c395acd0251f3",
+      "profile": "F01",
+      "text": "Rain is coming. I can feel it.",
+      "file": "F01_0c29978ec9453c2aab4c395acd0251f3.wav",
+      "sample": false
+    },
+    {
+      "key": "F01_5e110ec140466f67ec07ecd2a4cb0925",
+      "profile": "F01",
+      "text": "Someone fixed the water pump.",
+      "file": "F01_5e110ec140466f67ec07ecd2a4cb0925.wav",
+      "sample": false
+    },
+    {
+      "key": "F01_654c15db366aa3b0e9048b706f133eb2",
+      "profile": "F01",
+      "text": "I used to live north of here.",
+      "file": "F01_654c15db366aa3b0e9048b706f133eb2.wav",
+      "sample": false
+    },
+    {
+      "key": "F01_277b106559996d381a36fadc55997ffd",
+      "profile": "F01",
+      "text": "Need another pair of hands?",
+      "file": "F01_277b106559996d381a36fadc55997ffd.wav",
+      "sample": false
+    },
+    {
+      "key": "F01_eb14c570664d9118501fc335f3db9a0d",
+      "profile": "F01",
+      "text": "I am hit. Give me a moment!",
+      "file": "F01_eb14c570664d9118501fc335f3db9a0d.wav",
+      "sample": false
+    },
+    {
+      "key": "F01_22905fdc3eed8a2170c7227af9183551",
+      "profile": "F01",
+      "text": "Hostile in town! Take cover!",
+      "file": "F01_22905fdc3eed8a2170c7227af9183551.wav",
+      "sample": false
+    },
+    {
+      "key": "F01_f94d82c1ef17348ce3ec6572f38e677d",
+      "profile": "F01",
+      "text": "There you are!",
+      "file": "F01_f94d82c1ef17348ce3ec6572f38e677d.wav",
+      "sample": false
+    },
+    {
+      "key": "F01_0093ec2cea7f80169c854476a64fe75f",
+      "profile": "F01",
+      "text": "You cannot hide forever!",
+      "file": "F01_0093ec2cea7f80169c854476a64fe75f.wav",
+      "sample": false
+    },
+    {
+      "key": "F01_45011a1159396607e732e562ebe2677e",
+      "profile": "F01",
+      "text": "Keep them pinned down!",
+      "file": "F01_45011a1159396607e732e562ebe2677e.wav",
+      "sample": false
+    },
+    {
+      "key": "F01_ec585771aac5bc8fafa5093250ebb7ff",
+      "profile": "F01",
+      "text": "Moving up! Cover me!",
+      "file": "F01_ec585771aac5bc8fafa5093250ebb7ff.wav",
+      "sample": false
+    },
+    {
+      "key": "F01_1255983cb5d038cf6546dc07a10d0c73",
+      "profile": "F01",
+      "text": "You picked the wrong fight!",
+      "file": "F01_1255983cb5d038cf6546dc07a10d0c73.wav",
+      "sample": false
+    },
+    {
+      "key": "F01_e93ad42b18c46e6adab4f250f9cb15c9",
+      "profile": "F01",
+      "text": "Over here. Could use a hand.",
+      "file": "F01_e93ad42b18c46e6adab4f250f9cb15c9.wav",
+      "sample": false
+    },
+    {
+      "key": "F01_7df26d5591a8e5c2dec26e53809f3164",
+      "profile": "F01",
+      "text": "Thank you. We will remember this.",
+      "file": "F01_7df26d5591a8e5c2dec26e53809f3164.wav",
+      "sample": false
+    },
+    {
+      "key": "F01_0a8f57e4183d1478a50b9e481615bd7e",
+      "profile": "F01",
+      "text": "Then we will find another way.",
+      "file": "F01_0a8f57e4183d1478a50b9e481615bd7e.wav",
+      "sample": false
+    },
+    {
+      "key": "F01_f0f31e5be424013171e0887e83f1c335",
+      "profile": "F01",
+      "text": "We survive by looking after each other. What do you need?",
+      "file": "F01_f0f31e5be424013171e0887e83f1c335.wav",
+      "sample": false
+    },
+    {
+      "key": "F02_cc976d7d8a118ee26407e2a5ab26847d",
+      "profile": "F02",
+      "text": "The roads are quiet. Stay close, and watch the rooftops.",
+      "file": "F02_cc976d7d8a118ee26407e2a5ab26847d.wav",
+      "sample": true
+    },
+    {
+      "key": "F02_c226ffbc9e2bd4a17c7edcb4b63928bd",
+      "profile": "F02",
+      "text": "Still with you. Keep your eyes on the street.",
+      "file": "F02_c226ffbc9e2bd4a17c7edcb4b63928bd.wav",
+      "sample": false
+    },
+    {
+      "key": "F02_b3707246319958253367243bd4e85372",
+      "profile": "F02",
+      "text": "Looking for work? We have contracts.",
+      "file": "F02_b3707246319958253367243bd4e85372.wav",
+      "sample": false
+    },
+    {
+      "key": "F02_aebaaac1c720e850793197e042c92c28",
+      "profile": "F02",
+      "text": "Supplies for sale. Fair prices.",
+      "file": "F02_aebaaac1c720e850793197e042c92c28.wav",
+      "sample": false
+    },
+    {
+      "key": "F02_037280aab044e5cedb7a005d75d0d3e7",
+      "profile": "F02",
+      "text": "The clinic is open. Stay safe out there.",
+      "file": "F02_037280aab044e5cedb7a005d75d0d3e7.wav",
+      "sample": false
+    },
+    {
+      "key": "F02_0c29978ec9453c2aab4c395acd0251f3",
+      "profile": "F02",
+      "text": "Rain is coming. I can feel it.",
+      "file": "F02_0c29978ec9453c2aab4c395acd0251f3.wav",
+      "sample": false
+    },
+    {
+      "key": "F02_5e110ec140466f67ec07ecd2a4cb0925",
+      "profile": "F02",
+      "text": "Someone fixed the water pump.",
+      "file": "F02_5e110ec140466f67ec07ecd2a4cb0925.wav",
+      "sample": false
+    },
+    {
+      "key": "F02_654c15db366aa3b0e9048b706f133eb2",
+      "profile": "F02",
+      "text": "I used to live north of here.",
+      "file": "F02_654c15db366aa3b0e9048b706f133eb2.wav",
+      "sample": false
+    },
+    {
+      "key": "F02_277b106559996d381a36fadc55997ffd",
+      "profile": "F02",
+      "text": "Need another pair of hands?",
+      "file": "F02_277b106559996d381a36fadc55997ffd.wav",
+      "sample": false
+    },
+    {
+      "key": "F02_eb14c570664d9118501fc335f3db9a0d",
+      "profile": "F02",
+      "text": "I am hit. Give me a moment!",
+      "file": "F02_eb14c570664d9118501fc335f3db9a0d.wav",
+      "sample": false
+    },
+    {
+      "key": "F02_22905fdc3eed8a2170c7227af9183551",
+      "profile": "F02",
+      "text": "Hostile in town! Take cover!",
+      "file": "F02_22905fdc3eed8a2170c7227af9183551.wav",
+      "sample": false
+    },
+    {
+      "key": "F02_f94d82c1ef17348ce3ec6572f38e677d",
+      "profile": "F02",
+      "text": "There you are!",
+      "file": "F02_f94d82c1ef17348ce3ec6572f38e677d.wav",
+      "sample": false
+    },
+    {
+      "key": "F02_0093ec2cea7f80169c854476a64fe75f",
+      "profile": "F02",
+      "text": "You cannot hide forever!",
+      "file": "F02_0093ec2cea7f80169c854476a64fe75f.wav",
+      "sample": false
+    },
+    {
+      "key": "F02_45011a1159396607e732e562ebe2677e",
+      "profile": "F02",
+      "text": "Keep them pinned down!",
+      "file": "F02_45011a1159396607e732e562ebe2677e.wav",
+      "sample": false
+    },
+    {
+      "key": "F02_ec585771aac5bc8fafa5093250ebb7ff",
+      "profile": "F02",
+      "text": "Moving up! Cover me!",
+      "file": "F02_ec585771aac5bc8fafa5093250ebb7ff.wav",
+      "sample": false
+    },
+    {
+      "key": "F02_1255983cb5d038cf6546dc07a10d0c73",
+      "profile": "F02",
+      "text": "You picked the wrong fight!",
+      "file": "F02_1255983cb5d038cf6546dc07a10d0c73.wav",
+      "sample": false
+    },
+    {
+      "key": "F02_e93ad42b18c46e6adab4f250f9cb15c9",
+      "profile": "F02",
+      "text": "Over here. Could use a hand.",
+      "file": "F02_e93ad42b18c46e6adab4f250f9cb15c9.wav",
+      "sample": false
+    },
+    {
+      "key": "F02_7df26d5591a8e5c2dec26e53809f3164",
+      "profile": "F02",
+      "text": "Thank you. We will remember this.",
+      "file": "F02_7df26d5591a8e5c2dec26e53809f3164.wav",
+      "sample": false
+    },
+    {
+      "key": "F02_0a8f57e4183d1478a50b9e481615bd7e",
+      "profile": "F02",
+      "text": "Then we will find another way.",
+      "file": "F02_0a8f57e4183d1478a50b9e481615bd7e.wav",
+      "sample": false
+    },
+    {
+      "key": "F02_f0f31e5be424013171e0887e83f1c335",
+      "profile": "F02",
+      "text": "We survive by looking after each other. What do you need?",
+      "file": "F02_f0f31e5be424013171e0887e83f1c335.wav",
+      "sample": false
+    },
+    {
+      "key": "F03_cc976d7d8a118ee26407e2a5ab26847d",
+      "profile": "F03",
+      "text": "The roads are quiet. Stay close, and watch the rooftops.",
+      "file": "F03_cc976d7d8a118ee26407e2a5ab26847d.wav",
+      "sample": true
+    },
+    {
+      "key": "F03_c226ffbc9e2bd4a17c7edcb4b63928bd",
+      "profile": "F03",
+      "text": "Still with you. Keep your eyes on the street.",
+      "file": "F03_c226ffbc9e2bd4a17c7edcb4b63928bd.wav",
+      "sample": false
+    },
+    {
+      "key": "F03_b3707246319958253367243bd4e85372",
+      "profile": "F03",
+      "text": "Looking for work? We have contracts.",
+      "file": "F03_b3707246319958253367243bd4e85372.wav",
+      "sample": false
+    },
+    {
+      "key": "F03_aebaaac1c720e850793197e042c92c28",
+      "profile": "F03",
+      "text": "Supplies for sale. Fair prices.",
+      "file": "F03_aebaaac1c720e850793197e042c92c28.wav",
+      "sample": false
+    },
+    {
+      "key": "F03_037280aab044e5cedb7a005d75d0d3e7",
+      "profile": "F03",
+      "text": "The clinic is open. Stay safe out there.",
+      "file": "F03_037280aab044e5cedb7a005d75d0d3e7.wav",
+      "sample": false
+    },
+    {
+      "key": "F03_0c29978ec9453c2aab4c395acd0251f3",
+      "profile": "F03",
+      "text": "Rain is coming. I can feel it.",
+      "file": "F03_0c29978ec9453c2aab4c395acd0251f3.wav",
+      "sample": false
+    },
+    {
+      "key": "F03_5e110ec140466f67ec07ecd2a4cb0925",
+      "profile": "F03",
+      "text": "Someone fixed the water pump.",
+      "file": "F03_5e110ec140466f67ec07ecd2a4cb0925.wav",
+      "sample": false
+    },
+    {
+      "key": "F03_654c15db366aa3b0e9048b706f133eb2",
+      "profile": "F03",
+      "text": "I used to live north of here.",
+      "file": "F03_654c15db366aa3b0e9048b706f133eb2.wav",
+      "sample": false
+    },
+    {
+      "key": "F03_277b106559996d381a36fadc55997ffd",
+      "profile": "F03",
+      "text": "Need another pair of hands?",
+      "file": "F03_277b106559996d381a36fadc55997ffd.wav",
+      "sample": false
+    },
+    {
+      "key": "F03_eb14c570664d9118501fc335f3db9a0d",
+      "profile": "F03",
+      "text": "I am hit. Give me a moment!",
+      "file": "F03_eb14c570664d9118501fc335f3db9a0d.wav",
+      "sample": false
+    },
+    {
+      "key": "F03_22905fdc3eed8a2170c7227af9183551",
+      "profile": "F03",
+      "text": "Hostile in town! Take cover!",
+      "file": "F03_22905fdc3eed8a2170c7227af9183551.wav",
+      "sample": false
+    },
+    {
+      "key": "F03_f94d82c1ef17348ce3ec6572f38e677d",
+      "profile": "F03",
+      "text": "There you are!",
+      "file": "F03_f94d82c1ef17348ce3ec6572f38e677d.wav",
+      "sample": false
+    },
+    {
+      "key": "F03_0093ec2cea7f80169c854476a64fe75f",
+      "profile": "F03",
+      "text": "You cannot hide forever!",
+      "file": "F03_0093ec2cea7f80169c854476a64fe75f.wav",
+      "sample": false
+    },
+    {
+      "key": "F03_45011a1159396607e732e562ebe2677e",
+      "profile": "F03",
+      "text": "Keep them pinned down!",
+      "file": "F03_45011a1159396607e732e562ebe2677e.wav",
+      "sample": false
+    },
+    {
+      "key": "F03_ec585771aac5bc8fafa5093250ebb7ff",
+      "profile": "F03",
+      "text": "Moving up! Cover me!",
+      "file": "F03_ec585771aac5bc8fafa5093250ebb7ff.wav",
+      "sample": false
+    },
+    {
+      "key": "F03_1255983cb5d038cf6546dc07a10d0c73",
+      "profile": "F03",
+      "text": "You picked the wrong fight!",
+      "file": "F03_1255983cb5d038cf6546dc07a10d0c73.wav",
+      "sample": false
+    },
+    {
+      "key": "F03_e93ad42b18c46e6adab4f250f9cb15c9",
+      "profile": "F03",
+      "text": "Over here. Could use a hand.",
+      "file": "F03_e93ad42b18c46e6adab4f250f9cb15c9.wav",
+      "sample": false
+    },
+    {
+      "key": "F03_7df26d5591a8e5c2dec26e53809f3164",
+      "profile": "F03",
+      "text": "Thank you. We will remember this.",
+      "file": "F03_7df26d5591a8e5c2dec26e53809f3164.wav",
+      "sample": false
+    },
+    {
+      "key": "F03_0a8f57e4183d1478a50b9e481615bd7e",
+      "profile": "F03",
+      "text": "Then we will find another way.",
+      "file": "F03_0a8f57e4183d1478a50b9e481615bd7e.wav",
+      "sample": false
+    },
+    {
+      "key": "F03_f0f31e5be424013171e0887e83f1c335",
+      "profile": "F03",
+      "text": "We survive by looking after each other. What do you need?",
+      "file": "F03_f0f31e5be424013171e0887e83f1c335.wav",
+      "sample": false
+    },
+    {
+      "key": "M01_ae64a9f41090cbc9eecc20ce8a4b0e39",
+      "profile": "M01",
+      "text": "You picked the wrong people.",
+      "file": "M01_ae64a9f41090cbc9eecc20ce8a4b0e39.wav",
+      "sample": false
+    },
+    {
+      "key": "M01_13ada153e4798758ebfb4226d1cbba3f",
+      "profile": "M01",
+      "text": "Stay close. We are not done yet.",
+      "file": "M01_13ada153e4798758ebfb4226d1cbba3f.wav",
+      "sample": false
+    },
+    {
+      "key": "M01_fcf668b1b00e1e151bb92ca683c81a2b",
+      "profile": "M01",
+      "text": "Would you sit with me a moment?",
+      "file": "M01_fcf668b1b00e1e151bb92ca683c81a2b.wav",
+      "sample": false
+    },
+    {
+      "key": "M01_2afe01b9c8372855494e329c35fa9572",
+      "profile": "M01",
+      "text": "We came back for you. Keep moving!",
+      "file": "M01_2afe01b9c8372855494e329c35fa9572.wav",
+      "sample": false
+    },
+    {
+      "key": "M01_7cc1a88e1aac392998e056b5cdfa43ea",
+      "profile": "M01",
+      "text": "I'm here. Finish what we started.",
+      "file": "M01_7cc1a88e1aac392998e056b5cdfa43ea.wav",
+      "sample": false
+    },
+    {
+      "key": "M01_87a0394a0c2481e3599e5e7090ac8cbc",
+      "profile": "M01",
+      "text": "The pharmacy cabinet. Please take what you need.",
+      "file": "M01_87a0394a0c2481e3599e5e7090ac8cbc.wav",
+      "sample": false
+    },
+    {
+      "key": "M01_06817ca7b958f4c823f5b040142673f8",
+      "profile": "M01",
+      "text": "Over here. I cannot stop the bleeding.",
+      "file": "M01_06817ca7b958f4c823f5b040142673f8.wav",
+      "sample": false
+    },
+    {
+      "key": "M01_24579fdc88a291cd4c2913f2fa169c0b",
+      "profile": "M01",
+      "text": "Six active contracts at a time. Deliver supplies here, and return when your work is finished.",
+      "file": "M01_24579fdc88a291cd4c2913f2fa169c0b.wav",
+      "sample": false
+    },
+    {
+      "key": "M02_ae64a9f41090cbc9eecc20ce8a4b0e39",
+      "profile": "M02",
+      "text": "You picked the wrong people.",
+      "file": "M02_ae64a9f41090cbc9eecc20ce8a4b0e39.wav",
+      "sample": false
+    },
+    {
+      "key": "M02_13ada153e4798758ebfb4226d1cbba3f",
+      "profile": "M02",
+      "text": "Stay close. We are not done yet.",
+      "file": "M02_13ada153e4798758ebfb4226d1cbba3f.wav",
+      "sample": false
+    },
+    {
+      "key": "M02_fcf668b1b00e1e151bb92ca683c81a2b",
+      "profile": "M02",
+      "text": "Would you sit with me a moment?",
+      "file": "M02_fcf668b1b00e1e151bb92ca683c81a2b.wav",
+      "sample": false
+    },
+    {
+      "key": "M02_2afe01b9c8372855494e329c35fa9572",
+      "profile": "M02",
+      "text": "We came back for you. Keep moving!",
+      "file": "M02_2afe01b9c8372855494e329c35fa9572.wav",
+      "sample": false
+    },
+    {
+      "key": "M02_7cc1a88e1aac392998e056b5cdfa43ea",
+      "profile": "M02",
+      "text": "I'm here. Finish what we started.",
+      "file": "M02_7cc1a88e1aac392998e056b5cdfa43ea.wav",
+      "sample": false
+    },
+    {
+      "key": "M02_87a0394a0c2481e3599e5e7090ac8cbc",
+      "profile": "M02",
+      "text": "The pharmacy cabinet. Please take what you need.",
+      "file": "M02_87a0394a0c2481e3599e5e7090ac8cbc.wav",
+      "sample": false
+    },
+    {
+      "key": "M02_06817ca7b958f4c823f5b040142673f8",
+      "profile": "M02",
+      "text": "Over here. I cannot stop the bleeding.",
+      "file": "M02_06817ca7b958f4c823f5b040142673f8.wav",
+      "sample": false
+    },
+    {
+      "key": "M02_24579fdc88a291cd4c2913f2fa169c0b",
+      "profile": "M02",
+      "text": "Six active contracts at a time. Deliver supplies here, and return when your work is finished.",
+      "file": "M02_24579fdc88a291cd4c2913f2fa169c0b.wav",
+      "sample": false
+    },
+    {
+      "key": "M03_ae64a9f41090cbc9eecc20ce8a4b0e39",
+      "profile": "M03",
+      "text": "You picked the wrong people.",
+      "file": "M03_ae64a9f41090cbc9eecc20ce8a4b0e39.wav",
+      "sample": false
+    },
+    {
+      "key": "M03_13ada153e4798758ebfb4226d1cbba3f",
+      "profile": "M03",
+      "text": "Stay close. We are not done yet.",
+      "file": "M03_13ada153e4798758ebfb4226d1cbba3f.wav",
+      "sample": false
+    },
+    {
+      "key": "M03_fcf668b1b00e1e151bb92ca683c81a2b",
+      "profile": "M03",
+      "text": "Would you sit with me a moment?",
+      "file": "M03_fcf668b1b00e1e151bb92ca683c81a2b.wav",
+      "sample": false
+    },
+    {
+      "key": "M03_2afe01b9c8372855494e329c35fa9572",
+      "profile": "M03",
+      "text": "We came back for you. Keep moving!",
+      "file": "M03_2afe01b9c8372855494e329c35fa9572.wav",
+      "sample": false
+    },
+    {
+      "key": "M03_7cc1a88e1aac392998e056b5cdfa43ea",
+      "profile": "M03",
+      "text": "I'm here. Finish what we started.",
+      "file": "M03_7cc1a88e1aac392998e056b5cdfa43ea.wav",
+      "sample": false
+    },
+    {
+      "key": "M03_87a0394a0c2481e3599e5e7090ac8cbc",
+      "profile": "M03",
+      "text": "The pharmacy cabinet. Please take what you need.",
+      "file": "M03_87a0394a0c2481e3599e5e7090ac8cbc.wav",
+      "sample": false
+    },
+    {
+      "key": "M03_06817ca7b958f4c823f5b040142673f8",
+      "profile": "M03",
+      "text": "Over here. I cannot stop the bleeding.",
+      "file": "M03_06817ca7b958f4c823f5b040142673f8.wav",
+      "sample": false
+    },
+    {
+      "key": "M03_24579fdc88a291cd4c2913f2fa169c0b",
+      "profile": "M03",
+      "text": "Six active contracts at a time. Deliver supplies here, and return when your work is finished.",
+      "file": "M03_24579fdc88a291cd4c2913f2fa169c0b.wav",
+      "sample": false
+    },
+    {
+      "key": "F01_ae64a9f41090cbc9eecc20ce8a4b0e39",
+      "profile": "F01",
+      "text": "You picked the wrong people.",
+      "file": "F01_ae64a9f41090cbc9eecc20ce8a4b0e39.wav",
+      "sample": false
+    },
+    {
+      "key": "F01_13ada153e4798758ebfb4226d1cbba3f",
+      "profile": "F01",
+      "text": "Stay close. We are not done yet.",
+      "file": "F01_13ada153e4798758ebfb4226d1cbba3f.wav",
+      "sample": false
+    },
+    {
+      "key": "F01_fcf668b1b00e1e151bb92ca683c81a2b",
+      "profile": "F01",
+      "text": "Would you sit with me a moment?",
+      "file": "F01_fcf668b1b00e1e151bb92ca683c81a2b.wav",
+      "sample": false
+    },
+    {
+      "key": "F01_2afe01b9c8372855494e329c35fa9572",
+      "profile": "F01",
+      "text": "We came back for you. Keep moving!",
+      "file": "F01_2afe01b9c8372855494e329c35fa9572.wav",
+      "sample": false
+    },
+    {
+      "key": "F01_7cc1a88e1aac392998e056b5cdfa43ea",
+      "profile": "F01",
+      "text": "I'm here. Finish what we started.",
+      "file": "F01_7cc1a88e1aac392998e056b5cdfa43ea.wav",
+      "sample": false
+    },
+    {
+      "key": "F01_87a0394a0c2481e3599e5e7090ac8cbc",
+      "profile": "F01",
+      "text": "The pharmacy cabinet. Please take what you need.",
+      "file": "F01_87a0394a0c2481e3599e5e7090ac8cbc.wav",
+      "sample": false
+    },
+    {
+      "key": "F01_06817ca7b958f4c823f5b040142673f8",
+      "profile": "F01",
+      "text": "Over here. I cannot stop the bleeding.",
+      "file": "F01_06817ca7b958f4c823f5b040142673f8.wav",
+      "sample": false
+    },
+    {
+      "key": "F01_24579fdc88a291cd4c2913f2fa169c0b",
+      "profile": "F01",
+      "text": "Six active contracts at a time. Deliver supplies here, and return when your work is finished.",
+      "file": "F01_24579fdc88a291cd4c2913f2fa169c0b.wav",
+      "sample": false
+    },
+    {
+      "key": "F02_ae64a9f41090cbc9eecc20ce8a4b0e39",
+      "profile": "F02",
+      "text": "You picked the wrong people.",
+      "file": "F02_ae64a9f41090cbc9eecc20ce8a4b0e39.wav",
+      "sample": false
+    },
+    {
+      "key": "F02_13ada153e4798758ebfb4226d1cbba3f",
+      "profile": "F02",
+      "text": "Stay close. We are not done yet.",
+      "file": "F02_13ada153e4798758ebfb4226d1cbba3f.wav",
+      "sample": false
+    },
+    {
+      "key": "F02_fcf668b1b00e1e151bb92ca683c81a2b",
+      "profile": "F02",
+      "text": "Would you sit with me a moment?",
+      "file": "F02_fcf668b1b00e1e151bb92ca683c81a2b.wav",
+      "sample": false
+    },
+    {
+      "key": "F02_2afe01b9c8372855494e329c35fa9572",
+      "profile": "F02",
+      "text": "We came back for you. Keep moving!",
+      "file": "F02_2afe01b9c8372855494e329c35fa9572.wav",
+      "sample": false
+    },
+    {
+      "key": "F02_7cc1a88e1aac392998e056b5cdfa43ea",
+      "profile": "F02",
+      "text": "I'm here. Finish what we started.",
+      "file": "F02_7cc1a88e1aac392998e056b5cdfa43ea.wav",
+      "sample": false
+    },
+    {
+      "key": "F02_87a0394a0c2481e3599e5e7090ac8cbc",
+      "profile": "F02",
+      "text": "The pharmacy cabinet. Please take what you need.",
+      "file": "F02_87a0394a0c2481e3599e5e7090ac8cbc.wav",
+      "sample": false
+    },
+    {
+      "key": "F02_06817ca7b958f4c823f5b040142673f8",
+      "profile": "F02",
+      "text": "Over here. I cannot stop the bleeding.",
+      "file": "F02_06817ca7b958f4c823f5b040142673f8.wav",
+      "sample": false
+    },
+    {
+      "key": "F02_24579fdc88a291cd4c2913f2fa169c0b",
+      "profile": "F02",
+      "text": "Six active contracts at a time. Deliver supplies here, and return when your work is finished.",
+      "file": "F02_24579fdc88a291cd4c2913f2fa169c0b.wav",
+      "sample": false
+    },
+    {
+      "key": "F03_ae64a9f41090cbc9eecc20ce8a4b0e39",
+      "profile": "F03",
+      "text": "You picked the wrong people.",
+      "file": "F03_ae64a9f41090cbc9eecc20ce8a4b0e39.wav",
+      "sample": false
+    },
+    {
+      "key": "F03_13ada153e4798758ebfb4226d1cbba3f",
+      "profile": "F03",
+      "text": "Stay close. We are not done yet.",
+      "file": "F03_13ada153e4798758ebfb4226d1cbba3f.wav",
+      "sample": false
+    },
+    {
+      "key": "F03_fcf668b1b00e1e151bb92ca683c81a2b",
+      "profile": "F03",
+      "text": "Would you sit with me a moment?",
+      "file": "F03_fcf668b1b00e1e151bb92ca683c81a2b.wav",
+      "sample": false
+    },
+    {
+      "key": "F03_2afe01b9c8372855494e329c35fa9572",
+      "profile": "F03",
+      "text": "We came back for you. Keep moving!",
+      "file": "F03_2afe01b9c8372855494e329c35fa9572.wav",
+      "sample": false
+    },
+    {
+      "key": "F03_7cc1a88e1aac392998e056b5cdfa43ea",
+      "profile": "F03",
+      "text": "I'm here. Finish what we started.",
+      "file": "F03_7cc1a88e1aac392998e056b5cdfa43ea.wav",
+      "sample": false
+    },
+    {
+      "key": "F03_87a0394a0c2481e3599e5e7090ac8cbc",
+      "profile": "F03",
+      "text": "The pharmacy cabinet. Please take what you need.",
+      "file": "F03_87a0394a0c2481e3599e5e7090ac8cbc.wav",
+      "sample": false
+    },
+    {
+      "key": "F03_06817ca7b958f4c823f5b040142673f8",
+      "profile": "F03",
+      "text": "Over here. I cannot stop the bleeding.",
+      "file": "F03_06817ca7b958f4c823f5b040142673f8.wav",
+      "sample": false
+    },
+    {
+      "key": "F03_24579fdc88a291cd4c2913f2fa169c0b",
+      "profile": "F03",
+      "text": "Six active contracts at a time. Deliver supplies here, and return when your work is finished.",
+      "file": "F03_24579fdc88a291cd4c2913f2fa169c0b.wav",
+      "sample": false
+    }
+  ]
+}

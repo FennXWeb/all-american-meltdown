@@ -1,6 +1,6 @@
 # Version control
 
-GitHub repository: https://github.com/FennXWeb/all-american-meltdown (private).
+GitHub repository: https://github.com/FennXWeb/all-american-meltdown (public as verified October 7, 2026).
 Default branch: `main`.
 
 Install Git and Git LFS before cloning:
@@ -21,4 +21,4 @@ git commit -m "Describe the change"
 git push
 ```
 
-Use a branch for larger changes (`git switch -c feature/name`). Binary Unreal assets cannot be merged like code; coordinate edits when collaborating. Open the `.uproject` with Unreal Engine 5.8 after cloning and regenerate local project/build files as needed. No automatic packaging or build workflow is configured.
+Use a branch for larger changes (`git switch -c codex/name`). Binary Unreal assets cannot be merged like code; coordinate edits when collaborating. Open the `.uproject` with Unreal Engine 5.8 after cloning and regenerate local project/build files as needed. `Tools/PackageSMOG.ps1` creates an explicitly requested Windows Shipping release; no recurring or automatic publication is configured. See [SMOG release instructions](SMOG/Release.md).

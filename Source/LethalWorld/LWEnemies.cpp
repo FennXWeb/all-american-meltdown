@@ -1,4 +1,6 @@
 #include "LWVoice44.h"
+#include "LWDialogue59.h"
+#include "LWResident.h"
 #include "LWWeaponEffect.h"
 #include "LWZombie.h"
 #include "LWNPCLife.h"
@@ -15,11 +17,11 @@
 
 void ALWZombie::ConfigureKind(ELWEnemyKind K)
 {
-    Kind=K;if(int(K)>=9){ConfigureBoss();return;}if(!World||K==ELWEnemyKind::Zombie)return;if(uint8(K)>=4){ConfigureCreature();return;}
+    Kind=K;if(int(K)>=12){Configure57();return;}if(int(K)>=9){ConfigureBoss();return;}if(!World||K==ELWEnemyKind::Zombie)return;if(uint8(K)>=4){ConfigureCreature();return;}
     const TCHAR* Prefix=K==ELWEnemyKind::Raider?TEXT("Raider"):K==ELWEnemyKind::Dog?TEXT("Dog"):TEXT("Mannequin");
     const TCHAR* Suffix[]={TEXT("Torso"),TEXT("Head"),TEXT("Pelvis"),TEXT("Arm"),TEXT("Arm"),TEXT("Leg"),TEXT("Leg")};
-    for(int I=0;I<7;I++)Parts[I]->SetStaticMesh(World->Mesh(FName(*(FString(Prefix)+Suffix[I]+TEXT("32")))));
-    for(auto* C:GetComponentsByTag(UStaticMeshComponent::StaticClass(),TEXT("CharacterHair32")))C->DestroyComponent();
+    for(int I=0;I<7;I++)Parts[I]->SetStaticMesh(World->Mesh(FName(*(FString(Prefix)+Suffix[I]+(K==ELWEnemyKind::Mannequin&&(I==4||I==6)?TEXT("R32"):TEXT("32"))))));
+    for(auto* C:GetComponentsByTag(USceneComponent::StaticClass(),TEXT("CharacterHair32")))C->DestroyComponent();
     for(auto& C:Parts)C->EmptyOverrideMaterials();
     if(K==ELWEnemyKind::Mannequin)Parts[1]->SetRelativeLocation(FVector(0,0,91));
     if(K==ELWEnemyKind::Raider)LWAppearance::StyleNPC(this,Parts,FName(*FString::FromInt(PersistentId)),false,true);
@@ -71,7 +73,7 @@ void ALWZombie::TickVariant(float Dt,ALWCharacter* P)
         else Alert=FMath::Max(0.f,Alert-Dt);
         if(Alert<=0){float T=GetWorld()->GetTimeSeconds();Interest=Home+FVector(FMath::Sin(T*.06)*450,FMath::Cos(T*.08)*450,0);}
     }
-    if(VoiceClock<=0){auto* VoiceAudio=World->Sound(LWVoice44::Enemy(Kind,Appearance35.Body),Here,.65f);if(LifeAnimation&&Kind==ELWEnemyKind::Raider)LifeAnimation->Speak(VoiceAudio,TEXT("..."));VoiceClock=Kind==ELWEnemyKind::Mannequin?4:7;}
+    if(VoiceClock<=0){if(Kind==ELWEnemyKind::Raider&&ULWDialogue59::Available()){const FName Group=ReloadClock>0||RaiderRounds<=0?TEXT("raider_reload"):Suppression54>.55f?TEXT("raider_suppressed"):HasVisual?TEXT("raider_combat"):TEXT("raider_search");auto* R=Cast<ALWResident>(this);ULWDialogue59::Channel(this)->Chatter75(R?R->ResidentId:FName(*FString::Printf(TEXT("enemy_%u"),PersistentId)),Appearance35.Body==1,R?FName(TEXT("settler_alarm")):Group,true);}else{auto* VoiceAudio=World->Sound(LWVoice44::Enemy(Kind,Appearance35.Body),Here,.65f);if(LifeAnimation&&Kind==ELWEnemyKind::Raider)LifeAnimation->Speak(VoiceAudio,TEXT("..."));}VoiceClock=Kind==ELWEnemyKind::Mannequin?4:7;}
     if(Stagger>0)return;
     if(Kind==ELWEnemyKind::Raider&&Alert>0&&See&&Dist<3800&&AttackCooldown<=0){
         if(RaiderRounds<=0){RaiderRounds=12;AttackCooldown=2.8f;World->Sound(TEXT("RifleMagIn"),Here);return;}

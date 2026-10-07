@@ -6,7 +6,7 @@ bool FLWGenerationTest::RunTest(const FString& Parameters)
 {
     TestEqual(TEXT("Negative chunk coordinate floors instead of truncating"),LWGen::ChunkAt(FVector2D(-1,-12801)),FIntPoint(-1,-2));
     TestEqual(TEXT("Exact chunk boundary"),LWGen::ChunkAt(FVector2D(12800,0)),FIntPoint(1,0));
-    for(int32 Seed:{0,198706,-97})for(FIntPoint Region:{FIntPoint(0,0),FIntPoint(-5,-8),FIntPoint(12000,9000)})
+    for(int32 Seed:{0,198706,-97})for(FIntPoint Region:{FIntPoint(0,0),FIntPoint(-5,-8),FIntPoint(-12000,9000)})
     {
         TArray<LWGen::FRoad> A,B;TArray<LWGen::FSite> SA,SB;
         LWGen::Region(Region,Seed,A,SA);LWGen::Region(Region,Seed,B,SB);

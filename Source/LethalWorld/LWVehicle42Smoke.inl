@@ -9,7 +9,7 @@ void ALWGameMode::BuildVehicle42Smoke(ALWCharacter& Initial){
    P.ClosePanels();P.GetCharacterMovement()->SetMovementMode(MOVE_Flying);
    const FVector At(20000,20000,5075);FLWVehicleRecord R;R.VIN=FGuid::NewGuid();R.Model=Model;R.Position=At;R.Unlocked=R.Hotwired=true;R.FuelLitres=35;R.FuelLootInitialized=true;
    const FName Id(*(FString(TEXT("qa42_"))+Model.ToString()));P.World->Vehicles.Add(Id,R);auto* C=Cast<ALWVehicle>(P.World->SpawnObject(ELWObjectKind::Car,Id,At));S->Car=C;if(!RequireV2(C!=nullptr,TEXT("vehicle spawned")))return;C->SetActorTickEnabled(false);C->SetActorLocation(At);
-   Check(C->Body->GetStaticMesh()->GetName()==FString(TEXT("SM_Vehicle42_"))+Model.ToString(),TEXT("new body model active"));
+   Check(C->Body->GetStaticMesh()->GetName()==(Model==TEXT("rv")?FString(TEXT("SM_RV66_Shell")):FString(TEXT("SM_Vehicle42_"))+Model.ToString()),TEXT("new body model active"));
    Check(C->GaugeNeedles42.Num()==(Model==TEXT("dirtbike")?2:4),TEXT("working instrument set present"));
    Check(C->Body->GetStaticMesh()->bAllowCPUAccess,TEXT("body supports persistent dents"));
    const float L=C->Spec().HalfLength;const FVector Eye=At+FVector(L*1.5f+150,-L*1.8f-150,C->Spec().Height*.9f+160);const FVector Look=At+FVector(0,0,C->Spec().Height*.42f-75);
@@ -31,7 +31,7 @@ void ALWGameMode::BuildVehicle42Smoke(ALWCharacter& Initial){
    C->Headlights=true;C->Signal=-1;C->SignalClock=0;C->TickInstruments42(.1f);Check(C->GaugeLamps42[0]->IsVisible()&&C->GaugeLamps42[1]->IsVisible(),TEXT("indicator and headlight telltales work"));
    if(Model!=TEXT("dirtbike")){C->Record()->FuelLitres=0;C->TickInstruments42(.1f);Check(FMath::Abs(C->GaugeNeedles42[2]->GetRelativeRotation().Roll-130)<1,TEXT("fuel needle reads empty"));C->Record()->FuelLitres=35;}
    if(Model==TEXT("rv")){
-    C->PlayerSeat=-2;C->CabinEye=FVector(LWTraffic::FrontOffset(C->Spec())-430,20,85);P.SeatYaw=90;P.SeatPitch=0;P.TickVehicleSeat();P.Camera->SetWorldRotation(FRotator(0,90,0));
+    C->PlayerSeat=-2;C->CabinEye=FVector(LWTraffic::FrontOffset(C->Spec())-474,20,85);P.SeatYaw=90;P.SeatPitch=0;P.TickVehicleSeat();P.Camera->SetWorldRotation(FRotator(0,90,0));
     Check(C->CamperFocus(&P)==TEXT("fridge"),TEXT("rebuilt RV fridge retains its interaction trace"));
     C->PlayerSeat=-1;P.SeatYaw=0;P.SeatPitch=-12;P.TickVehicleSeat();
    }

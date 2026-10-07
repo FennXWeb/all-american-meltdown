@@ -1,4 +1,5 @@
 #include "LWConsole47.h"
+#include "LWDebugMenu67.h"
 #include "LWCharacter.h"
 #include "LWWorld.h"
 #include "LWVehicle.h"
@@ -20,6 +21,7 @@ void ULWConsole47::Install(ALWCharacter* P){
  auto* V=P->GetWorld()->GetGameViewport();if(!Cast<ULWConsole47>(V->ViewportConsole)){if(GLog&&V->ViewportConsole)GLog->RemoveOutputDevice(V->ViewportConsole);V->ViewportConsole=NewObject<ULWConsole47>(V);V->ViewportConsole->OutputText(TEXT("ALL AMERICAN MELTDOWN // CONSOLE\nType help for cheats. Tilde or Escape closes the console."));}
 }
 bool ULWConsole47::InputKey(FInputDeviceId D,FKey K,EInputEvent E,float A,bool G){
+ if(auto* P=Player47();P&&P->bDebug67){if(K==EKeys::Tilde&&E==IE_Pressed&&P->DebugMenu67)P->DebugMenu67->Close();return true;}
  if(K==EKeys::Tilde){if(E==IE_Pressed){FakeGotoState(ConsoleActive()?NAME_None:FName(TEXT("Open")));bCaptureKeyInput=true;}return true;}
  return Super::InputKey(D,K,E,A,G);
 }
@@ -32,13 +34,17 @@ void ULWConsole47::FakeGotoState(FName Next){
 void ULWConsole47::AugmentRuntimeAutoCompleteList(TArray<FAutoCompleteCommand>& List){
  Super::AugmentRuntimeAutoCompleteList(List);
  auto Add=[&](FString C,FString D){FAutoCompleteCommand E;E.Command=C;E.Desc=D;List.Add(E);};
+ Add(TEXT("debugmenu"),TEXT("Open searchable cheat, item, NPC, vehicle and POI menu"));Add(TEXT("debug"),TEXT("Alias for debugmenu"));
  Add(TEXT("help"),TEXT("List game cheat commands"));Add(TEXT("money"),TEXT("money <amount>: add credits"));Add(TEXT("give"),TEXT("give <item_id> [count]: add items"));Add(TEXT("items"),TEXT("items [search]: find item IDs"));Add(TEXT("heal"),TEXT("Restore health, stamina, food and water"));Add(TEXT("xp"),TEXT("xp <amount>: gain experience"));Add(TEXT("skillpoints"),TEXT("skillpoints <amount>: add perk points"));Add(TEXT("god"),TEXT("god [on|off]: prevent damage"));Add(TEXT("time"),TEXT("time <0-23>: set world hour"));Add(TEXT("clear"),TEXT("Clear console output"));
+ Add(TEXT("spawnnpc"),TEXT("spawnnpc <type> [1-20]"));Add(TEXT("spawnvehicle"),TEXT("spawnvehicle <type>"));Add(TEXT("locate"),TEXT("locate <POI_type_or_id> [radius_km]"));Add(TEXT("npctypes"),TEXT("List NPC types"));Add(TEXT("vehicles"),TEXT("List vehicle IDs"));Add(TEXT("pois"),TEXT("List POI types"));
  for(const auto& D:LWItems::All47())Add(TEXT("give ")+D.Id.ToString(),D.DisplayName.ToString());
 }
 FString ULWConsole47::Execute47(const FString& Command){
  TArray<FString> A;Command.TrimStartAndEnd().ParseIntoArrayWS(A);if(A.IsEmpty())return FString();const FString C=A[0].ToLower();
- if(C==TEXT("help"))return TEXT("CHEAT COMMANDS\nmoney <amount>       Add credits (up to 1,000,000,000)\ngive <item_id> [count] Add items (1-1000; default 1)\nitems [search]       Find IDs by name, ID, or category\nheal                 Restore health, stamina, food, water\nxp <amount>          Gain up to 100,000 experience\nskillpoints <amount> Add up to 1,000 perk points\ngod [on|off]         Toggle damage immunity (session only)\ntime <0-23>          Set world hour\nclear                Clear output\nExamples: money 5000 | give medkit 5 | give ammo_357 60\nUp/Down: history. Tab: autocomplete. Tilde/Escape: close.\nInventory, credits and progression changes use normal saves.");
+ if(C==TEXT("debugmenu")||C==TEXT("debug")){if(A.Num()!=1)return TEXT("Usage: debugmenu");return ULWDebugMenu67::OpenFor(Player47());}
+ if(C==TEXT("help"))return TEXT("CHEAT COMMANDS\ndebugmenu           Open searchable debug menu (alias: debug)\nspawnnpc <type> [count]  Spawn NPCs (npctypes lists IDs)\nspawnvehicle <type>  Spawn vehicle (vehicles lists IDs)\nlocate <type_or_id> [km] Find nearest POI within radius; set waypoint\npois                List POI types and IDs\nmoney <amount>       Add credits (up to 1,000,000,000)\ngive <item_id> [count] Add items (1-1000; default 1)\nitems [search]       Find IDs by name, ID, or category\nheal                 Restore health, stamina, food, water\nxp <amount>          Gain up to 100,000 experience\nskillpoints <amount> Add up to 1,000 perk points\ngod [on|off]         Toggle damage immunity (session only)\ntime <0-23>          Set world hour\nclear                Clear output\nExamples: money 5000 | give medkit 5 | give ammo_357 60\nUp/Down: history. Tab: autocomplete. Tilde/Escape: close.\nInventory, credits and progression changes use normal saves.");
  if(C==TEXT("items")){FString Query=Command.TrimStartAndEnd().Mid(5).TrimStartAndEnd();FString Out;int N=0;for(const auto& D:LWItems::All47())if(Query.IsEmpty()||(D.Id.ToString()+TEXT(" ")+D.DisplayName.ToString()+TEXT(" ")+D.Category.ToString()).Contains(Query)){Out+=D.Id.ToString()+TEXT(" - ")+D.DisplayName.ToString()+TEXT("\n");++N;}return Out+FString::Printf(TEXT("%d matching items. Use give <item_id> [count]."),N);}
+ if(C==TEXT("spawnnpc")||C==TEXT("spawnvehicle")||C==TEXT("locate")||C==TEXT("npctypes")||C==TEXT("vehicles")||C==TEXT("pois"))return WorldCommand60(A);
  auto* P=Player47();if(!P||!P->bStarted||!P->World||P->OpeningMode||P->bWorldSetup)return TEXT("Start or load a game before using cheats.");
  if(P->Health<=0)return TEXT("Respawn before using cheats.");
  int64 N=0;
@@ -59,7 +65,7 @@ FString ULWConsole47::Execute47(const FString& Command){
 }
 void ULWConsole47::ConsoleCommand(const FString& Command){
  FString Trim=Command.TrimStartAndEnd();if(Trim.Equals(TEXT("clear"),ESearchCase::IgnoreCase)){ClearOutput();return;}
- TArray<FString> Words;Trim.ParseIntoArrayWS(Words);if(Words.IsEmpty())return;const TSet<FString> Commands={TEXT("help"),TEXT("money"),TEXT("addmoney"),TEXT("give"),TEXT("additem"),TEXT("items"),TEXT("heal"),TEXT("xp"),TEXT("skillpoints"),TEXT("god"),TEXT("time")};
+ TArray<FString> Words;Trim.ParseIntoArrayWS(Words);if(Words.IsEmpty())return;const TSet<FString> Commands={TEXT("debugmenu"),TEXT("debug"),TEXT("spawnnpc"),TEXT("spawnvehicle"),TEXT("locate"),TEXT("npctypes"),TEXT("vehicles"),TEXT("pois"),TEXT("help"),TEXT("money"),TEXT("addmoney"),TEXT("give"),TEXT("additem"),TEXT("items"),TEXT("heal"),TEXT("xp"),TEXT("skillpoints"),TEXT("god"),TEXT("time")};
  if(Commands.Contains(Words[0].ToLower())){OutputText(TEXT("> ")+Trim);OutputText(Execute47(Trim));}else Super::ConsoleCommand(Trim);
 }
 

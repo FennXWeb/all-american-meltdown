@@ -1,4 +1,5 @@
 #include "LWWorld.h"
+#include "LWCommunities84.h"
 #include "LWResident.h"
 #include "LWCharacter.h"
 #include "Components/StaticMeshComponent.h"
@@ -9,6 +10,7 @@
 #include "EngineUtils.h"
 #include "Kismet/GameplayStatics.h"
 void ALWWorld::SpawnSettlement(ALWChunk* Chunk,FIntPoint R){
+ if(LWCommunities84::Spawn(this,Chunk,R))return;
  if(!LWGen::HasTown(R,Seed))return;
  const FVector2D Hub=LWGen::Hub(R,Seed)+FVector2D(0,-5000);if(LWGen::ChunkAt(Hub)!=Chunk->Coordinate||LWStory::Reserved(Hub,5500))return;
  const FVector Origin=Chunk->GetActorLocation();

@@ -23,6 +23,14 @@ class LETHALWORLD_API ULWWorldTextSubsystem : public UTickableWorldSubsystem
     GENERATED_BODY()
 public:
     static constexpr int32 MaxLabelsPerFrame = 128;
+    // Queued conversion: world labels become painted, physically mounted panels.
+    bool Mount78(ULWWorldTextComponent* Label);
+    UPROPERTY() TObjectPtr<class UStaticMesh> SignMesh78;
+    UPROPERTY() TObjectPtr<class UMaterialInterface> SignBase78;
+    UPROPERTY() TObjectPtr<class UTexture2D> SignAtlas78;
+    UPROPERTY() TObjectPtr<class UFont> SignFont78;
+    TMap<FString,TWeakObjectPtr<class UMaterialInstanceDynamic>> SignCache78;
+    int32 Mounted78=0,Suppressed78=0;
     void Add(ULWWorldTextComponent* Label);
     void Remove(ULWWorldTextComponent* Label);
     virtual void Tick(float DeltaTime) override;

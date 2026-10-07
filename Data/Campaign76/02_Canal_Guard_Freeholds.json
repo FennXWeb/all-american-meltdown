@@ -1,0 +1,1518 @@
+{
+  "cast": [
+    {
+      "id": "della",
+      "name": "Della Voss",
+      "female": true,
+      "voice": "F04"
+    },
+    {
+      "id": "hank",
+      "name": "Hank Corwin",
+      "female": false,
+      "voice": "M04"
+    },
+    {
+      "id": "rook",
+      "name": "Captain Elias Rook",
+      "female": false,
+      "voice": "M04"
+    },
+    {
+      "id": "imani",
+      "name": "Sergeant Imani Bell",
+      "female": true,
+      "voice": "F04"
+    },
+    {
+      "id": "tomas",
+      "name": "Tomas Paredes",
+      "female": false,
+      "voice": "M04"
+    },
+    {
+      "id": "hannah",
+      "name": "Hannah Pike",
+      "female": true,
+      "voice": "F04"
+    },
+    {
+      "id": "orrin",
+      "name": "Orrin Lake",
+      "female": false,
+      "voice": "M04"
+    },
+    {
+      "id": "simon",
+      "name": "Simon Weller",
+      "female": false,
+      "voice": "M04"
+    },
+    {
+      "id": "ruth",
+      "name": "Ruth Weller",
+      "female": true,
+      "voice": "F04"
+    }
+  ],
+  "scenes": [
+    {
+      "id": "rome_intro",
+      "beats": [
+        {
+          "who": "della",
+          "text": "If you are here for a ride, get in line. If you are here for Tomas, come here.",
+          "gesture": "speak"
+        },
+        {
+          "who": "della",
+          "text": "That tag is ours. We loaded the sealed consignments. I did not see the people inside until the third run. Then the Directorate stopped letting my crews near their wagons.",
+          "gesture": "speak"
+        },
+        {
+          "who": "lena",
+          "text": "The same dispatch number appears on my emergency ledger. You were being paid with diverted public stock.",
+          "needs": [
+            "!dead_lena"
+          ],
+          "gesture": "speak"
+        },
+        {
+          "who": "della",
+          "text": "Paid? They brought antibiotics. My crane operator was dying. I am not proud enough to call that easy.",
+          "gesture": "point"
+        },
+        {
+          "who": "della",
+          "text": "We need the terminal working to reach the northern station. Hank has the switch key. He wants his stranded cargo released before he puts his crew under another suspended load. Talk to him. Then lock the crane, drain the lift pit, and test the gate. In that order.",
+          "gesture": "speak"
+        },
+        {
+          "who": "",
+          "text": "Della's maintenance instructions survive at the dispatch desk. The crews will need a new agreement; her death has not made the machinery safer.",
+          "needs": [
+            "dead_della"
+          ]
+        }
+      ],
+      "choices": [],
+      "next": "rome_crew"
+    },
+    {
+      "id": "hank_terms",
+      "beats": [
+        {
+          "who": "hank",
+          "text": "The crate with the green strap belongs to three farms. Della has it under lien. They miss the planting window, we miss meals.",
+          "gesture": "speak"
+        },
+        {
+          "who": "della",
+          "text": "They owe us two engine rebuilds. If debts vanish whenever someone needs the cargo, I cannot keep crews fed.",
+          "gesture": "speak"
+        }
+      ],
+      "choices": [
+        {
+          "text": "Release the farm cargo against a written labor schedule.",
+          "next": "hank_shared",
+          "stage": "",
+          "needs": [],
+          "effects": [
+            "crew_ready",
+            "farm_schedule",
+            "trust_della+=1",
+            "freehold_supply+=1"
+          ]
+        },
+        {
+          "text": "Pay the 80-credit lien. The cargo goes free.",
+          "next": "hank_paid",
+          "stage": "",
+          "needs": [
+            "credits>=80"
+          ],
+          "effects": [
+            "spend:80",
+            "crew_ready",
+            "freehold_supply+=1",
+            "trust_hank+=2"
+          ]
+        },
+        {
+          "text": "Back Della: cargo remains until the debt is worked.",
+          "next": "hank_lien",
+          "stage": "",
+          "needs": [
+            "!dead_della"
+          ],
+          "effects": [
+            "crew_ready",
+            "toll_debt",
+            "trust_della+=2",
+            "trust_hank-=2"
+          ]
+        }
+      ],
+      "next": ""
+    },
+    {
+      "id": "hank_shared",
+      "beats": [
+        {
+          "who": "hank",
+          "text": "I will put my name on the schedule. Put hers beside it. Nobody gets to pretend a signature only binds the poor.",
+          "gesture": "speak"
+        },
+        {
+          "who": "della",
+          "text": "Fine. Two crews, three days. Here is the key.",
+          "gesture": "speak"
+        }
+      ],
+      "choices": [],
+      "next": "rome_repair"
+    },
+    {
+      "id": "hank_paid",
+      "beats": [
+        {
+          "who": "della",
+          "text": "Eighty clears it. You should have asked which of those farms can pay you back.",
+          "gesture": "speak"
+        },
+        {
+          "who": "hank",
+          "text": "They can feed people. Some debts ought to stay that simple.",
+          "gesture": "speak"
+        }
+      ],
+      "choices": [],
+      "next": "rome_repair"
+    },
+    {
+      "id": "hank_lien",
+      "beats": [
+        {
+          "who": "hank",
+          "text": "Then I work. You can tell those farmers why.",
+          "gesture": "speak"
+        },
+        {
+          "who": "della",
+          "text": "I will tell them myself. We keep a terminal or lose all three farms next winter.",
+          "gesture": "speak"
+        }
+      ],
+      "choices": [],
+      "next": "rome_repair"
+    },
+    {
+      "id": "cargo_open",
+      "beats": [
+        {
+          "who": "hank",
+          "text": "The lock is cut. That is clothing, not machine packing.",
+          "gesture": "speak"
+        },
+        {
+          "who": "",
+          "text": "Among the bags: a water-board identification card for Tomas Paredes, a blue child's glove labeled LUIS, and a ring engraved R + S. The bags have processing tags. They were removed from travelers."
+        },
+        {
+          "who": "della",
+          "text": "I know two of those names. We are not selling this lot. Photograph the tags and put every bag back in its own sack.",
+          "gesture": "speak"
+        },
+        {
+          "who": "lena",
+          "text": "The weights in my ledger make sense now. They called the belongings surplus, so nobody had to record a person losing them.",
+          "needs": [
+            "!dead_lena"
+          ],
+          "gesture": "speak"
+        }
+      ],
+      "choices": [],
+      "next": "rome_control"
+    },
+    {
+      "id": "rome_vote",
+      "beats": [
+        {
+          "who": "della",
+          "text": "Northbound freight can move again. The question is who signs a load out. One desk is quick. Three desks catch a mistake. Three desks can also spend a week arguing while medicine spoils.",
+          "gesture": "speak"
+        },
+        {
+          "who": "hank",
+          "text": "A crew seat, a farm seat, her seat. Recorded tariffs. That is what I want.",
+          "gesture": "speak"
+        },
+        {
+          "who": "della",
+          "text": "Or hand the keys to Corwin. He has asked often enough. He would open the gates and run out of spares before the thaw.",
+          "gesture": "speak"
+        }
+      ],
+      "choices": [
+        {
+          "text": "Della controls dispatch, with a public tariff ledger.",
+          "next": "rome_della",
+          "stage": "",
+          "needs": [
+            "!dead_della"
+          ],
+          "effects": [
+            "canal_control=1",
+            "logistics=2",
+            "trust_della+=2",
+            "canal_prices=2"
+          ]
+        },
+        {
+          "text": "Negotiate shared dispatch: crews, farms, and Della each hold a key.",
+          "next": "rome_shared",
+          "stage": "",
+          "needs": [],
+          "effects": [
+            "canal_control=2",
+            "logistics=1",
+            "coalition+=1",
+            "canal_prices=1"
+          ]
+        },
+        {
+          "text": "Give Hank and the cargo owners control. Remove the toll desk.",
+          "next": "rome_hank",
+          "stage": "",
+          "needs": [],
+          "effects": [
+            "canal_control=3",
+            "logistics=1",
+            "trust_della-=3",
+            "canal_prices=0",
+            "spares_shortage"
+          ]
+        }
+      ],
+      "next": ""
+    },
+    {
+      "id": "rome_della",
+      "beats": [
+        {
+          "who": "della",
+          "text": "You will pay the published price like everyone else. But a medical wagon never waits behind luxury cargo. Write that first.",
+          "gesture": "speak"
+        },
+        {
+          "who": "hank",
+          "text": "I will keep a second copy of the ledger. You can count on that.",
+          "gesture": "speak"
+        }
+      ],
+      "choices": [],
+      "next": "guard_arrive"
+    },
+    {
+      "id": "rome_shared",
+      "beats": [
+        {
+          "who": "della",
+          "text": "Hank takes nights. Farms appoint someone who can count. If this deadlocks, all three of us answer for it.",
+          "gesture": "speak"
+        },
+        {
+          "who": "hank",
+          "text": "Fair. You have a seat at the table when it does, traveler. Not ownership of it.",
+          "gesture": "speak"
+        }
+      ],
+      "choices": [],
+      "next": "guard_arrive"
+    },
+    {
+      "id": "rome_hank",
+      "beats": [
+        {
+          "who": "hank",
+          "text": "Gate opens tonight. First run carries food, nobody pays to get their own blankets back.",
+          "gesture": "speak"
+        },
+        {
+          "who": "della",
+          "text": "The spare parts will not arrive out of gratitude. Remember I said that when the winch stops.",
+          "gesture": "speak"
+        }
+      ],
+      "choices": [],
+      "next": "guard_arrive"
+    },
+    {
+      "id": "guard_intro",
+      "beats": [
+        {
+          "who": "rook",
+          "text": "Captain Elias Rook. The ward is through there. Keep your voice down; they have finally slept.",
+          "gesture": "speak"
+        },
+        {
+          "who": "imani",
+          "text": "We hold the supply corridor. It is why the clinic has oxygen. It is also why I need two more drivers than I have.",
+          "gesture": "speak"
+        },
+        {
+          "who": "rook",
+          "text": "Directorate medicines keep this hospital open. They ask us to escort their transfers. You have questions about one. Help Imani check the next convoy. Stay with the patients, and do not let a rifle settle a paperwork dispute.",
+          "gesture": "speak"
+        }
+      ],
+      "choices": [],
+      "next": "guard_convoy"
+    },
+    {
+      "id": "convoy_restraints",
+      "beats": [
+        {
+          "who": "tomas",
+          "text": "Do not close that door. My hands are tied to the seat.",
+          "gesture": "speak"
+        },
+        {
+          "who": "imani",
+          "text": "Driver, where is the medical restraint order? ...That is a cargo receipt.",
+          "gesture": "point"
+        },
+        {
+          "who": "tomas",
+          "text": "They said Elena and Luis were following. Nobody will tell me where they are.",
+          "gesture": "speak"
+        },
+        {
+          "who": "rook",
+          "text": "I am halting the movement. Sergeant, check every transport. Nobody leaves until we know who authorized this.",
+          "gesture": "speak"
+        }
+      ],
+      "choices": [
+        {
+          "text": "Unfasten the restraint and move Tomas to the ward.",
+          "next": "convoy_release",
+          "stage": "",
+          "needs": [],
+          "effects": [
+            "tomas_released",
+            "trust_imani+=2",
+            "evidence_restraints"
+          ]
+        },
+        {
+          "text": "Keep the transport intact and copy the holding-facility route.",
+          "next": "convoy_follow",
+          "stage": "",
+          "needs": [],
+          "effects": [
+            "transport_traced",
+            "evidence_restraints",
+            "trust_tomas-=1"
+          ]
+        }
+      ],
+      "next": ""
+    },
+    {
+      "id": "convoy_release",
+      "beats": [
+        {
+          "who": "tomas",
+          "text": "My ring is at home. Tell her that if she does not believe it is me.",
+          "gesture": "speak"
+        },
+        {
+          "who": "imani",
+          "text": "I will book him as a patient under my own name. Whatever command thinks of that, it will have to say to me.",
+          "gesture": "speak"
+        }
+      ],
+      "choices": [],
+      "next": "guard_holding"
+    },
+    {
+      "id": "convoy_follow",
+      "beats": [
+        {
+          "who": "tomas",
+          "text": "You are letting them take me so you can follow? Then do not lose the road.",
+          "gesture": "point"
+        },
+        {
+          "who": "imani",
+          "text": "I copied the axle number. If the convoy turns off, you will know which one it is.",
+          "gesture": "speak"
+        }
+      ],
+      "choices": [],
+      "next": "guard_holding"
+    },
+    {
+      "id": "holding_records",
+      "beats": [
+        {
+          "who": "",
+          "text": "Transfer annex duty book: incoming families separated by trade category. Medical objections returned unsigned. Freight receipts use a presidential authentication series issued after September 2028."
+        },
+        {
+          "who": "lena",
+          "text": "This series was supposed to be retired. It proves someone can issue orders through that system. It does not prove who is alive.",
+          "needs": [
+            "!dead_lena"
+          ],
+          "gesture": "speak"
+        },
+        {
+          "who": "imani",
+          "text": "Rook saw the first restraint complaint six weeks ago. His initials are on the response: maintain escort pending clarification.",
+          "gesture": "speak"
+        },
+        {
+          "who": "",
+          "text": "The signed duty book remains evidence even without a living officer to explain it. Its authentication series can be checked against the northern archives.",
+          "needs": [
+            "dead_imani",
+            "dead_lena"
+          ]
+        }
+      ],
+      "choices": [],
+      "next": "guard_confront"
+    },
+    {
+      "id": "rook_confront",
+      "beats": [
+        {
+          "who": "rook",
+          "text": "I saw the complaint. I asked for clarification. They sent oxygen and another order. I kept the first and obeyed the second.",
+          "gesture": "speak"
+        },
+        {
+          "who": "imani",
+          "text": "You could have stopped a transport. You stopped this one when there were witnesses.",
+          "gesture": "speak"
+        },
+        {
+          "who": "rook",
+          "text": "Yes. Do not soften that for me. Tell me what you need changed now.",
+          "gesture": "speak"
+        },
+        {
+          "who": "imani",
+          "text": "Rook is dead. Half the escort section wants to go home; the others want to keep the hospital open. I will hold the ward, but I cannot promise his battalion or use his name to get it.",
+          "needs": [
+            "dead_rook"
+          ],
+          "gesture": "speak"
+        },
+        {
+          "who": "",
+          "text": "Both officers are dead. The ward's duty book survives, but nobody can promise an organized escort. The remaining patients need the records made public, not another officer's name on an empty command.",
+          "needs": [
+            "dead_rook",
+            "dead_imani"
+          ]
+        }
+      ],
+      "choices": [
+        {
+          "text": "Work with him privately: release the annex detainees and cut Directorate escorts.",
+          "next": "rook_private",
+          "stage": "",
+          "needs": [
+            "!dead_rook"
+          ],
+          "effects": [
+            "guard_control=1",
+            "rook_cooperates",
+            "guard_support=2",
+            "coalition+=1"
+          ]
+        },
+        {
+          "text": "Publish the signed complaint. Let the ward and guard elect new command.",
+          "next": "rook_public",
+          "stage": "",
+          "needs": [
+            "!dead_rook"
+          ],
+          "effects": [
+            "guard_control=2",
+            "imani_leads",
+            "guard_support=1",
+            "evidence_public",
+            "trust_rook-=2"
+          ]
+        },
+        {
+          "text": "Conceal the complaint in exchange for continued access.",
+          "next": "rook_conceal",
+          "stage": "",
+          "needs": [
+            "!dead_rook"
+          ],
+          "effects": [
+            "guard_control=3",
+            "directorate_access",
+            "guard_support=0",
+            "leverage+=1"
+          ]
+        },
+        {
+          "text": "Release the ward records and support Imani's reduced hospital guard.",
+          "next": "",
+          "stage": "hill_arrive",
+          "needs": [
+            "dead_rook",
+            "!dead_imani"
+          ],
+          "effects": [
+            "guard_control=4",
+            "imani_leads",
+            "guard_support=1",
+            "guard_fragmented",
+            "evidence_public"
+          ]
+        },
+        {
+          "text": "Preserve the ward records. Continue north without Guard support.",
+          "next": "",
+          "stage": "hill_arrive",
+          "needs": [
+            "dead_rook",
+            "dead_imani"
+          ],
+          "effects": [
+            "guard_control=4",
+            "guard_support=0",
+            "guard_fragmented",
+            "evidence_public"
+          ]
+        }
+      ],
+      "next": ""
+    },
+    {
+      "id": "rook_private",
+      "beats": [
+        {
+          "who": "rook",
+          "text": "I will sign the release in front of the ward. Private does not mean invisible.",
+          "gesture": "speak"
+        },
+        {
+          "who": "imani",
+          "text": "I will verify the cells myself. Cooperation is useful. Forgiveness can wait.",
+          "gesture": "speak"
+        }
+      ],
+      "choices": [],
+      "next": "hill_arrive"
+    },
+    {
+      "id": "rook_public",
+      "beats": [
+        {
+          "who": "imani",
+          "text": "The vote is for me. I wanted a shift change, not a command. First order: no transfer without the traveler's consent recorded by someone outside the escort.",
+          "gesture": "speak"
+        },
+        {
+          "who": "rook",
+          "text": "I will turn over the route codes. You do not have to keep me to use them.",
+          "gesture": "speak"
+        }
+      ],
+      "choices": [],
+      "next": "hill_arrive"
+    },
+    {
+      "id": "rook_conceal",
+      "beats": [
+        {
+          "who": "rook",
+          "text": "Access is not absolution. I know what you are holding.",
+          "gesture": "speak"
+        },
+        {
+          "who": "imani",
+          "text": "The book did not vanish because you closed it. I kept the names of the people still there.",
+          "gesture": "speak"
+        }
+      ],
+      "choices": [],
+      "next": "hill_arrive"
+    },
+    {
+      "id": "hill_weather",
+      "beats": [
+        {
+          "who": "hannah",
+          "text": "Shut the outer door behind you. Wind is coming straight through.",
+          "gesture": "speak"
+        },
+        {
+          "who": "mara",
+          "text": "We heard a distress call on the approach. Same words, every forty seconds.",
+          "needs": [
+            "!dead_mara"
+          ],
+          "gesture": "speak"
+        },
+        {
+          "who": "hannah",
+          "text": "A recording can still mean trouble. Look before you take the cut-through. Fresh tire ruts go in. None come out. Whoever is calling has not asked once about the weather.",
+          "gesture": "speak"
+        },
+        {
+          "who": "hannah",
+          "text": "Take the maintenance shelter first. Dry socks, a fire, someone checking the roof. Then decide which road deserves your life.",
+          "gesture": "speak"
+        }
+      ],
+      "choices": [],
+      "next": "hill_beacon"
+    },
+    {
+      "id": "beacon_observe",
+      "beats": [
+        {
+          "who": "",
+          "text": "From the maintenance overlook, the antenna cable runs to a vehicle battery behind the cut-through. Two lookouts trade positions each time the recorded call begins."
+        },
+        {
+          "who": "hannah",
+          "text": "There. You can disconnect the aerial from this side without putting anyone in that lane. Or warn the next travelers. A fight is an option, not an obligation.",
+          "gesture": "speak"
+        }
+      ],
+      "choices": [
+        {
+          "text": "Disconnect the beacon and mark the safe detour.",
+          "next": "beacon_safe",
+          "stage": "",
+          "needs": [],
+          "effects": [
+            "beacon_disabled",
+            "trust_hannah+=2",
+            "wilderness_routes"
+          ]
+        },
+        {
+          "text": "Broadcast a warning, leaving the ambushers exposed.",
+          "next": "beacon_warn",
+          "stage": "",
+          "needs": [
+            "comms"
+          ],
+          "effects": [
+            "beacon_warning",
+            "wilderness_routes",
+            "communications_restored"
+          ]
+        },
+        {
+          "text": "Drive the ambushers away and open the direct road.",
+          "next": "",
+          "stage": "hill_fight",
+          "needs": [],
+          "effects": [
+            "beacon_fight"
+          ]
+        }
+      ],
+      "next": ""
+    },
+    {
+      "id": "beacon_safe",
+      "beats": [
+        {
+          "who": "hannah",
+          "text": "A quiet road is a result. You do not have to fill it with bodies to prove you did something.",
+          "gesture": "speak"
+        }
+      ],
+      "choices": [],
+      "next": "freehold_arrive"
+    },
+    {
+      "id": "beacon_warn",
+      "beats": [
+        {
+          "who": "hannah",
+          "text": "I hear the road watch repeating you. Good. Let the lie travel slower than the warning for once.",
+          "gesture": "speak"
+        }
+      ],
+      "choices": [],
+      "next": "freehold_arrive"
+    },
+    {
+      "id": "freehold_table",
+      "beats": [
+        {
+          "who": "orrin",
+          "text": "Forty sacks until thaw. Twenty-three mouths already. You bring nine more, you have thirty-two people hungry later.",
+          "gesture": "speak"
+        },
+        {
+          "who": "hannah",
+          "text": "And nine people dead now if I close the door. They have a welder, a midwife, and seven people who should not need a useful job to be let inside.",
+          "gesture": "speak"
+        },
+        {
+          "who": "mara",
+          "text": "We can count both the food and the people. Neither number becomes kinder if we stop saying it.",
+          "needs": [
+            "!dead_mara"
+          ],
+          "gesture": "speak"
+        },
+        {
+          "who": "hannah",
+          "text": "The canal farms can cover some of the difference if their shipment got through. Otherwise, we need a ration agreement or somewhere else warm enough to go.",
+          "gesture": "speak"
+        }
+      ],
+      "choices": [
+        {
+          "text": "Bring in all nine; use the released canal farm shipment.",
+          "next": "freehold_supply",
+          "stage": "",
+          "needs": [
+            "freehold_supply"
+          ],
+          "effects": [
+            "freehold_refuge=2",
+            "coalition+=1",
+            "trust_hannah+=2",
+            "winter_food=2"
+          ]
+        },
+        {
+          "text": "Share the winter ration and convert the reserved lodging into a refuge.",
+          "next": "freehold_ration",
+          "stage": "",
+          "needs": [],
+          "effects": [
+            "freehold_refuge=1",
+            "coalition+=1",
+            "trust_hannah+=1",
+            "winter_food=1"
+          ]
+        },
+        {
+          "text": "Arrange guarded onward travel instead of permanent admission.",
+          "next": "freehold_travel",
+          "stage": "",
+          "needs": [],
+          "effects": [
+            "freehold_refuge=3",
+            "civilian_rescues+=1",
+            "trust_hannah-=1"
+          ]
+        }
+      ],
+      "next": ""
+    },
+    {
+      "id": "freehold_supply",
+      "beats": [
+        {
+          "who": "orrin",
+          "text": "I saw the sacks. That changes the arithmetic. It does not make me glad I said no.",
+          "gesture": "speak"
+        },
+        {
+          "who": "hannah",
+          "text": "You can help me move the spare beds. Let them hear the answer from both of us.",
+          "gesture": "speak"
+        }
+      ],
+      "choices": [],
+      "next": "witness_arrive"
+    },
+    {
+      "id": "freehold_ration",
+      "beats": [
+        {
+          "who": "orrin",
+          "text": "Everyone cuts back. Including the people making the speech.",
+          "gesture": "speak"
+        },
+        {
+          "who": "hannah",
+          "text": "Including me. The reserved rooms become family rooms. We will need the boarded windows sealed before nightfall.",
+          "gesture": "speak"
+        }
+      ],
+      "choices": [],
+      "next": "freehold_refuge"
+    },
+    {
+      "id": "freehold_travel",
+      "beats": [
+        {
+          "who": "hannah",
+          "text": "I will take them to the next shelter. I will remember why I had to. Keep a lamp on until we have all come back.",
+          "gesture": "speak"
+        }
+      ],
+      "choices": [],
+      "next": "witness_arrive"
+    },
+    {
+      "id": "weller_intro",
+      "beats": [
+        {
+          "who": "simon",
+          "text": "I maintained command links. I did not choose targets. I tell myself that a lot.",
+          "gesture": "speak"
+        },
+        {
+          "who": "ruth",
+          "text": "Tell them the other part. The part you say in your sleep.",
+          "gesture": "speak"
+        },
+        {
+          "who": "simon",
+          "text": "An authenticated order after the news said Richardson was dead. An instruction to preserve continuity personnel and deny a surrender channel. I heard it. I kept the acknowledgement tape.",
+          "gesture": "speak"
+        },
+        {
+          "who": "simon",
+          "text": "I am not leaving Ruth and the children. They hid me when an old colleague came asking. Do not offer me safety that makes them pay for it.",
+          "gesture": "speak"
+        },
+        {
+          "who": "",
+          "text": "Simon is dead. His labeled acknowledgement tape survives in the cabin. Without his testimony, its date and provenance will need independent checking.",
+          "needs": [
+            "dead_simon"
+          ]
+        }
+      ],
+      "choices": [
+        {
+          "text": "Travel together. I will put the whole family on the evacuation request.",
+          "next": "weller_travel",
+          "stage": "",
+          "needs": [
+            "!dead_simon"
+          ],
+          "effects": [
+            "witness_travels",
+            "witness_family",
+            "testimony",
+            "trust_simon+=2"
+          ]
+        },
+        {
+          "text": "Record the testimony and leave the family at the sheltered Freehold.",
+          "next": "weller_tape",
+          "stage": "",
+          "needs": [
+            "freehold_refuge>=1",
+            "!dead_simon"
+          ],
+          "effects": [
+            "testimony",
+            "witness_sheltered",
+            "witness_family"
+          ]
+        },
+        {
+          "text": "Hand Simon to the Directorate in exchange for access.",
+          "next": "weller_warning",
+          "stage": "",
+          "needs": [
+            "!dead_simon"
+          ],
+          "effects": []
+        },
+        {
+          "text": "Preserve the tape and the family record. Seek independent corroboration.",
+          "next": "",
+          "stage": "watertown_arrive",
+          "needs": [
+            "dead_simon"
+          ],
+          "effects": [
+            "witness_lost",
+            "tape_unverified",
+            "journal:Simon died. His recording remains, but cannot answer questions. Northbank can compare it with independent records."
+          ]
+        }
+      ],
+      "next": ""
+    },
+    {
+      "id": "weller_travel",
+      "beats": [
+        {
+          "who": "ruth",
+          "text": "Then help me pack enough food for all of us. We are not a document with feet.",
+          "gesture": "speak"
+        },
+        {
+          "who": "simon",
+          "text": "The tape is in the labeled tin. I will carry it myself until we meet whoever is receiving us.",
+          "gesture": "speak"
+        }
+      ],
+      "choices": [],
+      "next": "watertown_arrive"
+    },
+    {
+      "id": "weller_tape",
+      "beats": [
+        {
+          "who": "simon",
+          "text": "I will give you the recording and a signed account. If anyone can get a message back, tell me what the outside records say. I need to know which parts I remember correctly.",
+          "gesture": "speak",
+          "pause": 0.8
+        }
+      ],
+      "choices": [],
+      "next": "watertown_arrive"
+    },
+    {
+      "id": "weller_warning",
+      "beats": [
+        {
+          "who": "ruth",
+          "text": "He trusted you because Hannah sent you. If you hand him over, the rest of us cannot stay here. Understand that before you say another word.",
+          "gesture": "speak"
+        }
+      ],
+      "choices": [
+        {
+          "text": "Confirm the surrender. This betrays Simon and exposes his family.",
+          "next": "weller_surrender",
+          "stage": "",
+          "needs": [
+            "!dead_simon"
+          ],
+          "effects": [
+            "witness_surrendered",
+            "directorate_access",
+            "trust_hannah-=4",
+            "civilian_harm+=2",
+            "testimony=0"
+          ]
+        },
+        {
+          "text": "Withdraw the threat.",
+          "next": "weller_intro",
+          "stage": "",
+          "needs": [
+            "!dead_simon"
+          ],
+          "effects": []
+        }
+      ],
+      "next": ""
+    },
+    {
+      "id": "weller_surrender",
+      "beats": [
+        {
+          "who": "simon",
+          "text": "There is a duplicate acknowledgement at the hospital archive. I am telling you that because someone ought to use it. It is not forgiveness.",
+          "gesture": "speak"
+        },
+        {
+          "who": "ruth",
+          "text": "Look at me. Do not watch the door while I am talking to you. You know what you are doing.",
+          "gesture": "stop",
+          "pause": 1.5
+        }
+      ],
+      "choices": [],
+      "next": "watertown_arrive"
+    }
+  ],
+  "stages": [
+    {
+      "id": "rome_arrive",
+      "mission": "lockstock",
+      "site": "rome",
+      "title": "Lock, Stock",
+      "goal": "Meet Della Voss at the canal freight terminal.",
+      "cast": [
+        "della",
+        "hank",
+        "mara",
+        "lena"
+      ],
+      "actions": [],
+      "arrival": "rome_intro"
+    },
+    {
+      "id": "rome_crew",
+      "mission": "lockstock",
+      "site": "rome",
+      "title": "Lock, Stock",
+      "goal": "Resolve the cargo lien with Hank and Della.",
+      "cast": [
+        "della",
+        "hank",
+        "mara",
+        "lena"
+      ],
+      "actions": [
+        {
+          "id": "talk_hank",
+          "label": "Negotiate the stranded farm cargo",
+          "at": [
+            -200,
+            170,
+            0
+          ],
+          "scene": "hank_terms",
+          "next": "",
+          "mesh": "",
+          "needs": [],
+          "effects": [],
+          "work": 0
+        }
+      ]
+    },
+    {
+      "id": "rome_repair",
+      "mission": "lockstock",
+      "site": "rome",
+      "title": "Lock, Stock",
+      "goal": "Secure the crane, drain the pit, and restore the loading gate.",
+      "cast": [
+        "della",
+        "hank"
+      ],
+      "actions": [
+        {
+          "id": "crane_lock",
+          "label": "Engage the crane maintenance lock",
+          "at": [
+            850,
+            850,
+            0
+          ],
+          "scene": "",
+          "next": "",
+          "mesh": "ControlPanel52",
+          "needs": [
+            "!crane_locked"
+          ],
+          "effects": [
+            "crane_locked"
+          ],
+          "work": 5
+        },
+        {
+          "id": "pit_drain",
+          "label": "Drain the lift pit",
+          "at": [
+            800,
+            -1250,
+            0
+          ],
+          "scene": "",
+          "next": "",
+          "mesh": "Scrap52",
+          "needs": [
+            "crane_locked",
+            "!pit_drained"
+          ],
+          "effects": [
+            "pit_drained"
+          ],
+          "work": 6
+        },
+        {
+          "id": "freight_gate",
+          "label": "Test the freight gate under crew supervision",
+          "at": [
+            850,
+            -400,
+            0
+          ],
+          "scene": "",
+          "next": "",
+          "mesh": "RelayConsole52",
+          "needs": [
+            "pit_drained"
+          ],
+          "effects": [
+            "terminal_working"
+          ],
+          "work": 5
+        }
+      ],
+      "needs": [
+        "terminal_working"
+      ],
+      "next": "rome_cargo"
+    },
+    {
+      "id": "rome_cargo",
+      "mission": "watercarries",
+      "site": "rome",
+      "title": "What the Water Carries",
+      "goal": "Inspect the misdeclared processing shipment.",
+      "cast": [
+        "della",
+        "hank",
+        "lena"
+      ],
+      "actions": [
+        {
+          "id": "tagged_bags",
+          "label": "Open the misdeclared shipment",
+          "at": [
+            220,
+            50,
+            0
+          ],
+          "scene": "cargo_open",
+          "next": "",
+          "mesh": "Crate",
+          "needs": [],
+          "effects": [
+            "belongings_catalogued",
+            "evidence_belongings",
+            "journal:Tomas Paredes and the Wellers appear on Rome processing tags. Their belongings were removed before transfer."
+          ],
+          "work": 0
+        }
+      ]
+    },
+    {
+      "id": "rome_control",
+      "mission": "watercarries",
+      "site": "rome",
+      "title": "What the Water Carries",
+      "goal": "Resolve control of the reopened terminal.",
+      "cast": [
+        "della",
+        "hank"
+      ],
+      "actions": [
+        {
+          "id": "talk_della",
+          "label": "Decide the dispatch arrangement",
+          "at": [
+            0,
+            150,
+            0
+          ],
+          "scene": "rome_vote",
+          "next": "",
+          "mesh": "",
+          "needs": [],
+          "effects": [],
+          "work": 0
+        }
+      ]
+    },
+    {
+      "id": "guard_arrive",
+      "mission": "escort",
+      "site": "guard",
+      "title": "Escort Duty",
+      "goal": "Meet Rook and Imani at the functioning corridor hospital.",
+      "cast": [
+        "rook",
+        "imani",
+        "mara"
+      ],
+      "actions": [],
+      "arrival": "guard_intro"
+    },
+    {
+      "id": "guard_convoy",
+      "mission": "escort",
+      "site": "guard",
+      "title": "Escort Duty",
+      "goal": "Inspect the waiting transport and its patient manifest.",
+      "cast": [
+        "rook",
+        "imani",
+        "tomas"
+      ],
+      "actions": [
+        {
+          "id": "convoy_manifest",
+          "label": "Check the restraint order",
+          "at": [
+            1190,
+            350,
+            0
+          ],
+          "scene": "convoy_restraints",
+          "next": "",
+          "mesh": "Dossier52",
+          "needs": [],
+          "effects": [],
+          "work": 0
+        }
+      ]
+    },
+    {
+      "id": "guard_holding",
+      "mission": "transit",
+      "site": "holding",
+      "title": "Missing in Transit",
+      "goal": "Enter the transfer annex and recover its duty book.",
+      "cast": [
+        "imani",
+        "lena"
+      ],
+      "actions": [
+        {
+          "id": "annex_release",
+          "label": "Release the detained travelers",
+          "at": [
+            -260,
+            160,
+            0
+          ],
+          "scene": "",
+          "next": "",
+          "mesh": "Keys52",
+          "needs": [
+            "!annex_released"
+          ],
+          "effects": [
+            "annex_released",
+            "civilian_rescues+=2"
+          ],
+          "work": 3
+        },
+        {
+          "id": "annex_book",
+          "label": "Copy the signed duty book",
+          "at": [
+            260,
+            160,
+            0
+          ],
+          "scene": "holding_records",
+          "next": "",
+          "mesh": "Dossier52",
+          "needs": [],
+          "effects": [
+            "evidence_authentication"
+          ],
+          "work": 0
+        }
+      ]
+    },
+    {
+      "id": "guard_confront",
+      "mission": "orders",
+      "site": "guard",
+      "title": "Orders from Above",
+      "goal": "Confront Rook with the annex duty book.",
+      "cast": [
+        "rook",
+        "imani"
+      ],
+      "actions": [
+        {
+          "id": "talk_rook",
+          "label": "Confront Rook",
+          "at": [
+            0,
+            150,
+            0
+          ],
+          "scene": "rook_confront",
+          "next": "",
+          "mesh": "",
+          "needs": [],
+          "effects": [],
+          "work": 0
+        }
+      ]
+    },
+    {
+      "id": "hill_arrive",
+      "mission": "wrongturn",
+      "site": "tughill",
+      "title": "Wrong Turn",
+      "goal": "Reach the Tug Hill maintenance shelter before following the distress call.",
+      "cast": [
+        "hannah",
+        "mara"
+      ],
+      "actions": [],
+      "arrival": "hill_weather"
+    },
+    {
+      "id": "hill_beacon",
+      "mission": "wrongturn",
+      "site": "tughill",
+      "title": "Wrong Turn",
+      "goal": "Watch the cut-through before approaching the repeated distress call.",
+      "cast": [
+        "hannah"
+      ],
+      "actions": [
+        {
+          "id": "dry_shelter",
+          "label": "Seal the shelter draft and warm the traveling group",
+          "at": [
+            -260,
+            170,
+            0
+          ],
+          "scene": "",
+          "next": "",
+          "mesh": "Scrap52",
+          "needs": [
+            "!shelter_prepared"
+          ],
+          "effects": [
+            "shelter_prepared"
+          ],
+          "work": 7
+        },
+        {
+          "id": "observe_beacon",
+          "label": "Observe the distress-beacon approach",
+          "at": [
+            320,
+            -280,
+            0
+          ],
+          "scene": "beacon_observe",
+          "next": "",
+          "mesh": "Keys52",
+          "needs": [],
+          "effects": [],
+          "work": 4
+        }
+      ]
+    },
+    {
+      "id": "hill_fight",
+      "mission": "wrongturn",
+      "site": "tughill",
+      "title": "Wrong Turn",
+      "goal": "Clear the ambush approach, then disable its transmitter.",
+      "cast": [
+        "hannah"
+      ],
+      "actions": [
+        {
+          "id": "silence_beacon",
+          "label": "Disconnect the false distress beacon",
+          "at": [
+            320,
+            -280,
+            0
+          ],
+          "scene": "",
+          "next": "freehold_arrive",
+          "mesh": "RelayConsole52",
+          "needs": [
+            "enemies_clear"
+          ],
+          "effects": [
+            "beacon_disabled"
+          ],
+          "work": 0
+        }
+      ],
+      "enemies": 4
+    },
+    {
+      "id": "freehold_arrive",
+      "mission": "table",
+      "site": "freehold",
+      "title": "A Place at the Table",
+      "goal": "Join the winter ration meeting.",
+      "cast": [
+        "hannah",
+        "orrin",
+        "mara"
+      ],
+      "actions": [],
+      "arrival": "freehold_table"
+    },
+    {
+      "id": "freehold_refuge",
+      "mission": "table",
+      "site": "freehold",
+      "title": "A Place at the Table",
+      "goal": "Make the reserved lodging habitable for the incoming families.",
+      "cast": [
+        "hannah",
+        "orrin"
+      ],
+      "actions": [
+        {
+          "id": "refuge_window",
+          "label": "Seal the winter-room window",
+          "at": [
+            -300,
+            170,
+            0
+          ],
+          "scene": "",
+          "next": "",
+          "mesh": "Scrap52",
+          "needs": [
+            "!refuge_sealed"
+          ],
+          "effects": [
+            "refuge_sealed"
+          ],
+          "work": 6
+        },
+        {
+          "id": "refuge_beds",
+          "label": "Prepare the spare bedding",
+          "at": [
+            280,
+            170,
+            0
+          ],
+          "scene": "",
+          "next": "witness_arrive",
+          "mesh": "Case77",
+          "needs": [
+            "refuge_sealed"
+          ],
+          "effects": [
+            "refuge_ready"
+          ],
+          "work": 4
+        }
+      ]
+    },
+    {
+      "id": "witness_arrive",
+      "mission": "heardit",
+      "site": "witness",
+      "title": "The Man Who Heard It",
+      "goal": "Speak to Simon and Ruth Weller at the sheltered cabin.",
+      "cast": [
+        "simon",
+        "ruth",
+        "hannah",
+        "mara"
+      ],
+      "actions": [],
+      "arrival": "weller_intro"
+    }
+  ]
+}

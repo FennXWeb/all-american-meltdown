@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<smog version="1">
+  <title>All American Meltdown</title>
+  <description>Explore a ruined upstate New York, survive dangerous encounters, recruit companions, build settlements, and make a home aboard an RV or aircraft. Travel from Syracuse to Buffalo and beyond, with a northern story corridor and southern Ontario across Lake Ontario.</description>
+  <developer>All American Meltdown</developer>
+  <genre>Survival RPG</genre>
+  <version>0.84.0</version>
+  <accent>#F49B46</accent>
+  <tags>
+    <tag>Open world</tag>
+    <tag>Survival</tag>
+    <tag>Single player</tag>
+    <tag>Base building</tag>
+    <tag>Vehicles</tag>
+  </tags>
+  <release>
+    <asset>all-american-meltdown-*-windows-x64.zip</asset>
+  </release>
+</smog>

@@ -201,34 +201,16 @@ namespace
                 FMath::Max(Road.A.Y, Road.B.Y) + DrivewayReach), RoadCellSize);
         }
 
-        void Gather(const FRegionBounds& Bounds, int32 Seed)
+        void Gather(const FRegionBounds& Bounds, int32 Seed,bool NewYork=false)
         {
-            for (int32 Y = Bounds.Min.Y; Y <= Bounds.Max.Y; ++Y)
-            {
-                for (int32 X = Bounds.Min.X; X <= Bounds.Max.X; ++X)
-                {
-                    TArray<LWGen::FRoad> Roads;
-                    TArray<LWGen::FSite> Sites;
-                    LWGen::Region(FIntPoint(X, Y), Seed, Roads, Sites);
-                    for (const LWGen::FRoad& Road : Roads)
-                    {
-                        const int32 Id = Segments.Num();
-                        Segments.Add({Road, {}});
-                        const int32 A = NodeAt(Road.A);
-                        const int32 B = NodeAt(Road.B);
-                        AddCut(Id, 0.0, A);
-                        AddCut(Id, 1.0, B);
-                        FIntPoint Min, Max;
-                        RoadCellBounds(Road, Min, Max);
-                        for (int32 CY = Min.Y; CY <= Max.Y; ++CY)
-                        {
-                            for (int32 CX = Min.X; CX <= Max.X; ++CX)
-                            {
-                                RoadCells.FindOrAdd(FIntPoint(CX, CY)).Add(Id);
-                            }
-                        }
-                    }
-                }
+            TArray<LWGen::FRoad> Roads;
+            if(NewYork){Roads=LWNY69::Roads();const auto City=LWGen::CanadaCity68();const FIntPoint Center(LWGen::FloorDiv(City.X+25600,51200),LWGen::FloorDiv(City.Y+25600,51200));TArray<LWGen::FSite> Ignored;for(int X=-2;X<=2;X++)for(int Y=-2;Y<=2;Y++)LWGen::CanadaRegion68(Center+FIntPoint(X,Y),Seed,Roads,Ignored);}
+            else for(int32 Y=Bounds.Min.Y;Y<=Bounds.Max.Y;++Y)for(int32 X=Bounds.Min.X;X<=Bounds.Max.X;++X){TArray<LWGen::FSite> Sites;LWGen::Region(FIntPoint(X,Y),Seed,Roads,Sites);}
+            for(const auto& Road:Roads){
+                const int32 Id=Segments.Num();Segments.Add({Road,{}});
+                AddCut(Id,0.,NodeAt(Road.A));AddCut(Id,1.,NodeAt(Road.B));
+                FIntPoint Min,Max;RoadCellBounds(Road,Min,Max);
+                for(int32 CY=Min.Y;CY<=Max.Y;++CY)for(int32 CX=Min.X;CX<=Max.X;++CX)RoadCells.FindOrAdd({CX,CY}).Add(Id);
             }
         }
 
@@ -470,8 +452,11 @@ TArray<FVector2D> FindPath(FVector2D Start, FVector2D Goal, int32 Seed, bool* Co
 
     FVector2D Target;
     FRegionBounds Bounds(StartRegion, StartRegion);
-    const bool ReachesGoal = SelectTarget(Start, Goal, StartRegion, GoalRegion, Seed, Target, Bounds);
-    if (!Bounds.Fits() || (!ReachesGoal && Target == Start))
+    const bool NewYork=true;
+    bool ReachesGoal;
+    if(NewYork){Target=Goal;ReachesGoal=true;Bounds.Min=FIntPoint(-30,-30);Bounds.Max=FIntPoint(26,70);}
+    else ReachesGoal=SelectTarget(Start,Goal,StartRegion,GoalRegion,Seed,Target,Bounds);
+    if ((!NewYork&&!Bounds.Fits()) || (!ReachesGoal && Target == Start))
     {
         return {};
     }
@@ -490,7 +475,7 @@ TArray<FVector2D> FindPath(FVector2D Start, FVector2D Goal, int32 Seed, bool* Co
     });
     if (!Cached) {
         FGraph Base(FVector2D(Bounds.Min.X*LWGen::RegionSize,Bounds.Min.Y*LWGen::RegionSize));
-        Base.Gather(Bounds,Seed); Base.SplitJunctions();
+        Base.Gather(Bounds,Seed,NewYork); Base.SplitJunctions();
         if(Corridors.Num()>=4) {
             int32 Oldest=0; for(int32 I=1;I<Corridors.Num();++I)if(Corridors[I].Used<Corridors[Oldest].Used)Oldest=I;
             Corridors.RemoveAt(Oldest);

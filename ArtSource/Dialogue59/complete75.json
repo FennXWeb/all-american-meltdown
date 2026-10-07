@@ -1,0 +1,4691 @@
+{
+  "schema": 1,
+  "lines": [
+    {
+      "key": "M04_03217adbf3d2d0e4b69a0a888769a768",
+      "profile": "M04",
+      "text": "A battered postal case sits beside an overturned handcart. Its delivery log ends months ago.",
+      "file": "M04_03217adbf3d2d0e4b69a0a888769a768.wav"
+    },
+    {
+      "key": "M04_768d374a97939948102968972e099a0d",
+      "profile": "M04",
+      "text": "A buried steam line has split beneath a maintenance hatch. The pressure valve is jammed.",
+      "file": "M04_768d374a97939948102968972e099a0d.wav"
+    },
+    {
+      "key": "M04_b8efdff3416d80a03ef4fd56b4929d3b",
+      "profile": "M04",
+      "text": "A camp cook is banging a pan as infected shapes approach the fire. Someone must keep them outside the camp.",
+      "file": "M04_b8efdff3416d80a03ef4fd56b4929d3b.wav"
+    },
+    {
+      "key": "M04_378d3b6d891503b47f3785de98aababc",
+      "profile": "M04",
+      "text": "A cautious broker offers a sealed box of shotgun shells. He will only trade in the open.",
+      "file": "M04_378d3b6d891503b47f3785de98aababc.wav"
+    },
+    {
+      "key": "M04_f3b743efa6c127c7cb2433170549e72a",
+      "profile": "M04",
+      "text": "A cook is offering preserved meals in exchange for clean water.",
+      "file": "M04_f3b743efa6c127c7cb2433170549e72a.wav"
+    },
+    {
+      "key": "M04_3fcd86623802c23abefbbc12532df6d6",
+      "profile": "M04",
+      "text": "A dehydrated courier is hiding beneath a torn awning. Her sealed satchel is marked for a clinic.",
+      "file": "M04_3fcd86623802c23abefbbc12532df6d6.wav"
+    },
+    {
+      "key": "M04_47f6f6d7cfafce9ce5246de60c8ad720",
+      "profile": "M04",
+      "text": "A delivery driver is losing a refrigerator full of medicine. The cooling unit has seized.",
+      "file": "M04_47f6f6d7cfafce9ce5246de60c8ad720.wav"
+    },
+    {
+      "key": "M04_9dd0a508d2575a59cc8488347746c4ee",
+      "profile": "M04",
+      "text": "A distress loop plays from a receiver. No one answers your calls, but fresh bootprints surround the station.",
+      "file": "M04_9dd0a508d2575a59cc8488347746c4ee.wav"
+    },
+    {
+      "key": "M04_e09feab7bb47c18ba9b3b2359f21728b",
+      "profile": "M04",
+      "text": "A fallen cable spits light into rainwater. The cutoff box is reachable from the dry shoulder.",
+      "file": "M04_e09feab7bb47c18ba9b3b2359f21728b.wav"
+    },
+    {
+      "key": "M04_1edbd66054f0107fc6b3a34645f49cc5",
+      "profile": "M04",
+      "text": "A few hours until daylight. We can manage.",
+      "file": "M04_1edbd66054f0107fc6b3a34645f49cc5.wav"
+    },
+    {
+      "key": "M04_f5de373c4041cd5233f48ac18812cc0a",
+      "profile": "M04",
+      "text": "A furniture delivery has scattered sealed tool packs along the verge. A collector is sorting what survived.",
+      "file": "M04_f5de373c4041cd5233f48ac18812cc0a.wav"
+    },
+    {
+      "key": "M04_fd9e1bfc51547d1e2a728ccfdec24f78",
+      "profile": "M04",
+      "text": "A garden would make this place feel like home.",
+      "file": "M04_fd9e1bfc51547d1e2a728ccfdec24f78.wav"
+    },
+    {
+      "key": "M04_e231532279862988856ab3ae79789fc4",
+      "profile": "M04",
+      "text": "A hand-painted sign promises clean water, but the roadside pump has fallen silent.",
+      "file": "M04_e231532279862988856ab3ae79789fc4.wav"
+    },
+    {
+      "key": "M04_f7325eea76b24f1f296431d25ab2d98c",
+      "profile": "M04",
+      "text": "A lantern-lit medical seller has opened for the graveyard shift. No names, no questions.",
+      "file": "M04_f7325eea76b24f1f296431d25ab2d98c.wav"
+    },
+    {
+      "key": "M04_91b7571928a652d0058ddfc88fcdbaf9",
+      "profile": "M04",
+      "text": "A locksmith trades carefully made picks from a roll of tools spread across his bonnet.",
+      "file": "M04_91b7571928a652d0058ddfc88fcdbaf9.wav"
+    },
+    {
+      "key": "M04_04ba5d41ce846ef26fcb9cfe3f2167db",
+      "profile": "M04",
+      "text": "A lone traveler has put a candle on an unopened ration. Today would have been his daughter's birthday.",
+      "file": "M04_04ba5d41ce846ef26fcb9cfe3f2167db.wav"
+    },
+    {
+      "key": "M04_2b238ee9a09e34826a5407447c2e157e",
+      "profile": "M04",
+      "text": "A mechanic has exposed an engine block. The remaining parts will take patience to separate.",
+      "file": "M04_2b238ee9a09e34826a5407447c2e157e.wav"
+    },
+    {
+      "key": "M04_96bd5746efb94a059ecc5ea65331e759",
+      "profile": "M04",
+      "text": "A motel guest escaped through a window but cannot get past the infected on the access road.",
+      "file": "M04_96bd5746efb94a059ecc5ea65331e759.wav"
+    },
+    {
+      "key": "M04_45664e2272103160b6d0b3ebe8669ff7",
+      "profile": "M04",
+      "text": "A pair of boots sits beside a freshly filled grave. A friend is waiting for the courage to leave.",
+      "file": "M04_45664e2272103160b6d0b3ebe8669ff7.wav"
+    },
+    {
+      "key": "M04_bfc4edeb52ce863cf25c3923107ad421",
+      "profile": "M04",
+      "text": "A receiver repeats groups of numbers under a wash of static. Holding the frequency may reveal the whole message.",
+      "file": "M04_bfc4edeb52ce863cf25c3923107ad421.wav"
+    },
+    {
+      "key": "M04_a9c525787213825aad12b2d8c6c38bc3",
+      "profile": "M04",
+      "text": "A repair caravan has run out of usable metal. Its quartermaster is paying for scrap.",
+      "file": "M04_a9c525787213825aad12b2d8c6c38bc3.wav"
+    },
+    {
+      "key": "M04_f2596af58c1f5b29cc9c8751a62930ce",
+      "profile": "M04",
+      "text": "A roadside medic has a patient on a folding cot and nothing left to stop the bleeding.",
+      "file": "M04_f2596af58c1f5b29cc9c8751a62930ce.wav"
+    },
+    {
+      "key": "M04_3282c2d850b865ccecbc8ac531ee2a65",
+      "profile": "M04",
+      "text": "A runner is balancing on a wreck while rabid dogs circle below.",
+      "file": "M04_3282c2d850b865ccecbc8ac531ee2a65.wav"
+    },
+    {
+      "key": "M04_64947f5154a8bbd2301d6c83f8568c2c",
+      "profile": "M04",
+      "text": "A ruptured chemical drum is leaking across the verge. A warning lamp marks the contaminated ground.",
+      "file": "M04_64947f5154a8bbd2301d6c83f8568c2c.wav"
+    },
+    {
+      "key": "M04_e7b4d1744ab98d2e88386b9b287b9ba8",
+      "profile": "M04",
+      "text": "A scavenger has jacked up a van on timber blocks. A broken bracket is all that keeps him here.",
+      "file": "M04_e7b4d1744ab98d2e88386b9b287b9ba8.wav"
+    },
+    {
+      "key": "M04_6468be78b687cedcadb8126d9c98e6ec",
+      "profile": "M04",
+      "text": "A scout is trapped behind a makeshift barricade. The guards are close enough to hear a raised voice.",
+      "file": "M04_6468be78b687cedcadb8126d9c98e6ec.wav"
+    },
+    {
+      "key": "M04_89cf90380c66916645935645d4712b31",
+      "profile": "M04",
+      "text": "A seat and a roof. We're moving up in the world.",
+      "file": "M04_89cf90380c66916645935645d4712b31.wav"
+    },
+    {
+      "key": "M04_0d41cd365093dd0967b9c4c28518648c",
+      "profile": "M04",
+      "text": "A stack of supply drums has begun to smoke. Clean water could cool the hottest one before it ruptures.",
+      "file": "M04_0d41cd365093dd0967b9c4c28518648c.wav"
+    },
+    {
+      "key": "M04_d0ea2bd063eff096aade442399632147",
+      "profile": "M04",
+      "text": "A stargazer has set up an improvised observation station. She asks you to keep watch during a brief recording.",
+      "file": "M04_d0ea2bd063eff096aade442399632147.wav"
+    },
+    {
+      "key": "M04_cf11e657ac603b61f922b3f4d3b24d4e",
+      "profile": "M04",
+      "text": "A stranded passenger refuses to spend another night beside the dead bus.",
+      "file": "M04_cf11e657ac603b61f922b3f4d3b24d4e.wav"
+    },
+    {
+      "key": "M04_019f3f3cfee567ad1ae172a9d7c3930d",
+      "profile": "M04",
+      "text": "A supply convoy is retreating behind a barricade. Raiders are searching for a weak point.",
+      "file": "M04_019f3f3cfee567ad1ae172a9d7c3930d.wav"
+    },
+    {
+      "key": "M04_e8f8be0599affca5c230082e7c1d6568",
+      "profile": "M04",
+      "text": "A surveyor has lost her bearings in the fog. She needs someone to walk her to the next road marker.",
+      "file": "M04_e8f8be0599affca5c230082e7c1d6568.wav"
+    },
+    {
+      "key": "M04_408ada9aca957e62266cbf5904d6db44",
+      "profile": "M04",
+      "text": "A technician is pinned behind collapsed equipment. Infected workers are drawn to his calls.",
+      "file": "M04_408ada9aca957e62266cbf5904d6db44.wav"
+    },
+    {
+      "key": "M04_35afe78696756846a044420a11838e01",
+      "profile": "M04",
+      "text": "A traveler points out a feeding ground. The largest dogs have been stalking this road for days.",
+      "file": "M04_35afe78696756846a044420a11838e01.wav"
+    },
+    {
+      "key": "M04_6deb6d430725e3250ce5ad5512a30647",
+      "profile": "M04",
+      "text": "A volunteer is counting travelers for the settlements. He asks you to watch the road while he repairs his tally board.",
+      "file": "M04_6deb6d430725e3250ce5ad5512a30647.wav"
+    },
+    {
+      "key": "M04_f1db4fa078e589546b21bee3ca533508",
+      "profile": "M04",
+      "text": "A water carrier says the emergency filter has clogged. The last clean bottles are reserved for children.",
+      "file": "M04_f1db4fa078e589546b21bee3ca533508.wav"
+    },
+    {
+      "key": "M04_c551e3773396b7f30121a42f465a3992",
+      "profile": "M04",
+      "text": "A weather instrument has landed in the ditch. Its recorder still has enough power for one download.",
+      "file": "M04_c551e3773396b7f30121a42f465a3992.wav"
+    },
+    {
+      "key": "M04_dfd457e77585d88216b24f94843801fc",
+      "profile": "M04",
+      "text": "A whistle sounds twice beyond a deserted campsite. Something moves in the brush.",
+      "file": "M04_dfd457e77585d88216b24f94843801fc.wav"
+    },
+    {
+      "key": "M04_74459642378aacfd87ec25872b7c5b3a",
+      "profile": "M04",
+      "text": "A wreck has its cargo lid propped open. The neatly arranged supplies look untouched.",
+      "file": "M04_74459642378aacfd87ec25872b7c5b3a.wav"
+    },
+    {
+      "key": "M04_2396e5d3a7d95cf0b7d906d1c37a9900",
+      "profile": "M04",
+      "text": "Always jobs to do around here.",
+      "file": "M04_2396e5d3a7d95cf0b7d906d1c37a9900.wav"
+    },
+    {
+      "key": "M04_c3a8cd6cbc1dbdc48083b193d58b08e2",
+      "profile": "M04",
+      "text": "An injured traveler can walk, but only slowly. The next safe pull-off is a short distance down the road.",
+      "file": "M04_c3a8cd6cbc1dbdc48083b193d58b08e2.wav"
+    },
+    {
+      "key": "M04_17daf44a63bebc7eb1c743c3e1d9c431",
+      "profile": "M04",
+      "text": "An isolated relay repeats a distress fragment. A technician points to a burned contactor.",
+      "file": "M04_17daf44a63bebc7eb1c743c3e1d9c431.wav"
+    },
+    {
+      "key": "M04_9d447a1c5166406c6d9cd3fb201b759d",
+      "profile": "M04",
+      "text": "An old roadside shelter has folded over its supply chest. The frame must be lifted clear.",
+      "file": "M04_9d447a1c5166406c6d9cd3fb201b759d.wav"
+    },
+    {
+      "key": "M04_426b410a17871d73fa034dd5fbfa440d",
+      "profile": "M04",
+      "text": "Armed collectors demand a road fee. Their barricade does not actually block the whole road.",
+      "file": "M04_426b410a17871d73fa034dd5fbfa440d.wav"
+    },
+    {
+      "key": "M04_6c813f135b8726493648d2f6e2b9a0e6",
+      "profile": "M04",
+      "text": "Been patching that same coat for years.",
+      "file": "M04_6c813f135b8726493648d2f6e2b9a0e6.wav"
+    },
+    {
+      "key": "M04_92621e3c1e1514c902ed5473e986f3d0",
+      "profile": "M04",
+      "text": "Blue tape marks a locked evidence case beneath an abandoned roadside checkpoint.",
+      "file": "M04_92621e3c1e1514c902ed5473e986f3d0.wav"
+    },
+    {
+      "key": "M04_5a5ea3210891e034b2d61f6df9b5f67a",
+      "profile": "M04",
+      "text": "Bring back supplies and we'll make it worth your while.",
+      "file": "M04_5a5ea3210891e034b2d61f6df9b5f67a.wav"
+    },
+    {
+      "key": "M04_87765b9bd4d6f8b9dec240e183042c51",
+      "profile": "M04",
+      "text": "Bring water to a settlement quartermaster.",
+      "file": "M04_87765b9bd4d6f8b9dec240e183042c51.wav"
+    },
+    {
+      "key": "M04_320ae35a92f7ada530fa2288759b1f41",
+      "profile": "M04",
+      "text": "Buying or selling? I can do either.",
+      "file": "M04_320ae35a92f7ada530fa2288759b1f41.wav"
+    },
+    {
+      "key": "M04_61cba8cfb92640b1caa7c1d57714cc38",
+      "profile": "M04",
+      "text": "Can't get a shot from here!",
+      "file": "M04_61cba8cfb92640b1caa7c1d57714cc38.wav"
+    },
+    {
+      "key": "M04_9b82839434c48c6d27ba15845349815a",
+      "profile": "M04",
+      "text": "Can't see much out there. Listen carefully.",
+      "file": "M04_9b82839434c48c6d27ba15845349815a.wav"
+    },
+    {
+      "key": "M04_5b01f6a814797e8450f8ab4c4a25c8d3",
+      "profile": "M04",
+      "text": "Changing mags!",
+      "file": "M04_5b01f6a814797e8450f8ab4c4a25c8d3.wav"
+    },
+    {
+      "key": "M04_93a12f1b394c78f0e63b90ff302fd508",
+      "profile": "M04",
+      "text": "Check behind that cover!",
+      "file": "M04_93a12f1b394c78f0e63b90ff302fd508.wav"
+    },
+    {
+      "key": "M04_263979d7f26c667bf8af0c6e0b81bfb3",
+      "profile": "M04",
+      "text": "Check the corners. I'll check the windows.",
+      "file": "M04_263979d7f26c667bf8af0c6e0b81bfb3.wav"
+    },
+    {
+      "key": "M04_fa25770feabeef648f500a02d9909359",
+      "profile": "M04",
+      "text": "Clean water and clean bandages. Can't have too many.",
+      "file": "M04_fa25770feabeef648f500a02d9909359.wav"
+    },
+    {
+      "key": "M04_347ca364e788f2bf0248ac225fa12e04",
+      "profile": "M04",
+      "text": "Clear threats from the settlement approaches.",
+      "file": "M04_347ca364e788f2bf0248ac225fa12e04.wav"
+    },
+    {
+      "key": "M04_1531c09153ab7820d63f4f084f834aa5",
+      "profile": "M04",
+      "text": "Clothes and luggage lie in a careful line along the verge. The figures beyond them have stopped moving.",
+      "file": "M04_1531c09153ab7820d63f4f084f834aa5.wav"
+    },
+    {
+      "key": "M04_7944a876e0f182b77b951edb5a09e4f9",
+      "profile": "M04",
+      "text": "Come on! Show yourself!",
+      "file": "M04_7944a876e0f182b77b951edb5a09e4f9.wav"
+    },
+    {
+      "key": "M04_45cd74d3931346a9c42eb721ee1a02ab",
+      "profile": "M04",
+      "text": "Contact! Stay behind something solid!",
+      "file": "M04_45cd74d3931346a9c42eb721ee1a02ab.wav"
+    },
+    {
+      "key": "M04_1714cf881737b43ba318764af6b922f3",
+      "profile": "M04",
+      "text": "Don't give them room!",
+      "file": "M04_1714cf881737b43ba318764af6b922f3.wav"
+    },
+    {
+      "key": "M04_82a81a411ae5fe814b894268efbed3f4",
+      "profile": "M04",
+      "text": "Don't need it yourself? Somebody else probably does.",
+      "file": "M04_82a81a411ae5fe814b894268efbed3f4.wav"
+    },
+    {
+      "key": "M04_794c514d4d2ac0d9aa594e9f07c06b8a",
+      "profile": "M04",
+      "text": "Don't rush them. Make them come to us!",
+      "file": "M04_794c514d4d2ac0d9aa594e9f07c06b8a.wav"
+    },
+    {
+      "key": "M04_e34d60a20076588ddb9b57043f079bde",
+      "profile": "M04",
+      "text": "Exchange credits and Canadian dollars here. The displayed live rate includes our spread.",
+      "file": "M04_e34d60a20076588ddb9b57043f079bde.wav"
+    },
+    {
+      "key": "M04_9a5579982ba9432dad245d787d0f1699",
+      "profile": "M04",
+      "text": "Find a radio and make contact with a medic.",
+      "file": "M04_9a5579982ba9432dad245d787d0f1699.wav"
+    },
+    {
+      "key": "M04_64bbcc52068b23168a4de22b418a5207",
+      "profile": "M04",
+      "text": "Find cover! Protect the town!",
+      "file": "M04_64bbcc52068b23168a4de22b418a5207.wav"
+    },
+    {
+      "key": "M04_5d4fc54ec1e9f0f51e7b503927abf152",
+      "profile": "M04",
+      "text": "Find the diner and replenish settlement rations.",
+      "file": "M04_5d4fc54ec1e9f0f51e7b503927abf152.wav"
+    },
+    {
+      "key": "M04_36b93d15e6afa96b75a79ed13d2bd509",
+      "profile": "M04",
+      "text": "Finish a final patrol for the settlement network.",
+      "file": "M04_36b93d15e6afa96b75a79ed13d2bd509.wav"
+    },
+    {
+      "key": "M04_44505eeb7cf94253cb4370804e828fbf",
+      "profile": "M04",
+      "text": "Funny what survives. Street signs outlasted the country.",
+      "file": "M04_44505eeb7cf94253cb4370804e828fbf.wav"
+    },
+    {
+      "key": "M04_7bb2330ecd48ff6d35f688046de86f6a",
+      "profile": "M04",
+      "text": "Get down! Get down!",
+      "file": "M04_7bb2330ecd48ff6d35f688046de86f6a.wav"
+    },
+    {
+      "key": "M04_a6aa6bfea15b7332c4dd80591866ad67",
+      "profile": "M04",
+      "text": "Good to see another living face.",
+      "file": "M04_a6aa6bfea15b7332c4dd80591866ad67.wav"
+    },
+    {
+      "key": "M04_e0a2374fb63873e86b5c55b71aceba8e",
+      "profile": "M04",
+      "text": "Got to keep busy. Helps with everything else.",
+      "file": "M04_e0a2374fb63873e86b5c55b71aceba8e.wav"
+    },
+    {
+      "key": "M04_1091f34934d5491ee8a72ee05bc4becd",
+      "profile": "M04",
+      "text": "Have a look. Something here might keep you alive.",
+      "file": "M04_1091f34934d5491ee8a72ee05bc4becd.wav"
+    },
+    {
+      "key": "M04_306c6ea66797f7070826bf9098bd15f4",
+      "profile": "M04",
+      "text": "Hold that corner!",
+      "file": "M04_306c6ea66797f7070826bf9098bd15f4.wav"
+    },
+    {
+      "key": "M04_22905fdc3eed8a2170c7227af9183551",
+      "profile": "M04",
+      "text": "Hostile in town! Take cover!",
+      "file": "M04_22905fdc3eed8a2170c7227af9183551.wav"
+    },
+    {
+      "key": "M04_eb14c570664d9118501fc335f3db9a0d",
+      "profile": "M04",
+      "text": "I am hit. Give me a moment!",
+      "file": "M04_eb14c570664d9118501fc335f3db9a0d.wav"
+    },
+    {
+      "key": "M04_f52b66b524557c9b68e58127ab0b6eb6",
+      "profile": "M04",
+      "text": "I know you're still here!",
+      "file": "M04_f52b66b524557c9b68e58127ab0b6eb6.wav"
+    },
+    {
+      "key": "M04_b6e0b1400f42856b0ee8b649369a7f35",
+      "profile": "M04",
+      "text": "I miss hearing somebody mow their lawn.",
+      "file": "M04_b6e0b1400f42856b0ee8b649369a7f35.wav"
+    },
+    {
+      "key": "M04_b335ad3218e845e856fd75490e740ab2",
+      "profile": "M04",
+      "text": "I still catch myself checking the mailbox.",
+      "file": "M04_b335ad3218e845e856fd75490e740ab2.wav"
+    },
+    {
+      "key": "M04_654c15db366aa3b0e9048b706f133eb2",
+      "profile": "M04",
+      "text": "I used to live north of here.",
+      "file": "M04_654c15db366aa3b0e9048b706f133eb2.wav"
+    },
+    {
+      "key": "M04_08b44daab206c1308e82c977e75b987d",
+      "profile": "M04",
+      "text": "I'd rather walk with you than sit worrying at home.",
+      "file": "M04_08b44daab206c1308e82c977e75b987d.wav"
+    },
+    {
+      "key": "M04_1d54613c29d4ec0fec9551bb3a216a98",
+      "profile": "M04",
+      "text": "I'll keep an eye out through the window.",
+      "file": "M04_1d54613c29d4ec0fec9551bb3a216a98.wav"
+    },
+    {
+      "key": "M04_56777c8d042cd4568236fd639ff01cdf",
+      "profile": "M04",
+      "text": "I'll watch our backs. You pick the route.",
+      "file": "M04_56777c8d042cd4568236fd639ff01cdf.wav"
+    },
+    {
+      "key": "M04_ca28dba79f7e8c819f5a02df83905268",
+      "profile": "M04",
+      "text": "I'm bleeding. Could use a moment.",
+      "file": "M04_ca28dba79f7e8c819f5a02df83905268.wav"
+    },
+    {
+      "key": "M04_7cc1a88e1aac392998e056b5cdfa43ea",
+      "profile": "M04",
+      "text": "I'm here. Finish what we started.",
+      "file": "M04_7cc1a88e1aac392998e056b5cdfa43ea.wav"
+    },
+    {
+      "key": "M04_9115a7689ca10189fd441794a03093b5",
+      "profile": "M04",
+      "text": "I'm saving up for a proper pair of boots.",
+      "file": "M04_9115a7689ca10189fd441794a03093b5.wav"
+    },
+    {
+      "key": "M04_983ca6cf509836819bd7e6bbbd470286",
+      "profile": "M04",
+      "text": "I've got this angle. Watch your side!",
+      "file": "M04_983ca6cf509836819bd7e6bbbd470286.wav"
+    },
+    {
+      "key": "M04_44101f14fb85cae66ceaf69988c92904",
+      "profile": "M04",
+      "text": "If a hinge squeaks, oil it. Don't wake the whole street.",
+      "file": "M04_44101f14fb85cae66ceaf69988c92904.wav"
+    },
+    {
+      "key": "M04_2f85495ff8f3b16364b3d4ac3674ec94",
+      "profile": "M04",
+      "text": "If we find coffee, I'm calling that a victory.",
+      "file": "M04_2f85495ff8f3b16364b3d4ac3674ec94.wav"
+    },
+    {
+      "key": "M04_2120dd58a70094e810bb9062801911b3",
+      "profile": "M04",
+      "text": "If you find seeds out there, don't throw them away.",
+      "file": "M04_2120dd58a70094e810bb9062801911b3.wav"
+    },
+    {
+      "key": "M04_1da6b0c86f3ab91bea59b99b903d1be7",
+      "profile": "M04",
+      "text": "If you're hurt, come see me before it gets worse.",
+      "file": "M04_1da6b0c86f3ab91bea59b99b903d1be7.wav"
+    },
+    {
+      "key": "M04_13ae647a7e4b446cc75787bfd8d790f1",
+      "profile": "M04",
+      "text": "Infected workers keep returning to the same maintenance stop. A scavenger offers a bounty for clearing it.",
+      "file": "M04_13ae647a7e4b446cc75787bfd8d790f1.wav"
+    },
+    {
+      "key": "M04_ca109bfeeced77fb8909b64e4ed497d3",
+      "profile": "M04",
+      "text": "Investigate the motel and clear the nearby threats.",
+      "file": "M04_ca109bfeeced77fb8909b64e4ed497d3.wav"
+    },
+    {
+      "key": "M04_4f826cedba0fca1ed6b09d734542c17c",
+      "profile": "M04",
+      "text": "Keep a little water in reserve. Learned that the hard way.",
+      "file": "M04_4f826cedba0fca1ed6b09d734542c17c.wav"
+    },
+    {
+      "key": "M04_a280ce0bb89c0107d439eab686c339b8",
+      "profile": "M04",
+      "text": "Keep looking. They're close.",
+      "file": "M04_a280ce0bb89c0107d439eab686c339b8.wav"
+    },
+    {
+      "key": "M04_21bf461c43bbd2565015be7a55c9c441",
+      "profile": "M04",
+      "text": "Keep that wound clean. Dirt's as dangerous as bullets.",
+      "file": "M04_21bf461c43bbd2565015be7a55c9c441.wav"
+    },
+    {
+      "key": "M04_45011a1159396607e732e562ebe2677e",
+      "profile": "M04",
+      "text": "Keep them pinned down!",
+      "file": "M04_45011a1159396607e732e562ebe2677e.wav"
+    },
+    {
+      "key": "M04_89cb2246c732df20ce97f6f8e750cc69",
+      "profile": "M04",
+      "text": "Keep your head down. I'm here!",
+      "file": "M04_89cb2246c732df20ce97f6f8e750cc69.wav"
+    },
+    {
+      "key": "M04_8a4eeb1ee44e85d9b96af5af5ee40923",
+      "profile": "M04",
+      "text": "Leave your goods with us. Collect the proceeds when they sell.",
+      "file": "M04_8a4eeb1ee44e85d9b96af5af5ee40923.wav"
+    },
+    {
+      "key": "M04_497874d7a986409f41c722ed122dac17",
+      "profile": "M04",
+      "text": "Let me know if you need a breather.",
+      "file": "M04_497874d7a986409f41c722ed122dac17.wav"
+    },
+    {
+      "key": "M04_b42119f65122833c8760521d5362482b",
+      "profile": "M04",
+      "text": "Let us go over the settlement accounts.",
+      "file": "M04_b42119f65122833c8760521d5362482b.wav"
+    },
+    {
+      "key": "M04_ad8dbdf2fdd23cc633a57d5ec759740f",
+      "profile": "M04",
+      "text": "Locate medical stock and replenish the clinic.",
+      "file": "M04_ad8dbdf2fdd23cc633a57d5ec759740f.wav"
+    },
+    {
+      "key": "M04_b3707246319958253367243bd4e85372",
+      "profile": "M04",
+      "text": "Looking for work? We have contracts.",
+      "file": "M04_b3707246319958253367243bd4e85372.wav"
+    },
+    {
+      "key": "M04_cbf6a97c43f7556b2d4d5fdcc8e01120",
+      "profile": "M04",
+      "text": "Men wearing borrowed medical bands demand payment for a nonexistent inspection.",
+      "file": "M04_cbf6a97c43f7556b2d4d5fdcc8e01120.wav"
+    },
+    {
+      "key": "M04_6388c6863b1c357beed73145f31192d0",
+      "profile": "M04",
+      "text": "Morning or night, there's always something to mend.",
+      "file": "M04_6388c6863b1c357beed73145f31192d0.wav"
+    },
+    {
+      "key": "M04_ec585771aac5bc8fafa5093250ebb7ff",
+      "profile": "M04",
+      "text": "Moving up! Cover me!",
+      "file": "M04_ec585771aac5bc8fafa5093250ebb7ff.wav"
+    },
+    {
+      "key": "M04_8667ec29affd0f762c389009a4dc6312",
+      "profile": "M04",
+      "text": "Names are scratched into scraps of tin. A caretaker asks you to stay for a moment while he reads them.",
+      "file": "M04_8667ec29affd0f762c389009a4dc6312.wav"
+    },
+    {
+      "key": "M04_f595a45aa5c00e6237f350946c4eeed2",
+      "profile": "M04",
+      "text": "Need a second! Cover me!",
+      "file": "M04_f595a45aa5c00e6237f350946c4eeed2.wav"
+    },
+    {
+      "key": "M04_277b106559996d381a36fadc55997ffd",
+      "profile": "M04",
+      "text": "Need another pair of hands?",
+      "file": "M04_277b106559996d381a36fadc55997ffd.wav"
+    },
+    {
+      "key": "M04_39ee7967719b83044c66cc2c2fba24f2",
+      "profile": "M04",
+      "text": "Need work? Take a look at the contracts.",
+      "file": "M04_39ee7967719b83044c66cc2c2fba24f2.wav"
+    },
+    {
+      "key": "M04_a196bb79ca12a9cd712d924f4764fdd5",
+      "profile": "M04",
+      "text": "Never liked walking these roads after dark.",
+      "file": "M04_a196bb79ca12a9cd712d924f4764fdd5.wav"
+    },
+    {
+      "key": "M04_4009a9f8c931d31adbfbc304d6175682",
+      "profile": "M04",
+      "text": "Never thought I'd miss paying rent.",
+      "file": "M04_4009a9f8c931d31adbfbc304d6175682.wav"
+    },
+    {
+      "key": "M04_4e143f9e27ade6b1800b71cc5501ace4",
+      "profile": "M04",
+      "text": "Next roof we find, let's take a minute.",
+      "file": "M04_4e143f9e27ade6b1800b71cc5501ace4.wav"
+    },
+    {
+      "key": "M04_b001d32fbbe3c73bc381f0df66ce5169",
+      "profile": "M04",
+      "text": "Nice to let something else do the walking.",
+      "file": "M04_b001d32fbbe3c73bc381f0df66ce5169.wav"
+    },
+    {
+      "key": "M04_f3017399b9d7f9af22299f78e564cd94",
+      "profile": "M04",
+      "text": "Nobody here gets through this alone.",
+      "file": "M04_f3017399b9d7f9af22299f78e564cd94.wav"
+    },
+    {
+      "key": "M04_8c920e14b1e86a7175e3d847da29b2fe",
+      "profile": "M04",
+      "text": "One decent meal and a dry bed. That's the dream.",
+      "file": "M04_8c920e14b1e86a7175e3d847da29b2fe.wav"
+    },
+    {
+      "key": "M04_e93ad42b18c46e6adab4f250f9cb15c9",
+      "profile": "M04",
+      "text": "Over here. Could use a hand.",
+      "file": "M04_e93ad42b18c46e6adab4f250f9cb15c9.wav"
+    },
+    {
+      "key": "M04_06817ca7b958f4c823f5b040142673f8",
+      "profile": "M04",
+      "text": "Over here. I cannot stop the bleeding.",
+      "file": "M04_06817ca7b958f4c823f5b040142673f8.wav"
+    },
+    {
+      "key": "M04_61536b724df74eb6110be8d45d6fccd7",
+      "profile": "M04",
+      "text": "Picked a bad place to wander!",
+      "file": "M04_61536b724df74eb6110be8d45d6fccd7.wav"
+    },
+    {
+      "key": "M04_cccb81f303ed23c8f686255d9edbf7e2",
+      "profile": "M04",
+      "text": "Plenty to see around here. Take your time.",
+      "file": "M04_cccb81f303ed23c8f686255d9edbf7e2.wav"
+    },
+    {
+      "key": "M04_51c75d0afd38d19c5e6978be0edb3bca",
+      "profile": "M04",
+      "text": "Raiders watch the roads. Dogs hunt by sound. The pale mannequins move when nobody watches. Bring someone you trust, and never stand beside a fuel pump in a firefight.",
+      "file": "M04_51c75d0afd38d19c5e6978be0edb3bca.wav"
+    },
+    {
+      "key": "M04_0c29978ec9453c2aab4c395acd0251f3",
+      "profile": "M04",
+      "text": "Rain is coming. I can feel it.",
+      "file": "M04_0c29978ec9453c2aab4c395acd0251f3.wav"
+    },
+    {
+      "key": "M04_715a1384bd79f64d16abd1f4435554d3",
+      "profile": "M04",
+      "text": "Rain's covering our footsteps. Their footsteps too.",
+      "file": "M04_715a1384bd79f64d16abd1f4435554d3.wav"
+    },
+    {
+      "key": "M04_5597efc18b4620de0b2391fba03e1ae7",
+      "profile": "M04",
+      "text": "Rainwater has drowned a camp generator. Its owner has disconnected it, but needs help rebuilding the starter.",
+      "file": "M04_5597efc18b4620de0b2391fba03e1ae7.wav"
+    },
+    {
+      "key": "M04_2d538eb01390f4f986ca9c3b180bd924",
+      "profile": "M04",
+      "text": "Recruit a survivor and show them the bunker.",
+      "file": "M04_2d538eb01390f4f986ca9c3b180bd924.wav"
+    },
+    {
+      "key": "M04_52a275cd79f3036633f2c4aba9f33b54",
+      "profile": "M04",
+      "text": "Reloading! Keep them back!",
+      "file": "M04_52a275cd79f3036633f2c4aba9f33b54.wav"
+    },
+    {
+      "key": "M04_c56c608989c041dd17404ee446ae381b",
+      "profile": "M04",
+      "text": "Restore the shelter workshop.",
+      "file": "M04_c56c608989c041dd17404ee446ae381b.wav"
+    },
+    {
+      "key": "M04_a0d5901e1669371025ff160301c5e256",
+      "profile": "M04",
+      "text": "Runoff has stripped the soil from a sealed supply drum. Its latch is packed with rust.",
+      "file": "M04_a0d5901e1669371025ff160301c5e256.wav"
+    },
+    {
+      "key": "M04_24579fdc88a291cd4c2913f2fa169c0b",
+      "profile": "M04",
+      "text": "Six active contracts at a time. Deliver supplies here, and return when your work is finished.",
+      "file": "M04_24579fdc88a291cd4c2913f2fa169c0b.wav"
+    },
+    {
+      "key": "M04_208c26d64f94b9463455488d6bf6c762",
+      "profile": "M04",
+      "text": "So much for keeping my socks dry.",
+      "file": "M04_208c26d64f94b9463455488d6bf6c762.wav"
+    },
+    {
+      "key": "M04_5e110ec140466f67ec07ecd2a4cb0925",
+      "profile": "M04",
+      "text": "Someone fixed the water pump.",
+      "file": "M04_5e110ec140466f67ec07ecd2a4cb0925.wav"
+    },
+    {
+      "key": "M04_560eb0d5ab90f357235f8f9a5bc94289",
+      "profile": "M04",
+      "text": "Someone ought to write all this down.",
+      "file": "M04_560eb0d5ab90f357235f8f9a5bc94289.wav"
+    },
+    {
+      "key": "M04_67cf4ea1c60c313fcd9457b7ae6f9a2c",
+      "profile": "M04",
+      "text": "Spent brass litters a lookout. Raiders have been firing on anyone crossing the next stretch.",
+      "file": "M04_67cf4ea1c60c313fcd9457b7ae6f9a2c.wav"
+    },
+    {
+      "key": "M04_21fb705c8bb629d19a512b6c807b690a",
+      "profile": "M04",
+      "text": "Stand back. This checkpoint is under alert.",
+      "file": "M04_21fb705c8bb629d19a512b6c807b690a.wav"
+    },
+    {
+      "key": "M04_12bc079fcf89240027b014478205af66",
+      "profile": "M04",
+      "text": "Stay away from the windows!",
+      "file": "M04_12bc079fcf89240027b014478205af66.wav"
+    },
+    {
+      "key": "M04_13ada153e4798758ebfb4226d1cbba3f",
+      "profile": "M04",
+      "text": "Stay close. We are not done yet.",
+      "file": "M04_13ada153e4798758ebfb4226d1cbba3f.wav"
+    },
+    {
+      "key": "M04_adac89b570f8942f67a8d20822ef7ce9",
+      "profile": "M04",
+      "text": "Stay sharp. I lost sight of them.",
+      "file": "M04_adac89b570f8942f67a8d20822ef7ce9.wav"
+    },
+    {
+      "key": "M04_ea52562994ac478160a7c512aebe68e7",
+      "profile": "M04",
+      "text": "Still fighting! Stay with me!",
+      "file": "M04_ea52562994ac478160a7c512aebe68e7.wav"
+    },
+    {
+      "key": "M04_0fcd00e83376cc7bae00117669dc81e2",
+      "profile": "M04",
+      "text": "Still standing. Barely.",
+      "file": "M04_0fcd00e83376cc7bae00117669dc81e2.wav"
+    },
+    {
+      "key": "M04_c226ffbc9e2bd4a17c7edcb4b63928bd",
+      "profile": "M04",
+      "text": "Still with you. Keep your eyes on the street.",
+      "file": "M04_c226ffbc9e2bd4a17c7edcb4b63928bd.wav"
+    },
+    {
+      "key": "M04_e16ee1032d65315fd146a2a821f06b92",
+      "profile": "M04",
+      "text": "Stranded walkers are shivering beside soaked bedrolls. They need food before continuing.",
+      "file": "M04_e16ee1032d65315fd146a2a821f06b92.wav"
+    },
+    {
+      "key": "M04_aebaaac1c720e850793197e042c92c28",
+      "profile": "M04",
+      "text": "Supplies for sale. Fair prices.",
+      "file": "M04_aebaaac1c720e850793197e042c92c28.wav"
+    },
+    {
+      "key": "M04_492282c39eeecef7a06b13996133b8af",
+      "profile": "M04",
+      "text": "Survey a fuel stop, then report to a warden.",
+      "file": "M04_492282c39eeecef7a06b13996133b8af.wav"
+    },
+    {
+      "key": "M04_fa4904e8964bfe904d78ba1770d3b4aa",
+      "profile": "M04",
+      "text": "Survey storage and recover repair material.",
+      "file": "M04_fa4904e8964bfe904d78ba1770d3b4aa.wav"
+    },
+    {
+      "key": "M04_cc1ccf1f163d678e14f08b01c6bf0d57",
+      "profile": "M04",
+      "text": "Take care on the roads, stranger.",
+      "file": "M04_cc1ccf1f163d678e14f08b01c6bf0d57.wav"
+    },
+    {
+      "key": "M04_7df26d5591a8e5c2dec26e53809f3164",
+      "profile": "M04",
+      "text": "Thank you. We will remember this.",
+      "file": "M04_7df26d5591a8e5c2dec26e53809f3164.wav"
+    },
+    {
+      "key": "M04_9e47ecb4e34487ebdeb8373d46d09916",
+      "profile": "M04",
+      "text": "That one got me. Don't go too far.",
+      "file": "M04_9e47ecb4e34487ebdeb8373d46d09916.wav"
+    },
+    {
+      "key": "M04_037280aab044e5cedb7a005d75d0d3e7",
+      "profile": "M04",
+      "text": "The clinic is open. Stay safe out there.",
+      "file": "M04_037280aab044e5cedb7a005d75d0d3e7.wav"
+    },
+    {
+      "key": "M04_cc7f581441f816de02327bcab65c7e62",
+      "profile": "M04",
+      "text": "The convoy you helped is on the air. They need a relay operator to acknowledge their arrival.",
+      "file": "M04_cc7f581441f816de02327bcab65c7e62.wav"
+    },
+    {
+      "key": "M04_780485a47da167f345a9b510d3462818",
+      "profile": "M04",
+      "text": "The courier you helped recognizes you. She has returned from the clinic with supplies to spare.",
+      "file": "M04_780485a47da167f345a9b510d3462818.wav"
+    },
+    {
+      "key": "M04_8ccb5fb3e6b071b1b034b7a8ef95e8a8",
+      "profile": "M04",
+      "text": "The medic you supplied is moving patients. The evacuation cannot leave until the road is clear.",
+      "file": "M04_8ccb5fb3e6b071b1b034b7a8ef95e8a8.wav"
+    },
+    {
+      "key": "M04_87a0394a0c2481e3599e5e7090ac8cbc",
+      "profile": "M04",
+      "text": "The pharmacy cabinet. Please take what you need.",
+      "file": "M04_87a0394a0c2481e3599e5e7090ac8cbc.wav"
+    },
+    {
+      "key": "M04_3cba9c4bf22a9b1357fa2623def4f1c1",
+      "profile": "M04",
+      "text": "The repaired relay is transmitting a convoy route. Its operator needs you to hold the perimeter until the burst finishes.",
+      "file": "M04_3cba9c4bf22a9b1357fa2623def4f1c1.wav"
+    },
+    {
+      "key": "M04_cc976d7d8a118ee26407e2a5ab26847d",
+      "profile": "M04",
+      "text": "The roads are quiet. Stay close, and watch the rooftops.",
+      "file": "M04_cc976d7d8a118ee26407e2a5ab26847d.wav"
+    },
+    {
+      "key": "M04_e6462e8e8ea3d83474fc6001982880f5",
+      "profile": "M04",
+      "text": "The scout you rescued left a trail mark and a cache exactly where promised.",
+      "file": "M04_e6462e8e8ea3d83474fc6001982880f5.wav"
+    },
+    {
+      "key": "M04_86e657893336788415ba82313d9adfc1",
+      "profile": "M04",
+      "text": "The shops take Canadian dollars. Try the exchange first.",
+      "file": "M04_86e657893336788415ba82313d9adfc1.wav"
+    },
+    {
+      "key": "M04_0a5f6cd41036bbf649ebcfb816af2b1b",
+      "profile": "M04",
+      "text": "The technician you rescued is ready to move his tools. He asks you to walk the exposed stretch with him.",
+      "file": "M04_0a5f6cd41036bbf649ebcfb816af2b1b.wav"
+    },
+    {
+      "key": "M04_c15fb9d0af42185b5484e48d693a3802",
+      "profile": "M04",
+      "text": "The wardens need the old shelter operational.",
+      "file": "M04_c15fb9d0af42185b5484e48d693a3802.wav"
+    },
+    {
+      "key": "M04_0a8f57e4183d1478a50b9e481615bd7e",
+      "profile": "M04",
+      "text": "Then we will find another way.",
+      "file": "M04_0a8f57e4183d1478a50b9e481615bd7e.wav"
+    },
+    {
+      "key": "M04_f94d82c1ef17348ce3ec6572f38e677d",
+      "profile": "M04",
+      "text": "There you are!",
+      "file": "M04_f94d82c1ef17348ce3ec6572f38e677d.wav"
+    },
+    {
+      "key": "M04_20df84e121f5d269722a4d81ec70a730",
+      "profile": "M04",
+      "text": "There! Keep shooting!",
+      "file": "M04_20df84e121f5d269722a4d81ec70a730.wav"
+    },
+    {
+      "key": "M04_425a8bb06345c472149130a8876f93ef",
+      "profile": "M04",
+      "text": "There's still good stuff out here. Just takes looking.",
+      "file": "M04_425a8bb06345c472149130a8876f93ef.wav"
+    },
+    {
+      "key": "M04_a836f2886d357fbe041d53384c63b51d",
+      "profile": "M04",
+      "text": "This is a waystation on the old road network. Wardens post work, merchants sell supplies, and drifters sometimes sign on. Shelter 01 has room for ten. Use your journal to follow a contract.",
+      "file": "M04_a836f2886d357fbe041d53384c63b51d.wav"
+    },
+    {
+      "key": "M04_a8bcfeeeedfd2fe97a6246159be69c35",
+      "profile": "M04",
+      "text": "Too much fire! Find cover!",
+      "file": "M04_a8bcfeeeedfd2fe97a6246159be69c35.wav"
+    },
+    {
+      "key": "M04_8cf7148b718655dc944a9f472fd7e4c8",
+      "profile": "M04",
+      "text": "Trouble! Get everyone inside!",
+      "file": "M04_8cf7148b718655dc944a9f472fd7e4c8.wav"
+    },
+    {
+      "key": "M04_8a9dced89f42e56e16c101425d88c787",
+      "profile": "M04",
+      "text": "Two exhausted walkers split an empty tin beside a dead cooking fire.",
+      "file": "M04_8a9dced89f42e56e16c101425d88c787.wav"
+    },
+    {
+      "key": "M04_8fa9f084c75bf791234cefc1145e421c",
+      "profile": "M04",
+      "text": "Used to complain about traffic. Imagine that.",
+      "file": "M04_8fa9f084c75bf791234cefc1145e421c.wav"
+    },
+    {
+      "key": "M04_aea621873c0c8404bf0ddea8db7d951e",
+      "profile": "M04",
+      "text": "Watch the exits!",
+      "file": "M04_aea621873c0c8404bf0ddea8db7d951e.wav"
+    },
+    {
+      "key": "M04_2afe01b9c8372855494e329c35fa9572",
+      "profile": "M04",
+      "text": "We came back for you. Keep moving!",
+      "file": "M04_2afe01b9c8372855494e329c35fa9572.wav"
+    },
+    {
+      "key": "M04_a04f05caa1d36f40e996a76588c53ccc",
+      "profile": "M04",
+      "text": "We can get through this. Keep moving!",
+      "file": "M04_a04f05caa1d36f40e996a76588c53ccc.wav"
+    },
+    {
+      "key": "M04_7f00faa40b67f4720b6608e77ef727d9",
+      "profile": "M04",
+      "text": "We should mark a way back before we go too far.",
+      "file": "M04_7f00faa40b67f4720b6608e77ef727d9.wav"
+    },
+    {
+      "key": "M04_f0f31e5be424013171e0887e83f1c335",
+      "profile": "M04",
+      "text": "We survive by looking after each other. What do you need?",
+      "file": "M04_f0f31e5be424013171e0887e83f1c335.wav"
+    },
+    {
+      "key": "M04_17361ec20c0e6f8de6c804dce7e094f2",
+      "profile": "M04",
+      "text": "Welcome to Toronto. Hope you enjoy your stay.",
+      "file": "M04_17361ec20c0e6f8de6c804dce7e094f2.wav"
+    },
+    {
+      "key": "M04_6246cf044d08585594f2cb6889bfa69c",
+      "profile": "M04",
+      "text": "Welcome to Toronto. Our northern supplies are made here, and we pay a premium for goods from the south. We buy and sell only in Canadian dollars. Visit Toronto Currency Exchange to convert your credits.",
+      "file": "M04_6246cf044d08585594f2cb6889bfa69c.wav"
+    },
+    {
+      "key": "M04_6ea29e5022f3d8eb6eadddf8bc579cff",
+      "profile": "M04",
+      "text": "Welcome to the Canadian checkpoint. Stay this side of the red line behind us. A permanent passport costs one million credits. Check your weapons and ammunition here before each visit; vehicle storage is inspected too. Collect everything on your return. Follow the north road to Toronto, three kilometres inland.",
+      "file": "M04_6ea29e5022f3d8eb6eadddf8bc579cff.wav"
+    },
+    {
+      "key": "M04_51afe4926a357da095f16f981e95f3ea",
+      "profile": "M04",
+      "text": "Where'd you go?",
+      "file": "M04_51afe4926a357da095f16f981e95f3ea.wav"
+    },
+    {
+      "key": "M04_b3707c8917615ebec6460b7261e5aa49",
+      "profile": "M04",
+      "text": "Who would you like to station here?",
+      "file": "M04_b3707c8917615ebec6460b7261e5aa49.wav"
+    },
+    {
+      "key": "M04_2667efa5ef9843cc8b8bdf73622fe9ea",
+      "profile": "M04",
+      "text": "Wish I knew a recipe that didn't start with a tin.",
+      "file": "M04_2667efa5ef9843cc8b8bdf73622fe9ea.wav"
+    },
+    {
+      "key": "M04_fcf668b1b00e1e151bb92ca683c81a2b",
+      "profile": "M04",
+      "text": "Would you sit with me a moment?",
+      "file": "M04_fcf668b1b00e1e151bb92ca683c81a2b.wav"
+    },
+    {
+      "key": "M04_0093ec2cea7f80169c854476a64fe75f",
+      "profile": "M04",
+      "text": "You cannot hide forever!",
+      "file": "M04_0093ec2cea7f80169c854476a64fe75f.wav"
+    },
+    {
+      "key": "M04_d1a8cbe9dd6d269c719e60588955e7ad",
+      "profile": "M04",
+      "text": "You learn to appreciate a quiet day.",
+      "file": "M04_d1a8cbe9dd6d269c719e60588955e7ad.wav"
+    },
+    {
+      "key": "M04_1255983cb5d038cf6546dc07a10d0c73",
+      "profile": "M04",
+      "text": "You picked the wrong fight!",
+      "file": "M04_1255983cb5d038cf6546dc07a10d0c73.wav"
+    },
+    {
+      "key": "M04_ae64a9f41090cbc9eecc20ce8a4b0e39",
+      "profile": "M04",
+      "text": "You picked the wrong people.",
+      "file": "M04_ae64a9f41090cbc9eecc20ce8a4b0e39.wav"
+    },
+    {
+      "key": "M04_c97b6bbf14668ab826c0b3c9a1fd3304",
+      "profile": "M04",
+      "text": "You're not walking out of this!",
+      "file": "M04_c97b6bbf14668ab826c0b3c9a1fd3304.wav"
+    },
+    {
+      "key": "M05_03217adbf3d2d0e4b69a0a888769a768",
+      "profile": "M05",
+      "text": "A battered postal case sits beside an overturned handcart. Its delivery log ends months ago.",
+      "file": "M05_03217adbf3d2d0e4b69a0a888769a768.wav"
+    },
+    {
+      "key": "M05_768d374a97939948102968972e099a0d",
+      "profile": "M05",
+      "text": "A buried steam line has split beneath a maintenance hatch. The pressure valve is jammed.",
+      "file": "M05_768d374a97939948102968972e099a0d.wav"
+    },
+    {
+      "key": "M05_b8efdff3416d80a03ef4fd56b4929d3b",
+      "profile": "M05",
+      "text": "A camp cook is banging a pan as infected shapes approach the fire. Someone must keep them outside the camp.",
+      "file": "M05_b8efdff3416d80a03ef4fd56b4929d3b.wav"
+    },
+    {
+      "key": "M05_378d3b6d891503b47f3785de98aababc",
+      "profile": "M05",
+      "text": "A cautious broker offers a sealed box of shotgun shells. He will only trade in the open.",
+      "file": "M05_378d3b6d891503b47f3785de98aababc.wav"
+    },
+    {
+      "key": "M05_f3b743efa6c127c7cb2433170549e72a",
+      "profile": "M05",
+      "text": "A cook is offering preserved meals in exchange for clean water.",
+      "file": "M05_f3b743efa6c127c7cb2433170549e72a.wav"
+    },
+    {
+      "key": "M05_3fcd86623802c23abefbbc12532df6d6",
+      "profile": "M05",
+      "text": "A dehydrated courier is hiding beneath a torn awning. Her sealed satchel is marked for a clinic.",
+      "file": "M05_3fcd86623802c23abefbbc12532df6d6.wav"
+    },
+    {
+      "key": "M05_47f6f6d7cfafce9ce5246de60c8ad720",
+      "profile": "M05",
+      "text": "A delivery driver is losing a refrigerator full of medicine. The cooling unit has seized.",
+      "file": "M05_47f6f6d7cfafce9ce5246de60c8ad720.wav"
+    },
+    {
+      "key": "M05_9dd0a508d2575a59cc8488347746c4ee",
+      "profile": "M05",
+      "text": "A distress loop plays from a receiver. No one answers your calls, but fresh bootprints surround the station.",
+      "file": "M05_9dd0a508d2575a59cc8488347746c4ee.wav"
+    },
+    {
+      "key": "M05_e09feab7bb47c18ba9b3b2359f21728b",
+      "profile": "M05",
+      "text": "A fallen cable spits light into rainwater. The cutoff box is reachable from the dry shoulder.",
+      "file": "M05_e09feab7bb47c18ba9b3b2359f21728b.wav"
+    },
+    {
+      "key": "M05_1edbd66054f0107fc6b3a34645f49cc5",
+      "profile": "M05",
+      "text": "A few hours until daylight. We can manage.",
+      "file": "M05_1edbd66054f0107fc6b3a34645f49cc5.wav"
+    },
+    {
+      "key": "M05_f5de373c4041cd5233f48ac18812cc0a",
+      "profile": "M05",
+      "text": "A furniture delivery has scattered sealed tool packs along the verge. A collector is sorting what survived.",
+      "file": "M05_f5de373c4041cd5233f48ac18812cc0a.wav"
+    },
+    {
+      "key": "M05_fd9e1bfc51547d1e2a728ccfdec24f78",
+      "profile": "M05",
+      "text": "A garden would make this place feel like home.",
+      "file": "M05_fd9e1bfc51547d1e2a728ccfdec24f78.wav"
+    },
+    {
+      "key": "M05_e231532279862988856ab3ae79789fc4",
+      "profile": "M05",
+      "text": "A hand-painted sign promises clean water, but the roadside pump has fallen silent.",
+      "file": "M05_e231532279862988856ab3ae79789fc4.wav"
+    },
+    {
+      "key": "M05_f7325eea76b24f1f296431d25ab2d98c",
+      "profile": "M05",
+      "text": "A lantern-lit medical seller has opened for the graveyard shift. No names, no questions.",
+      "file": "M05_f7325eea76b24f1f296431d25ab2d98c.wav"
+    },
+    {
+      "key": "M05_91b7571928a652d0058ddfc88fcdbaf9",
+      "profile": "M05",
+      "text": "A locksmith trades carefully made picks from a roll of tools spread across his bonnet.",
+      "file": "M05_91b7571928a652d0058ddfc88fcdbaf9.wav"
+    },
+    {
+      "key": "M05_04ba5d41ce846ef26fcb9cfe3f2167db",
+      "profile": "M05",
+      "text": "A lone traveler has put a candle on an unopened ration. Today would have been his daughter's birthday.",
+      "file": "M05_04ba5d41ce846ef26fcb9cfe3f2167db.wav"
+    },
+    {
+      "key": "M05_2b238ee9a09e34826a5407447c2e157e",
+      "profile": "M05",
+      "text": "A mechanic has exposed an engine block. The remaining parts will take patience to separate.",
+      "file": "M05_2b238ee9a09e34826a5407447c2e157e.wav"
+    },
+    {
+      "key": "M05_96bd5746efb94a059ecc5ea65331e759",
+      "profile": "M05",
+      "text": "A motel guest escaped through a window but cannot get past the infected on the access road.",
+      "file": "M05_96bd5746efb94a059ecc5ea65331e759.wav"
+    },
+    {
+      "key": "M05_45664e2272103160b6d0b3ebe8669ff7",
+      "profile": "M05",
+      "text": "A pair of boots sits beside a freshly filled grave. A friend is waiting for the courage to leave.",
+      "file": "M05_45664e2272103160b6d0b3ebe8669ff7.wav"
+    },
+    {
+      "key": "M05_bfc4edeb52ce863cf25c3923107ad421",
+      "profile": "M05",
+      "text": "A receiver repeats groups of numbers under a wash of static. Holding the frequency may reveal the whole message.",
+      "file": "M05_bfc4edeb52ce863cf25c3923107ad421.wav"
+    },
+    {
+      "key": "M05_a9c525787213825aad12b2d8c6c38bc3",
+      "profile": "M05",
+      "text": "A repair caravan has run out of usable metal. Its quartermaster is paying for scrap.",
+      "file": "M05_a9c525787213825aad12b2d8c6c38bc3.wav"
+    },
+    {
+      "key": "M05_f2596af58c1f5b29cc9c8751a62930ce",
+      "profile": "M05",
+      "text": "A roadside medic has a patient on a folding cot and nothing left to stop the bleeding.",
+      "file": "M05_f2596af58c1f5b29cc9c8751a62930ce.wav"
+    },
+    {
+      "key": "M05_3282c2d850b865ccecbc8ac531ee2a65",
+      "profile": "M05",
+      "text": "A runner is balancing on a wreck while rabid dogs circle below.",
+      "file": "M05_3282c2d850b865ccecbc8ac531ee2a65.wav"
+    },
+    {
+      "key": "M05_64947f5154a8bbd2301d6c83f8568c2c",
+      "profile": "M05",
+      "text": "A ruptured chemical drum is leaking across the verge. A warning lamp marks the contaminated ground.",
+      "file": "M05_64947f5154a8bbd2301d6c83f8568c2c.wav"
+    },
+    {
+      "key": "M05_e7b4d1744ab98d2e88386b9b287b9ba8",
+      "profile": "M05",
+      "text": "A scavenger has jacked up a van on timber blocks. A broken bracket is all that keeps him here.",
+      "file": "M05_e7b4d1744ab98d2e88386b9b287b9ba8.wav"
+    },
+    {
+      "key": "M05_6468be78b687cedcadb8126d9c98e6ec",
+      "profile": "M05",
+      "text": "A scout is trapped behind a makeshift barricade. The guards are close enough to hear a raised voice.",
+      "file": "M05_6468be78b687cedcadb8126d9c98e6ec.wav"
+    },
+    {
+      "key": "M05_89cf90380c66916645935645d4712b31",
+      "profile": "M05",
+      "text": "A seat and a roof. We're moving up in the world.",
+      "file": "M05_89cf90380c66916645935645d4712b31.wav"
+    },
+    {
+      "key": "M05_0d41cd365093dd0967b9c4c28518648c",
+      "profile": "M05",
+      "text": "A stack of supply drums has begun to smoke. Clean water could cool the hottest one before it ruptures.",
+      "file": "M05_0d41cd365093dd0967b9c4c28518648c.wav"
+    },
+    {
+      "key": "M05_d0ea2bd063eff096aade442399632147",
+      "profile": "M05",
+      "text": "A stargazer has set up an improvised observation station. She asks you to keep watch during a brief recording.",
+      "file": "M05_d0ea2bd063eff096aade442399632147.wav"
+    },
+    {
+      "key": "M05_cf11e657ac603b61f922b3f4d3b24d4e",
+      "profile": "M05",
+      "text": "A stranded passenger refuses to spend another night beside the dead bus.",
+      "file": "M05_cf11e657ac603b61f922b3f4d3b24d4e.wav"
+    },
+    {
+      "key": "M05_019f3f3cfee567ad1ae172a9d7c3930d",
+      "profile": "M05",
+      "text": "A supply convoy is retreating behind a barricade. Raiders are searching for a weak point.",
+      "file": "M05_019f3f3cfee567ad1ae172a9d7c3930d.wav"
+    },
+    {
+      "key": "M05_e8f8be0599affca5c230082e7c1d6568",
+      "profile": "M05",
+      "text": "A surveyor has lost her bearings in the fog. She needs someone to walk her to the next road marker.",
+      "file": "M05_e8f8be0599affca5c230082e7c1d6568.wav"
+    },
+    {
+      "key": "M05_408ada9aca957e62266cbf5904d6db44",
+      "profile": "M05",
+      "text": "A technician is pinned behind collapsed equipment. Infected workers are drawn to his calls.",
+      "file": "M05_408ada9aca957e62266cbf5904d6db44.wav"
+    },
+    {
+      "key": "M05_35afe78696756846a044420a11838e01",
+      "profile": "M05",
+      "text": "A traveler points out a feeding ground. The largest dogs have been stalking this road for days.",
+      "file": "M05_35afe78696756846a044420a11838e01.wav"
+    },
+    {
+      "key": "M05_6deb6d430725e3250ce5ad5512a30647",
+      "profile": "M05",
+      "text": "A volunteer is counting travelers for the settlements. He asks you to watch the road while he repairs his tally board.",
+      "file": "M05_6deb6d430725e3250ce5ad5512a30647.wav"
+    },
+    {
+      "key": "M05_f1db4fa078e589546b21bee3ca533508",
+      "profile": "M05",
+      "text": "A water carrier says the emergency filter has clogged. The last clean bottles are reserved for children.",
+      "file": "M05_f1db4fa078e589546b21bee3ca533508.wav"
+    },
+    {
+      "key": "M05_c551e3773396b7f30121a42f465a3992",
+      "profile": "M05",
+      "text": "A weather instrument has landed in the ditch. Its recorder still has enough power for one download.",
+      "file": "M05_c551e3773396b7f30121a42f465a3992.wav"
+    },
+    {
+      "key": "M05_dfd457e77585d88216b24f94843801fc",
+      "profile": "M05",
+      "text": "A whistle sounds twice beyond a deserted campsite. Something moves in the brush.",
+      "file": "M05_dfd457e77585d88216b24f94843801fc.wav"
+    },
+    {
+      "key": "M05_74459642378aacfd87ec25872b7c5b3a",
+      "profile": "M05",
+      "text": "A wreck has its cargo lid propped open. The neatly arranged supplies look untouched.",
+      "file": "M05_74459642378aacfd87ec25872b7c5b3a.wav"
+    },
+    {
+      "key": "M05_2396e5d3a7d95cf0b7d906d1c37a9900",
+      "profile": "M05",
+      "text": "Always jobs to do around here.",
+      "file": "M05_2396e5d3a7d95cf0b7d906d1c37a9900.wav"
+    },
+    {
+      "key": "M05_c3a8cd6cbc1dbdc48083b193d58b08e2",
+      "profile": "M05",
+      "text": "An injured traveler can walk, but only slowly. The next safe pull-off is a short distance down the road.",
+      "file": "M05_c3a8cd6cbc1dbdc48083b193d58b08e2.wav"
+    },
+    {
+      "key": "M05_17daf44a63bebc7eb1c743c3e1d9c431",
+      "profile": "M05",
+      "text": "An isolated relay repeats a distress fragment. A technician points to a burned contactor.",
+      "file": "M05_17daf44a63bebc7eb1c743c3e1d9c431.wav"
+    },
+    {
+      "key": "M05_9d447a1c5166406c6d9cd3fb201b759d",
+      "profile": "M05",
+      "text": "An old roadside shelter has folded over its supply chest. The frame must be lifted clear.",
+      "file": "M05_9d447a1c5166406c6d9cd3fb201b759d.wav"
+    },
+    {
+      "key": "M05_426b410a17871d73fa034dd5fbfa440d",
+      "profile": "M05",
+      "text": "Armed collectors demand a road fee. Their barricade does not actually block the whole road.",
+      "file": "M05_426b410a17871d73fa034dd5fbfa440d.wav"
+    },
+    {
+      "key": "M05_6c813f135b8726493648d2f6e2b9a0e6",
+      "profile": "M05",
+      "text": "Been patching that same coat for years.",
+      "file": "M05_6c813f135b8726493648d2f6e2b9a0e6.wav"
+    },
+    {
+      "key": "M05_92621e3c1e1514c902ed5473e986f3d0",
+      "profile": "M05",
+      "text": "Blue tape marks a locked evidence case beneath an abandoned roadside checkpoint.",
+      "file": "M05_92621e3c1e1514c902ed5473e986f3d0.wav"
+    },
+    {
+      "key": "M05_5a5ea3210891e034b2d61f6df9b5f67a",
+      "profile": "M05",
+      "text": "Bring back supplies and we'll make it worth your while.",
+      "file": "M05_5a5ea3210891e034b2d61f6df9b5f67a.wav"
+    },
+    {
+      "key": "M05_87765b9bd4d6f8b9dec240e183042c51",
+      "profile": "M05",
+      "text": "Bring water to a settlement quartermaster.",
+      "file": "M05_87765b9bd4d6f8b9dec240e183042c51.wav"
+    },
+    {
+      "key": "M05_320ae35a92f7ada530fa2288759b1f41",
+      "profile": "M05",
+      "text": "Buying or selling? I can do either.",
+      "file": "M05_320ae35a92f7ada530fa2288759b1f41.wav"
+    },
+    {
+      "key": "M05_61cba8cfb92640b1caa7c1d57714cc38",
+      "profile": "M05",
+      "text": "Can't get a shot from here!",
+      "file": "M05_61cba8cfb92640b1caa7c1d57714cc38.wav"
+    },
+    {
+      "key": "M05_9b82839434c48c6d27ba15845349815a",
+      "profile": "M05",
+      "text": "Can't see much out there. Listen carefully.",
+      "file": "M05_9b82839434c48c6d27ba15845349815a.wav"
+    },
+    {
+      "key": "M05_5b01f6a814797e8450f8ab4c4a25c8d3",
+      "profile": "M05",
+      "text": "Changing mags!",
+      "file": "M05_5b01f6a814797e8450f8ab4c4a25c8d3.wav"
+    },
+    {
+      "key": "M05_93a12f1b394c78f0e63b90ff302fd508",
+      "profile": "M05",
+      "text": "Check behind that cover!",
+      "file": "M05_93a12f1b394c78f0e63b90ff302fd508.wav"
+    },
+    {
+      "key": "M05_263979d7f26c667bf8af0c6e0b81bfb3",
+      "profile": "M05",
+      "text": "Check the corners. I'll check the windows.",
+      "file": "M05_263979d7f26c667bf8af0c6e0b81bfb3.wav"
+    },
+    {
+      "key": "M05_fa25770feabeef648f500a02d9909359",
+      "profile": "M05",
+      "text": "Clean water and clean bandages. Can't have too many.",
+      "file": "M05_fa25770feabeef648f500a02d9909359.wav"
+    },
+    {
+      "key": "M05_347ca364e788f2bf0248ac225fa12e04",
+      "profile": "M05",
+      "text": "Clear threats from the settlement approaches.",
+      "file": "M05_347ca364e788f2bf0248ac225fa12e04.wav"
+    },
+    {
+      "key": "M05_1531c09153ab7820d63f4f084f834aa5",
+      "profile": "M05",
+      "text": "Clothes and luggage lie in a careful line along the verge. The figures beyond them have stopped moving.",
+      "file": "M05_1531c09153ab7820d63f4f084f834aa5.wav"
+    },
+    {
+      "key": "M05_7944a876e0f182b77b951edb5a09e4f9",
+      "profile": "M05",
+      "text": "Come on! Show yourself!",
+      "file": "M05_7944a876e0f182b77b951edb5a09e4f9.wav"
+    },
+    {
+      "key": "M05_45cd74d3931346a9c42eb721ee1a02ab",
+      "profile": "M05",
+      "text": "Contact! Stay behind something solid!",
+      "file": "M05_45cd74d3931346a9c42eb721ee1a02ab.wav"
+    },
+    {
+      "key": "M05_1714cf881737b43ba318764af6b922f3",
+      "profile": "M05",
+      "text": "Don't give them room!",
+      "file": "M05_1714cf881737b43ba318764af6b922f3.wav"
+    },
+    {
+      "key": "M05_82a81a411ae5fe814b894268efbed3f4",
+      "profile": "M05",
+      "text": "Don't need it yourself? Somebody else probably does.",
+      "file": "M05_82a81a411ae5fe814b894268efbed3f4.wav"
+    },
+    {
+      "key": "M05_794c514d4d2ac0d9aa594e9f07c06b8a",
+      "profile": "M05",
+      "text": "Don't rush them. Make them come to us!",
+      "file": "M05_794c514d4d2ac0d9aa594e9f07c06b8a.wav"
+    },
+    {
+      "key": "M05_e34d60a20076588ddb9b57043f079bde",
+      "profile": "M05",
+      "text": "Exchange credits and Canadian dollars here. The displayed live rate includes our spread.",
+      "file": "M05_e34d60a20076588ddb9b57043f079bde.wav"
+    },
+    {
+      "key": "M05_9a5579982ba9432dad245d787d0f1699",
+      "profile": "M05",
+      "text": "Find a radio and make contact with a medic.",
+      "file": "M05_9a5579982ba9432dad245d787d0f1699.wav"
+    },
+    {
+      "key": "M05_64bbcc52068b23168a4de22b418a5207",
+      "profile": "M05",
+      "text": "Find cover! Protect the town!",
+      "file": "M05_64bbcc52068b23168a4de22b418a5207.wav"
+    },
+    {
+      "key": "M05_5d4fc54ec1e9f0f51e7b503927abf152",
+      "profile": "M05",
+      "text": "Find the diner and replenish settlement rations.",
+      "file": "M05_5d4fc54ec1e9f0f51e7b503927abf152.wav"
+    },
+    {
+      "key": "M05_36b93d15e6afa96b75a79ed13d2bd509",
+      "profile": "M05",
+      "text": "Finish a final patrol for the settlement network.",
+      "file": "M05_36b93d15e6afa96b75a79ed13d2bd509.wav"
+    },
+    {
+      "key": "M05_44505eeb7cf94253cb4370804e828fbf",
+      "profile": "M05",
+      "text": "Funny what survives. Street signs outlasted the country.",
+      "file": "M05_44505eeb7cf94253cb4370804e828fbf.wav"
+    },
+    {
+      "key": "M05_7bb2330ecd48ff6d35f688046de86f6a",
+      "profile": "M05",
+      "text": "Get down! Get down!",
+      "file": "M05_7bb2330ecd48ff6d35f688046de86f6a.wav"
+    },
+    {
+      "key": "M05_a6aa6bfea15b7332c4dd80591866ad67",
+      "profile": "M05",
+      "text": "Good to see another living face.",
+      "file": "M05_a6aa6bfea15b7332c4dd80591866ad67.wav"
+    },
+    {
+      "key": "M05_e0a2374fb63873e86b5c55b71aceba8e",
+      "profile": "M05",
+      "text": "Got to keep busy. Helps with everything else.",
+      "file": "M05_e0a2374fb63873e86b5c55b71aceba8e.wav"
+    },
+    {
+      "key": "M05_1091f34934d5491ee8a72ee05bc4becd",
+      "profile": "M05",
+      "text": "Have a look. Something here might keep you alive.",
+      "file": "M05_1091f34934d5491ee8a72ee05bc4becd.wav"
+    },
+    {
+      "key": "M05_306c6ea66797f7070826bf9098bd15f4",
+      "profile": "M05",
+      "text": "Hold that corner!",
+      "file": "M05_306c6ea66797f7070826bf9098bd15f4.wav"
+    },
+    {
+      "key": "M05_22905fdc3eed8a2170c7227af9183551",
+      "profile": "M05",
+      "text": "Hostile in town! Take cover!",
+      "file": "M05_22905fdc3eed8a2170c7227af9183551.wav"
+    },
+    {
+      "key": "M05_eb14c570664d9118501fc335f3db9a0d",
+      "profile": "M05",
+      "text": "I am hit. Give me a moment!",
+      "file": "M05_eb14c570664d9118501fc335f3db9a0d.wav"
+    },
+    {
+      "key": "M05_f52b66b524557c9b68e58127ab0b6eb6",
+      "profile": "M05",
+      "text": "I know you're still here!",
+      "file": "M05_f52b66b524557c9b68e58127ab0b6eb6.wav"
+    },
+    {
+      "key": "M05_b6e0b1400f42856b0ee8b649369a7f35",
+      "profile": "M05",
+      "text": "I miss hearing somebody mow their lawn.",
+      "file": "M05_b6e0b1400f42856b0ee8b649369a7f35.wav"
+    },
+    {
+      "key": "M05_b335ad3218e845e856fd75490e740ab2",
+      "profile": "M05",
+      "text": "I still catch myself checking the mailbox.",
+      "file": "M05_b335ad3218e845e856fd75490e740ab2.wav"
+    },
+    {
+      "key": "M05_654c15db366aa3b0e9048b706f133eb2",
+      "profile": "M05",
+      "text": "I used to live north of here.",
+      "file": "M05_654c15db366aa3b0e9048b706f133eb2.wav"
+    },
+    {
+      "key": "M05_08b44daab206c1308e82c977e75b987d",
+      "profile": "M05",
+      "text": "I'd rather walk with you than sit worrying at home.",
+      "file": "M05_08b44daab206c1308e82c977e75b987d.wav"
+    },
+    {
+      "key": "M05_1d54613c29d4ec0fec9551bb3a216a98",
+      "profile": "M05",
+      "text": "I'll keep an eye out through the window.",
+      "file": "M05_1d54613c29d4ec0fec9551bb3a216a98.wav"
+    },
+    {
+      "key": "M05_56777c8d042cd4568236fd639ff01cdf",
+      "profile": "M05",
+      "text": "I'll watch our backs. You pick the route.",
+      "file": "M05_56777c8d042cd4568236fd639ff01cdf.wav"
+    },
+    {
+      "key": "M05_ca28dba79f7e8c819f5a02df83905268",
+      "profile": "M05",
+      "text": "I'm bleeding. Could use a moment.",
+      "file": "M05_ca28dba79f7e8c819f5a02df83905268.wav"
+    },
+    {
+      "key": "M05_7cc1a88e1aac392998e056b5cdfa43ea",
+      "profile": "M05",
+      "text": "I'm here. Finish what we started.",
+      "file": "M05_7cc1a88e1aac392998e056b5cdfa43ea.wav"
+    },
+    {
+      "key": "M05_9115a7689ca10189fd441794a03093b5",
+      "profile": "M05",
+      "text": "I'm saving up for a proper pair of boots.",
+      "file": "M05_9115a7689ca10189fd441794a03093b5.wav"
+    },
+    {
+      "key": "M05_983ca6cf509836819bd7e6bbbd470286",
+      "profile": "M05",
+      "text": "I've got this angle. Watch your side!",
+      "file": "M05_983ca6cf509836819bd7e6bbbd470286.wav"
+    },
+    {
+      "key": "M05_44101f14fb85cae66ceaf69988c92904",
+      "profile": "M05",
+      "text": "If a hinge squeaks, oil it. Don't wake the whole street.",
+      "file": "M05_44101f14fb85cae66ceaf69988c92904.wav"
+    },
+    {
+      "key": "M05_2f85495ff8f3b16364b3d4ac3674ec94",
+      "profile": "M05",
+      "text": "If we find coffee, I'm calling that a victory.",
+      "file": "M05_2f85495ff8f3b16364b3d4ac3674ec94.wav"
+    },
+    {
+      "key": "M05_2120dd58a70094e810bb9062801911b3",
+      "profile": "M05",
+      "text": "If you find seeds out there, don't throw them away.",
+      "file": "M05_2120dd58a70094e810bb9062801911b3.wav"
+    },
+    {
+      "key": "M05_1da6b0c86f3ab91bea59b99b903d1be7",
+      "profile": "M05",
+      "text": "If you're hurt, come see me before it gets worse.",
+      "file": "M05_1da6b0c86f3ab91bea59b99b903d1be7.wav"
+    },
+    {
+      "key": "M05_13ae647a7e4b446cc75787bfd8d790f1",
+      "profile": "M05",
+      "text": "Infected workers keep returning to the same maintenance stop. A scavenger offers a bounty for clearing it.",
+      "file": "M05_13ae647a7e4b446cc75787bfd8d790f1.wav"
+    },
+    {
+      "key": "M05_ca109bfeeced77fb8909b64e4ed497d3",
+      "profile": "M05",
+      "text": "Investigate the motel and clear the nearby threats.",
+      "file": "M05_ca109bfeeced77fb8909b64e4ed497d3.wav"
+    },
+    {
+      "key": "M05_4f826cedba0fca1ed6b09d734542c17c",
+      "profile": "M05",
+      "text": "Keep a little water in reserve. Learned that the hard way.",
+      "file": "M05_4f826cedba0fca1ed6b09d734542c17c.wav"
+    },
+    {
+      "key": "M05_a280ce0bb89c0107d439eab686c339b8",
+      "profile": "M05",
+      "text": "Keep looking. They're close.",
+      "file": "M05_a280ce0bb89c0107d439eab686c339b8.wav"
+    },
+    {
+      "key": "M05_21bf461c43bbd2565015be7a55c9c441",
+      "profile": "M05",
+      "text": "Keep that wound clean. Dirt's as dangerous as bullets.",
+      "file": "M05_21bf461c43bbd2565015be7a55c9c441.wav"
+    },
+    {
+      "key": "M05_45011a1159396607e732e562ebe2677e",
+      "profile": "M05",
+      "text": "Keep them pinned down!",
+      "file": "M05_45011a1159396607e732e562ebe2677e.wav"
+    },
+    {
+      "key": "M05_89cb2246c732df20ce97f6f8e750cc69",
+      "profile": "M05",
+      "text": "Keep your head down. I'm here!",
+      "file": "M05_89cb2246c732df20ce97f6f8e750cc69.wav"
+    },
+    {
+      "key": "M05_8a4eeb1ee44e85d9b96af5af5ee40923",
+      "profile": "M05",
+      "text": "Leave your goods with us. Collect the proceeds when they sell.",
+      "file": "M05_8a4eeb1ee44e85d9b96af5af5ee40923.wav"
+    },
+    {
+      "key": "M05_497874d7a986409f41c722ed122dac17",
+      "profile": "M05",
+      "text": "Let me know if you need a breather.",
+      "file": "M05_497874d7a986409f41c722ed122dac17.wav"
+    },
+    {
+      "key": "M05_b42119f65122833c8760521d5362482b",
+      "profile": "M05",
+      "text": "Let us go over the settlement accounts.",
+      "file": "M05_b42119f65122833c8760521d5362482b.wav"
+    },
+    {
+      "key": "M05_ad8dbdf2fdd23cc633a57d5ec759740f",
+      "profile": "M05",
+      "text": "Locate medical stock and replenish the clinic.",
+      "file": "M05_ad8dbdf2fdd23cc633a57d5ec759740f.wav"
+    },
+    {
+      "key": "M05_b3707246319958253367243bd4e85372",
+      "profile": "M05",
+      "text": "Looking for work? We have contracts.",
+      "file": "M05_b3707246319958253367243bd4e85372.wav"
+    },
+    {
+      "key": "M05_cbf6a97c43f7556b2d4d5fdcc8e01120",
+      "profile": "M05",
+      "text": "Men wearing borrowed medical bands demand payment for a nonexistent inspection.",
+      "file": "M05_cbf6a97c43f7556b2d4d5fdcc8e01120.wav"
+    },
+    {
+      "key": "M05_6388c6863b1c357beed73145f31192d0",
+      "profile": "M05",
+      "text": "Morning or night, there's always something to mend.",
+      "file": "M05_6388c6863b1c357beed73145f31192d0.wav"
+    },
+    {
+      "key": "M05_ec585771aac5bc8fafa5093250ebb7ff",
+      "profile": "M05",
+      "text": "Moving up! Cover me!",
+      "file": "M05_ec585771aac5bc8fafa5093250ebb7ff.wav"
+    },
+    {
+      "key": "M05_8667ec29affd0f762c389009a4dc6312",
+      "profile": "M05",
+      "text": "Names are scratched into scraps of tin. A caretaker asks you to stay for a moment while he reads them.",
+      "file": "M05_8667ec29affd0f762c389009a4dc6312.wav"
+    },
+    {
+      "key": "M05_f595a45aa5c00e6237f350946c4eeed2",
+      "profile": "M05",
+      "text": "Need a second! Cover me!",
+      "file": "M05_f595a45aa5c00e6237f350946c4eeed2.wav"
+    },
+    {
+      "key": "M05_277b106559996d381a36fadc55997ffd",
+      "profile": "M05",
+      "text": "Need another pair of hands?",
+      "file": "M05_277b106559996d381a36fadc55997ffd.wav"
+    },
+    {
+      "key": "M05_39ee7967719b83044c66cc2c2fba24f2",
+      "profile": "M05",
+      "text": "Need work? Take a look at the contracts.",
+      "file": "M05_39ee7967719b83044c66cc2c2fba24f2.wav"
+    },
+    {
+      "key": "M05_a196bb79ca12a9cd712d924f4764fdd5",
+      "profile": "M05",
+      "text": "Never liked walking these roads after dark.",
+      "file": "M05_a196bb79ca12a9cd712d924f4764fdd5.wav"
+    },
+    {
+      "key": "M05_4009a9f8c931d31adbfbc304d6175682",
+      "profile": "M05",
+      "text": "Never thought I'd miss paying rent.",
+      "file": "M05_4009a9f8c931d31adbfbc304d6175682.wav"
+    },
+    {
+      "key": "M05_4e143f9e27ade6b1800b71cc5501ace4",
+      "profile": "M05",
+      "text": "Next roof we find, let's take a minute.",
+      "file": "M05_4e143f9e27ade6b1800b71cc5501ace4.wav"
+    },
+    {
+      "key": "M05_b001d32fbbe3c73bc381f0df66ce5169",
+      "profile": "M05",
+      "text": "Nice to let something else do the walking.",
+      "file": "M05_b001d32fbbe3c73bc381f0df66ce5169.wav"
+    },
+    {
+      "key": "M05_f3017399b9d7f9af22299f78e564cd94",
+      "profile": "M05",
+      "text": "Nobody here gets through this alone.",
+      "file": "M05_f3017399b9d7f9af22299f78e564cd94.wav"
+    },
+    {
+      "key": "M05_8c920e14b1e86a7175e3d847da29b2fe",
+      "profile": "M05",
+      "text": "One decent meal and a dry bed. That's the dream.",
+      "file": "M05_8c920e14b1e86a7175e3d847da29b2fe.wav"
+    },
+    {
+      "key": "M05_e93ad42b18c46e6adab4f250f9cb15c9",
+      "profile": "M05",
+      "text": "Over here. Could use a hand.",
+      "file": "M05_e93ad42b18c46e6adab4f250f9cb15c9.wav"
+    },
+    {
+      "key": "M05_06817ca7b958f4c823f5b040142673f8",
+      "profile": "M05",
+      "text": "Over here. I cannot stop the bleeding.",
+      "file": "M05_06817ca7b958f4c823f5b040142673f8.wav"
+    },
+    {
+      "key": "M05_61536b724df74eb6110be8d45d6fccd7",
+      "profile": "M05",
+      "text": "Picked a bad place to wander!",
+      "file": "M05_61536b724df74eb6110be8d45d6fccd7.wav"
+    },
+    {
+      "key": "M05_cccb81f303ed23c8f686255d9edbf7e2",
+      "profile": "M05",
+      "text": "Plenty to see around here. Take your time.",
+      "file": "M05_cccb81f303ed23c8f686255d9edbf7e2.wav"
+    },
+    {
+      "key": "M05_51c75d0afd38d19c5e6978be0edb3bca",
+      "profile": "M05",
+      "text": "Raiders watch the roads. Dogs hunt by sound. The pale mannequins move when nobody watches. Bring someone you trust, and never stand beside a fuel pump in a firefight.",
+      "file": "M05_51c75d0afd38d19c5e6978be0edb3bca.wav"
+    },
+    {
+      "key": "M05_0c29978ec9453c2aab4c395acd0251f3",
+      "profile": "M05",
+      "text": "Rain is coming. I can feel it.",
+      "file": "M05_0c29978ec9453c2aab4c395acd0251f3.wav"
+    },
+    {
+      "key": "M05_715a1384bd79f64d16abd1f4435554d3",
+      "profile": "M05",
+      "text": "Rain's covering our footsteps. Their footsteps too.",
+      "file": "M05_715a1384bd79f64d16abd1f4435554d3.wav"
+    },
+    {
+      "key": "M05_5597efc18b4620de0b2391fba03e1ae7",
+      "profile": "M05",
+      "text": "Rainwater has drowned a camp generator. Its owner has disconnected it, but needs help rebuilding the starter.",
+      "file": "M05_5597efc18b4620de0b2391fba03e1ae7.wav"
+    },
+    {
+      "key": "M05_2d538eb01390f4f986ca9c3b180bd924",
+      "profile": "M05",
+      "text": "Recruit a survivor and show them the bunker.",
+      "file": "M05_2d538eb01390f4f986ca9c3b180bd924.wav"
+    },
+    {
+      "key": "M05_52a275cd79f3036633f2c4aba9f33b54",
+      "profile": "M05",
+      "text": "Reloading! Keep them back!",
+      "file": "M05_52a275cd79f3036633f2c4aba9f33b54.wav"
+    },
+    {
+      "key": "M05_c56c608989c041dd17404ee446ae381b",
+      "profile": "M05",
+      "text": "Restore the shelter workshop.",
+      "file": "M05_c56c608989c041dd17404ee446ae381b.wav"
+    },
+    {
+      "key": "M05_a0d5901e1669371025ff160301c5e256",
+      "profile": "M05",
+      "text": "Runoff has stripped the soil from a sealed supply drum. Its latch is packed with rust.",
+      "file": "M05_a0d5901e1669371025ff160301c5e256.wav"
+    },
+    {
+      "key": "M05_24579fdc88a291cd4c2913f2fa169c0b",
+      "profile": "M05",
+      "text": "Six active contracts at a time. Deliver supplies here, and return when your work is finished.",
+      "file": "M05_24579fdc88a291cd4c2913f2fa169c0b.wav"
+    },
+    {
+      "key": "M05_208c26d64f94b9463455488d6bf6c762",
+      "profile": "M05",
+      "text": "So much for keeping my socks dry.",
+      "file": "M05_208c26d64f94b9463455488d6bf6c762.wav"
+    },
+    {
+      "key": "M05_5e110ec140466f67ec07ecd2a4cb0925",
+      "profile": "M05",
+      "text": "Someone fixed the water pump.",
+      "file": "M05_5e110ec140466f67ec07ecd2a4cb0925.wav"
+    },
+    {
+      "key": "M05_560eb0d5ab90f357235f8f9a5bc94289",
+      "profile": "M05",
+      "text": "Someone ought to write all this down.",
+      "file": "M05_560eb0d5ab90f357235f8f9a5bc94289.wav"
+    },
+    {
+      "key": "M05_67cf4ea1c60c313fcd9457b7ae6f9a2c",
+      "profile": "M05",
+      "text": "Spent brass litters a lookout. Raiders have been firing on anyone crossing the next stretch.",
+      "file": "M05_67cf4ea1c60c313fcd9457b7ae6f9a2c.wav"
+    },
+    {
+      "key": "M05_21fb705c8bb629d19a512b6c807b690a",
+      "profile": "M05",
+      "text": "Stand back. This checkpoint is under alert.",
+      "file": "M05_21fb705c8bb629d19a512b6c807b690a.wav"
+    },
+    {
+      "key": "M05_12bc079fcf89240027b014478205af66",
+      "profile": "M05",
+      "text": "Stay away from the windows!",
+      "file": "M05_12bc079fcf89240027b014478205af66.wav"
+    },
+    {
+      "key": "M05_13ada153e4798758ebfb4226d1cbba3f",
+      "profile": "M05",
+      "text": "Stay close. We are not done yet.",
+      "file": "M05_13ada153e4798758ebfb4226d1cbba3f.wav"
+    },
+    {
+      "key": "M05_adac89b570f8942f67a8d20822ef7ce9",
+      "profile": "M05",
+      "text": "Stay sharp. I lost sight of them.",
+      "file": "M05_adac89b570f8942f67a8d20822ef7ce9.wav"
+    },
+    {
+      "key": "M05_ea52562994ac478160a7c512aebe68e7",
+      "profile": "M05",
+      "text": "Still fighting! Stay with me!",
+      "file": "M05_ea52562994ac478160a7c512aebe68e7.wav"
+    },
+    {
+      "key": "M05_0fcd00e83376cc7bae00117669dc81e2",
+      "profile": "M05",
+      "text": "Still standing. Barely.",
+      "file": "M05_0fcd00e83376cc7bae00117669dc81e2.wav"
+    },
+    {
+      "key": "M05_c226ffbc9e2bd4a17c7edcb4b63928bd",
+      "profile": "M05",
+      "text": "Still with you. Keep your eyes on the street.",
+      "file": "M05_c226ffbc9e2bd4a17c7edcb4b63928bd.wav"
+    },
+    {
+      "key": "M05_e16ee1032d65315fd146a2a821f06b92",
+      "profile": "M05",
+      "text": "Stranded walkers are shivering beside soaked bedrolls. They need food before continuing.",
+      "file": "M05_e16ee1032d65315fd146a2a821f06b92.wav"
+    },
+    {
+      "key": "M05_aebaaac1c720e850793197e042c92c28",
+      "profile": "M05",
+      "text": "Supplies for sale. Fair prices.",
+      "file": "M05_aebaaac1c720e850793197e042c92c28.wav"
+    },
+    {
+      "key": "M05_492282c39eeecef7a06b13996133b8af",
+      "profile": "M05",
+      "text": "Survey a fuel stop, then report to a warden.",
+      "file": "M05_492282c39eeecef7a06b13996133b8af.wav"
+    },
+    {
+      "key": "M05_fa4904e8964bfe904d78ba1770d3b4aa",
+      "profile": "M05",
+      "text": "Survey storage and recover repair material.",
+      "file": "M05_fa4904e8964bfe904d78ba1770d3b4aa.wav"
+    },
+    {
+      "key": "M05_cc1ccf1f163d678e14f08b01c6bf0d57",
+      "profile": "M05",
+      "text": "Take care on the roads, stranger.",
+      "file": "M05_cc1ccf1f163d678e14f08b01c6bf0d57.wav"
+    },
+    {
+      "key": "M05_7df26d5591a8e5c2dec26e53809f3164",
+      "profile": "M05",
+      "text": "Thank you. We will remember this.",
+      "file": "M05_7df26d5591a8e5c2dec26e53809f3164.wav"
+    },
+    {
+      "key": "M05_9e47ecb4e34487ebdeb8373d46d09916",
+      "profile": "M05",
+      "text": "That one got me. Don't go too far.",
+      "file": "M05_9e47ecb4e34487ebdeb8373d46d09916.wav"
+    },
+    {
+      "key": "M05_037280aab044e5cedb7a005d75d0d3e7",
+      "profile": "M05",
+      "text": "The clinic is open. Stay safe out there.",
+      "file": "M05_037280aab044e5cedb7a005d75d0d3e7.wav"
+    },
+    {
+      "key": "M05_cc7f581441f816de02327bcab65c7e62",
+      "profile": "M05",
+      "text": "The convoy you helped is on the air. They need a relay operator to acknowledge their arrival.",
+      "file": "M05_cc7f581441f816de02327bcab65c7e62.wav"
+    },
+    {
+      "key": "M05_780485a47da167f345a9b510d3462818",
+      "profile": "M05",
+      "text": "The courier you helped recognizes you. She has returned from the clinic with supplies to spare.",
+      "file": "M05_780485a47da167f345a9b510d3462818.wav"
+    },
+    {
+      "key": "M05_8ccb5fb3e6b071b1b034b7a8ef95e8a8",
+      "profile": "M05",
+      "text": "The medic you supplied is moving patients. The evacuation cannot leave until the road is clear.",
+      "file": "M05_8ccb5fb3e6b071b1b034b7a8ef95e8a8.wav"
+    },
+    {
+      "key": "M05_87a0394a0c2481e3599e5e7090ac8cbc",
+      "profile": "M05",
+      "text": "The pharmacy cabinet. Please take what you need.",
+      "file": "M05_87a0394a0c2481e3599e5e7090ac8cbc.wav"
+    },
+    {
+      "key": "M05_3cba9c4bf22a9b1357fa2623def4f1c1",
+      "profile": "M05",
+      "text": "The repaired relay is transmitting a convoy route. Its operator needs you to hold the perimeter until the burst finishes.",
+      "file": "M05_3cba9c4bf22a9b1357fa2623def4f1c1.wav"
+    },
+    {
+      "key": "M05_cc976d7d8a118ee26407e2a5ab26847d",
+      "profile": "M05",
+      "text": "The roads are quiet. Stay close, and watch the rooftops.",
+      "file": "M05_cc976d7d8a118ee26407e2a5ab26847d.wav"
+    },
+    {
+      "key": "M05_e6462e8e8ea3d83474fc6001982880f5",
+      "profile": "M05",
+      "text": "The scout you rescued left a trail mark and a cache exactly where promised.",
+      "file": "M05_e6462e8e8ea3d83474fc6001982880f5.wav"
+    },
+    {
+      "key": "M05_86e657893336788415ba82313d9adfc1",
+      "profile": "M05",
+      "text": "The shops take Canadian dollars. Try the exchange first.",
+      "file": "M05_86e657893336788415ba82313d9adfc1.wav"
+    },
+    {
+      "key": "M05_0a5f6cd41036bbf649ebcfb816af2b1b",
+      "profile": "M05",
+      "text": "The technician you rescued is ready to move his tools. He asks you to walk the exposed stretch with him.",
+      "file": "M05_0a5f6cd41036bbf649ebcfb816af2b1b.wav"
+    },
+    {
+      "key": "M05_c15fb9d0af42185b5484e48d693a3802",
+      "profile": "M05",
+      "text": "The wardens need the old shelter operational.",
+      "file": "M05_c15fb9d0af42185b5484e48d693a3802.wav"
+    },
+    {
+      "key": "M05_0a8f57e4183d1478a50b9e481615bd7e",
+      "profile": "M05",
+      "text": "Then we will find another way.",
+      "file": "M05_0a8f57e4183d1478a50b9e481615bd7e.wav"
+    },
+    {
+      "key": "M05_f94d82c1ef17348ce3ec6572f38e677d",
+      "profile": "M05",
+      "text": "There you are!",
+      "file": "M05_f94d82c1ef17348ce3ec6572f38e677d.wav"
+    },
+    {
+      "key": "M05_20df84e121f5d269722a4d81ec70a730",
+      "profile": "M05",
+      "text": "There! Keep shooting!",
+      "file": "M05_20df84e121f5d269722a4d81ec70a730.wav"
+    },
+    {
+      "key": "M05_425a8bb06345c472149130a8876f93ef",
+      "profile": "M05",
+      "text": "There's still good stuff out here. Just takes looking.",
+      "file": "M05_425a8bb06345c472149130a8876f93ef.wav"
+    },
+    {
+      "key": "M05_a836f2886d357fbe041d53384c63b51d",
+      "profile": "M05",
+      "text": "This is a waystation on the old road network. Wardens post work, merchants sell supplies, and drifters sometimes sign on. Shelter 01 has room for ten. Use your journal to follow a contract.",
+      "file": "M05_a836f2886d357fbe041d53384c63b51d.wav"
+    },
+    {
+      "key": "M05_a8bcfeeeedfd2fe97a6246159be69c35",
+      "profile": "M05",
+      "text": "Too much fire! Find cover!",
+      "file": "M05_a8bcfeeeedfd2fe97a6246159be69c35.wav"
+    },
+    {
+      "key": "M05_8cf7148b718655dc944a9f472fd7e4c8",
+      "profile": "M05",
+      "text": "Trouble! Get everyone inside!",
+      "file": "M05_8cf7148b718655dc944a9f472fd7e4c8.wav"
+    },
+    {
+      "key": "M05_8a9dced89f42e56e16c101425d88c787",
+      "profile": "M05",
+      "text": "Two exhausted walkers split an empty tin beside a dead cooking fire.",
+      "file": "M05_8a9dced89f42e56e16c101425d88c787.wav"
+    },
+    {
+      "key": "M05_8fa9f084c75bf791234cefc1145e421c",
+      "profile": "M05",
+      "text": "Used to complain about traffic. Imagine that.",
+      "file": "M05_8fa9f084c75bf791234cefc1145e421c.wav"
+    },
+    {
+      "key": "M05_aea621873c0c8404bf0ddea8db7d951e",
+      "profile": "M05",
+      "text": "Watch the exits!",
+      "file": "M05_aea621873c0c8404bf0ddea8db7d951e.wav"
+    },
+    {
+      "key": "M05_2afe01b9c8372855494e329c35fa9572",
+      "profile": "M05",
+      "text": "We came back for you. Keep moving!",
+      "file": "M05_2afe01b9c8372855494e329c35fa9572.wav"
+    },
+    {
+      "key": "M05_a04f05caa1d36f40e996a76588c53ccc",
+      "profile": "M05",
+      "text": "We can get through this. Keep moving!",
+      "file": "M05_a04f05caa1d36f40e996a76588c53ccc.wav"
+    },
+    {
+      "key": "M05_7f00faa40b67f4720b6608e77ef727d9",
+      "profile": "M05",
+      "text": "We should mark a way back before we go too far.",
+      "file": "M05_7f00faa40b67f4720b6608e77ef727d9.wav"
+    },
+    {
+      "key": "M05_f0f31e5be424013171e0887e83f1c335",
+      "profile": "M05",
+      "text": "We survive by looking after each other. What do you need?",
+      "file": "M05_f0f31e5be424013171e0887e83f1c335.wav"
+    },
+    {
+      "key": "M05_17361ec20c0e6f8de6c804dce7e094f2",
+      "profile": "M05",
+      "text": "Welcome to Toronto. Hope you enjoy your stay.",
+      "file": "M05_17361ec20c0e6f8de6c804dce7e094f2.wav"
+    },
+    {
+      "key": "M05_6246cf044d08585594f2cb6889bfa69c",
+      "profile": "M05",
+      "text": "Welcome to Toronto. Our northern supplies are made here, and we pay a premium for goods from the south. We buy and sell only in Canadian dollars. Visit Toronto Currency Exchange to convert your credits.",
+      "file": "M05_6246cf044d08585594f2cb6889bfa69c.wav"
+    },
+    {
+      "key": "M05_6ea29e5022f3d8eb6eadddf8bc579cff",
+      "profile": "M05",
+      "text": "Welcome to the Canadian checkpoint. Stay this side of the red line behind us. A permanent passport costs one million credits. Check your weapons and ammunition here before each visit; vehicle storage is inspected too. Collect everything on your return. Follow the north road to Toronto, three kilometres inland.",
+      "file": "M05_6ea29e5022f3d8eb6eadddf8bc579cff.wav"
+    },
+    {
+      "key": "M05_51afe4926a357da095f16f981e95f3ea",
+      "profile": "M05",
+      "text": "Where'd you go?",
+      "file": "M05_51afe4926a357da095f16f981e95f3ea.wav"
+    },
+    {
+      "key": "M05_b3707c8917615ebec6460b7261e5aa49",
+      "profile": "M05",
+      "text": "Who would you like to station here?",
+      "file": "M05_b3707c8917615ebec6460b7261e5aa49.wav"
+    },
+    {
+      "key": "M05_2667efa5ef9843cc8b8bdf73622fe9ea",
+      "profile": "M05",
+      "text": "Wish I knew a recipe that didn't start with a tin.",
+      "file": "M05_2667efa5ef9843cc8b8bdf73622fe9ea.wav"
+    },
+    {
+      "key": "M05_fcf668b1b00e1e151bb92ca683c81a2b",
+      "profile": "M05",
+      "text": "Would you sit with me a moment?",
+      "file": "M05_fcf668b1b00e1e151bb92ca683c81a2b.wav"
+    },
+    {
+      "key": "M05_0093ec2cea7f80169c854476a64fe75f",
+      "profile": "M05",
+      "text": "You cannot hide forever!",
+      "file": "M05_0093ec2cea7f80169c854476a64fe75f.wav"
+    },
+    {
+      "key": "M05_d1a8cbe9dd6d269c719e60588955e7ad",
+      "profile": "M05",
+      "text": "You learn to appreciate a quiet day.",
+      "file": "M05_d1a8cbe9dd6d269c719e60588955e7ad.wav"
+    },
+    {
+      "key": "M05_1255983cb5d038cf6546dc07a10d0c73",
+      "profile": "M05",
+      "text": "You picked the wrong fight!",
+      "file": "M05_1255983cb5d038cf6546dc07a10d0c73.wav"
+    },
+    {
+      "key": "M05_ae64a9f41090cbc9eecc20ce8a4b0e39",
+      "profile": "M05",
+      "text": "You picked the wrong people.",
+      "file": "M05_ae64a9f41090cbc9eecc20ce8a4b0e39.wav"
+    },
+    {
+      "key": "M05_c97b6bbf14668ab826c0b3c9a1fd3304",
+      "profile": "M05",
+      "text": "You're not walking out of this!",
+      "file": "M05_c97b6bbf14668ab826c0b3c9a1fd3304.wav"
+    },
+    {
+      "key": "F04_03217adbf3d2d0e4b69a0a888769a768",
+      "profile": "F04",
+      "text": "A battered postal case sits beside an overturned handcart. Its delivery log ends months ago.",
+      "file": "F04_03217adbf3d2d0e4b69a0a888769a768.wav"
+    },
+    {
+      "key": "F04_768d374a97939948102968972e099a0d",
+      "profile": "F04",
+      "text": "A buried steam line has split beneath a maintenance hatch. The pressure valve is jammed.",
+      "file": "F04_768d374a97939948102968972e099a0d.wav"
+    },
+    {
+      "key": "F04_b8efdff3416d80a03ef4fd56b4929d3b",
+      "profile": "F04",
+      "text": "A camp cook is banging a pan as infected shapes approach the fire. Someone must keep them outside the camp.",
+      "file": "F04_b8efdff3416d80a03ef4fd56b4929d3b.wav"
+    },
+    {
+      "key": "F04_378d3b6d891503b47f3785de98aababc",
+      "profile": "F04",
+      "text": "A cautious broker offers a sealed box of shotgun shells. He will only trade in the open.",
+      "file": "F04_378d3b6d891503b47f3785de98aababc.wav"
+    },
+    {
+      "key": "F04_f3b743efa6c127c7cb2433170549e72a",
+      "profile": "F04",
+      "text": "A cook is offering preserved meals in exchange for clean water.",
+      "file": "F04_f3b743efa6c127c7cb2433170549e72a.wav"
+    },
+    {
+      "key": "F04_3fcd86623802c23abefbbc12532df6d6",
+      "profile": "F04",
+      "text": "A dehydrated courier is hiding beneath a torn awning. Her sealed satchel is marked for a clinic.",
+      "file": "F04_3fcd86623802c23abefbbc12532df6d6.wav"
+    },
+    {
+      "key": "F04_47f6f6d7cfafce9ce5246de60c8ad720",
+      "profile": "F04",
+      "text": "A delivery driver is losing a refrigerator full of medicine. The cooling unit has seized.",
+      "file": "F04_47f6f6d7cfafce9ce5246de60c8ad720.wav"
+    },
+    {
+      "key": "F04_9dd0a508d2575a59cc8488347746c4ee",
+      "profile": "F04",
+      "text": "A distress loop plays from a receiver. No one answers your calls, but fresh bootprints surround the station.",
+      "file": "F04_9dd0a508d2575a59cc8488347746c4ee.wav"
+    },
+    {
+      "key": "F04_e09feab7bb47c18ba9b3b2359f21728b",
+      "profile": "F04",
+      "text": "A fallen cable spits light into rainwater. The cutoff box is reachable from the dry shoulder.",
+      "file": "F04_e09feab7bb47c18ba9b3b2359f21728b.wav"
+    },
+    {
+      "key": "F04_1edbd66054f0107fc6b3a34645f49cc5",
+      "profile": "F04",
+      "text": "A few hours until daylight. We can manage.",
+      "file": "F04_1edbd66054f0107fc6b3a34645f49cc5.wav"
+    },
+    {
+      "key": "F04_f5de373c4041cd5233f48ac18812cc0a",
+      "profile": "F04",
+      "text": "A furniture delivery has scattered sealed tool packs along the verge. A collector is sorting what survived.",
+      "file": "F04_f5de373c4041cd5233f48ac18812cc0a.wav"
+    },
+    {
+      "key": "F04_fd9e1bfc51547d1e2a728ccfdec24f78",
+      "profile": "F04",
+      "text": "A garden would make this place feel like home.",
+      "file": "F04_fd9e1bfc51547d1e2a728ccfdec24f78.wav"
+    },
+    {
+      "key": "F04_e231532279862988856ab3ae79789fc4",
+      "profile": "F04",
+      "text": "A hand-painted sign promises clean water, but the roadside pump has fallen silent.",
+      "file": "F04_e231532279862988856ab3ae79789fc4.wav"
+    },
+    {
+      "key": "F04_f7325eea76b24f1f296431d25ab2d98c",
+      "profile": "F04",
+      "text": "A lantern-lit medical seller has opened for the graveyard shift. No names, no questions.",
+      "file": "F04_f7325eea76b24f1f296431d25ab2d98c.wav"
+    },
+    {
+      "key": "F04_91b7571928a652d0058ddfc88fcdbaf9",
+      "profile": "F04",
+      "text": "A locksmith trades carefully made picks from a roll of tools spread across his bonnet.",
+      "file": "F04_91b7571928a652d0058ddfc88fcdbaf9.wav"
+    },
+    {
+      "key": "F04_04ba5d41ce846ef26fcb9cfe3f2167db",
+      "profile": "F04",
+      "text": "A lone traveler has put a candle on an unopened ration. Today would have been his daughter's birthday.",
+      "file": "F04_04ba5d41ce846ef26fcb9cfe3f2167db.wav"
+    },
+    {
+      "key": "F04_2b238ee9a09e34826a5407447c2e157e",
+      "profile": "F04",
+      "text": "A mechanic has exposed an engine block. The remaining parts will take patience to separate.",
+      "file": "F04_2b238ee9a09e34826a5407447c2e157e.wav"
+    },
+    {
+      "key": "F04_96bd5746efb94a059ecc5ea65331e759",
+      "profile": "F04",
+      "text": "A motel guest escaped through a window but cannot get past the infected on the access road.",
+      "file": "F04_96bd5746efb94a059ecc5ea65331e759.wav"
+    },
+    {
+      "key": "F04_45664e2272103160b6d0b3ebe8669ff7",
+      "profile": "F04",
+      "text": "A pair of boots sits beside a freshly filled grave. A friend is waiting for the courage to leave.",
+      "file": "F04_45664e2272103160b6d0b3ebe8669ff7.wav"
+    },
+    {
+      "key": "F04_bfc4edeb52ce863cf25c3923107ad421",
+      "profile": "F04",
+      "text": "A receiver repeats groups of numbers under a wash of static. Holding the frequency may reveal the whole message.",
+      "file": "F04_bfc4edeb52ce863cf25c3923107ad421.wav"
+    },
+    {
+      "key": "F04_a9c525787213825aad12b2d8c6c38bc3",
+      "profile": "F04",
+      "text": "A repair caravan has run out of usable metal. Its quartermaster is paying for scrap.",
+      "file": "F04_a9c525787213825aad12b2d8c6c38bc3.wav"
+    },
+    {
+      "key": "F04_f2596af58c1f5b29cc9c8751a62930ce",
+      "profile": "F04",
+      "text": "A roadside medic has a patient on a folding cot and nothing left to stop the bleeding.",
+      "file": "F04_f2596af58c1f5b29cc9c8751a62930ce.wav"
+    },
+    {
+      "key": "F04_3282c2d850b865ccecbc8ac531ee2a65",
+      "profile": "F04",
+      "text": "A runner is balancing on a wreck while rabid dogs circle below.",
+      "file": "F04_3282c2d850b865ccecbc8ac531ee2a65.wav"
+    },
+    {
+      "key": "F04_64947f5154a8bbd2301d6c83f8568c2c",
+      "profile": "F04",
+      "text": "A ruptured chemical drum is leaking across the verge. A warning lamp marks the contaminated ground.",
+      "file": "F04_64947f5154a8bbd2301d6c83f8568c2c.wav"
+    },
+    {
+      "key": "F04_e7b4d1744ab98d2e88386b9b287b9ba8",
+      "profile": "F04",
+      "text": "A scavenger has jacked up a van on timber blocks. A broken bracket is all that keeps him here.",
+      "file": "F04_e7b4d1744ab98d2e88386b9b287b9ba8.wav"
+    },
+    {
+      "key": "F04_6468be78b687cedcadb8126d9c98e6ec",
+      "profile": "F04",
+      "text": "A scout is trapped behind a makeshift barricade. The guards are close enough to hear a raised voice.",
+      "file": "F04_6468be78b687cedcadb8126d9c98e6ec.wav"
+    },
+    {
+      "key": "F04_89cf90380c66916645935645d4712b31",
+      "profile": "F04",
+      "text": "A seat and a roof. We're moving up in the world.",
+      "file": "F04_89cf90380c66916645935645d4712b31.wav"
+    },
+    {
+      "key": "F04_0d41cd365093dd0967b9c4c28518648c",
+      "profile": "F04",
+      "text": "A stack of supply drums has begun to smoke. Clean water could cool the hottest one before it ruptures.",
+      "file": "F04_0d41cd365093dd0967b9c4c28518648c.wav"
+    },
+    {
+      "key": "F04_d0ea2bd063eff096aade442399632147",
+      "profile": "F04",
+      "text": "A stargazer has set up an improvised observation station. She asks you to keep watch during a brief recording.",
+      "file": "F04_d0ea2bd063eff096aade442399632147.wav"
+    },
+    {
+      "key": "F04_cf11e657ac603b61f922b3f4d3b24d4e",
+      "profile": "F04",
+      "text": "A stranded passenger refuses to spend another night beside the dead bus.",
+      "file": "F04_cf11e657ac603b61f922b3f4d3b24d4e.wav"
+    },
+    {
+      "key": "F04_019f3f3cfee567ad1ae172a9d7c3930d",
+      "profile": "F04",
+      "text": "A supply convoy is retreating behind a barricade. Raiders are searching for a weak point.",
+      "file": "F04_019f3f3cfee567ad1ae172a9d7c3930d.wav"
+    },
+    {
+      "key": "F04_e8f8be0599affca5c230082e7c1d6568",
+      "profile": "F04",
+      "text": "A surveyor has lost her bearings in the fog. She needs someone to walk her to the next road marker.",
+      "file": "F04_e8f8be0599affca5c230082e7c1d6568.wav"
+    },
+    {
+      "key": "F04_408ada9aca957e62266cbf5904d6db44",
+      "profile": "F04",
+      "text": "A technician is pinned behind collapsed equipment. Infected workers are drawn to his calls.",
+      "file": "F04_408ada9aca957e62266cbf5904d6db44.wav"
+    },
+    {
+      "key": "F04_35afe78696756846a044420a11838e01",
+      "profile": "F04",
+      "text": "A traveler points out a feeding ground. The largest dogs have been stalking this road for days.",
+      "file": "F04_35afe78696756846a044420a11838e01.wav"
+    },
+    {
+      "key": "F04_6deb6d430725e3250ce5ad5512a30647",
+      "profile": "F04",
+      "text": "A volunteer is counting travelers for the settlements. He asks you to watch the road while he repairs his tally board.",
+      "file": "F04_6deb6d430725e3250ce5ad5512a30647.wav"
+    },
+    {
+      "key": "F04_f1db4fa078e589546b21bee3ca533508",
+      "profile": "F04",
+      "text": "A water carrier says the emergency filter has clogged. The last clean bottles are reserved for children.",
+      "file": "F04_f1db4fa078e589546b21bee3ca533508.wav"
+    },
+    {
+      "key": "F04_c551e3773396b7f30121a42f465a3992",
+      "profile": "F04",
+      "text": "A weather instrument has landed in the ditch. Its recorder still has enough power for one download.",
+      "file": "F04_c551e3773396b7f30121a42f465a3992.wav"
+    },
+    {
+      "key": "F04_dfd457e77585d88216b24f94843801fc",
+      "profile": "F04",
+      "text": "A whistle sounds twice beyond a deserted campsite. Something moves in the brush.",
+      "file": "F04_dfd457e77585d88216b24f94843801fc.wav"
+    },
+    {
+      "key": "F04_74459642378aacfd87ec25872b7c5b3a",
+      "profile": "F04",
+      "text": "A wreck has its cargo lid propped open. The neatly arranged supplies look untouched.",
+      "file": "F04_74459642378aacfd87ec25872b7c5b3a.wav"
+    },
+    {
+      "key": "F04_2396e5d3a7d95cf0b7d906d1c37a9900",
+      "profile": "F04",
+      "text": "Always jobs to do around here.",
+      "file": "F04_2396e5d3a7d95cf0b7d906d1c37a9900.wav"
+    },
+    {
+      "key": "F04_c3a8cd6cbc1dbdc48083b193d58b08e2",
+      "profile": "F04",
+      "text": "An injured traveler can walk, but only slowly. The next safe pull-off is a short distance down the road.",
+      "file": "F04_c3a8cd6cbc1dbdc48083b193d58b08e2.wav"
+    },
+    {
+      "key": "F04_17daf44a63bebc7eb1c743c3e1d9c431",
+      "profile": "F04",
+      "text": "An isolated relay repeats a distress fragment. A technician points to a burned contactor.",
+      "file": "F04_17daf44a63bebc7eb1c743c3e1d9c431.wav"
+    },
+    {
+      "key": "F04_9d447a1c5166406c6d9cd3fb201b759d",
+      "profile": "F04",
+      "text": "An old roadside shelter has folded over its supply chest. The frame must be lifted clear.",
+      "file": "F04_9d447a1c5166406c6d9cd3fb201b759d.wav"
+    },
+    {
+      "key": "F04_426b410a17871d73fa034dd5fbfa440d",
+      "profile": "F04",
+      "text": "Armed collectors demand a road fee. Their barricade does not actually block the whole road.",
+      "file": "F04_426b410a17871d73fa034dd5fbfa440d.wav"
+    },
+    {
+      "key": "F04_6c813f135b8726493648d2f6e2b9a0e6",
+      "profile": "F04",
+      "text": "Been patching that same coat for years.",
+      "file": "F04_6c813f135b8726493648d2f6e2b9a0e6.wav"
+    },
+    {
+      "key": "F04_92621e3c1e1514c902ed5473e986f3d0",
+      "profile": "F04",
+      "text": "Blue tape marks a locked evidence case beneath an abandoned roadside checkpoint.",
+      "file": "F04_92621e3c1e1514c902ed5473e986f3d0.wav"
+    },
+    {
+      "key": "F04_5a5ea3210891e034b2d61f6df9b5f67a",
+      "profile": "F04",
+      "text": "Bring back supplies and we'll make it worth your while.",
+      "file": "F04_5a5ea3210891e034b2d61f6df9b5f67a.wav"
+    },
+    {
+      "key": "F04_87765b9bd4d6f8b9dec240e183042c51",
+      "profile": "F04",
+      "text": "Bring water to a settlement quartermaster.",
+      "file": "F04_87765b9bd4d6f8b9dec240e183042c51.wav"
+    },
+    {
+      "key": "F04_320ae35a92f7ada530fa2288759b1f41",
+      "profile": "F04",
+      "text": "Buying or selling? I can do either.",
+      "file": "F04_320ae35a92f7ada530fa2288759b1f41.wav"
+    },
+    {
+      "key": "F04_61cba8cfb92640b1caa7c1d57714cc38",
+      "profile": "F04",
+      "text": "Can't get a shot from here!",
+      "file": "F04_61cba8cfb92640b1caa7c1d57714cc38.wav"
+    },
+    {
+      "key": "F04_9b82839434c48c6d27ba15845349815a",
+      "profile": "F04",
+      "text": "Can't see much out there. Listen carefully.",
+      "file": "F04_9b82839434c48c6d27ba15845349815a.wav"
+    },
+    {
+      "key": "F04_5b01f6a814797e8450f8ab4c4a25c8d3",
+      "profile": "F04",
+      "text": "Changing mags!",
+      "file": "F04_5b01f6a814797e8450f8ab4c4a25c8d3.wav"
+    },
+    {
+      "key": "F04_93a12f1b394c78f0e63b90ff302fd508",
+      "profile": "F04",
+      "text": "Check behind that cover!",
+      "file": "F04_93a12f1b394c78f0e63b90ff302fd508.wav"
+    },
+    {
+      "key": "F04_263979d7f26c667bf8af0c6e0b81bfb3",
+      "profile": "F04",
+      "text": "Check the corners. I'll check the windows.",
+      "file": "F04_263979d7f26c667bf8af0c6e0b81bfb3.wav"
+    },
+    {
+      "key": "F04_fa25770feabeef648f500a02d9909359",
+      "profile": "F04",
+      "text": "Clean water and clean bandages. Can't have too many.",
+      "file": "F04_fa25770feabeef648f500a02d9909359.wav"
+    },
+    {
+      "key": "F04_347ca364e788f2bf0248ac225fa12e04",
+      "profile": "F04",
+      "text": "Clear threats from the settlement approaches.",
+      "file": "F04_347ca364e788f2bf0248ac225fa12e04.wav"
+    },
+    {
+      "key": "F04_1531c09153ab7820d63f4f084f834aa5",
+      "profile": "F04",
+      "text": "Clothes and luggage lie in a careful line along the verge. The figures beyond them have stopped moving.",
+      "file": "F04_1531c09153ab7820d63f4f084f834aa5.wav"
+    },
+    {
+      "key": "F04_7944a876e0f182b77b951edb5a09e4f9",
+      "profile": "F04",
+      "text": "Come on! Show yourself!",
+      "file": "F04_7944a876e0f182b77b951edb5a09e4f9.wav"
+    },
+    {
+      "key": "F04_45cd74d3931346a9c42eb721ee1a02ab",
+      "profile": "F04",
+      "text": "Contact! Stay behind something solid!",
+      "file": "F04_45cd74d3931346a9c42eb721ee1a02ab.wav"
+    },
+    {
+      "key": "F04_1714cf881737b43ba318764af6b922f3",
+      "profile": "F04",
+      "text": "Don't give them room!",
+      "file": "F04_1714cf881737b43ba318764af6b922f3.wav"
+    },
+    {
+      "key": "F04_82a81a411ae5fe814b894268efbed3f4",
+      "profile": "F04",
+      "text": "Don't need it yourself? Somebody else probably does.",
+      "file": "F04_82a81a411ae5fe814b894268efbed3f4.wav"
+    },
+    {
+      "key": "F04_794c514d4d2ac0d9aa594e9f07c06b8a",
+      "profile": "F04",
+      "text": "Don't rush them. Make them come to us!",
+      "file": "F04_794c514d4d2ac0d9aa594e9f07c06b8a.wav"
+    },
+    {
+      "key": "F04_e34d60a20076588ddb9b57043f079bde",
+      "profile": "F04",
+      "text": "Exchange credits and Canadian dollars here. The displayed live rate includes our spread.",
+      "file": "F04_e34d60a20076588ddb9b57043f079bde.wav"
+    },
+    {
+      "key": "F04_9a5579982ba9432dad245d787d0f1699",
+      "profile": "F04",
+      "text": "Find a radio and make contact with a medic.",
+      "file": "F04_9a5579982ba9432dad245d787d0f1699.wav"
+    },
+    {
+      "key": "F04_64bbcc52068b23168a4de22b418a5207",
+      "profile": "F04",
+      "text": "Find cover! Protect the town!",
+      "file": "F04_64bbcc52068b23168a4de22b418a5207.wav"
+    },
+    {
+      "key": "F04_5d4fc54ec1e9f0f51e7b503927abf152",
+      "profile": "F04",
+      "text": "Find the diner and replenish settlement rations.",
+      "file": "F04_5d4fc54ec1e9f0f51e7b503927abf152.wav"
+    },
+    {
+      "key": "F04_36b93d15e6afa96b75a79ed13d2bd509",
+      "profile": "F04",
+      "text": "Finish a final patrol for the settlement network.",
+      "file": "F04_36b93d15e6afa96b75a79ed13d2bd509.wav"
+    },
+    {
+      "key": "F04_44505eeb7cf94253cb4370804e828fbf",
+      "profile": "F04",
+      "text": "Funny what survives. Street signs outlasted the country.",
+      "file": "F04_44505eeb7cf94253cb4370804e828fbf.wav"
+    },
+    {
+      "key": "F04_7bb2330ecd48ff6d35f688046de86f6a",
+      "profile": "F04",
+      "text": "Get down! Get down!",
+      "file": "F04_7bb2330ecd48ff6d35f688046de86f6a.wav"
+    },
+    {
+      "key": "F04_a6aa6bfea15b7332c4dd80591866ad67",
+      "profile": "F04",
+      "text": "Good to see another living face.",
+      "file": "F04_a6aa6bfea15b7332c4dd80591866ad67.wav"
+    },
+    {
+      "key": "F04_e0a2374fb63873e86b5c55b71aceba8e",
+      "profile": "F04",
+      "text": "Got to keep busy. Helps with everything else.",
+      "file": "F04_e0a2374fb63873e86b5c55b71aceba8e.wav"
+    },
+    {
+      "key": "F04_1091f34934d5491ee8a72ee05bc4becd",
+      "profile": "F04",
+      "text": "Have a look. Something here might keep you alive.",
+      "file": "F04_1091f34934d5491ee8a72ee05bc4becd.wav"
+    },
+    {
+      "key": "F04_306c6ea66797f7070826bf9098bd15f4",
+      "profile": "F04",
+      "text": "Hold that corner!",
+      "file": "F04_306c6ea66797f7070826bf9098bd15f4.wav"
+    },
+    {
+      "key": "F04_22905fdc3eed8a2170c7227af9183551",
+      "profile": "F04",
+      "text": "Hostile in town! Take cover!",
+      "file": "F04_22905fdc3eed8a2170c7227af9183551.wav"
+    },
+    {
+      "key": "F04_eb14c570664d9118501fc335f3db9a0d",
+      "profile": "F04",
+      "text": "I am hit. Give me a moment!",
+      "file": "F04_eb14c570664d9118501fc335f3db9a0d.wav"
+    },
+    {
+      "key": "F04_f52b66b524557c9b68e58127ab0b6eb6",
+      "profile": "F04",
+      "text": "I know you're still here!",
+      "file": "F04_f52b66b524557c9b68e58127ab0b6eb6.wav"
+    },
+    {
+      "key": "F04_b6e0b1400f42856b0ee8b649369a7f35",
+      "profile": "F04",
+      "text": "I miss hearing somebody mow their lawn.",
+      "file": "F04_b6e0b1400f42856b0ee8b649369a7f35.wav"
+    },
+    {
+      "key": "F04_b335ad3218e845e856fd75490e740ab2",
+      "profile": "F04",
+      "text": "I still catch myself checking the mailbox.",
+      "file": "F04_b335ad3218e845e856fd75490e740ab2.wav"
+    },
+    {
+      "key": "F04_654c15db366aa3b0e9048b706f133eb2",
+      "profile": "F04",
+      "text": "I used to live north of here.",
+      "file": "F04_654c15db366aa3b0e9048b706f133eb2.wav"
+    },
+    {
+      "key": "F04_08b44daab206c1308e82c977e75b987d",
+      "profile": "F04",
+      "text": "I'd rather walk with you than sit worrying at home.",
+      "file": "F04_08b44daab206c1308e82c977e75b987d.wav"
+    },
+    {
+      "key": "F04_1d54613c29d4ec0fec9551bb3a216a98",
+      "profile": "F04",
+      "text": "I'll keep an eye out through the window.",
+      "file": "F04_1d54613c29d4ec0fec9551bb3a216a98.wav"
+    },
+    {
+      "key": "F04_56777c8d042cd4568236fd639ff01cdf",
+      "profile": "F04",
+      "text": "I'll watch our backs. You pick the route.",
+      "file": "F04_56777c8d042cd4568236fd639ff01cdf.wav"
+    },
+    {
+      "key": "F04_ca28dba79f7e8c819f5a02df83905268",
+      "profile": "F04",
+      "text": "I'm bleeding. Could use a moment.",
+      "file": "F04_ca28dba79f7e8c819f5a02df83905268.wav"
+    },
+    {
+      "key": "F04_7cc1a88e1aac392998e056b5cdfa43ea",
+      "profile": "F04",
+      "text": "I'm here. Finish what we started.",
+      "file": "F04_7cc1a88e1aac392998e056b5cdfa43ea.wav"
+    },
+    {
+      "key": "F04_9115a7689ca10189fd441794a03093b5",
+      "profile": "F04",
+      "text": "I'm saving up for a proper pair of boots.",
+      "file": "F04_9115a7689ca10189fd441794a03093b5.wav"
+    },
+    {
+      "key": "F04_983ca6cf509836819bd7e6bbbd470286",
+      "profile": "F04",
+      "text": "I've got this angle. Watch your side!",
+      "file": "F04_983ca6cf509836819bd7e6bbbd470286.wav"
+    },
+    {
+      "key": "F04_44101f14fb85cae66ceaf69988c92904",
+      "profile": "F04",
+      "text": "If a hinge squeaks, oil it. Don't wake the whole street.",
+      "file": "F04_44101f14fb85cae66ceaf69988c92904.wav"
+    },
+    {
+      "key": "F04_2f85495ff8f3b16364b3d4ac3674ec94",
+      "profile": "F04",
+      "text": "If we find coffee, I'm calling that a victory.",
+      "file": "F04_2f85495ff8f3b16364b3d4ac3674ec94.wav"
+    },
+    {
+      "key": "F04_2120dd58a70094e810bb9062801911b3",
+      "profile": "F04",
+      "text": "If you find seeds out there, don't throw them away.",
+      "file": "F04_2120dd58a70094e810bb9062801911b3.wav"
+    },
+    {
+      "key": "F04_1da6b0c86f3ab91bea59b99b903d1be7",
+      "profile": "F04",
+      "text": "If you're hurt, come see me before it gets worse.",
+      "file": "F04_1da6b0c86f3ab91bea59b99b903d1be7.wav"
+    },
+    {
+      "key": "F04_13ae647a7e4b446cc75787bfd8d790f1",
+      "profile": "F04",
+      "text": "Infected workers keep returning to the same maintenance stop. A scavenger offers a bounty for clearing it.",
+      "file": "F04_13ae647a7e4b446cc75787bfd8d790f1.wav"
+    },
+    {
+      "key": "F04_ca109bfeeced77fb8909b64e4ed497d3",
+      "profile": "F04",
+      "text": "Investigate the motel and clear the nearby threats.",
+      "file": "F04_ca109bfeeced77fb8909b64e4ed497d3.wav"
+    },
+    {
+      "key": "F04_4f826cedba0fca1ed6b09d734542c17c",
+      "profile": "F04",
+      "text": "Keep a little water in reserve. Learned that the hard way.",
+      "file": "F04_4f826cedba0fca1ed6b09d734542c17c.wav"
+    },
+    {
+      "key": "F04_a280ce0bb89c0107d439eab686c339b8",
+      "profile": "F04",
+      "text": "Keep looking. They're close.",
+      "file": "F04_a280ce0bb89c0107d439eab686c339b8.wav"
+    },
+    {
+      "key": "F04_21bf461c43bbd2565015be7a55c9c441",
+      "profile": "F04",
+      "text": "Keep that wound clean. Dirt's as dangerous as bullets.",
+      "file": "F04_21bf461c43bbd2565015be7a55c9c441.wav"
+    },
+    {
+      "key": "F04_45011a1159396607e732e562ebe2677e",
+      "profile": "F04",
+      "text": "Keep them pinned down!",
+      "file": "F04_45011a1159396607e732e562ebe2677e.wav"
+    },
+    {
+      "key": "F04_89cb2246c732df20ce97f6f8e750cc69",
+      "profile": "F04",
+      "text": "Keep your head down. I'm here!",
+      "file": "F04_89cb2246c732df20ce97f6f8e750cc69.wav"
+    },
+    {
+      "key": "F04_8a4eeb1ee44e85d9b96af5af5ee40923",
+      "profile": "F04",
+      "text": "Leave your goods with us. Collect the proceeds when they sell.",
+      "file": "F04_8a4eeb1ee44e85d9b96af5af5ee40923.wav"
+    },
+    {
+      "key": "F04_497874d7a986409f41c722ed122dac17",
+      "profile": "F04",
+      "text": "Let me know if you need a breather.",
+      "file": "F04_497874d7a986409f41c722ed122dac17.wav"
+    },
+    {
+      "key": "F04_b42119f65122833c8760521d5362482b",
+      "profile": "F04",
+      "text": "Let us go over the settlement accounts.",
+      "file": "F04_b42119f65122833c8760521d5362482b.wav"
+    },
+    {
+      "key": "F04_ad8dbdf2fdd23cc633a57d5ec759740f",
+      "profile": "F04",
+      "text": "Locate medical stock and replenish the clinic.",
+      "file": "F04_ad8dbdf2fdd23cc633a57d5ec759740f.wav"
+    },
+    {
+      "key": "F04_b3707246319958253367243bd4e85372",
+      "profile": "F04",
+      "text": "Looking for work? We have contracts.",
+      "file": "F04_b3707246319958253367243bd4e85372.wav"
+    },
+    {
+      "key": "F04_cbf6a97c43f7556b2d4d5fdcc8e01120",
+      "profile": "F04",
+      "text": "Men wearing borrowed medical bands demand payment for a nonexistent inspection.",
+      "file": "F04_cbf6a97c43f7556b2d4d5fdcc8e01120.wav"
+    },
+    {
+      "key": "F04_6388c6863b1c357beed73145f31192d0",
+      "profile": "F04",
+      "text": "Morning or night, there's always something to mend.",
+      "file": "F04_6388c6863b1c357beed73145f31192d0.wav"
+    },
+    {
+      "key": "F04_ec585771aac5bc8fafa5093250ebb7ff",
+      "profile": "F04",
+      "text": "Moving up! Cover me!",
+      "file": "F04_ec585771aac5bc8fafa5093250ebb7ff.wav"
+    },
+    {
+      "key": "F04_8667ec29affd0f762c389009a4dc6312",
+      "profile": "F04",
+      "text": "Names are scratched into scraps of tin. A caretaker asks you to stay for a moment while he reads them.",
+      "file": "F04_8667ec29affd0f762c389009a4dc6312.wav"
+    },
+    {
+      "key": "F04_f595a45aa5c00e6237f350946c4eeed2",
+      "profile": "F04",
+      "text": "Need a second! Cover me!",
+      "file": "F04_f595a45aa5c00e6237f350946c4eeed2.wav"
+    },
+    {
+      "key": "F04_277b106559996d381a36fadc55997ffd",
+      "profile": "F04",
+      "text": "Need another pair of hands?",
+      "file": "F04_277b106559996d381a36fadc55997ffd.wav"
+    },
+    {
+      "key": "F04_39ee7967719b83044c66cc2c2fba24f2",
+      "profile": "F04",
+      "text": "Need work? Take a look at the contracts.",
+      "file": "F04_39ee7967719b83044c66cc2c2fba24f2.wav"
+    },
+    {
+      "key": "F04_a196bb79ca12a9cd712d924f4764fdd5",
+      "profile": "F04",
+      "text": "Never liked walking these roads after dark.",
+      "file": "F04_a196bb79ca12a9cd712d924f4764fdd5.wav"
+    },
+    {
+      "key": "F04_4009a9f8c931d31adbfbc304d6175682",
+      "profile": "F04",
+      "text": "Never thought I'd miss paying rent.",
+      "file": "F04_4009a9f8c931d31adbfbc304d6175682.wav"
+    },
+    {
+      "key": "F04_4e143f9e27ade6b1800b71cc5501ace4",
+      "profile": "F04",
+      "text": "Next roof we find, let's take a minute.",
+      "file": "F04_4e143f9e27ade6b1800b71cc5501ace4.wav"
+    },
+    {
+      "key": "F04_b001d32fbbe3c73bc381f0df66ce5169",
+      "profile": "F04",
+      "text": "Nice to let something else do the walking.",
+      "file": "F04_b001d32fbbe3c73bc381f0df66ce5169.wav"
+    },
+    {
+      "key": "F04_f3017399b9d7f9af22299f78e564cd94",
+      "profile": "F04",
+      "text": "Nobody here gets through this alone.",
+      "file": "F04_f3017399b9d7f9af22299f78e564cd94.wav"
+    },
+    {
+      "key": "F04_8c920e14b1e86a7175e3d847da29b2fe",
+      "profile": "F04",
+      "text": "One decent meal and a dry bed. That's the dream.",
+      "file": "F04_8c920e14b1e86a7175e3d847da29b2fe.wav"
+    },
+    {
+      "key": "F04_e93ad42b18c46e6adab4f250f9cb15c9",
+      "profile": "F04",
+      "text": "Over here. Could use a hand.",
+      "file": "F04_e93ad42b18c46e6adab4f250f9cb15c9.wav"
+    },
+    {
+      "key": "F04_06817ca7b958f4c823f5b040142673f8",
+      "profile": "F04",
+      "text": "Over here. I cannot stop the bleeding.",
+      "file": "F04_06817ca7b958f4c823f5b040142673f8.wav"
+    },
+    {
+      "key": "F04_61536b724df74eb6110be8d45d6fccd7",
+      "profile": "F04",
+      "text": "Picked a bad place to wander!",
+      "file": "F04_61536b724df74eb6110be8d45d6fccd7.wav"
+    },
+    {
+      "key": "F04_cccb81f303ed23c8f686255d9edbf7e2",
+      "profile": "F04",
+      "text": "Plenty to see around here. Take your time.",
+      "file": "F04_cccb81f303ed23c8f686255d9edbf7e2.wav"
+    },
+    {
+      "key": "F04_51c75d0afd38d19c5e6978be0edb3bca",
+      "profile": "F04",
+      "text": "Raiders watch the roads. Dogs hunt by sound. The pale mannequins move when nobody watches. Bring someone you trust, and never stand beside a fuel pump in a firefight.",
+      "file": "F04_51c75d0afd38d19c5e6978be0edb3bca.wav"
+    },
+    {
+      "key": "F04_0c29978ec9453c2aab4c395acd0251f3",
+      "profile": "F04",
+      "text": "Rain is coming. I can feel it.",
+      "file": "F04_0c29978ec9453c2aab4c395acd0251f3.wav"
+    },
+    {
+      "key": "F04_715a1384bd79f64d16abd1f4435554d3",
+      "profile": "F04",
+      "text": "Rain's covering our footsteps. Their footsteps too.",
+      "file": "F04_715a1384bd79f64d16abd1f4435554d3.wav"
+    },
+    {
+      "key": "F04_5597efc18b4620de0b2391fba03e1ae7",
+      "profile": "F04",
+      "text": "Rainwater has drowned a camp generator. Its owner has disconnected it, but needs help rebuilding the starter.",
+      "file": "F04_5597efc18b4620de0b2391fba03e1ae7.wav"
+    },
+    {
+      "key": "F04_2d538eb01390f4f986ca9c3b180bd924",
+      "profile": "F04",
+      "text": "Recruit a survivor and show them the bunker.",
+      "file": "F04_2d538eb01390f4f986ca9c3b180bd924.wav"
+    },
+    {
+      "key": "F04_52a275cd79f3036633f2c4aba9f33b54",
+      "profile": "F04",
+      "text": "Reloading! Keep them back!",
+      "file": "F04_52a275cd79f3036633f2c4aba9f33b54.wav"
+    },
+    {
+      "key": "F04_c56c608989c041dd17404ee446ae381b",
+      "profile": "F04",
+      "text": "Restore the shelter workshop.",
+      "file": "F04_c56c608989c041dd17404ee446ae381b.wav"
+    },
+    {
+      "key": "F04_a0d5901e1669371025ff160301c5e256",
+      "profile": "F04",
+      "text": "Runoff has stripped the soil from a sealed supply drum. Its latch is packed with rust.",
+      "file": "F04_a0d5901e1669371025ff160301c5e256.wav"
+    },
+    {
+      "key": "F04_24579fdc88a291cd4c2913f2fa169c0b",
+      "profile": "F04",
+      "text": "Six active contracts at a time. Deliver supplies here, and return when your work is finished.",
+      "file": "F04_24579fdc88a291cd4c2913f2fa169c0b.wav"
+    },
+    {
+      "key": "F04_208c26d64f94b9463455488d6bf6c762",
+      "profile": "F04",
+      "text": "So much for keeping my socks dry.",
+      "file": "F04_208c26d64f94b9463455488d6bf6c762.wav"
+    },
+    {
+      "key": "F04_5e110ec140466f67ec07ecd2a4cb0925",
+      "profile": "F04",
+      "text": "Someone fixed the water pump.",
+      "file": "F04_5e110ec140466f67ec07ecd2a4cb0925.wav"
+    },
+    {
+      "key": "F04_560eb0d5ab90f357235f8f9a5bc94289",
+      "profile": "F04",
+      "text": "Someone ought to write all this down.",
+      "file": "F04_560eb0d5ab90f357235f8f9a5bc94289.wav"
+    },
+    {
+      "key": "F04_67cf4ea1c60c313fcd9457b7ae6f9a2c",
+      "profile": "F04",
+      "text": "Spent brass litters a lookout. Raiders have been firing on anyone crossing the next stretch.",
+      "file": "F04_67cf4ea1c60c313fcd9457b7ae6f9a2c.wav"
+    },
+    {
+      "key": "F04_21fb705c8bb629d19a512b6c807b690a",
+      "profile": "F04",
+      "text": "Stand back. This checkpoint is under alert.",
+      "file": "F04_21fb705c8bb629d19a512b6c807b690a.wav"
+    },
+    {
+      "key": "F04_12bc079fcf89240027b014478205af66",
+      "profile": "F04",
+      "text": "Stay away from the windows!",
+      "file": "F04_12bc079fcf89240027b014478205af66.wav"
+    },
+    {
+      "key": "F04_13ada153e4798758ebfb4226d1cbba3f",
+      "profile": "F04",
+      "text": "Stay close. We are not done yet.",
+      "file": "F04_13ada153e4798758ebfb4226d1cbba3f.wav"
+    },
+    {
+      "key": "F04_adac89b570f8942f67a8d20822ef7ce9",
+      "profile": "F04",
+      "text": "Stay sharp. I lost sight of them.",
+      "file": "F04_adac89b570f8942f67a8d20822ef7ce9.wav"
+    },
+    {
+      "key": "F04_ea52562994ac478160a7c512aebe68e7",
+      "profile": "F04",
+      "text": "Still fighting! Stay with me!",
+      "file": "F04_ea52562994ac478160a7c512aebe68e7.wav"
+    },
+    {
+      "key": "F04_0fcd00e83376cc7bae00117669dc81e2",
+      "profile": "F04",
+      "text": "Still standing. Barely.",
+      "file": "F04_0fcd00e83376cc7bae00117669dc81e2.wav"
+    },
+    {
+      "key": "F04_c226ffbc9e2bd4a17c7edcb4b63928bd",
+      "profile": "F04",
+      "text": "Still with you. Keep your eyes on the street.",
+      "file": "F04_c226ffbc9e2bd4a17c7edcb4b63928bd.wav"
+    },
+    {
+      "key": "F04_e16ee1032d65315fd146a2a821f06b92",
+      "profile": "F04",
+      "text": "Stranded walkers are shivering beside soaked bedrolls. They need food before continuing.",
+      "file": "F04_e16ee1032d65315fd146a2a821f06b92.wav"
+    },
+    {
+      "key": "F04_aebaaac1c720e850793197e042c92c28",
+      "profile": "F04",
+      "text": "Supplies for sale. Fair prices.",
+      "file": "F04_aebaaac1c720e850793197e042c92c28.wav"
+    },
+    {
+      "key": "F04_492282c39eeecef7a06b13996133b8af",
+      "profile": "F04",
+      "text": "Survey a fuel stop, then report to a warden.",
+      "file": "F04_492282c39eeecef7a06b13996133b8af.wav"
+    },
+    {
+      "key": "F04_fa4904e8964bfe904d78ba1770d3b4aa",
+      "profile": "F04",
+      "text": "Survey storage and recover repair material.",
+      "file": "F04_fa4904e8964bfe904d78ba1770d3b4aa.wav"
+    },
+    {
+      "key": "F04_cc1ccf1f163d678e14f08b01c6bf0d57",
+      "profile": "F04",
+      "text": "Take care on the roads, stranger.",
+      "file": "F04_cc1ccf1f163d678e14f08b01c6bf0d57.wav"
+    },
+    {
+      "key": "F04_7df26d5591a8e5c2dec26e53809f3164",
+      "profile": "F04",
+      "text": "Thank you. We will remember this.",
+      "file": "F04_7df26d5591a8e5c2dec26e53809f3164.wav"
+    },
+    {
+      "key": "F04_9e47ecb4e34487ebdeb8373d46d09916",
+      "profile": "F04",
+      "text": "That one got me. Don't go too far.",
+      "file": "F04_9e47ecb4e34487ebdeb8373d46d09916.wav"
+    },
+    {
+      "key": "F04_037280aab044e5cedb7a005d75d0d3e7",
+      "profile": "F04",
+      "text": "The clinic is open. Stay safe out there.",
+      "file": "F04_037280aab044e5cedb7a005d75d0d3e7.wav"
+    },
+    {
+      "key": "F04_cc7f581441f816de02327bcab65c7e62",
+      "profile": "F04",
+      "text": "The convoy you helped is on the air. They need a relay operator to acknowledge their arrival.",
+      "file": "F04_cc7f581441f816de02327bcab65c7e62.wav"
+    },
+    {
+      "key": "F04_780485a47da167f345a9b510d3462818",
+      "profile": "F04",
+      "text": "The courier you helped recognizes you. She has returned from the clinic with supplies to spare.",
+      "file": "F04_780485a47da167f345a9b510d3462818.wav"
+    },
+    {
+      "key": "F04_8ccb5fb3e6b071b1b034b7a8ef95e8a8",
+      "profile": "F04",
+      "text": "The medic you supplied is moving patients. The evacuation cannot leave until the road is clear.",
+      "file": "F04_8ccb5fb3e6b071b1b034b7a8ef95e8a8.wav"
+    },
+    {
+      "key": "F04_87a0394a0c2481e3599e5e7090ac8cbc",
+      "profile": "F04",
+      "text": "The pharmacy cabinet. Please take what you need.",
+      "file": "F04_87a0394a0c2481e3599e5e7090ac8cbc.wav"
+    },
+    {
+      "key": "F04_3cba9c4bf22a9b1357fa2623def4f1c1",
+      "profile": "F04",
+      "text": "The repaired relay is transmitting a convoy route. Its operator needs you to hold the perimeter until the burst finishes.",
+      "file": "F04_3cba9c4bf22a9b1357fa2623def4f1c1.wav"
+    },
+    {
+      "key": "F04_cc976d7d8a118ee26407e2a5ab26847d",
+      "profile": "F04",
+      "text": "The roads are quiet. Stay close, and watch the rooftops.",
+      "file": "F04_cc976d7d8a118ee26407e2a5ab26847d.wav"
+    },
+    {
+      "key": "F04_e6462e8e8ea3d83474fc6001982880f5",
+      "profile": "F04",
+      "text": "The scout you rescued left a trail mark and a cache exactly where promised.",
+      "file": "F04_e6462e8e8ea3d83474fc6001982880f5.wav"
+    },
+    {
+      "key": "F04_86e657893336788415ba82313d9adfc1",
+      "profile": "F04",
+      "text": "The shops take Canadian dollars. Try the exchange first.",
+      "file": "F04_86e657893336788415ba82313d9adfc1.wav"
+    },
+    {
+      "key": "F04_0a5f6cd41036bbf649ebcfb816af2b1b",
+      "profile": "F04",
+      "text": "The technician you rescued is ready to move his tools. He asks you to walk the exposed stretch with him.",
+      "file": "F04_0a5f6cd41036bbf649ebcfb816af2b1b.wav"
+    },
+    {
+      "key": "F04_c15fb9d0af42185b5484e48d693a3802",
+      "profile": "F04",
+      "text": "The wardens need the old shelter operational.",
+      "file": "F04_c15fb9d0af42185b5484e48d693a3802.wav"
+    },
+    {
+      "key": "F04_0a8f57e4183d1478a50b9e481615bd7e",
+      "profile": "F04",
+      "text": "Then we will find another way.",
+      "file": "F04_0a8f57e4183d1478a50b9e481615bd7e.wav"
+    },
+    {
+      "key": "F04_f94d82c1ef17348ce3ec6572f38e677d",
+      "profile": "F04",
+      "text": "There you are!",
+      "file": "F04_f94d82c1ef17348ce3ec6572f38e677d.wav"
+    },
+    {
+      "key": "F04_20df84e121f5d269722a4d81ec70a730",
+      "profile": "F04",
+      "text": "There! Keep shooting!",
+      "file": "F04_20df84e121f5d269722a4d81ec70a730.wav"
+    },
+    {
+      "key": "F04_425a8bb06345c472149130a8876f93ef",
+      "profile": "F04",
+      "text": "There's still good stuff out here. Just takes looking.",
+      "file": "F04_425a8bb06345c472149130a8876f93ef.wav"
+    },
+    {
+      "key": "F04_a836f2886d357fbe041d53384c63b51d",
+      "profile": "F04",
+      "text": "This is a waystation on the old road network. Wardens post work, merchants sell supplies, and drifters sometimes sign on. Shelter 01 has room for ten. Use your journal to follow a contract.",
+      "file": "F04_a836f2886d357fbe041d53384c63b51d.wav"
+    },
+    {
+      "key": "F04_a8bcfeeeedfd2fe97a6246159be69c35",
+      "profile": "F04",
+      "text": "Too much fire! Find cover!",
+      "file": "F04_a8bcfeeeedfd2fe97a6246159be69c35.wav"
+    },
+    {
+      "key": "F04_8cf7148b718655dc944a9f472fd7e4c8",
+      "profile": "F04",
+      "text": "Trouble! Get everyone inside!",
+      "file": "F04_8cf7148b718655dc944a9f472fd7e4c8.wav"
+    },
+    {
+      "key": "F04_8a9dced89f42e56e16c101425d88c787",
+      "profile": "F04",
+      "text": "Two exhausted walkers split an empty tin beside a dead cooking fire.",
+      "file": "F04_8a9dced89f42e56e16c101425d88c787.wav"
+    },
+    {
+      "key": "F04_8fa9f084c75bf791234cefc1145e421c",
+      "profile": "F04",
+      "text": "Used to complain about traffic. Imagine that.",
+      "file": "F04_8fa9f084c75bf791234cefc1145e421c.wav"
+    },
+    {
+      "key": "F04_aea621873c0c8404bf0ddea8db7d951e",
+      "profile": "F04",
+      "text": "Watch the exits!",
+      "file": "F04_aea621873c0c8404bf0ddea8db7d951e.wav"
+    },
+    {
+      "key": "F04_2afe01b9c8372855494e329c35fa9572",
+      "profile": "F04",
+      "text": "We came back for you. Keep moving!",
+      "file": "F04_2afe01b9c8372855494e329c35fa9572.wav"
+    },
+    {
+      "key": "F04_a04f05caa1d36f40e996a76588c53ccc",
+      "profile": "F04",
+      "text": "We can get through this. Keep moving!",
+      "file": "F04_a04f05caa1d36f40e996a76588c53ccc.wav"
+    },
+    {
+      "key": "F04_7f00faa40b67f4720b6608e77ef727d9",
+      "profile": "F04",
+      "text": "We should mark a way back before we go too far.",
+      "file": "F04_7f00faa40b67f4720b6608e77ef727d9.wav"
+    },
+    {
+      "key": "F04_f0f31e5be424013171e0887e83f1c335",
+      "profile": "F04",
+      "text": "We survive by looking after each other. What do you need?",
+      "file": "F04_f0f31e5be424013171e0887e83f1c335.wav"
+    },
+    {
+      "key": "F04_17361ec20c0e6f8de6c804dce7e094f2",
+      "profile": "F04",
+      "text": "Welcome to Toronto. Hope you enjoy your stay.",
+      "file": "F04_17361ec20c0e6f8de6c804dce7e094f2.wav"
+    },
+    {
+      "key": "F04_6246cf044d08585594f2cb6889bfa69c",
+      "profile": "F04",
+      "text": "Welcome to Toronto. Our northern supplies are made here, and we pay a premium for goods from the south. We buy and sell only in Canadian dollars. Visit Toronto Currency Exchange to convert your credits.",
+      "file": "F04_6246cf044d08585594f2cb6889bfa69c.wav"
+    },
+    {
+      "key": "F04_6ea29e5022f3d8eb6eadddf8bc579cff",
+      "profile": "F04",
+      "text": "Welcome to the Canadian checkpoint. Stay this side of the red line behind us. A permanent passport costs one million credits. Check your weapons and ammunition here before each visit; vehicle storage is inspected too. Collect everything on your return. Follow the north road to Toronto, three kilometres inland.",
+      "file": "F04_6ea29e5022f3d8eb6eadddf8bc579cff.wav"
+    },
+    {
+      "key": "F04_51afe4926a357da095f16f981e95f3ea",
+      "profile": "F04",
+      "text": "Where'd you go?",
+      "file": "F04_51afe4926a357da095f16f981e95f3ea.wav"
+    },
+    {
+      "key": "F04_b3707c8917615ebec6460b7261e5aa49",
+      "profile": "F04",
+      "text": "Who would you like to station here?",
+      "file": "F04_b3707c8917615ebec6460b7261e5aa49.wav"
+    },
+    {
+      "key": "F04_2667efa5ef9843cc8b8bdf73622fe9ea",
+      "profile": "F04",
+      "text": "Wish I knew a recipe that didn't start with a tin.",
+      "file": "F04_2667efa5ef9843cc8b8bdf73622fe9ea.wav"
+    },
+    {
+      "key": "F04_fcf668b1b00e1e151bb92ca683c81a2b",
+      "profile": "F04",
+      "text": "Would you sit with me a moment?",
+      "file": "F04_fcf668b1b00e1e151bb92ca683c81a2b.wav"
+    },
+    {
+      "key": "F04_0093ec2cea7f80169c854476a64fe75f",
+      "profile": "F04",
+      "text": "You cannot hide forever!",
+      "file": "F04_0093ec2cea7f80169c854476a64fe75f.wav"
+    },
+    {
+      "key": "F04_d1a8cbe9dd6d269c719e60588955e7ad",
+      "profile": "F04",
+      "text": "You learn to appreciate a quiet day.",
+      "file": "F04_d1a8cbe9dd6d269c719e60588955e7ad.wav"
+    },
+    {
+      "key": "F04_1255983cb5d038cf6546dc07a10d0c73",
+      "profile": "F04",
+      "text": "You picked the wrong fight!",
+      "file": "F04_1255983cb5d038cf6546dc07a10d0c73.wav"
+    },
+    {
+      "key": "F04_ae64a9f41090cbc9eecc20ce8a4b0e39",
+      "profile": "F04",
+      "text": "You picked the wrong people.",
+      "file": "F04_ae64a9f41090cbc9eecc20ce8a4b0e39.wav"
+    },
+    {
+      "key": "F04_c97b6bbf14668ab826c0b3c9a1fd3304",
+      "profile": "F04",
+      "text": "You're not walking out of this!",
+      "file": "F04_c97b6bbf14668ab826c0b3c9a1fd3304.wav"
+    },
+    {
+      "key": "F05_03217adbf3d2d0e4b69a0a888769a768",
+      "profile": "F05",
+      "text": "A battered postal case sits beside an overturned handcart. Its delivery log ends months ago.",
+      "file": "F05_03217adbf3d2d0e4b69a0a888769a768.wav"
+    },
+    {
+      "key": "F05_768d374a97939948102968972e099a0d",
+      "profile": "F05",
+      "text": "A buried steam line has split beneath a maintenance hatch. The pressure valve is jammed.",
+      "file": "F05_768d374a97939948102968972e099a0d.wav"
+    },
+    {
+      "key": "F05_b8efdff3416d80a03ef4fd56b4929d3b",
+      "profile": "F05",
+      "text": "A camp cook is banging a pan as infected shapes approach the fire. Someone must keep them outside the camp.",
+      "file": "F05_b8efdff3416d80a03ef4fd56b4929d3b.wav"
+    },
+    {
+      "key": "F05_378d3b6d891503b47f3785de98aababc",
+      "profile": "F05",
+      "text": "A cautious broker offers a sealed box of shotgun shells. He will only trade in the open.",
+      "file": "F05_378d3b6d891503b47f3785de98aababc.wav"
+    },
+    {
+      "key": "F05_f3b743efa6c127c7cb2433170549e72a",
+      "profile": "F05",
+      "text": "A cook is offering preserved meals in exchange for clean water.",
+      "file": "F05_f3b743efa6c127c7cb2433170549e72a.wav"
+    },
+    {
+      "key": "F05_3fcd86623802c23abefbbc12532df6d6",
+      "profile": "F05",
+      "text": "A dehydrated courier is hiding beneath a torn awning. Her sealed satchel is marked for a clinic.",
+      "file": "F05_3fcd86623802c23abefbbc12532df6d6.wav"
+    },
+    {
+      "key": "F05_47f6f6d7cfafce9ce5246de60c8ad720",
+      "profile": "F05",
+      "text": "A delivery driver is losing a refrigerator full of medicine. The cooling unit has seized.",
+      "file": "F05_47f6f6d7cfafce9ce5246de60c8ad720.wav"
+    },
+    {
+      "key": "F05_9dd0a508d2575a59cc8488347746c4ee",
+      "profile": "F05",
+      "text": "A distress loop plays from a receiver. No one answers your calls, but fresh bootprints surround the station.",
+      "file": "F05_9dd0a508d2575a59cc8488347746c4ee.wav"
+    },
+    {
+      "key": "F05_e09feab7bb47c18ba9b3b2359f21728b",
+      "profile": "F05",
+      "text": "A fallen cable spits light into rainwater. The cutoff box is reachable from the dry shoulder.",
+      "file": "F05_e09feab7bb47c18ba9b3b2359f21728b.wav"
+    },
+    {
+      "key": "F05_1edbd66054f0107fc6b3a34645f49cc5",
+      "profile": "F05",
+      "text": "A few hours until daylight. We can manage.",
+      "file": "F05_1edbd66054f0107fc6b3a34645f49cc5.wav"
+    },
+    {
+      "key": "F05_f5de373c4041cd5233f48ac18812cc0a",
+      "profile": "F05",
+      "text": "A furniture delivery has scattered sealed tool packs along the verge. A collector is sorting what survived.",
+      "file": "F05_f5de373c4041cd5233f48ac18812cc0a.wav"
+    },
+    {
+      "key": "F05_fd9e1bfc51547d1e2a728ccfdec24f78",
+      "profile": "F05",
+      "text": "A garden would make this place feel like home.",
+      "file": "F05_fd9e1bfc51547d1e2a728ccfdec24f78.wav"
+    },
+    {
+      "key": "F05_e231532279862988856ab3ae79789fc4",
+      "profile": "F05",
+      "text": "A hand-painted sign promises clean water, but the roadside pump has fallen silent.",
+      "file": "F05_e231532279862988856ab3ae79789fc4.wav"
+    },
+    {
+      "key": "F05_f7325eea76b24f1f296431d25ab2d98c",
+      "profile": "F05",
+      "text": "A lantern-lit medical seller has opened for the graveyard shift. No names, no questions.",
+      "file": "F05_f7325eea76b24f1f296431d25ab2d98c.wav"
+    },
+    {
+      "key": "F05_91b7571928a652d0058ddfc88fcdbaf9",
+      "profile": "F05",
+      "text": "A locksmith trades carefully made picks from a roll of tools spread across his bonnet.",
+      "file": "F05_91b7571928a652d0058ddfc88fcdbaf9.wav"
+    },
+    {
+      "key": "F05_04ba5d41ce846ef26fcb9cfe3f2167db",
+      "profile": "F05",
+      "text": "A lone traveler has put a candle on an unopened ration. Today would have been his daughter's birthday.",
+      "file": "F05_04ba5d41ce846ef26fcb9cfe3f2167db.wav"
+    },
+    {
+      "key": "F05_2b238ee9a09e34826a5407447c2e157e",
+      "profile": "F05",
+      "text": "A mechanic has exposed an engine block. The remaining parts will take patience to separate.",
+      "file": "F05_2b238ee9a09e34826a5407447c2e157e.wav"
+    },
+    {
+      "key": "F05_96bd5746efb94a059ecc5ea65331e759",
+      "profile": "F05",
+      "text": "A motel guest escaped through a window but cannot get past the infected on the access road.",
+      "file": "F05_96bd5746efb94a059ecc5ea65331e759.wav"
+    },
+    {
+      "key": "F05_45664e2272103160b6d0b3ebe8669ff7",
+      "profile": "F05",
+      "text": "A pair of boots sits beside a freshly filled grave. A friend is waiting for the courage to leave.",
+      "file": "F05_45664e2272103160b6d0b3ebe8669ff7.wav"
+    },
+    {
+      "key": "F05_bfc4edeb52ce863cf25c3923107ad421",
+      "profile": "F05",
+      "text": "A receiver repeats groups of numbers under a wash of static. Holding the frequency may reveal the whole message.",
+      "file": "F05_bfc4edeb52ce863cf25c3923107ad421.wav"
+    },
+    {
+      "key": "F05_a9c525787213825aad12b2d8c6c38bc3",
+      "profile": "F05",
+      "text": "A repair caravan has run out of usable metal. Its quartermaster is paying for scrap.",
+      "file": "F05_a9c525787213825aad12b2d8c6c38bc3.wav"
+    },
+    {
+      "key": "F05_f2596af58c1f5b29cc9c8751a62930ce",
+      "profile": "F05",
+      "text": "A roadside medic has a patient on a folding cot and nothing left to stop the bleeding.",
+      "file": "F05_f2596af58c1f5b29cc9c8751a62930ce.wav"
+    },
+    {
+      "key": "F05_3282c2d850b865ccecbc8ac531ee2a65",
+      "profile": "F05",
+      "text": "A runner is balancing on a wreck while rabid dogs circle below.",
+      "file": "F05_3282c2d850b865ccecbc8ac531ee2a65.wav"
+    },
+    {
+      "key": "F05_64947f5154a8bbd2301d6c83f8568c2c",
+      "profile": "F05",
+      "text": "A ruptured chemical drum is leaking across the verge. A warning lamp marks the contaminated ground.",
+      "file": "F05_64947f5154a8bbd2301d6c83f8568c2c.wav"
+    },
+    {
+      "key": "F05_e7b4d1744ab98d2e88386b9b287b9ba8",
+      "profile": "F05",
+      "text": "A scavenger has jacked up a van on timber blocks. A broken bracket is all that keeps him here.",
+      "file": "F05_e7b4d1744ab98d2e88386b9b287b9ba8.wav"
+    },
+    {
+      "key": "F05_6468be78b687cedcadb8126d9c98e6ec",
+      "profile": "F05",
+      "text": "A scout is trapped behind a makeshift barricade. The guards are close enough to hear a raised voice.",
+      "file": "F05_6468be78b687cedcadb8126d9c98e6ec.wav"
+    },
+    {
+      "key": "F05_89cf90380c66916645935645d4712b31",
+      "profile": "F05",
+      "text": "A seat and a roof. We're moving up in the world.",
+      "file": "F05_89cf90380c66916645935645d4712b31.wav"
+    },
+    {
+      "key": "F05_0d41cd365093dd0967b9c4c28518648c",
+      "profile": "F05",
+      "text": "A stack of supply drums has begun to smoke. Clean water could cool the hottest one before it ruptures.",
+      "file": "F05_0d41cd365093dd0967b9c4c28518648c.wav"
+    },
+    {
+      "key": "F05_d0ea2bd063eff096aade442399632147",
+      "profile": "F05",
+      "text": "A stargazer has set up an improvised observation station. She asks you to keep watch during a brief recording.",
+      "file": "F05_d0ea2bd063eff096aade442399632147.wav"
+    },
+    {
+      "key": "F05_cf11e657ac603b61f922b3f4d3b24d4e",
+      "profile": "F05",
+      "text": "A stranded passenger refuses to spend another night beside the dead bus.",
+      "file": "F05_cf11e657ac603b61f922b3f4d3b24d4e.wav"
+    },
+    {
+      "key": "F05_019f3f3cfee567ad1ae172a9d7c3930d",
+      "profile": "F05",
+      "text": "A supply convoy is retreating behind a barricade. Raiders are searching for a weak point.",
+      "file": "F05_019f3f3cfee567ad1ae172a9d7c3930d.wav"
+    },
+    {
+      "key": "F05_e8f8be0599affca5c230082e7c1d6568",
+      "profile": "F05",
+      "text": "A surveyor has lost her bearings in the fog. She needs someone to walk her to the next road marker.",
+      "file": "F05_e8f8be0599affca5c230082e7c1d6568.wav"
+    },
+    {
+      "key": "F05_408ada9aca957e62266cbf5904d6db44",
+      "profile": "F05",
+      "text": "A technician is pinned behind collapsed equipment. Infected workers are drawn to his calls.",
+      "file": "F05_408ada9aca957e62266cbf5904d6db44.wav"
+    },
+    {
+      "key": "F05_35afe78696756846a044420a11838e01",
+      "profile": "F05",
+      "text": "A traveler points out a feeding ground. The largest dogs have been stalking this road for days.",
+      "file": "F05_35afe78696756846a044420a11838e01.wav"
+    },
+    {
+      "key": "F05_6deb6d430725e3250ce5ad5512a30647",
+      "profile": "F05",
+      "text": "A volunteer is counting travelers for the settlements. He asks you to watch the road while he repairs his tally board.",
+      "file": "F05_6deb6d430725e3250ce5ad5512a30647.wav"
+    },
+    {
+      "key": "F05_f1db4fa078e589546b21bee3ca533508",
+      "profile": "F05",
+      "text": "A water carrier says the emergency filter has clogged. The last clean bottles are reserved for children.",
+      "file": "F05_f1db4fa078e589546b21bee3ca533508.wav"
+    },
+    {
+      "key": "F05_c551e3773396b7f30121a42f465a3992",
+      "profile": "F05",
+      "text": "A weather instrument has landed in the ditch. Its recorder still has enough power for one download.",
+      "file": "F05_c551e3773396b7f30121a42f465a3992.wav"
+    },
+    {
+      "key": "F05_dfd457e77585d88216b24f94843801fc",
+      "profile": "F05",
+      "text": "A whistle sounds twice beyond a deserted campsite. Something moves in the brush.",
+      "file": "F05_dfd457e77585d88216b24f94843801fc.wav"
+    },
+    {
+      "key": "F05_74459642378aacfd87ec25872b7c5b3a",
+      "profile": "F05",
+      "text": "A wreck has its cargo lid propped open. The neatly arranged supplies look untouched.",
+      "file": "F05_74459642378aacfd87ec25872b7c5b3a.wav"
+    },
+    {
+      "key": "F05_2396e5d3a7d95cf0b7d906d1c37a9900",
+      "profile": "F05",
+      "text": "Always jobs to do around here.",
+      "file": "F05_2396e5d3a7d95cf0b7d906d1c37a9900.wav"
+    },
+    {
+      "key": "F05_c3a8cd6cbc1dbdc48083b193d58b08e2",
+      "profile": "F05",
+      "text": "An injured traveler can walk, but only slowly. The next safe pull-off is a short distance down the road.",
+      "file": "F05_c3a8cd6cbc1dbdc48083b193d58b08e2.wav"
+    },
+    {
+      "key": "F05_17daf44a63bebc7eb1c743c3e1d9c431",
+      "profile": "F05",
+      "text": "An isolated relay repeats a distress fragment. A technician points to a burned contactor.",
+      "file": "F05_17daf44a63bebc7eb1c743c3e1d9c431.wav"
+    },
+    {
+      "key": "F05_9d447a1c5166406c6d9cd3fb201b759d",
+      "profile": "F05",
+      "text": "An old roadside shelter has folded over its supply chest. The frame must be lifted clear.",
+      "file": "F05_9d447a1c5166406c6d9cd3fb201b759d.wav"
+    },
+    {
+      "key": "F05_426b410a17871d73fa034dd5fbfa440d",
+      "profile": "F05",
+      "text": "Armed collectors demand a road fee. Their barricade does not actually block the whole road.",
+      "file": "F05_426b410a17871d73fa034dd5fbfa440d.wav"
+    },
+    {
+      "key": "F05_6c813f135b8726493648d2f6e2b9a0e6",
+      "profile": "F05",
+      "text": "Been patching that same coat for years.",
+      "file": "F05_6c813f135b8726493648d2f6e2b9a0e6.wav"
+    },
+    {
+      "key": "F05_92621e3c1e1514c902ed5473e986f3d0",
+      "profile": "F05",
+      "text": "Blue tape marks a locked evidence case beneath an abandoned roadside checkpoint.",
+      "file": "F05_92621e3c1e1514c902ed5473e986f3d0.wav"
+    },
+    {
+      "key": "F05_5a5ea3210891e034b2d61f6df9b5f67a",
+      "profile": "F05",
+      "text": "Bring back supplies and we'll make it worth your while.",
+      "file": "F05_5a5ea3210891e034b2d61f6df9b5f67a.wav"
+    },
+    {
+      "key": "F05_87765b9bd4d6f8b9dec240e183042c51",
+      "profile": "F05",
+      "text": "Bring water to a settlement quartermaster.",
+      "file": "F05_87765b9bd4d6f8b9dec240e183042c51.wav"
+    },
+    {
+      "key": "F05_320ae35a92f7ada530fa2288759b1f41",
+      "profile": "F05",
+      "text": "Buying or selling? I can do either.",
+      "file": "F05_320ae35a92f7ada530fa2288759b1f41.wav"
+    },
+    {
+      "key": "F05_61cba8cfb92640b1caa7c1d57714cc38",
+      "profile": "F05",
+      "text": "Can't get a shot from here!",
+      "file": "F05_61cba8cfb92640b1caa7c1d57714cc38.wav"
+    },
+    {
+      "key": "F05_9b82839434c48c6d27ba15845349815a",
+      "profile": "F05",
+      "text": "Can't see much out there. Listen carefully.",
+      "file": "F05_9b82839434c48c6d27ba15845349815a.wav"
+    },
+    {
+      "key": "F05_5b01f6a814797e8450f8ab4c4a25c8d3",
+      "profile": "F05",
+      "text": "Changing mags!",
+      "file": "F05_5b01f6a814797e8450f8ab4c4a25c8d3.wav"
+    },
+    {
+      "key": "F05_93a12f1b394c78f0e63b90ff302fd508",
+      "profile": "F05",
+      "text": "Check behind that cover!",
+      "file": "F05_93a12f1b394c78f0e63b90ff302fd508.wav"
+    },
+    {
+      "key": "F05_263979d7f26c667bf8af0c6e0b81bfb3",
+      "profile": "F05",
+      "text": "Check the corners. I'll check the windows.",
+      "file": "F05_263979d7f26c667bf8af0c6e0b81bfb3.wav"
+    },
+    {
+      "key": "F05_fa25770feabeef648f500a02d9909359",
+      "profile": "F05",
+      "text": "Clean water and clean bandages. Can't have too many.",
+      "file": "F05_fa25770feabeef648f500a02d9909359.wav"
+    },
+    {
+      "key": "F05_347ca364e788f2bf0248ac225fa12e04",
+      "profile": "F05",
+      "text": "Clear threats from the settlement approaches.",
+      "file": "F05_347ca364e788f2bf0248ac225fa12e04.wav"
+    },
+    {
+      "key": "F05_1531c09153ab7820d63f4f084f834aa5",
+      "profile": "F05",
+      "text": "Clothes and luggage lie in a careful line along the verge. The figures beyond them have stopped moving.",
+      "file": "F05_1531c09153ab7820d63f4f084f834aa5.wav"
+    },
+    {
+      "key": "F05_7944a876e0f182b77b951edb5a09e4f9",
+      "profile": "F05",
+      "text": "Come on! Show yourself!",
+      "file": "F05_7944a876e0f182b77b951edb5a09e4f9.wav"
+    },
+    {
+      "key": "F05_45cd74d3931346a9c42eb721ee1a02ab",
+      "profile": "F05",
+      "text": "Contact! Stay behind something solid!",
+      "file": "F05_45cd74d3931346a9c42eb721ee1a02ab.wav"
+    },
+    {
+      "key": "F05_1714cf881737b43ba318764af6b922f3",
+      "profile": "F05",
+      "text": "Don't give them room!",
+      "file": "F05_1714cf881737b43ba318764af6b922f3.wav"
+    },
+    {
+      "key": "F05_82a81a411ae5fe814b894268efbed3f4",
+      "profile": "F05",
+      "text": "Don't need it yourself? Somebody else probably does.",
+      "file": "F05_82a81a411ae5fe814b894268efbed3f4.wav"
+    },
+    {
+      "key": "F05_794c514d4d2ac0d9aa594e9f07c06b8a",
+      "profile": "F05",
+      "text": "Don't rush them. Make them come to us!",
+      "file": "F05_794c514d4d2ac0d9aa594e9f07c06b8a.wav"
+    },
+    {
+      "key": "F05_e34d60a20076588ddb9b57043f079bde",
+      "profile": "F05",
+      "text": "Exchange credits and Canadian dollars here. The displayed live rate includes our spread.",
+      "file": "F05_e34d60a20076588ddb9b57043f079bde.wav"
+    },
+    {
+      "key": "F05_9a5579982ba9432dad245d787d0f1699",
+      "profile": "F05",
+      "text": "Find a radio and make contact with a medic.",
+      "file": "F05_9a5579982ba9432dad245d787d0f1699.wav"
+    },
+    {
+      "key": "F05_64bbcc52068b23168a4de22b418a5207",
+      "profile": "F05",
+      "text": "Find cover! Protect the town!",
+      "file": "F05_64bbcc52068b23168a4de22b418a5207.wav"
+    },
+    {
+      "key": "F05_5d4fc54ec1e9f0f51e7b503927abf152",
+      "profile": "F05",
+      "text": "Find the diner and replenish settlement rations.",
+      "file": "F05_5d4fc54ec1e9f0f51e7b503927abf152.wav"
+    },
+    {
+      "key": "F05_36b93d15e6afa96b75a79ed13d2bd509",
+      "profile": "F05",
+      "text": "Finish a final patrol for the settlement network.",
+      "file": "F05_36b93d15e6afa96b75a79ed13d2bd509.wav"
+    },
+    {
+      "key": "F05_44505eeb7cf94253cb4370804e828fbf",
+      "profile": "F05",
+      "text": "Funny what survives. Street signs outlasted the country.",
+      "file": "F05_44505eeb7cf94253cb4370804e828fbf.wav"
+    },
+    {
+      "key": "F05_7bb2330ecd48ff6d35f688046de86f6a",
+      "profile": "F05",
+      "text": "Get down! Get down!",
+      "file": "F05_7bb2330ecd48ff6d35f688046de86f6a.wav"
+    },
+    {
+      "key": "F05_a6aa6bfea15b7332c4dd80591866ad67",
+      "profile": "F05",
+      "text": "Good to see another living face.",
+      "file": "F05_a6aa6bfea15b7332c4dd80591866ad67.wav"
+    },
+    {
+      "key": "F05_e0a2374fb63873e86b5c55b71aceba8e",
+      "profile": "F05",
+      "text": "Got to keep busy. Helps with everything else.",
+      "file": "F05_e0a2374fb63873e86b5c55b71aceba8e.wav"
+    },
+    {
+      "key": "F05_1091f34934d5491ee8a72ee05bc4becd",
+      "profile": "F05",
+      "text": "Have a look. Something here might keep you alive.",
+      "file": "F05_1091f34934d5491ee8a72ee05bc4becd.wav"
+    },
+    {
+      "key": "F05_306c6ea66797f7070826bf9098bd15f4",
+      "profile": "F05",
+      "text": "Hold that corner!",
+      "file": "F05_306c6ea66797f7070826bf9098bd15f4.wav"
+    },
+    {
+      "key": "F05_22905fdc3eed8a2170c7227af9183551",
+      "profile": "F05",
+      "text": "Hostile in town! Take cover!",
+      "file": "F05_22905fdc3eed8a2170c7227af9183551.wav"
+    },
+    {
+      "key": "F05_eb14c570664d9118501fc335f3db9a0d",
+      "profile": "F05",
+      "text": "I am hit. Give me a moment!",
+      "file": "F05_eb14c570664d9118501fc335f3db9a0d.wav"
+    },
+    {
+      "key": "F05_f52b66b524557c9b68e58127ab0b6eb6",
+      "profile": "F05",
+      "text": "I know you're still here!",
+      "file": "F05_f52b66b524557c9b68e58127ab0b6eb6.wav"
+    },
+    {
+      "key": "F05_b6e0b1400f42856b0ee8b649369a7f35",
+      "profile": "F05",
+      "text": "I miss hearing somebody mow their lawn.",
+      "file": "F05_b6e0b1400f42856b0ee8b649369a7f35.wav"
+    },
+    {
+      "key": "F05_b335ad3218e845e856fd75490e740ab2",
+      "profile": "F05",
+      "text": "I still catch myself checking the mailbox.",
+      "file": "F05_b335ad3218e845e856fd75490e740ab2.wav"
+    },
+    {
+      "key": "F05_654c15db366aa3b0e9048b706f133eb2",
+      "profile": "F05",
+      "text": "I used to live north of here.",
+      "file": "F05_654c15db366aa3b0e9048b706f133eb2.wav"
+    },
+    {
+      "key": "F05_08b44daab206c1308e82c977e75b987d",
+      "profile": "F05",
+      "text": "I'd rather walk with you than sit worrying at home.",
+      "file": "F05_08b44daab206c1308e82c977e75b987d.wav"
+    },
+    {
+      "key": "F05_1d54613c29d4ec0fec9551bb3a216a98",
+      "profile": "F05",
+      "text": "I'll keep an eye out through the window.",
+      "file": "F05_1d54613c29d4ec0fec9551bb3a216a98.wav"
+    },
+    {
+      "key": "F05_56777c8d042cd4568236fd639ff01cdf",
+      "profile": "F05",
+      "text": "I'll watch our backs. You pick the route.",
+      "file": "F05_56777c8d042cd4568236fd639ff01cdf.wav"
+    },
+    {
+      "key": "F05_ca28dba79f7e8c819f5a02df83905268",
+      "profile": "F05",
+      "text": "I'm bleeding. Could use a moment.",
+      "file": "F05_ca28dba79f7e8c819f5a02df83905268.wav"
+    },
+    {
+      "key": "F05_7cc1a88e1aac392998e056b5cdfa43ea",
+      "profile": "F05",
+      "text": "I'm here. Finish what we started.",
+      "file": "F05_7cc1a88e1aac392998e056b5cdfa43ea.wav"
+    },
+    {
+      "key": "F05_9115a7689ca10189fd441794a03093b5",
+      "profile": "F05",
+      "text": "I'm saving up for a proper pair of boots.",
+      "file": "F05_9115a7689ca10189fd441794a03093b5.wav"
+    },
+    {
+      "key": "F05_983ca6cf509836819bd7e6bbbd470286",
+      "profile": "F05",
+      "text": "I've got this angle. Watch your side!",
+      "file": "F05_983ca6cf509836819bd7e6bbbd470286.wav"
+    },
+    {
+      "key": "F05_44101f14fb85cae66ceaf69988c92904",
+      "profile": "F05",
+      "text": "If a hinge squeaks, oil it. Don't wake the whole street.",
+      "file": "F05_44101f14fb85cae66ceaf69988c92904.wav"
+    },
+    {
+      "key": "F05_2f85495ff8f3b16364b3d4ac3674ec94",
+      "profile": "F05",
+      "text": "If we find coffee, I'm calling that a victory.",
+      "file": "F05_2f85495ff8f3b16364b3d4ac3674ec94.wav"
+    },
+    {
+      "key": "F05_2120dd58a70094e810bb9062801911b3",
+      "profile": "F05",
+      "text": "If you find seeds out there, don't throw them away.",
+      "file": "F05_2120dd58a70094e810bb9062801911b3.wav"
+    },
+    {
+      "key": "F05_1da6b0c86f3ab91bea59b99b903d1be7",
+      "profile": "F05",
+      "text": "If you're hurt, come see me before it gets worse.",
+      "file": "F05_1da6b0c86f3ab91bea59b99b903d1be7.wav"
+    },
+    {
+      "key": "F05_13ae647a7e4b446cc75787bfd8d790f1",
+      "profile": "F05",
+      "text": "Infected workers keep returning to the same maintenance stop. A scavenger offers a bounty for clearing it.",
+      "file": "F05_13ae647a7e4b446cc75787bfd8d790f1.wav"
+    },
+    {
+      "key": "F05_ca109bfeeced77fb8909b64e4ed497d3",
+      "profile": "F05",
+      "text": "Investigate the motel and clear the nearby threats.",
+      "file": "F05_ca109bfeeced77fb8909b64e4ed497d3.wav"
+    },
+    {
+      "key": "F05_4f826cedba0fca1ed6b09d734542c17c",
+      "profile": "F05",
+      "text": "Keep a little water in reserve. Learned that the hard way.",
+      "file": "F05_4f826cedba0fca1ed6b09d734542c17c.wav"
+    },
+    {
+      "key": "F05_a280ce0bb89c0107d439eab686c339b8",
+      "profile": "F05",
+      "text": "Keep looking. They're close.",
+      "file": "F05_a280ce0bb89c0107d439eab686c339b8.wav"
+    },
+    {
+      "key": "F05_21bf461c43bbd2565015be7a55c9c441",
+      "profile": "F05",
+      "text": "Keep that wound clean. Dirt's as dangerous as bullets.",
+      "file": "F05_21bf461c43bbd2565015be7a55c9c441.wav"
+    },
+    {
+      "key": "F05_45011a1159396607e732e562ebe2677e",
+      "profile": "F05",
+      "text": "Keep them pinned down!",
+      "file": "F05_45011a1159396607e732e562ebe2677e.wav"
+    },
+    {
+      "key": "F05_89cb2246c732df20ce97f6f8e750cc69",
+      "profile": "F05",
+      "text": "Keep your head down. I'm here!",
+      "file": "F05_89cb2246c732df20ce97f6f8e750cc69.wav"
+    },
+    {
+      "key": "F05_8a4eeb1ee44e85d9b96af5af5ee40923",
+      "profile": "F05",
+      "text": "Leave your goods with us. Collect the proceeds when they sell.",
+      "file": "F05_8a4eeb1ee44e85d9b96af5af5ee40923.wav"
+    },
+    {
+      "key": "F05_497874d7a986409f41c722ed122dac17",
+      "profile": "F05",
+      "text": "Let me know if you need a breather.",
+      "file": "F05_497874d7a986409f41c722ed122dac17.wav"
+    },
+    {
+      "key": "F05_b42119f65122833c8760521d5362482b",
+      "profile": "F05",
+      "text": "Let us go over the settlement accounts.",
+      "file": "F05_b42119f65122833c8760521d5362482b.wav"
+    },
+    {
+      "key": "F05_ad8dbdf2fdd23cc633a57d5ec759740f",
+      "profile": "F05",
+      "text": "Locate medical stock and replenish the clinic.",
+      "file": "F05_ad8dbdf2fdd23cc633a57d5ec759740f.wav"
+    },
+    {
+      "key": "F05_b3707246319958253367243bd4e85372",
+      "profile": "F05",
+      "text": "Looking for work? We have contracts.",
+      "file": "F05_b3707246319958253367243bd4e85372.wav"
+    },
+    {
+      "key": "F05_cbf6a97c43f7556b2d4d5fdcc8e01120",
+      "profile": "F05",
+      "text": "Men wearing borrowed medical bands demand payment for a nonexistent inspection.",
+      "file": "F05_cbf6a97c43f7556b2d4d5fdcc8e01120.wav"
+    },
+    {
+      "key": "F05_6388c6863b1c357beed73145f31192d0",
+      "profile": "F05",
+      "text": "Morning or night, there's always something to mend.",
+      "file": "F05_6388c6863b1c357beed73145f31192d0.wav"
+    },
+    {
+      "key": "F05_ec585771aac5bc8fafa5093250ebb7ff",
+      "profile": "F05",
+      "text": "Moving up! Cover me!",
+      "file": "F05_ec585771aac5bc8fafa5093250ebb7ff.wav"
+    },
+    {
+      "key": "F05_8667ec29affd0f762c389009a4dc6312",
+      "profile": "F05",
+      "text": "Names are scratched into scraps of tin. A caretaker asks you to stay for a moment while he reads them.",
+      "file": "F05_8667ec29affd0f762c389009a4dc6312.wav"
+    },
+    {
+      "key": "F05_f595a45aa5c00e6237f350946c4eeed2",
+      "profile": "F05",
+      "text": "Need a second! Cover me!",
+      "file": "F05_f595a45aa5c00e6237f350946c4eeed2.wav"
+    },
+    {
+      "key": "F05_277b106559996d381a36fadc55997ffd",
+      "profile": "F05",
+      "text": "Need another pair of hands?",
+      "file": "F05_277b106559996d381a36fadc55997ffd.wav"
+    },
+    {
+      "key": "F05_39ee7967719b83044c66cc2c2fba24f2",
+      "profile": "F05",
+      "text": "Need work? Take a look at the contracts.",
+      "file": "F05_39ee7967719b83044c66cc2c2fba24f2.wav"
+    },
+    {
+      "key": "F05_a196bb79ca12a9cd712d924f4764fdd5",
+      "profile": "F05",
+      "text": "Never liked walking these roads after dark.",
+      "file": "F05_a196bb79ca12a9cd712d924f4764fdd5.wav"
+    },
+    {
+      "key": "F05_4009a9f8c931d31adbfbc304d6175682",
+      "profile": "F05",
+      "text": "Never thought I'd miss paying rent.",
+      "file": "F05_4009a9f8c931d31adbfbc304d6175682.wav"
+    },
+    {
+      "key": "F05_4e143f9e27ade6b1800b71cc5501ace4",
+      "profile": "F05",
+      "text": "Next roof we find, let's take a minute.",
+      "file": "F05_4e143f9e27ade6b1800b71cc5501ace4.wav"
+    },
+    {
+      "key": "F05_b001d32fbbe3c73bc381f0df66ce5169",
+      "profile": "F05",
+      "text": "Nice to let something else do the walking.",
+      "file": "F05_b001d32fbbe3c73bc381f0df66ce5169.wav"
+    },
+    {
+      "key": "F05_f3017399b9d7f9af22299f78e564cd94",
+      "profile": "F05",
+      "text": "Nobody here gets through this alone.",
+      "file": "F05_f3017399b9d7f9af22299f78e564cd94.wav"
+    },
+    {
+      "key": "F05_8c920e14b1e86a7175e3d847da29b2fe",
+      "profile": "F05",
+      "text": "One decent meal and a dry bed. That's the dream.",
+      "file": "F05_8c920e14b1e86a7175e3d847da29b2fe.wav"
+    },
+    {
+      "key": "F05_e93ad42b18c46e6adab4f250f9cb15c9",
+      "profile": "F05",
+      "text": "Over here. Could use a hand.",
+      "file": "F05_e93ad42b18c46e6adab4f250f9cb15c9.wav"
+    },
+    {
+      "key": "F05_06817ca7b958f4c823f5b040142673f8",
+      "profile": "F05",
+      "text": "Over here. I cannot stop the bleeding.",
+      "file": "F05_06817ca7b958f4c823f5b040142673f8.wav"
+    },
+    {
+      "key": "F05_61536b724df74eb6110be8d45d6fccd7",
+      "profile": "F05",
+      "text": "Picked a bad place to wander!",
+      "file": "F05_61536b724df74eb6110be8d45d6fccd7.wav"
+    },
+    {
+      "key": "F05_cccb81f303ed23c8f686255d9edbf7e2",
+      "profile": "F05",
+      "text": "Plenty to see around here. Take your time.",
+      "file": "F05_cccb81f303ed23c8f686255d9edbf7e2.wav"
+    },
+    {
+      "key": "F05_51c75d0afd38d19c5e6978be0edb3bca",
+      "profile": "F05",
+      "text": "Raiders watch the roads. Dogs hunt by sound. The pale mannequins move when nobody watches. Bring someone you trust, and never stand beside a fuel pump in a firefight.",
+      "file": "F05_51c75d0afd38d19c5e6978be0edb3bca.wav"
+    },
+    {
+      "key": "F05_0c29978ec9453c2aab4c395acd0251f3",
+      "profile": "F05",
+      "text": "Rain is coming. I can feel it.",
+      "file": "F05_0c29978ec9453c2aab4c395acd0251f3.wav"
+    },
+    {
+      "key": "F05_715a1384bd79f64d16abd1f4435554d3",
+      "profile": "F05",
+      "text": "Rain's covering our footsteps. Their footsteps too.",
+      "file": "F05_715a1384bd79f64d16abd1f4435554d3.wav"
+    },
+    {
+      "key": "F05_5597efc18b4620de0b2391fba03e1ae7",
+      "profile": "F05",
+      "text": "Rainwater has drowned a camp generator. Its owner has disconnected it, but needs help rebuilding the starter.",
+      "file": "F05_5597efc18b4620de0b2391fba03e1ae7.wav"
+    },
+    {
+      "key": "F05_2d538eb01390f4f986ca9c3b180bd924",
+      "profile": "F05",
+      "text": "Recruit a survivor and show them the bunker.",
+      "file": "F05_2d538eb01390f4f986ca9c3b180bd924.wav"
+    },
+    {
+      "key": "F05_52a275cd79f3036633f2c4aba9f33b54",
+      "profile": "F05",
+      "text": "Reloading! Keep them back!",
+      "file": "F05_52a275cd79f3036633f2c4aba9f33b54.wav"
+    },
+    {
+      "key": "F05_c56c608989c041dd17404ee446ae381b",
+      "profile": "F05",
+      "text": "Restore the shelter workshop.",
+      "file": "F05_c56c608989c041dd17404ee446ae381b.wav"
+    },
+    {
+      "key": "F05_a0d5901e1669371025ff160301c5e256",
+      "profile": "F05",
+      "text": "Runoff has stripped the soil from a sealed supply drum. Its latch is packed with rust.",
+      "file": "F05_a0d5901e1669371025ff160301c5e256.wav"
+    },
+    {
+      "key": "F05_24579fdc88a291cd4c2913f2fa169c0b",
+      "profile": "F05",
+      "text": "Six active contracts at a time. Deliver supplies here, and return when your work is finished.",
+      "file": "F05_24579fdc88a291cd4c2913f2fa169c0b.wav"
+    },
+    {
+      "key": "F05_208c26d64f94b9463455488d6bf6c762",
+      "profile": "F05",
+      "text": "So much for keeping my socks dry.",
+      "file": "F05_208c26d64f94b9463455488d6bf6c762.wav"
+    },
+    {
+      "key": "F05_5e110ec140466f67ec07ecd2a4cb0925",
+      "profile": "F05",
+      "text": "Someone fixed the water pump.",
+      "file": "F05_5e110ec140466f67ec07ecd2a4cb0925.wav"
+    },
+    {
+      "key": "F05_560eb0d5ab90f357235f8f9a5bc94289",
+      "profile": "F05",
+      "text": "Someone ought to write all this down.",
+      "file": "F05_560eb0d5ab90f357235f8f9a5bc94289.wav"
+    },
+    {
+      "key": "F05_67cf4ea1c60c313fcd9457b7ae6f9a2c",
+      "profile": "F05",
+      "text": "Spent brass litters a lookout. Raiders have been firing on anyone crossing the next stretch.",
+      "file": "F05_67cf4ea1c60c313fcd9457b7ae6f9a2c.wav"
+    },
+    {
+      "key": "F05_21fb705c8bb629d19a512b6c807b690a",
+      "profile": "F05",
+      "text": "Stand back. This checkpoint is under alert.",
+      "file": "F05_21fb705c8bb629d19a512b6c807b690a.wav"
+    },
+    {
+      "key": "F05_12bc079fcf89240027b014478205af66",
+      "profile": "F05",
+      "text": "Stay away from the windows!",
+      "file": "F05_12bc079fcf89240027b014478205af66.wav"
+    },
+    {
+      "key": "F05_13ada153e4798758ebfb4226d1cbba3f",
+      "profile": "F05",
+      "text": "Stay close. We are not done yet.",
+      "file": "F05_13ada153e4798758ebfb4226d1cbba3f.wav"
+    },
+    {
+      "key": "F05_adac89b570f8942f67a8d20822ef7ce9",
+      "profile": "F05",
+      "text": "Stay sharp. I lost sight of them.",
+      "file": "F05_adac89b570f8942f67a8d20822ef7ce9.wav"
+    },
+    {
+      "key": "F05_ea52562994ac478160a7c512aebe68e7",
+      "profile": "F05",
+      "text": "Still fighting! Stay with me!",
+      "file": "F05_ea52562994ac478160a7c512aebe68e7.wav"
+    },
+    {
+      "key": "F05_0fcd00e83376cc7bae00117669dc81e2",
+      "profile": "F05",
+      "text": "Still standing. Barely.",
+      "file": "F05_0fcd00e83376cc7bae00117669dc81e2.wav"
+    },
+    {
+      "key": "F05_c226ffbc9e2bd4a17c7edcb4b63928bd",
+      "profile": "F05",
+      "text": "Still with you. Keep your eyes on the street.",
+      "file": "F05_c226ffbc9e2bd4a17c7edcb4b63928bd.wav"
+    },
+    {
+      "key": "F05_e16ee1032d65315fd146a2a821f06b92",
+      "profile": "F05",
+      "text": "Stranded walkers are shivering beside soaked bedrolls. They need food before continuing.",
+      "file": "F05_e16ee1032d65315fd146a2a821f06b92.wav"
+    },
+    {
+      "key": "F05_aebaaac1c720e850793197e042c92c28",
+      "profile": "F05",
+      "text": "Supplies for sale. Fair prices.",
+      "file": "F05_aebaaac1c720e850793197e042c92c28.wav"
+    },
+    {
+      "key": "F05_492282c39eeecef7a06b13996133b8af",
+      "profile": "F05",
+      "text": "Survey a fuel stop, then report to a warden.",
+      "file": "F05_492282c39eeecef7a06b13996133b8af.wav"
+    },
+    {
+      "key": "F05_fa4904e8964bfe904d78ba1770d3b4aa",
+      "profile": "F05",
+      "text": "Survey storage and recover repair material.",
+      "file": "F05_fa4904e8964bfe904d78ba1770d3b4aa.wav"
+    },
+    {
+      "key": "F05_cc1ccf1f163d678e14f08b01c6bf0d57",
+      "profile": "F05",
+      "text": "Take care on the roads, stranger.",
+      "file": "F05_cc1ccf1f163d678e14f08b01c6bf0d57.wav"
+    },
+    {
+      "key": "F05_7df26d5591a8e5c2dec26e53809f3164",
+      "profile": "F05",
+      "text": "Thank you. We will remember this.",
+      "file": "F05_7df26d5591a8e5c2dec26e53809f3164.wav"
+    },
+    {
+      "key": "F05_9e47ecb4e34487ebdeb8373d46d09916",
+      "profile": "F05",
+      "text": "That one got me. Don't go too far.",
+      "file": "F05_9e47ecb4e34487ebdeb8373d46d09916.wav"
+    },
+    {
+      "key": "F05_037280aab044e5cedb7a005d75d0d3e7",
+      "profile": "F05",
+      "text": "The clinic is open. Stay safe out there.",
+      "file": "F05_037280aab044e5cedb7a005d75d0d3e7.wav"
+    },
+    {
+      "key": "F05_cc7f581441f816de02327bcab65c7e62",
+      "profile": "F05",
+      "text": "The convoy you helped is on the air. They need a relay operator to acknowledge their arrival.",
+      "file": "F05_cc7f581441f816de02327bcab65c7e62.wav"
+    },
+    {
+      "key": "F05_780485a47da167f345a9b510d3462818",
+      "profile": "F05",
+      "text": "The courier you helped recognizes you. She has returned from the clinic with supplies to spare.",
+      "file": "F05_780485a47da167f345a9b510d3462818.wav"
+    },
+    {
+      "key": "F05_8ccb5fb3e6b071b1b034b7a8ef95e8a8",
+      "profile": "F05",
+      "text": "The medic you supplied is moving patients. The evacuation cannot leave until the road is clear.",
+      "file": "F05_8ccb5fb3e6b071b1b034b7a8ef95e8a8.wav"
+    },
+    {
+      "key": "F05_87a0394a0c2481e3599e5e7090ac8cbc",
+      "profile": "F05",
+      "text": "The pharmacy cabinet. Please take what you need.",
+      "file": "F05_87a0394a0c2481e3599e5e7090ac8cbc.wav"
+    },
+    {
+      "key": "F05_3cba9c4bf22a9b1357fa2623def4f1c1",
+      "profile": "F05",
+      "text": "The repaired relay is transmitting a convoy route. Its operator needs you to hold the perimeter until the burst finishes.",
+      "file": "F05_3cba9c4bf22a9b1357fa2623def4f1c1.wav"
+    },
+    {
+      "key": "F05_cc976d7d8a118ee26407e2a5ab26847d",
+      "profile": "F05",
+      "text": "The roads are quiet. Stay close, and watch the rooftops.",
+      "file": "F05_cc976d7d8a118ee26407e2a5ab26847d.wav"
+    },
+    {
+      "key": "F05_e6462e8e8ea3d83474fc6001982880f5",
+      "profile": "F05",
+      "text": "The scout you rescued left a trail mark and a cache exactly where promised.",
+      "file": "F05_e6462e8e8ea3d83474fc6001982880f5.wav"
+    },
+    {
+      "key": "F05_86e657893336788415ba82313d9adfc1",
+      "profile": "F05",
+      "text": "The shops take Canadian dollars. Try the exchange first.",
+      "file": "F05_86e657893336788415ba82313d9adfc1.wav"
+    },
+    {
+      "key": "F05_0a5f6cd41036bbf649ebcfb816af2b1b",
+      "profile": "F05",
+      "text": "The technician you rescued is ready to move his tools. He asks you to walk the exposed stretch with him.",
+      "file": "F05_0a5f6cd41036bbf649ebcfb816af2b1b.wav"
+    },
+    {
+      "key": "F05_c15fb9d0af42185b5484e48d693a3802",
+      "profile": "F05",
+      "text": "The wardens need the old shelter operational.",
+      "file": "F05_c15fb9d0af42185b5484e48d693a3802.wav"
+    },
+    {
+      "key": "F05_0a8f57e4183d1478a50b9e481615bd7e",
+      "profile": "F05",
+      "text": "Then we will find another way.",
+      "file": "F05_0a8f57e4183d1478a50b9e481615bd7e.wav"
+    },
+    {
+      "key": "F05_f94d82c1ef17348ce3ec6572f38e677d",
+      "profile": "F05",
+      "text": "There you are!",
+      "file": "F05_f94d82c1ef17348ce3ec6572f38e677d.wav"
+    },
+    {
+      "key": "F05_20df84e121f5d269722a4d81ec70a730",
+      "profile": "F05",
+      "text": "There! Keep shooting!",
+      "file": "F05_20df84e121f5d269722a4d81ec70a730.wav"
+    },
+    {
+      "key": "F05_425a8bb06345c472149130a8876f93ef",
+      "profile": "F05",
+      "text": "There's still good stuff out here. Just takes looking.",
+      "file": "F05_425a8bb06345c472149130a8876f93ef.wav"
+    },
+    {
+      "key": "F05_a836f2886d357fbe041d53384c63b51d",
+      "profile": "F05",
+      "text": "This is a waystation on the old road network. Wardens post work, merchants sell supplies, and drifters sometimes sign on. Shelter 01 has room for ten. Use your journal to follow a contract.",
+      "file": "F05_a836f2886d357fbe041d53384c63b51d.wav"
+    },
+    {
+      "key": "F05_a8bcfeeeedfd2fe97a6246159be69c35",
+      "profile": "F05",
+      "text": "Too much fire! Find cover!",
+      "file": "F05_a8bcfeeeedfd2fe97a6246159be69c35.wav"
+    },
+    {
+      "key": "F05_8cf7148b718655dc944a9f472fd7e4c8",
+      "profile": "F05",
+      "text": "Trouble! Get everyone inside!",
+      "file": "F05_8cf7148b718655dc944a9f472fd7e4c8.wav"
+    },
+    {
+      "key": "F05_8a9dced89f42e56e16c101425d88c787",
+      "profile": "F05",
+      "text": "Two exhausted walkers split an empty tin beside a dead cooking fire.",
+      "file": "F05_8a9dced89f42e56e16c101425d88c787.wav"
+    },
+    {
+      "key": "F05_8fa9f084c75bf791234cefc1145e421c",
+      "profile": "F05",
+      "text": "Used to complain about traffic. Imagine that.",
+      "file": "F05_8fa9f084c75bf791234cefc1145e421c.wav"
+    },
+    {
+      "key": "F05_aea621873c0c8404bf0ddea8db7d951e",
+      "profile": "F05",
+      "text": "Watch the exits!",
+      "file": "F05_aea621873c0c8404bf0ddea8db7d951e.wav"
+    },
+    {
+      "key": "F05_2afe01b9c8372855494e329c35fa9572",
+      "profile": "F05",
+      "text": "We came back for you. Keep moving!",
+      "file": "F05_2afe01b9c8372855494e329c35fa9572.wav"
+    },
+    {
+      "key": "F05_a04f05caa1d36f40e996a76588c53ccc",
+      "profile": "F05",
+      "text": "We can get through this. Keep moving!",
+      "file": "F05_a04f05caa1d36f40e996a76588c53ccc.wav"
+    },
+    {
+      "key": "F05_7f00faa40b67f4720b6608e77ef727d9",
+      "profile": "F05",
+      "text": "We should mark a way back before we go too far.",
+      "file": "F05_7f00faa40b67f4720b6608e77ef727d9.wav"
+    },
+    {
+      "key": "F05_f0f31e5be424013171e0887e83f1c335",
+      "profile": "F05",
+      "text": "We survive by looking after each other. What do you need?",
+      "file": "F05_f0f31e5be424013171e0887e83f1c335.wav"
+    },
+    {
+      "key": "F05_17361ec20c0e6f8de6c804dce7e094f2",
+      "profile": "F05",
+      "text": "Welcome to Toronto. Hope you enjoy your stay.",
+      "file": "F05_17361ec20c0e6f8de6c804dce7e094f2.wav"
+    },
+    {
+      "key": "F05_6246cf044d08585594f2cb6889bfa69c",
+      "profile": "F05",
+      "text": "Welcome to Toronto. Our northern supplies are made here, and we pay a premium for goods from the south. We buy and sell only in Canadian dollars. Visit Toronto Currency Exchange to convert your credits.",
+      "file": "F05_6246cf044d08585594f2cb6889bfa69c.wav"
+    },
+    {
+      "key": "F05_6ea29e5022f3d8eb6eadddf8bc579cff",
+      "profile": "F05",
+      "text": "Welcome to the Canadian checkpoint. Stay this side of the red line behind us. A permanent passport costs one million credits. Check your weapons and ammunition here before each visit; vehicle storage is inspected too. Collect everything on your return. Follow the north road to Toronto, three kilometres inland.",
+      "file": "F05_6ea29e5022f3d8eb6eadddf8bc579cff.wav"
+    },
+    {
+      "key": "F05_51afe4926a357da095f16f981e95f3ea",
+      "profile": "F05",
+      "text": "Where'd you go?",
+      "file": "F05_51afe4926a357da095f16f981e95f3ea.wav"
+    },
+    {
+      "key": "F05_b3707c8917615ebec6460b7261e5aa49",
+      "profile": "F05",
+      "text": "Who would you like to station here?",
+      "file": "F05_b3707c8917615ebec6460b7261e5aa49.wav"
+    },
+    {
+      "key": "F05_2667efa5ef9843cc8b8bdf73622fe9ea",
+      "profile": "F05",
+      "text": "Wish I knew a recipe that didn't start with a tin.",
+      "file": "F05_2667efa5ef9843cc8b8bdf73622fe9ea.wav"
+    },
+    {
+      "key": "F05_fcf668b1b00e1e151bb92ca683c81a2b",
+      "profile": "F05",
+      "text": "Would you sit with me a moment?",
+      "file": "F05_fcf668b1b00e1e151bb92ca683c81a2b.wav"
+    },
+    {
+      "key": "F05_0093ec2cea7f80169c854476a64fe75f",
+      "profile": "F05",
+      "text": "You cannot hide forever!",
+      "file": "F05_0093ec2cea7f80169c854476a64fe75f.wav"
+    },
+    {
+      "key": "F05_d1a8cbe9dd6d269c719e60588955e7ad",
+      "profile": "F05",
+      "text": "You learn to appreciate a quiet day.",
+      "file": "F05_d1a8cbe9dd6d269c719e60588955e7ad.wav"
+    },
+    {
+      "key": "F05_1255983cb5d038cf6546dc07a10d0c73",
+      "profile": "F05",
+      "text": "You picked the wrong fight!",
+      "file": "F05_1255983cb5d038cf6546dc07a10d0c73.wav"
+    },
+    {
+      "key": "F05_ae64a9f41090cbc9eecc20ce8a4b0e39",
+      "profile": "F05",
+      "text": "You picked the wrong people.",
+      "file": "F05_ae64a9f41090cbc9eecc20ce8a4b0e39.wav"
+    },
+    {
+      "key": "F05_c97b6bbf14668ab826c0b3c9a1fd3304",
+      "profile": "F05",
+      "text": "You're not walking out of this!",
+      "file": "F05_c97b6bbf14668ab826c0b3c9a1fd3304.wav"
+    },
+    {
+      "key": "M01_b6c9eb4613b023169a8472514586a4b1",
+      "profile": "M01",
+      "text": "6:00 AM. The generator has stopped rattling. For a moment, the silence feels like an answer.",
+      "file": "M01_b6c9eb4613b023169a8472514586a4b1.wav"
+    },
+    {
+      "key": "M01_f2e670de8898369f0157cf7ce07528a1",
+      "profile": "M01",
+      "text": "You dreamed of traffic. A kettle. Someone calling from another room. Above the concrete ceiling, none of it remains.",
+      "file": "M01_f2e670de8898369f0157cf7ce07528a1.wav"
+    },
+    {
+      "key": "M01_94f215d4cfa3875606223cc0259caef5",
+      "profile": "M01",
+      "text": "The emergency receiver is still on. You should try the dial again.",
+      "file": "M01_94f215d4cfa3875606223cc0259caef5.wav"
+    },
+    {
+      "key": "M01_0d9c85d4a62389945711b82e6a104b55",
+      "profile": "M01",
+      "text": "No station identification. No weather report. No one counting survivors. The last voice on this frequency promised another update tomorrow.",
+      "file": "M01_0d9c85d4a62389945711b82e6a104b55.wav"
+    },
+    {
+      "key": "M01_52430b8ce873cb753c83f3c95e5c35ae",
+      "profile": "M01",
+      "text": "Tomorrow has arrived without them. You open the shelter log and write: GOING OUTSIDE.",
+      "file": "M01_52430b8ce873cb753c83f3c95e5c35ae.wav"
+    },
+    {
+      "key": "F01_e31019961b30f3f2dfc598db185a33c5",
+      "profile": "F01",
+      "text": "They're not taking supplies. They're counting us. Jonah! Get everyone through the culvert!",
+      "file": "F01_e31019961b30f3f2dfc598db185a33c5.wav"
+    },
+    {
+      "key": "M03_2e3f07a9e0fa56ee14b024d990f985a2",
+      "profile": "M03",
+      "text": "Rusk asked for a contribution. You gave him a sermon. The medic comes with us. The rest of you can keep the ashes.",
+      "file": "M03_2e3f07a9e0fa56ee14b024d990f985a2.wav"
+    },
+    {
+      "key": "F01_4a4a9a639ac3c15beaf3c88b6da8ac46",
+      "profile": "F01",
+      "text": "Don't follow the truck into the fire! Help Jonah. Find the transfer lists. I'll leave you something to follow.",
+      "file": "F01_4a4a9a639ac3c15beaf3c88b6da8ac46.wav"
+    },
+    {
+      "key": "M01_304271a3f4d1ad08f2051a9e22332803",
+      "profile": "M01",
+      "text": "We have wounded under the bridge. Mara bought us a minute. Don't waste it trying to hold a house that's already gone.",
+      "file": "M01_304271a3f4d1ad08f2051a9e22332803.wav"
+    },
+    {
+      "key": "M01_457fc4b4a401f4adbcd75acf68054302",
+      "profile": "M01",
+      "text": "Alive: Jonah, Elsie, Tomas, Nia. Missing: Mara. The truck carried a clinic placard. St. Agnes still has trauma dressings. Bring those first. Then we find her.",
+      "file": "M01_457fc4b4a401f4adbcd75acf68054302.wav"
+    },
+    {
+      "key": "M01_88213d66bd3a86a46c2060ac7700ffc1",
+      "profile": "M01",
+      "text": "The Cinder Choir requisitioned every surgeon on this road. Their receipt is stamped CINDER TOLLHOUSE, COLLECTION OFFICE THREE.",
+      "file": "M01_88213d66bd3a86a46c2060ac7700ffc1.wav"
+    },
+    {
+      "key": "M01_a8d01c65d741af822c9f45dc49bcfad5",
+      "profile": "M01",
+      "text": "The dressings will keep Elsie alive. I won't forget it. Inez used to drive that route. If she's still breathing, she'll know where the trucks stop.",
+      "file": "M01_a8d01c65d741af822c9f45dc49bcfad5.wav"
+    },
+    {
+      "key": "M01_53ac53f392700717190659dde780bbd2",
+      "profile": "M01",
+      "text": "VALE, M. MEDICAL. HOLD FOR SPECIAL COLLECTION. ROUTE SIX. DESTINATION REDACTED. Every signature below it is the same: S. RUSK.",
+      "file": "M01_53ac53f392700717190659dde780bbd2.wav"
+    },
+    {
+      "key": "M01_deebf17c7926dfdeee5c09ce2fe0d0c0",
+      "profile": "M01",
+      "text": "A frequency is penciled into the margin. Relay Six can reach it, if you restore the generator and align the transmitter.",
+      "file": "M01_deebf17c7926dfdeee5c09ce2fe0d0c0.wav"
+    },
+    {
+      "key": "F02_e9aed7ab581c4603aa1765bc157a0b22",
+      "profile": "F02",
+      "text": "Whoever's asking about the medic: stop using her name on an open channel. Dry Creek. Maintenance shelter. Come without a convoy, and don't shoot the woman with the red scarf.",
+      "file": "F02_e9aed7ab581c4603aa1765bc157a0b22.wav"
+    },
+    {
+      "key": "M01_94c2ba01ead02066e1096d2850c99389",
+      "profile": "M01",
+      "text": "Destination: KENNELS, BLOCK C. Vale is marked for the next collection. Beside her name: PROFESSIONAL ASSET. Beside the others: DISPOSABLE.",
+      "file": "M01_94c2ba01ead02066e1096d2850c99389.wav"
+    },
+    {
+      "key": "F02_446b9145a4ef9598813f637e2c73dd0c",
+      "profile": "F02",
+      "text": "I told myself driving wasn't choosing. Every name on that paper proves otherwise. I'm going back for Jonah. You get Mara.",
+      "file": "F02_446b9145a4ef9598813f637e2c73dd0c.wav"
+    },
+    {
+      "key": "M01_7f643ab898057da3023f4c4f5f131e45",
+      "profile": "M01",
+      "text": "Keep the medic intact. Director Mercer's men are paying for trained labor, not bodies. Rusk gets his weapons when the collection clears.",
+      "file": "M01_7f643ab898057da3023f4c4f5f131e45.wav"
+    },
+    {
+      "key": "F01_3d888f9877bb407bda285a157c579d2c",
+      "profile": "F01",
+      "text": "You found the lists. I knew you'd read the lists.",
+      "file": "F01_3d888f9877bb407bda285a157c579d2c.wav"
+    },
+    {
+      "key": "F01_8f34a44978eb93c56823f7bd9a3cddc7",
+      "profile": "F01",
+      "text": "They called us inventory. Then they made me treat the people they'd beaten. There are others in the next shipment. We don't get to walk away and call this finished.",
+      "file": "F01_8f34a44978eb93c56823f7bd9a3cddc7.wav"
+    },
+    {
+      "key": "F01_12e8baee0ad66a304cbb24ac104783a5",
+      "profile": "F01",
+      "text": "Both relays are dead. Rusk's men will fall back to the furnace hall. He likes to stand above the people who work for him. Let's change that.",
+      "file": "F01_12e8baee0ad66a304cbb24ac104783a5.wav"
+    },
+    {
+      "key": "M03_5bc72f8fbb1781c01b51d83e3709806f",
+      "profile": "M03",
+      "text": "You think I invented this? People wanted order. I charged for it. Mercer writes his own receipts. Ask him what a citizen costs.",
+      "file": "M03_5bc72f8fbb1781c01b51d83e3709806f.wav"
+    },
+    {
+      "key": "F03_8da205cb952388fc1bd11e446cea6ec8",
+      "profile": "F03",
+      "text": "Silas Rusk. Your contract is terminated.",
+      "file": "F03_8da205cb952388fc1bd11e446cea6ec8.wav"
+    },
+    {
+      "key": "M01_fd4fd526b842fcb67a6ea9b843307322",
+      "profile": "M01",
+      "text": "The armored squad breaches the hall. A burst of gunfire cuts off Rusk's answer.",
+      "file": "M01_fd4fd526b842fcb67a6ea9b843307322.wav"
+    },
+    {
+      "key": "F03_0194fac0f1f3eca2aaf4dbba2f4a1951",
+      "profile": "F03",
+      "text": "Liberty's Heroes. We are restoring this country to glory. Your weapons are unregistered. Put them down and come with us. Cooperation will be remembered.",
+      "file": "F03_0194fac0f1f3eca2aaf4dbba2f4a1951.wav"
+    },
+    {
+      "key": "F03_5ccc44742065800cd91b8371dfc70c2d",
+      "profile": "F03",
+      "text": "Weapons secured. No citizenship record. No sponsor. Disposition: nonessential.",
+      "file": "F03_5ccc44742065800cd91b8371dfc70c2d.wav"
+    },
+    {
+      "key": "M01_32c21f97d4f7d198ecf55fa4e82b370f",
+      "profile": "M01",
+      "text": "You handed them your weapons. They never promised to let you live.",
+      "file": "M01_32c21f97d4f7d198ecf55fa4e82b370f.wav"
+    },
+    {
+      "key": "F03_641c1458562d6f2fd2e618514822c5f0",
+      "profile": "F03",
+      "text": "Resistance recorded. Keep this one for processing. Director Mercer likes to meet the difficult ones.",
+      "file": "F03_641c1458562d6f2fd2e618514822c5f0.wav"
+    },
+    {
+      "key": "F01_44361568abf6dfb7352a7a94d36f4d07",
+      "profile": "F01",
+      "text": "You're alive. Good. Evidence storage is across the service corridor. Look under the bunk. Whoever was here before us loosened a fastener.",
+      "file": "F01_44361568abf6dfb7352a7a94d36f4d07.wav"
+    },
+    {
+      "key": "M01_221d70bfbeddc0ade1d865482487cd63",
+      "profile": "M01",
+      "text": "Your equipment is here, tagged and counted. A second shelf is labeled CIVILIAN FORFEITURES. Beneath it sits Jonah's coat.",
+      "file": "M01_221d70bfbeddc0ade1d865482487cd63.wav"
+    },
+    {
+      "key": "M01_ce7d78bd4fb19b0fbd1dcfdc4de9e44b",
+      "profile": "M01",
+      "text": "You opened the cells. We'll open the gates. Inez cut the west searchlights. Elsie found an armory. This time we leave together.",
+      "file": "M01_ce7d78bd4fb19b0fbd1dcfdc4de9e44b.wav"
+    },
+    {
+      "key": "F01_4cd1f14612ff953083ca3c71d4edf76c",
+      "profile": "F01",
+      "text": "Mercer is in the command court. He runs his armor off the relay cabinets. Cut both feeds or you'll burn every bullet you have.",
+      "file": "F01_4cd1f14612ff953083ca3c71d4edf76c.wav"
+    },
+    {
+      "key": "M02_1093898c56606e63e04c133876ef269f",
+      "profile": "M02",
+      "text": "I gave these people a country when all you offered was a campfire. A nation needs one voice, one will, and someone prepared to punish disobedience.",
+      "file": "M02_1093898c56606e63e04c133876ef269f.wav"
+    },
+    {
+      "key": "F01_86d5cf7f1e41cf1a266fe99f0313168d",
+      "profile": "F01",
+      "text": "You put children in cells and called it a census. We are done asking permission to exist.",
+      "file": "F01_86d5cf7f1e41cf1a266fe99f0313168d.wav"
+    },
+    {
+      "key": "M02_572deca8844cf93846b998e3dafe3b9c",
+      "profile": "M02",
+      "text": "Then let history record your choice. Seal the court. Fire on anyone who stands with them.",
+      "file": "M02_572deca8844cf93846b998e3dafe3b9c.wav"
+    },
+    {
+      "key": "F01_fb0d6ec47f7a894c55668fe1a44c3956",
+      "profile": "F01",
+      "text": "Mercer is dead. Put the rifles down. Nobody else has to die for his portrait.",
+      "file": "F01_fb0d6ec47f7a894c55668fe1a44c3956.wav"
+    },
+    {
+      "key": "M01_af35a88318dce694e35b7781a1df784a",
+      "profile": "M01",
+      "text": "Stand down. All posts, stand down. We were told there was nothing outside these walls.",
+      "file": "M01_af35a88318dce694e35b7781a1df784a.wav"
+    },
+    {
+      "key": "M01_52df7fa7e33f872ae993c2a15b028857",
+      "profile": "M01",
+      "text": "There are people outside. There always were. Open the gate and help us bring them in.",
+      "file": "M01_52df7fa7e33f872ae993c2a15b028857.wav"
+    },
+    {
+      "key": "F01_24b7ddea7dc1f8e44e8611e12ab019a8",
+      "profile": "F01",
+      "text": "Mercy Crossing was never the buildings. It was what we agreed to do for each other. We can do it here. With better walls, and doors that open both ways.",
+      "file": "F01_24b7ddea7dc1f8e44e8611e12ab019a8.wav"
+    },
+    {
+      "key": "M01_00ac3fbd019097c1b01b7b394c6a0bb4",
+      "profile": "M01",
+      "text": "Clean water, a sealed dressing, and a tin of food. Mara checks the seals before packing them. Behind the diner, something strikes the service door. The supplies will have to last until Mercy Crossing.",
+      "file": "M01_00ac3fbd019097c1b01b7b394c6a0bb4.wav"
+    },
+    {
+      "key": "F01_927fc810a32ff5dfd44ab52c404c1e87",
+      "profile": "F01",
+      "text": "Easy. I'm Mara. I used to patch up highway crews. No rescue broadcasts, no deliveries, no cavalry. Take clean water, keep a bandage dry, and check your magazine before trouble finds you. There's a place called Mercy Crossing. We keep the gates open.",
+      "file": "F01_927fc810a32ff5dfd44ab52c404c1e87.wav"
+    },
+    {
+      "key": "M01_8b436166a650eb96e5c2281bdfd04d46",
+      "profile": "M01",
+      "text": "Mara says you came out of Shelter 01. I'm Jonah. That generator powers a clinic and twelve families' cookers. We vote on work, share water, and bury our own. Rusk calls that a tax base. We refused his collection yesterday.",
+      "file": "M01_8b436166a650eb96e5c2281bdfd04d46.wav"
+    },
+    {
+      "key": "F02_55a5a060e480a897bbc5e772097e860a",
+      "profile": "F02",
+      "text": "I drove their transfers. Rusk keeps people at the Kennels until somebody pays. The people who can't pay go to men in silver armor. Mara got marked MEDICAL. She's alive. I need you to make that mean something.",
+      "file": "F02_55a5a060e480a897bbc5e772097e860a.wav"
+    },
+    {
+      "key": "F01_7fb6bebac4828673cb4a566babc86d5b",
+      "profile": "F01",
+      "text": "Rusk sold us. The silver soldiers wanted medics, mechanics, anyone useful. Jonah got people out of the fire, but the next transfer leaves tonight. The foundry relays protect Rusk's furnace hall. Shut them down. We end the trade here.",
+      "file": "F01_7fb6bebac4828673cb4a566babc86d5b.wav"
+    },
+    {
+      "key": "F01_8fe36191121306a1bd2227e3d5e25e27",
+      "profile": "F01",
+      "text": "The roads still connect the towns. What has broken is trust. Follow the evidence, keep supplies in reserve, and don't confuse a uniform with a promise.",
+      "file": "F01_8fe36191121306a1bd2227e3d5e25e27.wav"
+    },
+    {
+      "key": "M01_8fe36191121306a1bd2227e3d5e25e27",
+      "profile": "M01",
+      "text": "The roads still connect the towns. What has broken is trust. Follow the evidence, keep supplies in reserve, and don't confuse a uniform with a promise.",
+      "file": "M01_8fe36191121306a1bd2227e3d5e25e27.wav"
+    },
+    {
+      "key": "F02_8fe36191121306a1bd2227e3d5e25e27",
+      "profile": "F02",
+      "text": "The roads still connect the towns. What has broken is trust. Follow the evidence, keep supplies in reserve, and don't confuse a uniform with a promise.",
+      "file": "F02_8fe36191121306a1bd2227e3d5e25e27.wav"
+    },
+    {
+      "key": "F01_6c563c0f49bd79946873d04599976eb0",
+      "profile": "F01",
+      "text": "Thank you. The trauma supplies are in the pharmacy. The raiders left their paperwork there, too.",
+      "file": "F01_6c563c0f49bd79946873d04599976eb0.wav"
+    },
+    {
+      "key": "F03_787b5364e93660cae8913462d7a7f372",
+      "profile": "F03",
+      "text": "Give up your weapons. Come with us. Now.",
+      "file": "F03_787b5364e93660cae8913462d7a7f372.wav"
+    }
+  ]
+}

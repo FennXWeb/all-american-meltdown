@@ -108,7 +108,7 @@ void ULWLootTable::ResetToNativeDefaults()
     const auto Medkit = Entry(TEXT("medkit"), 12, 1, 2, Tier::Uncommon, 5);
     const auto Food = Entry(TEXT("food"), 24, 1, 3, Tier::Common, 8);
     const auto Water = Entry(TEXT("water"), 24, 1, 3, Tier::Common, 8);
-    const auto Scrap = Entry(TEXT("scrap"), 24, 2, 8, Tier::Common, 30);
+    const auto Scrap = Entry(TEXT("scrap"), 40, 8, 20, Tier::Common, 100);
     const auto Battery = Entry(TEXT("battery"), 14, 1, 2, Tier::Common, 6);
 
     auto Add = [this](const TCHAR* Context, int32 Min, int32 Max, float Empty,
@@ -149,7 +149,7 @@ void ULWLootTable::ResetToNativeDefaults()
     for(auto& P:Presets)if(P.Context==TEXT("gas")||P.Context==TEXT("depot")||P.Context==TEXT("trader")||P.Context==TEXT("motel"))P.Entries.Add(Entry(TEXT("doublebarrel"),3,1,1,Tier::Uncommon,1));
     for(auto& P:Presets)if(P.Context==TEXT("military")||P.Context==TEXT("depot")||P.Context==TEXT("trader")){
         for(const TCHAR* Id:{TEXT("missile_launcher"),TEXT("minigun"),TEXT("sawedoff"),TEXT("desert_eagle"),TEXT("m4"),TEXT("taser"),TEXT("flamethrower"),TEXT("tenbarrel"),TEXT("giant_glock"),TEXT("questionable_ak"),TEXT("finger_guns"),TEXT("budget_cut")})P.Entries.Add(Entry(Id,2,1,1,Tier::Rare,1));
-        for(const TCHAR* Id:{TEXT("ammo_rocket"),TEXT("ammo_50ae"),TEXT("battery"),TEXT("ammo_fuel")})P.Entries.Add(Entry(Id,8,1,4,Tier::Common,1));
+        for(const TCHAR* Id:{TEXT("ammo_rocket"),TEXT("ammo_30mm"),TEXT("ammo_50ae"),TEXT("battery"),TEXT("ammo_fuel")})P.Entries.Add(Entry(Id,8,1,4,Tier::Common,1));
         for(const TCHAR* Id:{TEXT("minigun_box"),TEXT("mag_deagle7"),TEXT("fuel_tank"),TEXT("mag_giant50"),TEXT("mag_ak75")})P.Entries.Add(Entry(Id,5,1,1,Tier::Uncommon,1));
     }
     for(auto& P:Presets){
@@ -157,8 +157,10 @@ void ULWLootTable::ResetToNativeDefaults()
         if(P.Context==TEXT("military")||P.Context==TEXT("depot")||P.Context==TEXT("trader")){P.Entries.Add(Entry(TEXT("military_pack"),4,1,1,Tier::Rare,1));P.Entries.Add(Entry(TEXT("expedition_pack"),2,1,1,Tier::Rare,1));P.Entries.Add(Entry(TEXT("night_vision"),2,1,1,Tier::Rare,1));}
     }
     for(auto& P:Presets)if(P.Context==TEXT("gas")||P.Context==TEXT("depot")||P.Context==TEXT("trader"))P.Entries.Add(Entry(TEXT("gas_can"),P.Context==TEXT("gas")?18:8,1,1,Tier::Common,1));
-    for(auto& P:Presets)if(P.Context==TEXT("depot")||P.Context==TEXT("military")||P.Context==TEXT("trader"))for(const auto& D:LWParts39::Definitions())P.Entries.Add(Entry(*D.Id.ToString(),.65f,1,1,Tier::Common,1));
-    Trader.MaxItems = 26;
+    for(auto& P:Presets)if(P.Context==TEXT("road")||P.Context==TEXT("depot")||P.Context==TEXT("military")||P.Context==TEXT("motel"))P.Entries.Add(Entry(TEXT("settlement_flag"),3,1,1,Tier::Uncommon,1));
+    Trader.GuaranteedGroups.Add(Group(TEXT("settlement82"),1,{Entry(TEXT("settlement_flag"),1,1,1,Tier::Common,1)}));
+    Trader.GuaranteedGroups.Add(Group(TEXT("building82"),1,{Entry(TEXT("scrap"),1,40,80,Tier::Common,160)}));
+    Trader.MaxItems = 28;
     Trader.Quality = 0.75f;
     Trader.HazardExtraRolls = 0;
     Trader.GuaranteedGroups.Add(Group(TEXT("essentials"), 8,
@@ -230,6 +232,7 @@ TArray<FLWItemInstance> ULWLootTable::Roll(FName Context, int32 Seed, float Haza
         + Hazard * FiniteClamp(Preset->HazardCountBonus, 0.f, 10.f);
     auto Remaining = [&](const FLWLootEntry& Value)
     {
+        if(LWItems::Def(Value.ItemId).Category==TEXT("WeaponPart"))return 0;
         const int32 Used = UsedUnits.FindRef(Value.ItemId);
         if (Used > 0 && (Preset->bUniqueItems || UniqueIds.Contains(Value.ItemId)))
         {
@@ -308,13 +311,15 @@ TArray<FLWItemInstance> ULWLootTable::Roll(FName Context, int32 Seed, float Haza
             }
         }
     }
+    TArray<FLWLootEntry> Pool62=Preset->Entries;
+    if(Context==TEXT("depot")||Context==TEXT("military")||Context==TEXT("trader"))for(const auto& D:LWArsenal62::Attachments())Pool62.Add(Entry(*D.Id.ToString(),2.f,1,1,ELWLootTier::Uncommon,1));
     const int32 A = FMath::Clamp(Preset->MinRolls, 0, MaxDraws);
     const int32 B = FMath::Clamp(Preset->MaxRolls, 0, MaxDraws);
     const int32 NumRolls = FMath::Min(MaxDraws, Random.RandRange(FMath::Min(A, B), FMath::Max(A, B))
         + FMath::FloorToInt(Hazard * FMath::Clamp(Preset->HazardExtraRolls, 0, MaxDraws)));
     for (int32 I = 0; I < NumRolls; ++I)
     {
-        if (!Draw(Preset->Entries))
+        if (!Draw(Pool62))
         {
             break;
         }

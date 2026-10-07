@@ -1,3 +1,4 @@
+#include "LWGeography84.h"
 #include "LWEncounter.h"
 #include "LWWorld.h"
 #include "LWCharacter.h"
@@ -14,7 +15,7 @@ void ALWWorld::SnapshotEncounters(){for(auto& E:LiveEncounters)if(IsValid(E.Valu
 void ALWWorld::ClearEncounterActors(){for(auto& E:LiveEncounters)if(IsValid(E.Value))E.Value->Destroy();LiveEncounters.Empty();}
 bool ALWWorld::EncounterLocation(FVector At,float Radius)const{
  auto Reject=[&](int Why){static int Count=0;if(Count++<80&&FParse::Param(FCommandLine::Get(),TEXT("LWUpdate53Smoke")))UE_LOG(LogTemp,Display,TEXT("ENCOUNTER53_REJECT reason=%d xyz=%s"),Why,*At.ToString());return false;};
- if(LWStory::Reserved(FVector2D(At),Radius)||FVector::Dist2D(At,BunkerDoorPosition())<6000||!Chunks.Contains(LWGen::ChunkAt(FVector2D(At))))return Reject(1);
+ if(LWGeography84::Canada(FVector2D(At))||LWStory::Reserved(FVector2D(At),Radius)||FVector::Dist2D(At,BunkerDoorPosition())<6000||!Chunks.Contains(LWGen::ChunkAt(FVector2D(At))))return Reject(1);
  TArray<LWGen::FRoad> Roads;TArray<LWGen::FSite> Sites;LWGen::Gather(FVector2D(At),Seed,Roads,Sites);
  for(const auto& S:Sites){const FVector2D L=(FVector2D(At)-S.Position).GetRotated(-S.Yaw);const FVector2D Outside(FMath::Max(0.,FMath::Abs(L.X)-S.Size.X*.5),FMath::Max(0.,FMath::Abs(L.Y)-S.Size.Y*.5));if(Outside.Size()<Radius+200)return Reject(2);}
  for(const auto& R:Roads)if(LWGen::DistanceToSegment(FVector2D(At),R)<R.Width*.5+Radius)return Reject(3);
@@ -23,7 +24,7 @@ bool ALWWorld::EncounterLocation(FVector At,float Radius)const{
  FCollisionQueryParams Q(NAME_None,false,this);if(GetWorld()->OverlapBlockingTestByChannel(At+FVector(0,0,200),FQuat::Identity,ECC_Pawn,FCollisionShape::MakeBox(FVector(Radius,Radius,160)),Q))return Reject(6);return true;
 }
 ALWEncounterScene* ALWWorld::SpawnEncounter(FName Type,FVector At,float Yaw){
- const auto* D=ULWEncounterCatalog::Get()->Find(Type);if(!D||!D->Enabled)return nullptr;
+ if(LWGeography84::Canada(FVector2D(At)))return nullptr;const auto* D=ULWEncounterCatalog::Get()->Find(Type);if(!D||!D->Enabled)return nullptr;
  FLWEncounterRecord R;R.Id=FName(*FString::Printf(TEXT("enc_%d_%d"),Seed,++Encounters.Serial));R.Type=Type;R.Position=At;R.Yaw=Yaw;R.Created=Encounters.Elapsed;R.Expires=R.Created+FMath::Max(120.f,D->Lifetime);R.EscortPosition=At+FRotator(0,Yaw,0).RotateVector(FVector(120,170,100));R.Goal=At+FRotator(0,Yaw,0).RotateVector(FVector(2600,0,0));R.Goal.Z=HeightAt(FVector2D(R.Goal))+100;
  Encounters.Records.Add(R.Id,R);Encounters.LastType.Add(Type,Encounters.Elapsed);Encounters.LastPosition=At;Encounters.Recent.Add(Type);while(Encounters.Recent.Num()>6)Encounters.Recent.RemoveAt(0);
  auto* A=GetWorld()->SpawnActor<ALWEncounterScene>(At,FRotator(0,Yaw,0));if(A){LiveEncounters.Add(R.Id,A);A->Initialize(this,R.Id);}return A;

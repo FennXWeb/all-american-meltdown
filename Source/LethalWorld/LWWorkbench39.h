@@ -20,9 +20,12 @@ public:
  UPROPERTY() TObjectPtr<class USceneCaptureComponent2D> Capture;
  UPROPERTY() TObjectPtr<class UTextureRenderTarget2D> Target;
  UPROPERTY() TArray<TObjectPtr<class UStaticMeshComponent>> Meshes;
+ UPROPERTY() TObjectPtr<class ULWMystic62> Mystic62;
  UPROPERTY() FLWBenchDraft39 Draft;
  UPROPERTY() TArray<FLWBenchDraft39> UndoStack;
  UPROPERTY() TArray<FLWBenchDraft39> RedoStack;
+ FName Mount62=TEXT("Optic"); int Tab62=0;
+ bool SetCamo62(int C);bool Detach62();
  uint32 Original=0; FString Message; int Page=0,PartPage=0,Filter=0,Mode=0,Axis=3;
  float Yaw=120,Pitch=12,Distance=170; FVector Center=FVector(20,0,0); bool Snap=true;
  FVector2D LastMouse,DragOrigin; bool LeftDown=false,Dragging=false,EditingName=false,PendingDrop=false; FTransform DragStart;

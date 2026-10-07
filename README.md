@@ -1,3 +1,13 @@
+# All American Meltdown
+
+First-person wasteland survival across upstate New York and southern Ontario, with companions, settlements, vehicles, and walkable aircraft.
+
+Download the portable Windows build from [GitHub Releases](https://github.com/FennXWeb/all-american-meltdown/releases), or add `FennXWeb/all-american-meltdown` to SMOG. Extract the complete build and run `smog_launch.bat`. Saves and settings live outside the installation at `%LOCALAPPDATA%\AllAmericanMeltdown\Saved`.
+
+See [SMOG release instructions](Docs/SMOG/Release.md), [version 0.84.0 notes](Docs/SMOG/ReleaseNotes-0.84.0.md), and the [regional world and aviation guide](Docs/Update84-Implementation.md). The root `smog_*` files supply launcher metadata and generated artwork. Unreal Engine 5.8 is required for source development; it is not required to play the packaged game.
+
+The sections below are historical development notes. Their older instructions and packaging status describe those updates, not the current release.
+
 # All American Meltdown - Field equipment and terrain
 
 Five backpack sizes now expand carried inventory, chest rigs unlock a primary weapon slot on **5**, and helmet-slot night vision toggles with **N**. POI terrain clearance, tower floor overlap, casino driveway overlap, and downhill vehicle support are corrected. See [capacity, controls and verification](Docs/EquipmentAndTerrain25.md). Editor/source update only; no packaged build.

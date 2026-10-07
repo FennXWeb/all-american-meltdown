@@ -1,42 +1,39 @@
 #include "LWBorder51.h"
+#include "LWGeography84.h"
+#include "LWCanada68.h"
 #include "LWBorderGuard51.h"
+#include "LWStreaming68.h"
 #include "LWWorld.h"
 #include "LWCharacter.h"
 #include "LWVehicle.h"
-#include "Components/TextRenderComponent.h"
+#include "LWWorldTextComponent.h"
 #include "Components/StaticMeshComponent.h"
-#include "ProceduralMeshComponent.h"
 #include "GameFramework/CharacterMovementComponent.h"
 #include "Engine/World.h"
-void LWBorder51::Build(ALWChunk* C,ALWWorld* W){
- FVector O=C->GetActorLocation();FRandomStream R(LWGen::Hash(C->Coordinate.X,C->Coordinate.Y,W->Seed,5100));
- if(O.X>=North){C->Terrain->SetMaterial(0,W->Material(TEXT("CanadaGrass51")));for(int I=0;I<65;++I){FVector P(R.FRandRange(200,12600),R.FRandRange(100,12700),0);if(O.X+P.X<North+2200)continue;TArray<LWGen::FRoad> Roads;TArray<LWGen::FSite> Sites;P.Z=LWGen::Height(FVector2D(P+O),Roads,Sites);C->Add(W,TEXT("LivingPine51"),NAME_None,P,FVector(R.FRandRange(.8f,1.65f)),FRotator(0,R.FRand()*360,0),false);}return;}
- const float BX=North-O.X;
- // High steel anti-climb fence is transparent between uprights, preserving the green vista.
- for(int Y=0;Y<12800;Y+=400){C->Box(W,TEXT("Concrete"),FVector(BX-90,Y+200,75),FVector(180,400,150));C->Box(W,TEXT("Steel"),FVector(BX-20,Y+200,490),FVector(35,35,820));for(int J=0;J<8;++J)C->Box(W,TEXT("Steel"),FVector(BX-20,Y+J*50,465),FVector(12,8,640));for(int Z:{200,440,760})C->Box(W,TEXT("Steel"),FVector(BX-20,Y+200,Z),FVector(18,400,12));C->Box(W,TEXT("CanadaRed51"),FVector(BX-1780,Y+200,5),FVector(22,395,6),FRotator::ZeroRotator,false);}
- // Invisible collision follows the visible fence rather than a giant opaque wall.
- auto* Wall=NewObject<UStaticMeshComponent>(C);Wall->SetupAttachment(C->GetRootComponent());Wall->SetStaticMesh(W->Mesh(TEXT("Cube")));Wall->SetRelativeLocation(FVector(BX-20,6400,500));Wall->SetRelativeScale3D(FVector(.35,128,10));Wall->SetVisibility(false);Wall->SetCollisionEnabled(ECollisionEnabled::QueryAndPhysics);Wall->SetCollisionResponseToAllChannels(ECR_Block);Wall->RegisterComponent();C->AddInstanceComponent(Wall);
- float GateY=6400;
- C->Box(W,TEXT("Asphalt"),FVector(BX-7350,GateY,10),FVector(10900,900,12));
- for(int X=0;X<10500;X+=600)C->Box(W,TEXT("CanadaArmor51"),FVector(X+200,GateY,17),FVector(300,12,2),FRotator::ZeroRotator,false);
- // Sheltered observation booth beside the sealed checkpoint, with clear windows.
- FVector Booth(BX-650,GateY-2200,0);
- C->Box(W,TEXT("Concrete"),Booth+FVector(0,0,20),FVector(620,760,40));
- C->Box(W,TEXT("CanadaArmor51"),Booth+FVector(0,0,385),FVector(660,800,35));
- for(int Side:{-1,1}){C->Box(W,TEXT("CanadaArmor51"),Booth+FVector(Side*300,0,95),FVector(20,740,150));C->Box(W,TEXT("Glass"),Booth+FVector(Side*300,0,250),FVector(12,740,160));for(int Y:{-370,370})C->Box(W,TEXT("Steel"),Booth+FVector(Side*300,Y,220),FVector(30,30,310));}
- C->Box(W,TEXT("CanadaRed51"),Booth+FVector(0,-370,200),FVector(600,24,340));
- 
- C->Box(W,TEXT("Concrete"),FVector(BX-760,GateY,12),FVector(1800,3600,24));
- for(int Side:{-1,1}){C->Box(W,TEXT("Concrete"),FVector(BX-500,GateY+Side*1400,180),FVector(750,200,360));C->Box(W,TEXT("Steel"),FVector(BX-400,GateY+Side*1180,660),FVector(45,45,1320));C->StreetLight(W,FVector(BX-2500,GateY+Side*1700,0),FRotator(0,Side*90,0),false);}
- C->Box(W,TEXT("CanadaRed51"),FVector(BX-410,GateY,1050),FVector(55,2450,280));
- auto Sign=[&](FVector P,const TCHAR* Text,float Size){auto* T=NewObject<UTextRenderComponent>(C);T->SetupAttachment(C->GetRootComponent());T->SetRelativeLocation(P);T->SetRelativeRotation(FRotator(0,180,0));T->SetText(FText::FromString(Text));T->SetWorldSize(Size);T->SetHorizontalAlignment(EHTA_Center);T->SetTextRenderColor(FColor(240,240,216));T->SetCollisionEnabled(ECollisionEnabled::NoCollision);T->RegisterComponent();C->AddInstanceComponent(T);};
- Sign(FVector(BX-443,GateY,1100),TEXT("CANADA  /  BORDER CLOSED"),75);Sign(FVector(BX-443,GateY,1000),TEXT("FRONTIERE FERMEE"),48);
- for(int Side:{-1,1}){C->Box(W,TEXT("Steel"),FVector(BX-1810,GateY+Side*1850,175),FVector(20,530,280));Sign(FVector(BX-1823,GateY+Side*1850,240),TEXT("NO ENTRY"),53);Sign(FVector(BX-1823,GateY+Side*1850,155),TEXT("DO NOT CROSS"),34);}
- // Deterministic guard identities and chunk ownership prevent duplicate posts when streaming.
- for(int I=0;I<3;++I){bool Mech=I==2;FVector Pos=O+FVector(BX-(Mech?750:1100),GateY+(I-1)*900,Mech?225:100);FActorSpawnParameters S;S.SpawnCollisionHandlingOverride=ESpawnActorCollisionHandlingMethod::AlwaysSpawn;auto* G=W->GetWorld()->SpawnActor<ALWBorderGuard51>(Pos,FRotator(0,180,0),S);if(G){G->Setup51(Mech,LWGen::Hash(C->Coordinate.X,C->Coordinate.Y,W->Seed,5110+I));W->ZombieCount++;C->Residents.Add(G);}}
+void LWGeography84::BuildBorder(ALWChunk* C,ALWWorld* W){
+ const FVector Origin=C->GetActorLocation();
+ if(Canada(FVector2D(Origin)+FVector2D(6400))){
+  FRandomStream R(LWGen::Hash(C->Coordinate.X,C->Coordinate.Y,W->Seed,84051));TArray<LWGen::FRoad> Roads;TArray<LWGen::FSite> Sites;if(C->Plan68){Roads=C->Plan68->Roads;Sites=C->Plan68->Sites;}else LWGen::Gather(FVector2D(Origin)+FVector2D(6400),W->Seed,Roads,Sites);
+  for(int I=0;I<70;I++){const FVector2D XY=FVector2D(Origin)+FVector2D(R.FRandRange(100,12700),R.FRandRange(100,12700));if(!Canada(XY)||LWNY69::WaterDepth(XY)>0||NearCheckpoint(XY,8000)||Roads.ContainsByPredicate([&](const auto& A){return LWGen::DistanceToSegment(XY,A)<A.Width*.5+550;})||Sites.ContainsByPredicate([&](const auto& S){return (XY-S.Position).Size()<S.Size.Size()*.5+800;}))continue;C->Add(W,TEXT("LivingPine51"),NAME_None,FVector(XY,LWGen::Height(XY,Roads,Sites))-Origin,FVector(R.FRandRange(.8f,1.4f)),FRotator(0,R.FRand()*360,0),false);}
+ }
+ for(int K=0;K<Checkpoints().Num();K++){const auto Post=Checkpoints()[K];if(LWGen::ChunkAt(Post.Position)!=C->Coordinate)continue;const FRotator Rotation(0,Post.Yaw,0);auto At=[&](FVector P){return FVector(Post.Position,0)-Origin+Rotation.RotateVector(P);};auto Box=[&](FName M,FVector P,FVector S){C->Box(W,M,At(P),S,Rotation);};
+  // Real crossings occupy a bridge deck. The guarded apron is on the approach,
+  // and the no-entry stripe lies behind the guards toward Canadian territory.
+  Box(TEXT("Concrete"),FVector(0,0,-25),FVector(14500,3200,65));Box(TEXT("Asphalt"),FVector(0,0,12),FVector(14500,2200,14));
+  for(int Side:{-1,1}){Box(TEXT("Steel"),FVector(0,Side*1450,70),FVector(14500,30,140));Box(TEXT("Concrete"),FVector(-1600,Side*1200,130),FVector(800,250,260));C->StreetLight(W,At(FVector(-2300,Side*1400,20)),Rotation,false);}
+  Box(TEXT("CanadaRed51"),FVector(300,0,24),FVector(45,2200,6));
+  const FVector Booth(-1800,-2100,30);Box(TEXT("Concrete"),Booth,FVector(900,950,60));Box(TEXT("CanadaArmor51"),Booth+FVector(0,0,380),FVector(950,1000,35));
+  for(int Side:{-1,1}){Box(TEXT("CanadaArmor51"),Booth+FVector(Side*435,0,90),FVector(30,950,150));Box(TEXT("Glass"),Booth+FVector(Side*435,0,245),FVector(12,950,160));Box(TEXT("CanadaArmor51"),Booth+FVector(0,Side*460,185),FVector(850,30,370));}
+  Box(TEXT("Steel"),FVector(-600,-1600,340),FVector(20,920,190));
+  auto* Sign=NewObject<ULWWorldTextComponent>(C);Sign->SetupAttachment(C->GetRootComponent());Sign->SetRelativeLocation(At(FVector(-615,-1600,375)));Sign->SetRelativeRotation(Rotation+FRotator(0,180,0));Sign->SetText(FText::FromString(FString(Post.Name)+TEXT("\nCANADIAN CUSTOMS")));Sign->SetWorldSize(38);Sign->SetHorizontalAlignment(EHTA_Center);Sign->SetCollisionEnabled(ECollisionEnabled::NoCollision);Sign->RegisterComponent();C->AddInstanceComponent(Sign);
+  for(int I=0;I<3;I++){auto Spawn=[C,W,Post,Rotation,K,I](){const bool Mech=I==2;const FVector Location=FVector(Post.Position,0)+Rotation.RotateVector(FVector(-1100,(I-1)*850,Mech?255:130));FActorSpawnParameters S;S.SpawnCollisionHandlingOverride=ESpawnActorCollisionHandlingMethod::AlwaysSpawn;auto* G=W->GetWorld()->SpawnActor<ALWBorderGuard51>(Location,Rotation+FRotator(0,180,0),S);if(G){G->Setup51(Mech,8405100+K*10+I);C->Residents.Add(G);}};if(C->Plan68)C->Plan68->Population.Add(Spawn);else Spawn();}
+ }
 }
+void LWBorder51::Build(ALWChunk* C,ALWWorld* W){LWGeography84::BuildBorder(C,W);}
 void LWBorder51::Enforce(ALWWorld* W,ALWCharacter* P){
- if(!P||P->bMenu||P->Health<=0)return;
- // Continuous backstop also covers streamed-out fence segments and very fast airborne cars.
- if(P->GetActorLocation().X>North-100){if(P->Vehicle){auto* V=P->Vehicle.Get();FVector L=V->GetActorLocation();L.X=North-1000;V->SetActorLocation(L,false);V->Speed=FMath::Min(0.f,V->Speed);}FVector L=P->GetActorLocation();L.X=North-250;P->SetActorLocation(L,false);P->GetCharacterMovement()->Velocity.X=FMath::Min(0.,P->GetCharacterMovement()->Velocity.X);}
+ if(!P||P->bMenu||P->Health<=0||LWCanada68::Authorized(P)||!LWGeography84::Restricted(FVector2D(P->GetActorLocation()))||(P->Vehicle&&(P->Vehicle->IsHelicopter57()||P->Vehicle->IsAircraft84())))return;
+ const auto Edge=LWGeography84::BorderNearest(FVector2D(P->GetActorLocation()));FVector2D Safe=Edge;
+ for(float A:{0.f,45.f,90.f,135.f,180.f,225.f,270.f,315.f}){auto Candidate=Edge+FVector2D(1400,0).GetRotated(A);if(!LWGeography84::Canada(Candidate)){Safe=Candidate;break;}}
+ if(P->Vehicle){P->Vehicle->SetActorLocation(FVector(Safe,P->Vehicle->GetActorLocation().Z));P->Vehicle->Speed=P->Vehicle->Throttle=0;}
+ P->SetActorLocation(FVector(Safe,P->GetActorLocation().Z));P->GetCharacterMovement()->StopMovementImmediately();P->Notify(TEXT("PASSPORT AND WEAPON CHECK REQUIRED AT CUSTOMS"),3);
 }

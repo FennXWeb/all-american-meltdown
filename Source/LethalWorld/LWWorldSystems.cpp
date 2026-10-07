@@ -1,3 +1,4 @@
+#include "LWGeography84.h"
 #include "LWVehicle.h"
 #include "Misc/Crc.h"
 #include "EngineUtils.h"
@@ -29,7 +30,7 @@ ALWWorldObject* ALWWorld::SpawnObject(ELWObjectKind Kind,FName Id,FVector P,FRot
     FActorSpawnParameters Params;Params.SpawnCollisionHandlingOverride=ESpawnActorCollisionHandlingMethod::AlwaysSpawn;
     if(Kind==ELWObjectKind::Car){
         for(TActorIterator<ALWVehicle> I(GetWorld());I;++I)if(I->RecordId==Id)return nullptr;
-        if(const auto* V=Vehicles.Find(Id)){auto* Player=UGameplayStatics::GetPlayerPawn(this,0);if(Player&&FVector::Dist2D(Player->GetActorLocation(),V->Position)>(RenderRadius+1)*LWGen::ChunkSize)return nullptr;P=V->Position;R=V->Rotation;}
+        if(const auto* V=Vehicles.Find(Id)){auto* Player=UGameplayStatics::GetPlayerPawn(this,0);if(Player&&FVector::Dist2D(Player->GetActorLocation(),V->Position)>(LWTraffic::IsAircraft(V->Model)?350000.f:(RenderRadius+1)*LWGen::ChunkSize))return nullptr;P=V->Position;R=V->Rotation;}
         auto* Car=GetWorld()->SpawnActor<ALWVehicle>(P,R,Params);if(Car){Car->Configure(this,Kind,Id);Car->InitializeVehicle();}return Car;
     }
     ALWWorldObject* O=GetWorld()->SpawnActor<ALWWorldObject>(P,R,Params);
@@ -82,6 +83,7 @@ void ALWWorld::SpawnRecords(ALWChunk* Chunk)
     for(FName Id:Parked){const auto V=Vehicles.FindChecked(Id);if(auto* Car=SpawnObject(ELWObjectKind::Car,Id,V.Position,V.Rotation))Chunk->Residents.Add(Car);}
     for(const auto& Pair:Containers)if(Pair.Value.bDropped&&LWGen::ChunkAt(FVector2D(Pair.Value.Position))==Chunk->Coordinate)
         if(auto* O=SpawnObject(ELWObjectKind::Container,Pair.Key,Pair.Value.Position))Chunk->Residents.Add(O);
+    if(LWGeography84::Canada(FVector2D(Chunk->GetActorLocation())))return;
     const FVector2D P=FVector2D(Chunk->GetActorLocation())+FVector2D(LWGen::ChunkSize*.5);
     const FIntPoint Region(LWGen::FloorDiv(P.X+LWGen::RegionSize*.5,LWGen::RegionSize),LWGen::FloorDiv(P.Y+LWGen::RegionSize*.5,LWGen::RegionSize));
     for(int DY=-1;DY<=1;DY++)for(int DX=-1;DX<=1;DX++){

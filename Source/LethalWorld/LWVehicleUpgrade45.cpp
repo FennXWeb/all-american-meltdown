@@ -29,11 +29,11 @@ void ALWVehicle::ApplyGarage45(){
  if(!World||!Record())return;const auto* R=Record();const TCHAR* Colors[]={TEXT("sedan"),TEXT("police"),TEXT("boxtruck"),TEXT("rv"),TEXT("bus"),TEXT("van"),TEXT("pickup"),TEXT("dirtbike"),TEXT("suv"),TEXT("muscle"),TEXT("supercar")};
  if(R->Paint45>=0&&R->Paint45<11&&Body->GetStaticMesh()){
   PaintWet.Empty();
-  for(int I=0;I<Body->GetNumMaterials();++I)if(auto* Original=Body->GetStaticMesh()->GetMaterial(I))if(Original->GetName().Contains(TEXT("V42_Paint"))){
+  for(int I=0;I<Body->GetNumMaterials();++I)if(auto* Original=Body->GetStaticMesh()->GetMaterial(I))if((Original->GetName().Contains(TEXT("V42_Paint"))||Original->GetName().Contains(TEXT("RV66_Pearl"))||Original->GetName().Contains(TEXT("EV74_Pearl")))){
    Body->SetMaterial(I,World->Material(FName(*(FString(TEXT("V42_Paint_"))+Colors[R->Paint45]))));auto* M=Body->CreateDynamicMaterialInstance(I);PaintWet.Add(M);if(DentedBody)DentedBody->SetMaterial(I,M);
   }
  }
- for(auto& L:Headlamps)L->SetIntensity(900000*(1+LWGarage45::Stat(R,TEXT("light"))));
+ for(auto& L:Headlamps)if(IsValid(L))L->SetIntensity(900000*(1+LWGarage45::Stat(R,TEXT("light"))));
  if(auto* C=World->Containers.Find(RecordId)){C->Height=FMath::Max(C->Height,Spec().CargoH+int(LWGarage45::Stat(R,TEXT("cargo"))));}
 }
 

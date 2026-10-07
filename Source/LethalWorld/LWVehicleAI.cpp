@@ -1,3 +1,4 @@
+#include "LWAircraft84.h"
 #include "LWVehicle.h"
 #include "LWCharacter.h"
 #include "LWResident.h"
@@ -9,14 +10,16 @@
 #include "Components/CapsuleComponent.h"
 #include "Components/StaticMeshComponent.h"
 #include "GameFramework/CharacterMovementComponent.h"
-namespace { struct FAvoidance {float Offset=0,Hold=0;};
+namespace { struct FAvoidance {float Offset=0,Hold=0,LaneClock=0,LaneOffset=140;};
 FAvoidance& AvoidState(ALWVehicle* C){static TMap<TWeakObjectPtr<ALWVehicle>,FAvoidance> States;for(auto I=States.CreateIterator();I;++I)if(!I.Key().IsValid())I.RemoveCurrent();return States.FindOrAdd(C);}}
-FVector ALWVehicle::PlayerEye()const{return PlayerSeat==-2?CabinEye:PlayerSeat<0?DriverEye():SeatLocation(PlayerSeat)+FVector(0,0,83);}
+FVector ALWVehicle::PlayerEye()const{if(IsAircraft84())return AircraftEye84();return PlayerSeat==-2?CabinEye:PlayerSeat<0?DriverEye():SeatLocation(PlayerSeat)+FVector(0,0,83);}
 int ALWVehicle::NearestSeat(const ALWCharacter* P)const{int Seat=-1;double Best=DBL_MAX;for(int I=-1;I<Spec().Seats-1;I++){if(I>=0&&Passengers.IsValidIndex(I)&&IsValid(Passengers[I]))continue;FVector At=GetActorTransform().TransformPosition(I<0?DriverEye():SeatLocation(I));double D=FVector::DistSquared2D(P->GetActorLocation(),At);if(D<Best){Seat=I;Best=D;}}return Seat;}
-bool ALWVehicle::ChangeSeat(int Seat){if(!Driver||Driver->bMenu||Driver->bInventory||Driver->SecurityMode||Seat < -1||Seat>=Spec().Seats-1)return false;if(FMath::Abs(Speed)>5||Chauffeur){Driver->Notify(TEXT("STOP AND DISMISS THE DRIVER BEFORE CHANGING SEATS"));return false;}if(Seat>=0&&Passengers.IsValidIndex(Seat)&&IsValid(Passengers[Seat])){Driver->Notify(TEXT("SEAT OCCUPIED"));return false;}PlayerSeat=Seat;VehicleSound42(TEXT("CarSeat"),.5f);if(Seat==-1)MarkLastDriven();DriverDismissed=false;Throttle=Steer=0;Driver->TickVehicleSeat();Driver->Notify(Seat<0?TEXT("DRIVER SEAT"):FString::Printf(TEXT("PASSENGER SEAT %d"),Seat+1));return true;}
-void ALWVehicle::RequestDriverStop(){StopRequested=true;Throttle=0;if(Driver)Driver->Notify(TEXT("PULLING TO A STOP"));}
+bool ALWVehicle::ChangeSeat(int Seat){if(IsAircraft84())return ChangeAircraftSeat84(Seat);if(!Driver||Driver->bMenu||Driver->bInventory||Driver->SecurityMode||Seat < -1||Seat>=Spec().Seats-1)return false;if((FMath::Abs(Speed)>5||Chauffeur)&&!(IsSolarRV74()&&SelfDriving74&&Seat>=0&&!Chauffeur)){Driver->Notify(TEXT("STOP AND DISMISS THE DRIVER BEFORE CHANGING SEATS"));return false;}if(Seat>=0&&Passengers.IsValidIndex(Seat)&&IsValid(Passengers[Seat])){Driver->Notify(TEXT("SEAT OCCUPIED"));return false;}PlayerSeat=Seat;if(IsCamper74()){Driver->SeatYaw=SeatYaw66(Seat);Driver->SeatPitch=0;}VehicleSound42(TEXT("CarSeat"),.5f);if(Seat==-1)MarkLastDriven();DriverDismissed=false;if(!SelfDriving74)Throttle=Steer=0;CabinMove=FVector2D::ZeroVector;CabinVelocity74=FVector::ZeroVector;Driver->TickVehicleSeat();Driver->Notify(Seat<0?TEXT("DRIVER SEAT"):FString::Printf(TEXT("PASSENGER SEAT %d"),Seat+1));return true;}
+void ALWVehicle::RequestDriverStop(){PendingIgnition66=false;if(!StopRequested&&Driver)Driver->Notify(TEXT("PULLING TO A STOP"));StopRequested=true;Throttle=0;}
 void ALWVehicle::TickAutopilot(float Dt){
+ if(IsHelicopter57()||IsAircraft84())return;
  if(!Driver)return;
+ if(SelfDriving74){if(!TickSelfDriveGate74(Dt))return;}else{
  if(PlayerSeat<0){AutoDriving=Boarding=false;return;}
  if(!IsValid(Chauffeur)){
  Chauffeur=nullptr;
@@ -30,7 +33,8 @@ void ALWVehicle::TickAutopilot(float Dt){
  for(TActorIterator<ALWResident> I(GetWorld());I;++I){if(I->Riding||I->DownTime>0||!Driver->RPG.Crew.ContainsByPredicate([&](const auto& C){return C.Following&&C.Id==I->ResidentId;}))continue;if(Board(*I)){Free--;continue;}if(Free>0){Waiting=true;Free--;}}
  if(Waiting){if(BoardingClock>25){Driver->Notify(TEXT("WAITING FOR THE CREW // F TO CANCEL"));BoardingClock=0;}return;}
  if(!Record()->Hotwired&&!Driver->HasKey(Record()->VIN)){Driver->Notify(TEXT("KEY OR HOTWIRE REQUIRED // TAKE DRIVER SEAT TO HOTWIRE"));DriverDismissed=true;Chauffeur->LeaveVehicle();Boarding=false;return;}
- Boarding=false;AutoDriving=true;EngineOn=true;DrivePath.Empty();RepathClock=0;RecoveryAttempts=0;Driver->Notify(TEXT("CREW ABOARD // HEADING TO WAYPOINT"));
+ if(!ReadyToDrive66())return;Boarding=false;AutoDriving=true;EngineOn=true;DrivePath.Empty();RepathClock=0;RecoveryAttempts=0;Driver->Notify(TEXT("CREW ABOARD // HEADING TO WAYPOINT"));
+ }
  }
  if(!AutoDriving)return;
  if(Driver->bMenu||Driver->SecurityMode){Throttle=0;return;}
@@ -45,7 +49,8 @@ void ALWVehicle::TickAutopilot(float Dt){
  FVector2D Target=A+D*FMath::Clamp(Along+Look,0.,Length);FVector2D Right(-D.Y,D.X);
  // Lane offset fades at destination and junctions; never cuts across the next block.
  auto& Avoid=AvoidState(this);Avoid.Hold=FMath::Max(0.f,Avoid.Hold-Dt);if(Avoid.Hold<=0)Avoid.Offset=FMath::FInterpTo(Avoid.Offset,0,Dt,1.2f);
- if(Length>1100&&FVector2D::Distance(Here,B)>600)Target+=Right*(140+Avoid.Offset);
+ Avoid.LaneClock-=Dt;if(Avoid.LaneClock<=0){Avoid.LaneClock=1;TArray<LWGen::FRoad> Nearby;TArray<LWGen::FSite> Sites;LWGen::Gather(Here,World->Seed,Nearby,Sites);float Closest=MAX_flt;for(const auto& Road:Nearby){float Distance=LWGen::DistanceToSegment(Here,Road);if(Distance<Closest){Closest=Distance;Avoid.LaneOffset=FMath::Clamp(Road.Width*.5f-Spec().HalfWidth-24,0.f,140.f);}}}
+ if(Length>1100&&FVector2D::Distance(Here,B)>600)Target+=Right*(Avoid.LaneOffset+Avoid.Offset);
  FVector Local=GetActorTransform().InverseTransformPosition(FVector(Target,GetActorLocation().Z));float Angle=FMath::Atan2(Local.Y,Local.X);float Wheel=FMath::RadiansToDegrees(FMath::Atan2(2*Spec().Wheelbase*FMath::Sin(Angle),FMath::Max(200.,Local.Size2D())));
  float Limit=FMath::Lerp(Spec().Steering,10.f,FMath::Clamp(FMath::Abs(Speed)/Spec().MaxSpeed,0.f,1.f));Steer=FMath::Abs(Angle)>2.f?FMath::Sign(Angle):FMath::Clamp(Wheel/Limit,-1.f,1.f);
  float Desired=FMath::Min(Spec().MaxSpeed*.58f,1500.f);Desired*=FMath::Clamp(1.f-FMath::Abs(Angle)*.8f,.18f,1.f);

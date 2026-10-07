@@ -49,6 +49,11 @@ struct LETHALWORLD_API FLWAudioSlot
     UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Audio", meta=(ClampMin="0.125", ClampMax="4.0"))
     float Pitch = 1.f;
 
+    /** Geometry obstruction, vehicle cabin filtering and measured room reverberation.
+     * Music/UI are always exempt. Disable for an authored effect with its own processing. */
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Audio")
+    bool bEnvironmentalProcessing = true;
+
     // PlaySlot applies this to SoundWaves without changing the shared source asset.
     // SoundCue/MetaSound sources must implement their own matching loop behavior.
     UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Audio", meta=(DisplayName="Loop"))

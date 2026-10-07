@@ -1,0 +1,14 @@
+import bpy,bmesh,json
+from pathlib import Path
+root=Path('X:/LethalWorld/ArtSource/Models63');data=json.loads((root/'manifest.json').read_text());bpy.ops.wm.open_mainfile(filepath=str(root/'Models63.blend'));bpy.context.preferences.filepaths.save_version=0
+for r in data['assets']:
+ if not ('Waist' in r['name'] or r['name']=='TitanPelvis32'):continue
+ o=next(o for o in bpy.context.scene.objects if o.name.split('.')[0]=='SM_'+r['name'])
+ for v in o.data.vertices:
+  if v.co.z<-.045:v.co.z-=.04*min(1,(-v.co.z-.045)/.06)
+ coords=[v.co for v in o.data.vertices];r['bounds']={'min':[min(v[i] for v in coords) for i in range(3)],'max':[max(v[i] for v in coords) for i in range(3)]}
+ c=o.copy();c.data=o.data.copy();bpy.context.collection.objects.link(c)
+ for v in c.data.vertices:v.co.y*=-1
+ bm=bmesh.new();bm.from_mesh(c.data);bmesh.ops.reverse_faces(bm,faces=list(bm.faces));bm.to_mesh(c.data);bm.free();bpy.ops.object.select_all(action='DESELECT');c.select_set(True);bpy.context.view_layer.objects.active=c
+ bpy.ops.export_scene.fbx(filepath=str(root/(r['name']+'.fbx')),use_selection=True,object_types={'MESH'},axis_forward='-Y',axis_up='Z',global_scale=1,apply_unit_scale=True,bake_anim=False,mesh_smooth_type='FACE');bpy.data.objects.remove(c,do_unlink=True)
+(root/'manifest.json').write_text(json.dumps(data,indent=2));bpy.ops.wm.save_as_mainfile(filepath=str(root/'Models63.blend'))

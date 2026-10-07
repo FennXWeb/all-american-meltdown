@@ -16,6 +16,9 @@ struct FLWSpawnRow {
  UPROPERTY(EditAnywhere) float DeathclawWeight=2;
  UPROPERTY(EditAnywhere) float ScorpionWeight=2;
  UPROPERTY(EditAnywhere) float KarenWeight=4;
+ UPROPERTY(EditAnywhere) float HornetWeight=0;
+ UPROPERTY(EditAnywhere) float BearWeight=0;
+ UPROPERTY(EditAnywhere) float RogueWeight=0;
  UPROPERTY(EditAnywhere,meta=(ClampMin=0,ClampMax=1)) float IndoorChance=.7f;
 };
 UCLASS(BlueprintType)

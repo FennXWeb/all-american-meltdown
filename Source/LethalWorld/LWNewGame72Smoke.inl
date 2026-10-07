@@ -1,0 +1,10 @@
+if(FParse::Param(FCommandLine::Get(),TEXT("LWNewGame72Smoke"))){
+ Add(TEXT("New game setup"),1,[this](ALWCharacter& P){P.BeginWorldSetup();P.WorldSetupClick(TEXT("seed"));Check(!P.bSeedEdit,TEXT("Removed seed action cannot edit"));P.WorldSetupClick(TEXT("createworld"));Check(P.OpeningMode==2,TEXT("Character creator opens without old intro"));},[this](ALWCharacter& P){CaptureV2(TEXT("NewGame72_Creator"));});
+ Add(TEXT("Syracuse start"),3,[this](ALWCharacter& P){P.EndOpening(true);P.bGod47=true;Check(!P.bSafehouse,TEXT("New survivor starts outdoors"));Check(!P.RPG.Story.Enabled&&!P.Story,TEXT("No campaign director or mission"));Check((FVector2D(P.GetActorLocation())-LWNewGame72::StartXY()).Size()<100,TEXT("Creator commits Syracuse start"));},[this](ALWCharacter& P){
+  Check((FVector2D(P.GetActorLocation())-LWNewGame72::StartXY()).Size()<200,TEXT("Spawn remains stable"));
+  Check(FMath::Abs(P.GetActorLocation().Z-P.World->HeightAt(FVector2D(P.GetActorLocation()))-88)<40,TEXT("Spawn supported by ground"));
+  FCollisionQueryParams Q(NAME_None,false,&P);Check(!GetWorld()->OverlapBlockingTestByChannel(P.GetActorLocation(),FQuat::Identity,ECC_Pawn,FCollisionShape::MakeCapsule(30,80),Q),TEXT("Standing capsule clear of scenery"));CaptureV2(TEXT("NewGame72_Syracuse"));
+ });
+ Add(TEXT("Legacy save migration"),2,[this](ALWCharacter& P){auto* S=P.MakeProgressSnapshot37();S->RPG.Story.Enabled=true;S->RPG.Story.GearHeld=true;S->RPG.Story.Stage=23;S->Position=FVector(LWStory::Site(8),100);auto Item=LWItems::Make(TEXT("medkit"),2);S->RPG.Story.Confiscated.Add(Item);P.ApplyProgressSnapshot37(S);Check(!P.RPG.Story.Enabled&&!P.Story&&!P.bStoryLocked,TEXT("Loaded legacy campaign retired"));Check((FVector2D(P.GetActorLocation())-LWNewGame72::StartXY()).Size()<100,TEXT("Legacy compound position relocated safely"));Check(P.Inventory.ContainsByPredicate([&](const auto& V){return V.Id==Item.Id;})||P.Stash.ContainsByPredicate([&](const auto& V){return V.Id==Item.Id;}),TEXT("Confiscated possessions restored"));});
+ return;
+}

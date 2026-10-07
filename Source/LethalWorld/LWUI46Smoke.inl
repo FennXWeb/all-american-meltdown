@@ -1,10 +1,38 @@
 #include "LWBunker45.h"
 void ALWGameMode::BuildUI46Smoke(ALWCharacter& Initial){
+
  auto Add=[this](FString N,double Delay,FLWV2Action Begin,FLWV2Action End=FLWV2Action()){V2->Steps.Add({N,Delay,180,MoveTemp(Begin),MoveTemp(End),[](ALWCharacter&){return true;}});};
+#include "LWUpdate84Smoke.inl"
+#include "LWUpdate83Smoke.inl"
+#include "LWSettlement82Smoke.inl"
+#include "LWMenu81Smoke.inl"
+#include "LWUpdate80Smoke.inl"
+#include "LWLoading79Smoke.inl"
+#include "LWUpdate78Smoke.inl"
+#include "LWCampaign77Smoke.inl"
+#include "LWCampaign76Smoke.inl"
+ #include "LWElectric74Smoke.inl"
+ #include "LWSyracuse73Smoke.inl"
+#include "LWNewGame72Smoke.inl"
+ #include "LWDestiny71Smoke.inl"
+ #include "LWCurrency70Smoke.inl"
+ #include "LWNewYork69Smoke.inl"
+ #include "LWCanada68Smoke.inl"
+ #include "LWDebug67Smoke.inl"
+ #include "LWArsenal62Smoke.inl"
+ #include "LWUpdate60Smoke.inl"
+ #include "LWVisual63Smoke.inl"
+ #include "LWInteriors65Smoke.inl"
+ #include "LWCamper66Smoke.inl"
+#include "LWAcoustics64Smoke.inl"
+ #include "LWCharacters61Smoke.inl"
+ #include "LWDialogue59Smoke.inl"
+ #include "LWUpdate58Smoke.inl"
+ #include "LWUpdate57Smoke.inl"
  #include "LWUpdate56Smoke.inl"
  if(FParse::Param(FCommandLine::Get(),TEXT("LWUI55Smoke"))){
   auto HUD=[](ALWCharacter& P){return Cast<ALWHUD>(Cast<APlayerController>(P.Controller)->GetHUD());};
-  Add(TEXT("UI55 title"),1,[this,HUD](ALWCharacter& P){auto* H=HUD(P);Check(H&&H->UIFont55&&H->Backdrop55&&H->Surface55,TEXT("UI assets and readable font loaded"));},[this,HUD](ALWCharacter& P){auto* H=HUD(P);auto* Box=H->GetHitBoxAtCoordinates(FVector2D(180,437)*H->Scale+H->Origin55,true);Check(Box&&Box->GetName()==TEXT("Start"),TEXT("scaled and centered button hit test matches rendered position"));CaptureV2(TEXT("UI55_Title"));});
+  Add(TEXT("UI55 title"),1,[this,HUD](ALWCharacter& P){auto* H=HUD(P);Check(H&&H->UIFont55&&H->Backdrop55&&H->Surface55,TEXT("UI assets and readable font loaded"));},[this,HUD](ALWCharacter& P){auto* H=HUD(P);auto* Box=H->GetHitBoxAtCoordinates(FVector2D(180,372)*H->Scale+H->Origin55,true);Check(Box&&Box->GetName()==TEXT("Start"),TEXT("scaled and centered button hit test matches rendered position"));CaptureV2(TEXT("UI55_Title"));});
   Add(TEXT("UI55 focus navigation"),.4,[this,HUD](ALWCharacter& P){auto* H=HUD(P);H->Focus55=TEXT("Start");Check(H->UIKey55(EKeys::Down)&&H->Focus55==TEXT("New"),TEXT("directional focus chooses neighboring button"));H->Focus55=TEXT("Settings");Check(H->UIKey55(EKeys::Enter),TEXT("keyboard confirm consumed"));},[this](ALWCharacter& P){Check(P.bSettings&&!P.bTrigger,TEXT("settings opens without firing"));CaptureV2(TEXT("UI55_Settings"));});
   Add(TEXT("UI55 accessibility"),.4,[this,HUD](ALWCharacter& P){auto* H=HUD(P);H->ReducedMotion55=true;H->HighContrast55=true;},[this,HUD](ALWCharacter& P){auto* H=HUD(P);Check(H->Animate55(TEXT("test55"),1)==1,TEXT("reduced motion snaps to target"));CaptureV2(TEXT("UI55_Contrast"));H->ReducedMotion55=H->HighContrast55=false;});
   Add(TEXT("UI55 gameplay setup"),1,[](ALWCharacter& P){P.bSettings=false;P.NewGame();P.World->EnableEncounters=false;P.Health=10000;P.EnterSafehouse();P.ClosePanels();},[this](ALWCharacter&){CaptureV2(TEXT("UI55_HUD"));});

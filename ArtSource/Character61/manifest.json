@@ -1,0 +1,11 @@
+{
+  "approval_only": true,
+  "name": "Survivor 61",
+  "mesh_objects": 240,
+  "triangles": 43534,
+  "hair_locks": 96,
+  "hair_bones": 288,
+  "hair_physics": "baked damped spring review; runtime not integrated",
+  "anatomy": "CC0 MakeHuman hm08; see ../Characters35/Reference",
+  "runtime_assets_changed": false
+}

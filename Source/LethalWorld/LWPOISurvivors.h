@@ -11,5 +11,5 @@ inline bool Eligible(const LWGen::FSite& S){
 }
 inline bool Selected(const LWGen::FSite& S,int Seed){return Eligible(S)&&LWGen::Hash(int32(S.Id),S.Type,Seed,30020)%100<36;}
 FString Name(uint32 SiteId,int Role);
-void Spawn(ALWChunk* Chunk,ALWWorld* World,const LWGen::FSite& Site);
+void Spawn(ALWChunk* Chunk,ALWWorld* World,const LWGen::FSite& Site,int Role68=-1);
 }

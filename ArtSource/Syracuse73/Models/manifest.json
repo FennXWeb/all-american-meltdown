@@ -1,0 +1,275 @@
+[
+  {
+    "name": "TheatreSeat73",
+    "fbx": "SM_TheatreSeat73.fbx",
+    "asset": "/Game/Art/Meshes/SM_TheatreSeat73",
+    "parent": null,
+    "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+    "rest_location_m": [
+      0,
+      0,
+      0
+    ],
+    "rest_location_cm": [
+      0,
+      0,
+      0
+    ],
+    "rest_rotation_degrees_xyz": [
+      0,
+      0,
+      0
+    ],
+    "rest_scale": [
+      1,
+      1,
+      1
+    ],
+    "local_bounds_m": {
+      "min": [
+        -0.3075,
+        -0.227152,
+        0.0025
+      ],
+      "max": [
+        0.3075,
+        0.304636,
+        0.98
+      ],
+      "size": [
+        0.615,
+        0.531787,
+        0.9775
+      ]
+    },
+    "triangles": 1016,
+    "vertices": 524,
+    "material_slots": [
+      "M_Red",
+      "M_Steel",
+      "M_Wood"
+    ],
+    "boundary_edges": 0,
+    "collision": "convex",
+    "animation": "",
+    "sockets_m": {}
+  },
+  {
+    "name": "ArenaSeat73",
+    "fbx": "SM_ArenaSeat73.fbx",
+    "asset": "/Game/Art/Meshes/SM_ArenaSeat73",
+    "parent": null,
+    "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+    "rest_location_m": [
+      0,
+      0,
+      0
+    ],
+    "rest_location_cm": [
+      0,
+      0,
+      0
+    ],
+    "rest_rotation_degrees_xyz": [
+      0,
+      0,
+      0
+    ],
+    "rest_scale": [
+      1,
+      1,
+      1
+    ],
+    "local_bounds_m": {
+      "min": [
+        -0.3075,
+        -0.227152,
+        0.0025
+      ],
+      "max": [
+        0.3075,
+        0.304636,
+        0.98
+      ],
+      "size": [
+        0.615,
+        0.531787,
+        0.9775
+      ]
+    },
+    "triangles": 1016,
+    "vertices": 524,
+    "material_slots": [
+      "M_Cloth",
+      "M_Steel",
+      "M_Wood"
+    ],
+    "boundary_edges": 0,
+    "collision": "convex",
+    "animation": "",
+    "sockets_m": {}
+  },
+  {
+    "name": "SpiritLight73",
+    "fbx": "SM_SpiritLight73.fbx",
+    "asset": "/Game/Art/Meshes/SM_SpiritLight73",
+    "parent": null,
+    "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+    "rest_location_m": [
+      0,
+      0,
+      0
+    ],
+    "rest_location_cm": [
+      0,
+      0,
+      0
+    ],
+    "rest_rotation_degrees_xyz": [
+      0,
+      0,
+      0
+    ],
+    "rest_scale": [
+      1,
+      1,
+      1
+    ],
+    "local_bounds_m": {
+      "min": [
+        -2.2,
+        -0.14,
+        0.0
+      ],
+      "max": [
+        2.2,
+        0.14,
+        3.6
+      ],
+      "size": [
+        4.4,
+        0.28,
+        3.6
+      ]
+    },
+    "triangles": 112,
+    "vertices": 58,
+    "material_slots": [
+      "M_Steel"
+    ],
+    "boundary_edges": 0,
+    "collision": "convex",
+    "animation": "",
+    "sockets_m": {}
+  },
+  {
+    "name": "PalacePilaster73",
+    "fbx": "SM_PalacePilaster73.fbx",
+    "asset": "/Game/Art/Meshes/SM_PalacePilaster73",
+    "parent": null,
+    "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+    "rest_location_m": [
+      0,
+      0,
+      0
+    ],
+    "rest_location_cm": [
+      0,
+      0,
+      0
+    ],
+    "rest_rotation_degrees_xyz": [
+      0,
+      0,
+      0
+    ],
+    "rest_scale": [
+      1,
+      1,
+      1
+    ],
+    "local_bounds_m": {
+      "min": [
+        -0.35,
+        -0.13,
+        0.0
+      ],
+      "max": [
+        0.35,
+        0.13,
+        3.184783
+      ],
+      "size": [
+        0.7,
+        0.26,
+        3.184783
+      ]
+    },
+    "triangles": 756,
+    "vertices": 424,
+    "material_slots": [
+      "M_Bone"
+    ],
+    "boundary_edges": 0,
+    "collision": "convex",
+    "animation": "",
+    "sockets_m": {}
+  },
+  {
+    "name": "TicketBooth73",
+    "fbx": "SM_TicketBooth73.fbx",
+    "asset": "/Game/Art/Meshes/SM_TicketBooth73",
+    "parent": null,
+    "pivot_definition": "Origin is the joint; geometry already rebased to this origin.",
+    "rest_location_m": [
+      0,
+      0,
+      0
+    ],
+    "rest_location_cm": [
+      0,
+      0,
+      0
+    ],
+    "rest_rotation_degrees_xyz": [
+      0,
+      0,
+      0
+    ],
+    "rest_scale": [
+      1,
+      1,
+      1
+    ],
+    "local_bounds_m": {
+      "min": [
+        -0.965,
+        -0.914127,
+        0.0
+      ],
+      "max": [
+        0.92,
+        0.825,
+        2.365
+      ],
+      "size": [
+        1.885,
+        1.739127,
+        2.365
+      ]
+    },
+    "triangles": 868,
+    "vertices": 504,
+    "material_slots": [
+      "M_Bone",
+      "M_Glass",
+      "M_Red",
+      "M_Steel",
+      "M_Wood"
+    ],
+    "boundary_edges": 0,
+    "collision": "convex",
+    "animation": "",
+    "sockets_m": {}
+  }
+]

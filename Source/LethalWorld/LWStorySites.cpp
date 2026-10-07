@@ -1,4 +1,5 @@
 #include "LWStory.h"
+#include "LWInteriors65.h"
 #include "LWChapter52.h"
 #include "LWWorld.h"
 #include "LWCharacter.h"
@@ -13,6 +14,18 @@ int32 ALWStoryDirector::SiteRevision38(int32 I) const{return 520+ (I==1?int(Stat
 void ALWStoryDirector::BuildSite(int I){
  int Revision=SiteRevision38(I);if(Sites.Contains(I)){if(SiteRevisions38.FindRef(I)==Revision)return;if(auto* Old=Sites.FindRef(I).Get())Old->Destroy();Sites.Remove(I);}SiteRevisions38.Add(I,Revision);
  auto* C=GetWorld()->SpawnActor<ALWChunk>(At(I),FRotator::ZeroRotator);if(!C)return;Sites.Add(I,C);C->LightingWorld=World;int Serial=0;
+ LWGen::FSite InteriorSite65;InteriorSite65.Position=FVector2D(C->GetActorLocation());InteriorSite65.Id=0x650000+I;InteriorSite65.Type=I==2?2:I==4?13:I==1?7:17;InteriorSite65.Size=FVector2D(12000);LWInteriors65::FScope Interior65(C,World,InteriorSite65);
+ // Reserve future mission actors as well as objects already instantiated. Nodes
+ // and combatants are spawned after BuildSite, and must retain their approaches.
+ TSet<FIntVector> Reserved65;
+ auto Reserve65=[&](FVector V){const FIntVector Key(FMath::RoundToInt(V.X),FMath::RoundToInt(V.Y),FMath::RoundToInt(V.Z));if(Reserved65.Contains(Key))return;Reserved65.Add(Key);const FVector Q=Interior65.Frame.InverseTransformPosition(At(I,V));Interior65.Record({FBox(Q-FVector(165,165,150),Q+FVector(165,165,130)),TEXT("story clearance"),false,false,true});};
+ for(int Stage=0;Stage<LWStory::Missions().Num();Stage++){const auto& Mission=LWStory::Missions()[Stage];if(Mission.Site!=I)continue;Reserve65(LWChapter52::Recovery(Stage));if(FCString::Strlen(Mission.Action))Reserve65(LWChapter52::Objective(Mission.Action));for(FVector Post:LWChapter52::Posts(I,Stage))Reserve65(Post);}
+ if(I==2)for(FName Action:{FName(TEXT("triage")),FName(TEXT("pharmacy"))})Reserve65(LWChapter52::Objective(Action));
+ if(I==4)for(FName Action:{FName(TEXT("relay_a")),FName(TEXT("relay_b"))})Reserve65(LWChapter52::Objective(Action));
+ if(I==7)for(FName Action:{FName(TEXT("breach_a")),FName(TEXT("breach_b"))})Reserve65(LWChapter52::Objective(Action));
+ if(I==8)for(FName Action:{FName(TEXT("shield_a")),FName(TEXT("shield_b"))})Reserve65(LWChapter52::Objective(Action));
+ for(FVector V:{FVector(-250,-2350,100),FVector(250,-2100,100),FVector(0,-2200,100),FVector(-650,-2700,100),FVector(650,-2700,100),FVector(900,-2450,100)})Reserve65(V);
+ if(I==1)Reserve65(FVector(-2300,200,110));if(I==2)Reserve65(FVector(-2450,0,110));if(I==5)Reserve65(FVector(-2700,-1500,110));if(I==6){Reserve65(FVector(-2500,100,110));Reserve65(FVector(1600,3400,100));}if(I==7){Reserve65(FVector(0,700,100));for(int K=0;K<4;K++)Reserve65(FVector((K-1.5f)*180,350,100));}if(I==8)for(int K=0;K<8;K++)Reserve65(FVector(3350,-2350+K*320,110));
  auto Box=[&](FName M,FVector P,FVector D,float Yaw=0,bool Hit=true){C->Box(World,M,P,D,FRotator(0,Yaw,0),Hit);};
  auto Label=[&](FString S,FVector P,float Size=30,float Yaw=-90){auto* T=NewObject<ULWWorldTextComponent>(C);T->SetupAttachment(C->GetRootComponent());T->SetRelativeLocation(P);T->SetRelativeRotation(FRotator(0,Yaw,0));T->SetText(FText::FromString(S));T->SetWorldSize(Size);T->SetHorizontalAlignment(EHTA_Center);T->SetTextRenderColor(FColor(230,212,175));T->RegisterComponent();C->AddInstanceComponent(T);};
  auto Model=[&](FName M,FVector P,float Yaw=0,float Scale=1){auto* Mesh=World->Mesh(M);if(!Mesh)return;P.Z-=Mesh->GetBoundingBox().Min.Z*Scale;C->Add(World,M,NAME_None,P,FVector(Scale),FRotator(0,Yaw,0));};

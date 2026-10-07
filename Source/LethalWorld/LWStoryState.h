@@ -26,6 +26,6 @@ namespace LWStory {
  // Fixed authored reservations are independent of streaming and random POI density.
  inline FVector2D Site(int32 I){const FVector2D P[]={{18000,16000},{112000,-58000},{-78000,151000},{241000,85000},{385000,-143000},{174000,326000},{503000,248000},{684000,-42000},{867000,207000}};return P[FMath::Clamp(I,0,8)];}
  inline const TCHAR* SiteName(int32 I){const TCHAR* N[]={TEXT("Mile Nine Rest Stop"),TEXT("Mercy Crossing"),TEXT("St. Agnes Field Clinic"),TEXT("Cinder Tollhouse"),TEXT("Relay Six"),TEXT("Dry Creek Transfer Yard"),TEXT("The Kennels"),TEXT("Ash Crown Foundry"),TEXT("Fort Resolute")};return N[FMath::Clamp(I,0,8)];}
- inline bool Reserved(FVector2D P,float Pad=0){for(int I=0;I<9;I++){auto D=P-Site(I);if(FMath::Abs(D.X)<4800+Pad&&FMath::Abs(D.Y)<4800+Pad)return true;}return false;}
+ inline bool Reserved(FVector2D P,float Pad=0){return false;} // Retired campaign no longer reserves land.
  inline uint32 EnemyId(int Stage,int Index){return 0xEF310000u+Stage*64+Index;}
 }

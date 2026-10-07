@@ -21,6 +21,7 @@ FLWSettlementRecord& ALWCharacter::EnsureSettlement(FIntPoint R){
   // Migrate old permanent hostility to a temporary incident.
   if(World->PropStates.FindRef(Id)){T.Reputation=-30;T.HostileUntil=WorldHour()+12;World->PropStates.Remove(Id);}
  }
+ FString NYName;if(LWNY69::Settlement(R,nullptr,&NYName)){T.Name=NYName;T.Size=2;}
  return T;
 }
 FString ALWCharacter::SettlerName(FName Town,FName Id){
@@ -31,7 +32,7 @@ FString ALWCharacter::SettlerName(FName Town,FName Id){
  do{Name=FString(First[H%32])+TEXT(" ");if(Attempt)Name+=FString::Chr('A'+(H/1024+Attempt)%26)+TEXT(". ");Name+=Last[(H/32)%32];if(Attempt>26)Name+=FString::Printf(TEXT(" %d"),Attempt);Used=false;for(const auto& S:RPG.Settlements)for(const auto& N:S.Value.Names)Used|=N.Value==Name;Attempt++;}while(Used);
  T->Names.Add(Id,Name);return Name;
 }
-FName ALWCharacter::NearestSettlement(FVector At)const{FName Id;double Best=DBL_MAX;for(const auto& Pair:RPG.Settlements){double D=FVector::Dist2D(At,Pair.Value.Center);if(D<Best&&D<(Pair.Value.Size==2?8500:6500)&&FMath::Abs(At.Z-Pair.Value.Center.Z)<900){Best=D;Id=Pair.Key;}}return Id;}
+FName ALWCharacter::NearestSettlement(FVector At)const{FName Id;double Best=DBL_MAX;for(const auto& Pair:RPG.Settlements){double D=FVector::Dist2D(At,Pair.Value.Center);if(D<Best&&D<(Pair.Value.Size==2?17000:6500)&&FMath::Abs(At.Z-Pair.Value.Center.Z)<900){Best=D;Id=Pair.Key;}}return Id;}
 bool ALWCharacter::SettlementHostile(FName Id)const{const auto* T=RPG.Settlements.Find(Id);return T&&(T->Reputation<=-100||T->HostileUntil>WorldHour());}
 void ALWCharacter::ChangeReputation(FName Id,int Delta,bool Aggro){auto* T=RPG.Settlements.Find(Id);if(!T)return;T->Reputation=FMath::Clamp(T->Reputation+Delta,-100,100);if(Aggro)T->HostileUntil=WorldHour()+12;if(T->Reputation<40)T->Member=false;if(T->Reputation<75)T->Leader=false;}
 void ALWCharacter::RecordSettlementTransfer(int From,int To,int Value,bool Trade){
@@ -40,7 +41,7 @@ void ALWCharacter::RecordSettlementTransfer(int From,int To,int Value,bool Trade
  else if(!Trade&&From==2&&To==0&&!T->Leader){ChangeReputation(Id,-5,true);Notify(TEXT("STOLEN GOODS // SETTLEMENT REPUTATION -5"));}
 }
 void ALWCharacter::TickSettlements(){
- double Now=WorldHour();for(auto& Pair:RPG.Settlements){auto& T=Pair.Value;double Elapsed=FMath::Max(0.,Now-T.LastEconomyHour);int Hours=FMath::Min(168,FMath::FloorToInt(Elapsed));if(Hours>0){if(T.Leader&&!SettlementHostile(Pair.Key))T.Treasury+=Hours*(2+T.Size);T.LastEconomyHour=Now;}
+ double Now=WorldHour();for(auto& Pair:RPG.Settlements){auto& T=Pair.Value;if(RPG.Claims82.Contains(Pair.Key))continue;double Elapsed=FMath::Max(0.,Now-T.LastEconomyHour);int Hours=FMath::Min(168,FMath::FloorToInt(Elapsed));if(Hours>0){if(T.Leader&&!SettlementHostile(Pair.Key))T.Treasury+=Hours*(2+T.Size);T.LastEconomyHour=Now;}
  for(int I=T.Listings.Num()-1;I>=0;I--)if(T.Listings[I].SaleHour<=Now){T.Treasury+=T.Listings[I].Payout;T.Listings.RemoveAt(I);}
  }
 }
@@ -57,7 +58,7 @@ bool ALWCharacter::BuildSettlementDialogue(FName Node){
  if(Node==TEXT("town")){Choice(TEXT("Collect income and shop earnings."),TEXT("town_collect"));if(!T->Member)Choice(TEXT("Apply for membership. [40 reputation]"),TEXT("town_join"));if(!T->Leader)Choice(TEXT("Take leadership. [100 reputation]"),TEXT("town_lead"));if(T->Leader){Choice(TEXT("Use settlement as respawn point."),TEXT("town_spawn"));Choice(TEXT("Station companions here."),TEXT("town_crew"));Choice(TEXT("Sell my items through the shop."),TEXT("town_shop"));}Choice(TEXT("Back."),TEXT("root"));}
  else if(Node==TEXT("town_crew")){int Start=SettlementPage*4;for(int I=Start;I<FMath::Min(Start+4,RPG.Crew.Num());I++)Choice(RPG.Crew[I].Name,FName(*(TEXT("town_station:")+RPG.Crew[I].Id.ToString())));Choice(TEXT("Next companions."),TEXT("town_crew_next"));Choice(TEXT("Back."),TEXT("town"));}
  else if(Node==TEXT("town_shop")){DialogueText+=TEXT(" Listed goods sell after 18-96 game hours at a premium. Up to 12 listings; collect proceeds here.");TArray<FGuid> Goods;for(const auto& I:Inventory)if(I.Slot.IsNone())Goods.Add(I.Id);SettlementPage=FMath::Clamp(SettlementPage,0,FMath::Max(0,(Goods.Num()-1)/4));for(int I=SettlementPage*4;I<FMath::Min(SettlementPage*4+4,Goods.Num());I++){auto* Item=FindItem(Goods[I]);Choice(TEXT("List ")+LWItems::Def(Item->Definition).DisplayName.ToString()+FString::Printf(TEXT(" x%d"),Item->Count),FName(*(TEXT("town_list:")+Item->Id.ToString())));}Choice(TEXT("Next items."),TEXT("town_shop_next"));Choice(TEXT("Back."),TEXT("town"));}
- Speaker->Say(DialogueText);return true;
+ Speaker->Say(Node==TEXT("town_shop")?TEXT("Leave your goods with us. Collect the proceeds when they sell."):Node==TEXT("town_crew")?TEXT("Who would you like to station here?"):TEXT("Let us go over the settlement accounts."));return true;
 }
 bool ALWCharacter::SettlementAction(FName Action){
  FString A=Action.ToString();if(!A.StartsWith(TEXT("town"))||!Speaker)return false;FName Id=Speaker->SettlementId;auto* T=RPG.Settlements.Find(Id);if(!T||SettlementHostile(Id))return true;
@@ -68,7 +69,7 @@ bool ALWCharacter::SettlementAction(FName Action){
  else if(Action==TEXT("town_spawn")&&T->Leader){RPG.Respawn=FLWRespawnPoint();RPG.Respawn.Enabled=true;RPG.Respawn.Settlement=Id;RPG.Respawn.Position=T->Center+FVector(0,650,0);RPG.Respawn.Name=T->Name;Notify(TEXT("RESPAWN POINT SET"));}
  else if(Action==TEXT("town_crew_next")){SettlementPage=(SettlementPage+1)%FMath::Max(1,(RPG.Crew.Num()+3)/4);BuildDialogue(TEXT("town_crew"));return true;}
  else if(Action==TEXT("town_shop_next")){SettlementPage++;BuildDialogue(TEXT("town_shop"));return true;}
- else if(A.StartsWith(TEXT("town_station:"))&&T->Leader){auto* C=RPG.Crew.FindByPredicate([&](const auto& X){return X.Id==FName(*A.Mid(13));});if(C){C->Following=false;C->Station=Id;for(TActorIterator<ALWResident> N(GetWorld());N;++N)if(N->ResidentId==C->Id){N->LeaveVehicle();N->Home=T->Center+FVector(C->Bedroom*85,700,0);N->SetActorLocation(N->Home);N->SettlementId=Id;}Notify(TEXT("COMPANION STATIONED"));}}
+ else if(A.StartsWith(TEXT("town_station:"))&&T->Leader){auto* C=RPG.Crew.FindByPredicate([&](const auto& X){return X.Id==FName(*A.Mid(13));});if(C){C->Following=false;C->Station=Id;C->HomeVehicle66=NAME_None;C->HomeBunk66=-1;for(TActorIterator<ALWResident> N(GetWorld());N;++N)if(N->ResidentId==C->Id){N->LeaveVehicle();N->Home=T->Center+FVector(C->Bedroom*85,700,0);N->SetActorLocation(N->Home);N->SettlementId=Id;}Notify(TEXT("COMPANION STATIONED"));}}
  else if(A.StartsWith(TEXT("town_list:"))){FGuid Item;FGuid::Parse(A.Mid(10),Item);if(!ConsignItem(Id,Item))Notify(TEXT("CANNOT LIST ITEM // CHECK SHOP CAPACITY"));BuildDialogue(TEXT("town_shop"));return true;}
  RequestSave40();BuildDialogue(TEXT("town"));return true;
 }
